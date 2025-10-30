@@ -81,8 +81,8 @@ jobs:
             try {
               stats = JSON.parse(statsData);
             } catch (parseError) {
-              core.error('Failed to parse stats JSON:');
-              core.error(statsData);
+              console.error('Failed to parse stats JSON:', parseError);
+              console.error('Stats data:', statsData);
               throw parseError;
             }
             
@@ -121,8 +121,7 @@ jobs:
             return 'Successfully posted PR comment';
             
           } catch (error) {
-            core.error('Error in GitHub Script:');
-            core.error(error);
+            console.error('Error in GitHub Script:', error);
             
             // Post a fallback error comment
             try {
@@ -133,10 +132,9 @@ jobs:
                 body: '❌ Failed to generate statistics. Please check the workflow logs for details.'
               });
             } catch (commentError) {
-              core.error('Failed to post error comment:');
-              core.error(commentError);
+              console.error('Failed to post error comment:', commentError);
             }
             
-            core.setFailed(`Failed to process stats: ${error.message}`);
-            return null;
+            // This will fail the step
+            throw error;
           }
