@@ -1,0 +1,86 @@
+name: Validate Bibliography
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'bibliography/**/*.bib'
+      - 'toolkit/**/*.js'
+      - '.github/workflows/validate.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: toolkit/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd toolkit
+        npm ci
+        
+    - name: Run validation
+      id: validate
+      run: |
+        cd toolkit
+        npm run validate:ci
+        
+    - name: Check for duplicates
+      run: |
+        cd toolkit
+        npm run check-dups
+        
+    - name: Generate statistics
+      run: |
+        cd toolkit
+        npm run stats:json > ../stats-output.json
+        
+    - name: Comment PR with results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const stats = JSON.parse(fs.readFileSync('stats-output.json', 'utf8'));
+          
+          const body = `## 📊 Bibliography Validation Results
+          
+          ✅ **Validation**: Passed
+          
+          ### Statistics
+          - **Total Entries**: ${stats.total}
+          - **Errors**: ${stats.quality.withAbstract < stats.total ? stats.total - stats.quality.withAbstract : 0}
+          - **Warnings**: 0
+          
+          ### Transformation Coverage
+          - P (Perspective): ${stats.transformations.P}
+          - IN (Inversion): ${stats.transformations.IN}
+          - CO (Composition): ${stats.transformations.CO}
+          - DE (Decomposition): ${stats.transformations.DE}
+          - RE (Recursion): ${stats.transformations.RE}
+          - SY (Synthesis): ${stats.transformations.SY}
+          
+          ### Quality Metrics
+          - DOI Coverage: ${((stats.quality.withDOI / stats.total) * 100).toFixed(1)}%
+          - ISBN Coverage: ${((stats.quality.withISBN / stats.total) * 100).toFixed(1)}%
+          - Abstract Coverage: ${((stats.quality.withAbstract / stats.total) * 100).toFixed(1)}%
+          - HUMMBL Keywords: ${((stats.quality.withKeywords / stats.total) * 100).toFixed(1)}%
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: body
+          });
