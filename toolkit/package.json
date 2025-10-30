@@ -2,7 +2,9 @@
   "name": "hummbl-bibliography-toolkit",
   "version": "1.0.0",
   "description": "Validation and management toolkit for HUMMBL Bibliography",
+  "type": "module",
   "main": "src/validate.js",
+  "exports": "./src/validate.js",
   "scripts": {
     "validate": "node src/validate.js ../bibliography",
     "validate:ci": "node src/validate.js ../bibliography --ci",
