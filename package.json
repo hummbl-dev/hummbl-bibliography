@@ -1,0 +1,25 @@
+{
+  "name": "hummbl-bibliography",
+  "version": "1.0.0",
+  "description": "A curated bibliography for HUMMBL project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "echo \"No linter configured\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hummbl-dev/hummbl-bibliography.git"
+  },
+  "keywords": [
+    "bibliography",
+    "hummbl",
+    "references"
+  ],
+  "author": "HUMMBL Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hummbl-dev/hummbl-bibliography/issues"
+  },
+  "homepage": "https://github.com/hummbl-dev/hummbl-bibliography#readme"
+}
