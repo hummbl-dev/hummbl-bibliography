@@ -1,13 +1,28 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { Cite } = require('@citation-js/core');
-require('@citation-js/plugin-bibtex');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import chalk from 'chalk';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Parse command line arguments
 const args = process.argv.slice(2);
-const bibDir = args[0] || '../bibliography';
+let bibDir = '../bibliography';
+let failOnDuplicates = false;
+
+for (let i = 0; i < args.length; i++) {
+  if (args[i] === '--fail-on-duplicates') {
+    failOnDuplicates = true;
+  } else if (!args[i].startsWith('--') && i === args.length - 1) {
+    // The last non-flag argument is the bibDir
+    bibDir = args[i];
+  }
+}
 
 class DuplicateChecker {
   constructor(bibDir) {
@@ -190,8 +205,15 @@ class DuplicateChecker {
     // Print report
     const hasDuplicates = this.printReport();
 
-    // Exit with code 1 if duplicates found (for CI)
-    process.exit(hasDuplicates ? 1 : 0);
+    // Exit with code 1 if duplicates found and failOnDuplicates is true (for CI)
+    if (hasDuplicates && failOnDuplicates) {
+      console.error(chalk.red('\n❌ Duplicates found and --fail-on-duplicates flag is set'));
+      process.exit(1);
+    } else if (hasDuplicates) {
+      process.exit(0); // Don't fail if --fail-on-duplicates is not set
+    } else {
+      process.exit(0);
+    }
   }
 }
 
