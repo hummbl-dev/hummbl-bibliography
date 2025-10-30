@@ -33,28 +33,38 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: 'toolkit/package-lock.json'
+          cache-dependency-path: '**/package-lock.json'
+          
+      - name: Change to toolkit directory
+        id: change-dir
+        run: |
+          echo "Changing to toolkit directory"
+          cd toolkit
+          echo "Current directory: $(pwd)"
+          echo "Files in directory:"
+          ls -la
           
       - name: Install dependencies
         run: npm ci
-        working-directory: ./toolkit
       
       - name: Run npm audit
         id: audit
-        working-directory: ./toolkit
         continue-on-error: true
         run: |
-          npm audit --json > ../audit-report.json || true
+          echo "Running npm audit in $(pwd)"
+          npm audit --json > audit-report.json || true
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
-          cat ../audit-report.json >> $GITHUB_ENV
+          cat audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+          echo "Audit report generated"
+          ls -la
           
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
-          path: audit-report.json
+          path: toolkit/audit-report.json
           retention-days: 7
           compression-level: 6
           
