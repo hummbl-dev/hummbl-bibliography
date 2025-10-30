@@ -1,0 +1,17 @@
+# CODEOWNERS file — assign reviewers automatically for paths
+# Format: <path> <user-or-team>
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+* @hummbl-dev
+
+# Owners for sources (adjust paths if your code lives elsewhere)
+bibliography/ @hummbl-dev
+toolkit/ @hummbl-dev
+scripts/ @hummbl-dev
+docs/ @hummbl-dev
+.github/ @hummbl-dev
+
+# Owners for security-sensitive files
+/package.json @hummbl-dev
+/package-lock.json @hummbl-dev
