@@ -12,6 +12,9 @@ jobs:
     name: Validate Bibliography
     runs-on: ubuntu-latest
     
+    permissions:
+      contents: read
+    
     strategy:
       matrix:
         node-version: [18.x, 20.x]
@@ -63,6 +66,9 @@ jobs:
   lint-quality:
     name: Code Quality Check
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
     
     steps:
     - name: Checkout code
