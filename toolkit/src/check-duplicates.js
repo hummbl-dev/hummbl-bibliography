@@ -10,9 +10,6 @@ import '@citation-js/plugin-bibtex';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Parse command line arguments
 const args = process.argv.slice(2);
 let bibDir = '../bibliography';
