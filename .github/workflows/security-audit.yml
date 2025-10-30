@@ -9,9 +9,21 @@ on:
     - cron: '0 9 * * 1'  # Weekly on Monday at 9:00 UTC
   workflow_dispatch:
 
+# Set the required permissions at the job level
+permissions:
+  contents: read
+  security-events: write
+  pull-requests: write
+
 jobs:
   security-audit:
     runs-on: ubuntu-latest
+    
+    # Ensure the job has the necessary permissions
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write
         
     steps:
       - uses: actions/checkout@v4
@@ -48,11 +60,20 @@ jobs:
       - name: Comment on PR if vulnerabilities found
         if: github.event_name == 'pull_request' && failure()
         uses: actions/github-script@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
-            const { data: comment } = await github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '⚠️ **Security Audit Failed**\n\nVulnerabilities were found during the security audit. Please check the workflow run for details.'
-            })
+            try {
+              const { data: comment } = await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '⚠️ **Security Audit Failed**\n\nVulnerabilities were found during the security audit. Please check the workflow run for details.'
+              });
+              console.log('Comment added successfully');
+            } catch (error) {
+              console.error('Error adding comment:', error);
+              // Don't fail the workflow if comment fails
+              core.setFailed('Failed to add comment, but continuing...');
+            }
