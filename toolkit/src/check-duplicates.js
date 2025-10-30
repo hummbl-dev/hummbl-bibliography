@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { Cite } = require('@citation-js/core');
-require('@citation-js/plugin-bibtex');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import chalk from 'chalk';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const args = process.argv.slice(2);
 const bibDir = args[0] || '../bibliography';
