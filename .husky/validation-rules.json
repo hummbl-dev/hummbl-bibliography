@@ -1,0 +1,11 @@
+{
+  "requiredFields": ["title", "author", "year"],
+  "optionalFields": ["doi", "url", "abstract", "keywords"],
+  "entryTypes": {
+    "article": ["journal", "volume", "number", "pages"],
+    "book": ["publisher", "isbn"],
+    "inproceedings": ["booktitle", "pages"]
+  },
+  "doiFormat": "^10\\.\\d{4,9}/[-._;()/:A-Z0-9]+$",
+  "yearFormat": "^\\d{4}$"
+}

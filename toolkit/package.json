@@ -6,7 +6,9 @@
   "main": "src/validate.js",
   "exports": "./src/validate.js",
   "scripts": {
+    "prepare": "husky install",
     "validate": "node src/validate.js ../bibliography",
+    "validate:staged": "node src/validate.js --staged",
     "validate:ci": "node src/validate.js ../bibliography --ci",
     "check-dups": "node src/check-duplicates.js ../bibliography",
     "check-duplicates": "node src/check-duplicates.js --fail-on-duplicates ../bibliography",
@@ -18,9 +20,7 @@
     "keywords": "node src/extract-keywords.js ../bibliography",
     "merge": "node src/merge-entries.js",
     "test": "npm run validate && npm run check-duplicates && npm run check-required-fields",
-    "setup": "chmod +x ../scripts/setup-hooks.sh && ../scripts/setup-hooks.sh",
-    "prepare": "cd .. && husky install toolkit/.husky",
-    "precommit": "lint-staged"
+    "precommit": "npm run validate"
   },
   "keywords": [
     "bibliography",
