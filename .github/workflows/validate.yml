@@ -73,7 +73,7 @@ jobs:
         fi
         
     - name: Comment PR with results
-      if: github.event_name == 'pull_request' && success()
+      if: always() && github.event_name == 'pull_request'
       uses: actions/github-script@v7
       env:
         # Use the GITHUB_TOKEN with the correct permissions
@@ -84,22 +84,27 @@ jobs:
           const fs = require('fs').promises;
           
           try {
-            // Read and parse the stats file
-            const statsData = await fs.readFile('stats-output.json', 'utf8');
-            let stats;
+            // Check if previous steps succeeded
+            const validationStatus = '${{ steps.validate.outcome }}';
+            const statsStatus = '${{ steps.stats.outcome }}';
+            const hasErrors = validationStatus !== 'success' || statsStatus !== 'success';
             
+            // Read and parse the stats file
+            let stats = null;
             try {
+              const statsData = await fs.readFile('stats-output.json', 'utf8');
               stats = JSON.parse(statsData);
             } catch (parseError) {
               console.error('Failed to parse stats JSON:', parseError);
-              console.error('Stats data:', statsData);
-              throw parseError;
+              // Continue with partial info if stats failed
             }
             
             // Generate the comment body using string concatenation to avoid YAML issues
+            const validationEmoji = hasErrors ? '❌' : '✅';
+            const validationStatusText = hasErrors ? 'Failed' : 'Passed';
             const body = '## 📊 Bibliography Validation Results\n\n' +
-              '✅ **Validation**: Passed\n\n' +
-              '### Statistics\n' +
+              `${validationEmoji} **Validation**: ${validationStatusText}\n\n` +
+              (stats ? '### Statistics\n' +
               `- **Total Entries**: ${stats.total || 0}\n` +
               `- **Entries with Abstracts**: ${stats.quality?.withAbstract || 0}/${stats.total || 0}\n` +
               `- **Missing Abstracts**: ${(stats.total || 0) - (stats.quality?.withAbstract || 0)}\n\n` +
@@ -114,7 +119,8 @@ jobs:
               `- DOI Coverage: ${stats.total ? ((stats.quality?.withDOI || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withDOI || 0}/${stats.total || 0})\n` +
               `- ISBN Coverage: ${stats.total ? ((stats.quality?.withISBN || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withISBN || 0}/${stats.total || 0})\n` +
               `- Abstract Coverage: ${stats.total ? ((stats.quality?.withAbstract || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withAbstract || 0}/${stats.total || 0})\n` +
-              `- HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})`;
+              `- HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})` :
+              '### Statistics\n\n⚠️ Unable to generate statistics. Please check the workflow logs.\n');
             
             // Post the comment
             await github.rest.issues.createComment({

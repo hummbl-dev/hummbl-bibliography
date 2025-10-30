@@ -7,15 +7,18 @@
     "validate": "node src/validate.js ../bibliography",
     "validate:ci": "node src/validate.js ../bibliography --ci",
     "check-dups": "node src/check-duplicates.js ../bibliography",
+    "check-duplicates": "node src/check-duplicates.js --fail-on-duplicates ../bibliography",
     "fix-dups": "node src/fix-duplicates.js ../bibliography",
     "find-dois": "node src/find-missing-dois.js ../bibliography",
+    "check-required-fields": "node src/check-required-fields.js ../bibliography",
     "stats": "node src/stats.js ../bibliography",
     "stats:json": "node src/stats.js ../bibliography --json",
     "keywords": "node src/extract-keywords.js ../bibliography",
     "merge": "node src/merge-entries.js",
-    "test": "npm run validate && npm run check-dups",
+    "test": "npm run validate && npm run check-duplicates && npm run check-required-fields",
     "setup": "chmod +x ../scripts/setup-hooks.sh && ../scripts/setup-hooks.sh",
-    "prepare": "cd .. && husky install toolkit/.husky"
+    "prepare": "cd .. && husky install toolkit/.husky",
+    "precommit": "lint-staged"
   },
   "keywords": [
     "bibliography",
@@ -36,7 +39,12 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^15.0.0",
-    "prettier": "^3.0.0"
+    "postcss": "^8.5.6",
+    "postcss-functions": "^4.0.2",
+    "postcss-js": "^5.0.1",
+    "postcss-nested": "^7.0.2",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^4.1.16"
   },
   "lint-staged": {
     "../bibliography/*.bib": [
