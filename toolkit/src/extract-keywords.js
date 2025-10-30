@@ -16,6 +16,31 @@ class KeywordExtractor {
     this.entryMap = new Map();
   }
 
+  parseBibTeXRaw(content) {
+    const rawEntries = {};
+    const entryRegex = /@\w+\{([^,]+),([^@]+?)(?=\n\})/gs;
+    let match;
+    
+    while ((match = entryRegex.exec(content)) !== null) {
+      const key = match[1].trim();
+      const entryText = match[2];
+      const fields = {};
+      
+      const lines = entryText.split('\n');
+      for (const line of lines) {
+        const fieldMatch = line.match(/^\s*(\w+)\s*=\s*\{(.+)\}\s*,?\s*$/);
+        if (fieldMatch) {
+          const [, fieldKey, value] = fieldMatch;
+          fields[fieldKey.toLowerCase()] = value.trim();
+        }
+      }
+      
+      rawEntries[key] = fields;
+    }
+    
+    return rawEntries;
+  }
+
   extractTransformations(keywords) {
     const transformations = [];
     if (!keywords) return transformations;
@@ -32,8 +57,9 @@ class KeywordExtractor {
     return [...new Set(transformations)];
   }
 
-  processEntry(entry, filename) {
-    const transformations = this.extractTransformations(entry.keywords);
+  processEntry(entry, filename, rawEntry = {}) {
+    const keywords = rawEntry.keywords || '';
+    const transformations = this.extractTransformations(keywords);
 
     if (transformations.length > 0) {
       this.entryMap.set(entry.id, {
@@ -63,7 +89,13 @@ class KeywordExtractor {
       const citation = new Cite(content, { forceType: '@bibtex/text' });
       const entries = citation.data;
 
-      entries.forEach(entry => this.processEntry(entry, filename));
+      // Parse raw BibTeX for keywords
+      const rawEntries = this.parseBibTeXRaw(content);
+
+      entries.forEach(entry => {
+        const rawEntry = rawEntries[entry.id] || {};
+        this.processEntry(entry, filename, rawEntry);
+      });
     } catch (err) {
       console.error(chalk.red(`Error loading ${filename}: ${err.message}`));
     }

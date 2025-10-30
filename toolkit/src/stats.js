@@ -27,6 +27,31 @@ class BibStats {
     };
   }
 
+  parseBibTeXRaw(content) {
+    const rawEntries = {};
+    const entryRegex = /@\w+\{([^,]+),([^@]+?)(?=\n\})/gs;
+    let match;
+    
+    while ((match = entryRegex.exec(content)) !== null) {
+      const key = match[1].trim();
+      const entryText = match[2];
+      const fields = {};
+      
+      const lines = entryText.split('\n');
+      for (const line of lines) {
+        const fieldMatch = line.match(/^\s*(\w+)\s*=\s*\{(.+)\}\s*,?\s*$/);
+        if (fieldMatch) {
+          const [, fieldKey, value] = fieldMatch;
+          fields[fieldKey.toLowerCase()] = value.trim();
+        }
+      }
+      
+      rawEntries[key] = fields;
+    }
+    
+    return rawEntries;
+  }
+
   extractTransformations(keywords) {
     const transformations = new Set();
     if (!keywords) return transformations;
@@ -51,7 +76,7 @@ class BibStats {
     return 'Unknown';
   }
 
-  processEntry(entry, filename) {
+  processEntry(entry, filename, rawEntry = {}) {
     this.stats.total++;
 
     // Count by tier
@@ -62,8 +87,9 @@ class BibStats {
     const type = entry.type || 'unknown';
     this.stats.byType[type] = (this.stats.byType[type] || 0) + 1;
 
-    // Count transformations
-    const transformations = this.extractTransformations(entry.keywords);
+    // Count transformations from raw keywords
+    const keywords = rawEntry.keywords || '';
+    const transformations = this.extractTransformations(keywords);
     transformations.forEach(trans => {
       this.stats.transformations[trans]++;
     });
@@ -71,7 +97,9 @@ class BibStats {
     // Quality metrics
     if (entry.DOI) this.stats.quality.withDOI++;
     if (entry.ISBN) this.stats.quality.withISBN++;
-    if (entry.abstract && entry.abstract.length >= 50) this.stats.quality.withAbstract++;
+    
+    const abstract = rawEntry.abstract || '';
+    if (abstract && abstract.length >= 50) this.stats.quality.withAbstract++;
     if (transformations.size > 0) this.stats.quality.withKeywords++;
   }
 
@@ -83,7 +111,13 @@ class BibStats {
       const citation = new Cite(content, { forceType: '@bibtex/text' });
       const entries = citation.data;
 
-      entries.forEach(entry => this.processEntry(entry, filename));
+      // Parse raw BibTeX for additional fields
+      const rawEntries = this.parseBibTeXRaw(content);
+
+      entries.forEach(entry => {
+        const rawEntry = rawEntries[entry.id] || {};
+        this.processEntry(entry, filename, rawEntry);
+      });
 
       return entries.length;
     } catch (err) {
