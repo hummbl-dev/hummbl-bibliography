@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'q4-2025-enhancement'
+      - 'doi-enrichment-phase2'
+      - 'feat/security-enhancements'
+      - 'fix/node-version-update'
+      - 'copilot/*'
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+  actions: write
+  security-events: write
+
+jobs:
+  build-and-test:
+    name: Lint / Test / Audit (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Lint
+        run: |
+          if npm run | grep -q 'lint'; then npm run lint; else echo "No lint script found"; fi
+
+      - name: Run tests
+        run: |
+          if npm run | grep -q 'test'; then npm test --if-present --silent; else echo "No test script found"; fi
+        env:
+          CI: true
+
+      - name: Build (if applicable)
+        run: |
+          if npm run | grep -q 'build'; then npm run build --if-present; else echo "No build script found"; fi
+
+      - name: Dependency audit (fail on high)
+        run: |
+          if [ -f package-lock.json ] || [ -f yarn.lock ]; then
+            npm audit --omit=dev --audit-level=high || (echo "Vulnerabilities found (>=high)" && exit 1)
+          else
+            echo "No lockfile found — consider adding package-lock.json or yarn.lock"
+          fi
+
+      - name: Upload test artifacts (results, coverage)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            ./coverage || echo "no coverage"
+            ./test-results || echo "no test results"
+
+  codeql:
+    name: CodeQL Static Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+
+      - name: Run CodeQL analysis
+        uses: github/codeql-action/analyze@v2
