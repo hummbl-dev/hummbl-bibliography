@@ -7,11 +7,15 @@ on:
     branches: [main]
   schedule:
     - cron: '0 9 * * 1'  # Weekly on Monday at 9:00 UTC
-  workflow_dispatch:  # Allow manual triggers
+  workflow_dispatch:
 
 jobs:
   security-audit:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./toolkit
+        
     steps:
       - uses: actions/checkout@v4
       
@@ -23,16 +27,14 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        working-directory: ./toolkit
       
       - name: Run npm audit
         id: audit
         continue-on-error: true
         run: |
-          cd toolkit
-          npm audit --json > audit-report.json || true
+          npm audit --json > ../audit-report.json || true
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
-          cat audit-report.json >> $GITHUB_ENV
+          cat ../audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           
       - name: Upload audit report
@@ -40,9 +42,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
-          path: toolkit/audit-report.json
+          path: ../audit-report.json
           retention-days: 7
-          compression-level: 6  # Added for better compression
+          compression-level: 6
           
       - name: Comment on PR if vulnerabilities found
         if: github.event_name == 'pull_request' && failure()
