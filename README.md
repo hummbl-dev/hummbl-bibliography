@@ -26,16 +26,20 @@ This bibliography provides the theoretical foundation and empirical evidence for
 ### Three Quality Tiers
 
 **T1: Canonical** (17 entries)
+
 - Foundational theoretical works
 - Seminal texts that define fields
 - Examples: Meadows' *Thinking in Systems*, Kahneman's *Thinking, Fast and Slow*
 
 **T2: Empirical** (16 entries)
+
 - Peer-reviewed research papers
 - Rigorous experimental findings
+- **Abstract Coverage: 100%** (all entries enhanced with 150-200 word summaries)
 - Examples: Tversky & Kahneman on heuristics, Simon on bounded rationality
 
 **T3: Applied** (15 entries)
+
 - Practitioner-focused texts
 - Industry applications
 - Examples: Ries' *Lean Startup*, Brown's *Change by Design*
