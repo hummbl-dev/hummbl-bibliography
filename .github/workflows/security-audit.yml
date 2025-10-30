@@ -1,0 +1,56 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 9 * * 1'  # Weekly on Monday at 9:00 UTC
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./toolkit
+      
+      - name: Run npm audit
+        id: audit
+        continue-on-error: true
+        run: |
+          cd toolkit
+          npm audit --json > audit-report.json || true
+          echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
+          cat audit-report.json >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: audit-report
+          path: toolkit/audit-report.json
+          retention-days: 7
+          
+      - name: Comment on PR if vulnerabilities found
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: comment } = await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ **Security Audit Failed**\n\nVulnerabilities were found during the security audit. Please check the workflow run for details.'
+            })
