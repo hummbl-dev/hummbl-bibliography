@@ -13,12 +13,12 @@ jobs:
   security-audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
           
       - name: Install dependencies
@@ -37,15 +37,16 @@ jobs:
           
       - name: Upload audit report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: audit-report
           path: toolkit/audit-report.json
           retention-days: 7
+          compression-level: 6  # Added for better compression
           
       - name: Comment on PR if vulnerabilities found
         if: github.event_name == 'pull_request' && failure()
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const { data: comment } = await github.rest.issues.createComment({
