@@ -28,6 +28,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Verify repository structure
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents:"
+          ls -la
+          echo "Toolkit contents:"
+          ls -la toolkit/
+      
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,36 +43,30 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
           
-      - name: Change to toolkit directory
-        id: change-dir
-        run: |
-          echo "Changing to toolkit directory"
-          cd toolkit
-          echo "Current directory: $(pwd)"
-          echo "Files in directory:"
-          ls -la
-          
       - name: Install dependencies
-        run: npm ci
+        working-directory: ./toolkit
+        run: |
+          echo "Installing in: $(pwd)"
+          npm ci
       
       - name: Run npm audit
         id: audit
+        working-directory: ./toolkit
         continue-on-error: true
         run: |
-          echo "Running npm audit in $(pwd)"
-          npm audit --json > audit-report.json || true
+          echo "Running npm audit in: $(pwd)"
+          npm audit --json > ../audit-report.json || true
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
-          cat audit-report.json >> $GITHUB_ENV
+          cat ../audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-          echo "Audit report generated"
-          ls -la
+          ls -la ..
           
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
-          path: toolkit/audit-report.json
+          path: audit-report.json
           retention-days: 7
           compression-level: 6
           
