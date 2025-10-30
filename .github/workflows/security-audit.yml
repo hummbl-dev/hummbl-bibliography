@@ -12,9 +12,6 @@ on:
 jobs:
   security-audit:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./toolkit
         
     steps:
       - uses: actions/checkout@v4
@@ -27,14 +24,16 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
+        working-directory: ./toolkit
       
       - name: Run npm audit
         id: audit
+        working-directory: ./toolkit
         continue-on-error: true
         run: |
-          npm audit --json > ../audit-report.json || true
+          npm audit --json > audit-report.json || true
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
-          cat ../audit-report.json >> $GITHUB_ENV
+          cat audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           
       - name: Upload audit report
@@ -42,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
-          path: ../audit-report.json
+          path: toolkit/audit-report.json
           retention-days: 7
           compression-level: 6
           
