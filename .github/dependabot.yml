@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/toolkit"
+    schedule:
+      interval: "weekly"
+    # Create pull requests for version updates
+    open-pull-requests-limit: 10
+    # Add labels to pull requests
+    labels:
+      - "dependencies"
+      - "security"
+    # Group updates by dependency name
+    groups:
+      npm-dependencies:
+        patterns: ["*"]

@@ -1,0 +1,92 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 9 * * 1'  # Weekly on Monday at 9:00 UTC
+  workflow_dispatch:
+
+# Set the required permissions at the job level
+permissions:
+  contents: read
+  security-events: write
+  pull-requests: write
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    
+    # Ensure the job has the necessary permissions
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write
+        
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Verify repository structure
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents:"
+          ls -la
+          echo "Toolkit contents:"
+          ls -la toolkit/
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+          
+      - name: Install dependencies
+        working-directory: ./toolkit
+        run: |
+          echo "Installing in: $(pwd)"
+          npm ci
+      
+      - name: Run npm audit
+        id: audit
+        working-directory: ./toolkit
+        continue-on-error: true
+        run: |
+          echo "Running npm audit in: $(pwd)"
+          npm audit --json > ../audit-report.json || true
+          echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
+          cat ../audit-report.json >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          ls -la ..
+          
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report
+          path: audit-report.json
+          retention-days: 7
+          compression-level: 6
+          
+      - name: Comment on PR if vulnerabilities found
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/github-script@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          script: |
+            try {
+              const { data: comment } = await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '⚠️ **Security Audit Failed**\n\nVulnerabilities were found during the security audit. Please check the workflow run for details.'
+              });
+              console.log('Comment added successfully');
+            } catch (error) {
+              console.error('Error adding comment:', error);
+              // Don't fail the workflow if comment fails
+              core.setFailed('Failed to add comment, but continuing...');
+            }
