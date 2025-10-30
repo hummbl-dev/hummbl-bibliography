@@ -42,41 +42,59 @@ jobs:
         npm run check-dups
         
     - name: Generate statistics
+      id: stats
       run: |
         cd toolkit
-        npm run stats:json > ../stats-output.json
+        # Ensure clean JSON output by redirecting stderr to /dev/null
+        node src/stats.js ../bibliography --json 2>/dev/null > ../stats-output.json
+        # Verify the JSON is valid
+        if ! jq empty ../stats-output.json; then
+          echo "::error::Failed to generate valid JSON stats"
+          exit 1
+        fi
         
     - name: Comment PR with results
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request' && success()
       uses: actions/github-script@v7
       with:
         script: |
           const fs = require('fs');
-          const stats = JSON.parse(fs.readFileSync('stats-output.json', 'utf8'));
-          
-          const body = `## 📊 Bibliography Validation Results
-          
-          ✅ **Validation**: Passed
-          
-          ### Statistics
-          - **Total Entries**: ${stats.total}
-          - **Errors**: ${stats.quality.withAbstract < stats.total ? stats.total - stats.quality.withAbstract : 0}
-          - **Warnings**: 0
-          
-          ### Transformation Coverage
-          - P (Perspective): ${stats.transformations.P}
-          - IN (Inversion): ${stats.transformations.IN}
-          - CO (Composition): ${stats.transformations.CO}
-          - DE (Decomposition): ${stats.transformations.DE}
-          - RE (Recursion): ${stats.transformations.RE}
-          - SY (Synthesis): ${stats.transformations.SY}
-          
-          ### Quality Metrics
-          - DOI Coverage: ${((stats.quality.withDOI / stats.total) * 100).toFixed(1)}%
-          - ISBN Coverage: ${((stats.quality.withISBN / stats.total) * 100).toFixed(1)}%
-          - Abstract Coverage: ${((stats.quality.withAbstract / stats.total) * 100).toFixed(1)}%
-          - HUMMBL Keywords: ${((stats.quality.withKeywords / stats.total) * 100).toFixed(1)}%
-          `;
+          try {
+            const stats = JSON.parse(fs.readFileSync('stats-output.json', 'utf8'));
+            
+            const body = `## 📊 Bibliography Validation Results
+            
+            ✅ **Validation**: Passed
+            
+            ### Statistics
+            - **Total Entries**: ${stats.total}
+            - **Entries with Abstracts**: ${stats.quality.withAbstract}/${stats.total}
+            - **Missing Abstracts**: ${stats.total - stats.quality.withAbstract}
+            
+            ### Transformation Coverage
+            - P (Perspective): ${stats.transformations.P}
+            - IN (Inversion): ${stats.transformations.IN}
+            - CO (Composition): ${stats.transformations.CO}
+            - DE (Decomposition): ${stats.transformations.DE}
+            - RE (Recursion): ${stats.transformations.RE}
+            - SY (Synthesis): ${stats.transformations.SY}
+            
+            ### Quality Metrics
+            - DOI Coverage: ${((stats.quality.withDOI / stats.total) * 100).toFixed(1)}% (${stats.quality.withDOI}/${stats.total})
+            - ISBN Coverage: ${((stats.quality.withISBN / stats.total) * 100).toFixed(1)}% (${stats.quality.withISBN}/${stats.total})
+            - Abstract Coverage: ${((stats.quality.withAbstract / stats.total) * 100).toFixed(1)}% (${stats.quality.withAbstract}/${stats.total})
+            - HUMMBL Keywords: ${((stats.quality.withKeywords / stats.total) * 100).toFixed(1)}% (${stats.quality.withKeywords}/${stats.total})`;
+            
+            return github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+          } catch (error) {
+            core.setFailed(`Failed to process stats: ${error.message}`);
+            return null;
+          }
           
           github.rest.issues.createComment({
             issue_number: context.issue.number,
