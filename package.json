@@ -1,0 +1,37 @@
+{
+  "name": "hummbl-bibliography",
+  "version": "1.0.0",
+  "description": "Bibliography manager for HUMMBL cognitive framework with three-tier structure and validation toolkit",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "validate": "node toolkit/validate-all.js",
+    "validate:bibtex": "node toolkit/validate-bibtex.js",
+    "validate:duplicates": "node toolkit/check-duplicates.js",
+    "validate:keywords": "node toolkit/validate-keywords.js",
+    "validate:tiers": "node toolkit/check-tiers.js",
+    "stats": "node toolkit/generate-stats.js",
+    "export": "node toolkit/export-formats.js",
+    "prepare": "husky install",
+    "test": "npm run validate"
+  },
+  "keywords": [
+    "bibliography",
+    "bibtex",
+    "hummbl",
+    "cognitive-framework",
+    "citation-management",
+    "research"
+  ],
+  "author": "HUMMBL Dev Team",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hummbl-dev/hummbl-bibliography.git"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}

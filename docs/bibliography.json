@@ -1,0 +1,188 @@
+[
+  {
+    "type": "book",
+    "key": "newell1990unified",
+    "fields": {
+      "title": "Unified Theories of Cognition",
+      "author": "Newell, Allen",
+      "year": "1990",
+      "publisher": "Harvard University Press",
+      "address": "Cambridge, MA",
+      "keywords": "cognitive-architecture, unified-theories, foundational"
+    },
+    "source": "tier1-core.bib",
+    "tier": "tier1-core"
+  },
+  {
+    "type": "article",
+    "key": "anderson2004integrated",
+    "fields": {
+      "title": "An integrated theory of the mind",
+      "author": "Anderson, John R and Bothell, Daniel and Byrne, Michael D and Douglass, Scott and Lebiere, Christian and Qin, Yilin",
+      "journal": "Psychological Review",
+      "volume": "111",
+      "number": "4",
+      "pages": "1036--1060",
+      "year": "2004",
+      "publisher": "American Psychological Association",
+      "keywords": "cognitive-architecture, ACT-R, foundational"
+    },
+    "source": "tier1-core.bib",
+    "tier": "tier1-core"
+  },
+  {
+    "type": "book",
+    "key": "russell2010artificial",
+    "fields": {
+      "title": "Artificial Intelligence: A Modern Approach",
+      "author": "Russell, Stuart J and Norvig, Peter",
+      "edition": "3rd",
+      "year": "2010",
+      "publisher": "Prentice Hall",
+      "address": "Upper Saddle River, NJ",
+      "keywords": "artificial-intelligence, foundational, textbook"
+    },
+    "source": "tier1-core.bib",
+    "tier": "tier1-core"
+  },
+  {
+    "type": "article",
+    "key": "laird2012soar",
+    "fields": {
+      "title": "The Soar cognitive architecture",
+      "author": "Laird, John E",
+      "journal": "MIT Press",
+      "year": "2012",
+      "keywords": "cognitive-architecture, soar, implementation"
+    },
+    "source": "tier2-applied.bib",
+    "tier": "tier2-applied"
+  },
+  {
+    "type": "inproceedings",
+    "key": "langley2009cognitive",
+    "fields": {
+      "title": "Cognitive architectures: Research issues and challenges",
+      "author": "Langley, Pat and Laird, John E and Rogers, Seth",
+      "booktitle": "Cognitive Systems Research",
+      "volume": "10",
+      "number": "2",
+      "pages": "141--160",
+      "year": "2009",
+      "keywords": "cognitive-architecture, survey, methodology"
+    },
+    "source": "tier2-applied.bib",
+    "tier": "tier2-applied"
+  },
+  {
+    "type": "article",
+    "key": "kotseruba2020review",
+    "fields": {
+      "title": "40 years of cognitive architectures: core cognitive abilities and practical applications",
+      "author": "Kotseruba, Iuliia and Tsotsos, John K",
+      "journal": "Artificial Intelligence Review",
+      "volume": "53",
+      "number": "1",
+      "pages": "17--94",
+      "year": "2020",
+      "publisher": "Springer",
+      "keywords": "cognitive-architecture, survey, applications"
+    },
+    "source": "tier2-applied.bib",
+    "tier": "tier2-applied"
+  },
+  {
+    "type": "article",
+    "key": "lieto2018role",
+    "fields": {
+      "title": "The role of cognitive architectures in general artificial intelligence",
+      "author": "Lieto, Antonio and Bhatt, Mehul and Oltramari, Alessandro and Vernon, David",
+      "journal": "Cognitive Systems Research",
+      "volume": "48",
+      "pages": "1--3",
+      "year": "2018",
+      "publisher": "Elsevier",
+      "keywords": "cognitive-architecture, general-ai, theory"
+    },
+    "source": "tier2-applied.bib",
+    "tier": "tier2-applied"
+  },
+  {
+    "type": "article",
+    "key": "lecun2015deep",
+    "fields": {
+      "title": "Deep learning",
+      "author": "LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey",
+      "journal": "Nature",
+      "volume": "521",
+      "number": "7553",
+      "pages": "436--444",
+      "year": "2015",
+      "publisher": "Nature Publishing Group",
+      "keywords": "deep-learning, neural-networks, emerging"
+    },
+    "source": "tier3-emerging.bib",
+    "tier": "tier3-emerging"
+  },
+  {
+    "type": "article",
+    "key": "vaswani2017attention",
+    "fields": {
+      "title": "Attention is all you need",
+      "author": "Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\\L",
+      "journal": "Advances in Neural Information Processing Systems",
+      "volume": "30",
+      "year": "2017",
+      "keywords": "transformers, attention-mechanism, emerging"
+    },
+    "source": "tier3-emerging.bib",
+    "tier": "tier3-emerging"
+  },
+  {
+    "type": "article",
+    "key": "brown2020language",
+    "fields": {
+      "title": "Language models are few-shot learners",
+      "author": "Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others",
+      "journal": "Advances in Neural Information Processing Systems",
+      "volume": "33",
+      "pages": "1877--1901",
+      "year": "2020",
+      "keywords": "language-models, gpt-3, emerging"
+    },
+    "source": "tier3-emerging.bib",
+    "tier": "tier3-emerging"
+  },
+  {
+    "type": "article",
+    "key": "bengio2021gflownet",
+    "fields": {
+      "title": "Flow network based generative models for non-iterative diverse candidate generation",
+      "author": "Bengio, Emmanuel and Jain, Moksh and Korablyov, Maksym and Precup, Doina and Bengio, Yoshua",
+      "journal": "Advances in Neural Information Processing Systems",
+      "volume": "34",
+      "pages": "27381--27394",
+      "year": "2021",
+      "keywords": "generative-models, gflownet, emerging"
+    },
+    "source": "tier3-emerging.bib",
+    "tier": "tier3-emerging"
+  },
+  {
+    "type": "article",
+    "key": "jumper2021highly",
+    "fields": {
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "author": "Jumper, John and Evans, Richard and Pritzel, Alexander and Green, Tim and Figurnov, Michael and Ronneberger, Olaf and Tunyasuvunakool, Kathryn and Bates, Russ and {\\v{Z",
+      "journal": "Nature",
+      "volume": "596",
+      "number": "7873",
+      "pages": "583--589",
+      "year": "2021",
+      "publisher": "Nature Publishing Group",
+      "keywords": "protein-folding, alphafold, emerging"
+    },
+    "source": "tier3-emerging.bib",
+    "tier": "tier3-emerging"
+  }
+]

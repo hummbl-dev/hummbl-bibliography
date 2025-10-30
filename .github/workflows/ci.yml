@@ -1,0 +1,101 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Bibliography
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Validate three-tier structure
+      run: npm run validate:tiers
+    
+    - name: Validate BibTeX syntax
+      run: npm run validate:bibtex
+    
+    - name: Check for duplicates
+      run: npm run validate:duplicates
+    
+    - name: Validate keywords
+      run: npm run validate:keywords
+    
+    - name: Generate statistics
+      run: npm run stats
+    
+    - name: Run comprehensive validation
+      run: npm run validate
+    
+    - name: Export to multiple formats
+      run: npm run export
+    
+    - name: Upload exported files
+      uses: actions/upload-artifact@v3
+      if: matrix.node-version == '20.x'
+      with:
+        name: exported-bibliography
+        path: |
+          docs/bibliography.json
+          docs/BIBLIOGRAPHY.md
+        retention-days: 30
+
+  lint-quality:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Check file permissions
+      run: |
+        echo "Checking toolkit script permissions..."
+        test -x toolkit/validate-bibtex.js
+        test -x toolkit/check-duplicates.js
+        test -x toolkit/validate-keywords.js
+        test -x toolkit/check-tiers.js
+        test -x toolkit/generate-stats.js
+        test -x toolkit/export-formats.js
+        test -x toolkit/validate-all.js
+        echo "✓ All scripts are executable"
+    
+    - name: Verify directory structure
+      run: |
+        echo "Checking directory structure..."
+        test -d bibliography
+        test -d toolkit
+        test -d docs
+        test -d .github/workflows
+        echo "✓ Directory structure is valid"
+    
+    - name: Check required files
+      run: |
+        echo "Checking required files..."
+        test -f bibliography/tier1-core.bib
+        test -f bibliography/tier2-applied.bib
+        test -f bibliography/tier3-emerging.bib
+        test -f package.json
+        test -f README.md
+        test -f .gitignore
+        echo "✓ All required files exist"
