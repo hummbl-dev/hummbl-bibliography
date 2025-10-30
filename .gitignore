@@ -1,0 +1,11 @@
+node_modules/
+*.bib.backup
+*.log
+.DS_Store
+reports/*.html
+toolkit/dist/
+.env
+*.tmp
+coverage/
+.vscode/
+.idea/
