@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run validation in the toolkit directory
+echo "🔍 Running pre-commit validation..."
+cd toolkit && npm run validate
+
+# Capture the exit code
+VALIDATION_RESULT=$?
+
+# Return to the root directory
+cd ..
+
+# Exit with the validation result
+exit $VALIDATION_RESULT
