@@ -1,0 +1,77 @@
+name: DOI Enrichment
+
+on:
+  workflow_dispatch:  # Manual trigger only
+    inputs:
+      file:
+        description: 'Bibliography file to enrich (e.g., T1_canonical.bib, or "all")'
+        required: false
+        default: 'all'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  find-dois:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: toolkit/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd toolkit
+        npm ci
+        
+    - name: Find missing DOIs
+      run: |
+        cd toolkit
+        npm run find-dois > ../doi-enrichment-report.txt
+        
+    - name: Create enrichment branch
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git checkout -b doi-enrichment-$(date +%Y%m%d)
+        
+    - name: Display results
+      run: |
+        cat doi-enrichment-report.txt
+        
+    - name: Create summary
+      run: |
+        echo "## DOI Enrichment Report" > doi-summary.md
+        echo "" >> doi-summary.md
+        echo "Generated on: $(date)" >> doi-summary.md
+        echo "" >> doi-summary.md
+        echo "### Results" >> doi-summary.md
+        echo "" >> doi-summary.md
+        echo "\`\`\`" >> doi-summary.md
+        cat doi-enrichment-report.txt >> doi-summary.md
+        echo "\`\`\`" >> doi-summary.md
+        echo "" >> doi-summary.md
+        echo "### Action Required" >> doi-summary.md
+        echo "" >> doi-summary.md
+        echo "Review the found DOIs above and manually add high-confidence matches to the bibliography files." >> doi-summary.md
+        echo "" >> doi-summary.md
+        echo "**Note**: This workflow does NOT automatically modify bibliography files. Manual review is required." >> doi-summary.md
+        
+    - name: Upload report
+      uses: actions/upload-artifact@v4
+      with:
+        name: doi-enrichment-report
+        path: |
+          doi-enrichment-report.txt
+          doi-summary.md
+        retention-days: 30

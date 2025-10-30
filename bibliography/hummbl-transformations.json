@@ -1,0 +1,84 @@
+{
+  "transformations": {
+    "P": {
+      "name": "Perspective",
+      "description": "Observation, framing, lens-shifting, viewpoint changes",
+      "models": ["P1", "P2", "P3"]
+    },
+    "IN": {
+      "name": "Inversion",
+      "description": "Reversal, negation, contrapositive thinking, opposite approaches",
+      "models": ["IN1", "IN2", "IN3"]
+    },
+    "CO": {
+      "name": "Composition",
+      "description": "Building up, combining elements, synthesis from parts",
+      "models": ["CO1", "CO2", "CO3"]
+    },
+    "DE": {
+      "name": "Decomposition",
+      "description": "Breaking down, analysis into parts, chunking",
+      "models": ["DE1", "DE2", "DE3", "DE4"]
+    },
+    "RE": {
+      "name": "Recursion",
+      "description": "Self-reference, iterative processes, feedback loops",
+      "models": ["RE1", "RE2", "RE3"]
+    },
+    "SY": {
+      "name": "Synthesis",
+      "description": "Integration, holistic thinking, emergent properties",
+      "models": ["SY1", "SY2", "SY3", "SY4", "SY5"]
+    }
+  },
+  "mappings": {
+    "Meadows2008ThinkingSystems": ["SY1", "SY5", "RE3", "CO1"],
+    "Kahneman2011Thinking": ["P2", "IN1", "DE4"],
+    "Simon1996Sciences": ["CO2", "DE2"],
+    "Norman2013DesignEveryday": ["P1", "CO1"],
+    "Pearl2009Causality": ["IN2", "RE1"],
+    "Lakoff1980MetaphorsWeLive": ["P3", "SY2"],
+    "Hofstadter1979Godel": ["RE1", "RE2", "SY3"],
+    "Kuhn1996Structure": ["P2", "IN1"],
+    "Tufte2001VisualDisplay": ["P1", "SY4"],
+    "Taleb2007BlackSwan": ["IN2", "P3"],
+    "Alexander1977Pattern": ["CO1", "SY1"],
+    "Senge1990FifthDiscipline": ["SY1", "RE3"],
+    "VonNeumann1944GameTheory": ["IN1", "CO2"],
+    "Miller1956MagicalNumber": ["DE3", "CO2"],
+    "Gladwell2000TippingPoint": ["SY5", "RE2"],
+    "Schon1983ReflectivePractitioner": ["P1", "RE1"],
+    "Gibson1979EcologicalApproach": ["P1", "IN1"],
+    "Tversky1974Judgment": ["IN1", "DE1"],
+    "Simon1955Behavioral": ["DE2", "P2"],
+    "March1991Exploration": ["CO1", "SY2"],
+    "Weick1993Collapse": ["P1", "RE1"],
+    "Dunbar1995InVivo": ["RE2", "CO1"],
+    "Gentner1983Structure": ["CO3", "SY2"],
+    "Gigerenzer1996Reasoning": ["DE1", "IN2"],
+    "Larkin1980Expert": ["DE2", "CO2"],
+    "Chi1981Categorization": ["DE1", "P2"],
+    "Treisman1980Features": ["P1", "CO1"],
+    "Newell1972Human": ["RE1", "DE3"],
+    "Csikszentmihalyi1990Flow": ["SY3", "RE2"],
+    "Nisbett1977Telling": ["P2", "IN1"],
+    "Wason1968Reasoning": ["IN2", "RE1"],
+    "Simons1999Gorilla": ["P1", "IN1"],
+    "Hutchins1995Cognition": ["SY2", "CO3"],
+    "Ries2011LeanStartup": ["RE3", "DE2"],
+    "Brown2009ChangeByDesign": ["CO1", "RE2"],
+    "Kim2016PhoenixProject": ["SY1", "CO2"],
+    "Kotter1996Leading": ["SY4", "RE3"],
+    "Heath2007MadeToStick": ["SY2", "CO1"],
+    "Thaler2008Nudge": ["IN1", "CO1"],
+    "Duhigg2012PowerOfHabit": ["RE2", "SY1"],
+    "Collins2001GoodToGreat": ["SY1", "CO2"],
+    "Pink2009Drive": ["P1", "SY3"],
+    "Sutherland2014Scrum": ["RE3", "CO1"],
+    "Schwartz2004Paradox": ["IN2", "DE4"],
+    "Christensen1997Innovators": ["IN2", "SY5"],
+    "Ariely2008Predictably": ["IN1", "P2"],
+    "Goleman1995Emotional": ["P1", "SY2"],
+    "Gladwell2008Outliers": ["DE3", "SY4"]
+  }
+}

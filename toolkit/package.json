@@ -1,0 +1,47 @@
+{
+  "name": "hummbl-bibliography-toolkit",
+  "version": "1.0.0",
+  "description": "Validation and management toolkit for HUMMBL Bibliography",
+  "main": "src/validate.js",
+  "scripts": {
+    "validate": "node src/validate.js ../bibliography",
+    "validate:ci": "node src/validate.js ../bibliography --ci",
+    "check-dups": "node src/check-duplicates.js ../bibliography",
+    "fix-dups": "node src/fix-duplicates.js ../bibliography",
+    "find-dois": "node src/find-missing-dois.js ../bibliography",
+    "stats": "node src/stats.js ../bibliography",
+    "stats:json": "node src/stats.js ../bibliography --json",
+    "keywords": "node src/extract-keywords.js ../bibliography",
+    "merge": "node src/merge-entries.js",
+    "test": "npm run validate && npm run check-dups",
+    "setup": "chmod +x ../scripts/setup-hooks.sh && ../scripts/setup-hooks.sh",
+    "prepare": "cd .. && husky install toolkit/.husky"
+  },
+  "keywords": [
+    "bibliography",
+    "bibtex",
+    "hummbl",
+    "cognitive-framework",
+    "validation"
+  ],
+  "author": "HUMMBL Team",
+  "license": "MIT",
+  "dependencies": {
+    "@citation-js/core": "^0.7.0",
+    "@citation-js/plugin-bibtex": "^0.7.0",
+    "axios": "^1.13.1",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0"
+  },
+  "lint-staged": {
+    "../bibliography/*.bib": [
+      "npm run validate:ci --",
+      "npm run check-dups"
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+name: Validate Bibliography
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'bibliography/**/*.bib'
+      - 'toolkit/**/*.js'
+      - '.github/workflows/validate.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    # Add permissions to allow writing comments on PRs
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: toolkit/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd toolkit
+        npm ci
+        
+    - name: Run validation
+      id: validate
+      run: |
+        cd toolkit
+        npm run validate:ci
+        
+    - name: Check for duplicates
+      run: |
+        cd toolkit
+        npm run check-dups
+        
+    - name: Install jq
+      run: sudo apt-get update && sudo apt-get install -y jq
+
+    - name: Generate statistics
+      id: stats
+      run: |
+        cd toolkit
+        # Ensure clean JSON output by redirecting stderr to /dev/null
+        node src/stats.js ../bibliography --json 2>error.log > ../stats-output.json || {
+          echo "::error::Failed to generate stats"
+          echo "Error output:"
+          cat error.log
+          exit 1
+        }
+        
+        # Verify the JSON is valid
+        if ! jq empty ../stats-output.json 2>jq-error.log; then
+          echo "::error::Invalid JSON output from stats script"
+          echo "JSON validation error:"
+          cat jq-error.log
+          echo "\nRaw output (first 1000 chars):"
+          head -c 1000 ../stats-output.json
+          exit 1
+        fi
+        
+    - name: Comment PR with results
+      if: github.event_name == 'pull_request' && success()
+      uses: actions/github-script@v7
+      env:
+        # Use the GITHUB_TOKEN with the correct permissions
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        script: |
+          // Use require instead of import to avoid any module issues
+          const fs = require('fs').promises;
+          
+          try {
+            // Read and parse the stats file
+            const statsData = await fs.readFile('stats-output.json', 'utf8');
+            let stats;
+            
+            try {
+              stats = JSON.parse(statsData);
+            } catch (parseError) {
+              console.error('Failed to parse stats JSON:', parseError);
+              console.error('Stats data:', statsData);
+              throw parseError;
+            }
+            
+            // Generate the comment body using string concatenation to avoid YAML issues
+            const body = '## 📊 Bibliography Validation Results\n\n' +
+              '✅ **Validation**: Passed\n\n' +
+              '### Statistics\n' +
+              `- **Total Entries**: ${stats.total || 0}\n` +
+              `- **Entries with Abstracts**: ${stats.quality?.withAbstract || 0}/${stats.total || 0}\n` +
+              `- **Missing Abstracts**: ${(stats.total || 0) - (stats.quality?.withAbstract || 0)}\n\n` +
+              '### Transformation Coverage\n' +
+              `- P (Perspective): ${stats.transformations?.P || 0}\n` +
+              `- IN (Inversion): ${stats.transformations?.IN || 0}\n` +
+              `- CO (Composition): ${stats.transformations?.CO || 0}\n` +
+              `- DE (Decomposition): ${stats.transformations?.DE || 0}\n` +
+              `- RE (Recursion): ${stats.transformations?.RE || 0}\n` +
+              `- SY (Synthesis): ${stats.transformations?.SY || 0}\n\n` +
+              '### Quality Metrics\n' +
+              `- DOI Coverage: ${stats.total ? ((stats.quality?.withDOI || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withDOI || 0}/${stats.total || 0})\n` +
+              `- ISBN Coverage: ${stats.total ? ((stats.quality?.withISBN || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withISBN || 0}/${stats.total || 0})\n` +
+              `- Abstract Coverage: ${stats.total ? ((stats.quality?.withAbstract || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withAbstract || 0}/${stats.total || 0})\n` +
+              `- HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})`;
+            
+            // Post the comment
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+            
+            return 'Successfully posted PR comment';
+            
+          } catch (error) {
+            console.error('Error in GitHub Script:', error);
+            
+            // Post a fallback error comment
+            try {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: '❌ Failed to generate statistics. Please check the workflow logs for details.'
+              });
+            } catch (commentError) {
+              console.error('Failed to post error comment:', commentError);
+            }
+            
+            // This will fail the step
+            throw error;
+          }

@@ -1,0 +1,53 @@
+name: Weekly Statistics Report
+
+on:
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: toolkit/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd toolkit
+        npm ci
+        
+    - name: Generate statistics report
+      run: |
+        cd toolkit
+        npm run stats > ../reports/$(date +%Y-%m-%d)-stats.md
+        
+    - name: Generate transformation keywords
+      run: |
+        cd toolkit
+        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
+        echo "---" >> ../reports/$(date +%Y-%m-%d)-stats.md
+        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
+        echo "# Transformation Keywords" >> ../reports/$(date +%Y-%m-%d)-stats.md
+        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
+        npm run keywords >> ../reports/$(date +%Y-%m-%d)-stats.md
+        
+    - name: Commit report
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add reports/
+        git diff --staged --quiet || git commit -m "chore: weekly statistics report $(date +%Y-%m-%d)"
+        git push
