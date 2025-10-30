@@ -58,47 +58,73 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const fs = require('fs');
+          const fs = require('fs').promises;
+          const core = require('@actions/core');
+          
           try {
-            const stats = JSON.parse(fs.readFileSync('stats-output.json', 'utf8'));
+            // Read and parse the stats file
+            const statsData = await fs.readFile('stats-output.json', 'utf8');
+            let stats;
             
+            try {
+              stats = JSON.parse(statsData);
+            } catch (parseError) {
+              core.error('Failed to parse stats JSON:');
+              core.error(statsData);
+              throw parseError;
+            }
+            
+            // Generate the comment body
             const body = `## 📊 Bibliography Validation Results
             
             ✅ **Validation**: Passed
             
             ### Statistics
-            - **Total Entries**: ${stats.total}
-            - **Entries with Abstracts**: ${stats.quality.withAbstract}/${stats.total}
-            - **Missing Abstracts**: ${stats.total - stats.quality.withAbstract}
+            - **Total Entries**: ${stats.total || 0}
+            - **Entries with Abstracts**: ${stats.quality?.withAbstract || 0}/${stats.total || 0}
+            - **Missing Abstracts**: ${(stats.total || 0) - (stats.quality?.withAbstract || 0)}
             
             ### Transformation Coverage
-            - P (Perspective): ${stats.transformations.P}
-            - IN (Inversion): ${stats.transformations.IN}
-            - CO (Composition): ${stats.transformations.CO}
-            - DE (Decomposition): ${stats.transformations.DE}
-            - RE (Recursion): ${stats.transformations.RE}
-            - SY (Synthesis): ${stats.transformations.SY}
+            - P (Perspective): ${stats.transformations?.P || 0}
+            - IN (Inversion): ${stats.transformations?.IN || 0}
+            - CO (Composition): ${stats.transformations?.CO || 0}
+            - DE (Decomposition): ${stats.transformations?.DE || 0}
+            - RE (Recursion): ${stats.transformations?.RE || 0}
+            - SY (Synthesis): ${stats.transformations?.SY || 0}
             
             ### Quality Metrics
-            - DOI Coverage: ${((stats.quality.withDOI / stats.total) * 100).toFixed(1)}% (${stats.quality.withDOI}/${stats.total})
-            - ISBN Coverage: ${((stats.quality.withISBN / stats.total) * 100).toFixed(1)}% (${stats.quality.withISBN}/${stats.total})
-            - Abstract Coverage: ${((stats.quality.withAbstract / stats.total) * 100).toFixed(1)}% (${stats.quality.withAbstract}/${stats.total})
-            - HUMMBL Keywords: ${((stats.quality.withKeywords / stats.total) * 100).toFixed(1)}% (${stats.quality.withKeywords}/${stats.total})`;
+            - DOI Coverage: ${stats.total ? ((stats.quality?.withDOI || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withDOI || 0}/${stats.total || 0})
+            - ISBN Coverage: ${stats.total ? ((stats.quality?.withISBN || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withISBN || 0}/${stats.total || 0})
+            - Abstract Coverage: ${stats.total ? ((stats.quality?.withAbstract || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withAbstract || 0}/${stats.total || 0})
+            - HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})`;
             
-            return github.rest.issues.createComment({
+            // Post the comment
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: body
             });
+            
+            return 'Successfully posted PR comment';
+            
           } catch (error) {
+            core.error('Error in GitHub Script:');
+            core.error(error);
+            
+            // Post a fallback error comment
+            try {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: '❌ Failed to generate statistics. Please check the workflow logs for details.'
+              });
+            } catch (commentError) {
+              core.error('Failed to post error comment:');
+              core.error(commentError);
+            }
+            
             core.setFailed(`Failed to process stats: ${error.message}`);
             return null;
           }
-          
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: body
-          });
