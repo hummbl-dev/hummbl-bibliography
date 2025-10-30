@@ -72,7 +72,6 @@ jobs:
       with:
         script: |
           const fs = require('fs').promises;
-          const core = require('@actions/core');
           
           try {
             // Read and parse the stats file
