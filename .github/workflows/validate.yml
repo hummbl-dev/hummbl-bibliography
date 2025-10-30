@@ -71,6 +71,7 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
+          // Use require instead of import to avoid any module issues
           const fs = require('fs').promises;
           
           try {
@@ -89,26 +90,26 @@ jobs:
             // Generate the comment body
             const body = `## 📊 Bibliography Validation Results
             
-            ✅ **Validation**: Passed
+✅ **Validation**: Passed
             
-            ### Statistics
-            - **Total Entries**: ${stats.total || 0}
-            - **Entries with Abstracts**: ${stats.quality?.withAbstract || 0}/${stats.total || 0}
-            - **Missing Abstracts**: ${(stats.total || 0) - (stats.quality?.withAbstract || 0)}
+### Statistics
+- **Total Entries**: ${stats.total || 0}
+- **Entries with Abstracts**: ${stats.quality?.withAbstract || 0}/${stats.total || 0}
+- **Missing Abstracts**: ${(stats.total || 0) - (stats.quality?.withAbstract || 0)}
             
-            ### Transformation Coverage
-            - P (Perspective): ${stats.transformations?.P || 0}
-            - IN (Inversion): ${stats.transformations?.IN || 0}
-            - CO (Composition): ${stats.transformations?.CO || 0}
-            - DE (Decomposition): ${stats.transformations?.DE || 0}
-            - RE (Recursion): ${stats.transformations?.RE || 0}
-            - SY (Synthesis): ${stats.transformations?.SY || 0}
+### Transformation Coverage
+- P (Perspective): ${stats.transformations?.P || 0}
+- IN (Inversion): ${stats.transformations?.IN || 0}
+- CO (Composition): ${stats.transformations?.CO || 0}
+- DE (Decomposition): ${stats.transformations?.DE || 0}
+- RE (Recursion): ${stats.transformations?.RE || 0}
+- SY (Synthesis): ${stats.transformations?.SY || 0}
             
-            ### Quality Metrics
-            - DOI Coverage: ${stats.total ? ((stats.quality?.withDOI || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withDOI || 0}/${stats.total || 0})
-            - ISBN Coverage: ${stats.total ? ((stats.quality?.withISBN || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withISBN || 0}/${stats.total || 0})
-            - Abstract Coverage: ${stats.total ? ((stats.quality?.withAbstract || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withAbstract || 0}/${stats.total || 0})
-            - HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})`;
+### Quality Metrics
+- DOI Coverage: ${stats.total ? ((stats.quality?.withDOI || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withDOI || 0}/${stats.total || 0})
+- ISBN Coverage: ${stats.total ? ((stats.quality?.withISBN || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withISBN || 0}/${stats.total || 0})
+- Abstract Coverage: ${stats.total ? ((stats.quality?.withAbstract || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withAbstract || 0}/${stats.total || 0})
+- HUMMBL Keywords: ${stats.total ? ((stats.quality?.withKeywords || 0) / stats.total * 100).toFixed(1) : 0}% (${stats.quality?.withKeywords || 0}/${stats.total || 0})`;
             
             // Post the comment
             await github.rest.issues.createComment({
