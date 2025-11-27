@@ -1,0 +1,123 @@
+name: Validate Mental Model References
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**/*.md'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.js'
+      - '**/*.jsx'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - '**/*.md'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.js'
+      - '**/*.jsx'
+
+jobs:
+  validate-models:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd toolkit
+          npm ci
+
+      - name: Type check validation functions
+        run: |
+          cd toolkit
+          npm run type-check
+
+      - name: Run model validation script
+        run: |
+          cd toolkit
+          node -e "
+          const { auditText } = require('./src/utils/monitorModels.ts');
+          const fs = require('fs');
+          const path = require('path');
+
+          // Find all relevant files
+          const files = [];
+          const walk = (dir) => {
+            const items = fs.readdirSync(dir);
+            items.forEach(item => {
+              const fullPath = path.join(dir, item);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+                walk(fullPath);
+              } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(path.extname(item))) {
+                files.push(fullPath);
+              }
+            });
+          };
+
+          walk('.');
+
+          let totalValid = 0;
+          let totalInvalid = 0;
+          let totalHallucinations = 0;
+          const errors = [];
+
+          files.forEach(file => {
+            try {
+              const content = fs.readFileSync(file, 'utf8');
+              const audit = auditText(content);
+
+              totalValid += audit.references.filter(r => r.isValid).length;
+              totalInvalid += audit.references.filter(r => !r.isValid).length;
+              totalHallucinations += audit.hallucinations.length;
+
+              if (audit.validationErrors.length > 0 || audit.hallucinations.length > 0) {
+                errors.push({
+                  file,
+                  errors: audit.validationErrors,
+                  hallucinations: audit.hallucinations
+                });
+              }
+            } catch (err) {
+              console.warn(\`Warning: Could not read \${file}: \${err.message}\`);
+            }
+          });
+
+          console.log(\`Model Validation Results:\`);
+          console.log(\`Valid references: \${totalValid}\`);
+          console.log(\`Invalid references: \${totalInvalid}\`);
+          console.log(\`Hallucinations: \${totalHallucinations}\`);
+
+          if (errors.length > 0) {
+            console.log(\`\nErrors found:\`);
+            errors.forEach(error => {
+              console.log(\`File: \${error.file}\`);
+              error.errors.forEach(err => console.log(\`  - \${err}\`));
+              error.hallucinations.forEach(hall => console.log(\`  - Hallucination: \${hall}\`));
+            });
+
+            if (totalInvalid > 0 || totalHallucinations > 0) {
+              console.log(\`\n❌ Validation failed: Invalid references or hallucinations detected\`);
+              process.exit(1);
+            }
+          } else {
+            console.log(\`\n✅ Validation passed: No invalid references or hallucinations found\`);
+          }
+          "
+
+      - name: Update metrics dashboard
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # This would update the metrics dashboard with CI results
+          # For now, just log that we'd update it
+          echo "Would update docs/metrics/model-accuracy.md with CI results"

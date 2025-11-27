@@ -12,12 +12,12 @@ A production-ready bibliography management system for the **HUMMBL (Base120) cog
 
 The HUMMBL cognitive framework identifies six fundamental thinking operations:
 
-- **P** (Perspective): Observation, framing, lens-shifting
-- **IN** (Inversion): Reversal, negation, contrapositive thinking
-- **CO** (Composition): Building up, combining elements
-- **DE** (Decomposition): Breaking down, analysis into parts
-- **RE** (Recursion): Self-reference, iterative processes, feedback loops
-- **SY** (Synthesis): Integration, holistic thinking, emergent properties
+- **P** (Perspective/Identity): Frame and name what is. Anchor or shift point of view.
+- **IN** (Inversion): Reverse assumptions. Examine opposites, edges, negations.
+- **CO** (Composition): Combine parts into coherent wholes.
+- **DE** (Decomposition): Break complex systems into constituent parts.
+- **RE** (Recursion): Apply operations iteratively, with outputs becoming inputs.
+- **SY** (Meta-Systems): Understand systems of systems, coordination, and emergent dynamics.
 
 This bibliography provides the theoretical foundation and empirical evidence for these transformations through carefully selected works spanning systems thinking, cognitive psychology, design, and organizational learning.
 
