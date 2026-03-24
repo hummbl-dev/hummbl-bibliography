@@ -1,0 +1,171 @@
+% =============================================================================
+% T9: Economics of AI Systems, Platform Dynamics, and Cost Governance
+% =============================================================================
+%
+% The hummbl-dev ecosystem implements sophisticated cost governance (SQLite-
+% backed budget enforcement with soft/hard caps), a CostGovernorBridge adapter,
+% runway forecasting, and the GaaS (Governance-as-a-Service) revenue thesis --
+% yet has zero academic economics citations. This tier grounds:
+%
+%   - Cloud/API cost optimization and pricing models
+%   - Platform economics and two-sided markets (GaaS is a platform)
+%   - Economics of AI inference (compute costs, scaling laws)
+%   - Mechanism design for resource allocation (contract net protocol)
+%   - Principal-agent problems (delegation tokens address this)
+%   - Transaction cost economics (make-vs-buy for AI capabilities)
+%
+% 12 entries. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@article{Coase1937NatureFirm,
+  title     = {The Nature of the Firm},
+  author    = {Coase, Ronald H.},
+  year      = {1937},
+  journal   = {Economica},
+  volume    = {4},
+  number    = {16},
+  pages     = {386--405},
+  doi       = {10.1111/j.1468-0335.1937.tb00002.x},
+  abstract  = {Coase's foundational paper asks why firms exist at all when market transactions could coordinate production. His answer -- transaction costs -- is the intellectual ancestor of every make-vs-buy decision in the hummbl-dev stack. The CostGovernorBridge enforces budget caps on API calls precisely because the cost of using external ML prediction markets (OpenAI, Anthropic, Google) can exceed the cost of internal coordination. The delegation token system mirrors Coase's insight that hierarchical authority within a firm reduces negotiation overhead: rather than re-negotiating access rights per request, a signed HMAC token delegates bounded capability once. The GaaS revenue thesis itself is a Coasean proposition -- governance as a service reduces the transaction costs other builders face when coordinating multi-agent systems, creating a firm-like boundary around trust and compliance that the open market cannot efficiently provide.},
+  keywords  = {transaction costs, firm theory, make-or-buy, HUMMBL:P, HUMMBL:IN, HUMMBL:SY}
+}
+
+@book{Williamson1985EconomicInstitutions,
+  title     = {The Economic Institutions of Capitalism: Firms, Markets, Relational Contracting},
+  author    = {Williamson, Oliver E.},
+  year      = {1985},
+  publisher = {The Free Press},
+  address   = {New York},
+  isbn      = {978-0029348208},
+  % No DOI available -- pre-DOI era trade book; ISBN 0-02-934820-X
+  abstract  = {Williamson extends Coase's transaction cost framework into a full theory of institutional governance, introducing asset specificity, bounded rationality, and opportunism as the key variables determining whether transactions are organized via markets, hierarchies, or hybrid forms. The hummbl-dev circuit breaker pattern is a direct implementation of Williamson's governance switching: when an external adapter's failure rate crosses a threshold (asset specificity of the integration becomes high), the system shifts from market-like API calls to hierarchical fallback (mock data, cached results). The contract-net protocol in multi-agent coordination similarly reflects Williamson's hybrid governance -- agents bid for tasks in a market-like auction but operate under hierarchical kill-switch authority. The frozen contract schemas in the contracts/ directory embody relational contracting: they set stable terms that reduce renegotiation costs across service boundaries.},
+  keywords  = {transaction costs, governance structures, asset specificity, HUMMBL:SY, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Rochet2003PlatformCompetition,
+  title     = {Platform Competition in Two-Sided Markets},
+  author    = {Rochet, Jean-Charles and Tirole, Jean},
+  year      = {2003},
+  journal   = {Journal of the European Economic Association},
+  volume    = {1},
+  number    = {4},
+  pages     = {990--1029},
+  doi       = {10.1162/154247603322493212},
+  abstract  = {Rochet and Tirole formalize the economics of two-sided platforms, showing how a platform must manage cross-group externalities by subsidizing one side to attract the other. GaaS (Governance-as-a-Service) is structurally a two-sided market: on one side, AI agent builders need governance primitives (circuit breakers, delegation tokens, kill switches); on the other, enterprises need assurance that agents comply with safety contracts. The platform's pricing problem -- whether to charge builders, enterprises, or both -- maps directly to Rochet-Tirole's framework. Their finding that the socially optimal price structure differs from the profit-maximizing one informs the open-source-core-plus-hosted-governance business model. The Base120 API itself exhibits network effects: more mental models in the registry make the platform more valuable to every user, creating the cross-side externality that defines a two-sided market.},
+  keywords  = {two-sided markets, platform economics, network effects, HUMMBL:CO, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Parker2005TwoSidedNetworkEffects,
+  title     = {Two-Sided Network Effects: A Theory of Information Product Design},
+  author    = {Parker, Geoffrey G. and Van Alstyne, Marshall W.},
+  year      = {2005},
+  journal   = {Management Science},
+  volume    = {51},
+  number    = {10},
+  pages     = {1494--1504},
+  doi       = {10.1287/mnsc.1050.0400},
+  abstract  = {Parker and Van Alstyne model how platforms can profitably give away products by exploiting two-sided network effects, where the value of the platform to one side increases with participation on the other. This directly informs GaaS pricing strategy: the Base120 mental model library and MCP server can be offered free to developers (the subsidy side) while enterprises pay for governance compliance dashboards and audit trails (the money side). The paper's analysis of information product design -- specifically the trade-off between openness and control -- maps to the hummbl-dev decision to open-source Base120 while keeping the governance bus append-only and HMAC-signed. Their finding that platforms should subsidize the side with greater cross-network externalities validates the developer-first strategy, since each new agent builder increases the governance surface area that enterprises must monitor.},
+  keywords  = {network effects, platform strategy, information goods, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
+}
+
+@book{Shapiro1999InformationRules,
+  title     = {Information Rules: A Strategic Guide to the Network Economy},
+  author    = {Shapiro, Carl and Varian, Hal R.},
+  year      = {1999},
+  publisher = {Harvard Business School Press},
+  address   = {Boston, MA},
+  isbn      = {978-0875848631},
+  % No DOI available -- Harvard Business School Press trade book; no registered DOI
+  abstract  = {Shapiro and Varian apply classical microeconomics to information goods, establishing that information has high fixed costs of production and near-zero marginal costs of reproduction. This cost structure is the foundation of the entire hummbl-dev economic model: governance rules, mental model schemas, and contract definitions are information goods with exactly this cost profile. Once the Base120 ontology is created, distributing it via API or MCP costs effectively nothing. The book's treatment of lock-in and switching costs explains why the frozen contract baseline (fm-contracts-v0.1) is strategically important -- it creates switching costs for adopters who build against the schema. Their analysis of versioning and bundling informs the tiered GaaS offering: a free tier for individual developers, a compliance tier for startups, and an enterprise tier with audit trails and SLA guarantees.},
+  keywords  = {information economics, network effects, switching costs, HUMMBL:P, HUMMBL:CO, HUMMBL:IN}
+}
+
+@article{Vickrey1961Counterspeculation,
+  title     = {Counterspeculation, Auctions, and Competitive Sealed Tenders},
+  author    = {Vickrey, William},
+  year      = {1961},
+  journal   = {The Journal of Finance},
+  volume    = {16},
+  number    = {1},
+  pages     = {8--37},
+  doi       = {10.1111/j.1540-6261.1961.tb02789.x},
+  abstract  = {Vickrey's seminal paper establishes the theoretical foundation for auction mechanism design, proving that a second-price sealed-bid auction incentivizes truthful bidding. The contract-net protocol used in multi-agent task allocation is a direct descendant of auction mechanisms: agents submit bids for tasks, and the allocator selects based on cost, capability, and availability. Vickrey's truthful revelation principle is relevant to the hummbl-dev delegation token system -- when an agent receives a bounded capability token, the mechanism must ensure the agent has no incentive to misrepresent its capacity or resource consumption. The CostGovernorBridge's budget enforcement can be understood as a modified auction where each API call competes for budget allocation, and the governor acts as the auctioneer enforcing reserve prices (soft caps) and absolute limits (hard caps) to prevent the winner's curse of runaway inference costs.},
+  keywords  = {auction theory, mechanism design, truthful bidding, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Nordhaus2021EconomicSingularity,
+  title     = {Are We Approaching an Economic Singularity? Information Technology and the Future of Economic Growth},
+  author    = {Nordhaus, William D.},
+  year      = {2021},
+  journal   = {American Economic Journal: Macroeconomics},
+  volume    = {13},
+  number    = {1},
+  pages     = {299--332},
+  doi       = {10.1257/mac.20170105},
+  abstract  = {Nobel laureate Nordhaus develops a growth model to test whether rapid improvements in computation and AI will trigger an economic singularity -- a regime of ever-accelerating growth. He finds no evidence of singularity in historical data but identifies the conditions under which it could occur, particularly if AI substitutes for human labor across all tasks. This paper provides the macroeconomic context for hummbl-dev's cost governance thesis: if AI inference costs continue their observed exponential decline (280x reduction for GPT-3.5-level performance in two years), budget enforcement systems must be adaptive, not static. The CostGovernorBridge's soft and hard caps are an engineering response to exactly the price dynamics Nordhaus models. His framework also grounds the runway forecasting skill -- projecting when budget constraints will bind requires understanding the deflationary trajectory of AI compute costs.},
+  keywords  = {economic growth, AI singularity, compute costs, HUMMBL:RE, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Kaplan2020ScalingLaws,
+  title     = {Scaling Laws for Neural Language Models},
+  author    = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+  year      = {2020},
+  journal   = {arXiv preprint},
+  eprint    = {2001.08361},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  doi       = {10.48550/arXiv.2001.08361},
+  abstract  = {Kaplan et al. discover that neural language model performance follows power-law relationships with model size, dataset size, and compute budget, with trends spanning seven orders of magnitude. This paper is the empirical foundation for the economic logic of the hummbl-dev cost governor. The scaling laws imply that doubling performance requires roughly 10x more compute -- making cost optimization not just engineering housekeeping but a strategic constraint. The CostGovernorBridge's budget enforcement operates in the regime these laws predict: choosing between a large expensive model and a small cheap one is a scaling-law-informed cost-quality tradeoff. The FrugalGPT-style LLM cascade that the RouteLLM integration enables is directly motivated by these findings -- route easy queries to small models (low on the scaling curve) and hard queries to large models (high on the curve), optimizing the cost-quality frontier.},
+  keywords  = {scaling laws, compute costs, neural networks, HUMMBL:RE, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Chen2023FrugalGPT,
+  title     = {{FrugalGPT}: How to Use Large Language Models While Reducing Cost and Improving Performance},
+  author    = {Chen, Lingjiao and Zaharia, Matei and Zou, James},
+  year      = {2023},
+  journal   = {arXiv preprint},
+  eprint    = {2305.05176},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  doi       = {10.48550/arXiv.2305.05176},
+  abstract  = {FrugalGPT introduces three strategies for reducing LLM inference costs -- prompt adaptation, LLM approximation, and LLM cascade -- demonstrating that matching GPT-4 performance is possible with up to 98 percent cost reduction. This paper is the direct academic antecedent of the hummbl-dev cost governance architecture. The CostGovernorBridge implements budget-constrained API selection; the RouteLLM integration routes queries across model tiers based on complexity. FrugalGPT's LLM cascade strategy -- trying cheap models first, escalating to expensive ones only when confidence is low -- maps precisely to the circuit breaker pattern: if the cheap model fails (low confidence), the breaker opens to the next tier. The paper's empirical finding that model heterogeneity creates arbitrage opportunities validates the multi-adapter architecture in integrations/, where github_adapter, linear_adapter, and ollama_adapter can each route to different cost tiers depending on query complexity and budget remaining.},
+  keywords  = {cost optimization, LLM inference, model cascade, HUMMBL:DE, HUMMBL:CO, HUMMBL:IN}
+}
+
+@article{Brynjolfsson2016DataDriven,
+  title     = {The Rapid Adoption of Data-Driven Decision-Making},
+  author    = {Brynjolfsson, Erik and McElheran, Kristina},
+  year      = {2016},
+  journal   = {American Economic Review},
+  volume    = {106},
+  number    = {5},
+  pages     = {133--139},
+  doi       = {10.1257/aer.p20161016},
+  abstract  = {Using Census Bureau data from a representative sample of U.S. manufacturing plants, Brynjolfsson and McElheran find that data-driven decision-making (DDD) tripled from 11 to 30 percent between 2005 and 2010, with adopters showing 4-8 percent higher productivity. This paper provides the empirical economic justification for the Morning Briefing system -- the core product of hummbl-dev. The briefing aggregates signals from GitHub, Linear, Google Calendar, cost tracking, and security scans into a daily decision-support artifact, precisely the kind of DDD infrastructure that drives the productivity gains measured here. Their finding that DDD adoption correlates with IT investment and educated workers describes the target market for GaaS: technically sophisticated teams with existing infrastructure who need governance tooling to extract full value from their AI investments.},
+  keywords  = {data-driven decisions, productivity, technology adoption, HUMMBL:P, HUMMBL:CO, HUMMBL:SY}
+}
+
+@article{Agrawal2019EconomicPolicy,
+  title     = {Economic Policy for Artificial Intelligence},
+  author    = {Agrawal, Ajay and Gans, Joshua and Goldfarb, Avi},
+  year      = {2019},
+  journal   = {Innovation Policy and the Economy},
+  volume    = {19},
+  number    = {1},
+  pages     = {139--159},
+  doi       = {10.1086/699935},
+  abstract  = {Agrawal, Gans, and Goldfarb frame AI as a drop in the cost of prediction, then analyze the policy implications across labor markets, data governance, and industry structure. Their prediction-cost framework explains why the hummbl-dev cost governor is architecturally central rather than an afterthought: if AI is cheap prediction, then governance is the cost of ensuring predictions are safe, compliant, and cost-bounded. The paper's analysis of principal-agent problems in AI delegation -- where the AI agent has private information about its confidence and the principal cannot fully monitor -- directly motivates the HMAC-signed delegation tokens in the IDP system. Their discussion of data as a barrier to entry informs the append-only governance bus design: the accumulated audit trail becomes a competitive moat, since compliance history cannot be replicated by new entrants.},
+  keywords  = {AI economics, prediction costs, policy, principal-agent, HUMMBL:P, HUMMBL:IN, HUMMBL:SY}
+}
+
+@article{Amershi2019SoftwareEngineering,
+  title     = {Software Engineering for Machine Learning: A Case Study},
+  author    = {Amershi, Saleema and Begel, Andrew and Bird, Christian and DeLine, Robert and Gall, Harald and Kamar, Ece and Nagappan, Nachiappan and Nushi, Besmira and Zimmermann, Thomas},
+  year      = {2019},
+  booktitle = {Proceedings of the 41st International Conference on Software Engineering: Software Engineering in Practice},
+  journal   = {ICSE-SEIP '19},
+  pages     = {291--300},
+  doi       = {10.1109/ICSE-SEIP.2019.00042},
+  abstract  = {Based on interviews with software teams at Microsoft building AI applications, Amershi et al. identify a nine-stage ML workflow and document the engineering challenges of integrating ML into production systems. Their finding that ML systems require fundamentally different testing, monitoring, and deployment practices than traditional software validates the hummbl-dev architecture's investment in specialized infrastructure: the circuit breaker wraps all ML-dependent adapters because ML services fail differently than deterministic APIs. The paper's observation that data management and model evolution create ongoing maintenance costs -- echoing Sculley's ML technical debt -- justifies the cost tracker integration and budget enforcement. Their emphasis on continuous model evaluation maps to the health probe system, where each adapter's reliability is monitored independently and failures trigger governance responses rather than silent degradation.},
+  keywords  = {software engineering, machine learning, technical debt, HUMMBL:CO, HUMMBL:DE, HUMMBL:RE}
+}

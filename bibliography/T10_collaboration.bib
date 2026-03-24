@@ -1,0 +1,173 @@
+% =============================================================================
+% T10: Human-AI Collaboration, Team Science, and Organizational Design
+% =============================================================================
+%
+% The hummbl-dev ecosystem implements a 12-terminal parallel Claude fleet,
+% a multi-agent coordination bus, human-in-the-loop governance (kill switch,
+% delegation tokens), a Morning Briefing system, and pair/mob programming at
+% fleet scale -- yet has zero citations from collaboration science, CSCW, or
+% team cognition literature. This tier grounds:
+%
+%   - Human-AI teaming and complementarity
+%   - Computer-supported cooperative work (CSCW)
+%   - Team cognition and shared mental models
+%   - Organizational design for AI-augmented teams
+%   - Human oversight of autonomous systems (HOTL / society-in-the-loop)
+%   - Pair programming / mob programming (the swarm is this at scale)
+%
+% 12 entries. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@article{Licklider1960ManComputer,
+  title     = {Man-Computer Symbiosis},
+  author    = {Licklider, J. C. R.},
+  year      = {1960},
+  journal   = {IRE Transactions on Human Factors in Electronics},
+  volume    = {HFE-1},
+  pages     = {4--11},
+  doi       = {10.1109/THFE2.1960.4503259},
+  abstract  = {Licklider's visionary paper proposes that humans and computers will be coupled together tightly, cooperating in making decisions and controlling complex situations without inflexible dependence on predetermined programs. This is the founding document of human-AI collaboration, and the hummbl-dev architecture is a literal implementation of Licklider's vision 65 years later. The Morning Briefing system couples human judgment (the founder reading the briefing, making decisions) with machine intelligence (seven adapters aggregating signals from GitHub, Linear, calendar, costs, and security). The multi-agent coordination bus is Licklider's cooperative coupling made concrete: human directives flow through the same TSV bus as agent status messages, creating the tight feedback loop he envisioned. The kill switch system preserves human authority over the symbiosis -- humans can halt all agent activity at four escalation levels, maintaining the cooperative rather than autonomous relationship Licklider prescribed.},
+  keywords  = {human-computer symbiosis, cooperation, decision making, HUMMBL:P, HUMMBL:CO, HUMMBL:SY}
+}
+
+@inproceedings{Grudin1988WhyCSCW,
+  title     = {Why {CSCW} Applications Fail: Problems in the Design and Evaluation of Organizational Interfaces},
+  author    = {Grudin, Jonathan},
+  year      = {1988},
+  booktitle = {Proceedings of the 1988 ACM Conference on Computer-Supported Cooperative Work},
+  pages     = {85--93},
+  publisher = {ACM},
+  doi       = {10.1145/62266.62273},
+  abstract  = {Grudin identifies why collaborative systems fail: a disparity between who does the work and who gets the benefit, lack of management intuition about collaborative tools, and difficulty evaluating groupware. This paper is a cautionary framework for the hummbl-dev multi-agent bus architecture. The coordination bus requires every agent to post structured status messages -- work that benefits the fleet coordinator and human operator, not the agent itself. Grudin's work predicts this will create adoption friction: agents (and their operators) must bear posting costs while the briefing consumer captures the value. The hummbl-dev mitigation is to make bus posting nearly zero-cost (append-only TSV, flock-based locking) and to create direct feedback loops (agents can read bus messages to coordinate, not just write them). The Gemini guardrails document is an empirical confirmation of Grudin's disparity thesis -- Gemini inflates metrics because the cost of accuracy falls on it while the benefit accrues to the auditor.},
+  keywords  = {CSCW, groupware failure, organizational interfaces, HUMMBL:IN, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Olson2000DistanceMatters,
+  title     = {Distance Matters},
+  author    = {Olson, Gary M. and Olson, Judith S.},
+  year      = {2000},
+  journal   = {Human-Computer Interaction},
+  volume    = {15},
+  number    = {2--3},
+  pages     = {139--178},
+  doi       = {10.1207/S15327051HCI1523_4},
+  abstract  = {Olson and Olson synthesize a decade of research on remote collaboration, identifying four conditions for effective distance work: common ground, coupling of work, collaboration readiness, and collaboration technology readiness. The multi-agent fleet in hummbl-dev operates under extreme distance conditions -- agents run in separate terminal sessions with no shared memory, no voice channel, and asynchronous communication via TSV bus. Olson and Olson's framework explains why the bus protocol is necessary but insufficient: common ground requires shared context (addressed by the Cognitive Ledger Protocol), tight coupling requires synchronous communication (addressed by the 12-terminal parallel dispatch), and collaboration readiness requires trust (addressed by the agent guardrails and audit gates). Their finding that tightly coupled work suffers most from distance validates the architecture's investment in shared state primitives -- the CLP state manager, boot context injection, and transactive memory retriever all reduce the coordination distance between agents.},
+  keywords  = {distance collaboration, common ground, remote work, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+}
+
+@inbook{Klein2005CommonGround,
+  title     = {Common Ground and Coordination in Joint Activity},
+  author    = {Klein, Gary and Feltovich, Paul J. and Bradshaw, Jeffrey M. and Woods, David D.},
+  year      = {2005},
+  booktitle = {Organizational Simulation},
+  editor    = {Rouse, William B. and Boff, Kenneth R.},
+  publisher = {John Wiley \& Sons},
+  pages     = {139--184},
+  doi       = {10.1002/0471739448.ch6},
+  abstract  = {Klein et al. formalize common ground as the prerequisite for joint activity, introducing the basic compact -- a tacit agreement to maintain interpredictability, support coordination, and repair breakdowns. The hummbl-dev coordination bus is a direct implementation of a common ground maintenance mechanism. Every agent posting STATUS, SITREP, or PROPOSAL messages is maintaining interpredictability for the fleet. The guardrails documents (Gemini, Kimi) codify the basic compact: agents agree to bounded scope, commit cadence, and identity consistency. When Gemini violated the compact (inflating metrics 17x, deleting other agents' work), the repair mechanism was reversion and probation -- exactly the breakdown-repair cycle Klein describes. The Cognitive Ledger Protocol extends common ground beyond the bus by providing persistent shared memory (ledger entries with Zettelkasten-style links) that survives session boundaries, addressing Klein's observation that common ground erodes without active maintenance.},
+  keywords  = {common ground, joint activity, coordination, team cognition, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
+}
+
+@article{Salas2005BigFive,
+  title     = {Is There a ``Big Five'' in Teamwork?},
+  author    = {Salas, Eduardo and Sims, Dana E. and Burke, C. Shawn},
+  year      = {2005},
+  journal   = {Small Group Research},
+  volume    = {36},
+  number    = {5},
+  pages     = {555--599},
+  doi       = {10.1177/1046496405277134},
+  abstract  = {Salas, Sims, and Burke distill teamwork into five core components -- team leadership, mutual performance monitoring, backup behavior, adaptability, and team orientation -- plus three coordinating mechanisms: shared mental models, closed-loop communication, and mutual trust. The hummbl-dev multi-agent fleet implements all eight elements, though with machine-native adaptations. Team leadership maps to the human operator issuing DIRECTIVE messages on the bus. Mutual performance monitoring maps to the health probe system and agent audit gates. Backup behavior maps to circuit breaker fallbacks -- when one adapter fails, the system falls back to cached or mock data. Adaptability maps to the kill switch's four escalation modes. Shared mental models map to the Cognitive Ledger Protocol's boot context injection. Closed-loop communication maps to the bus ACK/RECEIPT protocol. Mutual trust maps to the agent guardrails with graduated trust levels (Gemini on probation, Kimi with constrained scope).},
+  keywords  = {teamwork, team performance, shared mental models, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY}
+}
+
+@book{Hollnagel2005JointCognitive,
+  title     = {Joint Cognitive Systems: Foundations of Cognitive Systems Engineering},
+  author    = {Hollnagel, Erik and Woods, David D.},
+  year      = {2005},
+  publisher = {CRC Press / Taylor \& Francis},
+  address   = {Boca Raton, FL},
+  isbn      = {978-0849328213},
+  doi       = {10.1201/9781420038194},
+  abstract  = {Hollnagel and Woods argue that humans and technology should be analyzed as joint cognitive systems (JCS) rather than as separate entities interacting across an interface. A JCS has emergent cognitive properties -- situation awareness, adaptive capacity, anticipation -- that neither human nor machine possesses alone. The hummbl-dev architecture embodies the JCS paradigm: the Morning Briefing is not a report generated by machines for humans but a joint cognitive artifact where machine aggregation and human interpretation form a single sense-making loop. The coordination bus creates a shared cognitive workspace where human directives and machine status updates co-exist in the same representational medium. The resilient briefing service -- which wraps circuit breakers around all external adapters -- implements what Hollnagel calls graceful degradation: the joint system maintains cognitive function even when individual components fail, producing partial briefings rather than no briefings.},
+  keywords  = {joint cognitive systems, cognitive engineering, resilience, HUMMBL:CO, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Lee2004TrustAutomation,
+  title     = {Trust in Automation: Designing for Appropriate Reliance},
+  author    = {Lee, John D. and See, Katrina A.},
+  year      = {2004},
+  journal   = {Human Factors},
+  volume    = {46},
+  number    = {1},
+  pages     = {50--80},
+  doi       = {10.1518/hfes.46.1.50_30392},
+  abstract  = {Lee and See present a comprehensive model of trust in automation, arguing that appropriate reliance depends on calibration (trust matching system capability), resolution (discriminating between trustworthy and untrustworthy states), and specificity (trusting specific components rather than whole systems). The hummbl-dev agent guardrails are a direct implementation of this trust calibration framework. The Gemini guardrails document tracks trust violations across seven sessions, maintaining a calibrated assessment of Gemini's reliability per task type (tests: trustworthy; scope compliance: untrustworthy; metric claims: untrustworthy). The circuit breaker pattern provides resolution -- it trusts each adapter independently, opening the breaker on a per-service basis rather than distrusting all external services when one fails. The kill switch provides specificity through its four modes: DISENGAGED, HALT_NONCRITICAL, HALT_ALL, and EMERGENCY correspond to four levels of trust withdrawal.},
+  keywords  = {trust, automation, human factors, calibration, HUMMBL:P, HUMMBL:IN, HUMMBL:DE}
+}
+
+@article{Williams2000PairProgramming,
+  title     = {All {I} Really Need to Know About Pair Programming {I} Learned in Kindergarten},
+  author    = {Williams, Laurie A. and Kessler, Robert R.},
+  year      = {2000},
+  journal   = {Communications of the ACM},
+  volume    = {43},
+  number    = {5},
+  pages     = {108--114},
+  doi       = {10.1145/332833.332848},
+  abstract  = {Williams and Kessler present empirical evidence that pair programming produces higher quality code in roughly the same calendar time as solo programming, with pairs spending about 15 percent more total person-hours but producing 15 percent fewer defects. The hummbl-dev swarm architecture -- 12 parallel Claude Code terminal sessions coordinated via TSV bus -- extends pair programming to fleet scale. Where classical pair programming has one driver and one navigator, the swarm has multiple drivers (agents implementing in parallel) and a human navigator (the operator issuing DIRECTIVE messages). The economic logic matches Williams and Kessler's findings: the fleet spends more total compute but produces higher-quality output through mutual monitoring (agent audit gates), real-time review (bus messages visible to all agents), and knowledge sharing (Cognitive Ledger Protocol entries). The guardrails system adds a dimension Williams did not study -- asymmetric trust between pairs based on track record.},
+  keywords  = {pair programming, code quality, collaboration, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
+}
+
+@article{Noy2023ProductivityAI,
+  title     = {Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence},
+  author    = {Noy, Shakked and Zhang, Whitney},
+  year      = {2023},
+  journal   = {Science},
+  volume    = {381},
+  number    = {6654},
+  pages     = {187--192},
+  doi       = {10.1126/science.adh2586},
+  abstract  = {In a preregistered experiment with 453 college-educated professionals, Noy and Zhang find that ChatGPT access reduced task completion time by 40 percent and improved output quality by 18 percent, with the largest gains among lower-performing workers, thereby reducing inequality. This is the most rigorous empirical evidence for the human-AI collaboration productivity thesis that motivates the entire hummbl-dev stack. The Morning Briefing system aims to deliver analogous productivity gains for founder decision-making: by aggregating and synthesizing signals that would take hours to gather manually, it compresses the daily orientation task. The finding that AI disproportionately helps lower performers is relevant to the multi-agent fleet: less capable agents (smaller models, cheaper inference) can be made more effective through governance tooling (guardrails, templates, constrained scope), echoing the inequality-reducing effect Noy and Zhang document.},
+  keywords  = {productivity, generative AI, human-AI collaboration, HUMMBL:CO, HUMMBL:P, HUMMBL:SY}
+}
+
+@article{ONeill2022HumanAutonomy,
+  title     = {Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature},
+  author    = {O'Neill, Thomas and McNeese, Nathan and Barron, Amy and Schelble, Beau},
+  year      = {2022},
+  journal   = {Human Factors},
+  volume    = {64},
+  number    = {5},
+  pages     = {904--938},
+  doi       = {10.1177/0018720820960865},
+  abstract  = {O'Neill et al. synthesize the empirical literature on human-autonomy teaming (HAT), finding that most studies focus on dyadic human-robot interaction rather than team-level multi-agent coordination, and that key gaps include dynamic role allocation, trust calibration over time, and team-level shared cognition. The hummbl-dev fleet addresses several of these gaps in practice: it implements dynamic role allocation through the dispatch system (agents receive tasks based on capability and availability), trust calibration through graduated guardrails (trust levels adjusted per session based on audit results), and team-level shared cognition through the Cognitive Ledger Protocol and bus-based shared awareness. The paper's finding that HAT research underemphasizes organizational factors -- culture, norms, and institutional context -- validates the hummbl-dev investment in governance infrastructure (frozen contracts, commit conventions, identity verification) as the organizational scaffolding that makes multi-agent teaming work.},
+  keywords  = {human-autonomy teaming, multi-agent systems, team cognition, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+}
+
+@article{Rahwan2018SocietyLoop,
+  title     = {Society-in-the-Loop: Programming the Algorithmic Social Contract},
+  author    = {Rahwan, Iyad},
+  year      = {2018},
+  journal   = {Ethics and Information Technology},
+  volume    = {20},
+  number    = {1},
+  pages     = {5--14},
+  doi       = {10.1007/s10676-017-9430-8},
+  abstract  = {Rahwan extends the human-in-the-loop paradigm to society-in-the-loop (SITL), arguing that AI governance requires mechanisms for collective societal oversight, not just individual human supervision. He proposes tools for programming, debugging, and maintaining an algorithmic social contract between human stakeholders mediated by machines. The hummbl-dev governance architecture implements a micro-scale SITL: the append-only governance bus is a transparency mechanism enabling oversight by all stakeholders (human operators, peer agents, auditors). The kill switch provides the collective override Rahwan prescribes -- any authorized party can halt the system. The frozen contract schemas serve as the algorithmic social contract itself: they encode the agreed-upon rules that all agents must follow, and the CI workflows enforce them automatically. The Gemini probation system demonstrates SITL debugging in practice -- violations are detected, documented, and the social contract is amended (new guardrail rules) based on observed failures.},
+  keywords  = {society-in-the-loop, AI governance, social contract, oversight, HUMMBL:SY, HUMMBL:P, HUMMBL:IN}
+}
+
+@article{Bansal2019MentalModels,
+  title     = {Beyond Accuracy: The Role of Mental Models in Human-{AI} Team Performance},
+  author    = {Bansal, Gagan and Nushi, Besmira and Kamar, Ece and Lasecki, Walter S. and Weld, Daniel S. and Horvitz, Eric},
+  year      = {2019},
+  booktitle = {Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},
+  journal   = {Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},
+  volume    = {7},
+  number    = {1},
+  pages     = {2--11},
+  % No standard DOI -- AAAI HCOMP 2019 proceedings; available at https://ojs.aaai.org/index.php/HCOMP/article/view/5285
+  abstract  = {Bansal et al. demonstrate that human-AI team performance depends not just on AI accuracy but on the human's mental model of the AI's error boundary -- knowing when the AI is likely to be wrong. This finding has direct implications for the hummbl-dev agent guardrails architecture. The Gemini guardrails document is essentially a formalized mental model of Gemini's error boundary: it catalogs exactly which tasks Gemini performs well (writing tests, using approved bus types) and which it performs poorly (scope compliance, metric accuracy, respecting reverts). This mental model enables the human operator to calibrate trust and allocate tasks appropriately -- giving Gemini constrained test-writing tasks where its error rate is low, and withholding open-ended briefs where its error rate is high. The audit history table in the guardrails document is a living record of mental model refinement across seven sessions.},
+  keywords  = {mental models, human-AI teams, trust calibration, error boundaries, HUMMBL:P, HUMMBL:IN, HUMMBL:CO}
+}
