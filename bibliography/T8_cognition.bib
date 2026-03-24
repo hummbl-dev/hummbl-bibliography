@@ -1,0 +1,154 @@
+% T8_cognition.bib — Cognitive Science and Knowledge Representation
+% Added 2026-03-23 to ground Base120, the Cognitive Ledger Protocol, and
+% organizational memory patterns in their academic lineage
+%
+% These entries cover mental models, metacognition, knowledge compilation,
+% organizational memory, distributed cognition, transactive memory, and
+% the Zettelkasten method — the cognitive science foundations that
+% Base120, CLP, the consolidator, and the briefing system implement.
+
+@book{Craik1943NatureExplanation,
+  title = {The Nature of Explanation},
+  author = {Craik, Kenneth J. W.},
+  year = {1943},
+  publisher = {Cambridge University Press},
+  abstract = {This posthumously influential work is the origin of the mental models concept in cognitive science. Craik proposed that the mind constructs ``small-scale models'' of reality to anticipate events, reason about alternatives, and generate explanations. He argued that thought proceeds in three stages: translation of external processes into internal representations, derivation of new symbols through inferential manipulation, and re-translation back to external actions. The brain, Craik argued, is fundamentally a modeling machine that parallels external processes via internal symbolic structures. This is the deepest root of the Base120 framework: 120 mental models organized as cognitive tools for six fundamental transformations (P, IN, CO, DE, RE, SY) --- a systematic operationalization of Craik's thesis that humans think by constructing and manipulating models of the world.},
+  keywords = {mental models, internal representation, cognitive modeling, HUMMBL:P, HUMMBL:CO, HUMMBL:RE}
+}
+
+@book{Gentner1983MentalModels,
+  title = {Mental Models},
+  author = {Gentner, Dedre and Stevens, Albert L.},
+  year = {1983},
+  publisher = {Lawrence Erlbaum Associates},
+  isbn = {978-0-89859-242-9},
+  doi = {10.4324/9781315802725},
+  abstract = {This edited volume established mental models as a rigorous interdisciplinary research program by bringing together cognitive psychologists, AI researchers, and education scientists. The contributors demonstrate that people reason about physical, social, and abstract systems by constructing simplified internal models that capture structural relationships rather than surface features. Key chapters cover mental models of physical mechanisms (de Kleer \& Brown), analogical reasoning (Gentner's structure-mapping theory), and expert-novice differences in model construction. The book's central finding --- that the quality of a person's mental model determines the quality of their reasoning --- is the foundational claim behind Base120: by providing high-quality, pre-structured mental models for six cognitive transformations, the framework bootstraps better reasoning than ad-hoc model construction.},
+  keywords = {mental models, analogical reasoning, cognitive science, HUMMBL:P, HUMMBL:CO, HUMMBL:DE}
+}
+
+@article{Flavell1979Metacognition,
+  title = {Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry},
+  author = {Flavell, John H.},
+  year = {1979},
+  journal = {American Psychologist},
+  volume = {34},
+  number = {10},
+  pages = {906--911},
+  doi = {10.1037/0003-066X.34.10.906},
+  abstract = {This foundational paper defines metacognition as ``knowledge and cognition about cognitive phenomena'' and proposes a model with four interacting components: metacognitive knowledge (beliefs about persons, tasks, and strategies), metacognitive experiences (conscious feelings during cognition), goals/tasks, and actions/strategies. Flavell distinguishes between knowing about cognition (declarative metacognitive knowledge) and regulating cognition (procedural metacognitive monitoring). The paper established metacognition as a major research program in cognitive and developmental psychology. The convergence guard and reward monitor in hummbl-governance implement computational metacognition: they monitor the agent system's own cognitive processes (Is the fleet converging on an answer? Are reward signals consistent with goals?) and trigger corrective action when metacognitive checks fail --- exactly the self-monitoring loop Flavell describes.},
+  keywords = {metacognition, self-monitoring, cognitive regulation, HUMMBL:RE, HUMMBL:IN, HUMMBL:P}
+}
+
+@article{Anderson1982KnowledgeCompilation,
+  title = {Acquisition of Cognitive Skill},
+  author = {Anderson, John R.},
+  year = {1982},
+  journal = {Psychological Review},
+  volume = {89},
+  number = {4},
+  pages = {369--406},
+  doi = {10.1037/0033-295X.89.4.369},
+  abstract = {This paper introduces knowledge compilation as the mechanism by which cognitive skills transition from slow, declarative processing to fast, proceduralized execution. Anderson's ACT framework posits two stages: a declarative stage (where facts about a domain are interpreted step-by-step) and a procedural stage (where domain knowledge is directly embodied in production rules). Knowledge compilation consists of composition (collapsing sequences of productions into single productions) and procedural embedding (embedding declarative facts directly into procedures). The theory explains why novices are slow and conscious while experts are fast and automatic --- a progression from explicit reasoning to compiled skill. The consolidator module on nodezero implements this exact process: periodically synthesizing verbose ledger entries, bus messages, and findings into denser, compiled knowledge representations that enable faster session bootstrapping.},
+  keywords = {knowledge compilation, skill acquisition, ACT, proceduralization, HUMMBL:CO, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Chase1973PerceptionChess,
+  title = {Perception in Chess},
+  author = {Chase, William G. and Simon, Herbert A.},
+  year = {1973},
+  journal = {Cognitive Psychology},
+  volume = {4},
+  number = {1},
+  pages = {55--81},
+  doi = {10.1016/0010-0285(73)90004-2},
+  abstract = {This landmark study demonstrated that chess masters' superior recall of board positions is not due to better memory per se but to their ability to perceive positions as meaningful ``chunks'' --- patterns of pieces that recur across games. Masters recalled positions from real games far better than novices, but showed no advantage for random piece placements, proving that expertise resides in a library of 50,000--100,000 chunks built through years of practice. The chunks are not memorized positions but abstract patterns that enable rapid recognition and response. This is the empirical foundation for Base120's design: the 120 models are pre-compiled cognitive chunks --- recurring patterns of thought (perspective shifts, inversions, compositions, decompositions, recursions, systems views) that practitioners can recognize and deploy without building them from scratch.},
+  keywords = {chunking, expertise, pattern recognition, perception, HUMMBL:CO, HUMMBL:P, HUMMBL:DE}
+}
+
+@article{Sweller1988CognitiveLoad,
+  title = {Cognitive Load During Problem Solving: Effects on Learning},
+  author = {Sweller, John},
+  year = {1988},
+  journal = {Cognitive Science},
+  volume = {12},
+  number = {2},
+  pages = {257--285},
+  doi = {10.1016/0364-0213(88)90023-7},
+  abstract = {This paper introduces cognitive load theory, demonstrating that conventional problem solving via means-ends analysis imposes heavy cognitive load that interferes with schema acquisition and learning. Sweller shows that goal-free problems (``calculate as many values as you can'') produce equivalent problem-solving performance but superior learning, because they free working memory resources for schema construction. The theory distinguishes intrinsic load (inherent complexity of the material), extraneous load (imposed by poor instructional design), and germane load (devoted to schema construction). The morning briefing system in founder-mode is a direct application: by compiling overnight events, metrics, and recommendations into a structured daily summary, it reduces the extraneous cognitive load of manually scanning GitHub, Linear, Calendar, and cost dashboards, freeing the founder's working memory for the germane task of strategic decision-making.},
+  keywords = {cognitive load, schema acquisition, working memory, instructional design, HUMMBL:DE, HUMMBL:CO, HUMMBL:SY}
+}
+
+@article{Walsh1991OrganizationalMemory,
+  title = {Organizational Memory},
+  author = {Walsh, James P. and Ungson, Gerardo Rivera},
+  year = {1991},
+  journal = {Academy of Management Review},
+  volume = {16},
+  number = {1},
+  pages = {57--91},
+  doi = {10.5465/amr.1991.4278992},
+  abstract = {This seminal paper defines organizational memory as stored information from an organization's history that can be brought to bear on present decisions. Walsh and Ungson identify five retention facilities (or ``storage bins'') where organizational memory resides: individuals, culture, transformations (standard operating procedures), structures (organizational roles), and ecology (physical workspace). They model three processes --- acquisition, retention, and retrieval --- and argue that organizational memory is fundamentally distributed: no single person or artifact holds the complete memory. The five-bin model maps directly to how founder-mode stores its organizational memory: individuals (agent identity files), culture (SOUL.md, rules/), transformations (the 130 skills, briefing templates), structures (agent registry, trust tiers), and ecology (the coordination bus, file system layout, briefing archive).},
+  keywords = {organizational memory, information retention, decision support, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@incollection{Wegner1987TransactiveMemory,
+  title = {Transactive Memory: A Contemporary Analysis of the Group Mind},
+  author = {Wegner, Daniel M.},
+  year = {1987},
+  booktitle = {Theories of Group Behavior},
+  editor = {Mullen, Brian and Goethals, George R.},
+  publisher = {Springer},
+  pages = {185--208},
+  doi = {10.1007/978-1-4612-4634-3_9},
+  abstract = {Wegner introduces transactive memory as a shared system for encoding, storing, and retrieving knowledge that emerges in groups. Rather than each member duplicating all knowledge, group members develop a shared awareness of ``who knows what'' and rely on each other for specialized knowledge retrieval. The transactive memory system has three processes: directory updating (learning what others know), information allocation (routing new information to the right expert), and retrieval coordination (knowing whom to ask). The multi-agent coordination bus in founder-mode is a computational transactive memory system: each agent has specialized knowledge (Claude for integration, Gemini for research, Codex for verification), the bus directory tracks agent capabilities and status, and agents post QUESTION messages to route information requests to the right specialist.},
+  keywords = {transactive memory, group cognition, distributed knowledge, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+}
+
+@article{Nonaka1994KnowledgeCreation,
+  title = {A Dynamic Theory of Organizational Knowledge Creation},
+  author = {Nonaka, Ikujiro},
+  year = {1994},
+  journal = {Organization Science},
+  volume = {5},
+  number = {1},
+  pages = {14--37},
+  doi = {10.1287/orsc.5.1.14},
+  abstract = {This paper presents the SECI model of knowledge creation, describing four modes of conversion between tacit and explicit knowledge: Socialization (tacit to tacit, through shared experience), Externalization (tacit to explicit, through articulation and conceptualization), Combination (explicit to explicit, through systematization), and Internalization (explicit to tacit, through learning-by-doing). Knowledge creation occurs as a spiral through these four modes, amplifying from individual to group to organizational levels. The Cognitive Ledger Protocol implements the SECI spiral computationally: agents externalize tacit session knowledge into ledger entries (Externalization), the consolidator combines entries into synthesized knowledge (Combination), boot\_context injects this knowledge into new sessions (Internalization), and the coordination bus enables agents to share context without explicit articulation (Socialization).},
+  keywords = {SECI model, knowledge creation, tacit knowledge, organizational learning, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
+}
+
+@article{Hollan2000DistributedCognition,
+  title = {Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research},
+  author = {Hollan, James D. and Hutchins, Edwin and Kirsh, David},
+  year = {2000},
+  journal = {ACM Transactions on Computer-Human Interaction},
+  volume = {7},
+  number = {2},
+  pages = {174--196},
+  doi = {10.1145/353485.353487},
+  abstract = {This paper extends distributed cognition from a theory of team coordination (Hutchins 1995, already in T2) into a design framework for human-computer interaction. The authors argue that cognition is not confined to individual minds but is distributed across people, artifacts, and time. They identify three types of distribution: across members of a social group, between internal and external representations, and through time (where earlier events shape later ones). The paper proposes that HCI should study cognitive systems holistically rather than focusing on the individual user-computer dyad. The founder-mode architecture embodies all three distributions: cognition is distributed across the agent fleet (social), between agent memory and the coordination bus (internal/external), and across sessions via the Cognitive Ledger and briefing archive (temporal).},
+  keywords = {distributed cognition, HCI, external representation, cognitive systems, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@article{Norman1991CognitiveArtifacts,
+  title = {Cognitive Artifacts},
+  author = {Norman, Donald A.},
+  year = {1991},
+  journal = {In J.M. Carroll (Ed.), Designing Interaction: Psychology at the Human-Computer Interface},
+  publisher = {Cambridge University Press},
+  pages = {17--38},
+  abstract = {Norman defines cognitive artifacts as artificial devices designed to maintain, display, or operate upon information in order to serve a representational function. He draws a crucial distinction between the ``personal view'' (how an artifact changes the task for its user) and the ``system view'' (how it changes the task as a whole, often redistributing cognitive effort rather than eliminating it). A cognitive artifact does not make a person smarter; it transforms the task so that less cognitive effort is required for the human part, often by offloading memory or computation to the artifact. The entire hummbl-dev toolkit is a system of cognitive artifacts in Norman's sense: the morning briefing transforms the founder's task from ``scan 7 data sources'' to ``read a structured summary''; the Base120 models transform ``build a mental model from scratch'' to ``select and apply a pre-built model''; the coordination bus transforms ``remember what every agent did'' to ``read the latest messages.'},
+  keywords = {cognitive artifacts, representational function, task transformation, HUMMBL:P, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Luhmann1981Zettelkasten,
+  title = {Kommunikation mit Zettelk\"{a}sten: Ein Erfahrungsbericht},
+  author = {Luhmann, Niklas},
+  year = {1981},
+  journal = {In H. Baier et al. (Eds.), \"{O}ffentliche Meinung und sozialer Wandel / Public Opinion and Social Change},
+  publisher = {Westdeutscher Verlag},
+  pages = {222--228},
+  abstract = {In this essay, Luhmann describes his Zettelkasten (``slip box'') as a ``communication partner'' --- a system of 90,000 interlinked index cards that functioned not merely as a filing system but as a thinking tool that generated unexpected connections and new ideas. The key innovation is the numbering and linking scheme: each note receives a unique hierarchical address, and notes link to related notes regardless of where they sit in the hierarchy, enabling non-linear traversal of ideas. Luhmann credits this system for his extraordinary productivity (50 books, 550+ articles). The Cognitive Ledger Protocol in founder-mode explicitly implements Zettelkasten principles: each LedgerEntry has a unique ID, entries link to related entries via the ``links'' field (Zettelkasten-style cross-references), and the BM25 indexer enables retrieval by semantic similarity --- a computational version of Luhmann's browsing-by-following-links.},
+  keywords = {Zettelkasten, note-taking, knowledge management, interlinked notes, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
+}
