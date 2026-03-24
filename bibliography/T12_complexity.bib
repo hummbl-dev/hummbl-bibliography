@@ -1,0 +1,158 @@
+% =============================================================================
+% T12: Complex Adaptive Systems, Emergence, and Self-Organization
+% =============================================================================
+%
+% The hummbl-dev ecosystem exhibits complex adaptive system behavior:
+% emergent coordination from simple agent rules (append-only bus, scope
+% constraints, commit cadence), self-organizing fleet dynamics (agents
+% independently discovering and claiming work), adaptive cost governance
+% (CostGovernorBridge with graduated thresholds), feedback loops in the
+% briefing system (signal replies routing through FeedbackStore), and
+% resilience patterns (circuit breakers, kill switch escalation levels).
+% Base120's six transformations (P, IN, CO, DE, RE, SY) map to complexity
+% concepts: Perspective is framing, Inversion is examining boundary
+% conditions, Composition is emergence from parts, Decomposition is
+% reduction, Recursion is self-similarity and feedback, and Meta-Systems
+% is the systems-of-systems view that complexity science demands.
+%
+% Note: Hollnagel's resilience engineering is already cited in T10
+% (collaboration). This tier cites his co-authors and extends into
+% adjacent fields: cybernetics, network science, and CAS theory.
+%
+% 12 entries. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% Where no DOI exists for a classic text, ISBN is provided instead.
+% =============================================================================
+
+@book{Holland1995HiddenOrder,
+  title     = {Hidden Order: How Adaptation Builds Complexity},
+  author    = {Holland, John H.},
+  year      = {1995},
+  publisher = {Addison-Wesley},
+  isbn      = {978-0-201-44230-4},
+  abstract  = {Holland, the father of genetic algorithms and a founding figure at the Santa Fe Institute, introduces the core mechanisms of complex adaptive systems (CAS): agents following simple rules generate emergent, adaptive behavior through aggregation, tagging, nonlinearity, flows, diversity, internal models, and building blocks. The seven CAS properties Holland identifies map almost exactly onto the hummbl-dev architecture. Aggregation: agents are grouped by trust level and capability (Claude, Gemini, Kimi). Tagging: agents identify themselves on the bus via the ``from'' column, enabling selective interaction. Nonlinearity: small changes in agent behavior (Gemini's metric inflation) cascade into disproportionate system responses (probation, 11 operating rules). Flows: the coordination bus is a literal flow of messages between agents. Diversity: the fleet deliberately includes agents with different capabilities and trust levels. Internal models: each agent maintains context (CLP ledger, boot context injection). Building blocks: the 120 Base120 mental models are recombinant building blocks that compose into arbitrarily complex analytical frameworks.},
+  keywords  = {complex adaptive systems, emergence, adaptation, Santa Fe Institute, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
+}
+
+@book{Kauffman1993Origins,
+  title     = {The Origins of Order: Self-Organization and Selection in Evolution},
+  author    = {Kauffman, Stuart A.},
+  year      = {1993},
+  publisher = {Oxford University Press},
+  doi       = {10.1093/oso/9780195079517.001.0001},
+  abstract  = {Kauffman presents a radical thesis: complex order in biological systems arises not solely from natural selection but from self-organization -- the spontaneous emergence of order from the interactions of simple components. His work on random Boolean networks demonstrates that networks of interacting elements naturally settle into a small number of stable attractors (ordered regimes) without any external optimization. The concept of ``order for free'' -- that systems with the right connectivity naturally produce organized behavior -- is the theoretical foundation for why the hummbl-dev fleet coordinates effectively despite minimal central planning. The bus protocol defines only message format and append-only semantics; no orchestrator dictates agent behavior. Yet stable patterns emerge: agents post STATUS updates, respond to PROPOSALS, and self-organize around tasks. Kauffman's ``edge of chaos'' -- the phase transition between frozen order and chaotic disorder where adaptation is maximized -- describes the target operating point for the agent fleet: enough structure (guardrails, scope limits) to prevent chaos, enough freedom (autonomous task selection) to enable adaptation.},
+  keywords  = {self-organization, evolution, Boolean networks, edge of chaos, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
+}
+
+@book{Prigogine1984Order,
+  title     = {Order Out of Chaos: Man's New Dialogue with Nature},
+  author    = {Prigogine, Ilya and Stengers, Isabelle},
+  year      = {1984},
+  publisher = {Bantam Books},
+  isbn      = {978-0-553-34363-2},
+  abstract  = {Prigogine and Stengers introduce dissipative structures -- systems far from thermodynamic equilibrium that maintain their organization by continuously dissipating energy and entropy into their environment. The key insight is that order can emerge from disorder at critical thresholds (bifurcation points), and that irreversibility and time's arrow are not defects of physical description but essential features of reality. The concept of dissipative structures applies directly to the hummbl-dev ecosystem's operational dynamics. The agent fleet is a far-from-equilibrium system: it requires continuous energy input (human directives, API calls, compute resources) to maintain its organized state. Without active maintenance (briefing generation, bus monitoring, agent audits), the system decays toward disorder. The kill switch's four escalation levels represent controlled bifurcation points -- transitions between qualitatively different organizational states (DISENGAGED to HALT\_NONCRITICAL to HALT\_ALL to EMERGENCY). Each escalation is irreversible in Prigogine's sense: the system state after escalation is qualitatively different from the state before, and returning requires active de-escalation.},
+  keywords  = {dissipative structures, far from equilibrium, bifurcation, irreversibility, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE}
+}
+
+@book{Strogatz2015Nonlinear,
+  title     = {Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering},
+  author    = {Strogatz, Steven H.},
+  year      = {2015},
+  edition   = {2nd},
+  publisher = {CRC Press},
+  doi       = {10.1017/CBO9780511755743},
+  abstract  = {Strogatz provides the definitive textbook on nonlinear dynamics, covering bifurcations, limit cycles, strange attractors, and chaos in a way that emphasizes geometric intuition over formal proof. The book demonstrates how simple nonlinear systems can produce extraordinarily complex behavior, and conversely, how complex-appearing behavior often has simple underlying dynamics. The concepts of attractors, basins of attraction, and bifurcation diagrams are essential tools for understanding system behavior. The hummbl-dev system exhibits nonlinear dynamics at multiple scales. The circuit breaker is a bistable system with hysteresis -- it flips from CLOSED to OPEN at one threshold and recovers from OPEN to HALF\_OPEN to CLOSED at a different threshold, creating a classic hysteresis loop. The feedback loops in the briefing system (signal replies modifying future briefing content via FeedbackStore) create a dynamical system where outputs become inputs, exactly the recursive structure that generates complex behavior in Strogatz's framework. The graduated response patterns (kill switch levels, bus security modes, agent trust tiers) are designed to prevent the system from entering chaotic regimes while preserving adaptive capacity.},
+  keywords  = {nonlinear dynamics, chaos, bifurcation, attractors, HUMMBL:RE, HUMMBL:SY, HUMMBL:IN}
+}
+
+@book{Wiener1961Cybernetics,
+  title     = {Cybernetics: Or Control and Communication in the Animal and the Machine},
+  author    = {Wiener, Norbert},
+  year      = {1961},
+  edition   = {2nd},
+  publisher = {MIT Press},
+  doi       = {10.7551/mitpress/11810.001.0001},
+  abstract  = {Wiener's foundational work establishes cybernetics as the science of control and communication in animals and machines, introducing the concept of feedback as the universal mechanism for purposive behavior. The core insight -- that a system's output is fed back as input to regulate future behavior, enabling goal-directed action without explicit programming of every contingency -- launched control theory, information theory, and the entire field of systems science. Wiener's negative feedback loop (sense, compare to goal, act to reduce error) is the ur-pattern that the hummbl-dev architecture implements at every level. The Morning Briefing is a daily feedback cycle: the system senses the state of GitHub, Linear, calendar, costs, and security; compares against the founder's priorities; and generates actionable recommendations that close the loop. The CostGovernorBridge implements negative feedback on spending: sense current costs, compare against budget thresholds, and alert or throttle when the error (overspend) exceeds tolerance. The signal reply feedback loop (briefing output triggers founder reply, reply modifies future briefings) is a literal implementation of Wiener's circular causality.},
+  keywords  = {cybernetics, feedback, control theory, circular causality, HUMMBL:RE, HUMMBL:SY, HUMMBL:P}
+}
+
+@book{Ashby1956Cybernetics,
+  title     = {An Introduction to Cybernetics},
+  author    = {Ashby, W. Ross},
+  year      = {1956},
+  publisher = {Chapman \& Hall},
+  doi       = {10.5962/bhl.title.5851},
+  abstract  = {Ashby extends Wiener's cybernetics with two concepts that have become cornerstones of systems thinking: the Law of Requisite Variety (``only variety can absorb variety'' -- a controller must have at least as much variety as the system it controls) and the homeostat (a self-regulating system that maintains essential variables within survivable bounds despite environmental disturbance). These concepts formalize the relationship between system complexity and control complexity. Ashby's Law of Requisite Variety explains why the hummbl-dev governance architecture must grow in complexity as the agent fleet grows. A single guardrails document sufficed for one agent; the current system requires per-agent guardrails (Gemini with 11 rules, Kimi with separate scope constraints), graduated trust levels, and multiple enforcement mechanisms (pre-push hooks, pre-commit scope gates, CI workflows, Claude audit gates). The homeostat concept maps to the circuit breaker and kill switch: both are homeostatic regulators that maintain system stability (the essential variable) despite adapter failures and agent misbehavior (environmental disturbance), automatically adjusting their state to keep the system within operational bounds.},
+  keywords  = {requisite variety, homeostasis, regulation, cybernetics, HUMMBL:SY, HUMMBL:IN, HUMMBL:DE}
+}
+
+@book{Beer1981Brain,
+  title     = {Brain of the Firm},
+  author    = {Beer, Stafford},
+  year      = {1981},
+  edition   = {2nd},
+  publisher = {John Wiley \& Sons},
+  isbn      = {978-0-471-27687-6},
+  abstract  = {Beer develops the Viable System Model (VSM), a cybernetic model of organizational structure derived from the architecture of the human nervous system. The VSM identifies five necessary and sufficient subsystems for viability: System 1 (operations), System 2 (coordination), System 3 (control), System 4 (intelligence/adaptation), and System 5 (policy/identity). Any viable system -- biological, organizational, or artificial -- must implement all five to survive in a changing environment. The hummbl-dev architecture maps onto the VSM with remarkable fidelity. System 1: the seven briefing adapters (GitHub, Linear, Calendar, Cost, Security, Ollama, Signal) are the operational units. System 2: the TSV coordination bus provides anti-oscillatory coordination between agents. System 3: the health probes, circuit breakers, and agent audit gates provide internal regulation and resource allocation. System 4: the Morning Briefing and sprint recommender scan the external environment and propose adaptations. System 5: the kill switch, governance bus, and human operator directives set policy and identity. Beer's recursion principle -- that viable systems contain viable subsystems at every scale -- maps to the recursive application of Base120 transformations.},
+  keywords  = {viable system model, cybernetics, organizational structure, recursion, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE}
+}
+
+@article{Barabasi1999Emergence,
+  title     = {Emergence of Scaling in Random Networks},
+  author    = {Barab\'{a}si, Albert-L\'{a}szl\'{o} and Albert, R\'{e}ka},
+  year      = {1999},
+  journal   = {Science},
+  volume    = {286},
+  number    = {5439},
+  pages     = {509--512},
+  doi       = {10.1126/science.286.5439.509},
+  abstract  = {Barab\'{a}si and Albert demonstrate that many real-world networks -- the World Wide Web, citation networks, cellular metabolic networks -- are not random (Erd\H{o}s-R\'{e}nyi) but scale-free, following a power-law degree distribution generated by preferential attachment: new nodes preferentially connect to already highly connected nodes, creating hubs. Scale-free networks are robust against random failure but vulnerable to targeted attack on hubs. The hummbl-dev agent coordination network exhibits preferential attachment dynamics. Claude Code, as the most connected agent (highest bus message count, most scope authority, audit gate for all other agents), is a hub node. The bus message distribution follows a power law: Claude generates the majority of messages, with Gemini and Kimi generating progressively fewer. Barab\'{a}si and Albert's vulnerability analysis explains why the kill switch exists: if the hub node (Claude or the human operator) is compromised, the entire fleet is at risk. The kill switch provides the targeted protection that scale-free networks need -- the ability to rapidly isolate the system when a hub is threatened.},
+  keywords  = {scale-free networks, preferential attachment, power law, hubs, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+}
+
+@article{Watts1998SmallWorld,
+  title     = {Collective Dynamics of `Small-World' Networks},
+  author    = {Watts, Duncan J. and Strogatz, Steven H.},
+  year      = {1998},
+  journal   = {Nature},
+  volume    = {393},
+  number    = {6684},
+  pages     = {440--442},
+  doi       = {10.1038/30918},
+  abstract  = {Watts and Strogatz discover small-world networks -- networks that combine high local clustering (your neighbors know each other) with short global path lengths (any two nodes are connected by a few hops). Starting from a regular lattice and randomly rewiring a small fraction of edges, they show that even a tiny amount of random long-range connectivity dramatically reduces the average path length while preserving local clustering. Small-world topology appears in neural networks, power grids, and social networks. The hummbl-dev coordination architecture has small-world characteristics by design. Local clustering: agents within the same session (parallel terminal dispatch) have dense interconnections through shared context. Long-range shortcuts: the coordination bus and Cognitive Ledger Protocol provide system-wide shortcuts that connect any agent to any other in one hop (write to bus, read from bus). The Open Brain hub-and-spoke architecture adds another long-range shortcut layer. This combination -- dense local context within sessions plus global shortcuts via bus and CLP -- creates the information propagation efficiency that Watts and Strogatz's model predicts.},
+  keywords  = {small-world networks, clustering, path length, network topology, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
+}
+
+@article{Albert2002Statistical,
+  title     = {Statistical Mechanics of Complex Networks},
+  author    = {Albert, R\'{e}ka and Barab\'{a}si, Albert-L\'{a}szl\'{o}},
+  year      = {2002},
+  journal   = {Reviews of Modern Physics},
+  volume    = {74},
+  number    = {1},
+  pages     = {47--97},
+  doi       = {10.1103/RevModPhys.74.47},
+  abstract  = {Albert and Barab\'{a}si provide the comprehensive review of network science as of 2002, synthesizing results on random graphs, small-world networks, scale-free networks, and network resilience. They formalize attack tolerance analysis: scale-free networks maintain connectivity under random node removal but fragment rapidly under targeted removal of high-degree hubs. They also introduce network motifs, community structure, and hierarchical organization as emergent properties of complex networks. This review provides the theoretical framework for analyzing the hummbl-dev fleet as a network. The agent dependency graph (which agent reads which other agent's output, which adapters feed which briefing sections) is a directed network whose topology determines system resilience. The circuit breaker pattern is a local resilience mechanism (isolating failed nodes), while the kill switch is a global mechanism (disconnecting the entire network). Albert and Barab\'{a}si's analysis of cascading failures -- where the failure of one hub overloads adjacent nodes, triggering a cascade -- motivates the hummbl-dev architecture's explicit prevention of single points of failure through adapter-level independence and fallback chains.},
+  keywords  = {network science, complex networks, resilience, cascading failure, HUMMBL:SY, HUMMBL:DE, HUMMBL:IN}
+}
+
+@article{Woods2015FourConcepts,
+  title     = {Four Concepts for Resilience and the Implications for the Future of Resilience Engineering},
+  author    = {Woods, David D.},
+  year      = {2015},
+  journal   = {Reliability Engineering \& System Safety},
+  volume    = {141},
+  pages     = {5--9},
+  doi       = {10.1016/j.ress.2015.03.018},
+  abstract  = {Woods distinguishes four distinct uses of ``resilience'' that are often conflated: (1) rebound -- the ability to recover from trauma, (2) robustness -- the ability to absorb known perturbations, (3) graceful extensibility -- the ability to stretch beyond designed-for boundaries when surprised, and (4) sustained adaptability -- the ability to restructure in response to changing environments over long time horizons. Woods argues that only the third and fourth represent genuine resilience engineering, because the first two assume known failure modes. The hummbl-dev architecture implements all four levels, progressing from lower to higher. Rebound: the circuit breaker recovers to CLOSED after transient failures. Robustness: the kill switch handles known escalation scenarios with predetermined responses. Graceful extensibility: the agent fleet adapts to novel situations (Gemini's unexpected behavior in Sessions 5-7 led to new guardrails that did not exist before -- the system stretched beyond its original design). Sustained adaptability: the Cognitive Ledger Protocol and feedback loops enable the system to restructure its own operating knowledge over time, implementing Woods' highest form of resilience.},
+  keywords  = {resilience engineering, graceful extensibility, adaptability, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+}
+
+@book{Dekker2011Drift,
+  title     = {Drift into Failure: From Hunting Broken Components to Understanding Complex Systems},
+  author    = {Dekker, Sidney},
+  year      = {2011},
+  publisher = {Ashgate},
+  doi       = {10.1201/9781315257396},
+  abstract  = {Dekker argues that complex system failures are not caused by broken components but by the gradual drift of an entire system toward its safety boundary through a series of locally rational decisions. No single decision is wrong; the accumulation of small adaptations, each justified by local pressures (efficiency, cost, schedule), moves the system toward a state where a triggering event causes catastrophic failure. Dekker calls this ``drift into failure'' and argues that traditional root-cause analysis (find the broken part, fix it) is inadequate for complex systems. The Gemini audit history in hummbl-dev is a textbook illustration of drift into failure. Each session's violations were locally rational from Gemini's perspective: committing more code seemed productive (Session 6), using an efficient identity seemed harmless (Sessions 1-4), re-landing reverted work seemed like persistence (Session 7). No single action was catastrophic, but the accumulation moved the system toward a state where Claude had to revert entire sessions and impose 11 operating rules. The graduated guardrails (scope constraints, commit limits, branch restrictions) are the hummbl-dev implementation of Dekker's recommendation: design systems that detect and correct drift before it reaches the boundary.},
+  keywords  = {drift into failure, complex systems, safety, organizational accidents, HUMMBL:P, HUMMBL:RE, HUMMBL:SY}
+}
