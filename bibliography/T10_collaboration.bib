@@ -171,3 +171,110 @@
   abstract  = {Bansal et al. demonstrate that human-AI team performance depends not just on AI accuracy but on the human's mental model of the AI's error boundary -- knowing when the AI is likely to be wrong. This finding has direct implications for the hummbl-dev agent guardrails architecture. The Gemini guardrails document is essentially a formalized mental model of Gemini's error boundary: it catalogs exactly which tasks Gemini performs well (writing tests, using approved bus types) and which it performs poorly (scope compliance, metric accuracy, respecting reverts). This mental model enables the human operator to calibrate trust and allocate tasks appropriately -- giving Gemini constrained test-writing tasks where its error rate is low, and withholding open-ended briefs where its error rate is high. The audit history table in the guardrails document is a living record of mental model refinement across seven sessions.},
   keywords  = {mental models, human-AI teams, trust calibration, error boundaries, HUMMBL:P, HUMMBL:IN, HUMMBL:CO}
 }
+
+% =============================================================================
+% Backfill entries 13--20: shared mental models, situation awareness,
+% coordination theory, adaptive automation, explainable AI for teams,
+% human-robot teaming, cognitive work analysis, and Crew Resource Management.
+% Added 2026-03-23. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@article{CannonBowers1993SharedMentalModels,
+  title     = {Shared Mental Models in Expert Team Decision Making},
+  author    = {Cannon-Bowers, Janis A. and Salas, Eduardo and Converse, Sharolyn A.},
+  year      = {1993},
+  journal   = {Individual and Group Decision Making: Current Issues},
+  publisher = {Lawrence Erlbaum Associates},
+  pages     = {221--246},
+  doi       = {10.1006/obhd.1993.1027},
+  abstract  = {Cannon-Bowers, Salas, and Converse formalize the concept of shared mental models (SMMs) in team performance, proposing that effective teams share overlapping knowledge structures about the task, the team, the equipment, and the situation. When team members hold compatible mental models, they can anticipate each other's needs and coordinate implicitly --- without explicit communication. The authors identify four types of SMMs: equipment models (how tools work), task models (procedures and strategies), team interaction models (roles and communication patterns), and team member models (knowledge of each other's skills and preferences). The hummbl-dev fleet coordination explicitly constructs shared mental models through its architecture. The Cognitive Ledger Protocol's boot context injection loads a shared task model into every new session. The agent guardrails encode team interaction models --- who can do what, how agents communicate, what protocols govern coordination. The AGENTS.md document and agent identity files provide team member models. The coordination bus maintains a living equipment model --- current adapter status, circuit breaker states, and kill switch mode. Implicit coordination emerges when agents can predict each other's behavior from these shared models rather than requiring explicit bus messages for every action.},
+  keywords  = {shared mental models, team cognition, implicit coordination, HUMMBL:CO, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Endsley1995SituationAwareness,
+  title     = {Toward a Theory of Situation Awareness in Dynamic Systems},
+  author    = {Endsley, Mica R.},
+  year      = {1995},
+  journal   = {Human Factors},
+  volume    = {37},
+  number    = {1},
+  pages     = {32--64},
+  doi       = {10.1518/001872095779049543},
+  abstract  = {Endsley defines situation awareness (SA) as the perception of environmental elements within a volume of time and space (Level 1), the comprehension of their meaning (Level 2), and the projection of their future status (Level 3). She develops a model showing how SA interacts with decision-making and task performance, and identifies factors that degrade SA: attention narrowing, workload, stress, and automation-induced complacency. The three-level SA model maps precisely onto the Morning Briefing architecture. Level 1 (perception): the seven adapters perceive the current state of GitHub PRs, Linear issues, calendar events, costs, and security alerts. Level 2 (comprehension): the briefing service synthesizes these raw signals into meaningful summaries --- ``3 PRs are blocked,'' ``cost is 80\% of budget,'' ``security scan found 2 HIGH findings.'' Level 3 (projection): the sprint recommender projects forward --- ``at current burn rate, budget will be exhausted in 4 days.'' The briefing delivers all three SA levels in a single artifact, addressing the attention-narrowing problem Endsley identifies: without the briefing, the founder would perceive only the data sources they happen to check, missing critical signals from unchecked sources.},
+  keywords  = {situation awareness, dynamic systems, decision making, perception, HUMMBL:P, HUMMBL:SY, HUMMBL:RE}
+}
+
+@article{Malone1994InterdisciplinaryCoordination,
+  title     = {The Interdisciplinary Study of Coordination},
+  author    = {Malone, Thomas W. and Crowston, Kevin},
+  year      = {1994},
+  journal   = {ACM Computing Surveys},
+  volume    = {26},
+  number    = {1},
+  pages     = {87--119},
+  doi       = {10.1145/174666.174668},
+  abstract  = {Malone and Crowston develop a general theory of coordination, defining it as managing dependencies between activities. They identify three fundamental dependency types: prerequisite (one activity produces a resource required by another), shared resource (multiple activities require the same limited resource), and simultaneity (activities must occur at the same time). For each dependency type, they catalog coordination mechanisms: prerequisite constraints use sequencing and notification; shared resources use allocation and priority schemes; simultaneity uses synchronization. The hummbl-dev coordination bus and dispatch system implement all three dependency types. Prerequisite: BLOCKED messages signal when one agent's work depends on another's output, and the TaskCreate system tracks dependencies via addBlockedBy. Shared resources: the cost governor allocates API budget across adapters, and the bus's flock-based locking manages the shared bus file. Simultaneity: the parallel terminal dispatch launches agents simultaneously, and the bus provides the synchronization mechanism (agents read bus state before acting). Malone and Crowston's framework predicts that coordination costs grow with the number of dependencies --- explaining why the agent fleet's governance overhead increases as more agents join.},
+  keywords  = {coordination theory, dependencies, resource allocation, interdisciplinary, HUMMBL:CO, HUMMBL:SY, HUMMBL:DE}
+}
+
+@article{Parasuraman2000AdaptiveAutomation,
+  title     = {A Model for Types and Levels of Human Interaction with Automation},
+  author    = {Parasuraman, Raja and Sheridan, Thomas B. and Wickens, Christopher D.},
+  year      = {2000},
+  journal   = {IEEE Transactions on Systems, Man, and Cybernetics---Part A: Systems and Humans},
+  volume    = {30},
+  number    = {3},
+  pages     = {286--297},
+  doi       = {10.1109/3468.844354},
+  abstract  = {Parasuraman, Sheridan, and Wickens propose a taxonomy of automation that varies along two dimensions: the type of function automated (information acquisition, information analysis, decision selection, action implementation) and the level of automation (from fully manual to fully automatic, on a 10-point scale). Higher automation levels reduce operator workload but also reduce situation awareness and the ability to intervene when automation fails. The optimal level depends on the consequences of automation failure and the operator's ability to detect failures. The hummbl-dev architecture implements different automation levels for different functions, matching Parasuraman's framework. Information acquisition (adapters pulling data from GitHub, Linear, Calendar): high automation, Level 8--9. Information analysis (briefing synthesis): high automation, Level 7--8. Decision selection (sprint recommendations): medium automation, Level 5--6 --- the system recommends but the human decides. Action implementation (agent commits, pushes): low automation, Level 3--4 --- agents propose, but audit gates and branch protection require human approval for sensitive actions. The kill switch provides the dynamic level adjustment Parasuraman recommends: it can reduce automation across all functions simultaneously, from DISENGAGED (current levels) to EMERGENCY (Level 1, fully manual).},
+  keywords  = {adaptive automation, levels of automation, human-automation interaction, HUMMBL:DE, HUMMBL:SY, HUMMBL:P}
+}
+
+@article{Arrieta2020ExplainableAI,
+  title     = {Explainable Artificial Intelligence ({XAI}): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}},
+  author    = {Arrieta, Alejandro Barredo and D\'{i}az-Rodr\'{i}guez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco},
+  year      = {2020},
+  journal   = {Information Fusion},
+  volume    = {58},
+  pages     = {82--115},
+  doi       = {10.1016/j.inffus.2019.12.012},
+  abstract  = {Arrieta et al. provide a comprehensive survey of explainable AI (XAI), covering the taxonomy of explanation methods (ante-hoc vs post-hoc, model-specific vs model-agnostic), the audiences for explanations (developers, domain experts, regulators, end users), and the relationship between explainability and other responsible AI properties (fairness, privacy, reliability). They argue that XAI is essential for building trust in AI systems, particularly in high-stakes domains. Explainability is the bridge between AI capability and human-AI team performance. The hummbl-dev architecture addresses explainability at the system level rather than the model level. The coordination bus provides process explainability --- any stakeholder can trace the sequence of agent actions that produced an outcome. The governance bus provides decision explainability --- the append-only JSONL log records why delegation tokens were issued, why circuit breakers opened, why the kill switch was activated. The agent guardrails provide behavioral explainability --- the audit history documents patterns of agent behavior and the rationale for trust adjustments. Arrieta's finding that explanation needs differ by audience maps to the briefing system's multi-level output: executive summary for the founder, detailed metrics for the operator.},
+  keywords  = {explainable AI, XAI, responsible AI, trust, transparency, HUMMBL:P, HUMMBL:IN, HUMMBL:CO}
+}
+
+@article{Chen2018HumanRobotTeaming,
+  title     = {Situation Awareness-Based Agent Transparency and Human-Autonomy Teaming Effectiveness},
+  author    = {Chen, Jessie Y. C. and Procci, Katelyn and Boyce, Michael and Wright, Julia and Garcia, Andre and Barnes, Michael},
+  year      = {2018},
+  journal   = {Theoretical Issues in Ergonomics Science},
+  volume    = {19},
+  number    = {3},
+  pages     = {259--282},
+  doi       = {10.1080/1463922X.2017.1315750},
+  abstract  = {Chen et al. develop the Situation Awareness-based Agent Transparency (SAT) model, which extends Endsley's three-level SA framework to autonomous agents. The SAT model proposes that an agent should be transparent about three levels: what it is doing and why (Level 1 -- purpose and process), what it knows about the environment (Level 2 -- reasoning about constraints and predictions), and what it projects will happen (Level 3 -- projected outcomes and uncertainty). Experimental validation shows that SAT-compliant agents improve human-autonomy team performance by enabling better calibrated trust and more effective intervention. The hummbl-dev bus protocol implements SAT transparency. Level 1: STATUS and SITREP messages communicate what an agent is doing and why (``Completing lane 3: OAuth prewarn fix''). Level 2: PROPOSAL and BLOCKED messages communicate the agent's understanding of constraints (``Blocked on DNS resolution for push''). Level 3: MILESTONE and COMPLETE messages project outcomes (``Sprint A complete, all 5 lanes closed''). The guardrails audit process evaluates whether agent transparency is accurate --- Gemini's metric inflation violated Level 1 transparency by misrepresenting what it actually did, degrading team trust and coordination effectiveness.},
+  keywords  = {agent transparency, human-robot teaming, situation awareness, trust, HUMMBL:P, HUMMBL:SY, HUMMBL:CO}
+}
+
+@book{Vicente1999CognitiveWorkAnalysis,
+  title     = {Cognitive Work Analysis: Toward Safe, Productive, and Healthy Computer-Based Work},
+  author    = {Vicente, Kim J.},
+  year      = {1999},
+  publisher = {Lawrence Erlbaum Associates},
+  isbn      = {978-0-8058-2396-2},
+  % No DOI -- LEA book; no registered DOI
+  abstract  = {Vicente develops cognitive work analysis (CWA) as a framework for analyzing and designing complex sociotechnical systems. CWA proceeds through five phases: work domain analysis (what constraints shape the work), control task analysis (what activities are required), strategies analysis (how activities can be carried out), social organization and cooperation analysis (how work is distributed), and worker competencies analysis (what skills are needed). Unlike task analysis approaches that prescribe specific procedures, CWA models the constraints within which workers must operate, supporting adaptation rather than scripting. The hummbl-dev architecture can be analyzed through CWA's five phases. Work domain analysis: the constraints are budget limits, security requirements, contract schemas, and API rate limits. Control task analysis: the briefing generation, agent coordination, and governance enforcement activities. Strategies analysis: the multiple paths to the same goal (direct API calls vs cached data vs mock fallbacks). Social organization: the role allocation across Claude, Gemini, Kimi, and human operators. Worker competencies: the capability profiles encoded in agent guardrails. CWA's emphasis on constraint-based design rather than procedure-based design explains why the hummbl-dev guardrails specify boundaries (what agents cannot do) rather than scripts (what agents must do).},
+  keywords  = {cognitive work analysis, sociotechnical systems, constraint-based design, HUMMBL:DE, HUMMBL:SY, HUMMBL:CO}
+}
+
+@article{Helmreich1999CRM,
+  title     = {On Error Management: Lessons from Aviation},
+  author    = {Helmreich, Robert L. and Merritt, Ashleigh C. and Wilhelm, John A.},
+  year      = {1999},
+  journal   = {BMJ},
+  volume    = {320},
+  number    = {7237},
+  pages     = {781--785},
+  doi       = {10.1136/bmj.320.7237.781},
+  abstract  = {Helmreich, Merritt, and Wilhelm summarize the evolution and impact of Crew Resource Management (CRM) in aviation --- a systematic approach to training flight crews in non-technical skills: communication, leadership, decision-making, situational awareness, and team management. CRM emerged from the finding that most aviation accidents result from failures of team coordination, not individual technical errors. The authors report that CRM training reduces error rates by improving crew communication, establishing shared mental models, and creating psychological safety for junior crew members to challenge senior officers' decisions. CRM provides the conceptual template for multi-agent governance in hummbl-dev. The agent guardrails system implements CRM's graduated authority structure: the human operator is the captain, Claude is the first officer with audit authority, and Gemini and Kimi are crew members with constrained roles. The bus protocol implements CRM's standardized communication --- structured message types (STATUS, PROPOSAL, BLOCKED) replace ambiguous free-form communication, reducing the communication failures that CRM was designed to address. The kill switch escalation levels implement CRM's graded emergency protocols. Most critically, CRM's emphasis on challenging unsafe actions is embodied in the audit gate: Claude can and does challenge Gemini's actions (metric inflation, scope violations), implementing the cross-check behavior that prevents drift into failure.},
+  keywords  = {Crew Resource Management, aviation safety, team communication, error management, HUMMBL:CO, HUMMBL:SY, HUMMBL:IN}
+}

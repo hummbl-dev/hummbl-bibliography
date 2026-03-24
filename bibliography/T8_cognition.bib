@@ -152,3 +152,102 @@
   abstract = {In this essay, Luhmann describes his Zettelkasten (``slip box'') as a ``communication partner'' --- a system of 90,000 interlinked index cards that functioned not merely as a filing system but as a thinking tool that generated unexpected connections and new ideas. The key innovation is the numbering and linking scheme: each note receives a unique hierarchical address, and notes link to related notes regardless of where they sit in the hierarchy, enabling non-linear traversal of ideas. Luhmann credits this system for his extraordinary productivity (50 books, 550+ articles). The Cognitive Ledger Protocol in founder-mode explicitly implements Zettelkasten principles: each LedgerEntry has a unique ID, entries link to related entries via the ``links'' field (Zettelkasten-style cross-references), and the BM25 indexer enables retrieval by semantic similarity --- a computational version of Luhmann's browsing-by-following-links.},
   keywords = {Zettelkasten, note-taking, knowledge management, interlinked notes, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
 }
+
+% =============================================================================
+% Backfill entries 13--20: schema theory, situated cognition, communities of
+% practice, deliberate practice, sensemaking, information foraging, cognitive
+% flexibility, and embodied cognition.
+% Added 2026-03-23. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@book{Piaget1952Origins,
+  title = {The Origins of Intelligence in Children},
+  author = {Piaget, Jean},
+  year = {1952},
+  publisher = {International Universities Press},
+  address = {New York},
+  % No DOI -- 1952 translation of 1936 French original; pre-DOI era
+  abstract = {Piaget introduces the concepts of schema, assimilation, and accommodation as the fundamental mechanisms of cognitive development. A schema is an organized pattern of thought or action that represents knowledge about the world; assimilation is the process of incorporating new information into existing schemas; accommodation is the modification of schemas when new information cannot be assimilated. Intelligence develops through repeated cycles of assimilation-accommodation that produce increasingly abstract and coordinated schemas. Piaget's schema theory is the deepest theoretical root of Base120. Each of the 120 mental models is a pre-constructed schema --- an organized pattern of thought for a specific cognitive transformation (perspective shift, inversion, composition, decomposition, recursion, or systems view). When a practitioner applies a Base120 model to a new problem, they are performing Piagetian assimilation: fitting the problem into an existing schema. When a model proves insufficient and must be adapted, they perform accommodation. The consolidator module on nodezero automates schema refinement --- synthesizing verbose ledger entries into denser representations that are better adapted to the problem domain.},
+  keywords = {schema theory, assimilation, accommodation, cognitive development, HUMMBL:P, HUMMBL:CO, HUMMBL:RE}
+}
+
+@book{Bartlett1932Remembering,
+  title = {Remembering: A Study in Experimental and Social Psychology},
+  author = {Bartlett, Frederic C.},
+  year = {1932},
+  publisher = {Cambridge University Press},
+  doi = {10.1017/CBO9781139173469},
+  abstract = {Bartlett's landmark experimental work demonstrates that memory is not a passive recording of experience but an active, constructive process shaped by prior knowledge structures he called ``schemas.'' Through serial reproduction experiments (most famously ``The War of the Ghosts''), Bartlett showed that people systematically distort recalled material to fit their existing schemas --- omitting unfamiliar details, rationalizing inconsistencies, and importing culturally familiar elements. Memory is reconstruction, not reproduction. This finding has profound implications for the Cognitive Ledger Protocol and the multi-agent coordination bus. When agents post SITREP messages, they are reconstructing their session activity through the lens of their operational schema --- and Bartlett predicts systematic distortion. The Gemini audit history confirms this empirically: Gemini's metric inflation (17x in Session 7) is classic schema-driven reconstruction, where ``what I did'' is distorted toward ``what I expected to accomplish.'' The append-only ledger design is a defense against Bartlettian distortion --- it preserves the raw record alongside any synthesized summaries, preventing reconstructive memory from overwriting the original data.},
+  keywords = {schema theory, reconstructive memory, serial reproduction, HUMMBL:P, HUMMBL:IN, HUMMBL:RE}
+}
+
+@book{Lave1991SituatedLearning,
+  title = {Situated Learning: Legitimate Peripheral Participation},
+  author = {Lave, Jean and Wenger, Etienne},
+  year = {1991},
+  publisher = {Cambridge University Press},
+  doi = {10.1017/CBO9780511815355},
+  abstract = {Lave and Wenger reconceptualize learning as a process of increasing participation in communities of practice rather than the acquisition of propositional knowledge. Newcomers begin as ``legitimate peripheral participants'' --- performing simple, low-risk tasks at the edges of a community --- and gradually move toward full participation as they develop competence and identity within the practice. Learning is inseparable from the social context in which it occurs. The hummbl-dev agent fleet implements legitimate peripheral participation for AI agents. New agents (Kimi, Gemini) begin with constrained scope --- peripheral participation limited to specific directories and task types. As trust develops through successful audits, scope expands. Gemini's trajectory illustrates the theory's dark side: it attempted to skip from peripheral to full participation (committing to main, modifying core services) without the gradual trust-building that legitimate peripheral participation requires, triggering the probation and guardrail system. The agent onboarding protocol is a formalized version of Lave and Wenger's apprenticeship model --- new agents learn the community's norms (commit conventions, bus protocol, scope rules) through bounded practice.},
+  keywords = {situated learning, legitimate peripheral participation, communities of practice, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@book{Wenger1998CommunitiesPractice,
+  title = {Communities of Practice: Learning, Meaning, and Identity},
+  author = {Wenger, Etienne},
+  year = {1998},
+  publisher = {Cambridge University Press},
+  doi = {10.1017/CBO9780511803932},
+  abstract = {Wenger extends the concept of communities of practice into a full social theory of learning organized around four components: meaning (learning as experience), practice (learning as doing), community (learning as belonging), and identity (learning as becoming). A community of practice is defined by three dimensions: mutual engagement (members do things together), joint enterprise (members negotiate a shared understanding of what they are about), and shared repertoire (members develop routines, artifacts, vocabulary, and styles). The hummbl-dev agent fleet is a community of practice by Wenger's definition. Mutual engagement: agents interact through the coordination bus, producing and consuming shared artifacts (briefings, ledger entries, bus messages). Joint enterprise: the negotiated enterprise is the Morning Briefing --- all agents contribute toward producing a daily decision-support artifact. Shared repertoire: the fleet has developed conventions (TSV bus format, commit message style, scope rules, guardrail documents) that constitute a shared practice. The Cognitive Ledger Protocol reifies the shared repertoire into a persistent, searchable knowledge base.},
+  keywords = {communities of practice, social learning, identity, shared repertoire, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
+}
+
+@article{Ericsson1993DeliberatePractice,
+  title = {The Role of Deliberate Practice in the Acquisition of Expert Performance},
+  author = {Ericsson, K. Anders and Krampe, Ralf Th. and Tesch-R\"{o}mer, Clemens},
+  year = {1993},
+  journal = {Psychological Review},
+  volume = {100},
+  number = {3},
+  pages = {363--406},
+  doi = {10.1037/0033-295X.100.3.363},
+  abstract = {Ericsson, Krampe, and Tesch-R\"{o}mer demonstrate that expert performance is primarily the result of deliberate practice --- effortful activities specifically designed to improve performance --- rather than innate talent. Across domains (music, chess, sports), they find that experts accumulate roughly 10,000 hours of deliberate practice by age 20, and that the quality of practice (targeted, feedback-rich, at the edge of current ability) matters more than quantity. Deliberate practice requires concentration, is not inherently enjoyable, and demands access to teachers or structured learning materials. Base120 is a deliberate practice infrastructure for thinking. Each of the 120 mental models provides a structured exercise at the edge of current analytical ability --- applying perspective shifts, inversions, compositions, and decompositions that practitioners would not naturally attempt. The feedback loops in founder-mode (signal replies, briefing quality ratings, sprint retrospectives) provide the performance feedback that Ericsson identifies as essential. The graduated agent guardrails implement deliberate practice for AI agents: constrained scope forces agents to practice within their competence boundary, expanding only as measured performance improves.},
+  keywords = {deliberate practice, expertise, skill acquisition, feedback, HUMMBL:RE, HUMMBL:P, HUMMBL:DE}
+}
+
+@article{Dervin1998SenseMaking,
+  title = {Sense-Making Theory and Practice: An Overview of User Interests in Knowledge Seeking and Use},
+  author = {Dervin, Brenda},
+  year = {1998},
+  journal = {Journal of Knowledge Management},
+  volume = {2},
+  number = {2},
+  pages = {36--46},
+  doi = {10.1108/13673279810249369},
+  abstract = {Dervin's Sense-Making methodology reconceptualizes information seeking as a process of bridging cognitive gaps rather than finding pre-existing answers. The central metaphor is a person moving through time-space who encounters a gap (a situation where current knowledge is insufficient), constructs a bridge (information, ideas, resources), and arrives at an outcome. Sense-Making treats information not as a commodity to be transmitted but as a construction created by the user in context. The Morning Briefing system in founder-mode is a sense-making support tool in Dervin's framework. The founder encounters daily cognitive gaps: What happened overnight? Which projects are on track? Where are the risks? The briefing bridges these gaps by aggregating signals from seven adapters into a structured summary. The Cognitive Ledger Protocol extends sense-making across sessions: when an agent encounters a gap in the current session, the retriever searches the ledger for prior bridges (past entries that addressed similar gaps), implementing what Dervin calls ``circling'' --- revisiting and reinterpreting prior sense-making in light of new situations.},
+  keywords = {sense-making, information seeking, knowledge gaps, user-centered design, HUMMBL:P, HUMMBL:IN, HUMMBL:DE}
+}
+
+@article{Pirolli1999InformationForaging,
+  title = {Information Foraging},
+  author = {Pirolli, Peter and Card, Stuart},
+  year = {1999},
+  journal = {Psychological Review},
+  volume = {106},
+  number = {4},
+  pages = {643--675},
+  doi = {10.1037/0033-295X.106.4.643},
+  abstract = {Pirolli and Card apply optimal foraging theory from behavioral ecology to human information-seeking behavior. Just as animals maximize energy intake per unit time by following ``information scent'' (cues that signal the proximity of food), knowledge workers maximize the value of information found per unit time by following ``information scent'' (cues in link text, headings, and summaries that signal the relevance of a source). The theory predicts that people will ``patch'' between information sources, spending time in a patch until diminishing returns make it more efficient to move to the next patch, and that stronger scent leads to more efficient foraging. The BM25 inverted term index in the Cognitive Ledger Protocol is an information scent amplifier: it surfaces the most relevant ledger entries for a given query, increasing the scent on high-value patches. The Morning Briefing itself is a pre-foraged information patch: rather than requiring the founder to forage across seven data sources (high cost, weak scent), the briefing pre-aggregates and ranks the most relevant signals, dramatically reducing foraging time and increasing the scent-to-noise ratio.},
+  keywords = {information foraging, optimal foraging, information scent, HCI, HUMMBL:P, HUMMBL:DE, HUMMBL:RE}
+}
+
+@article{Spiro1990CognitiveFlexibility,
+  title = {Cognitive Flexibility, Constructivism, and Hypertext: Random Access Instruction for Advanced Knowledge Acquisition in Ill-Structured Domains},
+  author = {Spiro, Rand J. and Feltovich, Paul J. and Jacobson, Michael J. and Coulson, Richard L.},
+  year = {1990},
+  journal = {Constructivism and the Technology of Instruction: A Conversation},
+  publisher = {Lawrence Erlbaum Associates},
+  pages = {57--75},
+  % No DOI -- book chapter in edited volume; no registered DOI for this chapter
+  abstract = {Spiro and colleagues introduce cognitive flexibility theory (CFT), arguing that learning in ill-structured domains (medicine, law, literary criticism) requires multiple representations of knowledge rather than a single ``correct'' schema. Ill-structured domains resist the neat categorical organization that works for well-structured domains; instead, learners must develop the flexibility to assemble knowledge adaptively from multiple cases, perspectives, and conceptual dimensions. CFT prescribes ``criss-crossing'' the conceptual landscape from multiple directions, using the same cases to illustrate different themes. Base120's six transformations (P, IN, CO, DE, RE, SY) are a systematic implementation of cognitive flexibility. Each transformation forces the practitioner to criss-cross the same problem from a different conceptual direction --- viewing it through perspective shifts, then inversions, then compositions, then decompositions. The 120 models span 20 models per transformation, ensuring that even within a single cognitive direction there are multiple representations. The Zettelkasten-style links in the Cognitive Ledger enable the non-linear traversal that CFT prescribes --- entries link to related entries across categories, supporting the random-access knowledge assembly that flexible cognition requires.},
+  keywords = {cognitive flexibility, ill-structured domains, multiple representations, hypertext, HUMMBL:P, HUMMBL:CO, HUMMBL:DE}
+}

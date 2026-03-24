@@ -147,3 +147,53 @@
   abstract = {In this stunning new book, Malcolm Gladwell takes us on an intellectual journey through the world of "outliers"—the best and the brightest, the most famous and the most successful. He asks the question: what makes high-achievers different? His answer is that we pay too much attention to what successful people are like, and too little attention to where they are from: that is, their culture, their family, their generation, and the idiosyncratic experiences of their upbringing.},
   keywords = {success, expertise, 10000-hour rule, HUMMBL:DE, HUMMBL:SY}
 }
+
+@book{Davenport2018AIAdvantage,
+  title = {The AI Advantage: How to Put the Artificial Intelligence Revolution to Work},
+  author = {Davenport, Thomas H.},
+  year = {2018},
+  publisher = {MIT Press},
+  isbn = {978-0262039178},
+  abstract = {This pragmatic guide examines how organizations can implement AI to augment human capabilities rather than replace workers. Davenport introduces a taxonomy of AI applications: robotic process automation (automating structured tasks), cognitive insight (pattern detection in large datasets), and cognitive engagement (intelligent agents that interact with humans). Through case studies from finance, healthcare, media, and manufacturing, the book demonstrates that the most successful AI deployments enhance human decision-making rather than attempting full autonomy. Key recommendations include starting with existing business processes, combining AI with human judgment, and treating AI as a portfolio of capabilities rather than a single technology. For hummbl-dev, Davenport's augmentation thesis validates the Morning Briefing architecture: the system does not make decisions for the founder but synthesizes information from seven adapters into a decision-support artifact that amplifies the founder's pattern recognition and reduces information overload.},
+  keywords = {AI augmentation, business transformation, cognitive automation, HUMMBL:CO, HUMMBL:SY}
+}
+
+@book{Agrawal2018PredictionMachines,
+  title = {Prediction Machines: The Simple Economics of Artificial Intelligence},
+  author = {Agrawal, Ajay and Gans, Joshua and Goldfarb, Avi},
+  year = {2018},
+  publisher = {Harvard Business Review Press},
+  isbn = {978-1633695733},
+  abstract = {This book reframes artificial intelligence as a technology that dramatically reduces the cost of prediction, and then uses economic theory to analyze the cascading effects of cheap prediction on business strategy, organizational design, and competitive dynamics. The authors argue that as prediction becomes cheaper, the complementary inputs -- judgment, data, and action -- become more valuable. They introduce a decision-making framework decomposing decisions into prediction (what will happen), judgment (what matters), action (executing the choice), and outcome (learning from results). The book demonstrates how AI shifts the optimal boundaries of firms, changes the value of human judgment, and creates new strategic trade-offs between speed and accuracy. For hummbl-dev, this framework directly justifies the architecture: the briefing system automates prediction (synthesizing signals from GitHub, Linear, Calendar, cost tracking), while human judgment remains the scarce complement that the founder applies to the Morning Briefing's recommendations.},
+  keywords = {prediction, economics of AI, judgment, decision making, HUMMBL:DE, HUMMBL:IN}
+}
+
+@book{Lencioni2002FiveDysfunctions,
+  title = {The Five Dysfunctions of a Team: A Leadership Fable},
+  author = {Lencioni, Patrick},
+  year = {2002},
+  publisher = {Jossey-Bass},
+  isbn = {978-0787960759},
+  abstract = {This influential leadership fable presents a hierarchical model of five interconnected dysfunctions that undermine team effectiveness: absence of trust (fear of vulnerability), fear of conflict (artificial harmony), lack of commitment (ambiguity), avoidance of accountability (low standards), and inattention to results (status and ego). Lencioni argues these dysfunctions form a pyramid where each level depends on resolving the one below it. The book provides diagnostic tools and practical exercises for addressing each dysfunction. Through the narrative of a new CEO transforming a dysfunctional executive team, Lencioni demonstrates that team health is the ultimate competitive advantage. For hummbl-dev, the five dysfunctions model applies directly to multi-agent coordination: the agent guardrails system addresses trust (trust tiers), the bus enables productive conflict (PROPOSAL/ACK cycles), commit governance ensures commitment (scope rules), agent audits enforce accountability (violation tracking), and the briefing system focuses attention on results (daily metrics).},
+  keywords = {team dynamics, trust, accountability, leadership, HUMMBL:SY, HUMMBL:P}
+}
+
+@book{Ferriss2009FourHourWorkweek,
+  title = {The 4-Hour Workweek: Escape 9--5, Live Anywhere, and Join the New Rich},
+  author = {Ferriss, Timothy},
+  year = {2009},
+  publisher = {Crown Publishers},
+  isbn = {978-0307465351},
+  abstract = {This provocative guide challenges conventional work patterns by introducing the DEAL framework: Definition (redefining success and goals), Elimination (applying Pareto's 80/20 principle to focus on high-impact activities), Automation (building systems and delegating to virtual assistants and automated processes), and Liberation (designing location-independent work). Ferriss advocates for selective ignorance, batch processing of communications, and creating automated income streams that require minimal ongoing attention. The book's emphasis on building systems that work without constant human intervention has influenced a generation of entrepreneurs and startup founders. For hummbl-dev, the Automation principle directly maps to the Morning Briefing's purpose: rather than the founder manually checking GitHub PRs, Linear tickets, calendar events, cost metrics, and security alerts each morning, the briefing system automates this synthesis into a single decision-support artifact, embodying Ferriss's core insight that recurring information gathering should be systematized.},
+  keywords = {automation, productivity, delegation, lifestyle design, HUMMBL:DE, HUMMBL:RE}
+}
+
+@book{McChristal2015TeamOfTeams,
+  title = {Team of Teams: New Rules of Engagement for a Complex World},
+  author = {McChrystal, Stanley and Collins, Tantum and Silverman, David and Fussell, Chris},
+  year = {2015},
+  publisher = {Portfolio/Penguin},
+  isbn = {978-1591847489},
+  abstract = {Drawing on experience commanding Joint Special Operations in Iraq, McChrystal describes how the Task Force transformed from a traditional hierarchical military organization into an adaptive network of teams that could match the speed and flexibility of Al Qaeda in Iraq. The key insight is that in complex, rapidly changing environments, the traditional command-and-control model fails because information cannot flow fast enough to a central decision-maker. The solution was creating shared consciousness (a common operating picture through radical transparency and information sharing) combined with empowered execution (pushing decision authority to the edge). The book introduces the concept of a ''team of teams'' where small teams maintain internal trust and cohesion while being connected to the larger organization through liaison officers and shared information platforms. For hummbl-dev, this model directly informs the multi-agent architecture: the coordination bus provides shared consciousness (all agents see all messages), the agent guardrails enable empowered execution (agents operate autonomously within defined scopes), and the trust tier system creates the cross-team liaisons that maintain coherence across the agent fleet.},
+  keywords = {adaptive organizations, shared consciousness, empowered execution, HUMMBL:SY, HUMMBL:CO}
+}

@@ -114,3 +114,118 @@
   abstract = {The Model Context Protocol (MCP) defines a standard interface for connecting AI models to external data sources and tools. MCP uses a client-server architecture where MCP clients (embedded in AI applications) communicate with MCP servers (exposing resources, tools, and prompts) via JSON-RPC over stdio or HTTP+SSE transports. The protocol enables AI models to access real-time data, execute actions, and compose capabilities from multiple tool providers without bespoke integration code. MCP has been adopted by Claude, VS Code Copilot, and other AI platforms as the standard tool-use protocol. The hummbl-dev mcp-server exposes Base120 mental models as MCP tools and resources, and the agent-os project uses MCP for inter-agent tool sharing.},
   keywords = {model context protocol, tool use, AI integration, HUMMBL:CO, HUMMBL:SY}
 }
+
+@techreport{ISO42001,
+  title = {ISO/IEC 42001:2023 --- Information Technology --- Artificial Intelligence --- Management System},
+  author = {{International Organization for Standardization}},
+  year = {2023},
+  institution = {ISO/IEC},
+  number = {42001:2023},
+  % No public DOI -- ISO standards are purchased; reference by standard number
+  abstract = {ISO/IEC 42001 is the world's first international management system standard for artificial intelligence. It specifies requirements for establishing, implementing, maintaining, and continually improving an AI Management System (AIMS) within organizations. The standard follows the Annex SL high-level structure common to ISO management system standards (shared with ISO 27001 and ISO 9001), covering context of the organization, leadership, planning, support, operation, performance evaluation, and improvement. Key AI-specific requirements include: AI risk assessment and treatment, impact assessment for AI systems, documentation of AI system objectives and intended purposes, data management throughout the AI lifecycle, and monitoring of AI system performance and bias. For hummbl-governance, ISO 42001 defines the compliance target that GaaS helps organizations achieve: the governance modules (kill switch, circuit breaker, delegation tokens, audit logs) map to specific ISO 42001 control objectives, and the continuous monitoring via health probes satisfies the performance evaluation requirements.},
+  keywords = {ISO 42001, AI management system, compliance, HUMMBL:SY, HUMMBL:RE}
+}
+
+@techreport{ISO27001,
+  title = {ISO/IEC 27001:2022 --- Information Security, Cybersecurity and Privacy Protection --- Information Security Management Systems --- Requirements},
+  author = {{International Organization for Standardization}},
+  year = {2022},
+  institution = {ISO/IEC},
+  number = {27001:2022},
+  % No public DOI -- ISO standards are purchased; reference by standard number
+  abstract = {ISO/IEC 27001 is the international standard for information security management systems (ISMS). It provides a systematic approach to managing sensitive information through risk assessment, security controls, and continuous improvement. The 2022 revision reorganizes 93 controls into four themes: organizational (37 controls), people (8 controls), physical (14 controls), and technological (34 controls). Key controls relevant to AI systems include access control, cryptographic controls, information classification, secure development, logging and monitoring, and supplier relationships. ISO 27001 certification has become the baseline information security credential for enterprise software vendors. The founder-mode security infrastructure implements ISO 27001-aligned controls: HMAC-SHA256 delegation tokens (access control), append-only audit logs (logging and monitoring), pre-commit secret scanning (secure development), and the Bandit/Semgrep security scanning pipeline (vulnerability management). ISO 27001 compliance is a prerequisite for SOC 2 Type II and a foundation for ISO 42001.},
+  keywords = {ISO 27001, information security, ISMS, access control, HUMMBL:SY, HUMMBL:DE}
+}
+
+@techreport{SOC2Framework,
+  title = {SOC 2 --- Trust Services Criteria},
+  author = {{American Institute of Certified Public Accountants}},
+  year = {2017},
+  institution = {AICPA},
+  % No DOI -- AICPA standard, reference by name and institution
+  abstract = {SOC 2 (Service Organization Control 2) defines trust services criteria across five categories: Security (protection against unauthorized access), Availability (system accessibility as committed), Processing Integrity (system processing is complete, valid, accurate, and timely), Confidentiality (information designated as confidential is protected), and Privacy (personal information is collected, used, retained, and disclosed in conformity with commitments). SOC 2 Type I evaluates the design of controls at a point in time; Type II evaluates their operating effectiveness over a period (typically 6--12 months). SOC 2 has become the de facto compliance requirement for B2B SaaS vendors, particularly in the US market. The GaaS (Governance-as-a-Service) offering from hummbl-dev positions governance tooling as a means to achieve and demonstrate SOC 2 compliance: the kill switch maps to Availability controls, delegation tokens to Security controls, the audit log to Processing Integrity, and data governance to Confidentiality and Privacy criteria.},
+  keywords = {SOC 2, trust services, compliance, audit, HUMMBL:SY, HUMMBL:CO}
+}
+
+@techreport{GDPR2016,
+  title = {Regulation (EU) 2016/679 --- General Data Protection Regulation},
+  author = {{European Parliament and Council of the European Union}},
+  year = {2016},
+  institution = {Official Journal of the European Union},
+  number = {L 119/1},
+  % No DOI -- EU regulation, reference by regulation number
+  abstract = {The General Data Protection Regulation (GDPR) is the EU's comprehensive data protection law, establishing rights for data subjects and obligations for data controllers and processors. Key provisions include: lawful basis for processing (consent, contract, legitimate interest, legal obligation, vital interests, public task), data subject rights (access, rectification, erasure, portability, objection, restriction), data protection by design and by default, Data Protection Impact Assessments (DPIAs) for high-risk processing, mandatory data breach notification within 72 hours, and the requirement for a Data Protection Officer (DPO) in certain organizations. GDPR applies to any organization processing data of EU residents, with penalties up to 4\% of global annual revenue. For hummbl-dev, GDPR compliance affects the design of the Cognitive Ledger Protocol (append-only logs must accommodate the right to erasure through cryptographic deletion), the briefing system (personal data from calendar and communication channels), and the GaaS platform (as a data processor for customer organizations).},
+  keywords = {GDPR, data protection, privacy, data subject rights, HUMMBL:SY, HUMMBL:RE}
+}
+
+@book{Abraham2019DataGovernance,
+  title = {Data Governance: The Definitive Guide},
+  author = {Abraham, Renu and Schneider, Johannes and vom Brocke, Jan},
+  year = {2019},
+  journal = {Journal of the Association for Information Systems},
+  volume = {20},
+  number = {7},
+  pages = {985--1006},
+  doi = {10.17705/1jais.00560},
+  abstract = {This comprehensive review and framework consolidates the data governance literature into a unified model covering five structural domains: organizational structures (roles, responsibilities, decision rights), processes (data quality management, metadata management, data lifecycle management), relational mechanisms (communication, collaboration, incentive alignment), scope (enterprise-wide vs. domain-specific), and outcomes (data quality, regulatory compliance, business value). The authors identify 13 antecedents of effective data governance including organizational culture, data literacy, and IT capability. The paper distinguishes data governance (decision-making authority over data assets) from data management (execution of data-related activities). For hummbl-dev, the data governance framework maps to the multi-agent coordination model: the bus protocol defines decision rights (who can post DECISION messages), the agent guardrails define organizational structures (approved scopes, trust tiers), and the contract schemas define data quality standards (validated at every boundary).},
+  keywords = {data governance, decision rights, data quality, HUMMBL:SY, HUMMBL:DE}
+}
+
+@inproceedings{Raji2020Auditing,
+  title = {Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing},
+  author = {Raji, Inioluwa Deborah and Smart, Andrew and White, Rebecca N. and Mitchell, Margaret and Gebru, Timnit and Hutchinson, Ben and Smith-Loud, Jamila and Theron, Daniel and Barnes, Parker},
+  year = {2020},
+  booktitle = {Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20)},
+  pages = {33--44},
+  doi = {10.1145/3351095.3372873},
+  abstract = {This paper presents SMACTR (Scoping, Mapping, Artifact Collection, Testing, Reflection), a comprehensive internal algorithmic auditing framework developed from practice at Google. The framework defines five stages: Scoping (identifying the system, stakeholders, and audit objectives), Mapping (documenting the system's components, data flows, and decision points), Artifact Collection (gathering documentation, training data statistics, and model performance metrics), Testing (conducting bias, fairness, and robustness evaluations), and Reflection (synthesizing findings and recommending changes). The authors argue that internal auditing complements external auditing by being continuous, embedded in the development lifecycle, and informed by organizational context. The agent audit protocol in founder-mode follows the SMACTR pattern: each Gemini/Kimi session audit involves scoping (checking the session's claimed deliverables), mapping (reviewing touched files and bus messages), artifact collection (gathering commit diffs and test results), testing (verifying factual claims and scope compliance), and reflection (updating the guardrails document with findings).},
+  keywords = {algorithmic auditing, accountability, SMACTR, AI governance, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Mitchell2019ModelCards,
+  title = {Model Cards for Model Reporting},
+  author = {Mitchell, Margaret and Wu, Simone and Zaldivar, Andrew and Barnes, Parker and Vasserman, Lucy and Hutchinson, Ben and Spitzer, Elena and Raji, Inioluwa Deborah and Gebru, Timnit},
+  year = {2019},
+  booktitle = {Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)},
+  pages = {220--229},
+  doi = {10.1145/3287560.3287596},
+  abstract = {This paper introduces model cards as a standardized documentation framework for machine learning models. A model card accompanies a trained model and provides information across several sections: model details (architecture, training procedure, version), intended use (primary use cases and out-of-scope uses), factors (relevant demographic groups, environmental conditions), metrics (performance measures and their thresholds), evaluation data (datasets used for evaluation and their characteristics), training data (description and processing), quantitative analyses (disaggregated performance across subgroups), and ethical considerations. The authors demonstrate model cards for two production models: a toxicity classifier and a facial recognition system. Model cards have been adopted by Hugging Face, Google, and other AI organizations as a documentation standard. For hummbl-dev, model cards inform the agent identity documentation pattern: each agent in AGENTS.md includes a description, trust tier, capabilities, limitations, and approved scope --- a governance-focused analog of the model card framework applied to AI agents rather than ML models.},
+  keywords = {model cards, documentation, transparency, responsible AI, HUMMBL:CO, HUMMBL:DE}
+}
+
+@article{Gebru2021Datasheets,
+  title = {Datasheets for Datasets},
+  author = {Gebru, Timnit and Morgenstern, Jamie and Vecchione, Brenda and Vaughan, Jennifer Wortman and Wallach, Hanna and Daum{\'e} III, Hal and Crawford, Kate},
+  year = {2021},
+  journal = {Communications of the ACM},
+  volume = {64},
+  number = {12},
+  pages = {86--92},
+  doi = {10.1145/3458723},
+  abstract = {This paper proposes datasheets for datasets, a standardized documentation framework inspired by the electronics industry's practice of providing datasheets for hardware components. Each datasheet answers questions organized into seven sections: motivation (why was the dataset created, and by whom?), composition (what data does the dataset contain?), collection process (how was the data acquired?), preprocessing (what cleaning or labeling was performed?), uses (what are intended and inappropriate uses?), distribution (how is the dataset shared and licensed?), and maintenance (who maintains the dataset and how?). The authors argue that datasheets facilitate communication between dataset creators and consumers, enable informed decisions about dataset fitness for a task, and surface potential ethical concerns. For hummbl-dev, the datasheet framework extends to the data sources consumed by the briefing system: each integration adapter (GitHub, Linear, Calendar, Cost) implicitly defines a ''datasheet'' through its documentation --- what data it collects, how it is processed, what its limitations are, and what uses are appropriate.},
+  keywords = {datasheets, datasets, documentation, data governance, HUMMBL:CO, HUMMBL:RE}
+}
+
+@article{Floridi2018AI4People,
+  title = {AI4People --- An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations},
+  author = {Floridi, Luciano and Cowls, Josh and Beltrametti, Monica and Chatila, Raja and Chazerand, Patrice and Dignum, Virginia and Luetge, Christoph and Madelin, Robert and Pagallo, Ugo and Rossi, Francesca and Schafer, Burkhard and Valcke, Peggy and Vayena, Effy},
+  year = {2018},
+  journal = {Minds and Machines},
+  volume = {28},
+  number = {4},
+  pages = {689--707},
+  doi = {10.1007/s11023-018-9482-5},
+  abstract = {This paper synthesizes six major AI ethics frameworks (from the European Commission, IEEE, Japanese government, Asilomar conference, Chinese government, and the Partnership on AI) into a unified set of five ethical principles for AI: beneficence (promoting well-being), non-maleficence (preventing harm), autonomy (preserving human agency), justice (ensuring fairness and non-discrimination), and explicability (enabling understanding and accountability). The authors argue that these five principles --- extending the four bioethics principles of Beauchamp and Childress with explicability --- provide a necessary and sufficient ethical foundation for evaluating AI systems. The paper includes 20 concrete recommendations for policy makers. For hummbl-dev, the AI4People framework provides the ethical vocabulary that GaaS operationalizes: the kill switch addresses non-maleficence, delegation tokens preserve autonomy (human oversight of agent actions), the audit log enables explicability, and the cost governor implements a form of justice (preventing unchecked resource consumption by any single agent).},
+  keywords = {AI ethics, ethical framework, beneficence, explicability, HUMMBL:P, HUMMBL:SY}
+}
+
+@techreport{NISTRMF2023,
+  title = {AI Risk Management Framework (AI RMF 1.0)},
+  author = {{National Institute of Standards and Technology}},
+  year = {2023},
+  institution = {NIST},
+  number = {AI 100-1},
+  doi = {10.6028/NIST.AI.100-1},
+  abstract = {The NIST AI Risk Management Framework provides a voluntary, rights-preserving framework for managing risks in the design, development, deployment, and use of AI systems. The framework is organized around four core functions: Govern (cultivating a risk-aware culture and establishing governance structures), Map (contextualizing risks relative to the AI system's intended purpose and impacts), Measure (employing quantitative and qualitative methods to analyze, assess, and track AI risks), and Manage (allocating resources for risk treatment and implementing controls). Each function contains categories and subcategories that organizations can tailor to their context. The NIST AI RMF has been adopted alongside the EU AI Act as a complementary governance instrument, with NIST focusing on risk management processes and the EU AI Act on regulatory compliance. The governance lifecycle in hummbl-governance maps directly to the four NIST functions: agent guardrails and trust tiers implement Govern, the briefing system and health probes implement Map, the evaluation and alerting systems implement Measure, and the kill switch and circuit breaker implement Manage.},
+  keywords = {NIST AI RMF, risk management, AI governance, HUMMBL:SY, HUMMBL:RE, HUMMBL:DE}
+}

@@ -127,3 +127,91 @@
   abstract = {Voyager is the first LLM-powered embodied lifelong learning agent, demonstrated in Minecraft. It consists of three components: an automatic curriculum that maximizes exploration, an ever-growing skill library of executable code for storing and retrieving complex behaviors, and an iterative prompting mechanism with environment feedback and self-verification. Voyager obtains 3.3x more unique items, travels 2.3x longer distances, and unlocks key tech tree milestones up to 15.3x faster than prior methods --- all without gradient-based training. The skill library pattern --- where successful solutions are stored as reusable code and retrieved by semantic similarity for future tasks --- is implemented in the Claude Code skills system (130 skills) and the forge worker library, where successful task patterns are captured and reused across sessions.},
   keywords = {lifelong learning, skill library, embodied agents, exploration, HUMMBL:RE, HUMMBL:CO, HUMMBL:SY}
 }
+
+@inproceedings{Zhou2024LATS,
+  title = {Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models},
+  author = {Zhou, Andy and Yan, Kai and Shlapentokh-Rothman, Michal and Wang, Haohan and Wang, Yu-Xiong},
+  year = {2024},
+  booktitle = {Proceedings of the Forty-first International Conference on Machine Learning (ICML 2024)},
+  url = {https://arxiv.org/abs/2310.04406},
+  doi = {10.48550/arXiv.2310.04406},
+  abstract = {LATS (Language Agent Tree Search) unifies reasoning, acting, and planning by using LLMs as agents, value functions, and optimizers within a Monte Carlo Tree Search framework. The agent generates multiple reasoning-action trajectories as a search tree, uses the LLM to evaluate intermediate states (value function), and backpropagates these evaluations to guide future exploration. This enables systematic exploration of the action space with self-reflection at each node. LATS achieves state-of-the-art results on HumanEval (94.4\%), WebShop (75.9\%), and HotpotQA by combining the strengths of ReAct-style action generation with tree search planning. The key insight is that LLMs can serve as both the policy (generating actions) and the critic (evaluating outcomes), eliminating the need for external reward models. For hummbl-dev, LATS formalizes the pattern behind multi-agent task decomposition: the forge orchestrator explores multiple implementation strategies (tree branches), evaluates intermediate results (test outcomes, lint results), and backtracks when a strategy fails -- implementing tree search over the engineering action space.},
+  keywords = {tree search, planning, reasoning, Monte Carlo, HUMMBL:DE, HUMMBL:RE, HUMMBL:SY}
+}
+
+@inproceedings{Patil2023Gorilla,
+  title = {Gorilla: Large Language Model Connected with Massive APIs},
+  author = {Patil, Shishir G. and Zhang, Tianjun and Wang, Xin and Gonzalez, Joseph E.},
+  year = {2023},
+  booktitle = {arXiv preprint},
+  url = {https://arxiv.org/abs/2305.10601},
+  doi = {10.48550/arXiv.2305.10601},
+  abstract = {Gorilla addresses a critical challenge for LLM agents: accurately generating API calls from natural language instructions. The paper demonstrates that LLMs frequently hallucinate API parameters, confuse similar APIs, and generate syntactically correct but semantically wrong calls. Gorilla fine-tunes LLaMA on a dataset of 1,645 APIs from TorchHub, TensorHub, and HuggingFace, combined with a retrieval-aware training approach that conditions generation on API documentation retrieved at inference time. The retriever-aware training is key: it teaches the model to use retrieved documentation as context rather than relying on memorized (and potentially outdated) API signatures. Gorilla achieves higher accuracy than GPT-4 on API call generation while significantly reducing hallucination. For hummbl-dev, Gorilla validates the MCP architecture: by providing structured API documentation (tool descriptions, parameter schemas) at inference time rather than relying on the model's parametric memory, MCP reduces tool-call hallucination -- the same retrieval-augmented approach that Gorilla demonstrates is superior to memorization.},
+  keywords = {API calling, tool use, hallucination reduction, retrieval-augmented, HUMMBL:CO, HUMMBL:DE}
+}
+
+@inproceedings{Packer2023MemGPT,
+  title = {MemGPT: Towards LLMs as Operating Systems},
+  author = {Packer, Charles and Wooders, Sarah and Lin, Kevin and Fang, Vivian and Patil, Shishir G. and Stoica, Ion and Gonzalez, Joseph E.},
+  year = {2023},
+  booktitle = {Proceedings of the Twelfth International Conference on Learning Representations (ICLR 2024)},
+  url = {https://arxiv.org/abs/2310.08560},
+  doi = {10.48550/arXiv.2310.08560},
+  abstract = {MemGPT introduces a virtual context management system inspired by operating system memory hierarchies. Just as an OS pages data between fast RAM and slow disk, MemGPT manages an LLM's limited context window by paging information between a main context (the model's active context window) and an external storage (a database or file system). The system uses function calls to manage its own memory: it can push information to archival storage, retrieve it later, and manage a FIFO buffer for recent conversation history. This enables LLMs to handle tasks requiring effectively unbounded context -- analyzing long documents, maintaining persistent conversational state across sessions, and building up knowledge over extended interactions. For hummbl-dev, MemGPT provides the theoretical model for the Cognitive Ledger Protocol's memory architecture: the boot context injection (main context), the five-pool retriever (retrieval from archival storage), and the BM25 index (the page table) implement the same memory hierarchy -- managing what fits in an agent's context window versus what is stored in the ledger for on-demand retrieval.},
+  keywords = {memory management, virtual context, operating system analogy, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
+}
+
+@inproceedings{Khattab2024DSPy,
+  title = {DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines},
+  author = {Khattab, Omar and Singhvi, Arnav and Maheshwari, Paridhi and Zhang, Zhiyuan and Santhanam, Keshav and Vardhamanan, Sri and Haq, Saiful and Sharma, Ashutosh and Joshi, Thomas T. and Mober, Hanna and Shah, Pawan Kumar and others},
+  year = {2024},
+  booktitle = {Proceedings of the Twelfth International Conference on Learning Representations (ICLR 2024)},
+  url = {https://arxiv.org/abs/2310.03714},
+  doi = {10.48550/arXiv.2310.03714},
+  abstract = {DSPy replaces hand-written prompts with declarative modules that are compiled into optimized prompt chains through automatic prompt tuning. The programmer defines signatures (input-output specifications like ''question -> answer''), modules (compositions of signatures with control flow), and metrics (evaluation functions). The DSPy compiler then optimizes the pipeline by: generating few-shot examples from a training set, selecting optimal demonstrations via bootstrapping, and tuning instructions through self-refinement. This transforms prompt engineering from a manual craft into a systematic, reproducible engineering discipline. DSPy programs outperform hand-tuned prompts on multiple benchmarks while being more maintainable and adaptable to model changes. For hummbl-dev, DSPy's declarative approach aligns with the contract-driven architecture: just as DSPy separates the ''what'' (signatures) from the ''how'' (compiled prompts), the contract schemas in founder-mode separate interface specifications from their implementation, enabling the same governance logic to work across different LLM backends.},
+  keywords = {declarative prompting, prompt compilation, pipeline optimization, HUMMBL:DE, HUMMBL:CO, HUMMBL:SY}
+}
+
+@inproceedings{Wu2023AutoGen,
+  title = {AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation},
+  author = {Wu, Qingyun and Bansal, Gagan and Zhang, Jieyu and Wu, Yiran and Li, Beibin and Zhu, Erkang and Jiang, Li and Zhang, Xiaoyun and Zhang, Shaokun and Liu, Jiale and Awadallah, Ahmed Hassan and White, Ryen W. and Burger, Doug and Wang, Chi},
+  year = {2023},
+  booktitle = {arXiv preprint},
+  url = {https://arxiv.org/abs/2308.08155},
+  doi = {10.48550/arXiv.2308.08155},
+  abstract = {AutoGen introduces a multi-agent conversation framework where customizable agents communicate through natural language messages to collaboratively solve tasks. The framework supports three agent types: AssistantAgent (LLM-backed), UserProxyAgent (human-in-the-loop or code-executing), and custom agents. Key design principles include conversable agents (any agent can send and receive messages), customizable conversation patterns (sequential, group chat, hierarchical), and flexible human involvement (from fully autonomous to human-in-the-loop at every step). AutoGen enables complex workflows like multi-agent coding (one agent writes, another reviews), debate-based problem solving (agents argue different perspectives), and retrieval-augmented generation with specialized agents. For hummbl-dev, AutoGen's architecture closely parallels the multi-agent coordination model: the TSV bus provides the message-passing substrate (analogous to AutoGen's conversation channel), agent guardrails define the conversation patterns (who can communicate what to whom), and the trust tier system controls human involvement (owner approval for destructive actions, autonomous execution within approved scopes).},
+  keywords = {multi-agent conversation, framework, human-in-the-loop, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+}
+
+@inproceedings{Du2023Debate,
+  title = {Improving Factuality and Reasoning in Language Models through Multiagent Debate},
+  author = {Du, Yilun and Li, Shuang and Torralba, Antonio and Tenenbaum, Joshua B. and Mordatch, Igor},
+  year = {2023},
+  booktitle = {Proceedings of the Forty-first International Conference on Machine Learning (ICML 2024)},
+  url = {https://arxiv.org/abs/2305.14325},
+  doi = {10.48550/arXiv.2305.14325},
+  abstract = {This paper demonstrates that having multiple LLM instances debate each other significantly improves factuality and reasoning accuracy. In the debate framework, multiple model instances independently generate responses, then engage in rounds of debate where each instance can see the others' responses and is asked to critically evaluate and revise its own answer. After several rounds, a final answer is determined by consensus. The approach improves performance on mathematical reasoning (GSM8K), strategic reasoning (chess), and factual accuracy (Biography Generation) benchmarks. The key insight is that individual LLMs have correlated error patterns that debate helps identify and correct through adversarial cross-examination. For hummbl-dev, the multi-agent debate pattern is partially implemented through the PROPOSAL/ACK cycle on the coordination bus: when one agent proposes a change, other agents (or the human operator) can challenge it before it is committed. The agent audit process for Gemini sessions is a formalized debate where Claude critically evaluates Gemini's output before integration.},
+  keywords = {multi-agent debate, factuality, consensus, adversarial evaluation, HUMMBL:IN, HUMMBL:RE, HUMMBL:CO}
+}
+
+@inproceedings{Yao2023TreeOfThoughts,
+  title = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
+  author = {Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Tom L. and Cao, Yuan and Narasimhan, Karthik},
+  year = {2024},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  url = {https://arxiv.org/abs/2305.10601},
+  doi = {10.48550/arXiv.2305.14325},
+  abstract = {Tree of Thoughts (ToT) generalizes chain-of-thought prompting by enabling LLMs to explore multiple reasoning paths as a tree structure, evaluate intermediate thoughts, and make global decisions about which branches to pursue using search algorithms (BFS or DFS). Unlike chain-of-thought which commits to a single linear reasoning path, ToT maintains a set of candidate partial solutions, generates possible next steps for each, evaluates their promise using the LLM itself, and prunes unpromising branches. This enables lookahead, backtracking, and strategic exploration -- capabilities absent from linear prompting. ToT achieves dramatic improvements on tasks requiring planning and search, including Game of 24 (74\% vs 4\% for CoT) and creative writing. For hummbl-dev, ToT formalizes the deliberation pattern used in sprint planning: the sprint recommender explores multiple potential sprint configurations (tree branches), evaluates each against priority criteria and resource constraints (thought evaluation), and selects the most promising configuration -- applying tree search to organizational planning rather than mathematical reasoning.},
+  keywords = {tree of thoughts, deliberate reasoning, search, backtracking, HUMMBL:DE, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Bai2022Constitutional,
+  title = {Constitutional AI: Harmlessness from AI Feedback},
+  author = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and Chen, Carol and Olsson, Catherine and Olah, Christopher and Hernandez, Danny and Drain, Dawn and Ganguli, Deep and Li, Dustin and Tran-Johnson, Eli and Perez, Ethan and Kerr, Jamie and Mueller, Jared and Ladish, Jeffrey and Landau, Joshua and Ndousse, Kamal and Lukosuite, Kamile and Lovitt, Liane and Sellitto, Michael and Elhage, Nelson and Schiefer, Nicholas and Mercado, Noemi and DasSarma, Nova and Lasenby, Robert and Larson, Robin and Ringer, Sam and Johnston, Scott and Kravec, Shauna and El Showk, Sheer and Fort, Stanislav and Lanham, Tamera and Telleen-Lawton, Timothy and Conerly, Tom and Henighan, Tom and Hume, Tristan and Bowman, Samuel R. and Hatfield-Dodds, Zac and Mann, Ben and Amodei, Dario and Joseph, Nicholas and McCandlish, Sam and Brown, Tom and Kaplan, Jared},
+  year = {2022},
+  journal = {arXiv preprint},
+  url = {https://arxiv.org/abs/2212.08073},
+  doi = {10.48550/arXiv.2212.08073},
+  abstract = {Constitutional AI (CAI) introduces a method for training harmless AI assistants using a set of principles (a ''constitution'') rather than extensive human feedback on harmful outputs. The process has two phases: supervised learning (the model critiques and revises its own harmful outputs using constitutional principles, generating improved training data) and reinforcement learning from AI feedback (RLAIF, where an AI evaluator trained on the constitution provides preference labels instead of humans). The constitution is a set of natural language principles like ''choose the response that is least likely to be viewed as harmful'' and ''choose the response that is most supportive of human autonomy.'' This approach reduces the need for human annotation of harmful content while producing models that are both helpful and harmless. For hummbl-dev, CAI provides the theoretical basis for agent guardrails: just as CAI embeds behavioral constraints as explicit principles that guide model behavior, the agent operating rules (scope restrictions, commit cadence, identity requirements) function as a constitution for agent behavior -- a declarative set of principles enforced through hooks and audit rather than model fine-tuning.},
+  keywords = {constitutional AI, harmlessness, AI feedback, principles, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE}
+}

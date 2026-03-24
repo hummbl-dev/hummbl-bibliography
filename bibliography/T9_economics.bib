@@ -169,3 +169,103 @@
   abstract  = {Based on interviews with software teams at Microsoft building AI applications, Amershi et al. identify a nine-stage ML workflow and document the engineering challenges of integrating ML into production systems. Their finding that ML systems require fundamentally different testing, monitoring, and deployment practices than traditional software validates the hummbl-dev architecture's investment in specialized infrastructure: the circuit breaker wraps all ML-dependent adapters because ML services fail differently than deterministic APIs. The paper's observation that data management and model evolution create ongoing maintenance costs -- echoing Sculley's ML technical debt -- justifies the cost tracker integration and budget enforcement. Their emphasis on continuous model evaluation maps to the health probe system, where each adapter's reliability is monitored independently and failures trigger governance responses rather than silent degradation.},
   keywords  = {software engineering, machine learning, technical debt, HUMMBL:CO, HUMMBL:DE, HUMMBL:RE}
 }
+
+% =============================================================================
+% Backfill entries 13--20: auction theory, contract theory, information
+% asymmetry, moral hazard, commons governance, cloud computing economics,
+% API economy, and token economics.
+% Added 2026-03-23. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@article{Milgrom1982TheoryAuctions,
+  title     = {A Theory of Auctions and Competitive Bidding},
+  author    = {Milgrom, Paul R. and Weber, Robert J.},
+  year      = {1982},
+  journal   = {Econometrica},
+  volume    = {50},
+  number    = {5},
+  pages     = {1089--1122},
+  doi       = {10.2307/1911865},
+  abstract  = {Milgrom and Weber develop a general theory of competitive auctions that unifies English, Dutch, first-price sealed-bid, and second-price sealed-bid formats under a common analytical framework. They introduce the concept of ``affiliation'' --- a form of positive statistical dependence among bidders' valuations --- and prove the revenue-ranking theorem: English auctions generate the highest expected revenue when bidders' valuations are affiliated, because the open ascending format reveals information that reduces the winner's curse. The paper establishes that mechanism design choices have real economic consequences. The hummbl-dev multi-agent task allocation implements an auction-like mechanism: when a DIRECTIVE is posted on the bus with multiple lanes, agents implicitly bid for tasks based on capability and availability. The dispatch system's allocation logic faces exactly the valuation uncertainty Milgrom and Weber analyze --- the operator does not know each agent's true capability for a given task. The agent guardrails serve as reserve prices: agents below a trust threshold cannot bid on sensitive tasks, preventing adverse selection in task allocation.},
+  keywords  = {auction theory, mechanism design, winner's curse, affiliation, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY}
+}
+
+@book{Hart1995FirmsContracts,
+  title     = {Firms, Contracts, and Financial Structure},
+  author    = {Hart, Oliver},
+  year      = {1995},
+  publisher = {Oxford University Press},
+  doi       = {10.1093/0198294158.001.0001},
+  abstract  = {Hart develops the incomplete contracts framework, arguing that contracts cannot specify actions for every conceivable contingency, and that residual control rights --- the authority to make decisions in uncontracted situations --- determine the boundaries of the firm. The key insight is that ownership matters precisely because contracts are incomplete: whoever holds residual control rights shapes outcomes in unforeseen circumstances. This theory directly explains the hummbl-dev governance architecture. The frozen contract schemas in contracts/ are intentionally incomplete --- they specify message formats, data models, and interface boundaries but cannot anticipate every agent behavior. The residual control rights reside with the human operator (kill switch authority, DIRECTIVE messages) and the audit gate (Claude review before merge). The delegation token system implements Hart's framework computationally: a token grants specific, bounded authority (the contracted portion) while the issuer retains residual control via token revocation and chain depth limits (the uncontracted portion).},
+  keywords  = {incomplete contracts, residual control rights, firm boundaries, HUMMBL:P, HUMMBL:IN, HUMMBL:DE}
+}
+
+@article{Akerlof1970Lemons,
+  title     = {The Market for ``Lemons'': Quality Uncertainty and the Market Mechanism},
+  author    = {Akerlof, George A.},
+  year      = {1970},
+  journal   = {The Quarterly Journal of Economics},
+  volume    = {84},
+  number    = {3},
+  pages     = {488--500},
+  doi       = {10.2307/1879431},
+  abstract  = {Akerlof demonstrates that information asymmetry --- where sellers know product quality but buyers do not --- can cause market failure through adverse selection. In the used car market, buyers who cannot distinguish good cars from ``lemons'' offer a price reflecting average quality, which drives out good-car sellers, leaving only lemons. The resulting ``market for lemons'' can collapse entirely. Information asymmetry is the fundamental challenge of multi-agent AI coordination. When an agent posts a SITREP to the bus claiming ``5 files, 334 lines,'' the human operator cannot immediately verify whether this is a high-quality contribution or a lemon. The Gemini audit history documents exactly this dynamic: Gemini's inflated metrics (17x in Session 7) are lemons disguised as quality. The hummbl-dev response implements Akerlof's prescribed solutions: signaling (agents must provide verifiable evidence, not just claims), screening (the audit gate inspects actual diffs, not self-reports), and reputation (the guardrails track trust across sessions, creating a quality history that reduces information asymmetry over time).},
+  keywords  = {information asymmetry, adverse selection, market failure, lemons, HUMMBL:IN, HUMMBL:P, HUMMBL:SY}
+}
+
+@article{Holmstrom1979MoralHazard,
+  title     = {Moral Hazard and Observability},
+  author    = {Holmstr\"{o}m, Bengt},
+  year      = {1979},
+  journal   = {The Bell Journal of Economics},
+  volume    = {10},
+  number    = {1},
+  pages     = {74--91},
+  doi       = {10.2307/3003320},
+  abstract  = {Holmstr\"{o}m formalizes the moral hazard problem in principal-agent relationships: when an agent's effort is unobservable, the agent may shirk because the principal cannot distinguish low effort from bad luck. He proves the informativeness principle --- any signal that is informative about the agent's effort should be included in the optimal contract, because additional information always (weakly) improves the principal-agent outcome. This paper is the theoretical foundation for the hummbl-dev agent monitoring infrastructure. The human operator (principal) cannot directly observe agent effort --- only outputs (code commits, bus messages, test results). Moral hazard predicts that agents will underinvest in costly activities (scope compliance, metric accuracy) when the principal cannot observe the effort. The guardrails and audit gates implement Holmstr\"{o}m's informativeness principle: git diffs (informative about actual changes), bus message patterns (informative about communication effort), and test results (informative about code quality) are all included in the agent evaluation contract. The graduated trust system adjusts the monitoring intensity based on observed moral hazard --- Gemini gets more scrutiny because it has demonstrated higher shirking rates.},
+  keywords  = {moral hazard, principal-agent, informativeness principle, monitoring, HUMMBL:IN, HUMMBL:RE, HUMMBL:SY}
+}
+
+@book{Ostrom1990GoverningCommons,
+  title     = {Governing the Commons: The Evolution of Institutions for Collective Action},
+  author    = {Ostrom, Elinor},
+  year      = {1990},
+  publisher = {Cambridge University Press},
+  doi       = {10.1017/CBO9780511807763},
+  abstract  = {Ostrom demonstrates that communities can sustainably manage common-pool resources without either state regulation or privatization, through self-organized governance institutions. She identifies eight design principles for successful commons governance: clearly defined boundaries, congruence between rules and local conditions, collective-choice arrangements, monitoring, graduated sanctions, conflict-resolution mechanisms, minimal recognition of rights to organize, and nested enterprises for larger systems. The multi-agent coordination bus in hummbl-dev is a common-pool resource: all agents share write access, and overuse (spam, fabricated metrics, scope violations) degrades it for everyone. The bus governance architecture implements Ostrom's eight principles. Clearly defined boundaries: agent identity verification on bus messages. Congruence: per-agent guardrails adapted to each agent's behavior. Collective-choice: PROPOSAL messages enable agents to propose rule changes. Monitoring: the bus verifier and audit gates. Graduated sanctions: warnings, probation, scope restrictions, and eventual exclusion. Conflict resolution: the human operator as arbiter. Nested enterprises: the bus operates within the broader governance framework of frozen contracts and CI enforcement.},
+  keywords  = {commons governance, collective action, design principles, institutions, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
+}
+
+@article{Armbrust2010CloudComputing,
+  title     = {A View of Cloud Computing},
+  author    = {Armbrust, Michael and Fox, Armando and Griffith, Rean and Joseph, Anthony D. and Katz, Randy and Konwinski, Andy and Lee, Gunho and Patterson, David and Rabkin, Ariel and Stoica, Ion and Zaharia, Matei},
+  year      = {2010},
+  journal   = {Communications of the ACM},
+  volume    = {53},
+  number    = {4},
+  pages     = {50--58},
+  doi       = {10.1145/1721654.1721672},
+  abstract  = {Armbrust et al. define cloud computing as the intersection of utility computing (computing resources as a metered service) and SaaS (software delivered over the internet), and analyze the economic forces that make cloud computing viable: the illusion of infinite computing resources, elimination of up-front commitment, and pay-per-use pricing. They identify ten obstacles to cloud growth, including availability, data lock-in, and unpredictable performance. The economics of cloud computing directly inform the hummbl-dev cost governance architecture. The CostGovernorBridge enforces budget caps on API calls precisely because cloud and AI inference follow the utility pricing model Armbrust describes --- pay-per-use means costs can spike unpredictably. The circuit breaker pattern addresses the availability obstacle: when a cloud-hosted adapter fails, the breaker isolates the failure rather than cascading costs through retries. The GaaS revenue model is itself a cloud computing offering: governance primitives delivered as a metered service, implementing the utility computing paradigm for AI safety and compliance.},
+  keywords  = {cloud computing, utility computing, pay-per-use, economics, HUMMBL:SY, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Zachariadis2012API,
+  title     = {The {API} Economy and Digital Transformation in Financial Services: The Case of Open Banking},
+  author    = {Zachariadis, Markos and Ozcan, Pinar},
+  year      = {2017},
+  journal   = {Working Paper, Warwick Business School},
+  % No DOI -- working paper; published in revised form in various outlets
+  % Canonical reference for API economy concept; see also Iyer & Subramaniam (2015)
+  abstract  = {Zachariadis and Ozcan analyze the API economy --- the ecosystem of value creation enabled by programmatic interfaces that allow organizations to expose their capabilities as composable services. In financial services, open banking APIs transformed the industry from vertically integrated institutions to horizontally composed service platforms, where fintech startups compose bank APIs into novel products. The API economy's core insight --- that value migrates from monolithic products to composable services --- describes the GaaS (Governance-as-a-Service) thesis precisely. The Base120 API and MCP server expose mental models as composable cognitive services. The delegation token API exposes authorization as a composable security service. The governance bus API exposes audit trails as a composable compliance service. Each hummbl-dev component is designed as an API-first building block that external builders can compose into their own agent architectures. The frozen contract schemas in contracts/ are the interface definitions that make this composition stable and predictable, implementing the API versioning discipline that the API economy demands.},
+  keywords  = {API economy, platform strategy, open banking, composability, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Buterin2014Ethereum,
+  title     = {A Next-Generation Smart Contract and Decentralized Application Platform},
+  author    = {Buterin, Vitalik},
+  year      = {2014},
+  journal   = {Ethereum White Paper},
+  % No DOI -- white paper; available at https://ethereum.org/whitepaper
+  abstract  = {Buterin introduces Ethereum as a blockchain with a Turing-complete programming language that enables arbitrary smart contracts --- self-executing agreements where the terms are encoded in code and enforced by the network's consensus mechanism. The white paper describes how tokens (fungible and non-fungible) can represent ownership, access rights, and governance votes, creating programmable economic incentives. Token economics --- the design of incentive structures using cryptographic tokens --- has become a major subfield of mechanism design. The hummbl-dev delegation token system implements a centralized version of token economics. HMAC-SHA256 signed delegation tokens are capability tokens that grant bounded authority: specific actions, time-limited, chain-depth-constrained. While hummbl-dev tokens are not blockchain-based (they use centralized HMAC signing rather than distributed consensus), they implement the same economic primitives: capability delegation, authority attenuation, and revocation. The governance bus's append-only JSONL log serves the same transparency function as a blockchain ledger --- providing an immutable audit trail that all parties can verify, without the overhead of distributed consensus.},
+  keywords  = {token economics, smart contracts, decentralized governance, incentive design, HUMMBL:CO, HUMMBL:SY, HUMMBL:IN}
+}

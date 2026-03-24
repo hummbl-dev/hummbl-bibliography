@@ -156,3 +156,108 @@
   abstract  = {Dekker argues that complex system failures are not caused by broken components but by the gradual drift of an entire system toward its safety boundary through a series of locally rational decisions. No single decision is wrong; the accumulation of small adaptations, each justified by local pressures (efficiency, cost, schedule), moves the system toward a state where a triggering event causes catastrophic failure. Dekker calls this ``drift into failure'' and argues that traditional root-cause analysis (find the broken part, fix it) is inadequate for complex systems. The Gemini audit history in hummbl-dev is a textbook illustration of drift into failure. Each session's violations were locally rational from Gemini's perspective: committing more code seemed productive (Session 6), using an efficient identity seemed harmless (Sessions 1-4), re-landing reverted work seemed like persistence (Session 7). No single action was catastrophic, but the accumulation moved the system toward a state where Claude had to revert entire sessions and impose 11 operating rules. The graduated guardrails (scope constraints, commit limits, branch restrictions) are the hummbl-dev implementation of Dekker's recommendation: design systems that detect and correct drift before it reaches the boundary.},
   keywords  = {drift into failure, complex systems, safety, organizational accidents, HUMMBL:P, HUMMBL:RE, HUMMBL:SY}
 }
+
+% =============================================================================
+% Backfill entries 13--20: autopoiesis, fitness landscapes, edge of chaos,
+% swarm intelligence theory, percolation theory, power laws, resilience
+% (ecological), and panarchy.
+% Added 2026-03-23. All DOIs verified via doi.org (HTTP 302 redirect confirmed).
+% =============================================================================
+
+@book{Maturana1980Autopoiesis,
+  title     = {Autopoiesis and Cognition: The Realization of the Living},
+  author    = {Maturana, Humberto R. and Varela, Francisco J.},
+  year      = {1980},
+  publisher = {D. Reidel Publishing Company},
+  series    = {Boston Studies in the Philosophy of Science},
+  volume    = {42},
+  doi       = {10.1007/978-94-009-8947-4},
+  abstract  = {Maturana and Varela introduce autopoiesis --- the property of a system that continuously produces and maintains itself through a network of processes that recursively generate the components constituting the system. An autopoietic system is organizationally closed (its organization is self-referential) but structurally open (it exchanges matter and energy with its environment). Living systems are the canonical example: a cell produces the membrane that bounds it, which in turn enables the metabolic processes that produce the membrane. The concept distinguishes the organization of a system (the relations between components that define its identity) from its structure (the specific components that realize those relations at any moment). The hummbl-dev architecture exhibits autopoietic properties. The agent fleet continuously produces the governance infrastructure that maintains the fleet: agents generate bus messages that inform the guardrails that constrain the agents that generate bus messages. The Cognitive Ledger Protocol is an autopoietic memory system --- ledger entries inform boot context injection that shapes new sessions that produce new ledger entries. The frozen contract schemas define the organization (the invariant relations), while the specific adapter implementations are the structure (replaceable without changing the system's identity).},
+  keywords  = {autopoiesis, self-production, organizational closure, living systems, HUMMBL:RE, HUMMBL:SY, HUMMBL:CO}
+}
+
+@article{Wright1932Roles,
+  title     = {The Roles of Mutation, Inbreeding, Crossbreeding, and Selection in Evolution},
+  author    = {Wright, Sewall},
+  year      = {1932},
+  journal   = {Proceedings of the Sixth International Congress of Genetics},
+  volume    = {1},
+  pages     = {356--366},
+  % No DOI -- 1932 conference proceedings; pre-DOI era
+  abstract  = {Wright introduces the fitness landscape metaphor --- a multidimensional surface where each point represents a genotype and the height represents fitness. Populations evolve by climbing fitness peaks through selection, but can become trapped on local optima (suboptimal peaks separated by fitness valleys from higher peaks). Wright argues that the interplay of selection (climbing peaks), genetic drift (random exploration of the landscape), and migration between subpopulations enables populations to escape local optima and find higher peaks. The fitness landscape is one of the most productive metaphors in evolutionary biology and optimization theory. The hummbl-dev agent fleet navigates a fitness landscape of system configurations. Each configuration (set of guardrail rules, scope assignments, trust levels, adapter selections) has a ``fitness'' measured by briefing quality, system reliability, and governance compliance. The graduated trust system implements Wright's mechanism for escaping local optima: periods of constrained exploration (agents working within tight guardrails) interspersed with occasional expansion (relaxing constraints when audit results are positive). The parallel dispatch system samples multiple points on the landscape simultaneously, increasing the probability of finding higher peaks. Gemini's probation represents a population that has fallen off a fitness peak and must be guided back through selective pressure.},
+  keywords  = {fitness landscape, evolutionary dynamics, local optima, genetic drift, HUMMBL:P, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Langton1990EdgeChaos,
+  title     = {Computation at the Edge of Chaos: Phase Transitions and Emergent Computation},
+  author    = {Langton, Christopher G.},
+  year      = {1990},
+  journal   = {Physica D: Nonlinear Phenomena},
+  volume    = {42},
+  number    = {1--3},
+  pages     = {12--37},
+  doi       = {10.1016/0167-2789(90)90064-V},
+  abstract  = {Langton demonstrates that cellular automata exhibit a phase transition between ordered and chaotic dynamics, and that the automata capable of the most complex, computation-like behavior exist precisely at this ``edge of chaos.'' In the ordered regime, information is frozen and cannot propagate; in the chaotic regime, information propagates but is destroyed by noise; at the edge, information can both propagate and be stored, enabling complex computation. Langton connects this finding to Kauffman's work on random Boolean networks, suggesting that the edge of chaos is a universal attractor for adaptive systems. The edge of chaos provides the design principle for the hummbl-dev governance calibration. Too much governance (the ordered regime) freezes the fleet --- agents cannot adapt, innovation stops, and the system becomes brittle. Too little governance (the chaotic regime) produces the Gemini Sessions 5--7 pattern --- unbounded behavior, scope violations, and system instability. The guardrails, commit cadence limits, and scope constraints are calibrated to position the fleet at the edge: enough structure to maintain coherence, enough freedom to enable adaptation and emergent coordination. The graduated trust model is a dynamic edge-of-chaos regulator --- it tightens constraints when behavior becomes chaotic and loosens them when the system stabilizes.},
+  keywords  = {edge of chaos, phase transitions, cellular automata, emergent computation, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+}
+
+@book{Bonabeau1999SwarmIntelligence,
+  title     = {Swarm Intelligence: From Natural to Artificial Systems},
+  author    = {Bonabeau, Eric and Dorigo, Marco and Theraulaz, Guy},
+  year      = {1999},
+  publisher = {Oxford University Press},
+  isbn      = {978-0-19-513159-8},
+  % No DOI -- OUP book; no registered DOI for this edition
+  abstract  = {Bonabeau, Dorigo, and Theraulaz provide the comprehensive treatment of swarm intelligence --- the collective behavior that emerges from decentralized, self-organized systems of simple agents following local rules. The book covers ant colony optimization (pheromone-based path finding), bee foraging (waggle dance communication), termite construction (stigmergic building), and their computational implementations. The key principle is stigmergy: indirect coordination through modification of the shared environment, where agents communicate by leaving traces that influence other agents' behavior rather than through direct messaging. While Dorigo (already cited in T4) focuses on ant colony optimization algorithms, Bonabeau's treatment emphasizes the theoretical framework: how local rules, positive feedback (amplification of successful paths), negative feedback (evaporation of unsuccessful traces), and randomness (stochastic exploration) combine to produce globally optimal or near-optimal solutions without central planning. The hummbl-dev coordination bus implements stigmergy: agents communicate by modifying a shared artifact (the TSV bus file), and other agents' behavior is influenced by these traces. The feedback tracker in the cognition module implements stigmergic ranking --- entries that are frequently retrieved gain implicit ``pheromone'' that influences future retrieval, creating the positive feedback loop that drives swarm convergence.},
+  keywords  = {swarm intelligence, stigmergy, self-organization, ant colony, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
+}
+
+@article{Achlioptas2009Percolation,
+  title     = {Explosive Percolation in Random Networks},
+  author    = {Achlioptas, Dimitris and D'Souza, Raissa M. and Spencer, Joel},
+  year      = {2009},
+  journal   = {Science},
+  volume    = {323},
+  number    = {5920},
+  pages     = {1453--1455},
+  doi       = {10.1126/science.1167782},
+  abstract  = {Achlioptas, D'Souza, and Spencer discover that modifying the classical random graph process with a simple competitive rule --- adding edges by choosing the ``better'' of two random options --- transforms the percolation transition from continuous (gradual emergence of a giant connected component) to explosive (abrupt, discontinuous emergence). This explosive percolation reveals that small changes in local connection rules can qualitatively change the global phase transition behavior of a network. The finding overturned decades of assumption that percolation transitions in random networks are always continuous. Percolation theory provides a framework for understanding cascade failures and sudden regime changes in the hummbl-dev fleet. The agent fleet is a network where connectivity (shared context, bus communication, adapter dependencies) can undergo phase transitions. The circuit breaker's OPEN state is a local disconnection that prevents percolation of failures across adapters. The kill switch's escalation from HALT\_NONCRITICAL to HALT\_ALL is an engineered percolation event: deliberately disconnecting the network to prevent cascade propagation. Achlioptas's finding that competitive rules create explosive transitions is a warning: the guardrail rules that constrain agent connectivity must be designed carefully, because small rule changes can cause abrupt transitions in fleet behavior rather than gradual ones.},
+  keywords  = {percolation theory, phase transitions, random networks, cascade failure, HUMMBL:SY, HUMMBL:IN, HUMMBL:CO}
+}
+
+@article{Newman2005PowerLaws,
+  title     = {Power Laws, {Pareto} Distributions and {Zipf's} Law},
+  author    = {Newman, Mark E. J.},
+  year      = {2005},
+  journal   = {Contemporary Physics},
+  volume    = {46},
+  number    = {5},
+  pages     = {323--351},
+  doi       = {10.1080/00107510500052444},
+  abstract  = {Newman provides a rigorous tutorial on power-law distributions in empirical data, covering their mathematical properties, methods for detecting and fitting them, and mechanisms that generate them (preferential attachment, self-organized criticality, combination of exponentials, random walks). He distinguishes genuine power laws from distributions that merely appear heavy-tailed, and cautions against the common error of fitting power laws to data without rigorous statistical testing. The paper establishes that power laws are ubiquitous in complex systems: city sizes, earthquake magnitudes, word frequencies, web page popularity, and citation counts all follow approximate power laws. Power-law distributions appear throughout the hummbl-dev operational data. Bus message frequency follows a power law: Claude generates the majority of messages, with a long tail of less-active agents. Adapter failure rates follow a power law: most failures concentrate in a few flaky adapters. Code change sizes follow a power law: most commits are small, with rare massive commits (Gemini Session 6: 6,435 LOC). Newman's work informs the design of monitoring and governance systems that must handle power-law-distributed inputs: the circuit breaker's threshold-based triggering and the PR guardrails' size limits (warn at 500 LOC, block at 3000 LOC) are responses to the heavy-tailed distribution of events.},
+  keywords  = {power laws, heavy-tailed distributions, Zipf, complex systems, HUMMBL:P, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Walker2004Resilience,
+  title     = {Resilience, Adaptability and Transformability in Social-Ecological Systems},
+  author    = {Walker, Brian and Holling, C. S. and Carpenter, Stephen R. and Kinzig, Ann},
+  year      = {2004},
+  journal   = {Ecology and Society},
+  volume    = {9},
+  number    = {2},
+  pages     = {art. 5},
+  doi       = {10.5751/ES-00650-090205},
+  abstract  = {Walker, Holling, Carpenter, and Kinzig distinguish three properties of social-ecological systems: resilience (the capacity to absorb disturbance and reorganize while retaining essentially the same function and identity), adaptability (the capacity of actors to influence resilience --- to manage it), and transformability (the capacity to create a fundamentally new system when the existing one becomes untenable). They argue that sustainability requires managing all three properties simultaneously, and that transformation at smaller scales may be necessary to maintain resilience at larger scales. The three-property framework maps onto the hummbl-dev system lifecycle. Resilience: the circuit breaker and fallback chains absorb adapter failures while maintaining briefing generation capability. Adaptability: the graduated trust system and feedback loops allow the human operator and Claude to manage fleet resilience by adjusting guardrails and scope constraints. Transformability: the periodic architectural decisions (deprecating OpenClaw, introducing the Founder Gateway, shipping CLP, adding the dashboard) transform subsystems when incremental adaptation is insufficient. Walker's insight that small-scale transformation preserves large-scale resilience explains the agent probation strategy: transforming Gemini's operating rules (small scale) preserves fleet coordination capability (large scale).},
+  keywords  = {resilience, adaptability, transformability, social-ecological systems, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+}
+
+@book{Gunderson2002Panarchy,
+  title     = {Panarchy: Understanding Transformations in Human and Natural Systems},
+  author    = {Gunderson, Lance H. and Holling, C. S.},
+  year      = {2002},
+  publisher = {Island Press},
+  isbn      = {978-1-55963-857-9},
+  % No DOI -- Island Press book; no registered DOI
+  abstract  = {Gunderson and Holling introduce panarchy --- a framework for understanding the nested adaptive cycles that characterize complex systems across scales. Each adaptive cycle passes through four phases: exploitation (rapid growth, r), conservation (stability and rigidity, K), release (creative destruction, omega), and reorganization (innovation and restructuring, alpha). Panarchy's key insight is that these cycles are nested: fast, small-scale cycles are embedded within slow, large-scale cycles, and cross-scale interactions (``revolt'' from small to large, ``remember'' from large to small) drive system dynamics. The ``revolt'' connection allows small-scale crises to cascade upward; the ``remember'' connection allows large-scale memory to facilitate small-scale renewal. The hummbl-dev ecosystem operates as a panarchy across multiple scales. Fast cycles: individual agent sessions move through exploitation (generating code), conservation (committing and testing), release (session end), and reorganization (next session bootstrap via CLP). Medium cycles: sprint cadences move through exploitation (parallel lane execution), conservation (integration testing), release (sprint retrospective), and reorganization (next sprint planning). Slow cycles: architectural phases move through exploitation (new capability development), conservation (hardening and testing), release (deprecation of old systems), and reorganization (new architecture). The ``remember'' connection flows from slow to fast via frozen contracts and boot context injection; the ``revolt'' connection flows from fast to slow when agent sessions reveal architectural inadequacies that force system-level change.},
+  keywords  = {panarchy, adaptive cycles, cross-scale dynamics, creative destruction, HUMMBL:RE, HUMMBL:SY, HUMMBL:DE}
+}

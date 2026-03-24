@@ -108,3 +108,124 @@
   abstract = {This concise guide distinguishes observability from traditional monitoring, arguing that observable systems allow operators to ask arbitrary questions about system behavior without deploying new instrumentation. Sridharan introduces the three pillars of observability -- logs, metrics, and traces -- and argues that structured events (rich, contextualized log entries) are the most versatile primitive. The book covers practical topics including choosing between metrics and logs, implementing distributed tracing, and designing systems that are observable by default. The health probe framework, structured JSON event emission, and 12-probe health system in the hummbl-dev ecosystem implement observability as a first-class concern, with each adapter and service emitting structured status that can be queried without additional instrumentation.},
   keywords = {observability, monitoring, distributed systems, HUMMBL:SY, HUMMBL:DE}
 }
+
+@article{Fowler2005EventSourcing,
+  title = {Event Sourcing},
+  author = {Fowler, Martin},
+  year = {2005},
+  journal = {martinfowler.com},
+  % No DOI -- this is a practitioner essay on martinfowler.com, not a journal article
+  abstract = {This foundational essay introduces Event Sourcing as an architectural pattern where application state is determined by a sequence of events rather than by storing the current state directly. Instead of mutating a database record, every change is captured as an immutable event appended to an event log. The current state can be reconstructed at any point by replaying events from the beginning. Fowler identifies key benefits: complete audit trail, temporal queries (''what was the state at time T?''), event replay for debugging, and the ability to derive new projections from historical events. The pattern pairs naturally with CQRS (Command Query Responsibility Segregation) where writes append events and reads query materialized views. The founder-mode event store (SQLite-backed EventStore) and the append-only governance bus (JSONL) are direct implementations of event sourcing: every state change is an immutable event, the current state is derivable from the event sequence, and the full history is preserved for audit and replay.},
+  keywords = {event sourcing, immutable events, audit trail, HUMMBL:SY, HUMMBL:RE}
+}
+
+@book{Newman2021Microservices,
+  title = {Building Microservices: Designing Fine-Grained Systems},
+  author = {Newman, Sam},
+  year = {2021},
+  edition = {2nd},
+  publisher = {O'Reilly Media},
+  isbn = {978-1492034025},
+  abstract = {This comprehensive guide covers the design, deployment, and evolution of microservice architectures. Newman defines microservices as independently deployable services modeled around business domains, and systematically addresses decomposition strategies, inter-service communication (synchronous vs. asynchronous, request-response vs. event-driven), data ownership, testing strategies, deployment patterns, and organizational alignment. The second edition adds coverage of containers, Kubernetes, service meshes, and serverless. Key principles include: independent deployability as the golden rule, smart endpoints and dumb pipes, decentralized data management, and evolutionary architecture. The founder-mode architecture embodies microservice principles: each integration adapter (GitHub, Linear, Calendar, Cost, Security, Ollama) is an independently testable module with its own data concerns, communicating through the briefing service's composition layer rather than direct inter-adapter calls. The circuit breaker wrapping each adapter implements Newman's stability patterns at the service boundary.},
+  keywords = {microservices, service decomposition, independent deployability, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Basiri2016ChaosEngineering,
+  title = {Chaos Engineering},
+  author = {Basiri, Ali and Behnam, Niosha and de Rooij, Ruud and Hochstein, Lorin and Kosewski, Luke and Reynolds, Justin and Rosenthal, Casey},
+  year = {2016},
+  journal = {IEEE Software},
+  volume = {33},
+  number = {3},
+  pages = {35--41},
+  doi = {10.1109/MS.2016.64},
+  abstract = {This paper introduces chaos engineering as a discipline for building confidence in distributed systems by proactively injecting failures in production. The authors, from Netflix's Chaos Engineering team, describe the principles: build hypotheses about steady-state behavior, vary real-world events (server failures, network partitions, resource exhaustion), run experiments in production, and automate experiments to run continuously. The paper presents the Chaos Monkey (random instance termination), Chaos Kong (simulated region outages), and the Failure Injection Testing framework. The core insight is that complex distributed systems will inevitably experience failures, and the only way to build confidence is to rehearse those failures under controlled conditions. The chaos test suite in founder-mode's test infrastructure (2 chaos test files) implements this principle: circuit breaker fault injection, kill switch mode transitions under load, and adapter failure cascading are all tested as deliberate failure scenarios rather than hoping they work when real failures occur.},
+  keywords = {chaos engineering, fault injection, resilience testing, HUMMBL:IN, HUMMBL:SY}
+}
+
+@book{Beyer2016SRE,
+  title = {Site Reliability Engineering: How Google Runs Production Systems},
+  author = {Beyer, Betsy and Jones, Chris and Petoff, Jennifer and Murphy, Niall Richard},
+  year = {2016},
+  publisher = {O'Reilly Media},
+  isbn = {978-1491929124},
+  abstract = {This book codifies Google's approach to running large-scale production systems, defining Site Reliability Engineering (SRE) as a discipline that applies software engineering principles to operations problems. Key concepts include Service Level Objectives (SLOs) and error budgets (a quantitative framework for balancing reliability and feature velocity), toil reduction (automating operational work), monitoring and alerting design, incident response, and postmortem culture. The book introduces the principle that 100\% reliability is the wrong target -- the error budget framework explicitly allocates a failure budget that teams can ''spend'' on deploying risky changes. The health probe system in founder-mode (12 probes across 7 adapters) implements SRE monitoring principles: each probe measures a specific dimension of system health, the kill switch provides graduated incident response (matching SRE's severity levels), and the briefing's health section surfaces reliability status as a first-class concern for the founder's daily decision-making.},
+  keywords = {site reliability engineering, SLOs, error budgets, toil, HUMMBL:SY, HUMMBL:DE}
+}
+
+@book{Morris2016InfrastructureAsCode,
+  title = {Infrastructure as Code: Managing Servers in the Cloud},
+  author = {Morris, Kief},
+  year = {2016},
+  publisher = {O'Reilly Media},
+  isbn = {978-1491924358},
+  abstract = {This book establishes the principles and practices of Infrastructure as Code (IaC): defining infrastructure configuration through machine-readable files rather than manual processes, stored in version control, and applied through automated provisioning tools. Morris identifies four key principles: systems can be easily reproduced, systems are disposable (cattle not pets), systems are consistent (no configuration drift), and processes are repeatable. The book covers patterns for managing infrastructure definitions, testing infrastructure changes, and evolving infrastructure over time. The founder-mode project practices IaC at the application layer: CI workflows are defined in YAML (13 workflows in .github/workflows/), agent configurations are code-managed (.claude/, .kimi/), the coordination bus schema is version-controlled, and launchd service definitions for briefing delivery are stored as declarative plist files. The contract schemas in contracts/ extend IaC principles to API governance -- interface definitions are versioned, validated, and frozen at tagged baselines.},
+  keywords = {infrastructure as code, version control, reproducibility, HUMMBL:SY, HUMMBL:RE}
+}
+
+@article{Helland2012Idempotency,
+  title = {Idempotence Is Not a Medical Condition},
+  author = {Helland, Pat},
+  year = {2012},
+  journal = {Communications of the ACM},
+  volume = {55},
+  number = {5},
+  pages = {56--65},
+  doi = {10.1145/2160718.2160734},
+  abstract = {This paper explains idempotency as a fundamental design requirement for reliable distributed systems. An operation is idempotent if executing it multiple times produces the same result as executing it once. Helland demonstrates why idempotency matters in systems where messages can be duplicated, retried, or delivered out of order -- which is the normal case in any distributed system. The paper covers natural idempotency (operations that are inherently safe to repeat, like setting a value), designed idempotency (using unique request identifiers to detect and suppress duplicates), and the relationship between idempotency and exactly-once semantics. The append-only patterns in founder-mode -- the coordination bus, the governance audit log, and the Cognitive Ledger -- achieve natural idempotency through content-addressed hashing: each entry includes a hash of its content, so duplicate writes can be detected and deduplicated without external coordination. The bus writer's flock-based mutual exclusion prevents concurrent append conflicts.},
+  keywords = {idempotency, distributed systems, exactly-once, HUMMBL:SY, HUMMBL:RE}
+}
+
+@inproceedings{Garcia1987Sagas,
+  title = {Sagas},
+  author = {Garcia-Molina, Hector and Salem, Kenneth},
+  year = {1987},
+  booktitle = {Proceedings of the 1987 ACM SIGMOD International Conference on Management of Data},
+  pages = {249--259},
+  doi = {10.1145/38713.38742},
+  abstract = {This foundational paper introduces the saga pattern as an alternative to long-lived transactions in database systems. A saga is a sequence of local transactions where each transaction updates the database and publishes a message or event. If one of the transactions fails, the saga executes a series of compensating transactions that undo the changes made by preceding transactions. The paper presents two coordination approaches: choreography (each transaction publishes events that trigger the next step) and orchestration (a central coordinator directs the saga's execution). Sagas provide eventual consistency without requiring distributed locks, making them essential for microservice architectures where each service owns its own database. The multi-agent task execution in founder-mode follows the saga pattern: when a coordinated operation spans multiple agents (e.g., build-then-verify-then-ship), each step is independently committed, and failure at any step triggers compensating actions (reverting commits, posting BLOCKED messages) rather than attempting a distributed rollback.},
+  keywords = {saga pattern, compensating transactions, eventual consistency, HUMMBL:SY, HUMMBL:DE}
+}
+
+@article{Young2010CQRS,
+  title = {CQRS Documents},
+  author = {Young, Greg},
+  year = {2010},
+  journal = {cqrs.files.wordpress.com},
+  % No DOI -- this is a practitioner whitepaper, widely cited but not formally published
+  abstract = {This seminal document defines Command Query Responsibility Segregation (CQRS), a pattern that separates the write model (commands that change state) from the read model (queries that return data). Young argues that in complex domains, the data model optimized for writes (normalized, consistency-focused) differs fundamentally from the data model optimized for reads (denormalized, performance-focused), and forcing both through a single model creates unnecessary complexity. CQRS pairs naturally with Event Sourcing: commands produce events that are appended to the event store (write side), and read models are projections built by consuming these events (read side). The founder-mode architecture implements CQRS implicitly: the coordination bus and governance log are write-optimized append-only stores (command side), while the health probes, briefing generation, and CLP retriever are read-optimized projections that consume these event streams to produce materialized views for the founder's consumption.},
+  keywords = {CQRS, command query separation, read write models, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Mahdavi2013FeatureToggles,
+  title = {Feature Toggles (aka Feature Flags)},
+  author = {Fowler, Martin and Mahdavi-Hezavehi, Sara},
+  year = {2013},
+  journal = {martinfowler.com},
+  % No formal DOI -- practitioner reference widely cited in software engineering literature
+  abstract = {This reference document catalogs the taxonomy and best practices for feature toggles (feature flags): mechanisms that allow modifying system behavior without deploying new code. The document classifies toggles into four categories by longevity and dynamism: release toggles (trunk-based development, short-lived), experiment toggles (A/B testing, medium-lived), ops toggles (circuit breakers, kill switches, long-lived), and permission toggles (feature gating by user segment, long-lived). Key practices include keeping toggle scope minimal, planning toggle removal, and testing all toggle combinations. The founder-mode codebase uses feature flags extensively: the IDP delegation token system is feature-flagged via ENABLE\_IDP, the Ollama adapter is disabled via configuration on the MacBook but enabled on nodezero, and the kill switch itself functions as an ops toggle with four graduated modes (DISENGAGED through EMERGENCY). The agent guardrails system implements permission toggles via GEMINI\_SESSION and trust tier checks.},
+  keywords = {feature toggles, feature flags, trunk-based development, HUMMBL:CO, HUMMBL:SY}
+}
+
+@inproceedings{Schermann2018Canary,
+  title = {Continuous Experimentation: Challenges, Implementation Techniques, and Current Research},
+  author = {Schermann, Gerald and Cito, J{\"u}rgen and Leitner, Philipp and Zdun, Uwe and Gall, Harald C.},
+  year = {2018},
+  booktitle = {IEEE Software},
+  volume = {35},
+  number = {2},
+  pages = {26--31},
+  doi = {10.1109/MS.2017.3571578},
+  abstract = {This paper surveys continuous experimentation techniques including canary deployments, blue-green deployments, dark launches, and A/B testing in production software systems. Canary deployments route a small percentage of traffic to the new version while monitoring key metrics; if metrics degrade, traffic is automatically shifted back to the stable version. Blue-green deployments maintain two identical production environments, switching traffic atomically between them. The paper identifies challenges including metric selection, statistical significance in low-traffic scenarios, and the interaction between multiple simultaneous experiments. The canary pattern is implemented in founder-mode's test and deployment strategy: new agent behaviors are tested in constrained scopes (feat/* branches, limited bus access) before being promoted to full access, and the circuit breaker's HALF\_OPEN state functions as an automated canary -- allowing limited traffic to a recovered service before fully restoring it.},
+  keywords = {canary deployment, blue-green deployment, continuous experimentation, HUMMBL:IN, HUMMBL:RE}
+}
+
+@book{Rosenthal2020ChaosEngineeringBook,
+  title = {Chaos Engineering: System Resiliency in Practice},
+  author = {Rosenthal, Casey and Jones, Nora},
+  year = {2020},
+  publisher = {O'Reilly Media},
+  isbn = {978-1492043867},
+  abstract = {This book expands chaos engineering from Netflix's original practice into a comprehensive discipline applicable to any complex system. The authors define chaos engineering as the facilitation of experiments to uncover systemic weaknesses, distinguishing it from simple fault injection by emphasizing hypothesis-driven experimentation against steady-state metrics. Key principles include: define steady state as measurable output, hypothesize that steady state will continue in both control and experimental groups, introduce realistic variables (server failures, network partitions, clock skew, resource exhaustion), and try to disprove the hypothesis. The book covers organizational adoption, including building the case for chaos engineering and integrating it into CI/CD pipelines through automated chaos experiments. The founder-mode chaos test suite and circuit breaker testing embody these principles: each test defines a steady-state expectation (service responds correctly), introduces a failure variable (adapter timeout, authentication failure, rate limiting), and verifies that the system degrades gracefully through circuit breaker state transitions and kill switch escalation.},
+  keywords = {chaos engineering, resilience, steady state, hypothesis testing, HUMMBL:IN, HUMMBL:SY}
+}
