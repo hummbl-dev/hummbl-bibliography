@@ -1,0 +1,110 @@
+% T5_engineering.bib — Software Engineering Patterns for Agent Systems
+% Added 2026-03-24 to ground hummbl-dev's implementation patterns in literature
+%
+% These entries cite the academic origins of patterns that hummbl-dev has
+% already built: circuit breakers, stigmergy, BDI agents, Design by Contract,
+% append-only logs, corrigibility, trust models, and observability.
+
+@book{Nygard2018ReleaseIt,
+  title = {Release It! Design and Deploy Production-Ready Software},
+  author = {Nygard, Michael T.},
+  year = {2018},
+  edition = {2nd},
+  publisher = {Pragmatic Bookshelf},
+  isbn = {978-1-68050-239-8},
+  abstract = {This practitioner guide introduces stability patterns for production software, including the circuit breaker, bulkhead, steady state, fail fast, and timeout patterns. The circuit breaker pattern -- a three-state machine (CLOSED, OPEN, HALF\_OPEN) that wraps calls to external services and fast-fails when failures exceed a threshold -- has become ubiquitous in distributed systems. The second edition extends these patterns with deployment strategies, chaos engineering, and observability. The book's core argument is that software must be designed for the real-world conditions of production, not just the happy path of development. The stability patterns have been adopted across the industry, from Netflix's Hystrix to resilience4j, and are implemented directly in hummbl-governance's CircuitBreaker module.},
+  keywords = {circuit breaker, stability patterns, resilience, HUMMBL:SY, HUMMBL:CO}
+}
+
+@article{Grasse1959Stigmergy,
+  title = {La reconstruction du nid et les coordinations interindividuelles chez Bellicositermes natalensis et Cubitermes sp. La th\'{e}orie de la stigmergie: Essai d'interpr\'{e}tation du comportement des termites constructeurs},
+  author = {Grass\'{e}, Pierre-Paul},
+  year = {1959},
+  journal = {Insectes Sociaux},
+  volume = {6},
+  number = {1},
+  pages = {41--80},
+  abstract = {This foundational paper introduces the concept of stigmergy -- indirect coordination between agents through modifications to a shared environment. Observing termite nest construction, Grass\'{e} demonstrated that individual termites do not communicate directly but instead respond to the state of the environment (e.g., pheromone-laden mud deposits) to decide their next construction action. The key insight is that the environment itself becomes the communication medium: an agent's action modifies the environment, and subsequent agents respond to that modification. This mechanism enables complex collective behavior without centralized control or direct agent-to-agent messaging. The concept has been applied extensively in computer science, from ant colony optimization to multi-agent coordination systems. The founder-mode coordination bus -- an append-only TSV file where agents write messages and other agents read and respond to them -- is a direct implementation of computational stigmergy.},
+  keywords = {stigmergy, indirect coordination, collective behavior, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@article{Theraulaz1999Stigmergy,
+  title = {A Brief History of Stigmergy},
+  author = {Theraulaz, Guy and Bonabeau, Eric},
+  year = {1999},
+  journal = {Artificial Life},
+  volume = {5},
+  number = {2},
+  pages = {97--116},
+  doi = {10.1162/106454699568700},
+  abstract = {This paper traces the concept of stigmergy from Grass\'{e}'s original biological observations through its adoption in artificial intelligence and multi-agent systems. The authors distinguish between quantitative stigmergy (where the intensity of the environmental signal matters, as in pheromone trails) and qualitative stigmergy (where the type of modification triggers specific responses). They demonstrate how stigmergic mechanisms can generate complex, adaptive collective behavior from simple individual rules without any central controller or direct communication between agents. The paper provides a bridge between biological swarm intelligence and computational multi-agent coordination, making it directly relevant to systems that use shared state (message buses, blackboard architectures, or file-based coordination) as the primary coordination mechanism.},
+  keywords = {stigmergy, swarm intelligence, coordination, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@inproceedings{Rao1995BDI,
+  title = {BDI Agents: From Theory to Practice},
+  author = {Rao, Anand S. and Georgeff, Michael P.},
+  year = {1995},
+  booktitle = {Proceedings of the First International Conference on Multiagent Systems (ICMAS-95)},
+  pages = {312--319},
+  publisher = {AAAI Press},
+  abstract = {This paper bridges the gap between the formal BDI (Beliefs-Desires-Intentions) logic and practical agent implementations. Rao and Georgeff present a computational model where agents maintain beliefs about the world, desires representing goals, and intentions as committed plans of action. The key contribution is showing how the abstract BDI logic can be translated into an implementable architecture with concrete data structures and execution cycles. The paper introduces the concept of plan libraries, event-driven plan selection, and the interplay between goal deliberation and means-ends reasoning. The BDI framework has become the dominant paradigm for designing rational agents, influencing systems from Jason/AgentSpeak to JACK and Jadex. Multi-agent systems built at hummbl-dev -- with agents that maintain context (beliefs), pursue tasks (desires), and commit to plans (intentions) -- follow this architectural pattern.},
+  keywords = {BDI, agent architecture, beliefs desires intentions, HUMMBL:CO, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Meyer1992DesignByContract,
+  title = {Applying ``Design by Contract''},
+  author = {Meyer, Bertrand},
+  year = {1992},
+  journal = {Computer},
+  volume = {25},
+  number = {10},
+  pages = {40--51},
+  doi = {10.1109/2.161279},
+  abstract = {This paper introduces Design by Contract (DbC) as a systematic approach to software reliability based on the metaphor of a business contract between client and supplier. Each software component specifies preconditions (what the caller must guarantee), postconditions (what the component guarantees in return), and class invariants (conditions that must hold at all times). Meyer demonstrates how DbC enables both runtime checking and formal verification of software components. The approach has profoundly influenced software engineering, particularly in systems where correctness guarantees are critical. The Assured Agentic Architecture (AAA) at hummbl-dev operationalizes DbC through contract schemas, deterministic validation with hash-stable outputs, and golden conformance fixtures that verify preconditions and postconditions at every boundary.},
+  keywords = {design by contract, preconditions, postconditions, software reliability, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Kreps2013Log,
+  title = {The Log: What every software engineer should know about real-time data's unifying abstraction},
+  author = {Kreps, Jay},
+  year = {2013},
+  journal = {LinkedIn Engineering Blog},
+  abstract = {This influential essay argues that the append-only log is the most fundamental data structure in distributed systems, unifying databases, message queues, event stores, and replication protocols under a single abstraction. Kreps demonstrates how logs enable total ordering of events, exactly-once semantics, and system-of-record guarantees when used as the canonical data store. The essay draws on experience building Apache Kafka at LinkedIn to show how log-centric architecture simplifies system design by making all state changes explicit, ordered, and replayable. The append-only governance bus (TSV), append-only audit log (JSONL), and the Cognitive Ledger Protocol (append-only JSONL with content hashing) in the hummbl-dev ecosystem are all implementations of this unifying log abstraction.},
+  keywords = {append-only log, event sourcing, distributed systems, HUMMBL:SY, HUMMBL:CO}
+}
+
+@inproceedings{HadfieldMenell2017OffSwitch,
+  title = {The Off-Switch Game},
+  author = {Hadfield-Menell, Dylan and Dragan, Anca D. and Abbeel, Pieter and Russell, Stuart J.},
+  year = {2017},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {31},
+  number = {1},
+  doi = {10.1609/aaai.v31i1.11026},
+  abstract = {This paper formalizes the problem of building AI agents that allow themselves to be shut down -- a property called corrigibility. Using a game-theoretic framework, the authors analyze conditions under which a rational agent would permit a human to press its off-switch. They prove that an agent that is uncertain about its own utility function (following Russell's approach in Human Compatible) will generally defer to the human's shutdown decision, because the human's action provides information about the true utility. However, an agent that is certain of its utility function may rationally resist shutdown. The paper provides the theoretical foundation for designing graduated kill switches: systems where the agent's compliance with shutdown commands is a designed property, not an emergent one. The four-mode kill switch in hummbl-governance (DISENGAGED, HALT\_NONCRITICAL, HALT\_ALL, EMERGENCY) implements graduated corrigibility as a first-class governance primitive.},
+  keywords = {corrigibility, off-switch, safe interruptibility, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Sabater2005Trust,
+  title = {Review on Computational Trust and Reputation Models},
+  author = {Sabater, Jordi and Sierra, Carles},
+  year = {2005},
+  journal = {Artificial Intelligence Review},
+  volume = {24},
+  number = {1},
+  pages = {33--60},
+  % No valid DOI found at doi.org -- Springer link exists but DOI does not resolve
+  abstract = {This comprehensive survey reviews computational models for trust and reputation in multi-agent systems. The authors classify approaches along several dimensions: whether trust is computed from direct experience or third-party reports, whether it is context-dependent or global, and whether it accounts for the dynamics of trust over time. Key models reviewed include SPORAS (online reputation with reliability measures), ReGreT (social network-based trust), and FIRE (integrating interaction trust, role-based trust, witness reputation, and certified reputation). The survey identifies open challenges including bootstrapping trust for new agents, detecting strategic manipulation of reputation, and combining multiple trust sources. The agent trust tier system in hummbl-governance -- with levels from ``owner'' to ``unknown'' and status tracking from ``active'' to ``suspended'' -- implements a simplified version of multi-source trust management.},
+  keywords = {trust, reputation, multi-agent systems, HUMMBL:SY, HUMMBL:P, HUMMBL:IN}
+}
+
+@book{Sridharan2018Observability,
+  title = {Distributed Systems Observability},
+  author = {Sridharan, Cindy},
+  year = {2018},
+  publisher = {O'Reilly Media},
+  isbn = {978-1-4920-3340-6},
+  abstract = {This concise guide distinguishes observability from traditional monitoring, arguing that observable systems allow operators to ask arbitrary questions about system behavior without deploying new instrumentation. Sridharan introduces the three pillars of observability -- logs, metrics, and traces -- and argues that structured events (rich, contextualized log entries) are the most versatile primitive. The book covers practical topics including choosing between metrics and logs, implementing distributed tracing, and designing systems that are observable by default. The health probe framework, structured JSON event emission, and 12-probe health system in the hummbl-dev ecosystem implement observability as a first-class concern, with each adapter and service emitting structured status that can be queried without additional instrumentation.},
+  keywords = {observability, monitoring, distributed systems, HUMMBL:SY, HUMMBL:DE}
+}

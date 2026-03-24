@@ -1,0 +1,116 @@
+% T6_governance.bib — AI Governance, Regulation, and Assurance
+% Added 2026-03-24 to ground the GaaS (Governance-as-a-Service) thesis
+%
+% These entries cover the regulatory, assurance, and trust frameworks
+% that justify hummbl-governance as a product. They connect the engineering
+% patterns in T5 to the compliance and market requirements that GaaS serves.
+
+@article{Rittel1973WickedProblems,
+  title = {Dilemmas in a General Theory of Planning},
+  author = {Rittel, Horst W. J. and Webber, Melvin M.},
+  year = {1973},
+  journal = {Policy Sciences},
+  volume = {4},
+  number = {2},
+  pages = {155--169},
+  doi = {10.1007/BF01405730},
+  abstract = {This paper introduces the concept of ``wicked problems'' -- a class of social and policy problems that resist definitive formulation, have no stopping rule, and where every attempt at a solution changes the problem itself. Rittel and Webber contrast wicked problems with ``tame'' problems (like chess or mathematics) that have clear formulations and verifiable solutions. They identify ten properties of wicked problems, including: there is no definitive formulation, solutions are not true-or-false but good-or-bad, there is no immediate or ultimate test, every solution is a ``one-shot operation'' with consequences that cannot be undone, and every wicked problem is essentially unique. The paper has become foundational in complexity science, urban planning, software architecture, and systems thinking. The HUMMBL Unified Tier Framework's 5-tier wickedness scoring is a direct operationalization of Rittel and Webber's classification.},
+  keywords = {wicked problems, complexity, planning, HUMMBL:SY, HUMMBL:IN, HUMMBL:DE}
+}
+
+@techreport{EUAIAct2024,
+  title = {Regulation (EU) 2024/1689 Laying Down Harmonised Rules on Artificial Intelligence (AI Act)},
+  author = {{European Parliament and Council of the European Union}},
+  year = {2024},
+  institution = {Official Journal of the European Union},
+  number = {L 2024/1689},
+  abstract = {The world's first comprehensive legal framework for artificial intelligence. The AI Act establishes a risk-based classification system: unacceptable risk (banned), high risk (subject to conformity assessment and ongoing obligations), limited risk (transparency obligations), and minimal risk (no restrictions). High-risk AI systems must meet requirements for data governance, documentation, transparency, human oversight, accuracy, robustness, and cybersecurity. The regulation introduces mandatory conformity assessments, post-market monitoring, and incident reporting for high-risk systems. The graduated risk classification maps directly to governance tooling: kill switches for unacceptable/high-risk scenarios, delegation tokens for access control, audit logs for documentation requirements, and compliance mappers for conformity evidence. The EU AI Act creates the regulatory demand that GaaS (Governance-as-a-Service) is positioned to serve.},
+  keywords = {AI regulation, risk classification, conformity assessment, HUMMBL:SY, HUMMBL:RE, HUMMBL:DE}
+}
+
+@techreport{OWASP2025LLM,
+  title = {OWASP Top 10 for Large Language Model Applications 2025},
+  author = {{OWASP Foundation}},
+  year = {2025},
+  institution = {OWASP},
+  abstract = {This standard defines the ten most critical security risks for applications built on large language models: prompt injection, insecure output handling, training data poisoning, model denial of service, supply chain vulnerabilities, sensitive information disclosure, insecure plugin design, excessive agency, overreliance, and model theft. Each risk category includes description, common examples, prevention strategies, and example attack scenarios. The standard has become the de facto security reference for LLM-powered applications and agent systems. The security adapter, bus policy enforcement (ASI07), and agent guardrails in founder-mode address several of these risks directly. The OWASP mapping document in hummbl-governance maps all ten risks to specific governance modules.},
+  keywords = {LLM security, prompt injection, excessive agency, HUMMBL:SY, HUMMBL:DE, HUMMBL:IN}
+}
+
+@article{Dennis1966Capabilities,
+  title = {Programming Semantics for Multiprogrammed Computations},
+  author = {Dennis, Jack B. and Van Horn, Earl C.},
+  year = {1966},
+  journal = {Communications of the ACM},
+  volume = {9},
+  number = {3},
+  pages = {143--155},
+  doi = {10.1145/365230.365252},
+  abstract = {This foundational paper introduces capability-based addressing as a mechanism for controlling access to resources in multiprogrammed computer systems. A capability is an unforgeable token that grants its holder specific access rights to a specific resource. The key insight is that capabilities combine resource identification with access control in a single token, enabling fine-grained, decentralized permission management without a central access control list. The paper establishes fundamental concepts including the principle of least privilege (a process should have only the capabilities it needs), capability propagation (how capabilities can be safely passed between processes), and capability revocation. The DelegationToken system in hummbl-governance -- HMAC-SHA256 signed tokens with operation whitelists, resource selectors, time bounds, and chain depth enforcement -- is a modern implementation of capability-based access control applied to multi-agent AI systems.},
+  keywords = {capability-based security, access control, least privilege, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY}
+}
+
+@article{Sandhu1996RBAC,
+  title = {Role-Based Access Control Models},
+  author = {Sandhu, Ravi S. and Coyne, Edward J. and Feinstein, Hal L. and Youman, Charles E.},
+  year = {1996},
+  journal = {Computer},
+  volume = {29},
+  number = {2},
+  pages = {38--47},
+  doi = {10.1109/2.485845},
+  abstract = {This paper presents four reference models for role-based access control (RBAC): RBAC0 (core model with users, roles, permissions, and sessions), RBAC1 (adds role hierarchies), RBAC2 (adds constraints including separation of duties and cardinality), and RBAC3 (combines hierarchies and constraints). The authors demonstrate how RBAC simplifies security administration by grouping permissions into roles and assigning roles to users, rather than managing individual user-permission assignments. RBAC has become the dominant access control paradigm in enterprise systems. The agent guardrails system in founder-mode -- where agents are assigned trust tiers (owner, high, medium, low) with approved and blocked scopes -- implements a form of RBAC where trust tiers function as roles and scope permissions function as the permission set.},
+  keywords = {RBAC, access control, role hierarchy, HUMMBL:SY, HUMMBL:DE, HUMMBL:CO}
+}
+
+@article{Brundage2020Verifiable,
+  title = {Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims},
+  author = {Brundage, Miles and Avin, Shahar and Wang, Jasmine and Belfield, Haydn and Krueger, Gretchen and Hadfield, Gillian and Khlaaf, Heidy and Yang, Jingying and Toner, Helen and Fong, Ruth and Maharaj, Tegan and Koh, Pang Wei and Myers, Sara and Raghunathan, Rishi and Buolamwini, Joy and Hebert-Johnson, Ursula and Raji, Deborah and Ganguli, Deep and Liang, Percy and Amodei, Dario},
+  year = {2020},
+  journal = {arXiv preprint},
+  doi = {10.48550/arXiv.2004.07213},
+  abstract = {This paper proposes a comprehensive set of mechanisms for making verifiable claims about AI systems, organized into institutional mechanisms (third-party auditing, red-teaming, bias bounties), software mechanisms (audit trails, interpretability tools, formal verification), and hardware mechanisms (secure enclaves, compute monitoring). The authors argue that the AI safety field needs to move from aspirational principles to concrete, verifiable evidence of safety properties. The Assured Agentic Architecture (AAA) at hummbl-dev directly implements several of the software mechanisms proposed here: deterministic validation with hash-stable outputs, golden conformance fixtures for reproducible verification, and append-only audit logs as evidence artifacts. The paper provides the intellectual framework for treating governance not as a checkbox exercise but as a verifiable engineering discipline.},
+  keywords = {verifiable claims, AI audit, trustworthy AI, HUMMBL:RE, HUMMBL:IN, HUMMBL:SY}
+}
+
+@inproceedings{Sculley2015TechDebt,
+  title = {Hidden Technical Debt in Machine Learning Systems},
+  author = {Sculley, David and Holt, Gary and Golovin, Daniel and Davydov, Eugene and Phillips, Todd and Ebner, Dietmar and Chaudhary, Vinay and Young, Michael and Crespo, Jean-Fran\c{c}ois and Dennison, Dan},
+  year = {2015},
+  booktitle = {Advances in Neural Information Processing Systems 28},
+  publisher = {Curran Associates, Inc.},
+  abstract = {This influential paper identifies sources of technical debt specific to machine learning systems, including the CACE principle (Changing Anything Changes Everything), hidden feedback loops, undeclared consumers of ML predictions, data dependency debt, and configuration debt. The authors argue that ML systems have a unique tendency to accumulate debt because the boundary between the ML model and the surrounding system is often poorly defined, leading to entanglement where changes in one component have unpredictable effects on others. The cost governor, circuit breaker, and governance-as-guardrails approach in hummbl-governance address several of these debt categories by making cost boundaries explicit (preventing CACE in spend), wrapping external dependencies in circuit breakers (preventing entanglement with unreliable services), and enforcing configuration through schema validation (reducing configuration debt).},
+  keywords = {technical debt, machine learning systems, CACE principle, HUMMBL:SY, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Li2023TrustworthyAI,
+  title = {Trustworthy AI: From Principles to Practices},
+  author = {Li, Bo and Qi, Peng and Liu, Bo and Di, Shuai and Liu, Jingen and Pei, Jiquan and Yi, Jinfeng and Zhou, Bowen},
+  year = {2023},
+  journal = {ACM Computing Surveys},
+  volume = {55},
+  number = {9},
+  pages = {1--46},
+  doi = {10.1145/3555803},
+  abstract = {This comprehensive survey connects trustworthy AI principles to implementation practices across six dimensions: safety, robustness, privacy, fairness, explainability, and accountability. The authors provide a taxonomy of techniques for each dimension, from adversarial training (robustness) to differential privacy (privacy) to SHAP values (explainability). The survey identifies gaps between the AI ethics literature (which focuses on principles) and the engineering literature (which focuses on techniques), arguing that bridging this gap requires governance frameworks that operationalize principles as measurable properties. The governance lifecycle orchestrator in hummbl-governance -- which maps NIST AI RMF functions to concrete module invocations (KillSwitch for safety, CircuitBreaker for robustness, AuditLog for accountability, DelegationToken for access control) -- is an example of this principles-to-practices bridge.},
+  keywords = {trustworthy AI, safety, robustness, explainability, HUMMBL:SY, HUMMBL:RE, HUMMBL:CO}
+}
+
+@article{Liang2023HELM,
+  title = {Holistic Evaluation of Language Models},
+  author = {Liang, Percy and Bommasani, Rishi and Lee, Tony and Tsipras, Dimitris and Soylu, Dilara and Yasunaga, Michihiro and Zhang, Yian and Narang, Deepak and Ren, William and Miao, Shibani and others},
+  year = {2023},
+  journal = {Transactions on Machine Learning Research},
+  doi = {10.48550/arXiv.2211.09110},
+  abstract = {HELM establishes a comprehensive framework for evaluating language models across seven metrics (accuracy, calibration, robustness, fairness, bias, toxicity, and efficiency) on 42 scenarios spanning diverse tasks. The key contribution is demonstrating that no single metric captures model quality -- different models excel on different dimensions, and aggregate rankings depend heavily on which metrics are weighted. The framework provides standardized evaluation infrastructure enabling reproducible comparison across models. For governance purposes, HELM demonstrates that assurance of AI systems requires multi-dimensional evaluation rather than single-score benchmarks. The quality scoring in arbiter and the multi-probe health system in founder-mode reflect this principle: system health is not a single boolean but a vector across multiple independently assessed dimensions.},
+  keywords = {evaluation, language models, benchmarking, HUMMBL:DE, HUMMBL:RE, HUMMBL:SY}
+}
+
+@techreport{Anthropic2024MCP,
+  title = {Model Context Protocol Specification},
+  author = {{Anthropic}},
+  year = {2024},
+  institution = {Anthropic},
+  abstract = {The Model Context Protocol (MCP) defines a standard interface for connecting AI models to external data sources and tools. MCP uses a client-server architecture where MCP clients (embedded in AI applications) communicate with MCP servers (exposing resources, tools, and prompts) via JSON-RPC over stdio or HTTP+SSE transports. The protocol enables AI models to access real-time data, execute actions, and compose capabilities from multiple tool providers without bespoke integration code. MCP has been adopted by Claude, VS Code Copilot, and other AI platforms as the standard tool-use protocol. The hummbl-dev mcp-server exposes Base120 mental models as MCP tools and resources, and the agent-os project uses MCP for inter-agent tool sharing.},
+  keywords = {model context protocol, tool use, AI integration, HUMMBL:CO, HUMMBL:SY}
+}
