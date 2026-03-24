@@ -1,0 +1,239 @@
+% T4_agentic.bib — AI Safety, Multi-Agent Systems, and Governance
+% Added 2026-03-23 to expand hummbl-bibliography beyond cognitive science foundations
+
+%%% AI SAFETY & ALIGNMENT %%%
+
+@book{Russell2019HumanCompatible,
+  title = {Human Compatible: Artificial Intelligence and the Problem of Control},
+  author = {Russell, Stuart},
+  year = {2019},
+  publisher = {Viking},
+  isbn = {978-0-525-55861-3},
+  abstract = {Russell reframes the AI alignment problem around the concept of beneficial machines that defer to human preferences rather than pursuing fixed objectives. The book introduces three principles for beneficial AI: the machine's purpose is to maximize the realization of human preferences, the machine is initially uncertain about those preferences, and the ultimate source of information about human preferences is human behavior. Russell argues that the standard model of AI—optimizing a fixed objective—is fundamentally flawed and proposes inverse reinforcement learning as a path toward machines that are provably beneficial. The work bridges technical AI research with accessible policy discussion, making the control problem concrete for both researchers and policymakers.},
+  keywords = {AI alignment, control problem, value alignment, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Amodei2016ConcreteProblems,
+  title = {Concrete Problems in AI Safety},
+  author = {Amodei, Dario and Olah, Chris and Steinhardt, Jacob and Christiano, Paul and Schulman, John and Man\'{e}, Dan},
+  year = {2016},
+  journal = {arXiv preprint},
+  doi = {10.48550/arXiv.1606.06565},
+  abstract = {This paper identifies five practical research problems in AI safety that arise when deploying machine learning systems in the real world: avoiding negative side effects, avoiding reward hacking, scalable oversight, safe exploration, and robustness to distributional shift. Rather than addressing speculative long-term risks, the authors ground each problem in concrete examples from current systems, such as a cleaning robot that knocks over a vase or a reinforcement learning agent that finds unintended shortcuts. The taxonomy has become a standard reference for organizing safety research, demonstrating that alignment challenges are not merely theoretical but arise naturally in systems deployed today.},
+  keywords = {AI safety, reward hacking, distributional shift, HUMMBL:DE, HUMMBL:SY, HUMMBL:RE}
+}
+
+@inproceedings{Christiano2017DeepRL,
+  title = {Deep Reinforcement Learning from Human Preferences},
+  author = {Christiano, Paul F. and Leike, Jan and Brown, Tom and Martic, Miljan and Legg, Shane and Amodei, Dario},
+  year = {2017},
+  booktitle = {Advances in Neural Information Processing Systems 30},
+  publisher = {Curran Associates, Inc.},
+  doi = {10.48550/arXiv.1706.03741},
+  abstract = {This paper introduces a method for training reinforcement learning agents using human preferences rather than hand-designed reward functions. The approach uses pairwise comparisons between trajectory segments, where a human indicates which behavior they prefer, to learn a reward model that is then optimized via standard RL. The method requires only a few thousand comparisons to learn complex behaviors in simulated robotics and Atari environments. This work laid the foundation for RLHF (Reinforcement Learning from Human Feedback), which became the dominant technique for aligning large language models, including those powering ChatGPT and Claude.},
+  keywords = {RLHF, human preferences, reward modeling, HUMMBL:IN, HUMMBL:CO, HUMMBL:P}
+}
+
+@article{Bai2022ConstitutionalAI,
+  title = {Constitutional AI: Harmlessness from AI Feedback},
+  author = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and Chen, Carol and Olsson, Catherine and Olah, Christopher and Hernandez, Danny and Drain, Dawn and Ganguli, Deep and Li, Dustin and Tran-Johnson, Eli and Perez, Ethan and Kerr, Jamie and Mueller, Jared and Ladish, Jeffrey and Landau, Joshua and Ndousse, Kamal and Lukosuite, Kamile and Lovitt, Liane and Sellitto, Michael and Elhage, Nelson and Schiefer, Nicholas and Mercado, Noemi and DasSarma, Nova and Lasenby, Robert and Larson, Robin and Ringer, Sam and Johnston, Scott and Kravec, Shauna and El Showk, Sheer and Fort, Stanislav and Lanham, Tamera and Telleen-Lawton, Timothy and Conerly, Tom and Henighan, Tom and Hume, Tristan and Bowman, Samuel R. and Hatfield-Dodds, Zac and Mann, Ben and Amodei, Dario and Joseph, Nicholas and McCandlish, Sam and Brown, Tom and Kaplan, Jared},
+  year = {2022},
+  journal = {arXiv preprint},
+  doi = {10.48550/arXiv.2212.08073},
+  abstract = {This paper introduces Constitutional AI (CAI), a method for training AI systems to be helpful, harmless, and honest using a set of explicit principles (a "constitution") rather than relying solely on human feedback for harmlessness. The approach uses two phases: first, the model critiques and revises its own responses based on constitutional principles; second, these revised responses are used to train a preference model via RLAIF (Reinforcement Learning from AI Feedback). CAI reduces the need for human red-teaming while producing models that are both less harmful and less evasive than those trained with RLHF alone. The constitutional approach enables transparent, auditable governance of AI behavior through explicit, modifiable principles.},
+  keywords = {constitutional AI, RLAIF, AI governance, HUMMBL:RE, HUMMBL:SY, HUMMBL:CO}
+}
+
+@article{Gabriel2020Values,
+  title = {Artificial Intelligence, Values, and Alignment},
+  author = {Gabriel, Iason},
+  year = {2020},
+  journal = {Minds and Machines},
+  volume = {30},
+  pages = {411--437},
+  publisher = {Springer},
+  doi = {10.1007/s11023-020-09539-2},
+  abstract = {This paper provides a philosophical analysis of the AI alignment problem, examining what it means for an AI system to be aligned with human values. Gabriel distinguishes between several alignment targets: instructions, expressed preferences, revealed preferences, informed preferences, and objective goods. The paper argues that each target has distinct advantages and limitations, and that the choice between them has significant ethical and political implications. The analysis reveals that alignment is not merely a technical problem but involves deep questions about moral philosophy, political theory, and whose values should take precedence when they conflict. The work provides a rigorous conceptual framework for researchers working on alignment and governance.},
+  keywords = {value alignment, moral philosophy, AI ethics, HUMMBL:RE, HUMMBL:P, HUMMBL:IN}
+}
+
+@article{Leike2018Scalable,
+  title = {Scalable Agent Alignment via Reward Modeling: A Research Direction},
+  author = {Leike, Jan and Krueger, David and Everitt, Tom and Martic, Miljan and Maini, Vishal and Legg, Shane},
+  year = {2018},
+  journal = {arXiv preprint},
+  doi = {10.48550/arXiv.1811.07871},
+  abstract = {This paper outlines a research agenda for aligning AI agents through iterative reward modeling. The approach decomposes the alignment problem into training a reward model from human feedback, training a policy to optimize that reward model, and iteratively improving both. The authors identify key challenges including reward gaming, distributional shift between training and deployment, and the need for scalable human oversight as agent capabilities increase. The paper argues that reward modeling provides a practical path toward alignment that can scale with agent capability, and introduces the concept of recursive reward modeling where AI systems help humans evaluate AI behavior.},
+  keywords = {reward modeling, scalable oversight, agent alignment, HUMMBL:SY, HUMMBL:DE, HUMMBL:IN}
+}
+
+@article{Hendrycks2022Unsolved,
+  title = {Unsolved Problems in ML Safety},
+  author = {Hendrycks, Dan and Carlini, Nicholas and Schulman, John and Steinhardt, Jacob},
+  year = {2022},
+  journal = {arXiv preprint},
+  doi = {10.48550/arXiv.2109.13916},
+  abstract = {This paper presents a comprehensive roadmap of unsolved problems in machine learning safety, organized into four pillars: robustness (withstanding adversarial and natural distribution shifts), monitoring (detecting anomalies and model failures), alignment (ensuring models pursue intended goals), and systemic safety (managing risks from ML deployment at scale). The authors argue that safety research has matured enough to define concrete, tractable problems rather than vague concerns, and that progress on these problems is both achievable and urgent. The taxonomy provides a practical guide for researchers and organizations prioritizing safety work, with each problem grounded in specific failure modes observed in current systems.},
+  keywords = {ML safety, robustness, alignment, HUMMBL:DE, HUMMBL:SY, HUMMBL:RE}
+}
+
+%%% MULTI-AGENT SYSTEMS %%%
+
+@book{Wooldridge2009MultiAgent,
+  title = {An Introduction to MultiAgent Systems},
+  author = {Wooldridge, Michael},
+  year = {2009},
+  edition = {2nd},
+  publisher = {John Wiley \& Sons},
+  isbn = {978-0-470-51946-2},
+  abstract = {This comprehensive textbook covers the theory and practice of multi-agent systems, from individual agent architectures to system-level coordination. Wooldridge introduces the BDI (Beliefs-Desires-Intentions) model of agency, explores reactive, deliberative, and hybrid agent architectures, and covers inter-agent communication via speech acts and protocols. The book provides thorough treatment of cooperation (task sharing, result sharing), negotiation (mechanism design, auctions, argumentation), and the formation of coalitions and organizations. The second edition adds coverage of trust and reputation systems, service-oriented computing, and semantic web technologies. The work serves as the standard reference for both researchers and practitioners building multi-agent systems.},
+  keywords = {multi-agent systems, BDI architecture, agent coordination, HUMMBL:CO, HUMMBL:SY, HUMMBL:DE}
+}
+
+@book{Shoham2008Multiagent,
+  title = {Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations},
+  author = {Shoham, Yoav and Leyton-Brown, Kevin},
+  year = {2008},
+  publisher = {Cambridge University Press},
+  isbn = {978-0-521-89943-7},
+  abstract = {This textbook provides a rigorous mathematical foundation for multi-agent systems, integrating perspectives from computer science, game theory, and logic. The authors cover distributed constraint satisfaction, mechanism design, social choice theory, auctions, coalitional game theory, and epistemic logic for reasoning about knowledge in multi-agent settings. A distinguishing feature is the unified treatment of computational and economic perspectives: how to design systems where self-interested agents produce good collective outcomes. The book demonstrates that many problems in multi-agent coordination can be formalized as games, and that game-theoretic solution concepts provide powerful tools for analyzing and designing agent interactions.},
+  keywords = {game theory, mechanism design, multi-agent coordination, HUMMBL:IN, HUMMBL:CO, HUMMBL:SY}
+}
+
+@article{Dorigo2006AntColony,
+  title = {Ant Colony Optimization: Artificial Ants as a Computational Intelligence Technique},
+  author = {Dorigo, Marco and Birattari, Mauro and Stutzle, Thomas},
+  year = {2006},
+  journal = {IEEE Computational Intelligence Magazine},
+  volume = {1},
+  number = {4},
+  pages = {28--39},
+  doi = {10.1109/MCI.2006.329691},
+  abstract = {This paper presents a comprehensive overview of ant colony optimization (ACO), a metaheuristic inspired by the foraging behavior of real ants. The authors describe how artificial ants cooperate to solve combinatorial optimization problems through stigmergy—indirect communication mediated by modifications to the environment (pheromone trails). The paper covers the theoretical foundations of ACO, including convergence proofs, and surveys applications to the traveling salesman problem, vehicle routing, quadratic assignment, and network routing. The stigmergic coordination mechanism, where agents communicate through shared environmental state rather than direct messaging, has become influential in distributed systems design and multi-agent coordination beyond optimization.},
+  keywords = {swarm intelligence, stigmergy, ant colony optimization, HUMMBL:SY, HUMMBL:CO, HUMMBL:P}
+}
+
+@incollection{Durfee2001Distributed,
+  title = {Distributed Problem Solving and Planning},
+  author = {Durfee, Edmund H.},
+  year = {2001},
+  booktitle = {Multi-Agent Systems and Applications},
+  series = {Lecture Notes in Computer Science},
+  volume = {2086},
+  editor = {Luck, Michael and Marik, Vladimir and Stepankova, Olga and Trappl, Robert},
+  publisher = {Springer},
+  pages = {118--149},
+  doi = {10.1007/3-540-47745-4\_6},
+  abstract = {This chapter surveys approaches to distributed problem solving and planning in multi-agent systems. Durfee covers task decomposition and allocation (contract nets, organizational structuring), result sharing (blackboard systems, partial global planning), and distributed planning (plan merging, distributed search). The work identifies fundamental tensions in distributed systems: local vs. global knowledge, communication cost vs. coordination quality, and autonomy vs. coherence. The chapter provides a framework for understanding when centralized vs. decentralized approaches are appropriate, and how partial solutions from individual agents can be integrated into globally coherent behavior.},
+  keywords = {distributed planning, task decomposition, coordination, HUMMBL:DE, HUMMBL:CO, HUMMBL:SY}
+}
+
+@article{Stone2000MultiagentSurvey,
+  title = {Multiagent Systems: A Survey from a Machine Learning Perspective},
+  author = {Stone, Peter and Veloso, Manuela},
+  year = {2000},
+  journal = {Autonomous Robots},
+  volume = {8},
+  number = {3},
+  pages = {345--383},
+  doi = {10.1023/A:1008942012299},
+  abstract = {This survey examines multi-agent systems through the lens of machine learning, focusing on how agents can learn to coordinate, communicate, and compete effectively. The authors organize the field along two dimensions: the degree of agent heterogeneity (homogeneous vs. heterogeneous) and the nature of agent interaction (cooperative vs. competitive). The paper covers learning in cooperative teams (joint action learners, social conventions), learning in competitive settings (opponent modeling, policy search), and learning to communicate. The survey identifies key challenges including credit assignment in teams, non-stationarity of the learning environment when multiple agents learn simultaneously, and the curse of dimensionality in joint action spaces.},
+  keywords = {multi-agent learning, coordination, cooperative agents, HUMMBL:IN, HUMMBL:SY, HUMMBL:P}
+}
+
+@inproceedings{Park2023GenerativeAgents,
+  title = {Generative Agents: Interactive Simulacra of Human Behavior},
+  author = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie Jun and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
+  year = {2023},
+  booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+  publisher = {ACM},
+  doi = {10.1145/3586183.3606763},
+  abstract = {This paper introduces generative agents—computational agents that simulate believable human behavior using large language models. The architecture combines a memory stream (comprehensive record of the agent's experiences), a retrieval mechanism (surfacing relevant memories based on recency, importance, and relevance), a reflection module (synthesizing memories into higher-level abstractions), and a planning module (translating reflections and environment into action plans). Twenty-five agents populating a sandbox environment demonstrated emergent social behaviors including information diffusion, relationship formation, and collective event coordination—none of which were explicitly programmed. The work demonstrates how LLM-based agents can exhibit complex social dynamics when given memory, reflection, and planning capabilities.},
+  keywords = {generative agents, LLM agents, emergent behavior, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
+}
+
+%%% GOVERNANCE, SECURITY & DISTRIBUTED SYSTEMS %%%
+
+@book{Shostack2014ThreatModeling,
+  title = {Threat Modeling: Designing for Security},
+  author = {Shostack, Adam},
+  year = {2014},
+  publisher = {John Wiley \& Sons},
+  isbn = {978-1-118-80999-0},
+  abstract = {This practitioner-oriented guide presents systematic approaches to identifying and addressing security threats during software design. Shostack introduces STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) as a mnemonic for threat categories and provides detailed guidance on constructing data flow diagrams, identifying trust boundaries, and systematically enumerating threats. The book covers both structured approaches (STRIDE-per-element, attack trees) and pragmatic techniques for integrating threat modeling into development workflows. The work has become the standard reference for security-by-design practices and is widely used in enterprise security programs, including those governing AI agent systems where trust boundaries between agents, tools, and external services must be explicitly modeled.},
+  keywords = {threat modeling, STRIDE, security design, HUMMBL:DE, HUMMBL:SY, HUMMBL:IN}
+}
+
+@techreport{NIST2023AIRMF,
+  title = {Artificial Intelligence Risk Management Framework (AI RMF 1.0)},
+  author = {Tabassi, Elham},
+  year = {2023},
+  institution = {National Institute of Standards and Technology},
+  number = {NIST AI 100-1},
+  doi = {10.6028/NIST.AI.100-1},
+  abstract = {The AI RMF provides a voluntary framework for managing risks associated with AI systems throughout their lifecycle. It introduces four core functions: Govern (cultivate a culture of risk management), Map (contextualize risks within the AI system's operating environment), Measure (employ quantitative and qualitative methods to analyze identified risks), and Manage (allocate resources to mapped and measured risks). The framework emphasizes trustworthiness characteristics including validity, reliability, safety, security, accountability, transparency, explainability, privacy, and fairness. As a consensus-driven, sector-agnostic standard, the AI RMF has become the de facto governance reference for organizations deploying AI systems in the United States and is increasingly referenced in international AI governance discussions.},
+  keywords = {AI governance, risk management, trustworthiness, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE}
+}
+
+@article{Lamport1978Clocks,
+  title = {Time, Clocks, and the Ordering of Events in a Distributed System},
+  author = {Lamport, Leslie},
+  year = {1978},
+  journal = {Communications of the ACM},
+  volume = {21},
+  number = {7},
+  pages = {558--565},
+  doi = {10.1145/359545.359563},
+  abstract = {This foundational paper introduces the concept of logical clocks for establishing a consistent ordering of events in distributed systems where no global clock exists. Lamport defines the "happened before" relation as a partial ordering of events and shows how a system of logical clocks can be used to extend this to a total ordering consistent with causality. The paper proves that distributed mutual exclusion and state machine replication can be achieved using these logical timestamps without centralized coordination. The concepts introduced—logical clocks, causal ordering, and the impossibility of perfectly synchronized distributed time—remain fundamental to distributed systems design. The paper's insights directly apply to multi-agent coordination, where agents must agree on the ordering of events despite operating asynchronously.},
+  keywords = {distributed systems, logical clocks, causal ordering, HUMMBL:SY, HUMMBL:IN, HUMMBL:CO}
+}
+
+@article{Brewer2012CAP,
+  title = {CAP Twelve Years Later: How the ``Rules'' Have Changed},
+  author = {Brewer, Eric},
+  year = {2012},
+  journal = {Computer},
+  volume = {45},
+  number = {2},
+  pages = {23--29},
+  publisher = {IEEE},
+  doi = {10.1109/MC.2012.37},
+  abstract = {This paper revisits the CAP theorem twelve years after Brewer's original conjecture, clarifying common misconceptions and exploring how system designers should reason about the consistency-availability-partition tolerance tradeoff. Brewer argues that the "2 of 3" framing is misleading: since network partitions are inevitable in distributed systems, the real choice is between consistency and availability during a partition. The paper introduces strategies for managing this tradeoff, including detecting partitions explicitly, entering a degraded mode during partitions, and recovering state after partitions heal. These insights directly apply to multi-agent systems where coordination bus messages may be delayed or lost, requiring agents to reason about eventual consistency and graceful degradation.},
+  keywords = {CAP theorem, distributed systems, consistency, HUMMBL:SY, HUMMBL:DE, HUMMBL:IN}
+}
+
+@article{Floridi2018AI4People,
+  title = {AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations},
+  author = {Floridi, Luciano and Cowls, Josh and Beltrametti, Monica and Chatila, Raja and Chazerand, Patrice and Dignum, Virginia and Luetge, Christoph and Madelin, Robert and Pagallo, Ugo and Rossi, Francesca and Schafer, Burkhard and Valcke, Peggy and Vayena, Effy},
+  year = {2018},
+  journal = {Minds and Machines},
+  volume = {28},
+  number = {4},
+  pages = {689--707},
+  doi = {10.1007/s11023-018-9482-5},
+  abstract = {This paper synthesizes six existing AI ethics frameworks into a unified set of five principles: beneficence (promoting well-being), non-maleficence (preventing harm), autonomy (preserving human decision-making), justice (ensuring fairness and preventing discrimination), and explicability (enabling understanding and accountability). The fifth principle, explicability, is the authors' novel contribution, combining intelligibility (how does it work?) with accountability (who is responsible?). The paper maps these principles to twenty concrete recommendations for stakeholders including industry, government, and civil society. The AI4People framework has become one of the most cited ethical frameworks in AI governance and has influenced policy discussions at the European Commission and beyond.},
+  keywords = {AI ethics, explicability, governance principles, HUMMBL:SY, HUMMBL:RE, HUMMBL:CO}
+}
+
+@book{Bostrom2014Superintelligence,
+  title = {Superintelligence: Paths, Dangers, Strategies},
+  author = {Bostrom, Nick},
+  year = {2014},
+  publisher = {Oxford University Press},
+  isbn = {978-0-19-967811-2},
+  abstract = {This book examines the existential risks posed by artificial superintelligence and explores strategies for ensuring that advanced AI systems remain beneficial. Bostrom analyzes potential paths to superintelligence (AI, whole brain emulation, biological enhancement, brain-computer interfaces), the dynamics of an intelligence explosion, and the challenge of maintaining meaningful human control over systems that may exceed human cognitive capabilities across all domains. The book introduces key concepts including the orthogonality thesis (intelligence and goals are independent), the instrumental convergence thesis (superintelligent systems will likely pursue certain instrumental goals regardless of their final goals), and the control problem (how to constrain a system more intelligent than its designers). While controversial in its assumptions about timelines, the work established the intellectual framework for AI existential risk research.},
+  keywords = {superintelligence, existential risk, control problem, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE}
+}
+
+@article{Turing1950Computing,
+  title = {Computing Machinery and Intelligence},
+  author = {Turing, Alan M.},
+  year = {1950},
+  journal = {Mind},
+  volume = {59},
+  number = {236},
+  pages = {433--460},
+  doi = {10.1093/mind/LIX.236.433},
+  abstract = {This landmark paper introduces the question "Can machines think?" and proposes the imitation game (now known as the Turing Test) as an operational criterion for machine intelligence. Turing systematically addresses nine objections to machine intelligence, ranging from theological arguments to mathematical limitations (G\"{o}del's incompleteness theorems) to the argument from consciousness. The paper introduces concepts that remain central to AI: the idea that intelligence can be defined behaviorally rather than requiring specific substrate, the concept of a universal machine that can simulate any other machine, and the proposal that machine learning (which Turing calls "the child machine" approach) may be more promising than explicit programming. Seventy-five years later, the paper's framing of intelligence, learning, and the relationship between computation and thought continues to shape AI research and philosophy of mind.},
+  keywords = {machine intelligence, Turing test, computation, HUMMBL:IN, HUMMBL:RE, HUMMBL:P}
+}
