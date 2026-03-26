@@ -37,20 +37,20 @@
   "dependencies": {
     "@citation-js/core": "^0.7.0",
     "@citation-js/plugin-bibtex": "^0.7.0",
-    "axios": "^1.13.2",
+    "axios": "^1.13.6",
     "chalk": "^5.6.2",
-    "commander": "^14.0.2"
+    "commander": "^14.0.3"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "postcss": "^8.5.6",
+    "lint-staged": "^16.4.0",
+    "postcss": "^8.5.8",
     "postcss-functions": "^4.0.2",
-    "postcss-js": "^5.0.3",
+    "postcss-js": "^5.1.0",
     "postcss-nested": "^7.0.2",
-    "prettier": "^3.8.0",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.0.0"
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
   },
   "lint-staged": {
     "../bibliography/*.bib": [
