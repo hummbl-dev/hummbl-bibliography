@@ -34,7 +34,7 @@
 | T11 (Security) | 20 | 75% | 0% |
 | T12 (Complexity) | 20 | 70% | 50% |
 
-## 🎯 Priority Areas
+### By HUMMBL Transformation
 
 ### 1. Perspective (P) - HIGH PRIORITY
 
@@ -52,7 +52,7 @@
 
 **Rebalancing opportunity**: Review entries where SY is tertiary and P better describes the content.
 
-### 2. Inversion (IN) - MEDIUM PRIORITY
+**Target**: Complete the `% No DOI available` annotation pattern established in T1, T3, T7 across all tiers. Every entry should either have a `doi = {...}` field OR a `% No DOI available -- <reason>` comment.
 
 **Current**: 90 tags (14.1% of total)  
 **Ideal**: ~107 tags (16.7%)  
@@ -78,7 +78,7 @@ Many entries default to SY as a catch-all for "systems-related." Rebalancing sho
 - ~~IN (Inversion): was 15/48, now 90 tags~~ ✅ Substantially improved
 - ~~DOI coverage: was 29%~~ ✅ Now 65% (155/240)
 
-## 🔍 Quality Enhancements
+## 🔍 Quality Metrics
 
 ### DOI Coverage
 **Current**: 64.6% (155/240 entries)  
@@ -94,7 +94,12 @@ Many entries default to SY as a catch-all for "systems-related." Rebalancing sho
 **Worst tiers**: T6, T7, T11 (0%)  
 **Note**: ISBN is primarily relevant for book entries; journal articles typically have DOIs instead.
 
-## 🎓 Domain Coverage
+### v1.2.0 (Next quarter)
+- [ ] Complete DOI audit for T2, T4, T6, T8–T12
+- [ ] Add `% No DOI available` to all confirmed-unavailable entries across all tiers
+- [ ] DOI enrichment pass for T5 academic entries (Grasse1959, Rao1995, Sabater2005)
+- [ ] Run `check-duplicates` and verify zero cross-tier collisions
+- [ ] Review post-2024 AI safety literature for T7/T13 additions
 
 ### Well-Covered Domains (via T4-T12 expansion)
 - ✅ Systems thinking (T1, T12)
