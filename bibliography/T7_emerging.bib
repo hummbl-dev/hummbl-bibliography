@@ -78,14 +78,15 @@
   keywords = {LLM agents, autonomous agents, agent architecture, survey, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
 }
 
-@inproceedings{Chen2023FrugalGPT,
-  title = {FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance},
-  author = {Chen, Lingjiao and Zaharia, Matei and Zou, James},
-  year = {2023},
-  booktitle = {Transactions on Machine Learning Research (TMLR)},
-  url = {https://arxiv.org/abs/2305.05176},
-  abstract = {FrugalGPT introduces three strategies for reducing LLM inference costs: prompt adaptation (shortening prompts), LLM approximation (fine-tuning smaller models to mimic larger ones), and LLM cascade (routing queries through a sequence of models from cheapest to most expensive, stopping when confidence is sufficient). The LLM cascade approach can match GPT-4 performance with up to 98\% cost reduction by using cheaper models for easy queries and reserving expensive models for hard ones. The core insight --- that most queries do not need the most powerful model --- directly motivates the hybrid-inference policy router at hummbl-dev, which routes between local Ollama models (qwen3.5) and cloud APIs based on task complexity, and the CostGovernorBridge that enforces budget ceilings across all adapter calls.},
-  keywords = {cost optimization, LLM cascade, model routing, HUMMBL:DE, HUMMBL:IN, HUMMBL:SY}
+@inproceedings{Zhuge2024GPTSwarm,
+  title = {GPTSwarm: Language Agents as Optimizable Graphs},
+  author = {Zhuge, Mingchen and Wang, Wenyi and Kirsch, Louis and Faccio, Francesco and Khizbullin, Dmitrii and Schmidhuber, J\"{u}rgen},
+  year = {2024},
+  booktitle = {Proceedings of the Forty-first International Conference on Machine Learning (ICML 2024)},
+  url = {https://arxiv.org/abs/2402.16823},
+  doi = {10.48550/arXiv.2402.16823},
+  abstract = {GPTSwarm represents multi-agent LLM systems as computational graphs where nodes are individual LLM agents and edges represent communication channels. The key contribution is showing that the structure of multi-agent collaboration itself can be optimized: rather than hand-designing which agents talk to which other agents, GPTSwarm uses reinforcement learning to discover optimal graph topologies for specific tasks. The framework supports heterogeneous agents (different models, prompts, and tools) and can dynamically add, remove, or rewire connections based on task performance. Experiments on benchmarks including MMLU, HumanEval, and GSM8K demonstrate that optimized agent graphs outperform both single-agent baselines and fixed multi-agent architectures. The core insight -- that the communication structure between agents is as important as the agents themselves -- directly applies to the hummbl-dev fleet coordination architecture: the TSV bus topology, the agent scope constraints, and the trust-tier hierarchy collectively define a communication graph that shapes emergent fleet behavior. GPTSwarm suggests this graph could be optimized rather than hand-designed.},
+  keywords = {multi-agent optimization, graph structure, swarm intelligence, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY}
 }
 
 @inproceedings{Ong2024RouteLLM,
@@ -144,8 +145,8 @@
   author = {Patil, Shishir G. and Zhang, Tianjun and Wang, Xin and Gonzalez, Joseph E.},
   year = {2023},
   booktitle = {arXiv preprint},
-  url = {https://arxiv.org/abs/2305.10601},
-  doi = {10.48550/arXiv.2305.10601},
+  url = {https://arxiv.org/abs/2305.15334},
+  doi = {10.48550/arXiv.2305.15334},
   abstract = {Gorilla addresses a critical challenge for LLM agents: accurately generating API calls from natural language instructions. The paper demonstrates that LLMs frequently hallucinate API parameters, confuse similar APIs, and generate syntactically correct but semantically wrong calls. Gorilla fine-tunes LLaMA on a dataset of 1,645 APIs from TorchHub, TensorHub, and HuggingFace, combined with a retrieval-aware training approach that conditions generation on API documentation retrieved at inference time. The retriever-aware training is key: it teaches the model to use retrieved documentation as context rather than relying on memorized (and potentially outdated) API signatures. Gorilla achieves higher accuracy than GPT-4 on API call generation while significantly reducing hallucination. For hummbl-dev, Gorilla validates the MCP architecture: by providing structured API documentation (tool descriptions, parameter schemas) at inference time rather than relying on the model's parametric memory, MCP reduces tool-call hallucination -- the same retrieval-augmented approach that Gorilla demonstrates is superior to memorization.},
   keywords = {API calling, tool use, hallucination reduction, retrieval-augmented, HUMMBL:CO, HUMMBL:DE}
 }
@@ -200,18 +201,18 @@
   year = {2024},
   booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
   url = {https://arxiv.org/abs/2305.10601},
-  doi = {10.48550/arXiv.2305.14325},
+  doi = {10.48550/arXiv.2305.10601},
   abstract = {Tree of Thoughts (ToT) generalizes chain-of-thought prompting by enabling LLMs to explore multiple reasoning paths as a tree structure, evaluate intermediate thoughts, and make global decisions about which branches to pursue using search algorithms (BFS or DFS). Unlike chain-of-thought which commits to a single linear reasoning path, ToT maintains a set of candidate partial solutions, generates possible next steps for each, evaluates their promise using the LLM itself, and prunes unpromising branches. This enables lookahead, backtracking, and strategic exploration -- capabilities absent from linear prompting. ToT achieves dramatic improvements on tasks requiring planning and search, including Game of 24 (74\% vs 4\% for CoT) and creative writing. For hummbl-dev, ToT formalizes the deliberation pattern used in sprint planning: the sprint recommender explores multiple potential sprint configurations (tree branches), evaluates each against priority criteria and resource constraints (thought evaluation), and selects the most promising configuration -- applying tree search to organizational planning rather than mathematical reasoning.},
   keywords = {tree of thoughts, deliberate reasoning, search, backtracking, HUMMBL:DE, HUMMBL:RE, HUMMBL:IN}
 }
 
-@article{Bai2022Constitutional,
-  title = {Constitutional AI: Harmlessness from AI Feedback},
-  author = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and Chen, Carol and Olsson, Catherine and Olah, Christopher and Hernandez, Danny and Drain, Dawn and Ganguli, Deep and Li, Dustin and Tran-Johnson, Eli and Perez, Ethan and Kerr, Jamie and Mueller, Jared and Ladish, Jeffrey and Landau, Joshua and Ndousse, Kamal and Lukosuite, Kamile and Lovitt, Liane and Sellitto, Michael and Elhage, Nelson and Schiefer, Nicholas and Mercado, Noemi and DasSarma, Nova and Lasenby, Robert and Larson, Robin and Ringer, Sam and Johnston, Scott and Kravec, Shauna and El Showk, Sheer and Fort, Stanislav and Lanham, Tamera and Telleen-Lawton, Timothy and Conerly, Tom and Henighan, Tom and Hume, Tristan and Bowman, Samuel R. and Hatfield-Dodds, Zac and Mann, Ben and Amodei, Dario and Joseph, Nicholas and McCandlish, Sam and Brown, Tom and Kaplan, Jared},
-  year = {2022},
-  journal = {arXiv preprint},
-  url = {https://arxiv.org/abs/2212.08073},
-  doi = {10.48550/arXiv.2212.08073},
-  abstract = {Constitutional AI (CAI) introduces a method for training harmless AI assistants using a set of principles (a ''constitution'') rather than extensive human feedback on harmful outputs. The process has two phases: supervised learning (the model critiques and revises its own harmful outputs using constitutional principles, generating improved training data) and reinforcement learning from AI feedback (RLAIF, where an AI evaluator trained on the constitution provides preference labels instead of humans). The constitution is a set of natural language principles like ''choose the response that is least likely to be viewed as harmful'' and ''choose the response that is most supportive of human autonomy.'' This approach reduces the need for human annotation of harmful content while producing models that are both helpful and harmless. For hummbl-dev, CAI provides the theoretical basis for agent guardrails: just as CAI embeds behavioral constraints as explicit principles that guide model behavior, the agent operating rules (scope restrictions, commit cadence, identity requirements) function as a constitution for agent behavior -- a declarative set of principles enforced through hooks and audit rather than model fine-tuning.},
-  keywords = {constitutional AI, harmlessness, AI feedback, principles, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE}
+@inproceedings{Sumers2024CognitiveArchitectures,
+  title = {Cognitive Architectures for Language Agents},
+  author = {Sumers, Theodore R. and Yao, Shunyu and Narasimhan, Karthik and Griffiths, Thomas L.},
+  year = {2024},
+  booktitle = {Transactions on Machine Learning Research (TMLR)},
+  url = {https://arxiv.org/abs/2309.02427},
+  doi = {10.48550/arXiv.2309.02427},
+  abstract = {This paper proposes CoALA (Cognitive Architectures for Language Agents), a conceptual framework that organizes the design space of language agent architectures by drawing on cognitive science principles. CoALA decomposes agents into three components: memory (working memory for in-context state, episodic memory for past experiences, semantic memory for world knowledge, and procedural memory for action policies), action space (internal actions like reasoning and retrieval, and external actions like tool use and communication), and decision-making (how the agent selects among actions, ranging from simple prompting to learned policies to explicit planning). The framework reveals that most existing language agents implement narrow subsets of this design space and identifies underexplored combinations -- such as agents with learned retrieval policies over episodic memory, or agents that use planning over internal reasoning actions. CoALA provides a systematic vocabulary for comparing architectures: ReAct uses working memory with alternating internal-external actions, Voyager adds procedural memory for skill accumulation, and MemGPT implements explicit memory management. For hummbl-dev, the CoALA taxonomy maps precisely to the Cognitive Ledger Protocol architecture: the CLP's five memory pools (ledger, bus, briefings, findings, MEMORY.md) implement episodic, semantic, and working memory; the seven adapters implement the external action space; and the scheduler/sprint-recommender implements the decision-making module.},
+  keywords = {cognitive architecture, language agents, memory systems, HUMMBL:P, HUMMBL:DE, HUMMBL:CO}
 }
