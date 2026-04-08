@@ -29,8 +29,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
+          cache-dependency-path: toolkit/package-lock.json
 
       - name: Install dependencies
         run: |
@@ -42,13 +43,18 @@ jobs:
           cd toolkit
           npm run type-check
 
+      - name: Build TypeScript
+        run: |
+          cd toolkit
+          npm run build
+
       - name: Run model validation script
         run: |
           cd toolkit
-          node -e "
-          const { auditText } = require('./src/utils/monitorModels.ts');
-          const fs = require('fs');
-          const path = require('path');
+          node --input-type=module -e "
+          import { auditText } from './dist/utils/monitorModels.js';
+          import fs from 'fs';
+          import path from 'path';
 
           // Find all relevant files
           const files = [];
@@ -57,7 +63,7 @@ jobs:
             items.forEach(item => {
               const fullPath = path.join(dir, item);
               const stat = fs.statSync(fullPath);
-              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
                 walk(fullPath);
               } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(path.extname(item))) {
                 files.push(fullPath);
@@ -89,29 +95,29 @@ jobs:
                 });
               }
             } catch (err) {
-              console.warn(\`Warning: Could not read \${file}: \${err.message}\`);
+              console.warn('Warning: Could not read ' + file + ': ' + err.message);
             }
           });
 
-          console.log(\`Model Validation Results:\`);
-          console.log(\`Valid references: \${totalValid}\`);
-          console.log(\`Invalid references: \${totalInvalid}\`);
-          console.log(\`Hallucinations: \${totalHallucinations}\`);
+          console.log('Model Validation Results:');
+          console.log('Valid references: ' + totalValid);
+          console.log('Invalid references: ' + totalInvalid);
+          console.log('Hallucinations: ' + totalHallucinations);
 
           if (errors.length > 0) {
-            console.log(\`\nErrors found:\`);
+            console.log('\nErrors found:');
             errors.forEach(error => {
-              console.log(\`File: \${error.file}\`);
-              error.errors.forEach(err => console.log(\`  - \${err}\`));
-              error.hallucinations.forEach(hall => console.log(\`  - Hallucination: \${hall}\`));
+              console.log('File: ' + error.file);
+              error.errors.forEach(err => console.log('  - ' + err));
+              error.hallucinations.forEach(hall => console.log('  - Hallucination: ' + hall));
             });
 
             if (totalInvalid > 0 || totalHallucinations > 0) {
-              console.log(\`\n❌ Validation failed: Invalid references or hallucinations detected\`);
+              console.log('\n❌ Validation failed: Invalid references or hallucinations detected');
               process.exit(1);
             }
           } else {
-            console.log(\`\n✅ Validation passed: No invalid references or hallucinations found\`);
+            console.log('\n✅ Validation passed: No invalid references or hallucinations found');
           }
           "
 
