@@ -19,7 +19,7 @@ class BibStats {
     this.bibDir = path.resolve(bibDir);
     this.stats = {
       total: 0,
-      byTier: { T1: 0, T2: 0, T3: 0 },
+      byTier: {},
       byType: {},
       transformations: { P: 0, IN: 0, CO: 0, DE: 0, RE: 0, SY: 0 },
       quality: {
@@ -74,9 +74,8 @@ class BibStats {
   }
 
   getTier(filename) {
-    if (filename.includes('T1')) return 'T1';
-    if (filename.includes('T2')) return 'T2';
-    if (filename.includes('T3')) return 'T3';
+    const match = filename.match(/T(\d+)/);
+    if (match) return `T${match[1]}`;
     return 'Unknown';
   }
 
