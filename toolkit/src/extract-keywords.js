@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { Cite } = require('@citation-js/core');
-require('@citation-js/plugin-bibtex');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
 
 const args = process.argv.slice(2);
 const bibDir = args[0] || '../bibliography';
@@ -20,12 +20,12 @@ class KeywordExtractor {
     const rawEntries = {};
     const entryRegex = /@\w+\{([^,]+),([^@]+?)(?=\n\})/gs;
     let match;
-    
+
     while ((match = entryRegex.exec(content)) !== null) {
       const key = match[1].trim();
       const entryText = match[2];
       const fields = {};
-      
+
       const lines = entryText.split('\n');
       for (const line of lines) {
         const fieldMatch = line.match(/^\s*(\w+)\s*=\s*\{(.+)\}\s*,?\s*$/);
@@ -34,10 +34,10 @@ class KeywordExtractor {
           fields[fieldKey.toLowerCase()] = value.trim();
         }
       }
-      
+
       rawEntries[key] = fields;
     }
-    
+
     return rawEntries;
   }
 
