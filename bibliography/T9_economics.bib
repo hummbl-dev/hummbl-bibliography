@@ -195,6 +195,7 @@
   author    = {Hart, Oliver},
   year      = {1995},
   publisher = {Oxford University Press},
+  isbn      = {978-0-19-828881-7},
   doi       = {10.1093/0198294158.001.0001},
   abstract  = {Hart develops the incomplete contracts framework, arguing that contracts cannot specify actions for every conceivable contingency, and that residual control rights --- the authority to make decisions in uncontracted situations --- determine the boundaries of the firm. The key insight is that ownership matters precisely because contracts are incomplete: whoever holds residual control rights shapes outcomes in unforeseen circumstances. This theory directly explains the hummbl-dev governance architecture. The frozen contract schemas in contracts/ are intentionally incomplete --- they specify message formats, data models, and interface boundaries but cannot anticipate every agent behavior. The residual control rights reside with the human operator (kill switch authority, DIRECTIVE messages) and the audit gate (Claude review before merge). The delegation token system implements Hart's framework computationally: a token grants specific, bounded authority (the contracted portion) while the issuer retains residual control via token revocation and chain depth limits (the uncontracted portion).},
   keywords  = {incomplete contracts, residual control rights, firm boundaries, HUMMBL:P, HUMMBL:IN, HUMMBL:DE}
@@ -231,6 +232,7 @@
   author    = {Ostrom, Elinor},
   year      = {1990},
   publisher = {Cambridge University Press},
+  isbn      = {978-0-521-40599-7},
   doi       = {10.1017/CBO9780511807763},
   abstract  = {Ostrom demonstrates that communities can sustainably manage common-pool resources without either state regulation or privatization, through self-organized governance institutions. She identifies eight design principles for successful commons governance: clearly defined boundaries, congruence between rules and local conditions, collective-choice arrangements, monitoring, graduated sanctions, conflict-resolution mechanisms, minimal recognition of rights to organize, and nested enterprises for larger systems. The multi-agent coordination bus in hummbl-dev is a common-pool resource: all agents share write access, and overuse (spam, fabricated metrics, scope violations) degrades it for everyone. The bus governance architecture implements Ostrom's eight principles. Clearly defined boundaries: agent identity verification on bus messages. Congruence: per-agent guardrails adapted to each agent's behavior. Collective-choice: PROPOSAL messages enable agents to propose rule changes. Monitoring: the bus verifier and audit gates. Graduated sanctions: warnings, probation, scope restrictions, and eventual exclusion. Conflict resolution: the human operator as arbiter. Nested enterprises: the bus operates within the broader governance framework of frozen contracts and CI enforcement.},
   keywords  = {commons governance, collective action, design principles, institutions, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}

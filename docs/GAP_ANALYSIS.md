@@ -1,268 +1,137 @@
 # Gap Analysis: HUMMBL Bibliography Coverage
 
-**Last Updated**: 2025-01-30  
-**Total Entries**: 48  
-**Analysis Period**: Initial Release
+**Last Updated**: 2026-04-08  
+**Total Entries**: 240  
+**Analysis Period**: Post-expansion audit (from 48 to 240 entries)
 
 ## 📊 Current Distribution
 
-### By Transformation
+### By Transformation (tag counts across all 240 entries)
 
-| Transformation | Count | Target | Gap | Status |
-|----------------|-------|--------|-----|--------|
-| SY (Synthesis) | 20 | 16-18 | +2 to +4 | ✅ Above target |
-| CO (Composition) | 18 | 16-18 | 0 to +2 | ✅ At target |
-| P (Perspective) | 17 | 16-18 | -1 to +1 | ✅ Near target |
-| RE (Recursion) | 16 | 16-18 | 0 to +2 | ✅ At target |
-| IN (Inversion) | 15 | 16-18 | -1 to -3 | ⚠️ Slightly below |
-| DE (Decomposition) | 12 | 16-18 | -4 to -6 | ❌ Needs attention |
+| Transformation | Count | % of Total | Ideal (16.7%) | Status |
+|----------------|-------|------------|---------------|--------|
+| SY (Synthesis) | 152 | 23.8% | overrepresented | ⚠️ Needs reduction |
+| CO (Composition) | 115 | 18.0% | slightly over | ✅ Good |
+| DE (Decomposition) | 103 | 16.2% | on target | ✅ Good |
+| RE (Recursion) | 97 | 15.2% | slightly under | ✅ Acceptable |
+| IN (Inversion) | 90 | 14.1% | under | ⚠️ Needs attention |
+| P (Perspective) | 80 | 12.5% | significantly under | ❌ Priority gap |
 
-### By Tier
+### By Tier (all tiers now at 20 entries)
 
-| Tier | Count | Percentage | Target | Status |
-|------|-------|------------|--------|--------|
-| T1 (Canonical) | 17 | 35.4% | 30-35% | ✅ Good |
-| T2 (Empirical) | 16 | 33.3% | 30-35% | ✅ Good |
-| T3 (Applied) | 15 | 31.3% | 30-35% | ✅ Good |
+| Tier | Entries | DOI Coverage | ISBN Coverage |
+|------|---------|-------------|--------------|
+| T1 (Canonical) | 20 | 30% | 95% |
+| T2 (Empirical) | 20 | 85% | 10% |
+| T3 (Applied) | 20 | 0% | 100% |
+| T4 (Agentic) | 20 | 75% | 25% |
+| T5 (Engineering) | 20 | 35% | 30% |
+| T6 (Governance) | 20 | 60% | 0% |
+| T7 (Emerging) | 20 | 100% | 0% |
+| T8 (Cognition) | 20 | 75% | 20% |
+| T9 (Economics) | 20 | 80% | 20% |
+| T10 (Collaboration) | 20 | 90% | 10% |
+| T11 (Security) | 20 | 75% | 0% |
+| T12 (Complexity) | 20 | 70% | 50% |
 
 ## 🎯 Priority Areas
 
-### 1. Decomposition (DE) - HIGH PRIORITY
+### 1. Perspective (P) - HIGH PRIORITY
 
-**Current**: 12 entries  
-**Target**: 16-18 entries  
-**Gap**: 4-6 entries needed
+**Current**: 80 tags (12.5% of total)  
+**Ideal**: ~107 tags (16.7%)  
+**Gap**: ~27 additional P tags needed
 
-**Rationale**: Analytical and reductionist thinking is fundamental to HUMMBL framework but currently underrepresented.
+**Rationale**: Perspective -- the ability to frame, name, and shift viewpoint -- is the most underrepresented transformation. Many entries tagged SY could be reexamined for P relevance.
 
-**Candidate Works**:
+**Candidate new entries** (if tiers expand beyond 20):
+- Gadamer (1989) - *Truth and Method* (hermeneutic perspective) - T1
+- Goffman (1974) - *Frame Analysis* (social framing) - T1
+- Nagel (1974) - "What Is It Like to Be a Bat?" (phenomenal perspective) - T1
+- de Bono (1985) - *Six Thinking Hats* (perspective switching) - T3
 
-1. **Polya (1945)** - *How to Solve It*
-   - Tier: T1 (Canonical)
-   - Focus: Problem decomposition strategies
-   - Transformation: DE, CO
-   - Status: High priority
-
-2. **Marr (1982)** - *Vision: A Computational Approach*
-   - Tier: T1 (Canonical)
-   - Focus: Three levels of analysis
-   - Transformation: DE, CO
-   - Status: High priority
-
-3. **Jackson (1995)** - *Software Requirements & Specifications*
-   - Tier: T2 (Empirical)
-   - Focus: Problem decomposition in software
-   - Transformation: DE
-   - Status: Medium priority
-
-4. **Minto (1987)** - *The Pyramid Principle*
-   - Tier: T3 (Applied)
-   - Focus: Logical structuring and decomposition
-   - Transformation: DE, CO
-   - Status: Medium priority
-
-5. **Rittel & Webber (1973)** - *Dilemmas in a General Theory of Planning*
-   - Tier: T2 (Empirical)
-   - Focus: Wicked problems and decomposition limits
-   - Transformation: DE, SY
-   - Status: Medium priority
-
-6. **Parnas (1972)** - *On the Criteria To Be Used in Decomposing Systems*
-   - Tier: T2 (Empirical)
-   - Focus: Modular decomposition
-   - Transformation: DE, CO
-   - Status: Medium priority
+**Rebalancing opportunity**: Review entries where SY is tertiary and P better describes the content.
 
 ### 2. Inversion (IN) - MEDIUM PRIORITY
 
-**Current**: 15 entries  
-**Target**: 16-18 entries  
-**Gap**: 1-3 entries needed
+**Current**: 90 tags (14.1% of total)  
+**Ideal**: ~107 tags (16.7%)  
+**Gap**: ~17 additional IN tags needed
 
-**Rationale**: Inversion thinking is unique to HUMMBL and needs diverse examples.
+**Candidate new entries**:
+- Munger (1994) - *Poor Charlie's Almanack* (inversion in decisions) - T3
+- Popper (1959) - *Logic of Scientific Discovery* (falsification) - T1
+- Watzlawick (1974) - *Change* (paradoxical interventions) - T1
+- Argyris (1977) - Double-loop learning (questioning assumptions) - T2
 
-**Candidate Works**:
+### 3. SY Overrepresentation - MEDIUM PRIORITY
 
-1. **Munger (1994)** - *Poor Charlie's Almanack*
-   - Tier: T3 (Applied)
-   - Focus: Inversion in decision-making
-   - Transformation: IN, P
-   - Status: High priority
+**Current**: 152 tags (23.8%)  
+**Ideal**: ~107 tags (16.7%)  
+**Excess**: ~45 tags over ideal
 
-2. **Cialdini (2001)** - *Influence: Science and Practice*
-   - Tier: T2 (Empirical)
-   - Focus: Reverse psychology and influence
-   - Transformation: IN, P
-   - Status: Medium priority
+Many entries default to SY as a catch-all for "systems-related." Rebalancing should reassign SY to more specific transformations where content warrants it.
 
-3. **Weick (1995)** - *Sensemaking in Organizations*
-   - Tier: T1 (Canonical)
-   - Focus: Retrospective sensemaking (backward reasoning)
-   - Transformation: IN, P, SY
-   - Status: High priority
+### Previously Identified Gaps (Now Addressed)
 
-4. **Gladwell (2005)** - *Blink*
-   - Tier: T3 (Applied)
-   - Focus: Adaptive unconscious and rapid cognition
-   - Transformation: IN, P
-   - Status: Low priority
-
-5. **Einhorn & Hogarth (1981)** - *Behavioral Decision Theory*
-   - Tier: T2 (Empirical)
-   - Focus: Hindsight bias and backward reasoning
-   - Transformation: IN, DE
-   - Status: Medium priority
-
-## 📈 Secondary Opportunities
-
-### Perspective (P)
-**Status**: Near target but could strengthen with:
-
-1. **Gadamer (1989)** - *Truth and Method*
-   - Hermeneutic perspective and interpretation
-   - T1 (Canonical), High impact
-
-2. **Goffman (1974)** - *Frame Analysis*
-   - Social framing and perspective
-   - T1 (Canonical), Medium impact
-
-### Recursion (RE)
-**Status**: At target but opportunities for depth:
-
-1. **Bateson (1972)** - *Steps to an Ecology of Mind*
-   - Recursive patterns in nature
-   - T1 (Canonical), High impact
-
-2. **Pask (1975)** - *Conversation Theory*
-   - Cybernetic recursion
-   - T2 (Empirical), Medium impact
+- ~~DE (Decomposition): was 12/48, now 103 tags across 240 entries~~ ✅ Resolved via T4-T12 expansion
+- ~~IN (Inversion): was 15/48, now 90 tags~~ ✅ Substantially improved
+- ~~DOI coverage: was 29%~~ ✅ Now 65% (155/240)
 
 ## 🔍 Quality Enhancements
 
 ### DOI Coverage
-**Current**: 29.2% (14/48 entries)  
-**Target**: 40-50%  
-**Action**: Run `npm run find-dois` for batch enrichment
-
-**Priority Articles Missing DOIs**:
-- Most T2 (Empirical) articles should have DOIs
-- Focus on articles published after 2000
-- Use CrossRef API for automatic discovery
+**Current**: 64.6% (155/240 entries)  
+**Target**: 75-80%  
+**Best tiers**: T7 (100%), T10 (90%), T2 (85%)  
+**Worst tiers**: T3 (0%, trade books), T1 (30%), T5 (35%)  
+**Action**: Run `npm run find-dois` for batch enrichment of T1 and T5
 
 ### ISBN Coverage  
-**Current**: 72.9% (35/48 entries)  
-**Target**: 85-90%  
-**Action**: Manual verification for remaining books
-
-## 🗓️ Quarterly Review Schedule
-
-### Q1 2025 (Current)
-- [ ] Add 4-6 Decomposition entries
-- [ ] Add 1-3 Inversion entries
-- [ ] Enrich DOI coverage to 35%
-- [ ] Review and update transformations
-
-### Q2 2025
-- [ ] Balance Perspective entries
-- [ ] Add Recursion depth entries
-- [ ] Enrich DOI coverage to 40%
-- [ ] Cross-reference validation
-
-### Q3 2025
-- [ ] Review new publications (2024-2025)
-- [ ] Update abstracts and keywords
-- [ ] Community contribution review
-- [ ] Gap analysis refresh
-
-### Q4 2025
-- [ ] Annual comprehensive review
-- [ ] Transformation rebalancing
-- [ ] Archive outdated entries
-- [ ] Plan for 2026
+**Current**: 30% (72/240 entries)  
+**Target**: 50%  
+**Best tiers**: T3 (100%), T1 (95%), T12 (50%)  
+**Worst tiers**: T6, T7, T11 (0%)  
+**Note**: ISBN is primarily relevant for book entries; journal articles typically have DOIs instead.
 
 ## 🎓 Domain Coverage
 
-### Well-Covered Domains
-- ✅ Systems thinking
-- ✅ Cognitive psychology
-- ✅ Decision making under uncertainty
-- ✅ Design thinking
-- ✅ Organizational learning
+### Well-Covered Domains (via T4-T12 expansion)
+- ✅ Systems thinking (T1, T12)
+- ✅ Cognitive psychology (T2, T8)
+- ✅ Decision making (T2, T3)
+- ✅ AI safety & alignment (T4)
+- ✅ Software engineering patterns (T5)
+- ✅ AI governance & regulation (T6)
+- ✅ LLM agent research (T7)
+- ✅ Knowledge representation (T8)
+- ✅ Economics & platforms (T9)
+- ✅ Human-AI collaboration (T10)
+- ✅ Cybersecurity (T11)
+- ✅ Complex adaptive systems (T12)
 
-### Underrepresented Domains
-- ⚠️ Philosophy of science (especially epistemology)
-- ⚠️ Computational thinking
+### Underrepresented Domains (potential future tiers)
+- ⚠️ Philosophy of science / epistemology
 - ⚠️ Linguistics and language
-- ⚠️ Neuroscience and brain science
-- ⚠️ Mathematics and logic
-
-### Potential New Domains
-- 💡 Artificial intelligence and machine learning
-- 💡 Complexity science
-- 💡 Evolutionary thinking
-- 💡 Network theory
-- 💡 Information theory
-
-## 📋 Contribution Process
-
-To help fill gaps:
-
-1. **Review candidate list** above
-2. **Check availability** of works
-3. **Create issue** using [new-entry template](../.github/ISSUE_TEMPLATE/new-entry.md)
-4. **Provide complete BibTeX** with transformation mapping
-5. **Explain gap rationale** in submission
+- ⚠️ Mathematics and formal logic
+- ⚠️ Education and pedagogy
 
 ## 📊 Success Metrics
 
 ### Transformation Balance
-**Target**: Each transformation should have 16-18 entries (±10%)
+**Target**: Each transformation tag should represent ~16.7% of total (±3%)
 
 **Current Status**:
-- SY: 20 (+11% over target) - Consider pausing
-- CO: 18 (at target) - Maintain
-- P: 17 (slightly below) - Low priority additions
-- RE: 16 (at target) - Maintain
-- IN: 15 (-11% below target) - Active additions
-- DE: 12 (-29% below target) - HIGH PRIORITY
-
-### Quality Metrics
-- [ ] 100% abstracts (✅ ACHIEVED)
-- [ ] 100% HUMMBL keywords (✅ ACHIEVED)
-- [ ] 85% ISBN coverage (73% current)
-- [ ] 40% DOI coverage (29% current)
-- [ ] 0 duplicates (✅ ACHIEVED)
-- [ ] 0 validation errors (✅ ACHIEVED)
-
-## 🔄 Dynamic Updates
-
-This gap analysis is updated:
-- **Monthly**: Automatic stats generation
-- **Quarterly**: Manual review and priority adjustment
-- **Annually**: Comprehensive strategic review
-
-Check commit history for `gap-analysis-update` tags.
-
-## 📞 Community Input
-
-Have suggestions for filling gaps?
-- Open an issue with `gap-analysis` label
-- Tag with appropriate transformation (e.g., `DE`, `IN`)
-- Provide rationale and bibliographic details
-
-## 🎯 Long-Term Vision (2026-2027)
-
-- **Total Entries**: 60-70
-- **Transformation Balance**: All within ±5% of target
-- **Domain Coverage**: 2-3 new domains added
-- **Quality**: 50% DOI coverage, 90% ISBN coverage
-- **Community**: 10+ external contributors
-- **Impact**: Cited in 5+ academic papers
+- [x] 100% abstracts ✅
+- [x] 100% HUMMBL keywords ✅
+- [x] 0 duplicates ✅
+- [x] 0 validation errors ✅
+- [ ] DOI coverage: 65% (target 75%)
+- [ ] P tags: 12.5% (target 16.7%)
+- [ ] IN tags: 14.1% (target 16.7%)
+- [ ] SY tags: 23.8% (target 16.7%, reduce)
 
 ---
 
-**Last Review**: 2025-01-30  
-**Next Review**: 2025-04-30  
-**Reviewer**: HUMMBL Team
-
-**Questions?** Open issue with `gap-analysis` label.
+**Last Review**: 2026-04-08  
+**Reviewer**: Claude Opus 4.6 (automated audit)

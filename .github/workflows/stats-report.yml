@@ -30,19 +30,25 @@ jobs:
         npm ci
         
     - name: Generate statistics report
+      env:
+        NO_COLOR: '1'
+        FORCE_COLOR: '0'
       run: |
         cd toolkit
-        npm run stats > ../reports/$(date +%Y-%m-%d)-stats.md
-        
-    - name: Generate transformation keywords
-      run: |
-        cd toolkit
-        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
-        echo "---" >> ../reports/$(date +%Y-%m-%d)-stats.md
-        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
-        echo "# Transformation Keywords" >> ../reports/$(date +%Y-%m-%d)-stats.md
-        echo "" >> ../reports/$(date +%Y-%m-%d)-stats.md
-        npm run keywords >> ../reports/$(date +%Y-%m-%d)-stats.md
+        REPORT="../reports/$(date +%Y-%m-%d)-stats.md"
+        echo "# Weekly Statistics Report — $(date +%Y-%m-%d)" > "$REPORT"
+        echo "" >> "$REPORT"
+        echo '```' >> "$REPORT"
+        node src/stats.js ../bibliography 2>&1 >> "$REPORT"
+        echo '```' >> "$REPORT"
+        echo "" >> "$REPORT"
+        echo "---" >> "$REPORT"
+        echo "" >> "$REPORT"
+        echo "## JSON Summary" >> "$REPORT"
+        echo "" >> "$REPORT"
+        echo '```json' >> "$REPORT"
+        node src/stats.js ../bibliography --json 2>/dev/null >> "$REPORT"
+        echo '```' >> "$REPORT"
         
     - name: Commit report
       run: |

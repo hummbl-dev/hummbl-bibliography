@@ -1,12 +1,12 @@
 # HUMMBL Bibliography
 
-![Total Entries](https://img.shields.io/badge/entries-48-blue)
-![DOI Coverage](https://img.shields.io/badge/DOIs-29%25-yellow)
-![ISBN Coverage](https://img.shields.io/badge/ISBNs-73%25-green)
+![Total Entries](https://img.shields.io/badge/entries-240-blue)
+![DOI Coverage](https://img.shields.io/badge/DOIs-65%25-yellow)
+![ISBN Coverage](https://img.shields.io/badge/ISBNs-30%25-green)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 
-A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 48+ curated academic and practitioner works organized into 3 quality tiers, mapped to 6 cognitive transformations.
+A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 240 curated academic and practitioner works organized into 12 thematic tiers, mapped to 6 cognitive transformations.
 
 ## 🎯 Overview
 
@@ -23,26 +23,24 @@ This bibliography provides the theoretical foundation and empirical evidence for
 
 ## 📚 Bibliography Structure
 
-### Three Quality Tiers
+### Twelve Thematic Tiers (20 entries each)
 
-**T1: Canonical** (17 entries)
+| Tier | Domain | Examples |
+|------|--------|----------|
+| **T1: Canonical** | Foundational theoretical works | Meadows, Kahneman, Simon, Pearl |
+| **T2: Empirical** | Peer-reviewed research | Tversky & Kahneman, Klein, Gigerenzer |
+| **T3: Applied** | Practitioner texts | Lean Startup, Design Thinking, DevOps |
+| **T4: Agentic** | AI safety & multi-agent systems | Russell, Amodei, Constitutional AI |
+| **T5: Engineering** | Software patterns for agents | Circuit breakers, stigmergy, BDI, DbC |
+| **T6: Governance** | AI regulation & assurance | EU AI Act, NIST RMF, OWASP LLM Top 10 |
+| **T7: Emerging** | Cutting-edge agent research | ReAct, CoT, RAG, SWE-bench, ToT |
+| **T8: Cognition** | Mental models & knowledge | Craik, Piaget, Zettelkasten, CoP |
+| **T9: Economics** | AI economics & platforms | Coase, Tirole, scaling laws, auctions |
+| **T10: Collaboration** | Human-AI teaming | Licklider, CSCW, shared mental models |
+| **T11: Security** | Adversarial ML & defense | Goodfellow, zero trust, formal verification |
+| **T12: Complexity** | Complex adaptive systems | Holland, Kauffman, networks, cybernetics |
 
-- Foundational theoretical works
-- Seminal texts that define fields
-- Examples: Meadows' *Thinking in Systems*, Kahneman's *Thinking, Fast and Slow*
-
-**T2: Empirical** (16 entries)
-
-- Peer-reviewed research papers
-- Rigorous experimental findings
-- **Abstract Coverage: 100%** (all entries enhanced with 150-200 word summaries)
-- Examples: Tversky & Kahneman on heuristics, Simon on bounded rationality
-
-**T3: Applied** (15 entries)
-
-- Practitioner-focused texts
-- Industry applications
-- Examples: Ries' *Lean Startup*, Brown's *Change by Design*
+All 240 entries have abstracts (150-300 words) and HUMMBL transformation tags.
 
 ## 🚀 Quick Start
 
@@ -88,21 +86,22 @@ npm test
 
 ## 📊 Current Metrics
 
-Based on latest analysis:
+Based on latest analysis (April 2026):
 
-- **Total Entries**: 48 unique works
-- **Transformation Coverage**:
-  - SY (Synthesis): 20 entries
-  - CO (Composition): 18 entries
-  - P (Perspective): 17 entries
-  - RE (Recursion): 16 entries
-  - IN (Inversion): 15 entries
-  - DE (Decomposition): 12 entries
+- **Total Entries**: 240 unique works across 12 tiers
+- **Transformation Coverage** (tag count across all entries):
+  - SY (Synthesis): 152
+  - CO (Composition): 115
+  - DE (Decomposition): 103
+  - RE (Recursion): 97
+  - IN (Inversion): 90
+  - P (Perspective): 80
 - **Quality Metrics**:
-  - 100% have abstracts
+  - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
-  - 73% have ISBNs
-  - 29% have DOIs
+  - 65% have DOIs (155/240)
+  - 30% have ISBNs (72/240)
+  - 0 validation errors, 0 duplicates
 
 ## 🔄 HUMMBL Transformation Mapping
 
@@ -159,19 +158,14 @@ All submissions are automatically validated via pre-commit hooks and CI/CD.
 
 ## 🔍 Gap Analysis
 
-Current priorities for bibliography expansion:
+Current priorities for quality improvement:
 
-- **Decomposition (DE)**: Need 4-6 additional entries
-  - Analytical frameworks
-  - Problem decomposition methodologies
-  - Chunking and modularization
+- **Perspective (P)**: 80 tags (11.8%) -- underrepresented vs. 16.7% ideal
+- **Inversion (IN)**: 90 tags (13.8%) -- slightly below target
+- **DOI coverage**: 65% overall; T3 (applied/trade books) at 0%
+- **ISBN coverage**: Strong in T1/T3 but low in T4-T12
 
-- **Inversion (IN)**: Need 3-5 additional entries
-  - Negative space and contrapositive thinking
-  - Failure mode analysis
-  - Paradoxical interventions
-
-See [docs/GAP_ANALYSIS.md](docs/GAP_ANALYSIS.md) for candidate works.
+See [docs/GAP_ANALYSIS.md](docs/GAP_ANALYSIS.md) for detailed analysis.
 
 ## 🤖 Automation
 
@@ -215,5 +209,5 @@ Special thanks to the researchers, authors, and practitioners whose work forms t
 ---
 
 **Maintained by**: HUMMBL Team  
-**Last Updated**: 2025-01-30  
-**Version**: 1.0.0
+**Last Updated**: 2026-04-08  
+**Version**: 2.0.0
