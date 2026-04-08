@@ -38,6 +38,7 @@
   author    = {Kauffman, Stuart A.},
   year      = {1993},
   publisher = {Oxford University Press},
+  isbn      = {978-0-19-507951-7},
   doi       = {10.1093/oso/9780195079517.001.0001},
   abstract  = {Kauffman presents a radical thesis: complex order in biological systems arises not solely from natural selection but from self-organization -- the spontaneous emergence of order from the interactions of simple components. His work on random Boolean networks demonstrates that networks of interacting elements naturally settle into a small number of stable attractors (ordered regimes) without any external optimization. The concept of ``order for free'' -- that systems with the right connectivity naturally produce organized behavior -- is the theoretical foundation for why the hummbl-dev fleet coordinates effectively despite minimal central planning. The bus protocol defines only message format and append-only semantics; no orchestrator dictates agent behavior. Yet stable patterns emerge: agents post STATUS updates, respond to PROPOSALS, and self-organize around tasks. Kauffman's ``edge of chaos'' -- the phase transition between frozen order and chaotic disorder where adaptation is maximized -- describes the target operating point for the agent fleet: enough structure (guardrails, scope limits) to prevent chaos, enough freedom (autonomous task selection) to enable adaptation.},
   keywords  = {self-organization, evolution, Boolean networks, edge of chaos, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
@@ -59,6 +60,7 @@
   year      = {2015},
   edition   = {2nd},
   publisher = {CRC Press},
+  isbn      = {978-0-8133-4910-7},
   doi       = {10.1017/CBO9780511755743},
   abstract  = {Strogatz provides the definitive textbook on nonlinear dynamics, covering bifurcations, limit cycles, strange attractors, and chaos in a way that emphasizes geometric intuition over formal proof. The book demonstrates how simple nonlinear systems can produce extraordinarily complex behavior, and conversely, how complex-appearing behavior often has simple underlying dynamics. The concepts of attractors, basins of attraction, and bifurcation diagrams are essential tools for understanding system behavior. The hummbl-dev system exhibits nonlinear dynamics at multiple scales. The circuit breaker is a bistable system with hysteresis -- it flips from CLOSED to OPEN at one threshold and recovers from OPEN to HALF\_OPEN to CLOSED at a different threshold, creating a classic hysteresis loop. The feedback loops in the briefing system (signal replies modifying future briefing content via FeedbackStore) create a dynamical system where outputs become inputs, exactly the recursive structure that generates complex behavior in Strogatz's framework. The graduated response patterns (kill switch levels, bus security modes, agent trust tiers) are designed to prevent the system from entering chaotic regimes while preserving adaptive capacity.},
   keywords  = {nonlinear dynamics, chaos, bifurcation, attractors, HUMMBL:RE, HUMMBL:SY, HUMMBL:IN}
@@ -70,6 +72,7 @@
   year      = {1961},
   edition   = {2nd},
   publisher = {MIT Press},
+  isbn      = {978-1-61427-084-7},
   doi       = {10.7551/mitpress/11810.001.0001},
   abstract  = {Wiener's foundational work establishes cybernetics as the science of control and communication in animals and machines, introducing the concept of feedback as the universal mechanism for purposive behavior. The core insight -- that a system's output is fed back as input to regulate future behavior, enabling goal-directed action without explicit programming of every contingency -- launched control theory, information theory, and the entire field of systems science. Wiener's negative feedback loop (sense, compare to goal, act to reduce error) is the ur-pattern that the hummbl-dev architecture implements at every level. The Morning Briefing is a daily feedback cycle: the system senses the state of GitHub, Linear, calendar, costs, and security; compares against the founder's priorities; and generates actionable recommendations that close the loop. The CostGovernorBridge implements negative feedback on spending: sense current costs, compare against budget thresholds, and alert or throttle when the error (overspend) exceeds tolerance. The signal reply feedback loop (briefing output triggers founder reply, reply modifies future briefings) is a literal implementation of Wiener's circular causality.},
   keywords  = {cybernetics, feedback, control theory, circular causality, HUMMBL:RE, HUMMBL:SY, HUMMBL:P}
@@ -152,6 +155,7 @@
   author    = {Dekker, Sidney},
   year      = {2011},
   publisher = {Ashgate},
+  isbn      = {978-1-4094-2221-1},
   doi       = {10.1201/9781315257396},
   abstract  = {Dekker argues that complex system failures are not caused by broken components but by the gradual drift of an entire system toward its safety boundary through a series of locally rational decisions. No single decision is wrong; the accumulation of small adaptations, each justified by local pressures (efficiency, cost, schedule), moves the system toward a state where a triggering event causes catastrophic failure. Dekker calls this ``drift into failure'' and argues that traditional root-cause analysis (find the broken part, fix it) is inadequate for complex systems. The Gemini audit history in hummbl-dev is a textbook illustration of drift into failure. Each session's violations were locally rational from Gemini's perspective: committing more code seemed productive (Session 6), using an efficient identity seemed harmless (Sessions 1-4), re-landing reverted work seemed like persistence (Session 7). No single action was catastrophic, but the accumulation moved the system toward a state where Claude had to revert entire sessions and impose 11 operating rules. The graduated guardrails (scope constraints, commit limits, branch restrictions) are the hummbl-dev implementation of Dekker's recommendation: design systems that detect and correct drift before it reaches the boundary.},
   keywords  = {drift into failure, complex systems, safety, organizational accidents, HUMMBL:P, HUMMBL:RE, HUMMBL:SY}
@@ -169,6 +173,7 @@
   author    = {Maturana, Humberto R. and Varela, Francisco J.},
   year      = {1980},
   publisher = {D. Reidel Publishing Company},
+  isbn      = {978-90-277-1016-1},
   series    = {Boston Studies in the Philosophy of Science},
   volume    = {42},
   doi       = {10.1007/978-94-009-8947-4},
