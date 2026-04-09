@@ -30,9 +30,9 @@
 
   "bostrom": {
     "lens": "Futurist of Existential Risk — superintelligence, control problem, simulation",
-    "primary": ["Russell2019HumanCompatible", "NISTRMF2023", "Brundage2020Verifiable"],
-    "secondary": ["Li2023TrustworthyAI", "EUAIAct2024", "Bai2022Constitutional"],
-    "gaps": "No direct Bostrom 'Superintelligence' entry. Russell's 'Human Compatible' is the closest proxy."
+    "primary": ["Bostrom2014Superintelligence", "Russell2019HumanCompatible"],
+    "secondary": ["Christiano2017DeepRL", "HadfieldMenell2017OffSwitch", "Bai2022Constitutional", "NISTRMF2023"],
+    "gaps": "No simulation argument or existential risk survey entry beyond Bostrom's own book."
   },
 
   "bourdieu": {
@@ -115,8 +115,8 @@
   "luhmann": {
     "lens": "Systems Theorist — autopoiesis, functional differentiation, social systems",
     "primary": ["Luhmann1981Zettelkasten", "Maturana1980Autopoiesis"],
-    "secondary": ["Meadows2008ThinkingSystems", "Ashby1956Cybernetics", "Beer1981Brain"],
-    "gaps": "Zettelkasten entry covers cognition angle. No 'Social Systems' (1984) or 'Theory of Society' entry. Add to T12 or T2."
+    "secondary": ["Meadows2008ThinkingSystems", "Ashby1956Cybernetics", "Beer1981Brain", "Park2023GenerativeAgents"],
+    "gaps": "Zettelkasten entry covers cognition angle. No 'Social Systems' (1984) or 'Theory of Society' entry. Add to T12 or T2. Park2023 adds autopoietic agent simulation."
   },
 
   "marx": {
