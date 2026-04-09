@@ -1,0 +1,219 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "generated": "2026-04-09",
+    "description": "Mapping of ARCANA agent lenses to HUMMBL bibliography entries. Each lens lists primary (most directly grounding) and secondary (adjacent/supporting) citations. Only keys that exist in the bibliography are listed.",
+    "coverage_note": "The bibliography is optimized for AI governance and engineering (T4, T5, T7, T11). ARCANA lenses requiring deep social theory (Weber, Foucault, Habermas, Bourdieu, Marx) are weakly supported and are primary candidates for T2 or future expansion entries.",
+    "query_usage": "node toolkit/src/query.js --keyword HUMMBL:BKI --format json"
+  },
+
+  "ashby": {
+    "lens": "Cybernetician — Requisite Variety, homeostasis, viable systems",
+    "primary": ["Ashby1956Cybernetics", "Wiener1961Cybernetics", "Beer1981Brain"],
+    "secondary": ["Maturana1980Autopoiesis", "Meadows2008ThinkingSystems"],
+    "gaps": "No Ashby 'Design for a Brain' entry. Beer's VSM is covered."
+  },
+
+  "bateson": {
+    "lens": "Ecologist of Mind — double bind, levels of learning, cybernetics",
+    "primary": ["Wiener1961Cybernetics", "Ashby1956Cybernetics"],
+    "secondary": ["Meadows2008ThinkingSystems", "Maturana1980Autopoiesis"],
+    "gaps": "No direct Bateson entry ('Steps to an Ecology of Mind'). Strong gap — add to T2 or T12."
+  },
+
+  "bki": {
+    "lens": "Belonging as Knowledge Infrastructure — neurobiological prerequisites for cognition",
+    "primary": ["Edmondson1999PsychologicalSafety", "Nonaka1994KnowledgeCreation", "Walsh1991OrganizationalMemory"],
+    "secondary": ["Wegner1987TransactiveMemory", "CannonBowers1993SharedMentalModels", "Klein2005CommonGround", "Hollan2000DistributedCognition"],
+    "gaps": "No Walton+Cohen belonging uncertainty entry. No Bourdieu habitus entry. BKI Proposition 1 (neurobiological) weakly supported — add Cozolino or Lieberman on social neuroscience."
+  },
+
+  "bostrom": {
+    "lens": "Futurist of Existential Risk — superintelligence, control problem, simulation",
+    "primary": ["Bostrom2014Superintelligence", "Russell2019HumanCompatible"],
+    "secondary": ["Christiano2017DeepRL", "HadfieldMenell2017OffSwitch", "Bai2022Constitutional", "NISTRMF2023"],
+    "gaps": "No simulation argument or existential risk survey entry beyond Bostrom's own book."
+  },
+
+  "bourdieu": {
+    "lens": "Field Theorist — habitus, cultural capital, symbolic violence",
+    "primary": [],
+    "secondary": ["Kuhn1996Structure", "Walsh1991OrganizationalMemory"],
+    "gaps": "CRITICAL GAP — no Bourdieu entries in bibliography. Add 'Outline of a Theory of Practice' (1977) and 'Distinction' (1984) to T2 or new T14."
+  },
+
+  "burnham": {
+    "lens": "Managerial Revolutionary — separation of ownership and control, technocracy",
+    "primary": [],
+    "secondary": ["Simon1996Sciences"],
+    "gaps": "CRITICAL GAP — no Burnham entry ('The Managerial Revolution', 1941). Strong candidate for T1 expansion."
+  },
+
+  "chomsky": {
+    "lens": "Propaganda Analyst — manufacturing consent, political economy of media",
+    "primary": [],
+    "secondary": ["Zuboff2019SurveillanceCapitalism"],
+    "gaps": "No Chomsky entry. 'Manufacturing Consent' (1988) should be in T1 or T2."
+  },
+
+  "derrida": {
+    "lens": "Deconstructionist — différance, logocentrism, supplement",
+    "primary": [],
+    "secondary": [],
+    "gaps": "No Derrida entries. Low coverage in continental philosophy overall."
+  },
+
+  "foucault": {
+    "lens": "Archaeologist of Power — power/knowledge, discourse, biopolitics",
+    "primary": ["Raji2020Auditing", "Mitchell2019ModelCards", "Gebru2021Datasheets"],
+    "secondary": ["Floridi2018AI4People", "Li2023TrustworthyAI"],
+    "gaps": "No direct Foucault entry. Raji/Mitchell/Gebru represent his power-analysis in the AI domain. Add 'Discipline and Punish' or 'Power/Knowledge' to T2."
+  },
+
+  "gramsci": {
+    "lens": "Left Mirror — hegemony, organic intellectuals, war of position",
+    "primary": ["Kuhn1996Structure"],
+    "secondary": ["Floridi2018AI4People"],
+    "gaps": "No Gramsci entry. 'Selections from the Prison Notebooks' should be in T1 or T2."
+  },
+
+  "habermas": {
+    "lens": "Communicative Rationalist — public sphere, discourse ethics, communicative action",
+    "primary": ["Floridi2018AI4People", "Brundage2020Verifiable"],
+    "secondary": ["NISTRMF2023", "EUAIAct2024"],
+    "gaps": "No direct Habermas entry. Floridi's AI4People framework is Habermasian in structure. Add 'The Theory of Communicative Action' to T2."
+  },
+
+  "heidegger": {
+    "lens": "Ontologist — Being-in-the-world, enframing, authenticity",
+    "primary": [],
+    "secondary": ["Rittel1973WickedProblems"],
+    "gaps": "No Heidegger entry. 'The Question Concerning Technology' is highly relevant to AI governance framing."
+  },
+
+  "ibn_khaldun": {
+    "lens": "Civilizational Historian — asabiyyah, Khaldun Cycle, economic foundations of power",
+    "primary": [],
+    "secondary": ["Taleb2007BlackSwan"],
+    "gaps": "No Ibn Khaldun entry ('Muqaddimah'). Unique non-Western voice — strong candidate for T1 expansion."
+  },
+
+  "kissinger": {
+    "lens": "Grand Strategist — balance of power, realpolitik, international order",
+    "primary": ["EUAIAct2024", "NISTRMF2023"],
+    "secondary": ["Brundage2020Verifiable"],
+    "gaps": "No Kissinger entry. 'World Order' (2014) or 'The Age of AI' (2021) relevant for geopolitics of AI."
+  },
+
+  "land": {
+    "lens": "Accelerationist — techno-capital acceleration, hyperstition, Dark Enlightenment",
+    "primary": [],
+    "secondary": ["Taleb2007BlackSwan", "Meadows2008ThinkingSystems"],
+    "gaps": "No Land entry. Intentionally marginal — represent via adjacent complexity/emergence literature."
+  },
+
+  "luhmann": {
+    "lens": "Systems Theorist — autopoiesis, functional differentiation, social systems",
+    "primary": ["Luhmann1981Zettelkasten", "Maturana1980Autopoiesis"],
+    "secondary": ["Meadows2008ThinkingSystems", "Ashby1956Cybernetics", "Beer1981Brain", "Park2023GenerativeAgents"],
+    "gaps": "Zettelkasten entry covers cognition angle. No 'Social Systems' (1984) or 'Theory of Society' entry. Add to T12 or T2. Park2023 adds autopoietic agent simulation."
+  },
+
+  "marx": {
+    "lens": "Historical Materialist — base/superstructure, alienation, class struggle",
+    "primary": [],
+    "secondary": ["Akerlof1970Lemons"],
+    "gaps": "No Marx entry. 'Capital Vol. 1' relevant for AI labor displacement framing."
+  },
+
+  "mcluhan": {
+    "lens": "Medium Theorist — the medium is the message, hot/cool media, extensions of man",
+    "primary": [],
+    "secondary": ["Licklider1960ManComputer"],
+    "gaps": "No McLuhan entry. 'Understanding Media' (1964) essential for AI-as-medium analysis."
+  },
+
+  "measurement": {
+    "lens": "Metrologist — Goodhart's Law, Campbell's Law, proxy metrics",
+    "primary": ["Liang2023HELM", "Liu2024AgentBench", "Jimenez2024SWEBench"],
+    "secondary": ["Mitchell2019ModelCards", "Gebru2021Datasheets", "Sculley2015TechDebt"],
+    "gaps": "No direct Goodhart/Campbell entry. HELM and AgentBench are concrete implementations of measurement theory applied to LLMs."
+  },
+
+  "nietzsche": {
+    "lens": "Genealogist — will to power, perspectivism, ressentiment, nihilism",
+    "primary": [],
+    "secondary": ["Kuhn1996Structure"],
+    "gaps": "No Nietzsche entry. 'On the Genealogy of Morals' (1887) is the source text."
+  },
+
+  "pareto": {
+    "lens": "Elite Theorist — circulation of elites, Lions vs Foxes, 80/20",
+    "primary": [],
+    "secondary": ["Taleb2007BlackSwan", "Akerlof1970Lemons"],
+    "gaps": "No Pareto entry. Add 'The Mind and Society' (1935) or cite via Burnham."
+  },
+
+  "popper": {
+    "lens": "Falsificationist — critical rationalism, falsification, open society",
+    "primary": ["Kuhn1996Structure"],
+    "secondary": ["Pearl2009Causality", "Floridi2018AI4People"],
+    "gaps": "Kuhn is Popper's key interlocutor. No direct Popper entry — add 'The Logic of Scientific Discovery' to T1."
+  },
+
+  "schmitt": {
+    "lens": "Jurist of the Exception — sovereignty, friend/enemy, state of exception",
+    "primary": [],
+    "secondary": ["EUAIAct2024", "Sandhu1996RBAC"],
+    "gaps": "No Schmitt entry. Kill-switch and governance authority patterns are Schmittian in structure."
+  },
+
+  "strauss": {
+    "lens": "Careful Reader — esoteric writing, persecution, natural right vs historicism",
+    "primary": [],
+    "secondary": ["Kuhn1996Structure"],
+    "gaps": "No Strauss entry. Represent via Kuhn (paradigm concealment) and close-reading methodology."
+  },
+
+  "taleb": {
+    "lens": "Uncertainty Theorist — antifragility, black swans, skin in the game, fat tails",
+    "primary": ["Taleb2007BlackSwan"],
+    "secondary": ["Meadows2008ThinkingSystems", "Sculley2015TechDebt"],
+    "gaps": "'The Black Swan' is in T1. No 'Antifragile' (2012) entry — strong addition for T1 or T9."
+  },
+
+  "veblen": {
+    "lens": "Institutional Economist — conspicuous consumption, pecuniary emulation, engineers vs price system",
+    "primary": [],
+    "secondary": ["Akerlof1970Lemons", "VonNeumann1944GameTheory"],
+    "gaps": "No Veblen entry. 'The Theory of the Leisure Class' (1899) relevant for AI status signaling analysis."
+  },
+
+  "weber": {
+    "lens": "Sociologist of Rationalization — bureaucracy, iron cage, charismatic vs rational-legal authority",
+    "primary": [],
+    "secondary": ["Simon1996Sciences", "Walsh1991OrganizationalMemory"],
+    "gaps": "CRITICAL GAP — no Weber entry. 'Economy and Society' or 'The Protestant Ethic' essential for governance rationalization analysis."
+  },
+
+  "yarvin": {
+    "lens": "Reactionary Engineer — neoreaction, Cathedral critique, patchwork governance",
+    "primary": [],
+    "secondary": ["Kuhn1996Structure", "Taleb2007BlackSwan"],
+    "gaps": "No Yarvin/Moldbug entry (blog-native, no academic publication). Represent via Burnham (managerial revolution thesis) and Pareto (elite circulation)."
+  },
+
+  "zuboff": {
+    "lens": "Surveillance Capitalism Analyst — behavioral modification, prediction imperative, instrumentarian power",
+    "primary": ["Zuboff2019SurveillanceCapitalism"],
+    "secondary": ["GDPR2016", "EUAIAct2024", "Raji2020Auditing"],
+    "gaps": "Zuboff's book is in bibliography. Strong coverage for this lens."
+  },
+
+  "synthesist": {
+    "lens": "ARCANA Coordinator — cross-domain synthesis, convergence mapping",
+    "primary": ["Pearl2009Causality", "Meadows2008ThinkingSystems", "Hofstadter1979Godel"],
+    "secondary": ["Kuhn1996Structure", "Taleb2007BlackSwan", "Simon1996Sciences"],
+    "gaps": "No direct synthesis methodology entry beyond Pearl's causal calculus."
+  }
+}

@@ -18,6 +18,7 @@
     "stats": "node src/stats.js ../bibliography",
     "stats:json": "node src/stats.js ../bibliography --json",
     "keywords": "node src/extract-keywords.js ../bibliography",
+    "query": "node src/query.js ../bibliography",
     "merge": "node src/merge-entries.js",
     "test": "npm run validate && npm run check-duplicates && npm run check-required-fields",
     "precommit": "npm run validate",
