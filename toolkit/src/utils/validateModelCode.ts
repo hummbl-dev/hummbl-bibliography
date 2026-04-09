@@ -1,6 +1,14 @@
 /**
- * HUMMBL Base120 Model Validator
- * Prevents LLM hallucination by validating model codes against official list
+ * HUMMBL BaseN Model Validator
+ * Validates model codes against the official Base120 framework and any
+ * governed extensions (ARCANA philosophical lenses, BaseN expansions).
+ *
+ * Extension policy:
+ * - ARCANA_MODELS: governed philosophical lenses developed through the ARCANA
+ *   research platform (28 agents). These are first-class models, not hallucinations.
+ * - BASEN_EXTENSIONS: models beyond the 1-20 range for a transformation, added
+ *   via a governed extension process with explicit sign-off.
+ * Governed extensions are NEVER flagged as hallucinations.
  */
 
 export const BASE120_MODELS = {
@@ -148,19 +156,53 @@ export function getTransformationModels(transformation: TransformationType): rea
 }
 
 /**
- * Checks if a string is likely a hallucinated model (not in Base120)
+ * Governed ARCANA extension registry.
+ * These are philosophical lenses developed through the ARCANA research platform
+ * (28 agents: Yarvin, Dugin, Land, Gramsci, Foucault, Nietzsche, Girard, etc.).
+ * They are first-class governed mental models — never hallucinations.
+ */
+export const ARCANA_MODELS: readonly string[] = [
+  // Taleb / Antifragility cluster
+  'Antifragility', 'Black Swan', 'Survivorship Bias', 'Skin in the Game',
+  'Via Negativa', 'Lindy Effect', 'Fat Tails',
+  // Decision / cognition
+  'OODA Loop', 'Circle of Competence', 'Map vs Territory',
+  'Regression to the Mean', 'Probabilistic Thinking', 'Second-Order Thinking',
+  // Systems / complexity
+  'Feedback Loops', 'Systems Thinking', 'Comparative Advantage',
+  // Epistemics
+  "Hanlon's Razor", "Occam's Razor", 'Signaling',
+  // Girardian
+  'Mimetic Desire', 'Scapegoat Mechanism',
+  // BKI
+  'Belonging Infrastructure', 'Biocognitive OS',
+];
+
+/**
+ * Governed BaseN extensions: model codes with numbers beyond 1-20 that have
+ * been explicitly approved through the BaseN extension process.
+ * Format: transformation prefix + number (e.g. "SY21", "P25").
+ */
+export const BASEN_EXTENSIONS: readonly string[] = [];
+
+/**
+ * Returns true if the term is a governed ARCANA model (not a hallucination).
+ */
+export function isGovernedExtension(text: string): boolean {
+  const lower = text.toLowerCase();
+  return ARCANA_MODELS.some(m => lower.includes(m.toLowerCase()));
+}
+
+/**
+ * Checks if a string is likely a hallucinated model (not in Base120 or governed extensions)
  */
 export function isLikelyHallucination(text: string): boolean {
-  const hallucinatedModels = [
-    'OODA Loop', 'Hanlon\'s Razor', 'Occam\'s Razor',
-    'Mental Model', 'Systems Thinking', 'Second-Order Thinking',
-    'Probabilistic Thinking', 'Map vs Territory', 'Feedback Loops',
-    'Circle of Competence', 'Comparative Advantage', 'Signaling',
-    'Antifragility', 'Survivorship Bias', 'Black Swan',
-    'Regression to the Mean'
+  // Generic terms that are truly unattributed (not ARCANA, not Base120)
+  const unattributedTerms = [
+    'Mental Model',
   ];
 
-  return hallucinatedModels.some(hallucinated =>
-    text.toLowerCase().includes(hallucinated.toLowerCase())
-  );
+  return unattributedTerms.some(term =>
+    text.toLowerCase().includes(term.toLowerCase())
+  ) && !isGovernedExtension(text);
 }

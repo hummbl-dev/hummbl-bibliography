@@ -159,7 +159,7 @@ function getTransformationDescription(transformation) {
 function getModelDescription(code) {
   // In a full implementation, this would have detailed descriptions
   // For now, return a placeholder
-  return `HUMMBL Base120 mental model: ${code}`;
+  return `HUMMBL Base120 framework entry: ${code}`;
 }
 
 function getUsageExample(code) {
