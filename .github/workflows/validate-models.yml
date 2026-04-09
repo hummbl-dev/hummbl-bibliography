@@ -55,14 +55,18 @@ jobs:
           import { readFileSync, readdirSync, statSync } from 'fs';
           import { join, extname } from 'path';
 
-          // Find all relevant files
+          // Find all relevant files.
+          // Excluded: toolkit/src and toolkit/dist — those are the validator
+          // source files themselves and would cause self-referential false
+          // positives (test cases for invalid codes, hallucination term lists).
+          const EXCLUDED_DIRS = new Set(['node_modules', 'dist', 'src']);
           const files = [];
           const walk = (dir) => {
             const items = readdirSync(dir);
             items.forEach(item => {
               const fullPath = join(dir, item);
               const stat = statSync(fullPath);
-              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+              if (stat.isDirectory() && !item.startsWith('.') && !EXCLUDED_DIRS.has(item)) {
                 walk(fullPath);
               } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(extname(item))) {
                 files.push(fullPath);
@@ -70,7 +74,9 @@ jobs:
             });
           };
 
-          walk('.');
+          // Walk from repo root (one level up from toolkit/) so content
+          // files in bibliography/, docs/, mappings/, governance/ are scanned
+          walk('..');
 
           let totalValid = 0;
           let totalInvalid = 0;

@@ -3,7 +3,7 @@
  * Centralized validation and lookup service for mental models
  */
 
-import { validateModelCode, BASE120_MODELS, TransformationType, ModelCode } from './validateModelCode.js';
+import { validateModelCode, BASE120_MODELS, isGovernedExtension, isLikelyHallucination, TransformationType, ModelCode } from './validateModelCode.js';
 
 export interface ModelDefinition {
   code: ModelCode;
@@ -137,19 +137,12 @@ export class ModelRegistry {
   }
 
   /**
-   * Detect hallucinated mental models
+   * Detect hallucinated mental models.
+   * ARCANA governed models and BaseN extensions are NOT hallucinations.
    */
   private detectHallucinations(text: string): string[] {
-    const forbidden = [
-      'OODA Loop', 'Hanlon\'s Razor', 'Occam\'s Razor',
-      'Antifragility', 'Black Swan', 'Survivorship Bias',
-      'Circle of Competence', 'Map vs Territory',
-      'Regression to the Mean', 'Mental Model'
-    ];
-
-    return forbidden.filter(term =>
-      text.toLowerCase().includes(term.toLowerCase())
-    );
+    if (isGovernedExtension(text)) return [];
+    return isLikelyHallucination(text) ? ['Mental Model (unattributed)'] : [];
   }
 
   /**

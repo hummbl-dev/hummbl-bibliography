@@ -3,7 +3,7 @@
  * Prevents hallucination by monitoring agent outputs in real-time
  */
 
-import { validateModelCode, isLikelyHallucination, ModelCode } from './validateModelCode.js';
+import { validateModelCode, isLikelyHallucination, isGovernedExtension, ModelCode } from './validateModelCode.js';
 
 export interface AuditReport {
   references: ModelReference[];
@@ -85,18 +85,15 @@ function extractReferences(text: string): ModelReference[] {
 }
 
 /**
- * Detect hallucinated mental model references
+ * Detect hallucinated mental model references.
+ * Governed ARCANA models and BaseN extensions are excluded from hallucination
+ * detection — they are first-class governed models, not noise.
  */
 function detectHallucinations(text: string): string[] {
-  const forbidden = [
-    'OODA Loop', 'Hanlon\'s Razor', 'Occam\'s Razor',
-    'Antifragility', 'Black Swan', 'Survivorship Bias',
-    'Circle of Competence', 'Map vs Territory'
-  ];
-
-  return forbidden.filter(term =>
-    text.toLowerCase().includes(term.toLowerCase())
-  );
+  // Only flag terms that are truly unattributed AND not governed extensions
+  return isLikelyHallucination(text) && !isGovernedExtension(text)
+    ? ['Mental Model (unattributed)']
+    : [];
 }
 
 /**
