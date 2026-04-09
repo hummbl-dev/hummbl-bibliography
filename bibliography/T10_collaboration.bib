@@ -168,6 +168,7 @@
   number    = {1},
   pages     = {2--11},
   % No standard DOI -- AAAI HCOMP 2019 proceedings; available at https://ojs.aaai.org/index.php/HCOMP/article/view/5285
+  doi                = {10.1609/hcomp.v7i1.5285},
   abstract  = {Bansal et al. demonstrate that human-AI team performance depends not just on AI accuracy but on the human's mental model of the AI's error boundary -- knowing when the AI is likely to be wrong. This finding has direct implications for the hummbl-dev agent guardrails architecture. The Gemini guardrails document is essentially a formalized mental model of Gemini's error boundary: it catalogs exactly which tasks Gemini performs well (writing tests, using approved bus types) and which it performs poorly (scope compliance, metric accuracy, respecting reverts). This mental model enables the human operator to calibrate trust and allocate tasks appropriately -- giving Gemini constrained test-writing tasks where its error rate is low, and withholding open-ended briefs where its error rate is high. The audit history table in the guardrails document is a living record of mental model refinement across seven sessions.},
   keywords  = {mental models, human-AI teams, trust calibration, error boundaries, HUMMBL:P, HUMMBL:IN, HUMMBL:CO}
 }
@@ -262,6 +263,7 @@
   publisher = {Lawrence Erlbaum Associates},
   isbn      = {978-0-8058-2396-2},
   % No DOI -- LEA book; no registered DOI
+  % No DOI available -- trade book (Lawrence Erlbaum); no registered CrossRef DOI
   abstract  = {Vicente develops cognitive work analysis (CWA) as a framework for analyzing and designing complex sociotechnical systems. CWA proceeds through five phases: work domain analysis (what constraints shape the work), control task analysis (what activities are required), strategies analysis (how activities can be carried out), social organization and cooperation analysis (how work is distributed), and worker competencies analysis (what skills are needed). Unlike task analysis approaches that prescribe specific procedures, CWA models the constraints within which workers must operate, supporting adaptation rather than scripting. The hummbl-dev architecture can be analyzed through CWA's five phases. Work domain analysis: the constraints are budget limits, security requirements, contract schemas, and API rate limits. Control task analysis: the briefing generation, agent coordination, and governance enforcement activities. Strategies analysis: the multiple paths to the same goal (direct API calls vs cached data vs mock fallbacks). Social organization: the role allocation across Claude, Gemini, Kimi, and human operators. Worker competencies: the capability profiles encoded in agent guardrails. CWA's emphasis on constraint-based design rather than procedure-based design explains why the hummbl-dev guardrails specify boundaries (what agents cannot do) rather than scripts (what agents must do).},
   keywords  = {cognitive work analysis, sociotechnical systems, constraint-based design, HUMMBL:DE, HUMMBL:SY, HUMMBL:CO}
 }
