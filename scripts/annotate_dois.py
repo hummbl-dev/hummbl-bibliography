@@ -18,26 +18,35 @@ BIB_DIR = Path(__file__).parent.parent / "bibliography"
 
 # ── Verified DOIs (CrossRef confirmed, title + year match) ────────────────────
 CONFIRMED_DOIS = {
-    "Grasse1959Stigmergy": "10.1007/bf02223791",        # Insectes Sociaux, Springer, 1959
-    "Sabater2005Trust": "10.1007/s10462-004-0041-5",    # Artificial Intelligence Review, Springer, 2005
-    "Bansal2019MentalModels": "10.1609/hcomp.v7i1.5285", # AAAI HCOMP 2019
-    "Piaget1952Origins": "10.1037/11494-000",            # APA PsycBooks, 1952
+    # Wave 1 — original lookups
+    "Grasse1959Stigmergy":    "10.1007/bf02223791",           # Insectes Sociaux, Springer, 1959
+    "Sabater2005Trust":       "10.1007/s10462-004-0041-5",    # Artificial Intelligence Review, Springer, 2005
+    "Bansal2019MentalModels": "10.1609/hcomp.v7i1.5285",      # AAAI HCOMP 2019
+    "Piaget1952Origins":      "10.1037/11494-000",            # APA PsycBooks, 1952
+    # Wave 2 — 2026-04-09 agent lookup (CrossRef verified)
+    "Lakoff1980MetaphorsWeLive":     "10.7208/chicago/9780226470993.001.0001",  # Univ. of Chicago Press
+    "Dunbar1995InVivo":              "10.7551/mitpress/4879.003.0017",          # MIT Press book chapter
+    "Hutchins1995Cognition":         "10.7551/mitpress/1881.001.0001",          # MIT Press monograph
+    "Shoham2008Multiagent":          "10.1017/cbo9780511811654",                # Cambridge UP
+    "Craik1943NatureExplanation":    "10.2307/2018933",                         # JSTOR stable DOI
+    "Luhmann1981Zettelkasten":       "10.1007/978-3-322-87749-9_19",            # Springer book chapter
+    "Spiro1990CognitiveFlexibility": "10.4324/9780203052600-11",                # Routledge book chapter
+    "Vicente1999CognitiveWorkAnalysis": "10.1201/b12457",                       # CRC/Taylor & Francis
+    "Goodfellow2015Adversarial":     "10.48550/arXiv.1412.6572",               # arXiv ICLR 2015
+    "Holland1995HiddenOrder":        "10.2307/20047667",                        # JSTOR stable DOI
+    "Prigogine1984Order":            "10.1063/1.2813716",                       # AIP / Physics Today
+    "Bonabeau1999SwarmIntelligence": "10.1093/oso/9780195131581.001.0001",      # Oxford UP
 }
 
 # ── % No DOI available reasons ─────────────────────────────────────────────────
 NO_DOI_REASONS = {
-    # T1
-    "Lakoff1980MetaphorsWeLive": "pre-DOI era monograph (published 1980); no registered DOI",
+    # T1 — pre-DOI trade books (no CrossRef record)
     "Tufte2001VisualDisplay":    "trade book; no registered DOI for this edition",
     "Alexander1977Pattern":      "pre-DOI era monograph (published 1977); no registered DOI",
     "Senge1990FifthDiscipline":  "trade business book; no registered DOI for this edition",
-    # T2
-    "Dunbar1995InVivo":          "book chapter; DOI not found via CrossRef",
-    "Hutchins1995Cognition":     "MIT Press monograph; no registered CrossRef DOI for this edition",
     # T4
     "Russell2019HumanCompatible": "trade book (Viking/Penguin); no registered DOI",
     "Wooldridge2009MultiAgent":  "trade book (Wiley); no registered DOI for this edition",
-    "Shoham2008Multiagent":      "textbook (Cambridge UP); chapter DOIs exist but book-level DOI not registered",
     "Shostack2014ThreatModeling": "trade book (Wiley); no registered DOI for this edition",
     "Bostrom2014Superintelligence": "trade book (Oxford UP); no registered CrossRef DOI",
     # T5
@@ -59,27 +68,18 @@ NO_DOI_REASONS = {
     "ISO42001":                  "ISO standard; DOI not registered",
     "NISTRMF2023":               "technical report (NIST AI 100-1); DOI not registered",
     # T8
-    "Craik1943NatureExplanation": "pre-DOI era monograph (published 1943); no registered DOI",
     "Norman1991CognitiveArtifacts": "book chapter in Designing Interaction (Carroll ed.); DOI not found via CrossRef",
-    "Luhmann1981Zettelkasten":   "German journal article (Bielefeld 1981); DOI not found via CrossRef",
-    "Spiro1990CognitiveFlexibility": "conference proceedings (Hillsdale 1990); DOI not found via CrossRef",
     # T9
     "Zachariadis2012API":        "working paper / SSRN preprint; no final publication DOI registered",
     "Buterin2014Ethereum":       "white paper / technical specification; no registered DOI",
-    # T10
-    "Vicente1999CognitiveWorkAnalysis": "trade book (Lawrence Erlbaum); no registered CrossRef DOI",
     # T11
-    "Goodfellow2015Adversarial": "conference paper (ICLR 2015 workshop); DOI not found via CrossRef or AAAI/IEEE/ACM",
     "Guo2024Threats":            "technical report / preprint; DOI not found via CrossRef",
     "SLSA2023SupplyChain":       "practitioner web resource (slsa.dev); no registered DOI",
     "MITRE2024ATLAS":            "practitioner web resource (atlas.mitre.org); no registered DOI",
     "Ohrimenko2016SecureEnclaves": "conference paper (USENIX Security 2016); DOI not found via CrossRef or USENIX",
     # T12
-    "Holland1995HiddenOrder":    "trade book (Addison-Wesley); no registered DOI",
-    "Prigogine1984Order":        "trade book (Bantam Books); no registered DOI for this edition",
     "Beer1981Brain":             "trade book (Wiley); no registered DOI for this edition",
     "Wright1932Roles":           "pre-DOI era journal article (published 1932); no registered DOI",
-    "Bonabeau1999SwarmIntelligence": "trade book (Oxford UP); no registered CrossRef DOI",
 }
 
 

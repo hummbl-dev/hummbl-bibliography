@@ -28,7 +28,7 @@
   year      = {2015},
   booktitle = {Proceedings of the 3rd International Conference on Learning Representations (ICLR 2015)},
   note      = {arXiv:1412.6572},
-  % No DOI available -- conference paper (ICLR 2015 workshop); DOI not found via CrossRef or AAAI/IEEE/ACM
+  doi                = {10.48550/arXiv.1412.6572},
   abstract  = {Goodfellow, Shlens, and Szegedy demonstrate that neural networks are vulnerable to adversarial examples -- inputs formed by applying small, intentionally worst-case perturbations to correctly classified examples, causing the network to misclassify with high confidence. They introduce the Fast Gradient Sign Method (FGSM), a computationally efficient attack that generates adversarial perturbations in a single step by following the gradient of the loss function. The paper's core insight -- that the linearity of modern neural networks in high-dimensional spaces is the primary cause of adversarial vulnerability, not their nonlinearity -- reframed the entire field. For hummbl-dev, this work grounds the output validator's injection detection and the capability fence system: if ML models are inherently susceptible to carefully crafted inputs, then every boundary between agents, and every point where agent output is consumed, must enforce validation that does not depend on the model itself. The HMAC-SHA256 signing on delegation tokens is a cryptographic defense against exactly this class of manipulation -- ensuring that even if an agent's reasoning is adversarially compromised, its authority tokens remain unforgeable.},
   keywords  = {adversarial examples, neural networks, FGSM, robustness, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY},
   nist_functions     = {MAP MEASURE},

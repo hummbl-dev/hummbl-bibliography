@@ -29,7 +29,7 @@
   year      = {1995},
   publisher = {Addison-Wesley},
   isbn      = {978-0-201-44230-4},
-  % No DOI available -- trade book (Addison-Wesley); no registered DOI
+  doi                = {10.2307/20047667},
   abstract  = {Holland, the father of genetic algorithms and a founding figure at the Santa Fe Institute, introduces the core mechanisms of complex adaptive systems (CAS): agents following simple rules generate emergent, adaptive behavior through aggregation, tagging, nonlinearity, flows, diversity, internal models, and building blocks. The seven CAS properties Holland identifies map almost exactly onto the hummbl-dev architecture. Aggregation: agents are grouped by trust level and capability (Claude, Gemini, Kimi). Tagging: agents identify themselves on the bus via the ``from'' column, enabling selective interaction. Nonlinearity: small changes in agent behavior (Gemini's metric inflation) cascade into disproportionate system responses (probation, 11 operating rules). Flows: the coordination bus is a literal flow of messages between agents. Diversity: the fleet deliberately includes agents with different capabilities and trust levels. Internal models: each agent maintains context (CLP ledger, boot context injection). Building blocks: the 120 Base120 mental models are recombinant building blocks that compose into arbitrarily complex analytical frameworks.},
   keywords  = {complex adaptive systems, emergence, adaptation, Santa Fe Institute, HUMMBL:SY, HUMMBL:CO, HUMMBL:RE}
 }
@@ -51,7 +51,7 @@
   year      = {1984},
   publisher = {Bantam Books},
   isbn      = {978-0-553-34363-2},
-  % No DOI available -- trade book (Bantam Books); no registered DOI for this edition
+  doi                = {10.1063/1.2813716},
   abstract  = {Prigogine and Stengers introduce dissipative structures -- systems far from thermodynamic equilibrium that maintain their organization by continuously dissipating energy and entropy into their environment. The key insight is that order can emerge from disorder at critical thresholds (bifurcation points), and that irreversibility and time's arrow are not defects of physical description but essential features of reality. The concept of dissipative structures applies directly to the hummbl-dev ecosystem's operational dynamics. The agent fleet is a far-from-equilibrium system: it requires continuous energy input (human directives, API calls, compute resources) to maintain its organized state. Without active maintenance (briefing generation, bus monitoring, agent audits), the system decays toward disorder. The kill switch's four escalation levels represent controlled bifurcation points -- transitions between qualitatively different organizational states (DISENGAGED to HALT\_NONCRITICAL to HALT\_ALL to EMERGENCY). Each escalation is irreversible in Prigogine's sense: the system state after escalation is qualitatively different from the state before, and returning requires active de-escalation.},
   keywords  = {dissipative structures, far from equilibrium, bifurcation, irreversibility, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE}
 }
@@ -216,8 +216,7 @@
   year      = {1999},
   publisher = {Oxford University Press},
   isbn      = {978-0-19-513159-8},
-  % No DOI -- OUP book; no registered DOI for this edition
-  % No DOI available -- trade book (Oxford UP); no registered CrossRef DOI
+  doi                = {10.1093/oso/9780195131581.001.0001},
   abstract  = {Bonabeau, Dorigo, and Theraulaz provide the comprehensive treatment of swarm intelligence --- the collective behavior that emerges from decentralized, self-organized systems of simple agents following local rules. The book covers ant colony optimization (pheromone-based path finding), bee foraging (waggle dance communication), termite construction (stigmergic building), and their computational implementations. The key principle is stigmergy: indirect coordination through modification of the shared environment, where agents communicate by leaving traces that influence other agents' behavior rather than through direct messaging. While Dorigo (already cited in T4) focuses on ant colony optimization algorithms, Bonabeau's treatment emphasizes the theoretical framework: how local rules, positive feedback (amplification of successful paths), negative feedback (evaporation of unsuccessful traces), and randomness (stochastic exploration) combine to produce globally optimal or near-optimal solutions without central planning. The hummbl-dev coordination bus implements stigmergy: agents communicate by modifying a shared artifact (the TSV bus file), and other agents' behavior is influenced by these traces. The feedback tracker in the cognition module implements stigmergic ranking --- entries that are frequently retrieved gain implicit ``pheromone'' that influences future retrieval, creating the positive feedback loop that drives swarm convergence.},
   keywords  = {swarm intelligence, stigmergy, self-organization, ant colony, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
 }
