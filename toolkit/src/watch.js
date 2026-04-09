@@ -9,7 +9,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { spawnSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,17 +31,16 @@ function log(msg) {
 function validateFile(filePath) {
   const rel = path.relative(bibDir, filePath);
   log(`${rel} changed — validating...`);
-  try {
-    const output = execSync(`node ${validateScript} ${bibDir}`, {
-      encoding: 'utf8',
-      stdio: ['pipe', 'pipe', 'pipe'],
-    });
-    const lines = output.trim().split('\n');
-    // Surface summary line (last non-empty line)
+  const result = spawnSync('node', [validateScript, bibDir], {
+    encoding: 'utf8',
+    stdio: ['pipe', 'pipe', 'pipe'],
+  });
+  if (result.status === 0) {
+    const lines = (result.stdout || '').trim().split('\n');
     const summary = lines.filter(l => l.trim()).pop() || '';
     log(`✓ ${rel} — ${summary}`);
-  } catch (err) {
-    const output = (err.stdout || '') + (err.stderr || '');
+  } else {
+    const output = (result.stdout || '') + (result.stderr || '');
     const lines = output.trim().split('\n');
     lines.forEach(line => {
       if (line.trim()) console.log(`  ${line}`);
@@ -73,11 +72,7 @@ log(`Watching ${bibDir}`);
 log(`Press Ctrl+C to stop\n`);
 
 // Run initial validation
-try {
-  execSync(`node ${validateScript} ${bibDir}`, { stdio: 'inherit' });
-} catch {
-  // Errors already printed by validate.js
-}
+spawnSync('node', [validateScript, bibDir], { stdio: 'inherit' });
 
 // Watch all .bib files
 const bibFiles = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
