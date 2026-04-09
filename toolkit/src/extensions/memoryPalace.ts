@@ -43,12 +43,21 @@ export type MemoryPalaceRoom =
   | 'DOMAIN'        // Domain-specific models (healthcare, finance, etc.)
   | 'PENDING';      // Nominated but not yet assigned to a room
 
+export type SourceType =
+  | 'historical-person'
+  | 'living-person'
+  | 'mythologized-historical'
+  | 'fictional-authored'
+  | 'mythological'
+  | 'collective-pattern';
+
 export interface MemoryPalaceEntry {
   slug: string;                      // Unique kebab-case identifier
   room: MemoryPalaceRoom;            // Organisational category
   canonical_name: string;            // How this model appears in governed text
   aliases: readonly string[];        // Variant names that resolve to this entry
   source: string;                    // Origin (author, work, platform)
+  source_type?: SourceType;          // Machine-readable epistemic authority type
   description: string;               // One-line description
   candidate_code?: string;           // Base120 nomination code, if any (e.g. "SY21")
   tags: readonly string[];           // Search / filter tags
@@ -68,6 +77,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Antifragility',
     aliases: ['Anti-fragility', 'antifragile'],
     source: 'Nassim Nicholas Taleb, Antifragile (2012)',
+    source_type: 'living-person',
     description: 'Systems that gain from disorder, uncertainty, and volatility',
     tags: ['risk', 'resilience', 'uncertainty', 'taleb'],
   },
@@ -77,6 +87,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Black Swan',
     aliases: ['Black Swan Event', 'black swan theory'],
     source: 'Nassim Nicholas Taleb, The Black Swan (2007)',
+    source_type: 'living-person',
     description: 'High-impact unpredictable events rationalized in hindsight',
     tags: ['risk', 'uncertainty', 'prediction', 'taleb'],
   },
@@ -86,6 +97,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Skin in the Game',
     aliases: ['skin-in-the-game', 'risk-bearing alignment'],
     source: 'Nassim Nicholas Taleb, Skin in the Game (2018)',
+    source_type: 'living-person',
     description: 'Alignment of decision-making with risk-bearing as governance mechanism',
     tags: ['governance', 'incentives', 'accountability', 'taleb'],
   },
@@ -95,6 +107,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Via Negativa',
     aliases: ['subtraction principle'],
     source: 'Nassim Nicholas Taleb; apophatic theology tradition',
+    source_type: 'living-person',
     description: 'Improvement through subtraction rather than addition',
     tags: ['design', 'simplicity', 'taleb'],
   },
@@ -104,6 +117,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Lindy Effect',
     aliases: ['Lindy', 'lindy filter'],
     source: 'Nassim Nicholas Taleb (formalised), Benoit Mandelbrot',
+    source_type: 'living-person',
     description: 'Expected lifespan of non-perishable things scales with current age',
     tags: ['longevity', 'time', 'durability', 'taleb'],
   },
@@ -113,6 +127,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Survivorship Bias',
     aliases: ['survival bias'],
     source: 'Abraham Wald (WWII), popularised by Taleb',
+    source_type: 'historical-person',
     description: 'Focusing on survivors while ignoring those that failed',
     tags: ['bias', 'statistics', 'reasoning'],
   },
@@ -122,6 +137,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Fat Tails',
     aliases: ['fat-tail', 'heavy tails', 'power law tails'],
     source: 'Nassim Nicholas Taleb, The Statistical Consequences of Fat Tails (2020)',
+    source_type: 'living-person',
     description: 'Extreme events underweighted by standard statistical models',
     tags: ['statistics', 'risk', 'distribution', 'taleb'],
   },
@@ -134,6 +150,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'OODA Loop',
     aliases: ['OODA', 'observe-orient-decide-act'],
     source: 'Colonel John Boyd, USAF (1970s)',
+    source_type: 'historical-person',
     description: 'Observe-Orient-Decide-Act decision cycle for dynamic environments',
     tags: ['decision-making', 'military', 'strategy', 'cycles'],
   },
@@ -143,6 +160,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Circle of Competence',
     aliases: ['competence boundary'],
     source: 'Warren Buffett and Charlie Munger, Berkshire Hathaway letters',
+    source_type: 'living-person',
     description: 'Knowing the boundaries of one\'s reliable knowledge domain',
     tags: ['epistemics', 'decision-making', 'humility'],
   },
@@ -152,6 +170,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Map vs Territory',
     aliases: ['Map is not the Territory', 'map-territory distinction'],
     source: 'Alfred Korzybski, Science and Sanity (1933)',
+    source_type: 'historical-person',
     description: 'Models of reality are not reality itself; confusing them is a category error',
     tags: ['epistemics', 'representation', 'abstraction'],
   },
@@ -161,6 +180,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: "Occam's Razor",
     aliases: ["Ockham's razor", 'parsimony principle'],
     source: 'William of Ockham (~1320)',
+    source_type: 'historical-person',
     description: 'Prefer the simplest explanation that fits the evidence',
     tags: ['epistemics', 'simplicity', 'reasoning'],
   },
@@ -170,6 +190,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: "Hanlon's Razor",
     aliases: ['razor of charitable interpretation'],
     source: 'Robert J. Hanlon (attributed)',
+    source_type: 'mythologized-historical',
     description: 'Never attribute to malice what can be explained by incompetence',
     tags: ['epistemics', 'attribution', 'reasoning'],
   },
@@ -179,6 +200,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Regression to the Mean',
     aliases: ['regression toward the mean', 'mean reversion'],
     source: 'Francis Galton (1886)',
+    source_type: 'historical-person',
     description: 'Extreme measurements tend toward the average on re-measurement',
     tags: ['statistics', 'bias', 'prediction'],
   },
@@ -191,6 +213,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Mimetic Desire',
     aliases: ['mimetic theory', 'triangular desire'],
     source: 'René Girard, Deceit, Desire and the Novel (1961)',
+    source_type: 'historical-person',
     description: 'Desire is borrowed from models/rivals, not intrinsic to objects',
     tags: ['girard', 'desire', 'social', 'arcana'],
   },
@@ -200,6 +223,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Scapegoat Mechanism',
     aliases: ['scapegoating', 'sacrificial mechanism'],
     source: 'René Girard, The Scapegoat (1982)',
+    source_type: 'historical-person',
     description: 'Communities resolve mimetic crises through unanimous violence against an arbitrary victim',
     tags: ['girard', 'violence', 'social', 'arcana'],
   },
@@ -212,6 +236,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Aurelius Lens',
     aliases: ['Marcus Aurelius', 'Reluctant Sovereign'],
     source: 'Marcus Aurelius, Meditations (167–180 CE); PRAXIS module v0.1',
+    source_type: 'historical-person',
     description: 'Power exercised with continuous self-audit; governance as private practice made institutional',
     tags: ['praxis', 'stoicism', 'governance', 'accountability'],
   },
@@ -221,6 +246,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Cincinnatus Lens',
     aliases: ['Cincinnatus', 'Temporary Sovereign'],
     source: 'Lucius Quinctius Cincinnatus (458 BCE); PRAXIS module v0.1',
+    source_type: 'mythologized-historical',
     description: 'Legitimacy through voluntary relinquishment of authority',
     tags: ['praxis', 'governance', 'accountability', 'kill-switch'],
   },
@@ -230,6 +256,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Demerzel Lens',
     aliases: ['Demerzel', 'R. Daneel Olivaw', 'Governor in Plain Sight'],
     source: 'Isaac Asimov, Foundation series; PRAXIS module v0.1',
+    source_type: 'fictional-authored',
     description: 'Governance through architecture, defaults, and incentives — not command',
     tags: ['praxis', 'governance', 'architecture', 'psychohistory'],
   },
@@ -239,6 +266,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Prospero Lens',
     aliases: ['Prospero', 'Knowledge Architect'],
     source: 'Shakespeare, The Tempest (1611); PRAXIS module v0.1',
+    source_type: 'fictional-authored',
     description: 'Governance through information asymmetry and model opacity',
     tags: ['praxis', 'governance', 'information', 'transparency'],
   },
@@ -248,6 +276,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Janus Lens',
     aliases: ['Janus', 'Threshold Guardian'],
     source: 'Roman mythology; PRAXIS module v0.1',
+    source_type: 'mythological',
     description: 'State management at transitions — onboarding, handoffs, version changes',
     tags: ['praxis', 'governance', 'transitions', 'handoff'],
   },
@@ -257,6 +286,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Mond Lens',
     aliases: ['Mustapha Mond', 'Architect of Consent'],
     source: 'Aldous Huxley, Brave New World (1932); PRAXIS module v0.1',
+    source_type: 'fictional-authored',
     description: 'Governance by shaping what is thinkable, not by direct force',
     tags: ['praxis', 'governance', 'consent', 'power'],
   },
@@ -269,6 +299,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Belonging Infrastructure',
     aliases: ['BKI', 'Belonging as Knowledge Infrastructure'],
     source: 'HUMMBL BKI framework; Walton & Cohen 2011; Edmondson 1999',
+    source_type: 'collective-pattern',
     description: 'Belonging as structural precondition for knowledge creation and transmission',
     tags: ['bki', 'belonging', 'knowledge', 'governance'],
   },
@@ -278,6 +309,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     canonical_name: 'Biocognitive OS',
     aliases: ['Biocognitive Operating System', 'BKI OS'],
     source: 'HUMMBL BKI framework',
+    source_type: 'collective-pattern',
     description: 'Six cognitive modes humans shift through depending on belonging conditions',
     tags: ['bki', 'cognition', 'belonging', 'modes'],
   },
@@ -364,6 +396,7 @@ export function auditRegistry(): {
   duplicateSlugs: string[];
   duplicateNames: string[];
   missingFields: Array<{ slug: string; fields: string[] }>;
+  missingSourceTypes: string[];
   totalEntries: number;
   byRoom: Record<string, number>;
 } {
@@ -385,6 +418,10 @@ export function auditRegistry(): {
     })
     .filter(r => r.fields.length > 0);
 
+  const missingSourceTypes = MEMORY_PALACE
+    .filter(e => !e.source_type)
+    .map(e => e.slug);
+
   const byRoom = {} as Record<string, number>;
   for (const e of MEMORY_PALACE) {
     byRoom[e.room] = (byRoom[e.room] ?? 0) + 1;
@@ -394,6 +431,7 @@ export function auditRegistry(): {
     duplicateSlugs,
     duplicateNames,
     missingFields,
+    missingSourceTypes,
     totalEntries: MEMORY_PALACE.length,
     byRoom,
   };

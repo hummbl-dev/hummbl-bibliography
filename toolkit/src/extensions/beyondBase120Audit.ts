@@ -27,6 +27,7 @@ import {
   getRoom,
   getAllCanonicalNames,
   MemoryPalaceRoom,
+  SourceType,
 } from './memoryPalace.js';
 
 import { validateModelCode } from '../utils/validateModelCode.js';
@@ -42,6 +43,7 @@ export interface BeyondAuditFinding {
   severity: BeyondAuditSeverity;
   code: string;       // Finding code e.g. "DRIFT001"
   message: string;
+  source_type?: SourceType;
 }
 
 export interface BeyondAuditReport {
@@ -185,6 +187,15 @@ export function auditBeyondBase120(
     });
   }
 
+  for (const slug of registry_health.missingSourceTypes) {
+    findings.push({
+      term: slug,
+      severity: 'WARN',
+      code: 'REG002',
+      message: `Memory Palace entry "${slug}" is missing optional source_type. Add it to improve citation hygiene and staleness review.`,
+    });
+  }
+
   return {
     scanned_terms: candidates,
     findings,
@@ -230,7 +241,8 @@ export function formatBeyondReport(report: BeyondAuditReport): string {
     lines.push(`Findings (${report.findings.length}):`);
     for (const f of report.findings) {
       const icon = f.severity === 'ERROR' ? '❌' : f.severity === 'WARN' ? '⚠️' : 'ℹ️';
-      lines.push(`  ${icon} [${f.code}] ${f.message}`);
+      const sourceType = f.source_type ? ` (source_type=${f.source_type})` : '';
+      lines.push(`  ${icon} [${f.code}] ${f.message}${sourceType}`);
     }
   }
 
