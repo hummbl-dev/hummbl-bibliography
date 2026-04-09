@@ -5,6 +5,75 @@ All notable changes to the HUMMBL Bibliography will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-04-09
+
+### Added
+
+#### T13: Post-2024 Reasoning Models (new tier)
+- `bibliography/T13_reasoning.bib` — 20 entries covering the o1/o3/R1-class reasoning model landscape
+- Entries: `OpenAI2024o1SystemCard`, `OpenAI2025o3SystemCard`, `OpenAI2024o1Mini`, `OpenAI2024o1Tech`,
+  `DeepSeek2025R1`, `Guo2025DeepSeekR1Zero`, `Snell2024ScalingTestTime`, `Kumar2024ScalingInference`,
+  `Lightman2023PRM`, `Zelikman2022STAR`, `Madaan2023Selfrefine`, `Wang2023Selfconsistency`,
+  `Guo2024Critique`, `Yao2024ToT2`, `Ong2024RouteLLM`, `Anthropic2024Claude3`,
+  `Anthropic2025ClaudeModel`, `Gemini2024Team`, `Zheng2024JudgeBench`, `Chen2024AlphaCode2`
+- 13/20 entries have arXiv DOIs (`10.48550/arXiv.*`); 7 are technical reports/blog posts with `% No DOI available`
+- HUMMBL relevance: T13 grounds the "expensive reasoning" (pull engine) half of the push/pull architecture
+
+#### NIST AI RMF + EU AI Act Crosswalk Tags
+- 60 entries across T4 (20), T6 (20), T11 (20) tagged with `nist_functions` and `eu_ai_act_articles` fields
+- `scripts/add_nist_tags.py` — crosswalk dict (60 entries) + `inject_tags()` function
+- Enables queries like `node toolkit/src/query.js --nist-function GOVERN --format json`
+
+#### ARCANA Citation Map
+- `mappings/arcana_citations.json` — 28 ARCANA philosophical lens objects, each with `primary`, `secondary`, `gaps`
+- Critical gaps documented: Weber, Bourdieu, Burnham, Chomsky, Marx, Nietzsche, Gramsci, McLuhan, Heidegger
+
+#### BKI Evidence Audit
+- `mappings/bki_evidence.json` — 4 BKI propositions + Biocognitive OS + Broccolilly Equation + HUMMBL governance failure thesis
+- Coverage grades per proposition; 14 present entries; 9 missing entries documented
+- Critical gap: `Edmondson1999PsychologicalSafety` absent from bibliography
+
+#### Open Brain Ingest Script
+- `scripts/ingest_to_open_brain.py` — stdlib-only POST to Open Brain `/ledger/post`
+- `--dry-run` (default), `--post`, `--tier`, `--keyword`, `--limit`, `--verbose` flags
+- Calls `node toolkit/src/query.js --format json` as subprocess; converts entries to `discovery` ledger payloads
+
+#### llms.txt Updated (260 entries)
+- Regenerated to include T13; 1,100+ lines
+- Sections: Query API docs, HUMMBL keyword legend, 13 tier sections (T1–T13)
+
+#### DOI Audit (40 entries, all pre-T13 tiers)
+- `scripts/annotate_dois.py` — applies `% No DOI available` comments and verified `doi` fields
+- 4 CrossRef-verified DOIs added: `Grasse1959Stigmergy`, `Sabater2005Trust`, `Bansal2019MentalModels`, `Piaget1952Origins`
+- 41 `% No DOI available` annotations added across T1/T2/T4/T5/T6/T8/T9/T10/T11/T12
+
+### Quality Metrics (v1.3.0)
+
+- ✅ **260 total entries** (20 × 13 tiers)
+- ✅ 100% entries have abstracts
+- ✅ 100% entries have HUMMBL transformation keywords
+- ✅ 0 validation errors
+- ✅ 0 cross-tier duplicate keys
+- ✅ T7: 100% DOI coverage (20/20)
+- ✅ T13: 65% DOI coverage (13/20, arXiv papers)
+- ✅ Overall: ~55% DOI coverage (~142/260 est.)
+- ✅ 60 entries with NIST AI RMF function tags
+- ✅ 60 entries with EU AI Act article tags
+- ✅ 28/28 ARCANA lenses mapped
+- ✅ 4/4 BKI propositions mapped with coverage grades
+
+---
+
+## [1.2.0] - 2026-04-08
+
+### Added
+- `mappings/` directory with ARCANA citation map and BKI evidence audit (initial commits)
+- `scripts/ingest_to_open_brain.py` — initial version
+- `CONTRIBUTING.md` — DOI convention documentation
+- `toolkit/src/query.js` — programmatic JSON query API
+
+---
+
 ## [1.1.0] - 2026-04-08
 
 ### Added
