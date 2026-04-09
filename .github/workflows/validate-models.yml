@@ -42,24 +42,29 @@ jobs:
           cd toolkit
           npm run type-check
 
+      - name: Build toolkit
+        run: |
+          cd toolkit
+          npm run build
+
       - name: Run model validation script
         run: |
           cd toolkit
-          node -e "
-          const { auditText } = require('./src/utils/monitorModels.ts');
-          const fs = require('fs');
-          const path = require('path');
+          node --input-type=module << 'EOF'
+          import { auditText } from './dist/utils/monitorModels.js';
+          import { readFileSync, readdirSync, statSync } from 'fs';
+          import { join, extname } from 'path';
 
           // Find all relevant files
           const files = [];
           const walk = (dir) => {
-            const items = fs.readdirSync(dir);
+            const items = readdirSync(dir);
             items.forEach(item => {
-              const fullPath = path.join(dir, item);
-              const stat = fs.statSync(fullPath);
-              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+              const fullPath = join(dir, item);
+              const stat = statSync(fullPath);
+              if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
                 walk(fullPath);
-              } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(path.extname(item))) {
+              } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(extname(item))) {
                 files.push(fullPath);
               }
             });
@@ -74,7 +79,7 @@ jobs:
 
           files.forEach(file => {
             try {
-              const content = fs.readFileSync(file, 'utf8');
+              const content = readFileSync(file, 'utf8');
               const audit = auditText(content);
 
               totalValid += audit.references.filter(r => r.isValid).length;
@@ -89,31 +94,31 @@ jobs:
                 });
               }
             } catch (err) {
-              console.warn(\`Warning: Could not read \${file}: \${err.message}\`);
+              console.warn(`Warning: Could not read ${file}: ${err.message}`);
             }
           });
 
-          console.log(\`Model Validation Results:\`);
-          console.log(\`Valid references: \${totalValid}\`);
-          console.log(\`Invalid references: \${totalInvalid}\`);
-          console.log(\`Hallucinations: \${totalHallucinations}\`);
+          console.log(`Model Validation Results:`);
+          console.log(`Valid references: ${totalValid}`);
+          console.log(`Invalid references: ${totalInvalid}`);
+          console.log(`Hallucinations: ${totalHallucinations}`);
 
           if (errors.length > 0) {
-            console.log(\`\nErrors found:\`);
+            console.log(`\nErrors found:`);
             errors.forEach(error => {
-              console.log(\`File: \${error.file}\`);
-              error.errors.forEach(err => console.log(\`  - \${err}\`));
-              error.hallucinations.forEach(hall => console.log(\`  - Hallucination: \${hall}\`));
+              console.log(`File: ${error.file}`);
+              error.errors.forEach(err => console.log(`  - ${err}`));
+              error.hallucinations.forEach(hall => console.log(`  - Hallucination: ${hall}`));
             });
 
             if (totalInvalid > 0 || totalHallucinations > 0) {
-              console.log(\`\n❌ Validation failed: Invalid references or hallucinations detected\`);
+              console.log(`\n❌ Validation failed: Invalid references or hallucinations detected`);
               process.exit(1);
             }
           } else {
-            console.log(\`\n✅ Validation passed: No invalid references or hallucinations found\`);
+            console.log(`\n✅ Validation passed: No invalid references or hallucinations found`);
           }
-          "
+          EOF
 
       - name: Update metrics dashboard
         if: github.ref == 'refs/heads/main'

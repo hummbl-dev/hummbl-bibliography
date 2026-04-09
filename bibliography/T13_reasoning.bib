@@ -63,26 +63,15 @@
   keywords  = {reasoning models, agentic reasoning, tool use, safety evaluation, HUMMBL:RE, HUMMBL:CO}
 }
 
-@article{Guo2025DeepSeekR1Zero,
-  author    = {Guo, Daya and Liu, Qihao and Chen, Mingchuan and Yang, Guangjun and Zhang, Zhenda and Yu, Ruoyu and others},
-  title     = {{DeepSeek-R1-Zero}: Reasoning Without Supervised Data},
-  journal   = {arXiv preprint arXiv:2501.12948},
-  year      = {2025},
-  doi       = {10.48550/arXiv.2501.12948},
-  url       = {https://arxiv.org/abs/2501.12948},
-  abstract  = {R1-Zero ablation demonstrating that a base LLM trained purely via RL (GRPO algorithm, outcome reward only) develops spontaneous chain-of-thought reasoning, self-reflection, and verification behaviors without any supervised fine-tuning on reasoning traces. Performance on AIME matches or exceeds models trained with human-curated CoT data. Key finding: reasoning capability is latent in pre-trained representations and can be unlocked by RL without expensive human annotation. Foundational for understanding reasoning as an emergent property rather than a trained capability.},
-  keywords  = {reinforcement learning, emergent reasoning, chain-of-thought, HUMMBL:RE}
-}
-
-@article{Ong2024RouteLLMT13,
-  author    = {Ong, Isaac and Almahairi, Amjad and Wu, Vincent and Chiang, Wei-Lin and Wu, Tianhao and Gonzalez, Joseph E. and Kadous, M. Waleed and Stoica, Ion},
-  title     = {{RouteLLM}: Learning to Route {LLM}s with Preference Data},
-  journal   = {arXiv preprint arXiv:2406.18665},
-  year      = {2024},
-  doi       = {10.48550/arXiv.2406.18665},
-  url       = {https://arxiv.org/abs/2406.18665},
-  abstract  = {RouteLLM learns to route queries between strong (expensive) and weak (cheap) LLMs based on predicted task difficulty. Using preference data from human-labeled comparisons, four routing approaches (matrix factorization, BERT classifier, causal LLM, and similarity-weighted) achieve 40-50% cost reduction with less than 1% quality degradation vs. always using the strong model. The routing framing directly formalizes the push/pull principle: the router is the push engine predicting when expensive reasoning is warranted.},
-  keywords  = {model routing, cost optimization, task difficulty, push/pull, HUMMBL:IN, HUMMBL:RE}
+@article{Cobbe2021GSM8K,
+  author    = {Cobbe, Karl and Kosaraju, Vineet and Bavarian, Mohammad and Chen, Mark and Jun, Heewoo and Kaiser, Lukasz and Plappert, Matthias and Tworek, Jerry and Hilton, Jacob and Nakano, Reiichiro and Hesse, Christopher and Schulman, John},
+  title     = {Training Verifiers to Solve Math Word Problems},
+  journal   = {arXiv preprint arXiv:2110.14168},
+  year      = {2021},
+  doi       = {10.48550/arXiv.2110.14168},
+  url       = {https://arxiv.org/abs/2110.14168},
+  abstract  = {Introduces GSM8K, a dataset of 8,500 grade-school math problems, and demonstrates that training verifiers (outcome reward models) to score candidate solutions improves final accuracy substantially over generating a single solution. Verifier-aided generation achieves 55% on GSM8K vs 33% for direct generation. This paper establishes the benchmark infrastructure and the verifier training methodology that became foundational for process reward models and test-time compute scaling. The GSM8K benchmark is a standard HUMMBL evaluation target for pull-engine reasoning quality.},
+  keywords  = {math reasoning, verifier training, benchmark, HUMMBL:RE, HUMMBL:IN}
 }
 
 @article{Zelikman2022STAR,
@@ -96,15 +85,15 @@
   keywords  = {chain-of-thought, self-improvement, reasoning bootstrapping, HUMMBL:RE, HUMMBL:CO}
 }
 
-@article{Yao2024ToT2,
-  author    = {Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Thomas L. and Cao, Yuan and Narasimhan, Karthik},
-  title     = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
-  journal   = {Advances in Neural Information Processing Systems},
-  year      = {2024},
-  doi       = {10.48550/arXiv.2305.10601},
-  url       = {https://arxiv.org/abs/2305.10601},
-  abstract  = {Tree of Thoughts (ToT) extends chain-of-thought prompting by enabling LLMs to explore multiple reasoning paths, self-evaluate intermediate states, and use search algorithms (BFS/DFS) to navigate the tree. On tasks requiring planning and multi-step search (Game of 24, Creative Writing, Mini Crosswords), ToT dramatically outperforms CoT. ToT formalizes the pull engine's deliberation structure: the model explores branches, evaluates partial solutions, and selects the best path. The governance receipt can log the reasoning tree for audit.},
-  keywords  = {tree of thoughts, deliberate reasoning, search, HUMMBL:RE, HUMMBL:DE}
+@article{Uesato2022ProcessOutcome,
+  author    = {Uesato, Jonathan and Kushman, Nate and Kumar, Ramana and Song, Francis and Siegel, Noah and Wang, Lisa and Creswell, Antonia and Irving, Geoffrey and Higgins, Irina},
+  title     = {Solving Math Word Problems with Process- and Outcome-Based Feedback},
+  journal   = {arXiv preprint arXiv:2211.14275},
+  year      = {2022},
+  doi       = {10.48550/arXiv.2211.14275},
+  url       = {https://arxiv.org/abs/2211.14275},
+  abstract  = {First systematic comparison of process-based (step-level) versus outcome-based (final-answer) feedback for training and evaluating math word problem solvers. Process-based feedback provides signal at each reasoning step and is more sample-efficient than outcome-based feedback for difficult problems. Demonstrates that even outcome-trained models can benefit from process-level evaluation at test time. Establishes the theoretical and empirical basis for preferring PRMs over ORMs in high-stakes reasoning — the governance analogue is step-level receipt generation rather than waiting for a final verdict.},
+  keywords  = {process reward models, math reasoning, feedback, HUMMBL:RE, HUMMBL:IN}
 }
 
 @article{Wang2023Selfconsistency,
@@ -226,4 +215,17 @@
   url       = {https://arxiv.org/abs/2501.12599},
   abstract  = {Technical paper documenting the training methodology behind o1-class models, including the role of process reward models (PRMs) in guiding RL training, the importance of reward signal quality over quantity, and the scaling properties of reasoning-focused RL. Shows that PRMs trained on step-level labels are more effective RL reward signals than ORMs for long-horizon reasoning tasks. Documents the interplay between model scale, RL training, and emergent reasoning capability — the technical foundation for understanding pull engine capability growth.},
   keywords  = {reasoning models, process reward models, RL training, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Trinh2024AlphaGeometry,
+  author    = {Trinh, Trieu H. and Wu, Yuhuai and Le, Quoc V. and He, He and Luong, Thang},
+  title     = {Solving Olympiad Geometry without Human Demonstrations},
+  journal   = {Nature},
+  year      = {2024},
+  volume    = {625},
+  pages     = {476--482},
+  doi       = {10.1038/s41586-023-06747-5},
+  url       = {https://www.nature.com/articles/s41586-023-06747-5},
+  abstract  = {AlphaGeometry solves olympiad-level geometry problems at near-IMO gold-medalist level by combining a neural language model with a symbolic deduction engine. The language model proposes auxiliary constructions (creative steps) that the symbolic engine can verify. AlphaGeometry solves 25 of 30 IMO 2000-2022 geometry problems, compared to 10 for previous approaches. The neuro-symbolic architecture is directly relevant to governance reasoning: natural language reasoning for creative governance analysis plus symbolic verification for compliance checking. The pull engine is effectively AlphaGeometry's language model, with governance rules playing the role of the symbolic deduction engine.},
+  keywords  = {neuro-symbolic reasoning, formal verification, olympiad, HUMMBL:RE, HUMMBL:DE}
 }
