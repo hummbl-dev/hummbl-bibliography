@@ -70,6 +70,8 @@
   author = {Kreps, Jay},
   year = {2013},
   journal = {LinkedIn Engineering Blog},
+  url = {https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying},
+  % No DOI available -- practitioner blog post on LinkedIn Engineering Blog; no registered DOI
   abstract = {This influential essay argues that the append-only log is the most fundamental data structure in distributed systems, unifying databases, message queues, event stores, and replication protocols under a single abstraction. Kreps demonstrates how logs enable total ordering of events, exactly-once semantics, and system-of-record guarantees when used as the canonical data store. The essay draws on experience building Apache Kafka at LinkedIn to show how log-centric architecture simplifies system design by making all state changes explicit, ordered, and replayable. The append-only governance bus (TSV), append-only audit log (JSONL), and the Cognitive Ledger Protocol (append-only JSONL with content hashing) in the hummbl-dev ecosystem are all implementations of this unifying log abstraction.},
   keywords = {append-only log, event sourcing, distributed systems, HUMMBL:SY, HUMMBL:CO}
 }
