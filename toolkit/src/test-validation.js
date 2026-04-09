@@ -52,7 +52,7 @@ memoryPalaceTests.forEach(({ term, expected }) => {
   const status = pass ? '✅' : '❌';
   if (found) {
     const entry = lookupMemoryPalace(term);
-    console.log(`  "${term}" → registered (${entry.room}) ${status}`);
+    console.log(`  "${term}" → registered (${entry.room}, ${entry.source_type ?? 'unset'}) ${status}`);
   } else {
     console.log(`  "${term}" → not registered ${status}`);
   }
@@ -73,6 +73,11 @@ if (health.duplicateNames.length > 0) {
   console.log(`  ❌ Duplicate names: ${health.duplicateNames.join(', ')}`);
 } else {
   console.log(`  ✅ No duplicate names`);
+}
+if (health.missingSourceTypes.length > 0) {
+  console.log(`  ⚠️ Missing source_type: ${health.missingSourceTypes.join(', ')}`);
+} else {
+  console.log(`  ✅ All entries have source_type`);
 }
 
 console.log('\n🔭 Testing Beyond-Base120 audit:');
