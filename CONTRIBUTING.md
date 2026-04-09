@@ -34,4 +34,57 @@ Thanks for your interest in contributing!
 - Do not commit secrets. Use GitHub secrets for CI and environment variables.
 - Report security issues privately if necessary.
 
+## DOI Coverage Requirements
+
+Every BibTeX entry must have either a `doi` field or a `% No DOI available` comment. Never leave an entry without one of these.
+
+### If the entry has a DOI
+
+Add the `doi` field after the last identifier field (`isbn`, `url`, etc.):
+
+```bibtex
+doi = {10.1145/3351095.3372873},
+```
+
+For arXiv preprints, use the CrossRef-registered arXiv DOI format:
+
+```bibtex
+doi = {10.48550/arXiv.2302.07842},
+```
+
+You can look up arXiv DOIs at `https://doi.org/10.48550/arXiv.XXXX.XXXXX`.
+
+### If no DOI exists
+
+Add a comment immediately after the last identifier field, before `abstract`:
+
+```bibtex
+isbn = {978-0-14-028329-7},
+% No DOI available -- trade business book; no registered DOI for this edition
+abstract = {
+```
+
+**Standard reason phrases** (use the most accurate one):
+- `trade business book; no registered DOI for this edition`
+- `practitioner blog post on <source>; no registered DOI`
+- `pre-DOI era monograph (published YYYY); no registered DOI`
+- `technical report; DOI not registered`
+- `conference paper; DOI not found via CrossRef or AAAI/IEEE/ACM`
+
+### Finding missing DOIs
+
+Run the toolkit's DOI finder before concluding a DOI doesn't exist:
+
+```bash
+cd toolkit && npm run find-dois
+```
+
+This queries CrossRef for all entries missing a `doi` field. Add any found DOIs, then annotate the remaining entries with `% No DOI available`.
+
+### Validation
+
+`npm run validate` checks that every entry has either a `doi` field or a `% No DOI available` comment. The CI gate will fail on entries missing both.
+
+---
+
 Thanks for contributing!
