@@ -126,6 +126,66 @@ jobs:
           }
           EOF
 
+      - name: Beyond-Base120 Memory Palace audit
+        run: |
+          cd toolkit
+          node --input-type=module << 'EOF'
+          import { readFileSync, readdirSync, statSync } from 'fs';
+          import { join, extname } from 'path';
+          import { auditBeyondBase120, formatBeyondReport } from './dist/extensions/beyondBase120Audit.js';
+          import { auditRegistry } from './dist/extensions/memoryPalace.js';
+
+          // Same exclusion logic as Base120 validation step
+          const EXCLUDED_DIRS = new Set(['node_modules', 'dist', 'src']);
+          const files = [];
+          const walk = (dir) => {
+            const items = readdirSync(dir);
+            items.forEach(item => {
+              const fullPath = join(dir, item);
+              const stat = statSync(fullPath);
+              if (stat.isDirectory() && !item.startsWith('.') && !EXCLUDED_DIRS.has(item)) {
+                walk(fullPath);
+              } else if (stat.isFile() && ['.md', '.ts', '.tsx', '.js', '.jsx'].includes(extname(item))) {
+                files.push(fullPath);
+              }
+            });
+          };
+          walk('..');
+
+          // Registry health check first — fail fast on duplicate/broken registry
+          const registryHealth = auditRegistry();
+          if (registryHealth.duplicateSlugs.length > 0 || registryHealth.duplicateNames.length > 0 || registryHealth.missingFields.length > 0) {
+            console.log('❌ Memory Palace registry is unhealthy:');
+            registryHealth.duplicateSlugs.forEach(s => console.log(`  Duplicate slug: ${s}`));
+            registryHealth.duplicateNames.forEach(n => console.log(`  Duplicate name: ${n}`));
+            registryHealth.missingFields.forEach(({ slug, fields }) => console.log(`  Missing fields in ${slug}: ${fields.join(', ')}`));
+            process.exit(1);
+          }
+          console.log(`✅ Memory Palace registry healthy — ${registryHealth.totalEntries} entries`);
+
+          // Aggregate content for audit (concatenate all files)
+          let combinedContent = '';
+          files.forEach(file => {
+            try {
+              combinedContent += readFileSync(file, 'utf8') + '\n';
+            } catch (err) {
+              console.warn(`Warning: Could not read ${file}: ${err.message}`);
+            }
+          });
+
+          const report = auditBeyondBase120(combinedContent);
+          console.log(formatBeyondReport(report));
+
+          // Only ERROR findings fail CI (WARN is advisory)
+          const errors = report.findings.filter(f => f.severity === 'ERROR');
+          if (errors.length > 0) {
+            console.log(`\n❌ Beyond-Base120 audit failed: ${errors.length} error(s)`);
+            process.exit(1);
+          } else {
+            console.log(`\n✅ Beyond-Base120 audit passed`);
+          }
+          EOF
+
       - name: Update metrics dashboard
         if: github.ref == 'refs/heads/main'
         run: |

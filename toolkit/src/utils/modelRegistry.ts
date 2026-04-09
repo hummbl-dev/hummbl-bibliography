@@ -3,7 +3,7 @@
  * Centralized validation and lookup service for mental models
  */
 
-import { validateModelCode, BASE120_MODELS, isGovernedExtension, isLikelyHallucination, TransformationType, ModelCode } from './validateModelCode.js';
+import { validateModelCode, BASE120_MODELS, TransformationType, ModelCode } from './validateModelCode.js';
 
 export interface ModelDefinition {
   code: ModelCode;
@@ -137,12 +137,11 @@ export class ModelRegistry {
   }
 
   /**
-   * Detect hallucinated mental models.
-   * ARCANA governed models and BaseN extensions are NOT hallucinations.
+   * Hallucination detection removed — use beyondBase120Audit.ts (Memory Palace)
+   * for extended model drift detection. No-op retained for interface compat.
    */
-  private detectHallucinations(text: string): string[] {
-    if (isGovernedExtension(text)) return [];
-    return isLikelyHallucination(text) ? ['Mental Model (unattributed)'] : [];
+  private detectHallucinations(_text: string): string[] {
+    return [];
   }
 
   /**
