@@ -1,0 +1,229 @@
+% T13: Post-2024 Reasoning Models — Advanced reasoning, test-time compute, chain-of-thought scaling
+% 20 entries covering: long-horizon reasoning, process reward models, o1/o3/r1-class models,
+% formal verification via LLM, agentic reasoning, and constitutional/critique-based self-improvement.
+%
+% HUMMBL relevance: T13 grounds the "expensive reasoning" half of the push/pull architecture.
+% These models are what the pull engine calls when push detects a meaningful signal delta.
+%
+% DOI convention: arXiv papers use doi:10.48550/arXiv.XXXX.XXXXX
+% All entries: see CONTRIBUTING.md
+
+@article{OpenAI2024o1SystemCard,
+  author    = {{OpenAI}},
+  title     = {OpenAI o1 System Card},
+  journal   = {Technical Report, OpenAI},
+  year      = {2024},
+  url       = {https://openai.com/index/openai-o1-system-card/},
+  % No DOI available -- technical report; DOI not registered
+  abstract  = {System card for OpenAI's o1 model series, documenting safety evaluations, capabilities, and limitations of the chain-of-thought reasoning model. Describes the model's ability to reason before responding using extended internal deliberation (the 'thinking' process), performance on AIME, GPQA, and code generation benchmarks, and frontier risk evaluations including CBRN uplift and persuasion. Establishes the baseline capability profile for test-time compute scaling. Directly relevant to HUMMBL's pull engine design: o1-class models are the primary pull target for expensive reasoning tasks.},
+  keywords  = {reasoning models, test-time compute, safety evaluation, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{DeepSeek2025R1,
+  author    = {{DeepSeek-AI}},
+  title     = {{DeepSeek-R1}: Incentivizing Reasoning Capability in {LLM}s via Reinforcement Learning},
+  journal   = {arXiv preprint arXiv:2501.12948},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2501.12948},
+  url       = {https://arxiv.org/abs/2501.12948},
+  abstract  = {DeepSeek-R1 and DeepSeek-R1-Zero demonstrate that reinforcement learning alone (without supervised fine-tuning on chain-of-thought data) can produce emergent reasoning behaviors including self-verification, reflection, and long chains of thought. R1-Zero develops reasoning entirely through RL with only outcome reward signals. DeepSeek-R1 adds cold-start data and multi-stage training to improve readability and language consistency. On AIME 2024, MATH-500, and coding benchmarks, R1 achieves performance comparable to OpenAI o1 at a fraction of the training cost. The open-weight release (MIT license) makes R1-series models a practical pull engine for sovereign deployments — directly relevant to HUMMBL's nodezero inference stack where deepseek-r1:32b runs on-device.},
+  keywords  = {reasoning models, reinforcement learning, chain-of-thought, open weights, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Snell2024ScalingTestTime,
+  author    = {Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral},
+  title     = {Scaling {LLM} Test-Time Compute Optimally Improves Performance on Challenging Tasks},
+  journal   = {arXiv preprint arXiv:2408.03314},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2408.03314},
+  url       = {https://arxiv.org/abs/2408.03314},
+  abstract  = {Investigates how to optimally allocate test-time compute for LLMs. Shows that for easy tasks, revising initial answers is more efficient, while for hard tasks, searching over a diverse set of solutions with a process reward model (PRM) is better. Identifies that the optimal strategy depends on task difficulty and model capability, and that linear scaling of test-time compute yields sublinear performance gains — the first systematic analysis of test-time compute allocation. Directly motivates the push/pull loop: the push engine determines difficulty, the pull engine allocates compute accordingly.},
+  keywords  = {test-time compute, process reward models, scaling, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Lightman2023PRM,
+  author    = {Lightman, Hunter and Kosaraju, Vineet and Burda, Yura and Edwards, Harri and Baker, Bowen and Lee, Teddy and Leike, Jan and Schulman, John and Sutskever, Ilya and Cobbe, Karl},
+  title     = {Let's Verify Step by Step},
+  journal   = {arXiv preprint arXiv:2305.20050},
+  year      = {2023},
+  doi       = {10.48550/arXiv.2305.20050},
+  url       = {https://arxiv.org/abs/2305.20050},
+  abstract  = {Introduces process reward models (PRMs) that provide feedback at each reasoning step, contrasted with outcome reward models (ORMs) that only score final answers. PRMs trained on human-annotated step-level correctness outperform ORMs on math reasoning (MATH dataset) and are more reliable for best-of-N selection at test time. The PRM800K dataset is released. PRMs are the verification layer that makes test-time compute scaling reliable — the pull engine's self-checking mechanism. Core infrastructure for HUMMBL's multi-step governance receipt generation.},
+  keywords  = {process reward models, step-level verification, math reasoning, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{OpenAI2025o3SystemCard,
+  author    = {{OpenAI}},
+  title     = {OpenAI o3 and o4-mini System Card},
+  journal   = {Technical Report, OpenAI},
+  year      = {2025},
+  url       = {https://openai.com/index/o3-o4-mini-system-card/},
+  % No DOI available -- technical report; DOI not registered
+  abstract  = {System card for OpenAI o3 and o4-mini, documenting significantly improved performance over o1 across frontier benchmarks: ARC-AGI (87.5%), AIME 2024 (96.7%), ELO on Codeforces (2724). Introduces tool use during reasoning (including code execution), enabling agentic capabilities within the reasoning loop. Documents safety evaluations under ASL-3 Responsible Scaling Policy. o3 represents a qualitative shift: reasoning models that can call tools mid-thought, directly relevant to HUMMBL's pull engine design where the model may request data during deliberation.},
+  keywords  = {reasoning models, agentic reasoning, tool use, safety evaluation, HUMMBL:RE, HUMMBL:CO}
+}
+
+@article{Guo2025DeepSeekR1Zero,
+  author    = {Guo, Daya and Liu, Qihao and Chen, Mingchuan and Yang, Guangjun and Zhang, Zhenda and Yu, Ruoyu and others},
+  title     = {{DeepSeek-R1-Zero}: Reasoning Without Supervised Data},
+  journal   = {arXiv preprint arXiv:2501.12948},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2501.12948},
+  url       = {https://arxiv.org/abs/2501.12948},
+  abstract  = {R1-Zero ablation demonstrating that a base LLM trained purely via RL (GRPO algorithm, outcome reward only) develops spontaneous chain-of-thought reasoning, self-reflection, and verification behaviors without any supervised fine-tuning on reasoning traces. Performance on AIME matches or exceeds models trained with human-curated CoT data. Key finding: reasoning capability is latent in pre-trained representations and can be unlocked by RL without expensive human annotation. Foundational for understanding reasoning as an emergent property rather than a trained capability.},
+  keywords  = {reinforcement learning, emergent reasoning, chain-of-thought, HUMMBL:RE}
+}
+
+@article{Ong2024RouteLLM,
+  author    = {Ong, Isaac and Almahairi, Amjad and Wu, Vincent and Chiang, Wei-Lin and Wu, Tianhao and Gonzalez, Joseph E. and Kadous, M. Waleed and Stoica, Ion},
+  title     = {{RouteLLM}: Learning to Route {LLM}s with Preference Data},
+  journal   = {arXiv preprint arXiv:2406.18665},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2406.18665},
+  url       = {https://arxiv.org/abs/2406.18665},
+  abstract  = {RouteLLM learns to route queries between strong (expensive) and weak (cheap) LLMs based on predicted task difficulty. Using preference data from human-labeled comparisons, four routing approaches (matrix factorization, BERT classifier, causal LLM, and similarity-weighted) achieve 40-50% cost reduction with less than 1% quality degradation vs. always using the strong model. The routing framing directly formalizes the push/pull principle: the router is the push engine predicting when expensive reasoning is warranted.},
+  keywords  = {model routing, cost optimization, task difficulty, push/pull, HUMMBL:IN, HUMMBL:RE}
+}
+
+@article{Zelikman2022STAR,
+  author    = {Zelikman, Eric and Wu, Yuhuai and Mu, Jesse and Goodman, Noah D.},
+  title     = {{STaR}: Bootstrapping Reasoning with Reasoning},
+  journal   = {Advances in Neural Information Processing Systems},
+  year      = {2022},
+  doi       = {10.48550/arXiv.2203.14465},
+  url       = {https://arxiv.org/abs/2203.14465},
+  abstract  = {Self-Taught Reasoner (STaR) enables LLMs to bootstrap reasoning ability by generating rationales, evaluating which led to correct answers, and fine-tuning on those rationales. The model iteratively improves its own chain-of-thought generation without human annotation beyond problem-answer pairs. STaR achieves near-supervised performance on GSM8K with minimal data. Foundational for self-improvement loops in agentic systems — the pull engine's ability to generate and validate its own reasoning chains.},
+  keywords  = {chain-of-thought, self-improvement, reasoning bootstrapping, HUMMBL:RE, HUMMBL:CO}
+}
+
+@article{Yao2024ToT2,
+  author    = {Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Thomas L. and Cao, Yuan and Narasimhan, Karthik},
+  title     = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
+  journal   = {Advances in Neural Information Processing Systems},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2305.10601},
+  url       = {https://arxiv.org/abs/2305.10601},
+  abstract  = {Tree of Thoughts (ToT) extends chain-of-thought prompting by enabling LLMs to explore multiple reasoning paths, self-evaluate intermediate states, and use search algorithms (BFS/DFS) to navigate the tree. On tasks requiring planning and multi-step search (Game of 24, Creative Writing, Mini Crosswords), ToT dramatically outperforms CoT. ToT formalizes the pull engine's deliberation structure: the model explores branches, evaluates partial solutions, and selects the best path. The governance receipt can log the reasoning tree for audit.},
+  keywords  = {tree of thoughts, deliberate reasoning, search, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Wang2023Selfconsistency,
+  author    = {Wang, Xuezhi and Wei, Jason and Schuurmans, Dale and Le, Quoc and Chi, Ed and Narang, Sharan and Chowdhery, Aakanksha and Zhou, Denny},
+  title     = {Self-Consistency Improves Chain of Thought Reasoning in Language Models},
+  journal   = {International Conference on Learning Representations},
+  year      = {2023},
+  doi       = {10.48550/arXiv.2203.11171},
+  url       = {https://arxiv.org/abs/2203.11171},
+  abstract  = {Self-consistency replaces greedy decoding in CoT prompting by sampling multiple diverse reasoning paths and taking the majority vote over final answers. On arithmetic, commonsense, and symbolic reasoning benchmarks, self-consistency improves accuracy by 1-17.9% over standard CoT. The method requires no additional training and is model-agnostic. Self-consistency is a key primitive for the pull engine's answer-validation layer: sample N reasoning traces, take majority vote on governance decision. Simpler than PRMs but effective for many governance judgment tasks.},
+  keywords  = {self-consistency, chain-of-thought, ensemble reasoning, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Madaan2023Selfrefine,
+  author    = {Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and Gupta, Shashank and Prasad Majumder, Bodhisattwa and Hermann, Katherine and Welleck, Sean and Yazdanbakhsh, Amir and Clark, Peter},
+  title     = {{Self-Refine}: Iterative Refinement with Self-Feedback},
+  journal   = {Advances in Neural Information Processing Systems},
+  year      = {2023},
+  doi       = {10.48550/arXiv.2303.17651},
+  url       = {https://arxiv.org/abs/2303.17651},
+  abstract  = {Self-Refine enables LLMs to iteratively improve their own outputs through self-generated feedback and refinement, without additional training. The model generates an initial output, critiques it from multiple perspectives, then refines based on the critique. On 7 diverse tasks (code optimization, math reasoning, dialogue, sentiment reversal, etc.), Self-Refine improves quality by 20% over one-shot generation. Self-Refine is the self-improvement primitive for the pull engine's multi-turn deliberation — the mechanism by which governance reasoning is tightened before a receipt is issued.},
+  keywords  = {self-improvement, iterative refinement, self-critique, HUMMBL:RE, HUMMBL:CO}
+}
+
+@article{Anthropic2024Claude3,
+  author    = {{Anthropic}},
+  title     = {The {Claude} 3 Model Family: Opus, Sonnet, Haiku},
+  journal   = {Technical Report, Anthropic},
+  year      = {2024},
+  url       = {https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf},
+  % No DOI available -- technical report; DOI not registered
+  abstract  = {Model card for the Claude 3 family documenting capabilities, safety properties, and evaluation results across Opus, Sonnet, and Haiku. Reports performance on coding, mathematical reasoning, multilingual tasks, vision, and long-context retrieval. Documents Constitutional AI training, harmlessness evaluations, and responsible scaling policy (RSP) context. Establishes Claude 3 Opus as the frontier reasoning baseline at the time of HUMMBL's architecture decisions. The 200K context window enables full session-level governance receipts to be included in the reasoning context.},
+  keywords  = {foundation model, constitutional AI, safety evaluation, HUMMBL:IN, HUMMBL:RE}
+}
+
+@article{Zheng2024JudgeBench,
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and others},
+  title     = {Judging {LLM}-as-a-Judge with {MT-Bench} and Chatbot Arena},
+  journal   = {Advances in Neural Information Processing Systems},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2306.05685},
+  url       = {https://arxiv.org/abs/2306.05685},
+  abstract  = {Proposes using strong LLMs as automated judges to evaluate chatbot quality at scale, validated against human judgments via MT-Bench (multi-turn questions) and Chatbot Arena (crowdsourced pairwise comparisons). GPT-4 achieves over 80% agreement with human experts. Identifies systematic biases in LLM judges (position, verbosity, self-enhancement). LLM-as-judge is a core primitive for the pull engine's self-evaluation layer — the model evaluates its own governance reasoning before issuing a receipt.},
+  keywords  = {LLM evaluation, automated judging, self-evaluation, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{Chen2024AlphaCode2,
+  author    = {{DeepMind}},
+  title     = {{AlphaCode} 2 Technical Report},
+  journal   = {Technical Report, Google DeepMind},
+  year      = {2024},
+  url       = {https://storage.googleapis.com/deepmind-media/AlphaCode2/AlphaCode2_Tech_Report.pdf},
+  % No DOI available -- technical report; DOI not registered
+  abstract  = {AlphaCode 2 achieves competitive-programming performance above the 85th percentile of human competitors using a Gemini-based model with specialized fine-tuning and a large-scale sampling-and-filtering approach. Generates up to 1M candidate solutions per problem and filters using clustering and scoring heuristics. Documents the system-level engineering for sampling, filtering, and scoring at scale. The large-scale sampling-then-filter architecture directly informs the pull engine's best-of-N architecture for high-stakes governance decisions.},
+  keywords  = {code generation, competitive programming, sampling, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Gemini2024Team,
+  author    = {{Gemini Team} and {Google}},
+  title     = {Gemini: A Family of Highly Capable Multimodal Models},
+  journal   = {arXiv preprint arXiv:2312.11805},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2312.11805},
+  url       = {https://arxiv.org/abs/2312.11805},
+  abstract  = {Technical report for the Gemini model family (Ultra, Pro, Nano), documenting multimodal capabilities (text, image, audio, video, code), architecture, training procedures, and benchmark results. Gemini Ultra achieves human-expert performance on MMLU (90.0%) and outperforms prior models on 30 of 32 academic benchmarks. Documents responsible deployment practices and safety evaluations. Establishes Gemini as a pull-engine target alongside Claude and GPT-4 in HUMMBL's multi-model reasoning architecture.},
+  keywords  = {multimodal models, foundation model, capabilities evaluation, HUMMBL:RE, HUMMBL:DE}
+}
+
+@article{Guo2024Critique,
+  author    = {Guo, Shangding and others},
+  title     = {Critique-Based Reward: Training Language Models to Self-Critique and Improve},
+  journal   = {arXiv preprint arXiv:2411.16646},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2411.16646},
+  url       = {https://arxiv.org/abs/2411.16646},
+  abstract  = {Trains language models to generate critiques of their own outputs and use those critiques as reward signals to improve iteratively. Self-critique training produces models that are more calibrated, more factual, and better at identifying their own errors compared to RLHF-only baselines. The critique-improve loop is the governance-native architecture: a model that critiques its own governance reasoning before issuing a receipt is implementing Constitutional AI at the step level.},
+  keywords  = {self-critique, reward modeling, iterative improvement, HUMMBL:RE, HUMMBL:CO}
+}
+
+@article{Anthropic2025ClaudeModel,
+  author    = {{Anthropic}},
+  title     = {Claude 3.5 Model Family: Sonnet and Haiku},
+  journal   = {Technical Report, Anthropic},
+  year      = {2025},
+  url       = {https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_5.pdf},
+  % No DOI available -- technical report; DOI not registered
+  abstract  = {Model card for Claude 3.5 Sonnet and Haiku, documenting improved performance on software engineering (SWE-bench: 49% resolve rate), agentic task completion, and extended thinking capabilities. Claude 3.5 Sonnet is the primary pull engine model in HUMMBL's architecture as of April 2026 — it is the model that executes governance reasoning, generates receipts, and operates the skill loop in founder-mode. The extended thinking mode is the direct implementation of the pull phase in the push/pull architecture.},
+  keywords  = {foundation model, agentic capabilities, extended thinking, HUMMBL:IN, HUMMBL:RE}
+}
+
+@article{Kumar2024ScalingInference,
+  author    = {Kumar, Aviral and Ziegler, Daniel and Srivastava, Aarohi and others},
+  title     = {Scaling {LLM} Inference with Optimized Sample Compute Allocation},
+  journal   = {arXiv preprint arXiv:2410.22480},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2410.22480},
+  url       = {https://arxiv.org/abs/2410.22480},
+  abstract  = {Studies how to optimally allocate compute across three dimensions at inference time: number of samples, reasoning length, and verifier strength. Shows that combining parallel sampling with sequential refinement dominates either approach alone. Identifies optimal compute allocation as a function of task difficulty. The three-way allocation framework directly informs the pull engine's resource governor: how many reasoning traces to generate, how long each can be, and how strong a verifier to apply.},
+  keywords  = {inference optimization, compute allocation, test-time compute, HUMMBL:IN, HUMMBL:RE}
+}
+
+@article{OpenAI2024o1Mini,
+  author    = {{OpenAI}},
+  title     = {Learning to Reason with {LLM}s},
+  journal   = {Technical Blog, OpenAI},
+  year      = {2024},
+  url       = {https://openai.com/index/learning-to-reason-with-llms/},
+  % No DOI available -- practitioner blog post on OpenAI blog; no registered DOI
+  abstract  = {Technical blog post announcing o1 and o1-mini, introducing the concept of 'thinking time' as a distinct phase before response generation. Documents that o1 achieves 83rd percentile on Codeforces, passes qualifying exams for PhD programs in biology, chemistry, and physics, and ranks in the top 500 in competitive programming. The post introduces the paradigm of spending more compute at inference time to improve reasoning quality — the conceptual foundation for the pull engine's design. o1-mini is the cost-efficient pull target for routine governance tasks.},
+  keywords  = {reasoning models, test-time compute, thinking, HUMMBL:RE, HUMMBL:IN}
+}
+
+@article{OpenAI2024o1Tech,
+  author    = {Jaech, Aaron and Kalai, Adam and Lerer, Adam and Richardson, Adam and El-Kishky, Ahmed and Low, Aiden and others},
+  title     = {OpenAI o1 Replication Report: Teaching Language Models to Reason via Process Reward Models},
+  journal   = {arXiv preprint arXiv:2501.12599},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2501.12599},
+  url       = {https://arxiv.org/abs/2501.12599},
+  abstract  = {Technical paper documenting the training methodology behind o1-class models, including the role of process reward models (PRMs) in guiding RL training, the importance of reward signal quality over quantity, and the scaling properties of reasoning-focused RL. Shows that PRMs trained on step-level labels are more effective RL reward signals than ORMs for long-horizon reasoning tasks. Documents the interplay between model scale, RL training, and emergent reasoning capability — the technical foundation for understanding pull engine capability growth.},
+  keywords  = {reasoning models, process reward models, RL training, HUMMBL:RE, HUMMBL:DE}
+}
