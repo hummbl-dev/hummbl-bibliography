@@ -1,0 +1,361 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "generated": "2026-04-09",
+    "description": "Bibliography evidence mapping for BKI (Belonging as Knowledge Infrastructure) framework. Maps each of the 4 BKI propositions and the Biocognitive OS / Broccolilly Equation to supporting bibliography entries. Entries marked PRESENT exist in the bibliography; entries marked MISSING are recommended additions.",
+    "bki_summary": "BKI holds that belonging is the structural precondition for knowledge creation, transmission, and transformation. Governance frameworks delivered into low-belonging environments produce compliance theater, not behavioral change. HUMMBL creates the belonging infrastructure (transparency, receipts, trust scores) that makes AI governance adoption possible.",
+    "query_usage": "node toolkit/src/query.js --search 'psychological safety' --format json"
+  },
+
+  "proposition_1_cognitive_scaffolding": {
+    "claim": "Belonging is a neurobiological prerequisite for higher-order cognition. Low-belonging triggers amygdala threat response, suppressing prefrontal cortex activity and preventing abstraction.",
+    "evidence_tags": ["HUMMBL:BKI"],
+    "bibliography_entries": [
+      {
+        "key": "Helmreich1999CRM",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "CRM (Crew Resource Management) training reduces error rates by creating psychological safety for junior crew members to challenge senior officers — direct empirical support for belonging as prerequisite for performance",
+        "strength": "STRONG",
+        "evidence_type": "empirical_applied"
+      },
+      {
+        "key": "Salas2005BigFive",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Team effectiveness meta-analysis; identifies trust and mutual performance monitoring as prerequisites for adaptive behavior — behavioral analogue of belonging condition",
+        "strength": "STRONG",
+        "evidence_type": "meta_analysis"
+      },
+      {
+        "key": "ONeill2022HumanAutonomy",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Human-autonomy teaming; trust calibration affects cognitive engagement — low trust = cognitive disengagement, parallels low-belonging → prefrontal suppression",
+        "strength": "MODERATE",
+        "evidence_type": "empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Edmondson1999PsychologicalSafety",
+        "why": "Edmondson's foundational study showing psychological safety predicts team learning behavior. The +0.35 SD effect size cited in BKI theory comes from this line of research.",
+        "citation": "Edmondson, A. (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350–383. doi:10.2307/2666999",
+        "priority": "CRITICAL — add to T10 or T2"
+      },
+      {
+        "key": "Walton2011BelongingUncertainty",
+        "why": "Walton & Cohen belonging uncertainty study: +0.3 SD academic performance via belonging intervention. The specific effect size quoted in BKI Proposition 1.",
+        "citation": "Walton, G. M., & Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. Science, 331(6023), 1447–1451. doi:10.1126/science.1198364",
+        "priority": "HIGH — add to T2 or T8"
+      },
+      {
+        "key": "LiebermanSocial2013",
+        "why": "Lieberman 'Social: Why Our Brains Are Wired to Connect' — neurobiological basis for social threat/reward. Provides the amygdala/PFC mechanism claimed in Proposition 1.",
+        "citation": "Lieberman, M. D. (2013). Social: Why Our Brains Are Wired to Connect. Crown.",
+        "priority": "MODERATE — add to T6 or T2"
+      }
+    ],
+    "coverage_grade": "B",
+    "coverage_note": "Behavioral analogues present (CRM, team effectiveness); direct neurobiological evidence missing. Edmondson is the critical gap."
+  },
+
+  "proposition_2_relational_validation": {
+    "claim": "Knowledge claims gain authority through belonging networks, not logical validity alone. A correct framework delivered by an outsider is processed as threat, not knowledge.",
+    "evidence_tags": ["HUMMBL:BKI", "HUMMBL:CO"],
+    "bibliography_entries": [
+      {
+        "key": "Wenger1998CommunitiesPractice",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Communities of Practice — belonging to the community of practice is prerequisite for knowledge legitimacy. Core support for Proposition 2.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      },
+      {
+        "key": "BrownCollinsDuguid1989Situated",
+        "status": "PRESENT",
+        "tier": "T2",
+        "relevance": "Situated learning — knowledge is inseparable from the community context in which it is enacted. Authority flows through practice membership.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical"
+      },
+      {
+        "key": "Lave1991SituatedLearning",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Legitimate peripheral participation — newcomers gain knowledge authority only through legitimate participation in community, not instruction alone.",
+        "strength": "STRONG",
+        "evidence_type": "ethnographic"
+      },
+      {
+        "key": "Klein2005CommonGround",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Common ground theory — shared knowledge requires common ground established through belonging; expert-to-novice knowledge transfer fails without it.",
+        "strength": "MODERATE",
+        "evidence_type": "theoretical"
+      },
+      {
+        "key": "Nonaka1994KnowledgeCreation",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "SECI model — socialization (tacit-to-tacit transfer) requires shared experience and trust; ba (shared space) is a belonging-equivalent construct.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Bourdieu1977Practice",
+        "why": "Bourdieu's habitus — the embodied dispositions that allow one to 'play the game' in a field. Proposition 2 is essentially a BKI restatement of symbolic violence: outsiders cannot have their knowledge claims recognized because they lack the field-specific capital.",
+        "citation": "Bourdieu, P. (1977). Outline of a Theory of Practice. Cambridge University Press. doi:10.1017/CBO9780511812507",
+        "priority": "CRITICAL — add to T2 or new T14"
+      }
+    ],
+    "coverage_grade": "A-",
+    "coverage_note": "Strong coverage from situated cognition tradition. Bourdieu would add the sociological mechanism; absence noted."
+  },
+
+  "proposition_3_embodied_knowing": {
+    "claim": "Wisdom transmits somatically through belonging relationships. Instructional delivery transmits propositional content only; it cannot reach embodied/habitual knowledge.",
+    "evidence_tags": ["HUMMBL:BKI"],
+    "bibliography_entries": [
+      {
+        "key": "Schon1983ReflectivePractitioner",
+        "status": "PRESENT",
+        "tier": "T1",
+        "relevance": "Reflection-in-action and knowing-in-action — tacit professional knowledge cannot be reduced to explicit rules; it is enacted through practice. Direct support for Proposition 3.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      },
+      {
+        "key": "Hutchins1995Cognition",
+        "status": "PRESENT",
+        "tier": "T2",
+        "relevance": "Distributed cognition — knowledge is embedded in practices, artifacts, and social relationships, not reducible to individual propositional content.",
+        "strength": "STRONG",
+        "evidence_type": "ethnographic"
+      },
+      {
+        "key": "Hollan2000DistributedCognition",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Distributed cognition framework — extends Hutchins; knowledge structure is distributed across people and environment, somatic dimension included.",
+        "strength": "MODERATE",
+        "evidence_type": "theoretical"
+      },
+      {
+        "key": "Senge1990FifthDiscipline",
+        "status": "PRESENT",
+        "tier": "T1",
+        "relevance": "Mental models and shared vision — organizational learning requires shared mental models developed through relational practice, not instruction alone.",
+        "strength": "MODERATE",
+        "evidence_type": "practitioner_theoretical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Polanyi1966TacitDimension",
+        "why": "Polanyi 'The Tacit Dimension' — the foundational source for tacit knowledge. 'We know more than we can tell.' Proposition 3 rests on this claim.",
+        "citation": "Polanyi, M. (1966). The Tacit Dimension. University of Chicago Press. (No registered DOI; pre-DOI monograph.)",
+        "priority": "HIGH — add to T1 or T2"
+      },
+      {
+        "key": "Dreyfus1980MindOverMachine",
+        "why": "Dreyfus and Dreyfus stage model of skill acquisition — expertise cannot be reduced to rule following; embodied practice is the necessary path.",
+        "citation": "Dreyfus, H. L., & Dreyfus, S. E. (1986). Mind over Machine. Free Press.",
+        "priority": "MODERATE — add to T2 or T6"
+      }
+    ],
+    "coverage_grade": "B+",
+    "coverage_note": "Distributed cognition well-covered. Polanyi is the foundational gap; Schon partially compensates."
+  },
+
+  "proposition_4_symbolic_systems": {
+    "claim": "Shared symbolic languages emerge FROM belonging structures, not the reverse. Imposing vocabulary before belonging inverts the causal arrow.",
+    "evidence_tags": ["HUMMBL:BKI", "HUMMBL:CO"],
+    "bibliography_entries": [
+      {
+        "key": "Wenger1998CommunitiesPractice",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Reification and participation — symbols and shared language emerge from participation in communities of practice, not from top-down definition.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      },
+      {
+        "key": "Walsh1991OrganizationalMemory",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Organizational memory — shared interpretive schemes (analogous to symbolic systems) develop through organizational socialization, not instruction.",
+        "strength": "MODERATE",
+        "evidence_type": "theoretical"
+      },
+      {
+        "key": "Nonaka1994KnowledgeCreation",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Externalization in SECI model — explicit symbols emerge from tacit knowledge through dialogue and metaphor; ba (belonging space) is prerequisite.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      },
+      {
+        "key": "Wegner1987TransactiveMemory",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Transactive memory — shared encoding/retrieval systems develop in close relationships; shared symbolic structure is a relational artifact.",
+        "strength": "MODERATE",
+        "evidence_type": "theoretical_empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Vygotsky1978MindSociety",
+        "why": "Vygotsky — zone of proximal development and the social origin of cognitive tools. Language and symbolic systems emerge through social interaction before becoming internalized. Foundational support for Proposition 4.",
+        "citation": "Vygotsky, L. S. (1978). Mind in Society. Harvard University Press.",
+        "priority": "HIGH — add to T2 or T8"
+      }
+    ],
+    "coverage_grade": "B+",
+    "coverage_note": "Strong coverage from CoP and organizational memory. Vygotsky fills the developmental/linguistic origin gap."
+  },
+
+  "biocognitive_os": {
+    "claim": "Humans shift through 6 cognitive modes depending on belonging conditions. Belonging determines which modes are accessible. Governance training delivered into threat-state environments is irretrievable.",
+    "modes": ["Sensory", "Emotive", "Cognitive", "Somatic", "Relational", "Temporal"],
+    "bibliography_entries": [
+      {
+        "key": "Endsley1995SituationAwareness",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Situation awareness levels 1-3 — under stress (low belonging), operators regress to Level 1 perception only; complex integration (Level 3) requires cognitive safety.",
+        "strength": "MODERATE",
+        "evidence_type": "empirical"
+      },
+      {
+        "key": "ONeill2022HumanAutonomy",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Trust calibration in human-autonomy teaming — over/undertrust corresponds to mode collapse in the Biocognitive OS model.",
+        "strength": "MODERATE",
+        "evidence_type": "empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "PorgesPolyvagalTheory2011",
+        "why": "Porges' Polyvagal Theory — provides the neurobiological mechanism for the Biocognitive OS. Autonomic nervous system states (safe/danger/life-threat) directly map to the 6-mode framework.",
+        "citation": "Porges, S. W. (2011). The Polyvagal Theory. Norton.",
+        "priority": "HIGH — add to T6 or T2"
+      },
+      {
+        "key": "Csikszentmihalyi1990Flow",
+        "why": "Flow state — optimal cognitive mode requires belonging-equivalent conditions (clear goals, feedback, challenge-skill balance). The Biocognitive OS Cognitive mode maps to flow.",
+        "citation": "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper.",
+        "priority": "MODERATE — add to T3 or T8"
+      }
+    ],
+    "coverage_grade": "C+",
+    "coverage_note": "Significant gap. The Biocognitive OS is a novel framework without direct bibliography support. Porges and Csikszentmihalyi provide the closest grounding."
+  },
+
+  "broccolilly_equation": {
+    "claim": "S × T × I × C × D = R (Sovereignty × Trust × Integration × Clarity × Depth = Result). Multiplicative: zero in any factor yields zero result.",
+    "bibliography_entries": [
+      {
+        "key": "Salas2005BigFive",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Team effectiveness meta-analysis identifies trust, leadership (sovereignty), and shared mental models (integration/clarity) as multiplicative factors.",
+        "strength": "MODERATE",
+        "evidence_type": "meta_analysis"
+      },
+      {
+        "key": "Bansal2019MentalModels",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "Mental model alignment affects team performance multiplicatively — when alignment is zero, performance collapses regardless of individual competence.",
+        "strength": "MODERATE",
+        "evidence_type": "empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Ajzen1991TheoryPlannedBehavior",
+        "why": "Theory of Planned Behavior — provides the behavioral change multiplicative model that Broccolilly equation echoes. Attitude × norms × PBC = behavioral intention.",
+        "citation": "Ajzen, I. (1991). The theory of planned behavior. Organizational Behavior and Human Decision Processes, 50(2), 179–211. doi:10.1016/0749-5978(91)90020-T",
+        "priority": "MODERATE — add to T2 or T8"
+      }
+    ],
+    "coverage_grade": "C",
+    "coverage_note": "The Broccolilly Equation is a novel framework. Team effectiveness literature provides analogical support but no direct citation exists."
+  },
+
+  "hummbl_governance_failure_thesis": {
+    "claim": "Governance frameworks fail not because of technical deficiencies but because they are delivered into low-belonging environments. HUMMBL creates the belonging infrastructure that makes AI governance adoption structurally possible.",
+    "bibliography_entries": [
+      {
+        "key": "Helmreich1999CRM",
+        "status": "PRESENT",
+        "tier": "T10",
+        "relevance": "CRM implementation failures in aviation were solved by creating shared mental models and psychological safety, not better checklists. Direct analogue for HUMMBL thesis.",
+        "strength": "STRONG",
+        "evidence_type": "empirical_applied"
+      },
+      {
+        "key": "Wenger1998CommunitiesPractice",
+        "status": "PRESENT",
+        "tier": "T8",
+        "relevance": "Formal training programs fail to transmit practice; communities of practice succeed. Governance compliance theater vs governance internalization distinction maps here.",
+        "strength": "STRONG",
+        "evidence_type": "theoretical_empirical"
+      },
+      {
+        "key": "Floridi2018AI4People",
+        "status": "PRESENT",
+        "tier": "T6",
+        "relevance": "AI4People framework — identifies human/social prerequisites for AI ethics adoption; governance without human-centered foundation fails.",
+        "strength": "MODERATE",
+        "evidence_type": "normative"
+      },
+      {
+        "key": "Raji2020Auditing",
+        "status": "PRESENT",
+        "tier": "T6",
+        "relevance": "Internal AI auditing requires organizational belonging/trust infrastructure to function; audit findings without psychological safety are suppressed.",
+        "strength": "MODERATE",
+        "evidence_type": "empirical"
+      }
+    ],
+    "missing_entries": [
+      {
+        "key": "Edmondson1999PsychologicalSafety",
+        "why": "As above — the primary empirical support for why governance frameworks fail in low-safety environments.",
+        "citation": "Edmondson (1999). doi:10.2307/2666999",
+        "priority": "CRITICAL"
+      }
+    ],
+    "coverage_grade": "B",
+    "coverage_note": "CRM and CoP provide strong empirical analogues. Edmondson is the critical missing direct citation."
+  },
+
+  "summary": {
+    "total_bki_entries_present": 14,
+    "total_missing_recommended": 9,
+    "critical_gaps": [
+      "Edmondson1999PsychologicalSafety — psychological safety in teams (T10 or T2)",
+      "Bourdieu1977Practice — habitus and field theory (T2 or new T14)",
+      "Polanyi1966TacitDimension — tacit knowledge foundational text (T1 or T2)"
+    ],
+    "high_priority_gaps": [
+      "Walton2011BelongingUncertainty — belonging intervention effect sizes",
+      "PorgesPolyvagalTheory2011 — neurobiological mechanism for Biocognitive OS",
+      "Vygotsky1978MindSociety — social origin of symbolic systems"
+    ],
+    "strongest_coverage_area": "Proposition 2 (Relational Validation) — situated cognition tradition is well-represented",
+    "weakest_coverage_area": "Biocognitive OS and Broccolilly Equation — novel frameworks without direct bibliography anchors",
+    "overall_grade": "B-",
+    "recommended_additions_count": 9
+  }
+}
