@@ -75,10 +75,18 @@
 
 ## Remaining Priorities
 
-1. **Transformation rebalancing**: P needs +27 tags, SY needs -45 tags to reach ideal
-2. **DOI enrichment**: T1 (30%), T3 (0%), T5 (35%) are below 50%
-3. **ISBN enrichment**: T6, T7, T11 have 0 ISBNs (but mostly articles, not books)
-4. **Metadata accuracy**: Spot-check remaining tiers for hallucinated citations
+### 🔴 High Priority
+1. ~~**T5 blog post annotations**~~ — ✅ Done (all 4 annotated: Kreps, Fowler, Young, Mahdavi)
+2. **Verify zero cross-tier duplicates** — run `npm run check-duplicates` after PR #27 merge
+
+### 🟡 Medium Priority
+1. **DOI audit for T2, T4, T6, T8–T12** — extend annotation convention to all tiers
+2. **T5 academic DOI lookups** — `Grasse1959Stigmergy` (Springer), `Rao1995BDI` (AAAI), `Sabater2005Trust` (AI Review)
+3. **T13 evaluation** — post-2024 reasoning models (DeepSeek-R1, o3) may warrant a new tier
+
+### 🟢 Low Priority
+1. Update CONTRIBUTING.md with annotation convention for `% No DOI available`
+2. Add `find-dois` script run to CI for T2 articles
 
 ---
 
