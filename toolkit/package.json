@@ -24,7 +24,9 @@
     "precommit": "npm run validate",
     "type-check": "tsc --noEmit",
     "build": "tsc",
-    "generate-docs": "node scripts/generate-docs.js"
+    "generate-docs": "node scripts/generate-docs.js",
+    "watch": "node src/watch.js ../bibliography",
+    "citation-graph": "node src/citation-graph.js ../bibliography"
   },
   "keywords": [
     "bibliography",
