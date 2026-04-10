@@ -65,17 +65,27 @@ export interface BeyondAuditReport {
 /**
  * Scan text for potential unregistered extended model references.
  *
- * Strategy: look for Title Case phrases (2-4 words) that appear in a
+ * Strategy: look for capitalised phrases (2-4 words) that appear in a
  * "model reference" context and are NOT Base120 codes. Check each against
  * the Memory Palace. Flag anything that looks like a model but isn't registered.
+ *
+ * Matches:
+ *   - Standard Title Case:  "Circle of Competence", "Map vs Territory"
+ *   - ALL-CAPS acronym lead: "OODA Loop", "VUCA World"
+ *   - Mixed with short connectors (in, of, the, vs, a, an, for, at):
+ *     "Skin in the Game", "First Principles Thinking"
  *
  * This is intentionally conservative — false negatives are preferred over
  * false positives. The goal is drift detection, not a censorship blocklist.
  */
 export function scanForExtendedModels(text: string): string[] {
-  // Match Title Case phrases (2-4 words, possible apostrophe or hyphen)
-  // that aren't pure code patterns like P1, IN15, etc.
-  const titleCasePattern = /\b([A-Z][a-z']+(?:[\s-][A-Z][a-z']+){1,3})\b/g;
+  // Match phrases that start with a capitalised or ALL-CAPS word, then
+  // allow 1-3 additional segments that are each either:
+  //   (a) a capitalised/ALL-CAPS word, or
+  //   (b) a short lowercase connector (≤5 chars: in, of, the, vs, a, an, for, at…)
+  // This covers "OODA Loop", "Skin in the Game", "Circle of Competence",
+  // "Map vs Territory", etc.
+  const titleCasePattern = /\b([A-Z][A-Za-z']*(?:[\s-](?:[A-Z][A-Za-z']*|[a-z]{1,5})){1,3})\b/g;
   const candidates = new Set<string>();
 
   let match: RegExpExecArray | null;

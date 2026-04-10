@@ -11,6 +11,8 @@
  * Governed extensions are NEVER flagged as hallucinations.
  */
 
+import { isMemoryPalaceModel } from '../extensions/memoryPalace.js';
+
 export const BASE120_MODELS = {
   P: [
     'First Principles Framing', 'Stakeholder Mapping', 'Identity Stack',
@@ -173,16 +175,11 @@ export const BASEN_EXTENSIONS: readonly string[] = [];
  * Lazy import to avoid circular dependency between utils and extensions.
  */
 export function isGovernedExtension(text: string): boolean {
-  try {
-    // Dynamic require pattern for ESM/CJS compatibility in CI
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { isMemoryPalaceModel } = require('../extensions/memoryPalace.js');
-    const words = text.match(/[A-Z][a-z']+(?:[\s-][A-Z][a-z']+)*/g) ?? [];
-    return words.some((w: string) => isMemoryPalaceModel(w));
-  } catch {
-    // Memory Palace not available (e.g. pre-build) — fail open (don't block)
-    return false;
-  }
+  // Extract capitalised phrases (same pattern as scanForExtendedModels) and
+  // check each against the Memory Palace static import. No require() — this
+  // module is ESM and require() throws "require is not defined" at runtime.
+  const words = text.match(/[A-Z][A-Za-z']*(?:[\s-](?:[A-Z][A-Za-z']*|[a-z]{1,5}))*/g) ?? [];
+  return words.some((w: string) => isMemoryPalaceModel(w));
 }
 
 /**
