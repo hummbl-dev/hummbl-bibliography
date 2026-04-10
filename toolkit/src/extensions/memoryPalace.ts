@@ -93,7 +93,7 @@ export const MEMORY_PALACE: readonly MemoryPalaceEntry[] = [
     slug: 'via-negativa',
     room: 'TALEB',
     canonical_name: 'Via Negativa',
-    aliases: ['via negativa', 'subtraction principle'],
+    aliases: ['subtraction principle'],
     source: 'Nassim Nicholas Taleb; apophatic theology tradition',
     description: 'Improvement through subtraction rather than addition',
     tags: ['design', 'simplicity', 'taleb'],
