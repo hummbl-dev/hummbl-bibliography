@@ -3,7 +3,7 @@
  * Prevents hallucination by monitoring agent outputs in real-time
  */
 
-import { validateModelCode, isLikelyHallucination, isGovernedExtension, ModelCode } from './validateModelCode.js';
+import { validateModelCode, ModelCode } from './validateModelCode.js';
 
 export interface AuditReport {
   references: ModelReference[];
@@ -89,11 +89,12 @@ function extractReferences(text: string): ModelReference[] {
  * Governed ARCANA models and BaseN extensions are excluded from hallucination
  * detection — they are first-class governed models, not noise.
  */
-function detectHallucinations(text: string): string[] {
-  // Only flag terms that are truly unattributed AND not governed extensions
-  return isLikelyHallucination(text) && !isGovernedExtension(text)
-    ? ['Mental Model (unattributed)']
-    : [];
+/**
+ * Hallucination detection removed — use beyondBase120Audit.ts (Memory Palace)
+ * for extended model drift detection. No-op retained for interface compat.
+ */
+function detectHallucinations(_text: string): string[] {
+  return [];
 }
 
 /**

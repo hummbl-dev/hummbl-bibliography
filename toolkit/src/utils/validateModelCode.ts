@@ -11,6 +11,8 @@
  * Governed extensions are NEVER flagged as hallucinations.
  */
 
+import { isMemoryPalaceModel } from '../extensions/memoryPalace.js';
+
 export const BASE120_MODELS = {
   P: [
     'First Principles Framing', 'Stakeholder Mapping', 'Identity Stack',
@@ -156,53 +158,39 @@ export function getTransformationModels(transformation: TransformationType): rea
 }
 
 /**
- * Governed ARCANA extension registry.
- * These are philosophical lenses developed through the ARCANA research platform
- * (28 agents: Yarvin, Dugin, Land, Gramsci, Foucault, Nietzsche, Girard, etc.).
- * They are first-class governed mental models — never hallucinations.
- */
-export const ARCANA_MODELS: readonly string[] = [
-  // Taleb / Antifragility cluster
-  'Antifragility', 'Black Swan', 'Survivorship Bias', 'Skin in the Game',
-  'Via Negativa', 'Lindy Effect', 'Fat Tails',
-  // Decision / cognition
-  'OODA Loop', 'Circle of Competence', 'Map vs Territory',
-  'Regression to the Mean', 'Probabilistic Thinking', 'Second-Order Thinking',
-  // Systems / complexity
-  'Feedback Loops', 'Systems Thinking', 'Comparative Advantage',
-  // Epistemics
-  "Hanlon's Razor", "Occam's Razor", 'Signaling',
-  // Girardian
-  'Mimetic Desire', 'Scapegoat Mechanism',
-  // BKI
-  'Belonging Infrastructure', 'Biocognitive OS',
-];
-
-/**
  * Governed BaseN extensions: model codes with numbers beyond 1-20 that have
  * been explicitly approved through the BaseN extension process.
  * Format: transformation prefix + number (e.g. "SY21", "P25").
+ * Managed separately from the Memory Palace (these are coded extensions of
+ * Base120 itself, not named-model extensions).
  */
 export const BASEN_EXTENSIONS: readonly string[] = [];
 
 /**
- * Returns true if the term is a governed ARCANA model (not a hallucination).
+ * Returns true if the term is a governed extension model.
+ * Delegates to the Memory Palace registry — that is the single source of truth
+ * for beyond-Base120 models. isLikelyHallucination() should not be used for
+ * content filtering; use the Memory Palace audit instead.
+ *
+ * Lazy import to avoid circular dependency between utils and extensions.
  */
 export function isGovernedExtension(text: string): boolean {
-  const lower = text.toLowerCase();
-  return ARCANA_MODELS.some(m => lower.includes(m.toLowerCase()));
+  // Extract capitalised phrases (same pattern as scanForExtendedModels) and
+  // check each against the Memory Palace static import. No require() — this
+  // module is ESM and require() throws "require is not defined" at runtime.
+  const words = text.match(/[A-Z][A-Za-z']*(?:[\s-](?:[A-Z][A-Za-z']*|[a-z]{1,5}))*/g) ?? [];
+  return words.some((w: string) => isMemoryPalaceModel(w));
 }
 
 /**
- * Checks if a string is likely a hallucinated model (not in Base120 or governed extensions)
+ * @deprecated Use the Memory Palace audit (beyondBase120Audit.ts) instead.
+ * This function is retained for backward compatibility only and will always
+ * return false (no hardcoded blocklist).
+ *
+ * The old pattern of maintaining a hardcoded "hallucinated model" list is
+ * replaced by the Memory Palace registry: if a model isn't registered there,
+ * the beyond-base120 audit flags it as DRIFT, not as a "hallucination".
  */
-export function isLikelyHallucination(text: string): boolean {
-  // Generic terms that are truly unattributed (not ARCANA, not Base120)
-  const unattributedTerms = [
-    'Mental Model',
-  ];
-
-  return unattributedTerms.some(term =>
-    text.toLowerCase().includes(term.toLowerCase())
-  ) && !isGovernedExtension(text);
+export function isLikelyHallucination(_text: string): boolean {
+  return false;
 }
