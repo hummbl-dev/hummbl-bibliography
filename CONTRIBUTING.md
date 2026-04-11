@@ -85,6 +85,26 @@ This queries CrossRef for all entries missing a `doi` field. Add any found DOIs,
 
 `npm run validate` checks that every entry has either a `doi` field or a `% No DOI available` comment. The CI gate will fail on entries missing both.
 
+### Memory Palace alias validation
+
+Before committing changes to `toolkit/src/extensions/memoryPalace.ts`, run:
+
+```bash
+cd toolkit && npm run validate:memory-palace
+```
+
+This checks that no `canonical_name` or alias lowercases to the same key as another entry.
+The pre-commit hook (installed via `bash scripts/setup-hooks.sh`) runs this check automatically
+when `memoryPalace.ts` is staged.
+
+**Common mistake**: adding an alias that is just a differently-cased version of the
+`canonical_name` (e.g. `canonical_name: 'Via Negativa'` with alias `'via negativa'`).
+`buildLookupMap()` lowercases all keys, so these collide. Remove the redundant alias.
+
+**Note for CI/automation sessions**: when editing `memoryPalace.ts` or other TypeScript
+source files in a code editor tool, read the file before editing it. Some editor tools
+reject edits to files that have not been explicitly read in the current session.
+
 ---
 
 Thanks for contributing!
