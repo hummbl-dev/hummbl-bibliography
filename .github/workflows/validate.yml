@@ -72,6 +72,18 @@ jobs:
           exit 1
         fi
         
+    - name: Verify README badge matches entry count
+      run: |
+        BADGE_COUNT=$(grep -o 'entries-[0-9]*' README.md | head -1 | sed 's/entries-//')
+        ACTUAL_COUNT=$(jq '.total' stats-output.json)
+        echo "Badge count: $BADGE_COUNT"
+        echo "Actual count: $ACTUAL_COUNT"
+        if [ "$BADGE_COUNT" != "$ACTUAL_COUNT" ]; then
+          echo "::error::README badge ($BADGE_COUNT) does not match actual entry count ($ACTUAL_COUNT). Update the badge."
+          exit 1
+        fi
+        echo "✓ Badge count matches: $ACTUAL_COUNT"
+
     - name: Comment PR with results
       if: always() && github.event_name == 'pull_request'
       uses: actions/github-script@v7

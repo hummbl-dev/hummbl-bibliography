@@ -1,12 +1,12 @@
 # HUMMBL Bibliography
 
-![Total Entries](https://img.shields.io/badge/entries-240-blue)
+![Total Entries](https://img.shields.io/badge/entries-260-blue)
 ![DOI Coverage](https://img.shields.io/badge/DOIs-65%25-yellow)
 ![ISBN Coverage](https://img.shields.io/badge/ISBNs-30%25-green)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 
-A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 240 curated academic and practitioner works organized into 12 thematic tiers, mapped to 6 cognitive transformations.
+A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
 
 ## 🎯 Overview
 
@@ -40,7 +40,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 | **T11: Security** | Adversarial ML & defense | Goodfellow, zero trust, formal verification |
 | **T12: Complexity** | Complex adaptive systems | Holland, Kauffman, networks, cybernetics |
 
-All 240 entries have abstracts (150-300 words) and HUMMBL transformation tags.
+All 260 entries have abstracts (150-300 words) and HUMMBL transformation tags.
 
 ## 🚀 Quick Start
 
@@ -88,7 +88,7 @@ npm test
 
 Based on latest analysis (April 2026):
 
-- **Total Entries**: 240 unique works across 12 tiers
+- **Total Entries**: 260 unique works across 13 tiers
 - **Transformation Coverage** (tag count across all entries):
   - SY (Synthesis): 152
   - CO (Composition): 115
@@ -99,8 +99,8 @@ Based on latest analysis (April 2026):
 - **Quality Metrics**:
   - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
-  - 65% have DOIs (155/240)
-  - 30% have ISBNs (72/240)
+  - 65% have DOIs (169/260)
+  - 30% have ISBNs (78/260)
   - 0 validation errors, 0 duplicates
 
 ## 🔄 HUMMBL Transformation Mapping
