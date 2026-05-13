@@ -143,6 +143,7 @@ See [toolkit/README.md](toolkit/README.md) for detailed documentation.
 - [TRANSFORMATION_GUIDE.md](docs/TRANSFORMATION_GUIDE.md) - HUMMBL transformation mapping guidelines
 - [QUALITY_STANDARDS.md](docs/QUALITY_STANDARDS.md) - Citation and metadata standards
 - [GAP_ANALYSIS.md](docs/GAP_ANALYSIS.md) - Current coverage gaps and priorities
+- [REPO_HEALTH.md](docs/REPO_HEALTH.md) - Owner, lifecycle, validation, and branch-protection contract
 
 ## 🤝 Contributing
 
