@@ -212,3 +212,7 @@ Special thanks to the researchers, authors, and practitioners whose work forms t
 **Maintained by**: HUMMBL Team  
 **Last Updated**: 2026-04-08  
 **Version**: 2.0.0
+
+## Repository Health
+
+See [docs/REPO_HEALTH.md](docs/REPO_HEALTH.md) for validation and branch-protection expectations.
