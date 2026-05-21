@@ -48,8 +48,8 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.4",
-    "postcss": "^8.5.14",
+    "lint-staged": "^17.0.5",
+    "postcss": "^8.5.15",
     "postcss-functions": "^4.0.2",
     "postcss-js": "^5.1.0",
     "postcss-nested": "^7.0.2",
