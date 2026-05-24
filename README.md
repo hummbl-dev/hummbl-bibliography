@@ -1,8 +1,8 @@
 # HUMMBL Bibliography
 
 ![Total Entries](https://img.shields.io/badge/entries-260-blue)
-![DOI Coverage](https://img.shields.io/badge/DOIs-65%25-yellow)
-![ISBN Coverage](https://img.shields.io/badge/ISBNs-30%25-green)
+![DOI Coverage](https://img.shields.io/badge/DOIs-71%25-yellowgreen)
+![ISBN Coverage](https://img.shields.io/badge/ISBNs-28%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 
@@ -23,7 +23,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 
 ## 📚 Bibliography Structure
 
-### Twelve Thematic Tiers (20 entries each)
+### Thirteen Thematic Tiers (20 entries each)
 
 | Tier | Domain | Examples |
 |------|--------|----------|
@@ -39,6 +39,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 | **T10: Collaboration** | Human-AI teaming | Licklider, CSCW, shared mental models |
 | **T11: Security** | Adversarial ML & defense | Goodfellow, zero trust, formal verification |
 | **T12: Complexity** | Complex adaptive systems | Holland, Kauffman, networks, cybernetics |
+| **T13: Reasoning** | Advanced reasoning systems | o-series model cards, AlphaCode, Claude |
 
 All 260 entries have abstracts (150-300 words) and HUMMBL transformation tags.
 
@@ -61,6 +62,10 @@ npm run validate
 # View statistics
 npm run stats
 ```
+
+The root `package.json` is a private delegation shim. After installing
+`toolkit/` dependencies, root commands such as `npm test`, `npm run validate`,
+and `npm run stats` delegate to the toolkit package.
 
 ### Basic Usage
 
@@ -91,16 +96,16 @@ Based on latest analysis (April 2026):
 - **Total Entries**: 260 unique works across 13 tiers
 - **Transformation Coverage** (tag count across all entries):
   - SY (Synthesis): 152
-  - CO (Composition): 115
-  - DE (Decomposition): 103
-  - RE (Recursion): 97
-  - IN (Inversion): 90
+  - CO (Composition): 119
+  - RE (Recursion): 117
+  - DE (Decomposition): 108
+  - IN (Inversion): 101
   - P (Perspective): 80
 - **Quality Metrics**:
   - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
-  - 65% have DOIs (169/260)
-  - 30% have ISBNs (78/260)
+  - 70.8% have DOIs (184/260)
+  - 27.7% have ISBNs (72/260)
   - 0 validation errors, 0 duplicates
 
 ## 🔄 HUMMBL Transformation Mapping
@@ -162,9 +167,10 @@ All submissions are automatically validated via pre-commit hooks and CI/CD.
 Current priorities for quality improvement:
 
 - **Perspective (P)**: 80 tags (11.8%) -- underrepresented vs. 16.7% ideal
-- **Inversion (IN)**: 90 tags (13.8%) -- slightly below target
-- **DOI coverage**: 65% overall; T3 (applied/trade books) at 0%
-- **ISBN coverage**: Strong in T1/T3 but low in T4-T12
+- **Inversion (IN)**: 101 tags -- below the current average of 112.8
+- **Decomposition (DE)**: 108 tags -- slightly below the current average of 112.8
+- **DOI coverage**: 70.8% overall
+- **ISBN coverage**: 27.7% overall; strongest in book-heavy tiers
 
 See [docs/GAP_ANALYSIS.md](docs/GAP_ANALYSIS.md) for detailed analysis.
 

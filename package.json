@@ -2,10 +2,16 @@
   "name": "hummbl-bibliography",
   "version": "1.0.0",
   "description": "A curated bibliography for HUMMBL project",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"No tests specified\" && exit 0",
-    "lint": "echo \"No linter configured\" && exit 0"
+    "test": "node scripts/check-root-package.mjs && npm --prefix toolkit test",
+    "validate": "npm --prefix toolkit run validate",
+    "validate:ci": "npm --prefix toolkit run validate:ci",
+    "check-dups": "npm --prefix toolkit run check-dups",
+    "check-required-fields": "npm --prefix toolkit run check-required-fields",
+    "stats": "npm --prefix toolkit run stats",
+    "stats:json": "npm --prefix toolkit run stats:json",
+    "lint": "npm --prefix toolkit run lint --if-present"
   },
   "repository": {
     "type": "git",
