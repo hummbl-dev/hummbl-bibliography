@@ -21,6 +21,7 @@
 - `docs/TRANSFORMATION_GUIDE.md` is the source of truth for HUMMBL transformation tagging.
 - `docs/GAP_ANALYSIS.md` is the source of truth for coverage gaps and improvement priorities.
 - `toolkit/` is the source of truth for local validation and statistics commands.
+- The root `package.json` is private and delegates validation commands to `toolkit/`; it is not a publishable runtime package.
 
 ## Validation Contract
 
@@ -29,6 +30,13 @@ Run from the repository root unless noted.
 ```bash
 cd toolkit
 npm ci
+npm test
+npm run stats
+```
+
+The root package boundary should also remain wired:
+
+```bash
 npm test
 npm run stats
 ```
