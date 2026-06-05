@@ -39,15 +39,38 @@
     "missing_entries": [
       {
         "key": "Edmondson1999PsychologicalSafety",
-        "why": "Edmondson's foundational study showing psychological safety predicts team learning behavior. The +0.35 SD effect size cited in BKI theory comes from this line of research.",
+        "why": "Edmondson's foundational study of 51 work teams: psychological safety predicts team performance (β=0.67) through team learning behavior (β=0.80). NOTE: prior BKI claim of '+35% complex problem-solving' is a PHANTOM — does not appear in any Edmondson primary source (verified 2026-05-07 via dedicated audit lane). Use β=0.67/0.80 framing or directional language only.",
         "citation": "Edmondson, A. (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350–383. doi:10.2307/2666999",
-        "priority": "CRITICAL — add to T10 or T2"
+        "priority": "CRITICAL — add to T10 or T2",
+        "audit_status": "VERIFIED (citation); PHANTOM (any +35% claim attributed to Edmondson must be removed)"
       },
       {
         "key": "Walton2011BelongingUncertainty",
-        "why": "Walton & Cohen belonging uncertainty study: +0.3 SD academic performance via belonging intervention. The specific effect size quoted in BKI Proposition 1.",
+        "why": "Walton & Cohen 2011: brief belonging intervention; the 0.28 standardized GPA coefficient was specific to African-American students at a single private university (N=92). NOTE: prior BKI framing of '+0.3 SD academic achievement' is APPROXIMATE / MISREAD — never a population-level effect size. Cite paired with Walton 2023 (below) for context-conditional framing, which is the stronger match for BKI's argument.",
         "citation": "Walton, G. M., & Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. Science, 331(6023), 1447–1451. doi:10.1126/science.1198364",
-        "priority": "HIGH — add to T2 or T8"
+        "priority": "HIGH — add to T2 or T8",
+        "audit_status": "APPROXIMATE — pair with Walton2023MultiSite for canonical use"
+      },
+      {
+        "key": "Walton2023MultiSite",
+        "why": "Multi-site replication: 22 institutions, n=26,911. Belonging intervention effect is CONTEXT-CONDITIONAL — works only where institutional context affords genuine belonging opportunities; null/negative in unsupportive contexts. This conditionality IS the BKI argument and is materially stronger than the 2011 single-site framing. Use as the load-bearing belonging-intervention citation; cite 2011 as the foundational predecessor.",
+        "citation": "Walton, G. M., Murphy, M. C., Logel, C., Yeager, D. S., et al. (2023). Where and with whom does a brief social-belonging intervention promote progress in college? Science, 380(6644), 499–505. doi:10.1126/science.ade4420",
+        "priority": "HIGH — load-bearing replacement for Walton2011 single-cite",
+        "audit_status": "VERIFIED — strongest available belonging-intervention citation"
+      },
+      {
+        "key": "Nolan2008NeighborsEnergy",
+        "why": "Field experiment showing neighbors' energy-conservation behavior was the #1 most powerful subsequent influence on consumer behavior, despite consumers rating it the LEAST influential. Provides primary empirical anchor for the 'context > stated values' comparative-strength claim that HUMMBL pitches often attribute to Cialdini or Thaler/Sunstein generically. Use Nolan 2008 as primary; cite Cialdini and Thaler/Sunstein as overarching frameworks.",
+        "citation": "Nolan, J. M., Schultz, P. W., Cialdini, R. B., Goldstein, N. J., & Griskevicius, V. (2008). Normative social influence is underdetected. Personality and Social Psychology Bulletin, 34(7), 913–923. doi:10.1177/0146167208316691",
+        "priority": "HIGH — primary source for context-vs-stated-values pitch claim",
+        "audit_status": "VERIFIED — added 2026-05-07 from cite-audit follow-through"
+      },
+      {
+        "key": "Bourdieu1977Outline",
+        "why": "Habitus and practical sense — practical knowledge cannot be acquired through instruction alone; it forms through participation in a community. Foundational for BKI Proposition 3 (Embodied Knowing). Audit flagged Bourdieu as CRITICAL missing entry; not currently in BKI_GOVERNANCE_DRAFT.md but referenced in skill register.",
+        "citation": "Bourdieu, P. (1977). Outline of a Theory of Practice (R. Nice, Trans.). Cambridge University Press. (Original work published 1972)",
+        "priority": "HIGH — fills CRITICAL gap flagged in original evidence map",
+        "audit_status": "THEORETICAL — canonical philosophy; cite directly as interpretive application"
       },
       {
         "key": "LiebermanSocial2013",
