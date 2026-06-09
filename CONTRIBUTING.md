@@ -1,110 +1,89 @@
-# Contributing
+# Contributing to HUMMBL Bibliography
 
-Thanks for your interest in contributing!
+Thank you for your interest in contributing to the HUMMBL Bibliography!
 
-## Getting started
-1. Fork the repository and clone your fork.
-2. Install dependencies:
-   - npm ci
-3. Run lint and tests locally:
-   - npm run lint
-   - npm test
+## Overview
 
-## Branching
-- Use feature branches named like: feat/<short-description> or fix/<short-description>
-- Prefix WIP branches with wip/
-- Rebase or merge main frequently to keep PRs up to date
+The HUMMBL Bibliography is a curated collection of 260 entries across 13 thematic tiers, providing foundational content for the Base120 mental model framework.
 
-## Commits and PRs
-- Use clear commit messages. Prefer conventional commits (feat:, fix:, docs:, chore:, refactor:, test:).
-- Open a PR using the PR template. Link related issues and include testing notes.
+## Getting Started
 
-## Code review
-- Add reviewers and request CODEOWNERS review where relevant.
-- Address review comments and keep changes small and focused.
+1. Clone the repository
+2. Ensure Python 3.11+ is installed
+3. Review the structure in `bibliography/`
+4. Read the quality standards in `docs/QUALITY_STANDARDS.md`
 
-## Releases & Changelog
-- Maintain CHANGELOG.md for notable user-impacting changes.
-- Use semantic versioning; consider automating releases (semantic-release) if desired.
+## Development Workflow
 
-## Code Style
-- Use ESLint configuration present in repo (or add one) and format using Prettier if configured.
+### Branching
 
-## Security
-- Do not commit secrets. Use GitHub secrets for CI and environment variables.
-- Report security issues privately if necessary.
+- Create a branch from `main`
+- Use format: `type/short-desc` (e.g., `feat/add-new-entry`)
+- Never push directly to `main`
 
-## DOI Coverage Requirements
+### Commit Format
 
-Every BibTeX entry must have either a `doi` field or a `% No DOI available` comment. Never leave an entry without one of these.
+- Use Conventional Commits: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`
+- Never use `--no-verify`, never use `--no-gpg-sign`
+- Example: `feat: add new entry to T2_empirical.bib`
 
-### If the entry has a DOI
+### Adding Bibliography Entries
 
-Add the `doi` field after the last identifier field (`isbn`, `url`, etc.):
+1. Choose the appropriate tier file (`T1_canonical.bib` through `T13_reasoning.bib`)
+2. Add entry with required fields:
+   - `title`, `author`, `year`, `publisher/journal`
+   - `isbn` (for books) or `doi` (for articles)
+   - `abstract` (100-300 words)
+   - `keywords` (including HUMMBL transformation tags: `HUMMBL:P`, `HUMMBL:IN`, `HUMMBL:CO`, `HUMMBL:DE`, `HUMMBL:RE`, `HUMMBL:SY`)
 
-```bibtex
-doi = {10.1145/3351095.3372873},
-```
+3. Run validation:
+   ```bash
+   npm run validate
+   ```
 
-For arXiv preprints, use the CrossRef-registered arXiv DOI format:
+4. Regenerate unified bibliography:
+   ```bash
+   npm run build
+   ```
 
-```bibtex
-doi = {10.48550/arXiv.2302.07842},
-```
+### Quality Standards
 
-You can look up arXiv DOIs at `https://doi.org/10.48550/arXiv.XXXX.XXXXX`.
+- 100% abstract coverage required
+- 100% HUMMBL keyword coverage required
+- Target 75% DOI coverage (currently 70.8%)
+- Target 50% ISBN coverage (currently 27.7%)
+- Zero duplicates allowed
 
-### If no DOI exists
+### Transformation Tags
 
-Add a comment immediately after the last identifier field, before `abstract`:
+Use these transformation tags in keywords:
+- `HUMMBL:P` — Perspective/Identity
+- `HUMMBL:IN` — Inversion
+- `HUMMBL:CO` — Composition
+- `HUMMBL:DE` — Decomposition
+- `HUMMBL:RE` — Recursion
+- `HUMMBL:SY` — Systems
 
-```bibtex
-isbn = {978-0-14-028329-7},
-% No DOI available -- trade business book; no registered DOI for this edition
-abstract = {
-```
+Aim for balanced coverage across all 6 transformations (16.7% each).
 
-**Standard reason phrases** (use the most accurate one):
-- `trade business book; no registered DOI for this edition`
-- `practitioner blog post on <source>; no registered DOI`
-- `pre-DOI era monograph (published YYYY); no registered DOI`
-- `technical report; DOI not registered`
-- `conference paper; DOI not found via CrossRef or AAAI/IEEE/ACM`
+## Testing
 
-### Finding missing DOIs
+- Run validation before committing: `npm run validate`
+- Check for duplicates: `npm run check-dups`
+- View statistics: `npm run stats`
 
-Run the toolkit's DOI finder before concluding a DOI doesn't exist:
+## Documentation
 
-```bash
-cd toolkit && npm run find-dois
-```
+- Document tier-specific guidelines in tier README files
+- Update transformation mappings in `hummbl-transformations.json`
+- Document model-level mappings in separate files
 
-This queries CrossRef for all entries missing a `doi` field. Add any found DOIs, then annotate the remaining entries with `% No DOI available`.
+## Questions?
 
-### Validation
+- Open an issue on Gitea
+- Post to the coordination bus
+- Contact the maintainer
 
-`npm run validate` checks that every entry has either a `doi` field or a `% No DOI available` comment. The CI gate will fail on entries missing both.
+## License
 
-### Memory Palace alias validation
-
-Before committing changes to `toolkit/src/extensions/memoryPalace.ts`, run:
-
-```bash
-cd toolkit && npm run validate:memory-palace
-```
-
-This checks that no `canonical_name` or alias lowercases to the same key as another entry.
-The pre-commit hook (installed via `bash scripts/setup-hooks.sh`) runs this check automatically
-when `memoryPalace.ts` is staged.
-
-**Common mistake**: adding an alias that is just a differently-cased version of the
-`canonical_name` (e.g. `canonical_name: 'Via Negativa'` with alias `'via negativa'`).
-`buildLookupMap()` lowercases all keys, so these collide. Remove the redundant alias.
-
-**Note for CI/automation sessions**: when editing `memoryPalace.ts` or other TypeScript
-source files in a code editor tool, read the file before editing it. Some editor tools
-reject edits to files that have not been explicitly read in the current session.
-
----
-
-Thanks for contributing!
+MIT License — see LICENSE file for details
