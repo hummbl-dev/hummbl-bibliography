@@ -182,7 +182,7 @@ def main() -> int:
         print(f"✓ Memory Palace: {len(entries)} entries, no alias collisions")
         return 0
 
-    sys.stderr.write(f"✗ Memory Palace alias collision(s) detected:\n\n")
+    sys.stderr.write("✗ Memory Palace alias collision(s) detected:\n\n")
     for c in collisions:
         sys.stderr.write(
             f"  Key: {c['key']!r}\n"

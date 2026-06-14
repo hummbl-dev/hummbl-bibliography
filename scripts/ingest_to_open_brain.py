@@ -76,20 +76,25 @@ def parse_args(argv):
         elif a == "--dry-run":
             opts["dry_run"] = True
         elif a == "--tier":
-            opts["tiers"].append(args[i + 1]); i += 1
+            opts["tiers"].append(args[i + 1])
+            i += 1
         elif a == "--keyword":
-            opts["keywords"].append(args[i + 1]); i += 1
+            opts["keywords"].append(args[i + 1])
+            i += 1
         elif a == "--limit":
-            opts["limit"] = int(args[i + 1]); i += 1
+            opts["limit"] = int(args[i + 1])
+            i += 1
         elif a == "--url":
-            opts["url"] = args[i + 1]; i += 1
+            opts["url"] = args[i + 1]
+            i += 1
         elif a == "--token":
-            opts["token"] = args[i + 1]; i += 1
+            opts["token"] = args[i + 1]
+            i += 1
         elif a == "--agent":
-            opts["agent"] = args[i + 1]; i += 1
+            opts["agent"] = args[i + 1]
+            i += 1
         elif a == "--verbose":
             opts["verbose"] = True
-        i += 1
 
     return opts
 
@@ -235,7 +240,7 @@ def check_health(base_url, token):
 def main():
     opts = parse_args(sys.argv)
 
-    print(f"Loading entries from bibliography... ", end="", flush=True)
+    print("Loading entries from bibliography... ", end="", flush=True)
     entries = load_entries(opts)
     print(f"{len(entries)} entries loaded.")
 

@@ -385,13 +385,6 @@ def inject_tags(content, key, nist, eu, dry_run=False):
         return content, True
 
     return new_content, True
-    new_content = content[:insert_pos] + insertion + content[insert_pos:]
-
-    if dry_run:
-        print(f"  {key}: would add nist={nist!r} eu={eu!r}")
-        return content, True
-
-    return new_content, True
 
 
 def main():
