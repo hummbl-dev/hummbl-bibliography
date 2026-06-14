@@ -33,7 +33,7 @@ Exit codes:
 import json
 import os
 import re
-import subprocess
+import subprocess  # nosec B404
 import sys
 import urllib.error
 import urllib.parse
@@ -113,7 +113,7 @@ def load_entries(opts):
         cmd += ["--limit", str(opts["limit"])]
 
     try:
-        result = subprocess.run(
+        result = subprocess.run(  # nosec B603
             cmd,
             capture_output=True,
             text=True,
@@ -204,6 +204,10 @@ def post_entry(base_url, token, payload):
 
     req = urllib.request.Request(endpoint, data=data, headers=headers, method="POST")
 
+    # Validate URL scheme
+    if not endpoint.startswith("https://"):
+        raise ValueError(f"URL must use HTTPS scheme: {endpoint}")
+
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
             body = resp.read().decode("utf-8")
@@ -226,6 +230,10 @@ def check_health(base_url, token):
     headers = {}
     if token:
         headers["Authorization"] = f"Bearer {token}"
+
+    # Validate URL scheme
+    if not endpoint.startswith("https://"):
+        raise ValueError(f"URL must use HTTPS scheme: {endpoint}")
 
     req = urllib.request.Request(endpoint, headers=headers)
     try:
