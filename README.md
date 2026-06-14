@@ -5,8 +5,12 @@
 ![ISBN Coverage](https://img.shields.io/badge/ISBNs-28%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
 
 A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
+
+Learn more at [hummbl.io](https://hummbl.io).
 
 ## 🎯 Overview
 
@@ -212,6 +216,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 Special thanks to the researchers, authors, and practitioners whose work forms the foundation of the HUMMBL cognitive framework.
+
+## 🔗 HUMMBL Ecosystem
+
+Part of the [HUMMBL](https://github.com/hummbl-dev) cognitive AI architecture:
+
+- [base120](https://github.com/hummbl-dev/base120) -- 120 mental models for structured reasoning
+- [hummbl-governance](https://github.com/hummbl-dev/hummbl-governance) -- Governance primitives for AI agent orchestration
+- [arbiter](https://github.com/hummbl-dev/arbiter) -- Agent-aware code quality scoring and attribution
+- [hummbl-agent](https://github.com/hummbl-dev/hummbl-agent) -- Governed control plane for AI agent systems
 
 ---
 
