@@ -10,6 +10,8 @@
 
 A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
 
+Learn more at [hummbl.io](https://hummbl.io).
+
 ## 🎯 Overview
 
 The HUMMBL cognitive framework identifies six fundamental thinking operations:
@@ -214,6 +216,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 Special thanks to the researchers, authors, and practitioners whose work forms the foundation of the HUMMBL cognitive framework.
+
+## 🔗 HUMMBL Ecosystem
+
+Part of the [HUMMBL](https://github.com/hummbl-dev) cognitive AI architecture:
+
+- [base120](https://github.com/hummbl-dev/base120) -- 120 mental models for structured reasoning
+- [hummbl-governance](https://github.com/hummbl-dev/hummbl-governance) -- Governance primitives for AI agent orchestration
+- [arbiter](https://github.com/hummbl-dev/arbiter) -- Agent-aware code quality scoring and attribution
+- [hummbl-agent](https://github.com/hummbl-dev/hummbl-agent) -- Governed control plane for AI agent systems
 
 ---
 
