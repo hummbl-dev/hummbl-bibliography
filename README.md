@@ -7,6 +7,8 @@
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
+[![Arbiter Score](https://img.shields.io/badge/Arbiter-90.1%20A-brightgreen)](https://github.com/hummbl-dev/arbiter)
+[![Complexity](https://img.shields.io/badge/Complexity-88.1%20A-brightgreen)](https://github.com/hummbl-dev/arbiter)
 
 A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
 
