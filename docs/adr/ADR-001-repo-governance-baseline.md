@@ -4,6 +4,8 @@
 - **Date:** 2026-06-22
 - **Decision owner:** Reuben Bowlby
 - **Steward:** HUMMBL Research Institute
+- **Supersedes:** none
+- **Superseded by:** none
 
 ## Context
 
