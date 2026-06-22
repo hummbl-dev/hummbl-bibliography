@@ -52,7 +52,7 @@
   pages     = {139--178},
   doi       = {10.1207/S15327051HCI1523_4},
   abstract  = {Olson and Olson synthesize a decade of research on remote collaboration, identifying four conditions for effective distance work: common ground, coupling of work, collaboration readiness, and collaboration technology readiness. The multi-agent fleet in hummbl-dev operates under extreme distance conditions -- agents run in separate terminal sessions with no shared memory, no voice channel, and asynchronous communication via TSV bus. Olson and Olson's framework explains why the bus protocol is necessary but insufficient: common ground requires shared context (addressed by the Cognitive Ledger Protocol), tight coupling requires synchronous communication (addressed by the 12-terminal parallel dispatch), and collaboration readiness requires trust (addressed by the agent guardrails and audit gates). Their finding that tightly coupled work suffers most from distance validates the architecture's investment in shared state primitives -- the CLP state manager, boot context injection, and transactive memory retriever all reduce the coordination distance between agents.},
-  keywords  = {distance collaboration, common ground, remote work, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+  keywords  = {distance collaboration, common ground, remote work, HUMMBL:P, HUMMBL:CO, HUMMBL:DE}
 }
 
 @inbook{Klein2005CommonGround,
@@ -65,7 +65,7 @@
   pages     = {139--184},
   doi       = {10.1002/0471739448.ch6},
   abstract  = {Klein et al. formalize common ground as the prerequisite for joint activity, introducing the basic compact -- a tacit agreement to maintain interpredictability, support coordination, and repair breakdowns. The hummbl-dev coordination bus is a direct implementation of a common ground maintenance mechanism. Every agent posting STATUS, SITREP, or PROPOSAL messages is maintaining interpredictability for the fleet. The guardrails documents (Gemini, Kimi) codify the basic compact: agents agree to bounded scope, commit cadence, and identity consistency. When Gemini violated the compact (inflating metrics 17x, deleting other agents' work), the repair mechanism was reversion and probation -- exactly the breakdown-repair cycle Klein describes. The Cognitive Ledger Protocol extends common ground beyond the bus by providing persistent shared memory (ledger entries with Zettelkasten-style links) that survives session boundaries, addressing Klein's observation that common ground erodes without active maintenance.},
-  keywords  = {common ground, joint activity, coordination, team cognition, HUMMBL:CO, HUMMBL:SY, HUMMBL:RE}
+  keywords  = {common ground, joint activity, coordination, team cognition, HUMMBL:CO, HUMMBL:P, HUMMBL:RE}
 }
 
 @article{Salas2005BigFive,
@@ -264,7 +264,7 @@
   isbn      = {978-0-8058-2396-2},
   doi                = {10.1201/b12457},
   abstract  = {Vicente develops cognitive work analysis (CWA) as a framework for analyzing and designing complex sociotechnical systems. CWA proceeds through five phases: work domain analysis (what constraints shape the work), control task analysis (what activities are required), strategies analysis (how activities can be carried out), social organization and cooperation analysis (how work is distributed), and worker competencies analysis (what skills are needed). Unlike task analysis approaches that prescribe specific procedures, CWA models the constraints within which workers must operate, supporting adaptation rather than scripting. The hummbl-dev architecture can be analyzed through CWA's five phases. Work domain analysis: the constraints are budget limits, security requirements, contract schemas, and API rate limits. Control task analysis: the briefing generation, agent coordination, and governance enforcement activities. Strategies analysis: the multiple paths to the same goal (direct API calls vs cached data vs mock fallbacks). Social organization: the role allocation across Claude, Gemini, Kimi, and human operators. Worker competencies: the capability profiles encoded in agent guardrails. CWA's emphasis on constraint-based design rather than procedure-based design explains why the hummbl-dev guardrails specify boundaries (what agents cannot do) rather than scripts (what agents must do).},
-  keywords  = {cognitive work analysis, sociotechnical systems, constraint-based design, HUMMBL:DE, HUMMBL:SY, HUMMBL:CO}
+  keywords  = {cognitive work analysis, sociotechnical systems, constraint-based design, HUMMBL:DE, HUMMBL:P, HUMMBL:CO}
 }
 
 @article{Helmreich1999CRM,

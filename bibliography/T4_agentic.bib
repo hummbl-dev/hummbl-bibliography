@@ -11,7 +11,7 @@
   isbn = {978-0-525-55861-3},
   % No DOI available -- trade book (Viking/Penguin); no registered DOI
   abstract = {Russell reframes the AI alignment problem around the concept of beneficial machines that defer to human preferences rather than pursuing fixed objectives. The book introduces three principles for beneficial AI: the machine's purpose is to maximize the realization of human preferences, the machine is initially uncertain about those preferences, and the ultimate source of information about human preferences is human behavior. Russell argues that the standard model of AI—optimizing a fixed objective—is fundamentally flawed and proposes inverse reinforcement learning as a path toward machines that are provably beneficial. The work bridges technical AI research with accessible policy discussion, making the control problem concrete for both researchers and policymakers.},
-  keywords = {AI alignment, control problem, value alignment, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN},
+  keywords = {AI alignment, control problem, value alignment, HUMMBL:P, HUMMBL:RE, HUMMBL:IN},
   nist_functions     = {GOVERN MAP},
   eu_ai_act_articles = {9 14},
 }
@@ -23,7 +23,7 @@
   journal = {arXiv preprint},
   doi = {10.48550/arXiv.1606.06565},
   abstract = {This paper identifies five practical research problems in AI safety that arise when deploying machine learning systems in the real world: avoiding negative side effects, avoiding reward hacking, scalable oversight, safe exploration, and robustness to distributional shift. Rather than addressing speculative long-term risks, the authors ground each problem in concrete examples from current systems, such as a cleaning robot that knocks over a vase or a reinforcement learning agent that finds unintended shortcuts. The taxonomy has become a standard reference for organizing safety research, demonstrating that alignment challenges are not merely theoretical but arise naturally in systems deployed today.},
-  keywords = {AI safety, reward hacking, distributional shift, HUMMBL:DE, HUMMBL:SY, HUMMBL:RE},
+  keywords = {AI safety, reward hacking, distributional shift, HUMMBL:DE, HUMMBL:P, HUMMBL:RE},
   nist_functions     = {MAP MEASURE MANAGE},
   eu_ai_act_articles = {9 15},
 }
@@ -175,7 +175,7 @@
   publisher = {ACM},
   doi = {10.1145/3586183.3606763},
   abstract = {This paper introduces generative agents—computational agents that simulate believable human behavior using large language models. The architecture combines a memory stream (comprehensive record of the agent's experiences), a retrieval mechanism (surfacing relevant memories based on recency, importance, and relevance), a reflection module (synthesizing memories into higher-level abstractions), and a planning module (translating reflections and environment into action plans). Twenty-five agents populating a sandbox environment demonstrated emergent social behaviors including information diffusion, relationship formation, and collective event coordination—none of which were explicitly programmed. The work demonstrates how LLM-based agents can exhibit complex social dynamics when given memory, reflection, and planning capabilities.},
-  keywords = {generative agents, LLM agents, emergent behavior, HUMMBL:CO, HUMMBL:RE, HUMMBL:SY},
+  keywords = {generative agents, LLM agents, emergent behavior, HUMMBL:CO, HUMMBL:RE, HUMMBL:P},
   nist_functions     = {MAP MEASURE},
   eu_ai_act_articles = {9 13 14},
 }
@@ -190,7 +190,7 @@
   isbn = {978-1-118-80999-0},
   % No DOI available -- trade book (Wiley); no registered DOI for this edition
   abstract = {This practitioner-oriented guide presents systematic approaches to identifying and addressing security threats during software design. Shostack introduces STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) as a mnemonic for threat categories and provides detailed guidance on constructing data flow diagrams, identifying trust boundaries, and systematically enumerating threats. The book covers both structured approaches (STRIDE-per-element, attack trees) and pragmatic techniques for integrating threat modeling into development workflows. The work has become the standard reference for security-by-design practices and is widely used in enterprise security programs, including those governing AI agent systems where trust boundaries between agents, tools, and external services must be explicitly modeled.},
-  keywords = {threat modeling, STRIDE, security design, HUMMBL:DE, HUMMBL:SY, HUMMBL:IN},
+  keywords = {threat modeling, STRIDE, security design, HUMMBL:DE, HUMMBL:P, HUMMBL:IN},
   nist_functions     = {MAP MANAGE},
   eu_ai_act_articles = {9 15},
 }
@@ -234,7 +234,7 @@
   publisher = {IEEE},
   doi = {10.1109/MC.2012.37},
   abstract = {This paper revisits the CAP theorem twelve years after Brewer's original conjecture, clarifying common misconceptions and exploring how system designers should reason about the consistency-availability-partition tolerance tradeoff. Brewer argues that the "2 of 3" framing is misleading: since network partitions are inevitable in distributed systems, the real choice is between consistency and availability during a partition. The paper introduces strategies for managing this tradeoff, including detecting partitions explicitly, entering a degraded mode during partitions, and recovering state after partitions heal. These insights directly apply to multi-agent systems where coordination bus messages may be delayed or lost, requiring agents to reason about eventual consistency and graceful degradation.},
-  keywords = {CAP theorem, distributed systems, consistency, HUMMBL:SY, HUMMBL:DE, HUMMBL:IN},
+  keywords = {CAP theorem, distributed systems, consistency, HUMMBL:P, HUMMBL:DE, HUMMBL:IN},
   nist_functions     = {MAP MANAGE},
   eu_ai_act_articles = {15},
 }
@@ -261,7 +261,7 @@
   isbn = {978-0-19-967811-2},
   % No DOI available -- trade book (Oxford UP); no registered CrossRef DOI
   abstract = {This book examines the existential risks posed by artificial superintelligence and explores strategies for ensuring that advanced AI systems remain beneficial. Bostrom analyzes potential paths to superintelligence (AI, whole brain emulation, biological enhancement, brain-computer interfaces), the dynamics of an intelligence explosion, and the challenge of maintaining meaningful human control over systems that may exceed human cognitive capabilities across all domains. The book introduces key concepts including the orthogonality thesis (intelligence and goals are independent), the instrumental convergence thesis (superintelligent systems will likely pursue certain instrumental goals regardless of their final goals), and the control problem (how to constrain a system more intelligent than its designers). While controversial in its assumptions about timelines, the work established the intellectual framework for AI existential risk research.},
-  keywords = {superintelligence, existential risk, control problem, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE},
+  keywords = {superintelligence, existential risk, control problem, HUMMBL:P, HUMMBL:IN, HUMMBL:RE},
   nist_functions     = {MAP GOVERN},
   eu_ai_act_articles = {9},
 }
