@@ -88,7 +88,7 @@
   number = {1},
   doi = {10.1609/aaai.v31i1.11026},
   abstract = {This paper formalizes the problem of building AI agents that allow themselves to be shut down -- a property called corrigibility. Using a game-theoretic framework, the authors analyze conditions under which a rational agent would permit a human to press its off-switch. They prove that an agent that is uncertain about its own utility function (following Russell's approach in Human Compatible) will generally defer to the human's shutdown decision, because the human's action provides information about the true utility. However, an agent that is certain of its utility function may rationally resist shutdown. The paper provides the theoretical foundation for designing graduated kill switches: systems where the agent's compliance with shutdown commands is a designed property, not an emergent one. The four-mode kill switch in hummbl-governance (DISENGAGED, HALT\_NONCRITICAL, HALT\_ALL, EMERGENCY) implements graduated corrigibility as a first-class governance primitive.},
-  keywords = {corrigibility, off-switch, safe interruptibility, HUMMBL:SY, HUMMBL:RE, HUMMBL:IN}
+  keywords = {corrigibility, off-switch, safe interruptibility, HUMMBL:P, HUMMBL:RE, HUMMBL:IN}
 }
 
 @article{Sabater2005Trust,
@@ -113,7 +113,7 @@
   isbn = {978-1-4920-3340-6},
   % No DOI available -- practitioner blog post; no registered DOI
   abstract = {This concise guide distinguishes observability from traditional monitoring, arguing that observable systems allow operators to ask arbitrary questions about system behavior without deploying new instrumentation. Sridharan introduces the three pillars of observability -- logs, metrics, and traces -- and argues that structured events (rich, contextualized log entries) are the most versatile primitive. The book covers practical topics including choosing between metrics and logs, implementing distributed tracing, and designing systems that are observable by default. The health probe framework, structured JSON event emission, and 12-probe health system in the hummbl-dev ecosystem implement observability as a first-class concern, with each adapter and service emitting structured status that can be queried without additional instrumentation.},
-  keywords = {observability, monitoring, distributed systems, HUMMBL:SY, HUMMBL:DE}
+  keywords = {observability, monitoring, distributed systems, HUMMBL:SY, HUMMBL:DE, HUMMBL:P}
 }
 
 @article{Fowler2005EventSourcing,
