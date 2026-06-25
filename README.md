@@ -153,6 +153,7 @@ See [toolkit/README.md](toolkit/README.md) for detailed documentation.
 - [QUALITY_STANDARDS.md](docs/QUALITY_STANDARDS.md) - Citation and metadata standards
 - [GAP_ANALYSIS.md](docs/GAP_ANALYSIS.md) - Current coverage gaps and priorities
 - [REPO_HEALTH.md](docs/REPO_HEALTH.md) - Owner, lifecycle, validation, and branch-protection contract
+- [SCIENTIFIC_GROUNDING.md](SCIENTIFIC_GROUNDING.md) - Downstream grounding contract and export rules
 
 ## 🤝 Contributing
 
@@ -194,6 +195,19 @@ npm run setup
 - **Validation**: Runs on every PR
 - **Stats Report**: Generated weekly
 - **DOI Enrichment**: Manual trigger for batch updates
+- **Grounding Export Check**: Ensures `dist/scientific-grounding-map.json` stays in sync with source inputs
+
+## 🔬 Scientific Grounding
+
+This repo is the HUMMBL Scientific Grounding citation layer.
+
+- `bibliography/**/*.bib` is the canonical source record surface.
+- `dist/unified-bibliography.json` is the normalized citation export.
+- `dist/scientific-grounding-map.json` is the machine-readable downstream
+  interface for evidence-tier routing, mapping references, and metadata debt.
+
+Downstream repos should cite bibliography keys and import the grounding map
+instead of copying full citation records.
 
 ## 📝 Citation Format
 
