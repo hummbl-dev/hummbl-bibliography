@@ -13,6 +13,9 @@ downstream repos must reference.
 - `dist/unified-bibliography.json` is the normalized full-corpus export.
 - `dist/scientific-grounding-map.json` is the downstream interface export for
   claim hygiene, grounding references, and metadata debt review.
+- `docs/SCIENTIFIC_GROUNDING_RECEIPT.md` records the current map summary,
+  critical/high metadata debt, downstream citation rules, and validation
+  receipt.
 
 Do not treat generated JSON as the primary editing surface. Update the BibTeX
 corpus first, then regenerate the exports.
@@ -63,6 +66,10 @@ Debt is prioritized as `critical`, `high`, `medium`, or `low` based on:
 - evidence-tier sensitivity
 - source type
 - transformation breadth
+
+The current critical/high debt list is summarized in
+`docs/SCIENTIFIC_GROUNDING_RECEIPT.md`. Treat that receipt as the review queue;
+do not patch generated JSON by hand.
 
 ## Commands
 

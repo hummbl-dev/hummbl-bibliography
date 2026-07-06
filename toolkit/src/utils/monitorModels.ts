@@ -18,6 +18,8 @@ export interface ModelReference {
   position: number;
 }
 
+const MODEL_REFERENCE_PATTERN = /(^|[^A-Za-z0-9_])(P|IN|CO|DE|RE|SY)(\d+)(?![A-Za-z0-9_])/g;
+
 /**
  * Monitors agent output for mental model references and hallucinations
  */
@@ -26,13 +28,12 @@ export function monitorModelReferences(output: string): {
   invalid: string[];
   hallucinations: string[];
 } {
-  const modelPattern = /(P|IN|CO|DE|RE|SY)(\d+)/g;
-  const matches = [...output.matchAll(modelPattern)];
+  const matches = [...output.matchAll(MODEL_REFERENCE_PATTERN)];
 
   const valid: ModelCode[] = [];
   const invalid: string[] = [];
 
-  matches.forEach(([fullMatch, transformation, num]) => {
+  matches.forEach(([, , transformation, num]) => {
     const code = `${transformation}${num}`;
     const result = validateModelCode(code);
 
@@ -68,18 +69,20 @@ export function auditText(text: string): AuditReport {
  * Extract all model references from text
  */
 function extractReferences(text: string): ModelReference[] {
-  const modelPattern = /(P|IN|CO|DE|RE|SY)(\d+)/g;
-  const matches = [...text.matchAll(modelPattern)];
+  const matches = [...text.matchAll(MODEL_REFERENCE_PATTERN)];
 
   return matches.map((match, index) => {
-    const code = `${match[1]}${match[2]}`;
+    const prefix = match[1] ?? '';
+    const transformation = match[2];
+    const num = match[3];
+    const code = `${transformation}${num}`;
     const result = validateModelCode(code);
 
     return {
       code,
       name: result.name,
       isValid: result.isValid,
-      position: match.index || 0
+      position: (match.index || 0) + prefix.length
     };
   });
 }
