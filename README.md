@@ -205,6 +205,9 @@ This repo is the HUMMBL Scientific Grounding citation layer.
 - `dist/unified-bibliography.json` is the normalized citation export.
 - `dist/scientific-grounding-map.json` is the machine-readable downstream
   interface for evidence-tier routing, mapping references, and metadata debt.
+- `docs/SCIENTIFIC_GROUNDING_RECEIPT.md` records the current map counts,
+  critical/high metadata debt, downstream citation rules, and validation
+  receipt.
 
 Downstream repos should cite bibliography keys and import the grounding map
 instead of copying full citation records.
