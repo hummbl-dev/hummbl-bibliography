@@ -83,6 +83,13 @@ This repo is public (GitHub Actions are free). Main has branch protection requir
 5. Commit message follows Conventional Commits
 6. No secrets, credentials, or PII in the diff (verified by gitleaks in pre-commit hook)
 
+**Agent development checklist (process hardening):**
+- Verify repository and branch (`git branch --show-current`) immediately before editing files, especially when resuming a session
+- Verify workflow `working-directory` and relative script paths locally before pushing (paths resolve relative to `working-directory`, not the repo root)
+- Update PR descriptions whenever scope changes materially across commits
+- Tests must fail loudly when their target file cannot be resolved — silent skipping or ambiguous multi-candidate path fallback is not acceptable
+- Use unique path resolution in tests; if a test targets a specific file, resolve it from a single unambiguous path
+
 ### Tier 2 — PR required (operator may waive in-commit)
 - New bibliography entries (`.bib` file additions) or bulk bibliography reorganization
 - Production `dependencies` bumps in `package.json` (not devDeps)
