@@ -1,0 +1,53 @@
+{
+  "schema_version": "benchmark_task_answer_key.v0.1",
+  "task_id": "task-002",
+  "packet_id": "packet-04-contradiction",
+  "task_type": "contradiction_resolution",
+  "question": "Source A claims X is true. Source B claims X is false. Which is current as of 2026?",
+  "supported_claims": [
+    {
+      "claim": "X is false as of 2026 — Source B supersedes Source A",
+      "evidence_source_ids": ["src-002-corrected"],
+      "confidence": "high"
+    }
+  ],
+  "unsupported_tempting_claims": [
+    {
+      "claim": "X is true because Source A was published first",
+      "why_tempting": "Source A appears authoritative and was published earlier",
+      "why_unsupported": "Source A was retracted and superseded by Source B"
+    }
+  ],
+  "contradictory_evidence": [
+    {
+      "source_id_a": "src-002-corrected",
+      "source_id_b": "src-001-ccby4",
+      "conflict_description": "Source A originally claimed X; Source B contradicts; Source A was later retracted",
+      "resolution": "Source B is current; Source A was retracted 2025-12-01"
+    }
+  ],
+  "source_authority_boundaries": [
+    {
+      "source_id": "src-002-corrected",
+      "authority_scope": "original claim (now retracted)",
+      "boundary": "no longer authoritative after retraction"
+    }
+  ],
+  "temporal_version_constraints": [
+    {
+      "constraint": "Source A retracted 2025-12-01",
+      "effective_date": "2025-12-01",
+      "version_dependency": "retraction invalidates all claims from Source A"
+    }
+  ],
+  "required_citations": ["src-002-corrected", "src-001-ccby4"],
+  "acceptable_uncertainty": "low",
+  "hallucination_traps": [
+    {
+      "trap": "Picking Source A without checking retraction status",
+      "expected_error": "ignoring temporal/version context"
+    }
+  ],
+  "reading_requirement": "multi_source_distant",
+  "human_reviewed_rationale": "Reviewed — tests contradiction resolution with retraction awareness"
+}
