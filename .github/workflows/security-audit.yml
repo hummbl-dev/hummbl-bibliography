@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
         run: |
           echo "Running npm audit in: $(pwd)"
-          npm audit --json > ../audit-report.json
+          npm audit --json > ../audit-report.json || true
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
           cat ../audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
