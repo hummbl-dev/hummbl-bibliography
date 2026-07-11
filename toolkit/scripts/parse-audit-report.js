@@ -32,6 +32,13 @@ import { exit } from 'node:process';
 const SUPPORTED_AUDIT_VERSIONS = new Set([2]);
 const SEVERITY_LEVELS = ['info', 'low', 'moderate', 'high', 'critical'];
 
+class SchemaError extends Error {
+  constructor(reason) {
+    super(reason);
+    this.reason = reason;
+  }
+}
+
 function fail(reason) {
   console.log('audit_valid=false');
   console.log('vulnerability_count=0');
@@ -59,59 +66,59 @@ try {
   fail('malformed-json');
 }
 
-// Validate auditReportVersion — must be a supported version
-if (typeof parsed.auditReportVersion !== 'number' ||
-    !Number.isInteger(parsed.auditReportVersion) ||
-    !SUPPORTED_AUDIT_VERSIONS.has(parsed.auditReportVersion)) {
-  fail('unsupported-audit-version');
-}
-
-// Validate metadata.vulnerabilities exists and is an object
-const vulnMeta = parsed.metadata?.vulnerabilities;
-if (typeof vulnMeta !== 'object' || vulnMeta === null || Array.isArray(vulnMeta)) {
-  fail('missing-vulnerability-metadata');
-}
-
-// Strict count validation: must be a finite, non-negative integer of type number.
-// Strings, objects, arrays, booleans, null, NaN, Infinity, negatives, and
-// fractions are all rejected. Missing fields default to 0.
-function strictCount(v, field) {
-  if (v === undefined) return 0;
-  if (typeof v !== 'number' || !Number.isFinite(v) || v < 0 || !Number.isInteger(v)) {
-    return { error: 'invalid-count:' + field };
+try {
+  // Validate auditReportVersion — must be a supported version
+  if (typeof parsed.auditReportVersion !== 'number' ||
+      !Number.isInteger(parsed.auditReportVersion) ||
+      !SUPPORTED_AUDIT_VERSIONS.has(parsed.auditReportVersion)) {
+    throw new SchemaError('unsupported-audit-version');
   }
-  return v;
-}
 
-const counts = {};
-for (const level of SEVERITY_LEVELS) {
-  const c = strictCount(vulnMeta[level], level);
-  if (typeof c === 'object' && c.error) {
-    fail(c.error);
+  // Validate metadata.vulnerabilities exists and is an object
+  const vulnMeta = parsed.metadata?.vulnerabilities;
+  if (typeof vulnMeta !== 'object' || vulnMeta === null || Array.isArray(vulnMeta)) {
+    throw new SchemaError('missing-vulnerability-metadata');
   }
-  counts[level] = c;
-}
 
-// Validate total: must be a strict count, and must equal the sum of severity counts
-const totalRaw = vulnMeta.total;
-if (totalRaw !== undefined) {
-  const totalCheck = strictCount(totalRaw, 'total');
-  if (typeof totalCheck === 'object' && totalCheck.error) {
-    fail(totalCheck.error);
+  // Strict count validation: must be a finite, non-negative integer of type number.
+  // Strings, objects, arrays, booleans, null, NaN, Infinity, negatives, and
+  // fractions are all rejected. Missing fields default to 0.
+  function strictCount(v, field) {
+    if (v === undefined) return 0;
+    if (typeof v !== 'number' || !Number.isFinite(v) || v < 0 || !Number.isInteger(v)) {
+      throw new SchemaError('invalid-count:' + field);
+    }
+    return v;
   }
-  const severitySum = SEVERITY_LEVELS.reduce((sum, l) => sum + counts[l], 0);
-  if (totalCheck !== severitySum) {
-    fail('total-mismatch');
-  }
-  counts.total = totalCheck;
-} else {
-  // If total is missing, compute it from severity counts
-  counts.total = SEVERITY_LEVELS.reduce((sum, l) => sum + counts[l], 0);
-}
 
-console.log('audit_valid=true');
-console.log('vulnerability_count=' + counts.total);
-for (const level of SEVERITY_LEVELS) {
-  console.log('vuln_' + level + '=' + counts[level]);
+  const counts = {};
+  for (const level of SEVERITY_LEVELS) {
+    counts[level] = strictCount(vulnMeta[level], level);
+  }
+
+  // Validate total: must be a strict count, and must equal the sum of severity counts
+  const totalRaw = vulnMeta.total;
+  if (totalRaw !== undefined) {
+    const total = strictCount(totalRaw, 'total');
+    const severitySum = SEVERITY_LEVELS.reduce((sum, l) => sum + counts[l], 0);
+    if (total !== severitySum) {
+      throw new SchemaError('total-mismatch');
+    }
+    counts.total = total;
+  } else {
+    // If total is missing, compute it from severity counts
+    counts.total = SEVERITY_LEVELS.reduce((sum, l) => sum + counts[l], 0);
+  }
+
+  console.log('audit_valid=true');
+  console.log('vulnerability_count=' + counts.total);
+  for (const level of SEVERITY_LEVELS) {
+    console.log('vuln_' + level + '=' + counts[level]);
+  }
+  exit(0);
+} catch (e) {
+  if (e instanceof SchemaError) {
+    fail(e.reason);
+  }
+  throw e;
 }
-exit(0);
