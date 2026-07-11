@@ -114,7 +114,7 @@ test('parse-audit-report: npm error object (not an audit report)', () => {
   assert.equal(exitCode, 1);
   const outputs = parseOutputs(stdout);
   assert.equal(outputs.audit_valid, 'false');
-  assert.equal(outputs.error, 'not-audit-report');
+  assert.equal(outputs.error, 'unsupported-audit-version');
 });
 
 // --- Missing file ---
@@ -143,22 +143,165 @@ test('parse-audit-report: missing path argument', () => {
   }
 });
 
-// --- Non-numeric values in JSON (defense-in-depth for shell injection) ---
-test('parse-audit-report: non-numeric vulnerability counts coerced to 0', () => {
-  const fixture = join(TMP, 'non-numeric.json');
+// --- Strict schema validation: non-integer and non-number counts are rejected ---
+test('parse-audit-report: string count rejected (not coerced)', () => {
+  const fixture = join(TMP, 'string-count.json');
   mkdirSync(TMP, { recursive: true });
   writeFileSync(fixture, JSON.stringify({
     auditReportVersion: 2,
     vulnerabilities: {},
     metadata: {
-      vulnerabilities: {
-        info: 'malicious-string',
-        low: { injected: true },
-        moderate: null,
-        high: -1,
-        critical: 3.7,
-        total: '42; rm -rf /'
-      },
+      vulnerabilities: { info: 0, low: 0, moderate: 0, high: 0, critical: 0, total: '4' },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:total');
+});
+
+test('parse-audit-report: injection string rejected as invalid count', () => {
+  const fixture = join(TMP, 'injection.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 0, moderate: 0, high: 0, critical: 0, total: '42; rm -rf /' },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:total');
+});
+
+test('parse-audit-report: negative count rejected', () => {
+  const fixture = join(TMP, 'negative.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 0, moderate: 0, high: -1, critical: 0, total: 0 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:high');
+});
+
+test('parse-audit-report: fractional count rejected', () => {
+  const fixture = join(TMP, 'fractional.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 0, moderate: 0, high: 0, critical: 3.7, total: 4 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:critical');
+});
+
+test('parse-audit-report: null count rejected', () => {
+  const fixture = join(TMP, 'null-count.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: null, low: 0, moderate: 0, high: 0, critical: 0, total: 0 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:info');
+});
+
+test('parse-audit-report: object count rejected', () => {
+  const fixture = join(TMP, 'object-count.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: { injected: true }, moderate: 0, high: 0, critical: 0, total: 0 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'invalid-count:low');
+});
+
+test('parse-audit-report: total mismatch rejected', () => {
+  const fixture = join(TMP, 'total-mismatch.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 1, moderate: 2, high: 1, critical: 0, total: 99 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'total-mismatch');
+});
+
+test('parse-audit-report: unsupported audit version rejected', () => {
+  const fixture = join(TMP, 'bad-version.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 99,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 0, moderate: 0, high: 0, critical: 0, total: 0 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'unsupported-audit-version');
+});
+
+test('parse-audit-report: missing vulnerability metadata rejected', () => {
+  const fixture = join(TMP, 'no-vuln-meta.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {}
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 1);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'false');
+  assert.equal(outputs.error, 'missing-vulnerability-metadata');
+});
+
+test('parse-audit-report: missing count fields default to 0', () => {
+  const fixture = join(TMP, 'missing-fields.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { total: 0 },
       dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
     }
   }));
@@ -166,13 +309,29 @@ test('parse-audit-report: non-numeric vulnerability counts coerced to 0', () => 
   assert.equal(exitCode, 0);
   const outputs = parseOutputs(stdout);
   assert.equal(outputs.audit_valid, 'true');
-  // All non-numeric/non-finite/negative values must be coerced to 0
-  assert.equal(outputs.vulnerability_count, '0', 'string total coerced to 0');
-  assert.equal(outputs.vuln_info, '0', 'string info coerced to 0');
-  assert.equal(outputs.vuln_low, '0', 'object low coerced to 0');
-  assert.equal(outputs.vuln_moderate, '0', 'null moderate coerced to 0');
-  assert.equal(outputs.vuln_high, '0', 'negative high coerced to 0');
-  assert.equal(outputs.vuln_critical, '3', 'float critical truncated to 3');
+  assert.equal(outputs.vulnerability_count, '0');
+  assert.equal(outputs.vuln_info, '0');
+  assert.equal(outputs.vuln_low, '0');
+  assert.equal(outputs.vuln_moderate, '0');
+  assert.equal(outputs.vuln_high, '0');
+  assert.equal(outputs.vuln_critical, '0');
+});
+
+test('parse-audit-report: missing total computed from severity counts', () => {
+  const fixture = join(TMP, 'missing-total.json');
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: { info: 0, low: 1, moderate: 2, high: 1, critical: 0 },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 0);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'true');
+  assert.equal(outputs.vulnerability_count, '4');
 });
 
 // --- Cleanup ---
