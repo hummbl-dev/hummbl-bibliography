@@ -1,0 +1,44 @@
+name: Commitlint Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    name: Commitlint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+
+      - name: Create commitlint config
+        run: |
+          echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
+
+      - name: Lint commits (push)
+        if: github.event_name == 'push'
+        run: |
+          FROM="${{ github.event.before }}"
+          TO="${{ github.event.after }}"
+          # Handle initial commit (before is all zeros)
+          if [ "$FROM" = "0000000000000000000000000000000000000000" ]; then
+            FROM=$(git rev-list --max-parents=0 HEAD | tail -1)
+          fi
+          npx commitlint --from "$FROM" --to "$TO" --verbose
+
+      - name: Lint commits (pull request)
+        if: github.event_name == 'pull_request'
+        run: |
+          # Check all commits in the PR branch
+          npx commitlint --from "${{ github.event.pull_request.base.sha }}" --to "${{ github.event.pull_request.head.sha }}" --verbose
