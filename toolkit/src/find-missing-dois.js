@@ -27,7 +27,7 @@ export function extractPublicationYear(entry) {
     return '';
   }
 
-  if (entry.year !== undefined && entry.year !== null) {
+  if (entry.year !== undefined && entry.year !== null && entry.year !== 0) {
     return String(entry.year).trim();
   }
 
@@ -62,6 +62,7 @@ export class DOIFinder {
     this.bibDir = path.resolve(bibDir);
     this.missingDOIs = [];
     this.foundDOIs = [];
+    this.rateLimitDelay = 1000; // ms between CrossRef requests; set to 0 in tests
   }
 
   async searchCrossRef(title, author, year) {
@@ -138,7 +139,9 @@ export class DOIFinder {
     }
 
     // Rate limiting
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    if (this.rateLimitDelay > 0) {
+      await new Promise(resolve => setTimeout(resolve, this.rateLimitDelay));
+    }
   }
 
   async scanFile(filepath) {

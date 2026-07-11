@@ -81,6 +81,7 @@ describe('find-missing-dois helpers', () => {
     }
 
     const finder = new StubFinder('unused');
+    finder.rateLimitDelay = 0;
     await finder.processEntry(
       {
         id: 'test2024',
@@ -101,6 +102,21 @@ describe('find-missing-dois helpers', () => {
     assert.equal(getPrimaryAuthor({ author: [{ family: 'Doe', literal: 'Ignored' }] }), 'Doe');
     assert.equal(getPrimaryAuthor({ author: 'Jane Doe' }), 'Jane Doe');
     assert.equal(getPrimaryAuthor({}), '');
+  });
+
+  it('extracts author from name fallback', () => {
+    assert.equal(getPrimaryAuthor({ author: [{ name: 'Jane Doe' }] }), 'Jane Doe');
+  });
+
+  it('handles normalizeType edge cases', () => {
+    assert.equal(isDoiCandidateType(undefined), false);
+    assert.equal(isDoiCandidateType(null), false);
+    assert.equal(isDoiCandidateType(123), false);
+    assert.equal(isDoiCandidateType('ARTICLE-JOURNAL'), true);
+  });
+
+  it('returns empty string for year=0', () => {
+    assert.equal(extractPublicationYear({ year: 0 }), '');
   });
 });
 

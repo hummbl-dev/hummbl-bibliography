@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for fix-duplicates.js — argument parsing regression
  *
  * The fix-duplicates.js script accepts a positional bibDir argument and
@@ -25,13 +25,14 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SCRIPT = join(__dirname, '..', 'src', 'fix-duplicates.js');
 const BIB_DIR = join(__dirname, '..', '..', 'bibliography');
+const TOOLKIT_ROOT = join(__dirname, '..');
 
 // Helper: run fix-duplicates.js with given args, return result
 function runFixer(args) {
   const result = spawnSync(
     process.execPath,
     [SCRIPT, ...args],
-    { encoding: 'utf8', timeout: 30000 }
+    { encoding: 'utf8', timeout: 30000, cwd: TOOLKIT_ROOT }
   );
   return {
     code: result.status,

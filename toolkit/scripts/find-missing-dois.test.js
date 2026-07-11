@@ -15,9 +15,7 @@ import { describe, it, before } from 'node:test';
 import assert from 'node:assert/strict';
 import { Cite } from '@citation-js/core';
 import '@citation-js/plugin-bibtex';
-
-const SEARCHABLE_TYPES = new Set([`article-journal`, `paper-conference`]);
-function isSearchableType(t) { return SEARCHABLE_TYPES.has(t); }
+import { isDoiCandidateType } from '../src/find-missing-dois.js';
 
 const BIBTEX_FIXTURE = `@article{TestArticle2024,
   author = {Jane Doe and John Smith},
@@ -56,7 +54,7 @@ const BIBTEX_FIXTURE = `@article{TestArticle2024,
 
 describe(`citation-js CSL type mapping`, () => {
   let entries;
-  it(`parses the fixture without error`, () => {
+  before(() => {
     const citation = new Cite(BIBTEX_FIXTURE, { forceType: `@bibtex/text` });
     entries = citation.data;
     assert.ok(entries.length >= 5, `should parse at least 5 entries`);
@@ -93,23 +91,23 @@ describe(`processEntry type-check filter`, () => {
   });
   it(`includes article-journal entries`, () => {
     const a = entries.find(e => e.id === `TestArticle2024`);
-    assert.ok(isSearchableType(a.type));
+    assert.ok(isDoiCandidateType(a.type));
   });
   it(`includes paper-conference entries`, () => {
     const c = entries.find(e => e.id === `TestConference2024`);
-    assert.ok(isSearchableType(c.type));
+    assert.ok(isDoiCandidateType(c.type));
   });
   it(`excludes book entries`, () => {
     const b = entries.find(e => e.id === `TestBook2024`);
-    assert.ok(!isSearchableType(b.type));
+    assert.ok(!isDoiCandidateType(b.type));
   });
   it(`excludes report entries`, () => {
     const r = entries.find(e => e.id === `TestReport2024`);
-    assert.ok(!isSearchableType(r.type));
+    assert.ok(!isDoiCandidateType(r.type));
   });
   it(`excludes misc entries`, () => {
     const m = entries.find(e => e.id === `TestMisc2024`);
-    assert.ok(!isSearchableType(m.type));
+    assert.ok(!isDoiCandidateType(m.type));
   });
   it(`would skip all entries if old BibTeX type names were used`, () => {
     const OLD_TYPES = new Set([`article`, `inproceedings`]);
@@ -118,7 +116,7 @@ describe(`processEntry type-check filter`, () => {
       `old type names should match zero entries -- this is the bug the fix addresses`);
   });
   it(`new CSL type names match article and conference entries`, () => {
-    const matched = entries.filter(e => isSearchableType(e.type));
+    const matched = entries.filter(e => isDoiCandidateType(e.type));
     assert.ok(matched.length >= 2,
       `new type names should match at least 2 entries`);
   });

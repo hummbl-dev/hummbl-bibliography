@@ -480,18 +480,13 @@ function main({ bibDir }) {
   fs.writeFileSync(jsonOutputPath, JSON.stringify(graphData, null, 2));
   console.log(`JSON: ${jsonOutputPath}`);
 
-  // D3 is embedded as a data URI / inline script to satisfy "no external CDN" requirement.
-  // Try local D3 first if available.
-  let d3Source = '';
-  try {
-    const d3Path = path.resolve(__dirname, '../node_modules/d3/dist/d3.min.js');
-    if (fs.existsSync(d3Path)) {
-      d3Source = fs.readFileSync(d3Path, 'utf8');
-      console.log('Using local d3 from node_modules');
-    }
-  } catch {
-    // Keep fallback.
+  // D3 is embedded as an inline script; external CDN sources are forbidden.
+  const d3Path = path.resolve(__dirname, '../node_modules/d3/dist/d3.min.js');
+  if (!fs.existsSync(d3Path)) {
+    throw new Error(`Required local D3 bundle not found: ${d3Path}`);
   }
+  const d3Source = fs.readFileSync(d3Path, 'utf8');
+  console.log('Using local d3 from node_modules');
 
   const graphDataJson = JSON.stringify(graphData);
   const tierColorsJson = JSON.stringify(TIER_COLORS);
@@ -571,7 +566,7 @@ function buildHtml(graphDataJson, tierColorsJson, d3Source) {
 
 <svg id="graph"></svg>
 
-${d3Source ? `<script>${d3Source}</script>` : '<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>'}
+<script>${d3Source}</script>
 
 <script>
 const GRAPH = ${graphDataJson};
