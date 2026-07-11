@@ -118,6 +118,16 @@ describe('fix-duplicates helpers', () => {
     assert.equal(shouldKeepExistingForDuplicate('T10_core.bib', 'T11_core.bib'), true);
     assert.equal(shouldKeepExistingForDuplicate('misc.bib', 'T2_core.bib'), false);
   });
+
+  it('T1 beats T13 (extreme tier range)', () => {
+    assert.equal(shouldKeepExistingForDuplicate('T1_canonical.bib', 'T13_reasoning.bib'), true);
+    assert.equal(shouldKeepExistingForDuplicate('T13_reasoning.bib', 'T1_canonical.bib'), false);
+  });
+
+  it('keeps existing entry on same-tier duplicates (first-loaded wins)', () => {
+    assert.equal(shouldKeepExistingForDuplicate('T1_a.bib', 'T1_b.bib'), true);
+    assert.equal(shouldKeepExistingForDuplicate('misc_a.bib', 'misc_b.bib'), true);
+  });
 });
 
 describe('maintenance CLIs', () => {
@@ -145,6 +155,58 @@ describe('maintenance CLIs', () => {
       assert.equal(readFileSync(bibA, 'utf8').includes('Dup2024'), true);
       assert.equal(readFileSync(bibB, 'utf8').includes('Dup2024'), true);
       assert.equal(readdirSync(dir).some((name) => name.endsWith('.backup')), false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('removes duplicate and creates .backup on real run', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'hummbl-maint-'));
+    try {
+      const bibA = join(dir, 'T10_core.bib');
+      const bibB = join(dir, 'T2_core.bib');
+      const entry = `@article{Dup2024,\n  title = {Duplicate Title},\n  author = {A. Smith},\n  year = {2024},\n  journal = {Journal of Tests},\n}\n`;
+
+      writeFileSync(bibA, entry, 'utf8');
+      writeFileSync(bibB, entry, 'utf8');
+
+      const result = runNodeScript(FIX_DUPLICATES, [dir]);
+      assert.equal(result.status, 0);
+      assert.doesNotMatch(result.stdout, /DRY RUN MODE/);
+
+      // T10 should have the duplicate removed (T2 wins as lower tier)
+      const contentA = readFileSync(bibA, 'utf8');
+      assert.equal(contentA.includes('Dup2024'), false, 'T10 should have Dup2024 removed');
+
+      // T2 should still have the entry
+      const contentB = readFileSync(bibB, 'utf8');
+      assert.equal(contentB.includes('Dup2024'), true, 'T2 should still have Dup2024');
+
+      // Backup files should exist
+      assert.equal(readdirSync(dir).some((name) => name.endsWith('.backup')), true,
+        'at least one .backup file should exist');
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('removes entries with @ in field values (regex hardening)', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'hummbl-maint-'));
+    try {
+      const bibA = join(dir, 'T10_core.bib');
+      const bibB = join(dir, 'T2_core.bib');
+      const entryWithEmail = `@article{Dup2024,\n  title = {Duplicate Title},\n  author = {A. Smith},\n  year = {2024},\n  journal = {Journal of Tests},\n  note = {Contact: author@university.edu},\n}\n`;
+
+      writeFileSync(bibA, entryWithEmail, 'utf8');
+      writeFileSync(bibB, entryWithEmail, 'utf8');
+
+      const result = runNodeScript(FIX_DUPLICATES, [dir]);
+      assert.equal(result.status, 0);
+
+      // T10 should have the entry removed despite @ in field value
+      const contentA = readFileSync(bibA, 'utf8');
+      assert.equal(contentA.includes('Dup2024'), false,
+        'T10 should have Dup2024 removed even with @ in field value');
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

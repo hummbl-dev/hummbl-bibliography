@@ -118,9 +118,10 @@ class DuplicateFixer {
       let content = fs.readFileSync(filepath, 'utf8');
 
       keys.forEach(key => {
-        // Find and remove the entry
-        const regex = new RegExp(`@\\w+\\{${key},[^}]*(?:}[^@]*?)*?\\n\\}\\n?`, 'gs');
-        content = content.replace(regex, '');
+        const removed = removeBibEntry(content, key);
+        if (removed.found) {
+          content = removed.content;
+        }
         console.log(chalk.yellow(`    - Removed: ${key}`));
       });
 
@@ -154,6 +155,78 @@ class DuplicateFixer {
 
     console.log('');
   }
+}
+
+function removeBibEntry(content, key) {
+  const escapedKey = escapeRegExp(key);
+  const startMatch = new RegExp(`@\\w+\\s*\\{\\s*${escapedKey}\\s*,`, 'i').exec(content);
+  if (!startMatch) {
+    return { found: false, content };
+  }
+
+  const openBrace = content.indexOf('{', startMatch.index);
+  if (openBrace === -1) {
+    return { found: false, content };
+  }
+
+  let i = openBrace + 1;
+  let depth = 1;
+  let inQuotes = false;
+  let escaped = false;
+
+  while (i < content.length) {
+    const ch = content[i];
+
+    if (inQuotes) {
+      if (escaped) {
+        escaped = false;
+        i += 1;
+        continue;
+      }
+      if (ch === '\\') {
+        escaped = true;
+        i += 1;
+        continue;
+      }
+      if (ch === '"') {
+        inQuotes = false;
+      }
+      i += 1;
+      continue;
+    }
+
+    if (ch === '"') {
+      inQuotes = true;
+    } else if (ch === '{') {
+      depth += 1;
+    } else if (ch === '}') {
+      depth -= 1;
+      if (depth === 0) {
+        i += 1;
+        break;
+      }
+    }
+    i += 1;
+  }
+
+  if (depth !== 0) {
+    return { found: false, content };
+  }
+
+  // Trim trailing whitespace/newline around the removed entry to keep file tidy.
+  let end = i;
+  while (end < content.length && (content[end] === '\r' || content[end] === '\n' || content[end] === ' ' || content[end] === '\t')) {
+    end += 1;
+  }
+
+  return {
+    found: true,
+    content: content.slice(0, startMatch.index) + content.slice(end),
+  };
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 // Run fixer
