@@ -59,7 +59,7 @@ jobs:
           ls -la ../audit-report.json
 
       - name: Upload audit report
-        if: always()
+        if: always() && steps.audit.outputs.audit_valid == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
@@ -68,8 +68,18 @@ jobs:
           compression-level: 6
           if-no-files-found: error
 
+      - name: Upload raw diagnostic output on infrastructure failure
+        if: always() && steps.audit.outputs.audit_valid != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report-INVALID-diagnostic
+          path: audit-report.json
+          retention-days: 7
+          compression-level: 6
+          if-no-files-found: warn
+
       - name: Comment on PR if vulnerabilities found
-        if: github.event_name == 'pull_request' && steps.audit.outputs.vulnerability_count > 0
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && steps.audit.outputs.audit_valid == 'true' && steps.audit.outputs.vulnerability_count > 0
         uses: actions/github-script@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -114,5 +114,5 @@ This repo is public (GitHub Actions are free). Main has branch protection requir
 - CI runs on push to main anyway — skipping PRs doesn't skip CI, it just skips the pre-merge gate.
 - The operator's local review process (Devin/Codex subagent verification, `npm test`, gitleaks, commitlint) is trusted over CI for routine work.
 - Tier 2 and 3 exist for changes where the cost of a mistake is higher than the friction of a PR.
-- CI's npm audit is non-blocking (`continue-on-error: true`), so local `npm audit` is the only real gate for vulnerable dep bumps.
+- CI's npm audit is non-blocking for valid vulnerability findings; audit execution, parsing, or artifact failures remain blocking.
 - Branch protection enforces GPG signatures and blocks force-pushes/deletions server-side. Local hooks (gitleaks, commitlint, pre-push tests) are defense-in-depth but bypassable with `--no-verify`.
