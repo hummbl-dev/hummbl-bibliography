@@ -1,0 +1,21 @@
+title = "hummbl-bibliography gitleaks config"
+
+[extend]
+useDefault = true
+
+# Allowlist: paths that are known-safe and should not be scanned
+[[allowlists]]
+description = "Allow test fixtures and validation rules"
+paths = [
+  '''toolkit/scripts/.*\.test\.js''',
+  '''\.husky/validation-rules\.json''',
+  '''\.github/workflows/.*\.yml''',
+]
+
+# The GITHUB_TOKEN reference in workflow files is a variable, not a secret
+[[allowlists]]
+description = "GitHub Actions GITHUB_TOKEN variable references (not actual secrets)"
+regexes = [
+  '''secrets\.GITHUB_TOKEN''',
+  '''\$\{\{\s*secrets\.GITHUB_TOKEN\s*\}\}''',
+]
