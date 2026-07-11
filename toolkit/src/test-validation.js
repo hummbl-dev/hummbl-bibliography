@@ -6,7 +6,7 @@
  */
 
 import { validateModelCode } from './utils/validateModelCode.js';
-import { monitorModelReferences } from './utils/monitorModels.js';
+import { auditText, monitorModelReferences } from './utils/monitorModels.js';
 import { isMemoryPalaceModel, lookupMemoryPalace, auditRegistry } from './extensions/memoryPalace.js';
 import { auditBeyondBase120, scanForExtendedModels } from './extensions/beyondBase120Audit.js';
 
@@ -113,5 +113,21 @@ const monitoring = monitorModelReferences(testOutput);
 console.log(`Valid references: ${monitoring.valid.join(', ')}`);
 console.log(`Invalid references: ${monitoring.invalid.join(', ') || 'none'}`);
 console.log(`Hallucinations: ${monitoring.hallucinations.join(', ') || 'none (governed extension audit handles this now)'}`);
+
+console.log('\n🔎 Testing bibliography key boundaries:');
+const citationKeyText = `
+The receipt may cite EUAIAct2024, MITRE2024ATLAS, OWASP2025LLM, and
+SLSA2023SupplyChain without creating embedded model references.
+P1 remains a valid standalone model reference.
+`;
+const citationAudit = auditText(citationKeyText);
+const citationCodes = citationAudit.references.map(ref => ref.code);
+if (!citationCodes.includes('P1')) {
+  throw new Error('Expected standalone P1 to be detected');
+}
+if (citationCodes.some(code => ['RE2024', 'P2025'].includes(code))) {
+  throw new Error(`Bibliography key boundary regression: ${citationCodes.join(', ')}`);
+}
+console.log(`  Bibliography keys ignored; standalone refs: ${citationCodes.join(', ')} ✅`);
 
 console.log('\n🎉 Validation system ready for production use!');

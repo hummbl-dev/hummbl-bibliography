@@ -15,7 +15,7 @@
   pages = {155--169},
   doi = {10.1007/BF01405730},
   abstract = {This paper introduces the concept of ``wicked problems'' -- a class of social and policy problems that resist definitive formulation, have no stopping rule, and where every attempt at a solution changes the problem itself. Rittel and Webber contrast wicked problems with ``tame'' problems (like chess or mathematics) that have clear formulations and verifiable solutions. They identify ten properties of wicked problems, including: there is no definitive formulation, solutions are not true-or-false but good-or-bad, there is no immediate or ultimate test, every solution is a ``one-shot operation'' with consequences that cannot be undone, and every wicked problem is essentially unique. The paper has become foundational in complexity science, urban planning, software architecture, and systems thinking. The HUMMBL Unified Tier Framework's 5-tier wickedness scoring is a direct operationalization of Rittel and Webber's classification.},
-  keywords = {wicked problems, complexity, planning, HUMMBL:SY, HUMMBL:IN, HUMMBL:DE},
+  keywords = {wicked problems, complexity, planning, HUMMBL:P, HUMMBL:IN, HUMMBL:DE},
   nist_functions     = {MAP GOVERN},
   eu_ai_act_articles = {9},
 }
@@ -122,7 +122,7 @@
   journal = {Transactions on Machine Learning Research},
   doi = {10.48550/arXiv.2211.09110},
   abstract = {HELM establishes a comprehensive framework for evaluating language models across seven metrics (accuracy, calibration, robustness, fairness, bias, toxicity, and efficiency) on 42 scenarios spanning diverse tasks. The key contribution is demonstrating that no single metric captures model quality -- different models excel on different dimensions, and aggregate rankings depend heavily on which metrics are weighted. The framework provides standardized evaluation infrastructure enabling reproducible comparison across models. For governance purposes, HELM demonstrates that assurance of AI systems requires multi-dimensional evaluation rather than single-score benchmarks. The quality scoring in arbiter and the multi-probe health system in founder-mode reflect this principle: system health is not a single boolean but a vector across multiple independently assessed dimensions.},
-  keywords = {evaluation, language models, benchmarking, HUMMBL:DE, HUMMBL:RE, HUMMBL:SY},
+  keywords = {evaluation, language models, benchmarking, HUMMBL:DE, HUMMBL:RE, HUMMBL:P},
   nist_functions     = {MEASURE},
   eu_ai_act_articles = {9 15},
 }
@@ -215,7 +215,7 @@
   pages = {33--44},
   doi = {10.1145/3351095.3372873},
   abstract = {This paper presents SMACTR (Scoping, Mapping, Artifact Collection, Testing, Reflection), a comprehensive internal algorithmic auditing framework developed from practice at Google. The framework defines five stages: Scoping (identifying the system, stakeholders, and audit objectives), Mapping (documenting the system's components, data flows, and decision points), Artifact Collection (gathering documentation, training data statistics, and model performance metrics), Testing (conducting bias, fairness, and robustness evaluations), and Reflection (synthesizing findings and recommending changes). The authors argue that internal auditing complements external auditing by being continuous, embedded in the development lifecycle, and informed by organizational context. The agent audit protocol in founder-mode follows the SMACTR pattern: each Gemini/Kimi session audit involves scoping (checking the session's claimed deliverables), mapping (reviewing touched files and bus messages), artifact collection (gathering commit diffs and test results), testing (verifying factual claims and scope compliance), and reflection (updating the guardrails document with findings).},
-  keywords = {algorithmic auditing, accountability, SMACTR, AI governance, HUMMBL:RE, HUMMBL:IN},
+  keywords = {algorithmic auditing, accountability, SMACTR, AI governance, HUMMBL:RE, HUMMBL:IN, HUMMBL:P},
   nist_functions     = {MEASURE GOVERN},
   eu_ai_act_articles = {9 11 12},
 }

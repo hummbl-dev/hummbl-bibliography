@@ -5,7 +5,35 @@ node_modules/
 reports/*.html
 toolkit/dist/
 .env
+.env.*
+!.env.example
+*.env
 *.tmp
 coverage/
 .vscode/
 .idea/
+
+# Secret-bearing file patterns
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.kdbx
+id_rsa
+id_rsa.pub
+id_ecdsa
+id_ed25519
+credentials.json
+*.secret
+.npmrc
+.pypirc
+.netrc
+.git-credentials
+.aws/credentials
+.aws/config
+.gcloud/*credentials*
+
+# Database files (may contain sensitive data)
+*.sqlite
+*.db

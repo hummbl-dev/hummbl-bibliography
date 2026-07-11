@@ -6,8 +6,8 @@
  *
  * Edges are created from:
  * 1. Explicit `crossref` fields pointing to another citation key
- * 2. Shared authors across entries (co-citation signal)
- * 3. Shared HUMMBL keyword tags (e.g. HUMMBL:BKI, HUMMBL:SY)
+ * 2. Shared authors across entries (first-author only)
+ * 3. Shared HUMMBL keyword tags (e.g. HUMBL:BKI, HUMBL:SY)
  */
 
 import fs from 'fs';
@@ -17,11 +17,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const args = process.argv.slice(2);
-const bibDir = path.resolve(args[0] || '../bibliography');
-const reportsDir = path.resolve(__dirname, '../../reports');
-const outputPath = path.join(reportsDir, 'citation_graph.html');
-const jsonOutputPath = path.join(reportsDir, 'citation_graph.json');
+const isScript = process.argv[1] === __filename;
 
 // Tier colors (matching bibliography tier structure)
 const TIER_COLORS = {
@@ -41,93 +37,326 @@ const TIER_COLORS = {
   default: '#adb5bd',
 };
 
+const SHARED_TAG_MIN_SPECIFICITY = 2; // skip very common generic tags
+
+function usage() {
+  console.log('Usage: node citation-graph.js [bibDir]');
+  console.log('');
+  console.log('Generate HUMBL citation graph data and HTML from a bibliography directory.');
+  console.log('Arguments:');
+  console.log('  bibDir    Path to directory of .bib files (default: ../bibliography)');
+  console.log('');
+  console.log('Options:');
+  console.log('  -h, --help  Show this message');
+  process.exit(0);
+}
+
+export function parseCli(rawArgs = []) {
+  const args = rawArgs.slice();
+  const positional = args.filter((a) => !a.startsWith('--') && !a.startsWith('-'));
+  const hasHelp = args.includes('--help') || args.includes('-h');
+
+  if (hasHelp) {
+    usage();
+  }
+
+  if (positional.length > 1) {
+    throw new Error('Expected at most one positional argument: bibDir');
+  }
+
+  const unknown = args.filter((arg) => arg.startsWith('-') && arg !== '--help' && arg !== '-h');
+  if (unknown.length > 0) {
+    throw new Error(`Unknown option: ${unknown[0]}`);
+  }
+
+  const bibDir = path.resolve(positional[0] || '../bibliography');
+  return { bibDir };
+}
+
 /**
  * Minimal BibTeX parser — extracts key, type, and field values.
- * Handles multiline values and comment lines.
+ * Handles multiline values, nested braces, quoted strings, and `@` inside values.
  */
-function parseBibFile(content) {
+export function parseBibFile(content) {
+  if (typeof content !== 'string') {
+    throw new TypeError('parseBibFile(content) expects a string');
+  }
+
+  const normalized = content
+    .replace(/^\uFEFF/, '')
+    .replace(/^\s*%.*$/gm, '')
+    .replace(/\r\n/g, '\n');
+
   const entries = [];
-  // Match @type{key, ...} blocks
-  const entryRegex = /@(\w+)\s*\{\s*([^,\s]+)\s*,([^@]*)/g;
+  // Non-sticky global regex: searches forward from lastIndex for the next
+  // entry header. Sticky matching would fail when lastIndex lands on the
+  // whitespace between entries, causing multi-entry files to parse only the
+  // first entry. lastIndex is always advanced past each entry's closing
+  // brace (via brace-depth counting below), so this never matches an '@'
+  // inside a field value.
+  const entryHeader = /@([A-Za-z][A-Za-z0-9_-]*)\s*\{/g;
+
   let match;
-  while ((match = entryRegex.exec(content)) !== null) {
+  while ((match = entryHeader.exec(normalized)) !== null) {
     const type = match[1].toLowerCase();
-    const key = match[2].trim();
-    const body = match[3];
+    const matchEnd = match.index + match[0].length;
 
-    if (type === 'comment' || type === 'string' || type === 'preamble') continue;
-
-    const fields = {};
-    // Match field = {value} or field = "value" or field = number
-    const fieldRegex = /(\w+)\s*=\s*(?:\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}|"([^"]*)"|(\d+))/g;
-    let fm;
-    while ((fm = fieldRegex.exec(body)) !== null) {
-      const name = fm[1].toLowerCase();
-      const value = (fm[2] ?? fm[3] ?? fm[4] ?? '').trim();
-      fields[name] = value;
+    // Skip non-rendered entries.
+    if (type === 'comment' || type === 'string' || type === 'preamble') {
+      // Move to next likely entry boundary by searching the next '\n@'.
+      const nextAt = normalized.indexOf('\n@', matchEnd);
+      if (nextAt === -1) break;
+      entryHeader.lastIndex = nextAt + 1;
+      continue;
     }
 
-    entries.push({ key, type, fields });
+    const openBrace = matchEnd - 1;
+    let cursor = openBrace + 1;
+
+    while (cursor < normalized.length && /\s/.test(normalized[cursor])) {
+      cursor += 1;
+    }
+
+    const keyStart = cursor;
+    while (cursor < normalized.length && normalized[cursor] !== ',') {
+      cursor += 1;
+    }
+
+    if (cursor >= normalized.length) {
+      break;
+    }
+
+    const key = normalized.slice(keyStart, cursor).trim();
+    const bodyStart = cursor + 1;
+
+    let depth = 1;
+    let inQuotes = false;
+    let escaped = false;
+    let i = bodyStart;
+    for (; i < normalized.length; i += 1) {
+      const ch = normalized[i];
+
+      if (inQuotes) {
+        if (escaped) {
+          escaped = false;
+          continue;
+        }
+        if (ch === '\\') {
+          escaped = true;
+          continue;
+        }
+        if (ch === '"') {
+          inQuotes = false;
+        }
+        continue;
+      }
+
+      if (ch === '"') {
+        inQuotes = true;
+      } else if (ch === '{') {
+        depth += 1;
+      } else if (ch === '}') {
+        depth -= 1;
+        if (depth === 0) {
+          break;
+        }
+      }
+    }
+
+    if (depth !== 0) {
+      // Unbalanced braces: skip to next entry boundary to avoid an infinite loop.
+      const nextAt = normalized.indexOf('\n@', bodyStart);
+      if (nextAt === -1) {
+        break;
+      }
+      entryHeader.lastIndex = nextAt + 1;
+      continue;
+    }
+
+    const bodyEnd = i;
+    const body = normalized.slice(bodyStart, bodyEnd);
+
+    entries.push({
+      type,
+      key,
+      fields: parseFields(body),
+    });
+
+    entryHeader.lastIndex = bodyEnd + 1;
   }
+
   return entries;
 }
 
-function extractAuthors(authorStr) {
-  if (!authorStr) return [];
-  return authorStr.split(' and ').map(a => a.trim().toLowerCase()).filter(Boolean);
+function parseFields(body) {
+  const fields = {};
+  let i = 0;
+  const len = body.length;
+
+  while (i < len) {
+    // Skip whitespace, commas, and newlines.
+    while (i < len && /[\s,]/.test(body[i])) {
+      i += 1;
+    }
+
+    if (i >= len) {
+      break;
+    }
+
+    // Comment at field level.
+    if (body[i] === '%') {
+      while (i < len && body[i] !== '\n') i += 1;
+      continue;
+    }
+
+    const keyStart = i;
+    while (i < len && /[^\s=]/.test(body[i])) {
+      i += 1;
+    }
+
+    const rawName = body.slice(keyStart, i).trim();
+    if (!rawName) {
+      i += 1;
+      continue;
+    }
+
+    while (i < len && /\s/.test(body[i])) {
+      i += 1;
+    }
+    if (body[i] !== '=') {
+      while (i < len && body[i] !== ',') i += 1;
+      continue;
+    }
+    i += 1;
+
+    while (i < len && /\s/.test(body[i])) {
+      i += 1;
+    }
+
+    const parsed = parseValue(body, i);
+    fields[rawName.toLowerCase()] = parsed.value;
+    i = parsed.nextIndex;
+  }
+
+  return fields;
 }
 
-function extractHummblTags(keywords) {
+function parseValue(text, start) {
+  if (start >= text.length) {
+    return { value: '', nextIndex: text.length };
+  }
+
+  const first = text[start];
+
+  // field = {value...}
+  if (first === '{') {
+    let i = start + 1;
+    let depth = 1;
+    let escaped = false;
+    let inQuotes = false;
+    while (i < text.length) {
+      const ch = text[i];
+      if (inQuotes) {
+        if (escaped) {
+          escaped = false;
+          i += 1;
+          continue;
+        }
+        if (ch === '\\') {
+          escaped = true;
+          i += 1;
+          continue;
+        }
+        if (ch === '"') {
+          inQuotes = false;
+        }
+        i += 1;
+        continue;
+      }
+
+      if (ch === '"') {
+        inQuotes = true;
+        i += 1;
+        continue;
+      }
+      if (ch === '{') {
+        depth += 1;
+      } else if (ch === '}') {
+        depth -= 1;
+        if (depth === 0) {
+          return {
+            value: text.slice(start + 1, i).trim(),
+            nextIndex: i + 1,
+          };
+        }
+      }
+      i += 1;
+    }
+
+    return {
+      value: text.slice(start + 1).trim(),
+      nextIndex: text.length,
+    };
+  }
+
+  // field = "value"
+  if (first === '"') {
+    let i = start + 1;
+    let escaped = false;
+    while (i < text.length) {
+      const ch = text[i];
+      if (escaped) {
+        escaped = false;
+      } else if (ch === '\\') {
+        escaped = true;
+      } else if (ch === '"') {
+        return {
+          value: text.slice(start + 1, i).trim(),
+          nextIndex: i + 1,
+        };
+      }
+      i += 1;
+    }
+
+    return {
+      value: text.slice(start + 1).trim(),
+      nextIndex: text.length,
+    };
+  }
+
+  // fallback: read to next comma (or end)
+  let i = start;
+  while (i < text.length && text[i] !== ',') {
+    i += 1;
+  }
+  return {
+    value: text.slice(start, i).trim(),
+    nextIndex: i + 1,
+  };
+}
+
+export function extractAuthors(authorStr) {
+  if (!authorStr) return [];
+  return authorStr
+    .split(/\s+and\s+/i)
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+export function extractHummblTags(keywords) {
   if (!keywords) return [];
-  return keywords.split(',').map(k => k.trim()).filter(k => k.startsWith('HUMMBL:'));
+  return keywords
+    .split(',')
+    .map((value) => value.trim())
+    .filter((value) => value.startsWith('HUMBL:'));
 }
 
 function tierFromFile(filename) {
-  const m = filename.match(/^(T\d+)_/);
-  return m ? m[1] : 'default';
+  const matched = filename.match(/^(T\d+)_/);
+  return matched ? matched[1] : 'default';
 }
 
-// Load all .bib files
-if (!fs.existsSync(bibDir)) {
-  console.error(`Bibliography directory not found: ${bibDir}`);
-  process.exit(1);
-}
-
-const bibFiles = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
-const allEntries = [];
-
-for (const file of bibFiles) {
-  const tier = tierFromFile(file);
-  const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
-  const entries = parseBibFile(content);
-  entries.forEach(e => {
-    e.tier = tier;
-    e.file = file;
-  });
-  allEntries.push(...entries);
-}
-
-console.log(`Parsed ${allEntries.length} entries from ${bibFiles.length} files`);
-
-// Build nodes
-const keyIndex = new Map(allEntries.map(e => [e.key, e]));
-const nodes = allEntries.map(e => ({
-  id: e.key,
-  tier: e.tier,
-  title: e.fields.title || e.key,
-  authors: extractAuthors(e.fields.author),
-  year: e.fields.year || '',
-  doi: e.fields.doi || '',
-  url: e.fields.url || '',
-  tags: extractHummblTags(e.fields.keywords || ''),
-  file: e.file,
-}));
-
-// Build edges
-const edges = [];
-const edgeSet = new Set();
-
-function addEdge(source, target, type) {
+function addEdge(edgeSet, edges, source, target, type) {
   const edgeKey = [source, target].sort().join('||');
   if (!edgeSet.has(edgeKey) && source !== target) {
     edgeSet.add(edgeKey);
@@ -135,83 +364,146 @@ function addEdge(source, target, type) {
   }
 }
 
-// 1. Crossref edges
-for (const entry of allEntries) {
-  if (entry.fields.crossref && keyIndex.has(entry.fields.crossref)) {
-    addEdge(entry.key, entry.fields.crossref, 'crossref');
+function main({ bibDir }) {
+  if (!fs.existsSync(bibDir)) {
+    console.error(`Bibliography directory not found: ${bibDir}`);
+    process.exit(1);
   }
-}
 
-// 2. Shared HUMMBL tags (only specific tags, not generic ones)
-const SHARED_TAG_MIN_SPECIFICITY = 2; // skip tags that appear on >50% of entries
-const tagToEntries = new Map();
-for (const node of nodes) {
-  for (const tag of node.tags) {
-    if (!tagToEntries.has(tag)) tagToEntries.set(tag, []);
-    tagToEntries.get(tag).push(node.id);
+  if (!fs.statSync(bibDir).isDirectory()) {
+    console.error(`Expected a directory for bibDir: ${bibDir}`);
+    process.exit(1);
   }
-}
-const maxTagEntries = Math.floor(allEntries.length * 0.5);
-for (const [tag, keys] of tagToEntries) {
-  if (keys.length < SHARED_TAG_MIN_SPECIFICITY || keys.length > maxTagEntries) continue;
-  for (let i = 0; i < keys.length; i++) {
-    for (let j = i + 1; j < keys.length; j++) {
-      addEdge(keys[i], keys[j], 'shared-tag');
+
+  const bibFiles = fs.readdirSync(bibDir).filter((filename) => filename.endsWith('.bib'));
+  if (bibFiles.length === 0) {
+    console.error(`No .bib files found in ${bibDir}`);
+    process.exit(1);
+  }
+
+  const allEntries = [];
+  for (const file of bibFiles) {
+    const tier = tierFromFile(file);
+    const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
+    const parsedEntries = parseBibFile(content);
+
+    parsedEntries.forEach((entry) => {
+      allEntries.push({
+        ...entry,
+        tier,
+        file,
+      });
+    });
+  }
+
+  console.log(`Parsed ${allEntries.length} entries from ${bibFiles.length} files`);
+
+  // Build nodes
+  const keyIndex = new Map(allEntries.map((entry) => [entry.key, entry]));
+  const nodes = allEntries.map((entry) => ({
+    id: entry.key,
+    tier: entry.tier,
+    title: entry.fields.title || entry.key,
+    authors: extractAuthors(entry.fields.author),
+    year: entry.fields.year || '',
+    doi: entry.fields.doi || '',
+    url: entry.fields.url || '',
+    tags: extractHummblTags(entry.fields.keywords || ''),
+    file: entry.file,
+  }));
+
+  // Build edges
+  const edges = [];
+  const edgeSet = new Set();
+
+  for (const entry of allEntries) {
+    if (entry.fields.crossref && keyIndex.has(entry.fields.crossref)) {
+      addEdge(edgeSet, edges, entry.key, entry.fields.crossref, 'crossref');
     }
   }
-}
 
-// 3. Shared authors (first author match only to reduce noise)
-const firstAuthorToEntries = new Map();
-for (const node of nodes) {
-  if (node.authors.length === 0) continue;
-  const first = node.authors[0];
-  if (!firstAuthorToEntries.has(first)) firstAuthorToEntries.set(first, []);
-  firstAuthorToEntries.get(first).push(node.id);
-}
-for (const [, keys] of firstAuthorToEntries) {
-  if (keys.length < 2 || keys.length > 10) continue; // skip prolific authors that would add too many edges
-  for (let i = 0; i < keys.length; i++) {
-    for (let j = i + 1; j < keys.length; j++) {
-      addEdge(keys[i], keys[j], 'shared-author');
+  const tagToEntries = new Map();
+  for (const node of nodes) {
+    for (const tag of node.tags) {
+      if (!tagToEntries.has(tag)) {
+        tagToEntries.set(tag, []);
+      }
+      tagToEntries.get(tag).push(node.id);
     }
   }
-}
+  const maxTagEntries = Math.floor(allEntries.length * 0.5);
+  for (const [tag, keys] of tagToEntries) {
+    if (keys.length < SHARED_TAG_MIN_SPECIFICITY || keys.length > maxTagEntries) {
+      continue;
+    }
+    for (let i = 0; i < keys.length; i += 1) {
+      for (let j = i + 1; j < keys.length; j += 1) {
+        addEdge(edgeSet, edges, keys[i], keys[j], 'shared-tag');
+      }
+    }
+  }
 
-console.log(`Graph: ${nodes.length} nodes, ${edges.length} edges`);
+  const firstAuthorToEntries = new Map();
+  for (const node of nodes) {
+    if (node.authors.length === 0) continue;
+    const first = node.authors[0];
+    if (!firstAuthorToEntries.has(first)) {
+      firstAuthorToEntries.set(first, []);
+    }
+    firstAuthorToEntries.get(first).push(node.id);
+  }
+  for (const [, keys] of firstAuthorToEntries) {
+    if (keys.length < 2 || keys.length > 10) continue;
+    for (let i = 0; i < keys.length; i += 1) {
+      for (let j = i + 1; j < keys.length; j += 1) {
+        addEdge(edgeSet, edges, keys[i], keys[j], 'shared-author');
+      }
+    }
+  }
 
-// Write JSON
-const graphData = { nodes, edges, meta: { generated: new Date().toISOString(), entryCount: nodes.length, edgeCount: edges.length } };
-fs.mkdirSync(reportsDir, { recursive: true });
-fs.writeFileSync(jsonOutputPath, JSON.stringify(graphData, null, 2));
-console.log(`JSON: ${jsonOutputPath}`);
+  console.log(`Graph: ${nodes.length} nodes, ${edges.length} edges`);
 
-// Build self-contained HTML with embedded D3 v7 (fetched at build time via inline)
-// D3 is embedded as a data URI / inline script to satisfy "no external CDN" requirement.
-// We use a minimal D3 bundle fetched from unpkg at GENERATION time and inlined.
-// At runtime the HTML is fully self-contained.
+  const reportsDir = path.resolve(__dirname, '../../reports');
+  const outputPath = path.join(reportsDir, 'citation_graph.html');
+  const jsonOutputPath = path.join(reportsDir, 'citation_graph.json');
+  const graphData = {
+    nodes,
+    edges,
+    meta: {
+      generated: new Date().toISOString(),
+      entryCount: nodes.length,
+      edgeCount: edges.length,
+    },
+  };
 
-let d3Source = '';
-try {
-  // Try to use local node_modules d3 if available
+  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.writeFileSync(jsonOutputPath, JSON.stringify(graphData, null, 2));
+  console.log(`JSON: ${jsonOutputPath}`);
+
+  // D3 is embedded as an inline script; external CDN sources are forbidden.
   const d3Path = path.resolve(__dirname, '../node_modules/d3/dist/d3.min.js');
-  if (fs.existsSync(d3Path)) {
-    d3Source = fs.readFileSync(d3Path, 'utf8');
-    console.log('Using local d3 from node_modules');
+  if (!fs.existsSync(d3Path)) {
+    throw new Error(`Required local D3 bundle not found: ${d3Path}`);
   }
-} catch {
-  // Will fall back to fetch below
+  const d3Source = fs.readFileSync(d3Path, 'utf8');
+  console.log('Using local d3 from node_modules');
+
+  const graphDataJson = JSON.stringify(graphData);
+  const tierColorsJson = JSON.stringify(TIER_COLORS);
+
+  const html = buildHtml(graphDataJson, tierColorsJson, d3Source);
+  fs.writeFileSync(outputPath, html);
+  console.log(`HTML: ${outputPath}`);
+  console.log(`\nDone. Open in browser:\n  open ${outputPath}`);
 }
 
-const graphDataJson = JSON.stringify(graphData);
-const tierColorsJson = JSON.stringify(TIER_COLORS);
-
-const html = `<!DOCTYPE html>
+function buildHtml(graphDataJson, tierColorsJson, d3Source) {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HUMMBL Bibliography Citation Graph</title>
+<title>HUMBL Bibliography Citation Graph</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #0f1117; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
@@ -246,7 +538,7 @@ const html = `<!DOCTYPE html>
 </head>
 <body>
 <div id="header">
-  <h1>HUMMBL Bibliography Citation Graph</h1>
+  <h1>HUMBL Bibliography Citation Graph</h1>
   <span id="stats"></span>
   <div id="controls">
     <button id="btn-reset">Reset View</button>
@@ -274,7 +566,7 @@ const html = `<!DOCTYPE html>
 
 <svg id="graph"></svg>
 
-${d3Source ? `<script>${d3Source}</script>` : '<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>'}
+<script>${d3Source}</script>
 
 <script>
 const GRAPH = ${graphDataJson};
@@ -287,19 +579,43 @@ const TIER_LABELS = {
   T12:'T12 Complexity', T13:'T13 Reasoning'
 };
 
+function setText(node, text) {
+  node.textContent = text ?? '';
+}
+
+function renderTags(container, tags) {
+  container.replaceChildren();
+  tags.forEach((tag) => {
+    const tagNode = document.createElement('span');
+    tagNode.className = 't-tag';
+    tagNode.textContent = tag;
+    container.appendChild(tagNode);
+  });
+}
+
+function addLegendItem(container, label, color) {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+
+  const dot = document.createElement('span');
+  dot.className = 'legend-dot';
+  dot.style.background = color || TIER_COLORS.default;
+
+  const title = document.createElement('span');
+  title.textContent = label;
+
+  item.appendChild(dot);
+  item.appendChild(title);
+  container.appendChild(item);
+}
+
 // Stats
-document.getElementById('stats').textContent =
-  \`\${GRAPH.nodes.length} entries · \${GRAPH.edges.length} edges · generated \${GRAPH.meta.generated.slice(0,10)}\`;
+ document.getElementById('stats').textContent = GRAPH.nodes.length + ' entries · ' + GRAPH.edges.length + ' edges · generated ' + GRAPH.meta.generated.slice(0, 10);
 
 // Legend
 const legend = document.getElementById('legend');
-const tiers = [...new Set(GRAPH.nodes.map(n => n.tier))].sort();
-tiers.forEach(t => {
-  const div = document.createElement('div');
-  div.className = 'legend-item';
-  div.innerHTML = \`<div class="legend-dot" style="background:\${TIER_COLORS[t]||TIER_COLORS.default}"></div><span>\${TIER_LABELS[t]||t}</span>\`;
-  legend.appendChild(div);
-});
+const tiers = [...new Set(GRAPH.nodes.map((node) => node.tier))].sort();
+tiers.forEach((tier) => addLegendItem(legend, TIER_LABELS[tier] || tier, TIER_COLORS[tier]));
 
 const svg = d3.select('#graph');
 const width = window.innerWidth;
@@ -309,79 +625,89 @@ svg.attr('width', width).attr('height', height);
 const container = svg.append('g');
 
 // Zoom
-const zoom = d3.zoom().scaleExtent([0.1, 8]).on('zoom', e => container.attr('transform', e.transform));
+const zoom = d3.zoom().scaleExtent([0.1, 8]).on('zoom', (event) => container.attr('transform', event.transform));
 svg.call(zoom);
 
 // Data copies (d3 mutates)
-const nodes = GRAPH.nodes.map(n => ({ ...n }));
-const links = GRAPH.edges.map(e => ({ ...e }));
-const nodeMap = new Map(nodes.map(n => [n.id, n]));
+const nodes = GRAPH.nodes.map((node) => ({ ...node }));
+const links = GRAPH.edges.map((edge) => ({ ...edge }));
 
-// Simulation
 const simulation = d3.forceSimulation(nodes)
-  .force('link', d3.forceLink(links).id(d => d.id).distance(60).strength(0.3))
+  .force('link', d3.forceLink(links).id((node) => node.id).distance(60).strength(0.3))
   .force('charge', d3.forceManyBody().strength(-120))
   .force('center', d3.forceCenter(width / 2, height / 2))
   .force('collision', d3.forceCollide(10));
 
 // Links
 const linkGroup = container.append('g').attr('class', 'links');
-let linkEls = linkGroup.selectAll('line')
+const linkEls = linkGroup.selectAll('line')
   .data(links)
   .join('line')
-  .attr('class', d => \`link \${d.type}\`)
-  .attr('stroke', d => d.type === 'crossref' ? '#e63946' : d.type === 'shared-author' ? '#457b9d' : '#2a9d8f');
+   .attr('class', (edge) => 'link ' + edge.type)
+  .attr('stroke', (edge) => edge.type === 'crossref' ? '#e63946' : edge.type === 'shared-author' ? '#457b9d' : '#2a9d8f');
 
 // Nodes
 const nodeGroup = container.append('g').attr('class', 'nodes');
-let nodeEls = nodeGroup.selectAll('g')
+const nodeEls = nodeGroup.selectAll('g')
   .data(nodes)
   .join('g')
   .attr('class', 'node')
   .call(d3.drag()
-    .on('start', (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
-    .on('end', (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+    .on('start', (event, node) => { if (!event.active) simulation.alphaTarget(0.3).restart(); node.fx = node.x; node.fy = node.y; })
+    .on('drag', (event, node) => { node.fx = event.x; node.fy = event.y; })
+    .on('end', (event, node) => { if (!event.active) simulation.alphaTarget(0); node.fx = null; node.fy = null; }));
 
 nodeEls.append('circle')
   .attr('r', 6)
-  .attr('fill', d => TIER_COLORS[d.tier] || TIER_COLORS.default)
+  .attr('fill', (node) => TIER_COLORS[node.tier] || TIER_COLORS.default)
   .attr('stroke', '#0f1117');
 
 // Labels (hidden by default for large graphs)
 let labelsVisible = nodes.length <= 80;
-const labelEls = nodeEls.append('text')
+  const labelEls = nodeEls.append('text')
   .attr('dx', 8).attr('dy', 4)
   .style('font-size', '9px').style('fill', '#a0aec0')
   .style('pointer-events', 'none')
   .style('display', labelsVisible ? null : 'none')
-  .text(d => d.id.length > 25 ? d.id.slice(0, 25) + '…' : d.id);
+  .text((node) => node.id.length > 25 ? node.id.slice(0, 25) + '…' : node.id);
 
 // Tooltip
 const tooltip = document.getElementById('tooltip');
+const tooltipTitle = tooltip.querySelector('.t-title');
+const tooltipMeta = tooltip.querySelector('.t-meta');
+const tooltipTags = tooltip.querySelector('.t-tags');
+
+function showTooltip(event, node) {
+  const openPath = node.doi ? 'https://doi.org/' + node.doi : node.url;
+  const authorText = node.authors.slice(0, 2).join(', ');
+  setText(tooltipTitle, node.title);
+  setText(tooltipMeta, authorText + (authorText ? '  ' : '') + (node.year || '') + '  [' + node.tier + ']');
+  renderTags(tooltipTags, node.tags || []);
+  tooltip.dataset.url = openPath || '';
+  tooltip.style.display = 'block';
+}
+
 nodeEls
-  .on('mouseover', (e, d) => {
-    const link = d.doi ? \`https://doi.org/\${d.doi}\` : d.url;
-    tooltip.querySelector('.t-title').textContent = d.title;
-    tooltip.querySelector('.t-meta').textContent = \`\${d.authors.slice(0,2).join(', ')}  \${d.year}  [\${d.tier}]\`;
-    tooltip.querySelector('.t-tags').innerHTML = d.tags.map(t => \`<span class="t-tag">\${t}</span>\`).join('');
-    tooltip.style.display = 'block';
+  .on('mouseover', showTooltip)
+  .on('mousemove', (event) => {
+    tooltip.style.left = (event.clientX + 14) + 'px';
+    tooltip.style.top = (event.clientY - 10) + 'px';
   })
-  .on('mousemove', e => {
-    tooltip.style.left = (e.clientX + 14) + 'px';
-    tooltip.style.top = (e.clientY - 10) + 'px';
+  .on('mouseout', () => {
+    tooltip.style.display = 'none';
   })
-  .on('mouseout', () => { tooltip.style.display = 'none'; })
-  .on('click', (e, d) => {
-    const url = d.doi ? \`https://doi.org/\${d.doi}\` : d.url;
-    if (url) window.open(url, '_blank');
+  .on('click', (event, node) => {
+    const target = tooltip.dataset.url;
+    if (target) {
+      window.open(target, '_blank');
+    }
   });
 
 // Tick
 simulation.on('tick', () => {
-  linkEls.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-         .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-  nodeEls.attr('transform', d => \`translate(\${d.x},\${d.y})\`);
+  linkEls.attr('x1', (edge) => edge.source.x).attr('y1', (edge) => edge.source.y)
+    .attr('x2', (edge) => edge.target.x).attr('y2', (edge) => edge.target.y);
+  nodeEls.attr('transform', (node) => 'translate(' + node.x + ',' + node.y + ')');
 });
 
 // Controls
@@ -395,19 +721,19 @@ document.getElementById('btn-toggle-labels').addEventListener('click', () => {
 });
 
 // Edge type filters
-document.querySelectorAll('[data-edge]').forEach(cb => {
-  cb.addEventListener('change', () => {
-    const edgeType = cb.dataset.edge;
-    linkEls.filter(d => d.type === edgeType).style('display', cb.checked ? null : 'none');
+document.querySelectorAll('[data-edge]').forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    const edgeType = checkbox.dataset.edge;
+    linkEls.filter((edge) => edge.type === edgeType).style('display', checkbox.checked ? null : 'none');
   });
 });
 
 // Search
-document.getElementById('search').addEventListener('input', e => {
-  const q = e.target.value.toLowerCase();
+document.getElementById('search').addEventListener('input', (event) => {
+  const query = event.target.value.toLowerCase();
   nodeEls.selectAll('circle')
-    .attr('stroke', d => (!q || d.id.toLowerCase().includes(q) || d.title.toLowerCase().includes(q)) ? '#0f1117' : '#555')
-    .attr('opacity', d => (!q || d.id.toLowerCase().includes(q) || d.title.toLowerCase().includes(q)) ? 1 : 0.15);
+    .attr('stroke', (node) => (!query || node.id.toLowerCase().includes(query) || node.title.toLowerCase().includes(query)) ? '#0f1117' : '#555')
+    .attr('opacity', (node) => (!query || node.id.toLowerCase().includes(query) || node.title.toLowerCase().includes(query)) ? 1 : 0.15);
 });
 
 // Resize
@@ -419,7 +745,14 @@ window.addEventListener('resize', () => {
 </script>
 </body>
 </html>`;
+}
 
-fs.writeFileSync(outputPath, html);
-console.log(`HTML: ${outputPath}`);
-console.log(`\nDone. Open in browser:\n  open ${outputPath}`);
+if (isScript) {
+  try {
+    const parsedArgs = parseCli(process.argv.slice(2));
+    main(parsedArgs);
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
+}

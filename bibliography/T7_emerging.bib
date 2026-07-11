@@ -81,7 +81,7 @@
   number = {6},
   doi = {10.1007/s11704-024-40231-1},
   abstract = {This comprehensive survey reviews the field of LLM-based autonomous agents from three perspectives: construction (profiling, memory, planning, and action modules), application (social simulation, natural science, engineering), and evaluation (subjective, objective, and benchmark-based). The survey identifies four key architectural components that every LLM agent requires: a profile that shapes behavior, a memory system for storing and retrieving experience, a planning mechanism for task decomposition and scheduling, and an action interface for tool use and environment interaction. This four-component framework maps precisely onto the founder-mode agent architecture: agent identity files (profile), the Cognitive Ledger + MEMORY.md (memory), the scheduler and sprint recommender (planning), and the 7 integration adapters (action).},
-  keywords = {LLM agents, autonomous agents, agent architecture, survey, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE}
+  keywords = {LLM agents, autonomous agents, agent architecture, survey, HUMMBL:P, HUMMBL:CO, HUMMBL:DE}
 }
 
 @inproceedings{Zhuge2024GPTSwarm,
@@ -147,7 +147,7 @@
   url = {https://arxiv.org/abs/2310.04406},
   doi = {10.48550/arXiv.2310.04406},
   abstract = {LATS (Language Agent Tree Search) unifies reasoning, acting, and planning by using LLMs as agents, value functions, and optimizers within a Monte Carlo Tree Search framework. The agent generates multiple reasoning-action trajectories as a search tree, uses the LLM to evaluate intermediate states (value function), and backpropagates these evaluations to guide future exploration. This enables systematic exploration of the action space with self-reflection at each node. LATS achieves state-of-the-art results on HumanEval (94.4\%), WebShop (75.9\%), and HotpotQA by combining the strengths of ReAct-style action generation with tree search planning. The key insight is that LLMs can serve as both the policy (generating actions) and the critic (evaluating outcomes), eliminating the need for external reward models. For hummbl-dev, LATS formalizes the pattern behind multi-agent task decomposition: the forge orchestrator explores multiple implementation strategies (tree branches), evaluates intermediate results (test outcomes, lint results), and backtracks when a strategy fails -- implementing tree search over the engineering action space.},
-  keywords = {tree search, planning, reasoning, Monte Carlo, HUMMBL:DE, HUMMBL:RE, HUMMBL:SY}
+  keywords = {tree search, planning, reasoning, Monte Carlo, HUMMBL:DE, HUMMBL:RE, HUMMBL:P}
 }
 
 @inproceedings{Patil2023Gorilla,

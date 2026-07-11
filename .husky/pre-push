@@ -1,0 +1,16 @@
+# Run full test suite before pushing
+echo "🧪 Running pre-push test suite..."
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT/toolkit" && npm test
+
+TEST_RESULT=$?
+
+if [ $TEST_RESULT -ne 0 ]; then
+  echo "❌ Pre-push tests failed. Push blocked."
+  echo "   To bypass (NOT RECOMMENDED): git push --no-verify"
+  exit 1
+fi
+
+echo "✅ All tests passed. Push allowed."
+exit 0

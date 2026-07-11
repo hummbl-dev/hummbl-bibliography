@@ -4,7 +4,7 @@ Last updated: 2026-06-19
 
 ## Known Issues
 
-### 1. npm Audit Blocking Dependabot Updates (P0.4)
+### 1. npm Audit Blocking Dependabot Updates (priority-0.4)
 - **Workflow affected:** `ci.yml` — "Lint / Test / Audit" job
 - **Symptom:** `npm audit --omit=dev --audit-level=high` fails the entire CI, blocking Dependabot security PRs
 - **Root cause:** Bibliography toolkit CI has a hard failure on any high-severity npm advisory

@@ -14,17 +14,17 @@
 - **CI/CD**: GitHub Actions workflow operational
 
 ### Corpus Metrics
-- **Total Entries**: 240 (12 tiers x 20 entries)
-- **DOI Coverage**: 155/240 (64.6%)
-- **ISBN Coverage**: 72/240 (30%)
-- **Abstract Coverage**: 240/240 (100%)
-- **HUMMBL Keyword Coverage**: 240/240 (100%)
+- **Total Entries**: 260 (13 tiers x 20 entries)
+- **DOI Coverage**: 184/260 (70.8%)
+- **ISBN Coverage**: 72/260 (27.7%)
+- **Abstract Coverage**: 260/260 (100%)
+- **HUMMBL Keyword Coverage**: 260/260 (100%)
 
 | Metric | Value |
 |--------|-------|
 | Total entries | **260** (20 × 13 tiers) |
 | Tiers | 13 (T1–T13) |
-| Entries with DOIs | ~142 (~55% overall) |
+| Entries with DOIs | 184 (70.8% overall) |
 | T7 DOI coverage | **20/20 (100%)** |
 | T13 DOI coverage | **13/20 (65%)** (arXiv papers) |
 | T1 DOI coverage | 6/20 (30%) |
