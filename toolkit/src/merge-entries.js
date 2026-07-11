@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
-const readline = require('readline');
+import chalk from 'chalk';
+import readline from 'readline';
 
 console.log('\n' + '='.repeat(60));
 console.log(chalk.cyan.bold('  HUMMBL Bibliography Entry Merger'));

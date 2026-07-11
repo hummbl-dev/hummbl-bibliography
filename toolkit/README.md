@@ -59,13 +59,13 @@ Detects duplicates by:
 
 ### Duplicate Removal
 
-Automatically remove duplicates (keeps higher tier):
+Automatically remove duplicates (keeps higher priority numeric tier):
 
 ```bash
 npm run fix-dups
 ```
 
-Creates `.backup` files before modification.
+Creates `.backup` files before modification. Tier priority is resolved deterministically by the filename prefix (`T1`, `T2`, ... `T13`), where lower numbers are higher priority.
 
 **Dry run** (preview changes):
 ```bash
@@ -83,6 +83,7 @@ npm run find-dois
 ⚠️ **Note**: Rate-limited to 1 request/second. May take several minutes.
 
 Results include confidence scores for manual review.
+Only `article-journal` and `paper-conference` entries are considered.
 
 ### Statistics Generation
 

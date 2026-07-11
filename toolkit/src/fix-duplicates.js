@@ -1,14 +1,42 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { Cite } = require('@citation-js/core');
-require('@citation-js/plugin-bibtex');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
-const bibDir = args[0] || '../bibliography';
 const dryRun = args.includes('--dry-run');
+const positionalArgs = args.filter(a => !a.startsWith('--'));
+const bibDir = positionalArgs[0] || '../bibliography';
+
+const TIER_FALLBACK = Number.POSITIVE_INFINITY;
+const TIER_PREFIX_RE = /^T(\d+)_/i;
+
+export function getTierFromFilename(filename) {
+  const base = path.basename(filename || '');
+  const match = base.match(TIER_PREFIX_RE);
+  if (!match) {
+    return TIER_FALLBACK;
+  }
+
+  const value = Number.parseInt(match[1], 10);
+  if (!Number.isFinite(value) || value < 1) {
+    return TIER_FALLBACK;
+  }
+
+  return value;
+}
+
+export function shouldKeepExistingForDuplicate(existingFile, incomingFile) {
+  const existingTier = getTierFromFilename(existingFile);
+  const incomingTier = getTierFromFilename(incomingFile);
+
+  // Lower number means higher-priority tier, e.g. T1 beats T2/T10.
+  return existingTier <= incomingTier;
+}
 
 class DuplicateFixer {
   constructor(bibDir, dryRun = false) {
@@ -39,10 +67,9 @@ class DuplicateFixer {
           if (this.entries.has(entry.id)) {
             // Duplicate found - keep the one from higher tier (T1 > T2 > T3)
             const existing = this.entries.get(entry.id);
-            const existingTier = this.getTier(existing.file);
-            const newTier = this.getTier(filename);
+            const keepExisting = shouldKeepExistingForDuplicate(existing.file, filepath);
 
-            if (newTier > existingTier) {
+            if (keepExisting) {
               // Keep existing, remove new
               this.toRemove.push({ file: filepath, key: entry.id });
               console.log(chalk.yellow(`  ⚠️  Duplicate: ${entry.id} (removing from ${filename})`));
@@ -63,10 +90,7 @@ class DuplicateFixer {
   }
 
   getTier(filename) {
-    if (filename.includes('T1')) return 1;
-    if (filename.includes('T2')) return 2;
-    if (filename.includes('T3')) return 3;
-    return 99;
+    return getTierFromFilename(filename);
   }
 
   fixDuplicates() {
@@ -133,8 +157,12 @@ class DuplicateFixer {
 }
 
 // Run fixer
-const fixer = new DuplicateFixer(bibDir, dryRun);
-fixer.run().catch(err => {
-  console.error(chalk.red('Fatal error:'), err);
-  process.exit(1);
-});
+const invokedAsScript = process.argv[1] === fileURLToPath(import.meta.url);
+
+if (invokedAsScript) {
+  const fixer = new DuplicateFixer(bibDir, dryRun);
+  fixer.run().catch(err => {
+    console.error(chalk.red('Fatal error:'), err);
+    process.exit(1);
+  });
+}

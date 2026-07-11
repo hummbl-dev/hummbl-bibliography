@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
         run: |
           echo "Running npm audit in: $(pwd)"
-          npm audit --json > ../audit-report.json || true
+          npm audit --json > ../audit-report.json
           echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
           cat ../audit-report.json >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
@@ -71,7 +71,7 @@ jobs:
           compression-level: 6
           
       - name: Comment on PR if vulnerabilities found
-        if: github.event_name == 'pull_request' && failure()
+        if: github.event_name == 'pull_request' && steps.audit.outcome == 'failure'
         uses: actions/github-script@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,16 +1,63 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const axios = require('axios');
-const { Cite } = require('@citation-js/core');
-require('@citation-js/plugin-bibtex');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import axios from 'axios';
+import { Cite } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
-const bibDir = args[0] || '../bibliography';
+const positionalArgs = args.filter(arg => !arg.startsWith('--'));
+const bibDir = positionalArgs[0] || '../bibliography';
 
-class DOIFinder {
+const DOI_CANDIDATE_TYPES = new Set(['article-journal', 'paper-conference']);
+
+export function normalizeType(rawType) {
+  return (typeof rawType === 'string' && rawType.trim().toLowerCase()) || '';
+}
+
+export function isDoiCandidateType(rawType) {
+  return DOI_CANDIDATE_TYPES.has(normalizeType(rawType));
+}
+
+export function extractPublicationYear(entry) {
+  if (!entry || typeof entry !== 'object') {
+    return '';
+  }
+
+  if (entry.year !== undefined && entry.year !== null) {
+    return String(entry.year).trim();
+  }
+
+  const candidateDateNodes = [entry.issued, entry.published, entry.publishedOnline];
+  for (const dateNode of candidateDateNodes) {
+    const direct = dateNode?.['date-parts']?.[0]?.[0];
+    if (direct !== undefined && direct !== null) {
+      return String(direct);
+    }
+
+    const fallback = dateNode?.dateParts?.[0]?.[0];
+    if (fallback !== undefined && fallback !== null) {
+      return String(fallback);
+    }
+  }
+
+  return '';
+}
+
+export function getPrimaryAuthor(entry) {
+  const rawAuthor = entry?.author;
+  if (Array.isArray(rawAuthor)) {
+    const firstAuthor = rawAuthor[0] || {};
+    return firstAuthor.family || firstAuthor.literal || firstAuthor.name || '';
+  }
+
+  return rawAuthor || '';
+}
+
+export class DOIFinder {
   constructor(bibDir) {
     this.bibDir = path.resolve(bibDir);
     this.missingDOIs = [];
@@ -55,20 +102,21 @@ class DOIFinder {
     }
 
     // Only search for articles and conference papers
-    if (entry.type !== 'article' && entry.type !== 'inproceedings') {
+    // citation-js converts BibTeX types to CSL types:
+    //   @article -> article-journal, @inproceedings -> paper-conference
+    if (!isDoiCandidateType(entry.type)) {
       return;
     }
 
-    const author = Array.isArray(entry.author) 
-      ? entry.author[0].family || entry.author[0].literal || ''
-      : entry.author || '';
+    const author = getPrimaryAuthor(entry);
+    const year = extractPublicationYear(entry);
 
     console.log(chalk.blue(`  Searching for: ${entry.id}`));
 
     const result = await this.searchCrossRef(
       entry.title || '',
       author,
-      entry.year || ''
+      year
     );
 
     if (result) {
@@ -171,8 +219,12 @@ class DOIFinder {
 }
 
 // Run finder
-const finder = new DOIFinder(bibDir);
-finder.run().catch(err => {
-  console.error(chalk.red('Fatal error:'), err);
-  process.exit(1);
-});
+const invokedAsScript = process.argv[1] === fileURLToPath(import.meta.url);
+
+if (invokedAsScript) {
+  const finder = new DOIFinder(bibDir);
+  finder.run().catch(err => {
+    console.error(chalk.red('Fatal error:'), err);
+    process.exit(1);
+  });
+}
