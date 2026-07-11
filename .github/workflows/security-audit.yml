@@ -12,7 +12,6 @@ on:
 # Set the required permissions at the job level
 permissions:
   contents: read
-  security-events: write
   pull-requests: write
 
 jobs:
@@ -20,9 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     
     # Ensure the job has the necessary permissions
+    # - contents: read — required by actions/checkout
+    # - pull-requests: write — required by PR comment step (same-repo PRs only)
     permissions:
       contents: read
-      security-events: write
       pull-requests: write
         
     steps:
@@ -52,41 +52,82 @@ jobs:
       - name: Run npm audit
         id: audit
         working-directory: ./toolkit
-        continue-on-error: true
         run: |
           echo "Running npm audit in: $(pwd)"
-          npm audit --json > ../audit-report.json
-          echo "AUDIT_REPORT<<EOF" >> $GITHUB_ENV
-          cat ../audit-report.json >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-          ls -la ..
-          
+          npm audit --json > ../audit-report.json 2>/dev/null || true
+          node scripts/parse-audit-report.js ../audit-report.json >> "$GITHUB_OUTPUT"
+          ls -la ../audit-report.json
+
       - name: Upload audit report
-        if: always()
+        if: always() && steps.audit.outputs.audit_valid == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: audit-report
           path: audit-report.json
           retention-days: 7
           compression-level: 6
-          
-      - name: Comment on PR if vulnerabilities found
-        if: github.event_name == 'pull_request' && steps.audit.outcome == 'failure'
+          if-no-files-found: error
+
+      - name: Upload raw diagnostic output on infrastructure failure
+        if: always() && steps.audit.outputs.audit_valid != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report-INVALID-diagnostic
+          path: audit-report.json
+          retention-days: 7
+          compression-level: 6
+          if-no-files-found: warn
+
+      - name: Surface vulnerability findings
+        if: always() && steps.audit.outputs.audit_valid == 'true' && steps.audit.outputs.vulnerability_count > 0
+        working-directory: ./toolkit
+        run: |
+          COUNT="${{ steps.audit.outputs.vulnerability_count }}"
+          HIGH="${{ steps.audit.outputs.vuln_high }}"
+          CRITICAL="${{ steps.audit.outputs.vuln_critical }}"
+          echo "::warning::Security audit found ${COUNT} vulnerabilities (high: ${HIGH}, critical: ${CRITICAL}). See audit-report artifact for details."
+          {
+            echo "## Security Audit: Vulnerabilities Found"
+            echo ""
+            echo "| Severity | Count |"
+            echo "|----------|-------|"
+            echo "| Critical | ${{ steps.audit.outputs.vuln_critical }} |"
+            echo "| High | ${{ steps.audit.outputs.vuln_high }} |"
+            echo "| Moderate | ${{ steps.audit.outputs.vuln_moderate }} |"
+            echo "| Low | ${{ steps.audit.outputs.vuln_low }} |"
+            echo "| Info | ${{ steps.audit.outputs.vuln_info }} |"
+            echo "| **Total** | **${COUNT}** |"
+            echo ""
+            echo "Detailed report: [\`audit-report\`](./actions/runs/${{ github.run_id }}) artifact"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment on PR if vulnerabilities found (same-repo PRs only)
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && steps.audit.outputs.audit_valid == 'true' && steps.audit.outputs.vulnerability_count > 0
         uses: actions/github-script@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
+            const count = parseInt('${{ steps.audit.outputs.vulnerability_count }}', 10) || 0;
+            const high = parseInt('${{ steps.audit.outputs.vuln_high }}', 10) || 0;
+            const critical = parseInt('${{ steps.audit.outputs.vuln_critical }}', 10) || 0;
             try {
-              const { data: comment } = await github.rest.issues.createComment({
+              await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
-                body: '⚠️ **Security Audit Failed**\n\nVulnerabilities were found during the security audit. Please check the workflow run for details.'
+                body: `⚠️ **Security Audit: Vulnerabilities Found**\n\nTotal: ${count} (high: ${high}, critical: ${critical})\n\nSee the workflow run and uploaded audit-report artifact for details.`
               });
               console.log('Comment added successfully');
             } catch (error) {
               console.error('Error adding comment:', error);
-              // Don't fail the workflow if comment fails
-              core.setFailed('Failed to add comment, but continuing...');
+              core.setFailed('Failed to add PR comment');
             }
+
+      - name: Report infrastructure failure
+        if: failure() && steps.audit.outcome == 'failure'
+        run: |
+          echo "::error::Security audit infrastructure failure (error: ${{ steps.audit.outputs.error }})"
+          echo "The npm audit command did not produce a valid report."
+          echo "This may indicate a network, registry, or tooling failure."
+          exit 1
