@@ -55,7 +55,7 @@ jobs:
         run: |
           echo "Running npm audit in: $(pwd)"
           npm audit --json > ../audit-report.json 2>/dev/null || true
-          node ../scripts/parse-audit-report.js ../audit-report.json >> "$GITHUB_OUTPUT"
+          node scripts/parse-audit-report.js ../audit-report.json >> "$GITHUB_OUTPUT"
           ls -la ../audit-report.json
 
       - name: Upload audit report
