@@ -9,3 +9,4 @@ toolkit/dist/
 coverage/
 .vscode/
 .idea/
+__pycache__/

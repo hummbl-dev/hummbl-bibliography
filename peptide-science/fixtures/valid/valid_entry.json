@@ -1,0 +1,14 @@
+{
+  "source_id": "PEP-VALID-1900",
+  "title": "Valid test source",
+  "authors_or_organization": "Test Author",
+  "year": 1900,
+  "source_type": "primary_research",
+  "authority_posture": "primary_experimental",
+  "primary_or_secondary": "primary",
+  "doi": "10.1234/test",
+  "accessed_date": "2026-07-10",
+  "document_status": "active",
+  "retraction_or_correction_status": "none",
+  "claims_supported": ["test_claim"]
+}

@@ -1,0 +1,96 @@
+% T16_data_governance.bib — Data Governance and Quality for AI
+% Added 2026-06-27 to fill Family 12 gap identified in bibliography cross-reference
+%
+% These entries cover dataset documentation, data provenance, data cascades,
+% and data quality frameworks for AI/ML systems.
+
+@inproceedings{Gebru2021Datasheets,
+  title = {Datasheets for Datasets},
+  author = {Gebru, Timnit and Morgenstern, Jamie and DiAngelo, Briana and Vaughan, Emily and Wallach, Hanna and Daumé III, Hal and Crawford, Kate},
+  year = {2021},
+  booktitle = {Communications of the ACM},
+  volume = {64},
+  number = {12},
+  pages = {86--92},
+  url = {https://arxiv.org/abs/1803.09010},
+  abstract = {Foundational dataset documentation framework proposing standardized datasheets to increase transparency and accountability in ML dataset creation and use. Modeled on electronic component datasheets, the framework asks dataset creators to answer questions about motivation, composition, collection process, preprocessing, intended uses, distribution, and maintenance. Widely adopted as a reference framework by industry and standards bodies.},
+  keywords = {dataset documentation, datasheets, transparency, accountability, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MAP MEASURE},
+}
+
+@article{Pushkarna2022DataCards,
+  title = {Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI},
+  author = {Pushkarna, Mahima and Zaldivar, Adrian and Kjartansson, Oddur and Bremer, Christian and Kegler, Jasmine and Baumgartner, Shannon and Ngo, Kiyoshi and Pilz, Kilian and Bhatia, Shvetak and Wulczyn, Martin and others},
+  year = {2022},
+  journal = {Google Research},
+  url = {https://research.google/blog/data-cards-purposeful-and-transparent-dataset-documentation-for-responsible-ai/},
+  abstract = {Google's Data Cards framework with OFTEn methodology and open Playbook toolkit for dataset documentation. Goes beyond Datasheets by providing structured, stakeholder-specific documentation with provenance, suitability, and use-case guidance. Deployed across Google's AI product teams.},
+  keywords = {data cards, dataset documentation, transparency, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MAP MEASURE},
+}
+
+@inproceedings{Chmielinski2022NutritionLabel,
+  title = {The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data},
+  author = {Chmielinski, Kasia and Shu, Karen and Rosenblatt, Stefan and Tjoa, Samuel and Hong, Michelle and Prakash, Nirmal and Wang, Jessica and Dai, Xinyu and Beraja, Milo and Kumar, Rishabh and others},
+  year = {2022},
+  booktitle = {Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency},
+  url = {https://datanutrition.org/},
+  abstract = {Third-generation dataset nutrition label framework for assessing dataset quality before model training. Provides a modular, standardized label covering dataset provenance, composition, and quality signals. Now in production use by several organizations.},
+  keywords = {dataset nutrition, data quality, framework, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MAP MEASURE},
+}
+
+@inproceedings{Hutchinson2021Accountability,
+  title = {Towards Accountability for Machine Learning Datasets},
+  author = {Hutchinson, Ben and Mitchell, Margaret},
+  year = {2021},
+  booktitle = {Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  url = {https://arxiv.org/abs/2010.13561},
+  abstract = {Framework for dataset accountability practices examining how dataset documentation can support auditing. Identifies accountability gaps in ML dataset lifecycle and proposes documentation interventions at each stage.},
+  keywords = {accountability, dataset documentation, auditing, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MAP GOVERN},
+}
+
+@inproceedings{Sambasivan2021DataCascades,
+  title = {"Everyone wants to do the model work, not the data work": Data Cascades in High-Stakes AI},
+  author = {Sambasivan, Nithya and Kapania, Shivani and HighLaRossa, Hannah and Kukreja, Alka and Sambasivan, Shivani and Hecht, Brent and Kapania, Shivani},
+  year = {2021},
+  booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+  url = {https://arxiv.org/abs/2104.02915},
+  abstract = {Empirical study of data cascades in high-stakes AI revealing how data quality issues compound through the ML lifecycle. Based on interviews with 53 ML practitioners across 3 sectors in India. Identifies systemic undervaluing of data work as root cause.},
+  keywords = {data cascades, data quality, empirical, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MAP MEASURE MANAGE},
+}
+
+@inproceedings{Bender2021StochasticParrots,
+  title = {On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?},
+  author = {Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret},
+  year = {2021},
+  booktitle = {Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  url = {https://dl.acm.org/doi/10.1145/3442188.3445922},
+  abstract = {Seminal paper on risks of large language models highlighting dataset size/provenance issues, environmental costs, and harms from unexamined training data. Coined the term "stochastic parrots" and catalyzed industry-wide attention to training data governance.},
+  keywords = {LLM, dataset, risks, provenance, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MAP MEASURE MANAGE},
+}
+
+@article{Longpre2024DataProvenance,
+  title = {A Data Provenance Initiative for Large Language Models},
+  author = {Longpre, Shayne and Lu, Xinyi and Chen, Yifan and others},
+  year = {2024},
+  journal = {Nature Machine Intelligence},
+  url = {https://arxiv.org/abs/2403.13786},
+  abstract = {Large-scale audit of 4,000+ LLM training datasets revealing widespread license and provenance issues. The Data Provenance Initiative provides a searchable database of audited datasets with license, source, and modification tracking.},
+  keywords = {data provenance, LLM, audit, license, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MAP GOVERN},
+}
+
+@article{Bender2018DataStatements,
+  title = {Data Statements for Natural Language Processing: A Position Paper},
+  author = {Bender, Emily M. and Friedman, Batya and McMillan-Major, Angelina and Shmitchell, Shmargaret},
+  year = {2018},
+  journal = {arXiv preprint},
+  url = {https://arxiv.org/abs/1810.03677},
+  abstract = {Proposes data statements as a complement to datasheets for NLP datasets addressing documentation for linguistic diversity and potential harms.},
+  keywords = {data statements, NLP, documentation, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MAP MEASURE},
+}

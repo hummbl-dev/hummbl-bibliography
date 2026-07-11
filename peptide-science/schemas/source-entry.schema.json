@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/peptide-bibliography/source-entry.v0.1.json",
+  "title": "Peptide Science Bibliography Source Entry v0.1",
+  "description": "A single source entry in the peptide science bibliography registry",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "authority_posture",
+    "primary_or_secondary",
+    "accessed_date"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "description": "Stable, deterministic, collision-resistant identifier",
+      "pattern": "^PEP-[A-Z0-9]+(-[A-Z0-9]+)*-[0-9]{4}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authors_or_organization": {
+      "type": "string",
+      "minLength": 1
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1800,
+      "maximum": 2030
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "primary_research",
+        "review",
+        "official_historical",
+        "regulatory",
+        "standard",
+        "database",
+        "ontology",
+        "nomenclature",
+        "textbook",
+        "local_receipt",
+        "discovery_aid"
+      ]
+    },
+    "authority_posture": {
+      "type": "string",
+      "enum": [
+        "primary_experimental",
+        "primary_historical",
+        "official_regulatory",
+        "official_standards",
+        "community_consensus",
+        "peer_reviewed",
+        "tertiary",
+        "local_execution",
+        "discovery_aid"
+      ]
+    },
+    "primary_or_secondary": {
+      "type": "string",
+      "enum": ["primary", "secondary", "tertiary"]
+    },
+    "doi": {
+      "type": "string",
+      "pattern": "^10\\..+"
+    },
+    "pmid": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "version_or_release": {
+      "type": "string"
+    },
+    "document_status": {
+      "type": "string",
+      "enum": ["active", "draft", "superseded", "retracted", "corrected", "archived"]
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Regulatory jurisdiction (e.g., US, EU, global)"
+    },
+    "issued_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "accessed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "license_or_access": {
+      "type": "string"
+    },
+    "retraction_or_correction_status": {
+      "type": "string",
+      "enum": ["none", "retracted", "corrected", "expression_of_concern", "superseded"]
+    },
+    "claims_supported": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "exact_locators": {
+      "type": "string",
+      "description": "Page numbers, section references, or precise locators"
+    },
+    "related_sources": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "checksum_or_snapshot": {
+      "type": "string",
+      "description": "SHA-256 hash or snapshot reference"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
