@@ -58,11 +58,19 @@ if (!parsed.auditReportVersion) {
 }
 
 const vulnMeta = parsed.metadata?.vulnerabilities || {};
-const total = vulnMeta.total ?? 0;
+
+// Coerce all counts to non-negative integers to prevent non-numeric
+// strings from being interpolated into shell commands downstream.
+function safeCount(v) {
+  const n = Number(v);
+  return Number.isFinite(n) && n >= 0 ? Math.trunc(n) : 0;
+}
+
+const total = safeCount(vulnMeta.total);
 
 console.log('audit_valid=true');
 console.log('vulnerability_count=' + total);
 for (const level of ['info', 'low', 'moderate', 'high', 'critical']) {
-  console.log('vuln_' + level + '=' + (vulnMeta[level] ?? 0));
+  console.log('vuln_' + level + '=' + safeCount(vulnMeta[level]));
 }
 exit(0);

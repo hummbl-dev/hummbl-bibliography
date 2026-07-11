@@ -143,6 +143,38 @@ test('parse-audit-report: missing path argument', () => {
   }
 });
 
+// --- Non-numeric values in JSON (defense-in-depth for shell injection) ---
+test('parse-audit-report: non-numeric vulnerability counts coerced to 0', () => {
+  const fixture = join(TMP, 'non-numeric.json');
+  mkdirSync(TMP, { recursive: true });
+  writeFileSync(fixture, JSON.stringify({
+    auditReportVersion: 2,
+    vulnerabilities: {},
+    metadata: {
+      vulnerabilities: {
+        info: 'malicious-string',
+        low: { injected: true },
+        moderate: null,
+        high: -1,
+        critical: 3.7,
+        total: '42; rm -rf /'
+      },
+      dependencies: { prod: 1, dev: 0, optional: 0, peer: 0, total: 1 }
+    }
+  }));
+  const { stdout, exitCode } = runScript(fixture);
+  assert.equal(exitCode, 0);
+  const outputs = parseOutputs(stdout);
+  assert.equal(outputs.audit_valid, 'true');
+  // All non-numeric/non-finite/negative values must be coerced to 0
+  assert.equal(outputs.vulnerability_count, '0', 'string total coerced to 0');
+  assert.equal(outputs.vuln_info, '0', 'string info coerced to 0');
+  assert.equal(outputs.vuln_low, '0', 'object low coerced to 0');
+  assert.equal(outputs.vuln_moderate, '0', 'null moderate coerced to 0');
+  assert.equal(outputs.vuln_high, '0', 'negative high coerced to 0');
+  assert.equal(outputs.vuln_critical, '3', 'float critical truncated to 3');
+});
+
 // --- Cleanup ---
 test('parse-audit-report: cleanup fixtures', () => {
   rmSync(TMP, { recursive: true, force: true });
