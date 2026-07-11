@@ -36,11 +36,36 @@ npm run find-dois     # Find missing DOIs
 ## CI
 GitHub Actions workflows: `validate.yml`, `ci.yml`, `doi-enrichment.yml`, `security-audit.yml`, `stats-report.yml`, `validate-models.yml`, `acronym-lint.yml`. Validation runs on push to main/develop and on PRs (path-filtered). Stats report runs on a weekly schedule; DOI enrichment is manual-trigger only (`workflow_dispatch`).
 
+## Git Security Posture
+
+### Local Git Hardening Stack
+- **Pre-commit hook** (`.husky/pre-commit`): gitleaks secret scanning + bibliography validation
+- **Commit-msg hook** (`.husky/commit-msg`): commitlint enforces Conventional Commits format
+- **Pre-push hook** (`.husky/pre-push`): full `npm test` suite before allowing push
+- **Gitleaks** (`.gitleaks.toml`): secret scanner with default rules + project allowlist
+- **Commitlint** (`toolkit/commitlint.config.js`): Conventional Commits format enforcement
+- **lint-staged**: validates `.bib`, `.js`, `.json`, `.yml` files on stage
+- **GPG signing**: `commit.gpgsign=true`, key `594BD296B7D933CE`
+- **Husky**: `core.hooksPath=.husky/_`, hooks fire on every commit/push
+
+### Branch Protection (server-side, GitHub)
+- **Required signatures**: enabled — all commits to main must be GPG-signed
+- **Force pushes**: blocked — `allow_force_pushes=false`
+- **Branch deletions**: blocked — `allow_deletions=false`
+- **Enforce admins**: enabled — rules apply to all users
+- **Required status checks**: none — direct-to-main pushes still work (no PR required)
+- **Required PR reviews**: none — direct-to-main workflow preserved
+
+### Known Limitations
+- `--no-verify` bypasses all local hooks (pre-commit, commit-msg, pre-push). Only GitHub required status checks would enforce this, which would force PRs.
+- `HUSKY=0` environment variable disables all husky hooks. No local mechanism can prevent this.
+- `core.hooksPath` can be overridden locally to disable hooks. Inherent to git's local config model.
+- GPG signing can be disabled locally (`-c commit.gpgsign=false`), but server-side required signatures now reject unsigned pushes.
+- `.husky/` and config files (`.gitleaks.toml`, `commitlint.config.js`) are tracked in git and can be weakened by a direct commit. Branch protection requires signatures but does not review content.
+
 ## Direct-to-Main Policy
 
-This repo is public (GitHub Actions are free) and main has no branch protection. Most work goes directly to main without a PR. The operator trusts local peer review (multi-agent review, `npm test`, `npm run type-check`) over CI gates.
-
-**Known limitation:** Tier 3 rules (no force push, no branch deletion) are honor-system only — without branch protection, the platform cannot enforce them. The policy relies on agent compliance and operator oversight.
+This repo is public (GitHub Actions are free). Main has branch protection requiring GPG-signed commits and blocking force-pushes/deletions, but does not require PRs or status checks. Most work goes directly to main with a signed commit. The operator trusts local peer review (multi-agent review, `npm test`, gitleaks, commitlint) over CI gates.
 
 ### Tier 1 — Direct to main (no PR needed)
 - Toolkit bug fixes and regression tests (covered by `npm test`)
@@ -56,7 +81,7 @@ This repo is public (GitHub Actions are free) and main has no branch protection.
 3. `npm run build` passes (if `toolkit/src/**` or `tsconfig.json` changed and `dist/` is committed)
 4. `npm audit --omit=dev --audit-level=high` passes (if any dependency changed)
 5. Commit message follows Conventional Commits
-6. No secrets, credentials, or PII in the diff (verified by manual review — no automated scanner wired)
+6. No secrets, credentials, or PII in the diff (verified by gitleaks in pre-commit hook)
 
 ### Tier 2 — PR required (operator may waive in-commit)
 - New bibliography entries (`.bib` file additions) or bulk bibliography reorganization
@@ -78,8 +103,8 @@ This repo is public (GitHub Actions are free) and main has no branch protection.
 - License changes
 - Changes to AGENTS.md Scope, Conventions, CI, or Direct-to-Main Policy sections (typos in Project/Setup/Testing sections are Tier 1)
 - `postinstall`/`prepare`/`preinstall` npm script additions or changes
-- Force pushes or history rewrites on main
-- Deleting branches or tags
+- Force pushes or history rewrites on main (**server-side blocked** — `allow_force_pushes=false`)
+- Deleting branches or tags (**server-side blocked** — `allow_deletions=false`)
 - Anything the operator explicitly flags as high-stakes
 
 **Waiver:** Tier 3 items may be committed directly only when the operator gives explicit written assent in the commit message body: `Operator-approved Tier 3 direct commit: <reason>`. This makes the waiver auditable.
@@ -87,6 +112,7 @@ This repo is public (GitHub Actions are free) and main has no branch protection.
 ### Rationale
 - Actions minutes are free for public repos. The cost of PRs here is friction, not money.
 - CI runs on push to main anyway — skipping PRs doesn't skip CI, it just skips the pre-merge gate.
-- The operator's local review process (Devin/Codex subagent verification, `npm test`) is trusted over CI for routine work.
+- The operator's local review process (Devin/Codex subagent verification, `npm test`, gitleaks, commitlint) is trusted over CI for routine work.
 - Tier 2 and 3 exist for changes where the cost of a mistake is higher than the friction of a PR.
 - CI's npm audit is non-blocking (`continue-on-error: true`), so local `npm audit` is the only real gate for vulnerable dep bumps.
+- Branch protection enforces GPG signatures and blocks force-pushes/deletions server-side. Local hooks (gitleaks, commitlint, pre-push tests) are defense-in-depth but bypassable with `--no-verify`.

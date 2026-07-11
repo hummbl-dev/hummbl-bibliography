@@ -89,10 +89,6 @@ class DuplicateFixer {
     }
   }
 
-  getTier(filename) {
-    return getTierFromFilename(filename);
-  }
-
   fixDuplicates() {
     if (this.toRemove.length === 0) {
       console.log(chalk.green('\n✨ No duplicates to fix!'));
