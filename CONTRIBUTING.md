@@ -75,13 +75,13 @@ Aim for balanced coverage across all 6 transformations (16.7% each).
 ## Documentation
 
 - Document tier-specific guidelines in tier README files
-- Update transformation mappings in `hummbl-transformations.json`
+- Update transformation mappings in `mappings/arcana_citations.json`
 - Document model-level mappings in separate files
 
 ## Questions?
 
-- Open an issue on Gitea
-- Post to the coordination bus
+- Open an issue on [GitHub](https://github.com/hummbl-dev/hummbl-bibliography/issues)
+- Internal agents may additionally post a redacted receipt to the coordination bus
 - Contact the maintainer
 
 ## License
