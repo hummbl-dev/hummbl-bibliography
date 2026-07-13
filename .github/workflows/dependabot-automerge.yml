@@ -32,7 +32,7 @@ jobs:
               "security-audit",
               "CodeQL Static Analysis"
             ];
-            const REQUIRED_LABELS = [];
+            const REQUIRED_LABELS = ["dependencies"];
             const ALLOWED_PATHS = [
               /^\.github\/workflows\/[^/]+\.ya?ml$/,
               /(^|\/)(package\.json|package-lock\.json|npm-shrinkwrap\.json|pnpm-lock\.yaml|yarn\.lock|bun\.lockb?)$/,
