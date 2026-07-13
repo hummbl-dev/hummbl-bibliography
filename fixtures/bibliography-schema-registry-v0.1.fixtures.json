@@ -1,0 +1,61 @@
+{
+  "schema_version": "bibliography_schema_registry_fixture_pack.v0.1",
+  "registry_path": "sources/bibliography/bibliography-schema-registry-v0.1.json",
+  "valid": [
+    {
+      "name": "conceptual + record + style slice",
+      "record_ids": [
+        "ifla-library-reference-model-lrm",
+        "marc-21-bibliographic",
+        "csl-style-xml"
+      ]
+    },
+    {
+      "name": "ontology slice",
+      "record_ids": [
+        "bibliographic-ontology-bibo",
+        "frbr-aligned-bibliographic-ontology-fabio",
+        "citation-typing-ontology-cito"
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "name": "duplicate_id",
+      "record_id": "ifla-library-reference-model-lrm",
+      "mutation": {
+        "type": "duplicate_record",
+        "new_id": "ifla-library-reference-model-lrm"
+      }
+    },
+    {
+      "name": "unknown_category",
+      "record_id": "lrmoo",
+      "mutation": {
+        "type": "set_field",
+        "field": "category",
+        "value": "not-a-category"
+      }
+    },
+    {
+      "name": "bad_evidence_status",
+      "record_id": "functional-requirements-for-bibliographic-records-frbr",
+      "mutation": {
+        "type": "set_field",
+        "field": "evidence_status",
+        "value": "totally_fake"
+      }
+    },
+    {
+      "name": "self_related_schema",
+      "record_id": "functional-requirements-for-authority-data-frad",
+      "mutation": {
+        "type": "set_field",
+        "field": "related_schemas",
+        "value": [
+          "functional-requirements-for-authority-data-frad"
+        ]
+      }
+    }
+  ]
+}
