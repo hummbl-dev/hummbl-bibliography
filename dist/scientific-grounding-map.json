@@ -68,7 +68,7 @@
     "metadata_debt": {
       "critical": 5,
       "high": 8,
-      "medium": 42,
+      "medium": 41,
       "low": 76
     }
   },
@@ -101,43 +101,6 @@
       "metadata_debt": []
     },
     {
-      "key": "Anon1980WittgensteinGrammar",
-      "title": "Wittgenstein: The Grammar of Reality",
-      "author": "Washington Post Book World",
-      "year": "1980",
-      "type": "article",
-      "bibliography_tier": "T1",
-      "bibliography_tier_name": "Canonical",
-      "evidence_tier": "foundational",
-      "transformations": [
-        "CO",
-        "IN",
-        "P"
-      ],
-      "has_doi": false,
-      "doi": null,
-      "has_isbn": false,
-      "isbn": null,
-      "journal": "The Washington Post",
-      "keywords": [
-        "Wittgenstein",
-        "book review",
-        "earliest use",
-        "grammar of reality",
-        "journalism"
-      ],
-      "downstream_refs": [],
-      "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
-    },
-    {
       "key": "Bhartrhari5thCVakyapadiya",
       "title": "Vākyapadīya",
       "author": "Bhartṛhari",
@@ -154,8 +117,8 @@
       ],
       "has_doi": false,
       "doi": null,
-      "has_isbn": false,
-      "isbn": null,
+      "has_isbn": true,
+      "isbn": "9788120829886",
       "journal": null,
       "keywords": [
         "Bhartṛhari",
@@ -169,14 +132,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "isbn",
-          "priority": "medium",
-          "reason": "Book-like entry should carry an ISBN when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Bohm1980WholenessImplicate",
@@ -398,7 +355,7 @@
     },
     {
       "key": "KaderbhaiGrammarRealityVakyapadiya",
-      "title": "The Grammar of Reality: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "title": "The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
       "author": "Kaderbhai, Aamir",
       "year": "2018",
       "type": "online",
@@ -459,7 +416,7 @@
       "metadata_debt": []
     },
     {
-      "key": "Kant1781CritiquePureReason",
+      "key": "Kant1787CritiquePureReason",
       "title": "Critique of Pure Reason",
       "author": "Kant, Immanuel",
       "year": "1787",
@@ -621,6 +578,43 @@
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
+    },
+    {
+      "key": "Malcolm1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "author": "Malcolm, Norman",
+      "year": "1980",
+      "type": "article",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "The Washington Post",
+      "keywords": [
+        "Wittgenstein",
+        "book review",
+        "earliest use",
+        "grammar of reality",
+        "journalism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
     },
     {
       "key": "Meadows2008ThinkingSystems",
@@ -10920,10 +10914,10 @@
       "metadata_debt": []
     },
     {
-      "key": "Thalos2013GrammarOfExperience",
+      "key": "Thalos2014GrammarOfExperience",
       "title": "The Grammar of Experience",
       "author": "Thalos, Mariam",
-      "year": "2013",
+      "year": "2014",
       "type": "article",
       "bibliography_tier": "T8",
       "bibliography_tier_name": "Cognition",
@@ -10938,7 +10932,7 @@
       "doi": "10.1017/s0031819114000023",
       "has_isbn": false,
       "isbn": null,
-      "journal": "Proceedings of the Aristotelian Society",
+      "journal": "Philosophy",
       "keywords": [
         "Kantian categories",
         "categorial rules",
@@ -11992,16 +11986,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Anon1980WittgensteinGrammar",
-      "title": "Wittgenstein: The Grammar of Reality",
-      "bibliography_tier": "T1",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Anthropic2024Claude3",
       "title": "The {Claude} 3 Model Family: Opus, Sonnet, Haiku",
       "bibliography_tier": "T13",
@@ -12029,16 +12013,6 @@
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Bhartrhari5thCVakyapadiya",
-      "title": "Vākyapadīya",
-      "bibliography_tier": "T1",
-      "evidence_tier": "foundational",
-      "field": "isbn",
-      "priority": "medium",
-      "reason": "Book-like entry should carry an ISBN when available.",
       "downstream_refs": []
     },
     {
@@ -12303,6 +12277,16 @@
       "title": "Feature Toggles (aka Feature Flags)",
       "bibliography_tier": "T5",
       "evidence_tier": "applied",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Malcolm1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "bibliography_tier": "T1",
+      "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",

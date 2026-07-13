@@ -45,30 +45,6 @@
       "isbn": "978-0195019193"
     },
     {
-      "id": "Anon1980WittgensteinGrammar",
-      "type": "article",
-      "tier": "T1",
-      "tier_name": "Canonical",
-      "title": "Wittgenstein: The Grammar of Reality",
-      "author": "Washington Post Book World",
-      "year": "1980",
-      "abstract": "This 1980 book review in the Washington Post Book World uses the exact phrase \"the grammar of reality\" in its title, making it the earliest verified direct use of the phrase in print. The review discusses Wittgenstein's philosophical trajectory from the Tractatus through the later work, framing his contribution as an elucidation of the grammar through which reality becomes intelligible. The review predates all subsequent scholarly and popular uses of the phrase by at least a decade, correcting any claim that the phrase emerged only in the 2020s. For HUMMBL, this source is genealogically significant: it demonstrates that the phrase was already in circulation in mainstream intellectual journalism by 1980, and that the Wittgenstein-grammar-reality connection was the primary vehicle for its entry into public discourse. The review also illustrates how the phrase functions as a journalistic framing device for Wittgenstein's philosophy, bridging technical philosophy and general readership --- a bridging function that HUMMBL's own grammar-of-reality framing seeks to perform for cognitive transformations.",
-      "keywords": [
-        "Wittgenstein",
-        "book review",
-        "earliest use",
-        "grammar of reality",
-        "journalism"
-      ],
-      "transformations": [
-        "CO",
-        "IN",
-        "P"
-      ],
-      "journal": "The Washington Post",
-      "url": "https://www.washingtonpost.com/archive/entertainment/books/1980/07/13/wittgenstein-the-grammar-of-reality/9cb285d8-ec17-453f-9123-861e06ccb8f1/"
-    },
-    {
       "id": "Bhartrhari5thCVakyapadiya",
       "type": "book",
       "tier": "T1",
@@ -76,7 +52,7 @@
       "title": "Vākyapadīya",
       "author": "Bhartṛhari",
       "year": "450",
-      "abstract": "Bhartṛhari's Vākyapadīya is a foundational work of Indian philosophy of language that posits śabda-brahman (word-monism): the thesis that language and reality are ontologically identical at the ultimate level, with grammar serving as the path to understanding ultimate reality. Bhartṛhari argues that correct grammatical analysis is not merely a linguistic exercise but a direct engagement with the structure of reality itself, since the word principle (śabda-tattva) is the ground of all phenomenal appearance. The Vākyapadīya moves grammatical analysis squarely into the realm of philosophy, arguing that grammar can be considered a darśana (philosophical school) providing insight into ultimate reality. This work establishes a non-Western genealogy for the grammar-of-reality concept that predates Kant by over a millennium: where the Western lineage runs through Kant's categories and Wittgenstein's grammar, the Indian lineage runs through Bhartṛhari's śabda-brahman and the grammarians' tradition. For HUMMBL, Bhartṛhari provides a radically different philosophical foundation for the grammar-of-reality metaphor: not a transcendental condition of experience (Kant) or a constitutive framework of meaning (Wittgenstein), but an ontological identity between language and reality that makes grammar the direct study of what is. This widening of the genealogy beyond the Western canon is essential for HUMMBL's claim to universality.",
+      "abstract": "Bhartṛhari's Vākyapadīya is a foundational work of Indian philosophy of language that posits śabda-brahman (word-monism): the thesis that language and reality are ontologically identical at the ultimate level, with grammar serving as the path to understanding ultimate reality. Bhartṛhari argues that correct grammatical analysis is not merely a linguistic exercise but a direct engagement with the structure of reality itself, since the word principle (śabda-tattva) is the ground of all phenomenal appearance. The Vākyapadīya moves grammatical analysis squarely into the realm of philosophy, arguing that grammar can be considered a darśana (philosophical school) providing insight into ultimate reality. The cited translation is by K.A. Subramania Iyer, published by Motilal Banarsidass.",
       "keywords": [
         "Bhartṛhari",
         "Indian philosophy",
@@ -93,7 +69,9 @@
         "P",
         "SY"
       ],
-      "publisher": "Various translations; see IEP entry"
+      "publisher": "Motilal Banarsidass",
+      "isbn": "9788120829886",
+      "note": "Conceptual ancestry only — not evidence of historical use of the English phrase \"grammar of reality.\" The śabda-brahman tradition establishes a non-Western genealogy for the concept that language and reality share a grammatical structure, but the English phrase is not used. Dating approximate: IEP gives 450-510 CE. Primary text in Sanskrit; cited translation is K.A. Subramania Iyer (Motilal Banarsidass). ISBN 9788120829886 is for Kanda II."
     },
     {
       "id": "Bohm1980WholenessImplicate",
@@ -103,7 +81,7 @@
       "title": "Wholeness and the Implicate Order",
       "author": "Bohm, David",
       "year": "1980",
-      "abstract": "This work proposes a fundamental reconception of reality in terms of the distinction between implicate and explicate orders. Bohm argues that the apparent fragmentation of the world into separate, independently existing objects is a product of the explicate order—the unfolded, manifest level of reality—while the deeper implicate order enfolds the whole into each part, making reality an undivided totality in constant process. He introduces the rheomode, an experimental linguistic structure designed to make process rather than substance the primary grammatical category, demonstrating that the grammar of substance-based language may itself obscure the processual nature of reality. This linguistic experiment directly exemplifies HUMMBL's concern with how the grammar of a domain—its base vocabulary and transformation rules—shapes what can be articulated within it: a substance grammar yields a world of things, while a process grammar yields a world of events and flows. Bohm's treatment of wholeness as prior to parts, and of explication as a grammatical operation that unfolds the implicate into the manifest, provides HUMMBL with a model for understanding cognitive transformations as operations that explicate structure from a base that is itself grammatically structured. The work bridges physics, philosophy of language, and epistemology, making the grammar of process vs substance its central thematic contribution.",
+      "abstract": "This work proposes a fundamental reconception of reality in terms of the distinction between implicate and explicate orders. Bohm argues that the apparent fragmentation of the world into separate, independently existing objects is a product of the explicate order—the unfolded, manifest level of reality—while the deeper implicate order enfolds the whole into each part, making reality an undivided totality in constant process. He introduces the rheomode, an experimental linguistic structure designed to make process rather than substance the primary grammatical category, demonstrating that the grammar of substance-based language may itself obscure the processual nature of reality. The work bridges physics, philosophy of language, and epistemology, making the grammar of process vs substance its central thematic contribution.",
       "keywords": [
         "grammar of process",
         "implicate order",
@@ -192,7 +170,7 @@
       "title": "Wittgenstein's Grammar: Through Thick and Thin",
       "author": "Hacker, P. M. S.",
       "year": "2002",
-      "abstract": "This chapter provides the canonical scholarly treatment of Wittgenstein's conception of grammar as constitutive of meaning, tracing its evolution from the thin, purely logical grammar of the Tractatus to the thick, reality-soaked grammar of the later and final works. Hacker demonstrates that Wittgenstein's notion of grammar undergoes a profound transformation: in the early period, grammar consists of the logical scaffolding shared by language and world, formal and content-neutral; in the Philosophical Investigations, grammar becomes the autonomous network of rules that constitutes meaning within language games and forms of life, interwoven with practice and institution; and in On Certainty, grammar becomes fully reality-soaked, with hinge propositions blurring the boundary between grammatical rules and empirical claims. Hacker argues that this trajectory reveals grammar to be not a static formal structure but a dynamic, practice-embedded framework that hardens and shifts through use. For HUMMBL, this genealogy is indispensable: it provides the scholarly foundation for the claim that cognitive transformations are governed by grammars that evolve from thin logical primitives to thick, reality-soaked structures through repeated application in practice. The chapter clarifies the distinction between grammatical and empirical propositions, the autonomy of grammar, and the sense in which grammar determines what counts as sense, making it the definitive reference for HUMMBL's grammatical framework.",
+      "abstract": "This chapter provides the canonical scholarly treatment of Wittgenstein's conception of grammar as constitutive of meaning, tracing its evolution from the thin, purely logical grammar of the Tractatus to the thick, reality-soaked grammar of the later and final works. Hacker demonstrates that Wittgenstein's notion of grammar undergoes a profound transformation: in the early period, grammar consists of the logical scaffolding shared by language and world, formal and content-neutral; in the Philosophical Investigations, grammar becomes the autonomous network of rules that constitutes meaning within language games and forms of life, interwoven with practice and institution; and in On Certainty, grammar becomes fully reality-soaked, with hinge propositions blurring the boundary between grammatical rules and empirical claims. Hacker argues that this trajectory reveals grammar to be not a static formal structure but a dynamic, practice-embedded framework that hardens and shifts through use. The chapter clarifies the distinction between grammatical and empirical propositions, the autonomy of grammar, and the sense in which grammar determines what counts as sense.",
       "keywords": [
         "Wittgenstein",
         "constitutive rules",
@@ -220,7 +198,7 @@
       "title": "Being and Time",
       "author": "Heidegger, Martin",
       "year": "1927",
-      "abstract": "This foundational work of twentieth-century philosophy undertakes the question of the meaning of being through an analytic of Dasein—the entity for whom being is an issue. Heidegger argues that intelligibility—the disclosedness of beings as something—is not a property of isolated subjects but is constituted through Dasein's situated engagement in a world, structured by care, temporality, and projection. The work introduces the ontological difference between being and beings, and demonstrates that the structures through which beings become intelligible—the existentialia—function as a grammar of being: a set of constitutive structures that determine what can appear as a being, how it can be encountered, and within what horizon of sense. This conception of an ontological grammar as the condition for the appearance of any entity provides HUMMBL with a deep philosophical parallel: Base120's cognitive transformations are not operations performed on pre-given realities but are the structures through which reality becomes articulable in the first place. Heidegger's treatment of thrownness, projection, and temporality as the structural conditions of intelligibility informs HUMMBL's account of how cognitive operations are always already situated within historical and practical contexts that shape their grammar from the outset.",
+      "abstract": "This foundational work of twentieth-century philosophy undertakes the question of the meaning of being through an analytic of Dasein—the entity for whom being is an issue. Heidegger argues that intelligibility—the disclosedness of beings as something—is not a property of isolated subjects but is constituted through Dasein's situated engagement in a world, structured by care, temporality, and projection. The work introduces the ontological difference between being and beings, and demonstrates that the structures through which beings become intelligible—the existentialia—function as a grammar of being: a set of constitutive structures that determine what can appear as a being, how it can be encountered, and within what horizon of sense.",
       "keywords": [
         "Dasein",
         "grammar of being",
@@ -264,10 +242,10 @@
       "type": "online",
       "tier": "T1",
       "tier_name": "Canonical",
-      "title": "The Grammar of Reality: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "title": "The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
       "author": "Kaderbhai, Aamir",
       "year": "2018",
-      "abstract": "Kaderbhai's paper uses the exact phrase \"The Grammar of Reality\" in its title, applying it specifically to Bhartṛhari's Vākyapadīya and its philosophy of language. The paper explores how Bhartṛhari's metaphysics and theories of language can contribute to debates in philosophy and theology surrounding realism, arguing for strong parallels between Bhartṛhari's picture of language and the theories expressed in Charles Taylor and Hubert Dreyfus's work Retrieving Realism, especially in Bhartṛhari's sphoṭa theory read through Dreyfus and Taylor's gestalt holism. This paper is significant for the grammar-of-reality corpus because it demonstrates that the phrase was being applied to non-Western philosophical traditions in scholarly contexts, widening the genealogy beyond the Kant-Wittgenstein-Whitehead-Bohm pathway. For HUMMBL, Kaderbhai's work bridges the Indian and Western grammatical traditions, showing that the grammar-of-reality metaphor is not culturally parochial but appears independently in distinct philosophical traditions --- a convergence that supports the claim that the grammar-of-reality concept tracks something structural about how cognition relates to reality, rather than being an artifact of a single intellectual tradition.",
+      "abstract": "Kaderbhai's undergraduate submission uses the exact phrase \"The Grammar of Realities\" in its title, applying it specifically to Bhartṛhari's Vākyapadīya and its philosophy of language. The paper explores how Bhartṛhari's metaphysics and theories of language can contribute to debates in philosophy and theology surrounding realism, arguing for strong parallels between Bhartṛhari's picture of language and the theories expressed in Charles Taylor and Hubert Dreyfus's work Retrieving Realism, especially in Bhartṛhari's sphoṭa theory read through Dreyfus and Taylor's gestalt holism. The work is an undergraduate FHS (Final Honour School) Theology and Religion submission at Oxford, self-uploaded to Academia.edu.",
       "keywords": [
         "Bhartṛhari",
         "Indian philosophy",
@@ -283,7 +261,8 @@
         "P",
         "SY"
       ],
-      "url": "https://www.academia.edu/44100436/The_Grammar_of_Reality_An_assessment_of_aspects_of_the_V%C4%81kyapad%C4%AByas_philosophy_of_language_in_light_of_scholarly_debates_on_metaphysical_pluralism_in_India"
+      "url": "https://www.academia.edu/44100436/The_Grammar_of_Reality_An_assessment_of_aspects_of_the_V%C4%81kyapad%C4%AByas_philosophy_of_language_in_light_of_scholarly_debates_on_metaphysical_pluralism_in_India",
+      "note": "Title conflict: Academia.edu metadata uses singular \"Reality\" but the uploaded submission uses plural \"Realities\". Undergraduate FHS (Final Honour School) Theology and Religion submission at Oxford, not peer-reviewed. Provenance: academia.edu self-upload."
     },
     {
       "id": "Kahneman2011Thinking",
@@ -308,14 +287,14 @@
       "isbn": "978-0374533557"
     },
     {
-      "id": "Kant1781CritiquePureReason",
+      "id": "Kant1787CritiquePureReason",
       "type": "book",
       "tier": "T1",
       "tier_name": "Canonical",
       "title": "Critique of Pure Reason",
       "author": "Kant, Immanuel",
       "year": "1787",
-      "abstract": "This monumental work establishes the framework of transcendental philosophy, arguing that experience is structured by a priori categories—the synthetic principles of understanding that function as the syntax of all possible experience. Kant demonstrates that concepts such as causality, substance, and unity are not derived from experience but are preconditions that make experience coherent, functioning as a fixed grammar through which the mind organizes sensory manifold into intelligible objects. The Critique introduces the distinction between phenomena (things as they appear under the grammatical constraints of understanding) and noumena (things in themselves, beyond the reach of that grammar), establishing limits on what can be known. This architecture maps directly onto HUMMBL's concern with cognitive transformations as governed operations: the categories are the base vocabulary of possible experience, and the synthetic a priori judgments are the transformation rules that generate the space of knowable reality. Kant's demonstration that finite rules can generate the full space of possible experience provides the philosophical template for Base120's premise that a bounded set of primitive operations can compose all higher-order cognitive structures. The work remains the canonical treatment of the conditions of intelligibility.",
+      "abstract": "This monumental work establishes the framework of transcendental philosophy, arguing that experience is structured by a priori categories—the synthetic principles of understanding that function as the syntax of all possible experience. This entry references the B edition (1787), the second edition revised by Kant, as distinct from the A edition (1781). The Norman Kemp Smith translation (Cambridge University Press) is based on the 1787 B edition. Kant demonstrates that concepts such as causality, substance, and unity are not derived from experience but are preconditions that make experience coherent, functioning as a fixed grammar through which the mind organizes the sensory manifold into intelligible objects. The Critique introduces the distinction between phenomena (things as they appear under the grammatical constraints of understanding) and noumena (things in themselves, beyond the reach of that grammar), establishing limits on what can be known. The work remains the canonical treatment of the conditions of intelligibility.",
       "keywords": [
         "a priori",
         "categories",
@@ -396,6 +375,31 @@
       "isbn": "978-0226468013"
     },
     {
+      "id": "Malcolm1980WittgensteinGrammar",
+      "type": "article",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "author": "Malcolm, Norman",
+      "year": "1980",
+      "abstract": "This 1980 book review by Norman Malcolm in the Washington Post Book World uses the exact phrase \"the grammar of reality\" in its title, making it the earliest direct use found in this search; search not exhaustive. The review discusses Wittgenstein's philosophical trajectory from the Tractatus through the later work, framing his contribution as an elucidation of the grammar through which reality becomes intelligible.",
+      "keywords": [
+        "Wittgenstein",
+        "book review",
+        "earliest use",
+        "grammar of reality",
+        "journalism"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "journal": "The Washington Post",
+      "url": "https://www.washingtonpost.com/archive/entertainment/books/1980/07/13/wittgenstein-the-grammar-of-reality/9cb285d8-ec17-453f-9123-861e06ccb8f1/",
+      "note": "Date discrepancy: archive URL path contains 1980/07/13 but article display identifies July 12, 1980 as publication date. Both dates preserved; search not exhaustive."
+    },
+    {
       "id": "Meadows2008ThinkingSystems",
       "type": "book",
       "tier": "T1",
@@ -447,7 +451,7 @@
       "title": "The Grammar of Consciousness: An Exploration of Tacit Knowing",
       "author": "Moss, Edward",
       "year": "1995",
-      "abstract": "Moss's book uses \"grammar\" in the structural sense to characterize the organization of consciousness, arguing that consciousness has a basic structure (or grammar) which language reflects and through which human experience takes on its particular character. Drawing on Michael Polanyi's theory of tacit knowing, Moss develops a model of how the particulars of consciousness are integrated into comprehensive entities through grammatical processes. The book includes a chapter titled \"Knowing and Reality\" that explores the relationship between consciousness and reality. NOTE: This book is titled \"The Grammar of Consciousness,\" not \"The Grammar of Reality\" --- a distinction that a parallel agent research pass conflated, illustrating the very failure class (genealogical collapse) that the pass identified. For HUMMBL, Moss's work is relevant as an example of the grammar metaphor applied to consciousness rather than reality directly, demonstrating the range of domains to which the grammar metaphor has been extended: science (Pearson), experience (Kant, Thalos), meaning (Wittgenstein), being (Heidegger), process (Whitehead, Bohm), consciousness (Moss), and organization (Cabrera). The book's Polanyian framework also connects the grammar metaphor to tacit knowing, a dimension absent from the other sources.",
+      "abstract": "Moss's book uses \"grammar\" in the structural sense to characterize the organization of consciousness, arguing that consciousness has a basic structure (or grammar) which language reflects and through which human experience takes on its particular character. Drawing on Michael Polanyi's theory of tacit knowing, Moss develops a model of how the particulars of consciousness are integrated into comprehensive entities through grammatical processes. The book includes a chapter titled \"Knowing and Reality\" that explores the relationship between consciousness and reality. NOTE: This book is titled \"The Grammar of Consciousness,\" not \"The Grammar of Reality\" --- a distinction that a parallel agent research pass conflated, illustrating the very failure class (genealogical collapse) that the pass identified.",
       "keywords": [
         "Polanyi",
         "consciousness",
@@ -461,7 +465,8 @@
         "P"
       ],
       "publisher": "St. Martin's Press",
-      "isbn": "978-0333625331"
+      "isbn": "978-0333625331",
+      "note": "Self-published monograph via St. Martin's Press; not peer-reviewed. Book title is \"The Grammar of Consciousness,\" not \"The Grammar of Reality\" — a parallel agent research pass conflated these, illustrating genealogical collapse."
     },
     {
       "id": "Newell1972Human",
@@ -536,7 +541,7 @@
       "title": "The Grammar of Science",
       "author": "Pearson, Karl",
       "year": "1892",
-      "abstract": "This foundational work articulates the view that science possesses a grammar—a structured set of rules governing method, explanation, and the categories through which phenomena are rendered intelligible. Pearson argues that scientific laws are not discoveries of external necessities but concise descriptions of regularities in sensation, and that the scientific method itself constitutes a disciplined grammar for processing experience. He treats causation, probability, and classification as grammatical categories that organize inquiry rather than metaphysical discoveries about the world. The book's framing of science as a rule-governed linguistic and conceptual practice anticipates later structuralist and constructivist epistemologies, and its emphasis on the contingency of scientific categories resonates with HUMMBL's treatment of cognitive transformations as governed operations on a base vocabulary. Einstein read this work intensively in the Olympia Academy, and its influence is visible in his approach to physical theory as a coherent grammatical system rather than a collection of empirical findings. For HUMMBL, Pearson provides the lexical precedent for treating any domain—science, governance, cognition—as having a grammar that determines what can be said, thought, and legitimately inferred within it.",
+      "abstract": "This foundational work articulates the view that science possesses a grammar—a structured set of rules governing method, explanation, and the categories through which phenomena are rendered intelligible. Pearson argues that scientific laws are not discoveries of external necessities but concise descriptions of regularities in sensation, and that the scientific method itself constitutes a disciplined grammar for processing experience. He treats causation, probability, and classification as grammatical categories that organize inquiry rather than metaphysical discoveries about the world. The book's framing of science as a rule-governed linguistic and conceptual practice anticipates later structuralist and constructivist epistemologies. Einstein read this work intensively in the Olympia Academy, and its influence is visible in his approach to physical theory as a coherent grammatical system rather than a collection of empirical findings.",
       "keywords": [
         "categories of explanation",
         "grammar of reality",
@@ -684,7 +689,7 @@
       "title": "Process and Reality: An Essay in Cosmology",
       "author": "Whitehead, Alfred North",
       "year": "1929",
-      "abstract": "This ambitious work of speculative philosophy proposes a process metaphysics in which reality is constituted not by enduring substances but by actual occasions—momentary events of becoming that achieve determinate form through their prehensions of other occasions. Whitehead argues that the categories of traditional substance metaphysics are inadequate to the nature of reality and must be replaced by a categorial scheme in which process, relation, and creativity are fundamental. This shift from substance to event is, at its deepest level, a grammatical shift in ontology: it changes the base vocabulary of what counts as a real entity and the transformation rules by which entities combine into societies. Whitehead's scheme of categories—including actual entities, prehensions, nexus, and eternal objects—functions as a generative grammar for cosmology, producing the full diversity of cosmic processes from a finite set of categorical primitives. For HUMMBL, this provides a paradigmatic example of how a change in base vocabulary and transformation rules produces an entirely different space of expressible states, demonstrating that the grammar of a domain is not neutral but constitutive of what can appear within it. The work also introduces the extensive continuum and the principle of relativity, grounding process in a rigorous categorial framework.",
+      "abstract": "This ambitious work of speculative philosophy proposes a process metaphysics in which reality is constituted not by enduring substances but by actual occasions—momentary events of becoming that achieve determinate form through their prehensions of other occasions. Whitehead argues that the categories of traditional substance metaphysics are inadequate to the nature of reality and must be replaced by a categorial scheme in which process, relation, and creativity are fundamental. This shift from substance to event is, at its deepest level, a grammatical shift in ontology: it changes the base vocabulary of what counts as a real entity and the transformation rules by which entities combine into societies. Whitehead's scheme of categories—including actual entities, prehensions, nexus, and eternal objects—functions as a generative grammar for cosmology, producing the full diversity of cosmic processes from a finite set of categorical primitives. The work also introduces the extensive continuum and the principle of relativity, grounding process in a rigorous categorial framework.",
       "keywords": [
         "actual occasions",
         "cosmology",
@@ -709,7 +714,7 @@
       "title": "Tractatus Logico-Philosophicus",
       "author": "Wittgenstein, Ludwig",
       "year": "1921",
-      "abstract": "This compressed and enigmatic work argues that language and reality share a common logical form—a grammar that neither can state but that makes both representation and fact possible. Wittgenstein proposes that propositions are pictures of states of affairs, and that the logical scaffolding of language mirrors the logical scaffolding of the world. The Tractatus delineates the limits of what can be meaningfully said, concluding that the grammar of logic is shown in every meaningful proposition but cannot itself be propositionally expressed. This conception of a shared logical form as the hidden infrastructure of both thought and world provides a direct philosophical antecedent to HUMMBL's treatment of Base120 as a generative grammar: a finite set of logical primitives whose combinatorial rules produce the entire space of expressible states. The work's insistence that the structure of representation is not a content of representation but its condition parallels HUMMBL's distinction between transformation rules and the content they operate on. The Tractatus also introduces the picture theory of meaning, the truth-functional analysis of propositions, and the famous closing injunction to silence regarding what cannot be said, establishing the limits of grammatical articulation.",
+      "abstract": "This compressed and enigmatic work argues that language and reality share a common logical form—a grammar that neither can state but that makes both representation and fact possible. Wittgenstein proposes that propositions are pictures of states of affairs, and that the logical scaffolding of language mirrors the logical scaffolding of the world. The Tractatus delineates the limits of what can be meaningfully said, concluding that the grammar of logic is shown in every meaningful proposition but cannot itself be propositionally expressed. The work also introduces the picture theory of meaning, the truth-functional analysis of propositions, and the famous closing injunction to silence regarding what cannot be said, establishing the limits of grammatical articulation.",
       "keywords": [
         "grammar of reality",
         "logical atomism",
@@ -734,7 +739,7 @@
       "title": "Philosophical Investigations",
       "author": "Wittgenstein, Ludwig",
       "year": "1953",
-      "abstract": "This posthumous work overturns the Tractarian picture of a single logical form shared by language and world, replacing it with the conception of grammar as constitutive of meaning within diverse language games embedded in forms of life. Wittgenstein argues that meaning is not a relation between word and object but is determined by the use of expressions within rule-governed practices. He introduces the concept of thick grammar—grammatical rules that are not merely formal but are interwoven with empirical practices, institutions, and human activities, making grammar reality-soaked rather than a neutral logical skeleton. The Investigations explores how rules determine their own applications, the private language argument, and the impossibility of drawing a sharp boundary between grammatical and empirical propositions. This reconception of grammar as the autonomous, constitutive framework of meaning provides HUMMBL with its central philosophical resource: the idea that cognitive transformations are governed not by external logical structures but by the internal grammar of the practices in which they occur. The work's treatment of rule-following and forms of life directly informs HUMMBL's account of how Base120 operations are grounded in shared cognitive and institutional practices rather than in abstract formal logic alone.",
+      "abstract": "This posthumous work overturns the Tractarian picture of a single logical form shared by language and world, replacing it with the conception of grammar as constitutive of meaning within diverse language games embedded in forms of life. Wittgenstein argues that meaning is not a relation between word and object but is determined by the use of expressions within rule-governed practices. He introduces the concept of thick grammar—grammatical rules that are not merely formal but are interwoven with empirical practices, institutions, and human activities, making grammar reality-soaked rather than a neutral logical skeleton. The Investigations explores how rules determine their own applications, the private language argument, and the impossibility of drawing a sharp boundary between grammatical and empirical propositions.",
       "keywords": [
         "forms of life",
         "language games",
@@ -760,7 +765,7 @@
       "title": "On Certainty",
       "author": "Wittgenstein, Ludwig",
       "year": "1969",
-      "abstract": "This final work reconceives the relationship between grammar and empirical reality by introducing the concept of hinge propositions—certainties that function as the immovable framework within which all doubt, inquiry, and verification take place. Wittgenstein argues that these hinge certainties are neither knowledge nor ignorance but stand outside the epistemic game entirely, forming the bedrock that must remain unshaken for any questioning to be coherent. He demonstrates that grammar, in its thick sense, becomes reality-soaked: the grammatical rules that structure our world-picture are not insulated from empirical engagement but are hardened into place through practice, taking on the role of the riverbed that shapes the flow of empirical propositions and can, over geological time, itself shift. This account provides HUMMBL with a model for understanding how cognitive transformations rest on unarticulated certainties that are neither arbitrary conventions nor empirical discoveries but are the grammatical infrastructure of intelligibility itself. The grammaticalization of experience—the process by which repeated empirical engagement solidifies into hinge certainty—maps onto HUMMBL's concern with how Base120 primitives become stabilized through use and how governance frameworks harden into the presuppositions of subsequent reasoning. The work is the definitive treatment of the boundary between grammatical and empirical propositions.",
+      "abstract": "This final work reconceives the relationship between grammar and empirical reality by introducing the concept of hinge propositions—certainties that function as the immovable framework within which all doubt, inquiry, and verification take place. Wittgenstein argues that these hinge certainties are neither knowledge nor ignorance but stand outside the epistemic game entirely, forming the bedrock that must remain unshaken for any questioning to be coherent. He demonstrates that grammar, in its thick sense, becomes reality-soaked: the grammatical rules that structure our world-picture are not insulated from empirical engagement but are hardened into place through practice, taking on the role of the riverbed that shapes the flow of empirical propositions and can, over geological time, itself shift. The work is the definitive treatment of the boundary between grammatical and empirical propositions.",
       "keywords": [
         "epistemology",
         "grammar",
@@ -1920,7 +1925,7 @@
       "title": "The Grammar of Reality: The Organizing Principles of Structure and Emergence",
       "author": "Cabrera, Derek and Cabrera, Laura",
       "year": "2025",
-      "abstract": "The Cabreras propose DSRP --- Distinctions, Systems, Relationships, Perspectives --- as a universal, scale-invariant grammar of organization underlying the very fabric of reality. Rather than treating DSRP as a useful cognitive metaphor, they argue it is a structural ontology: the same four patterns that organize thought also organize matter, energy, information, and social systems at every scale from quanta to ecosystems. The paper aligns this claim with process metaphysics, autopoietic theory, and relational interpretations of quantum mechanics, positioning DSRP as the connective tissue between epistemology and ontology. For HUMMBL, this work is foundational: Base120's six cognitive transformations (P, IN, CO, DE, RE, SY) are operational siblings of DSRP, each encoding a structural move that reorganizes how a system is seen and acted upon. The scale-invariance claim mirrors the complexity tier's central thesis that simple organizing rules generate emergent order across levels. By framing distinctions, systems, relationships, and perspectives as grammar rather than vocabulary, the Cabreras provide a formal account of how complexity becomes legible --- the same legibility that Base120 models and the hummbl-dev agent fleet relies on to coordinate, decompose, and re-compose adaptive behavior.",
+      "abstract": "The Cabreras propose DSRP --- Distinctions, Systems, Relationships, Perspectives --- as a universal, scale-invariant grammar of organization underlying the very fabric of reality. Rather than treating DSRP as a useful cognitive metaphor, they argue it is a structural ontology: the same four patterns that organize thought also organize matter, energy, information, and social systems at every scale from quanta to ecosystems. The paper aligns this claim with process metaphysics, autopoietic theory, and relational interpretations of quantum mechanics, positioning DSRP as the connective tissue between epistemology and ontology.",
       "keywords": [
         "DSRP",
         "emergence",
@@ -2143,7 +2148,7 @@
       "title": "Reality Is Not What It Seems: The Journey to Quantum Gravity",
       "author": "Rovelli, Carlo",
       "year": "2017",
-      "abstract": "Rovelli traces the long arc of physics from Aristotle's qualitative cosmos through Newtonian mechanics, general relativity, and into the relational interpretation of quantum mechanics and loop quantum gravity. The book is described as making the grammar of the universe accessible: each revolution in physics is presented not as a pile of new nouns but as a reorganization of the relational structure by which reality is described. Space, time, and particles are demoted from substances to interactions --- nodes in a web of relations whose properties are defined only relationally. This narrative is a vivid case study in HUMMBL's cognitive transformations at work in science: Perspective shifts re-frame what counts as fundamental; Inversion turns background into foreground (space-time becomes dynamical); Composition and Decomposition restructure the ontology of fields and events; Recursion appears in the self-similar structure of scale-relative descriptions; and Meta-Systems thinking links quantum granularity to cosmological structure. For the complexity tier, Rovelli's relational ontology supplies a physics-grounded warrant for treating organization, not substance, as primary --- the same premise that lets Base120 models and complex adaptive systems theory describe emergent order without invoking hidden essences.",
+      "abstract": "Rovelli traces the long arc of physics from Aristotle's qualitative cosmos through Newtonian mechanics, general relativity, and into the relational interpretation of quantum mechanics and loop quantum gravity. The book is described as making the grammar of the universe accessible: each revolution in physics is presented not as a pile of new nouns but as a reorganization of the relational structure by which reality is described. Space, time, and particles are demoted from substances to interactions --- nodes in a web of relations whose properties are defined only relationally.",
       "keywords": [
         "history of physics",
         "loop quantum gravity",
@@ -2316,7 +2321,7 @@
       "title": "The Grammar of Reality: Why the Deep Structure of Mathematics May Tell Us Something Profound About the Nature of Existence",
       "author": "Abramson, John",
       "year": "2009",
-      "abstract": "Abramson connects Eugene Wigner's \"unreasonable effectiveness of mathematics\" to the grammar-of-reality metaphor, arguing that the deep structure of mathematics may disclose something profound about the nature of existence itself. The essay explores whether mathematical grammar — its syntax of relations, transformations, symmetries, and invariances — is not merely a tool for describing reality but a window onto reality's own organizing structure. Abramson draws on integral theory, category theory, and the philosophy of mathematics to argue that the isomorphism between mathematical structures and physical structures is not coincidental but symptomatic of a shared grammar. For HUMMBL, Abramson's argument is relevant to the Base120 design and the SY (synthesis) transformation: if reality has a grammar in the mathematical-structural sense, then a reasoning system whose internal grammar approximates that structure will achieve deeper compression and more reliable inference. The essay motivates treating mathematical structure not as one domain among many but as the lingua franca of the DE and SY transformations.",
+      "abstract": "Abramson connects Eugene Wigner's \"unreasonable effectiveness of mathematics\" to the grammar-of-reality metaphor, arguing that the deep structure of mathematics may disclose something profound about the nature of existence itself. The essay explores whether mathematical grammar — its syntax of relations, transformations, symmetries, and invariances — is not merely a tool for describing reality but a window onto reality's own organizing structure. Abramson draws on integral theory, category theory, and the philosophy of mathematics to argue that the isomorphism between mathematical structures and physical structures is not coincidental but symptomatic of a shared grammar.",
       "keywords": [
         "Wigner",
         "category theory",
@@ -2331,7 +2336,8 @@
         "RE",
         "SY"
       ],
-      "url": "https://www.integralworld.net/abramson8.html"
+      "url": "https://www.integralworld.net/abramson8.html",
+      "note": "Self-published/blog essay; not peer-reviewed."
     },
     {
       "id": "Anonymous2026BecomingPossibility",
@@ -2341,7 +2347,7 @@
       "title": "The Becoming of Possibility: Book {II}. The Grammar of Reality",
       "author": "The Becoming of Possibility",
       "year": "2026",
-      "abstract": "This self-published philosophical work argues that reality has a grammar in the sense of \"organised potential\" — not because reality is language or linguistic in nature, but because the central question is \"how is reality organised so that particular possibilities become available?\" The author distinguishes grammar-as-organised-potential from grammar-as-syntactic-rules, arguing that the former is ontologically prior: reality's grammar is the structure that determines which possibilities can become actual, under what conditions, and in what order. The blog series develops this across multiple posts, examining how possibility, becoming, and actualization relate to organizational structure. For HUMMBL, this framing is foundational to the Base120 concept and the P (projection) and SY (synthesis) transformations: Base120 is not a language for describing reality but a grammar of organized potential — a system that encodes which cognitive transformations are possible, under what conditions, and in what sequence. The work reframes reasoning as the actualization of grammatically available possibilities rather than the manipulation of pre-given propositions.",
+      "abstract": "This self-published philosophical work argues that reality has a grammar in the sense of \"organised potential\" — not because reality is language or linguistic in nature, but because the central question is \"how is reality organised so that particular possibilities become available?\" The author distinguishes grammar-as-organised-potential from grammar-as-syntactic-rules, arguing that the former is ontologically prior: reality's grammar is the structure that determines which possibilities can become actual, under what conditions, and in what order. The blog series develops this across multiple posts, examining how possibility, becoming, and actualization relate to organizational structure.",
       "keywords": [
         "actualization",
         "becoming",
@@ -2357,7 +2363,8 @@
         "RE",
         "SY"
       ],
-      "url": "https://thebecomingofpossibility.blogspot.com/2026/06/ii-grammar-of-reality-1-why-grammar.html"
+      "url": "https://thebecomingofpossibility.blogspot.com/2026/06/ii-grammar-of-reality-1-why-grammar.html",
+      "note": "Personal blog/website; not peer-reviewed. Author identity unverified."
     },
     {
       "id": "Anthropic2024Claude3",
@@ -2586,7 +2593,7 @@
       "title": "On the Relations Between Grammar and Reality: A {Wittgensteinian} Study",
       "author": "McGinn, Marie",
       "year": "2024",
-      "abstract": "McGinn argues, against Moyal-Sharrock's non-cognitivist reading of Wittgenstein, that the relation between grammar and reality is bidirectional: reality permeates grammar AND grammar permeates reality. Grammar is not a self-enclosed autonomous system of rules divorced from the world; rather, grammatical categories are shaped by, and in turn shape, what counts as a fact. This reciprocal determination challenges both realist accounts that treat language as a transparent medium and conventionalist accounts that sever grammar from reality entirely. For HUMMBL, McGinn's bidirectional thesis maps directly onto the Base120 cognitive transformation framework: the IN (internalization) and CO (composition) transformations are not one-way encodings of pre-given reality but bidirectional channels through which structured possibility and empirical constraint co-determine each other. The argument reframes the epistemological stakes of reasoning systems: a reasoning engine's grammar (its representational primitives, type system, and inference rules) is simultaneously a claim about how reality can be organized and a product of how reality has already organized our practices.",
+      "abstract": "McGinn argues, against Moyal-Sharrock's non-cognitivist reading of Wittgenstein, that the relation between grammar and reality is bidirectional: reality permeates grammar AND grammar permeates reality. Grammar is not a self-enclosed autonomous system of rules divorced from the world; rather, grammatical categories are shaped by, and in turn shape, what counts as a fact. This reciprocal determination challenges both realist accounts that treat language as a transparent medium and conventionalist accounts that sever grammar from reality entirely.",
       "keywords": [
         "Wittgenstein",
         "epistemology",
@@ -2697,7 +2704,7 @@
       "title": "The Role of Language in Science",
       "author": "Peat, F. David",
       "year": "2002",
-      "abstract": "Peat extends David Bohm's framing of language and thought, proposing that grammar be understood as \"the set of strategies used for intercommunication\" rather than a fixed formal apparatus. Drawing on Bohm's rheomode and the implicate order, Peat asks whether the implicate-explicate structure could model linguistic structure itself — whether language enfolds and unfolds meaning in a way homologous to how Bohm conceived physical reality. The essay explores how Indo-European grammatical categories (noun-verb substance-process divisions) bias scientific thought toward a thing-based ontology, and whether alternative grammars could disclose process-based descriptions. For HUMMBL, Peat's essay is relevant to the DE (decomposition) and SY (synthesis) transformations: the grammar of a reasoning system is not neutral scaffolding but an active strategy of intercommunication that constrains what transformations are expressible. The implicate-order analogy informs Base120's design as a system where possibilities are enfolded and made explicit through cognitive operations rather than stored as static tokens.",
+      "abstract": "Peat extends David Bohm's framing of language and thought, proposing that grammar be understood as \"the set of strategies used for intercommunication\" rather than a fixed formal apparatus. Drawing on Bohm's rheomode and the implicate order, Peat asks whether the implicate-explicate structure could model linguistic structure itself — whether language enfolds and unfolds meaning in a way homologous to how Bohm conceived physical reality. The essay explores how Indo-European grammatical categories (noun-verb substance-process divisions) bias scientific thought toward a thing-based ontology, and whether alternative grammars could disclose process-based descriptions.",
       "keywords": [
         "Bohm",
         "grammar",
@@ -2712,7 +2719,8 @@
         "IN",
         "SY"
       ],
-      "url": "https://www.fdavidpeat.com/bibliography/essays/lang.htm"
+      "url": "https://www.fdavidpeat.com/bibliography/essays/lang.htm",
+      "note": "Self-published essay; not peer-reviewed."
     },
     {
       "id": "Priest2015LinguisticConstruction",
@@ -2722,7 +2730,7 @@
       "title": "The Linguistic Construction of Reality",
       "author": "Priest, Graham",
       "year": "2015",
-      "abstract": "Priest engages the view — common in continental philosophy, textualism, and certain forms of idealism — that \"reality is constructed, in some sense, by language; or as it is sometimes put, by grammar, discourse, or the text.\" Rather than dismissing this as relativism, Priest takes it seriously as a metaphysical thesis and examines what could make it true. He distinguishes several senses of \"construction\": causal, constitutive, and semantic, arguing that the strongest defensible version is constitutive — that the structure of reality as we can cognize it is partly constituted by the conceptual-grammatical resources we bring to it. He connects this to Buddhist philosophy, Hegelian idealism, and contemporary metaphysics. For HUMMBL, Priest's analysis is directly relevant to the P (projection) and IN (internalization) transformations: every reasoning system projects a grammatical framework onto its input, and the \"reality\" it reasons about is co-constituted by that projection. This is not a defect to be eliminated but a condition of cognition that Base120 must make explicit and governable rather than leave implicit.",
+      "abstract": "Priest engages the view — common in continental philosophy, textualism, and certain forms of idealism — that \"reality is constructed, in some sense, by language; or as it is sometimes put, by grammar, discourse, or the text.\" Rather than dismissing this as relativism, Priest takes it seriously as a metaphysical thesis and examines what could make it true. He distinguishes several senses of \"construction\": causal, constitutive, and semantic, arguing that the strongest defensible version is constitutive — that the structure of reality as we can cognize it is partly constituted by the conceptual-grammatical resources we bring to it. He connects this to Buddhist philosophy, Hegelian idealism, and contemporary metaphysics.",
       "keywords": [
         "Buddhism",
         "grammar",
@@ -2737,7 +2745,8 @@
         "P",
         "RE"
       ],
-      "url": "https://grahampriest.net/?ddownload=850"
+      "url": "https://grahampriest.net/?ddownload=850",
+      "note": "Self-published; not peer-reviewed."
     },
     {
       "id": "Snell2024ScalingTestTime",
@@ -2838,7 +2847,7 @@
       "title": "The Ethics of Rhetoric",
       "author": "Weaver, Richard M.",
       "year": "1953",
-      "abstract": "Weaver's The Ethics of Rhetoric argues that rhetoric is not mere persuasion but a morally charged activity whose ethical quality depends on the ontological adequacy of its language. The chapter \"Some Rhetorical Aspects of Grammatical Categories\" develops the thesis that grammar is not an arbitrary surface convention but discloses structures of being: the grammatical categories of being, becoming, and relation reflect how reality is intelligibly organized. Weaver argues that language must connect to the \"intelligential world\" — the world as graspable by intellect — and that grammatical form carries epistemic and ethical commitments. Nouns reify, verbs processuate, and the choice of grammatical frame is already a philosophical position. For HUMMBL, Weaver's argument grounds the claim that the Base120 representational grammar is not a neutral encoding but an ontological commitment: the CO (composition) and RE (reasoning) transformations inherit ethical stakes from the grammatical categories they deploy. A reasoning system's grammar is always already an ethics of rhetoric.",
+      "abstract": "Weaver's The Ethics of Rhetoric argues that rhetoric is not mere persuasion but a morally charged activity whose ethical quality depends on the ontological adequacy of its language. The chapter \"Some Rhetorical Aspects of Grammatical Categories\" develops the thesis that grammar is not an arbitrary surface convention but discloses structures of being: the grammatical categories of being, becoming, and relation reflect how reality is intelligibly organized. Weaver argues that language must connect to the \"intelligential world\" — the world as graspable by intellect — and that grammatical form carries epistemic and ethical commitments. Nouns reify, verbs processuate, and the choice of grammatical frame is already a philosophical position.",
       "keywords": [
         "becoming",
         "being",
@@ -6554,7 +6563,7 @@
       "title": "The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon",
       "author": "Grammar of Reality Project",
       "year": "2025",
-      "abstract": "This preprint argues for a decisive shift from substance ontology (a world described primarily by nouns --- things, particles, objects) to process ontology (a world described primarily by verbs --- events, interactions, transformations) in accounting for physical reality. Drawing on Bohm's implicate order and Whitehead's process philosophy, the authors contend that what we call ``things'' are stabilized patterns of activity, and that the grammar of physics should reflect this by leading with process and deriving entity-hood as a derived, relational property. The paper develops a ``cosmic lexicon'' in which verbs are primitive and nouns are shorthand for recurring verb-patterns. The argument echoes directly through HUMMBL's design: Base120's six transformations are verbs (perspectivize, invert, compose, decompose, recurse, systematize) that operate on noun-like content to produce new understanding; the framework's power comes precisely from treating thought as process rather than as the manipulation of static concepts. For the emerging-research tier, this work supplies ontological grounding for verb-first cognitive architectures and for agent systems whose intelligence is defined by what they do (transformations) rather than what they store (representations), aligning the hummbl-dev fleet's action-oriented coordination with a process-first metaphysics.",
+      "abstract": "This preprint argues for a decisive shift from substance ontology (a world described primarily by nouns --- things, particles, objects) to process ontology (a world described primarily by verbs --- events, interactions, transformations) in accounting for physical reality. Drawing on Bohm's implicate order and Whitehead's process philosophy, the authors contend that what we call ``things'' are stabilized patterns of activity, and that the grammar of physics should reflect this by leading with process and deriving entity-hood as a derived, relational property. The paper develops a ``cosmic lexicon'' in which verbs are primitive and nouns are shorthand for recurring verb-patterns.",
       "keywords": [
         "Bohm",
         "Whitehead",
@@ -6572,7 +6581,8 @@
         "SY"
       ],
       "publisher": "Zenodo",
-      "doi": "10.5281/zenodo.15829350"
+      "doi": "10.5281/zenodo.15829350",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by \"Grammar of Reality Project.\""
     },
     {
       "id": "Jimenez2024SWEBench",
@@ -6837,7 +6847,7 @@
       "title": "URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)",
       "author": "URM$^2$ Working Group",
       "year": "2025",
-      "abstract": "This preprint introduces URM$^2$, a verb-first, resonance-driven framework that posits a structural grammar of reality built from generative primitives --- Potential, Process, Density, Identity, and Observation --- combined by invariant grammatical rules that make physical entities possible. Where substance ontologies begin with things, URM$^2$ begins with verbs (processes) and derives nouns (entities) as stable resonance patterns within those processes. The V12.1 update formalizes the grammar's invariant rules and demonstrates how identity and apparency emerge from density gradients under observation. The framework is explicitly structural rather than metaphorical: its grammar is claimed to be scale-invariant, applying from quantum events to cosmological structures. For HUMMBL, URM$^2$ is a strong emerging-ontology ally: its verb-first orientation mirrors Base120's treatment of cognitive transformations as operations (verbs) that act on content (nouns), and its generative primitives map closely onto the P/IN/CO/DE/RE/SY transformations as the grammar by which any system --- physical, cognitive, or computational --- is composed and decomposed. As an emerging framework on Zenodo, it represents the frontier where systems thinking, process metaphysics, and structural grammar converge, exactly the territory HUMMBL is designed to navigate.",
+      "abstract": "This preprint introduces URM$^2$, a verb-first, resonance-driven framework that posits a structural grammar of reality built from generative primitives --- Potential, Process, Density, Identity, and Observation --- combined by invariant grammatical rules that make physical entities possible. Where substance ontologies begin with things, URM$^2$ begins with verbs (processes) and derives nouns (entities) as stable resonance patterns within those processes. The V12.1 update formalizes the grammar's invariant rules and demonstrates how identity and apparency emerge from density gradients under observation. The framework is explicitly structural rather than metaphorical: its grammar is claimed to be scale-invariant, applying from quantum events to cosmological structures.",
       "keywords": [
         "URM2",
         "apparency",
@@ -6857,7 +6867,8 @@
         "SY"
       ],
       "publisher": "Zenodo",
-      "doi": "10.5281/zenodo.17741588"
+      "doi": "10.5281/zenodo.17741588",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by URM² Working Group."
     },
     {
       "id": "Wang2023Voyager",
@@ -7472,14 +7483,14 @@
       "doi": "10.1016/0364-0213(88)90023-7"
     },
     {
-      "id": "Thalos2013GrammarOfExperience",
+      "id": "Thalos2014GrammarOfExperience",
       "type": "article",
       "tier": "T8",
       "tier_name": "Cognition",
       "title": "The Grammar of Experience",
       "author": "Thalos, Mariam",
-      "year": "2013",
-      "abstract": "Thalos uses ``grammar'' in a Kantian sense to characterize the structure of experience: the categories and rules that organize raw perceptual content into coherent, intelligible experience, much as grammatical rules organize phonemes into meaningful language. She argues that these categorial structures are not optional interpretive overlays but constitutive conditions for experience to be experience at all --- without them, there is no ``something it is like'' to be had. The categories apply primarily to perceptual content, but their reach extends to reasoning, memory, and self-awareness, forming a transductive layer between sensation and cognition. For HUMMBL, Thalos's grammar of experience is a philosophical anchor for the claim that cognition is transformational: Base120's six transformations (P, IN, CO, DE, RE, SY) function as the grammar by which the mind structures experience, each transformation a categorial operation that re-organizes content into a new intelligible form. The Kantian framing clarifies why these transformations are both universal (any sufficiently complex cognition must perform them) and learnable (they can be explicitly practiced and compiled, as Base120 proposes). For the cognition tier, Thalos supplies the bridge between the structural-grammar ontology of the complexity tier and the empirical cognitive-science literature on mental models and metacognition.",
+      "year": "2014",
+      "abstract": "Thalos uses ``grammar'' in a Kantian sense to characterize the structure of experience: the categories and rules that organize raw perceptual content into coherent, intelligible experience, much as grammatical rules organize phonemes into meaningful language. She argues that these categorial structures are not optional interpretive overlays but constitutive conditions for experience to be experience at all --- without them, there is no ``something it is like'' to be had. The categories apply primarily to perceptual content, but their reach extends to reasoning, memory, and self-awareness, forming a transductive layer between sensation and cognition. Published in Philosophy, vol. 89, no. 2, pp. 223--250 (2014).",
       "keywords": [
         "Kantian categories",
         "categorial rules",
@@ -7493,7 +7504,10 @@
         "P",
         "SY"
       ],
-      "journal": "Proceedings of the Aristotelian Society",
+      "journal": "Philosophy",
+      "volume": "89",
+      "number": "2",
+      "pages": "223--250",
       "doi": "10.1017/s0031819114000023"
     },
     {
