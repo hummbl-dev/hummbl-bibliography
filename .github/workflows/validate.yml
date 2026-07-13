@@ -12,7 +12,7 @@ on:
 
 jobs:
   validate:
-    runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || fromJSON('["self-hosted","Linux","X64","wsl","bibliography"]') }}
     
     # Add permissions to allow writing comments on PRs
     permissions:
