@@ -1,0 +1,26 @@
+{
+  "schema_version": "benchmark_source_manifest.v0.1",
+  "source_id": "src-002-corrected",
+  "title": "Original Findings on X",
+  "author_or_organization": "Smith, J.",
+  "source_type": "journal_article",
+  "publication_date": "2025-01-15",
+  "version_or_edition": "v1",
+  "effective_date": "2025-01-15",
+  "retrieval_date": "2026-07-10",
+  "canonical_url_or_locator": "https://doi.org/10.1000/example.001",
+  "license_or_rights_posture": "cc-by-4.0",
+  "public_domain_status": "not_public_domain",
+  "content_hash": "sha256:correctedhash001",
+  "local_or_object_storage_locator": null,
+  "source_authority_roles": ["primary_source", "supersession"],
+  "known_corrections_or_retractions": ["correction-2025-06-01", "retraction-2025-12-01"],
+  "ocr_or_extraction_method": null,
+  "quality_flags": ["retracted", "superseded"],
+  "included_segments": ["abstract"],
+  "excluded_segments_and_reason": [
+    {"segment": "full-text", "reason": "retracted — only metadata retained for benchmark"}
+  ],
+  "privacy_or_sensitivity": "public_safe",
+  "citation_format": "Smith, J. (2025). Original Findings on X. Example Journal, 1(1). [RETRACTED]"
+}

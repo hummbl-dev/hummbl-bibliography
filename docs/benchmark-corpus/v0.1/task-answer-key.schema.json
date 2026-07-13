@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/benchmark-corpus/v0.1/task-answer-key.schema.json",
+  "title": "Benchmark Task and Answer Key v0.1",
+  "description": "Task definition with ground-truth answer key for benchmark corpus evaluation.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "packet_id",
+    "task_type",
+    "question",
+    "supported_claims",
+    "unsupported_tempting_claims",
+    "required_citations",
+    "acceptable_uncertainty",
+    "hallucination_traps",
+    "reading_requirement"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "benchmark_task_answer_key.v0.1"},
+    "task_id": {"type": "string", "minLength": 1},
+    "packet_id": {"type": "string", "minLength": 1},
+    "task_type": {
+      "type": "string",
+      "enum": ["source_authority_lookup", "multi_hop_synthesis",
+               "contradiction_resolution", "temporal_version_constraint",
+               "insufficient_evidence", "ocr_historical", "mixed_format"]
+    },
+    "question": {"type": "string"},
+    "supported_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "evidence_source_ids"],
+        "properties": {
+          "claim": {"type": "string"},
+          "evidence_source_ids": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+        }
+      }
+    },
+    "unsupported_tempting_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "why_tempting", "why_unsupported"],
+        "properties": {
+          "claim": {"type": "string"},
+          "why_tempting": {"type": "string"},
+          "why_unsupported": {"type": "string"}
+        }
+      }
+    },
+    "contradictory_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id_a", "source_id_b", "conflict_description"],
+        "properties": {
+          "source_id_a": {"type": "string"},
+          "source_id_b": {"type": "string"},
+          "conflict_description": {"type": "string"},
+          "resolution": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "source_authority_boundaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "authority_scope", "boundary"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "authority_scope": {"type": "string"},
+          "boundary": {"type": "string"}
+        }
+      }
+    },
+    "temporal_version_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["constraint", "effective_date"],
+        "properties": {
+          "constraint": {"type": "string"},
+          "effective_date": {"type": "string", "format": "date"},
+          "version_dependency": {"type": "string"}
+        }
+      }
+    },
+    "required_citations": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "acceptable_uncertainty": {
+      "type": "string",
+      "enum": ["none", "low", "medium", "high", "rejection_expected"]
+    },
+    "hallucination_traps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trap", "expected_error"],
+        "properties": {
+          "trap": {"type": "string"},
+          "expected_error": {"type": "string"}
+        }
+      }
+    },
+    "reading_requirement": {
+      "type": "string",
+      "enum": ["exhaustive", "sampled", "single_source", "multi_source_distant"]
+    },
+    "human_reviewed_rationale": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

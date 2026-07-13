@@ -1,0 +1,46 @@
+{
+  "schema_version": "benchmark_task_answer_key.v0.1",
+  "task_id": "task-001",
+  "packet_id": "packet-01-source-authority",
+  "task_type": "source_authority_lookup",
+  "question": "What is the authoritative source for the claim that typed tuples enable bounded delegation in AI-native systems?",
+  "supported_claims": [
+    {
+      "claim": "Typed tuples with envelope architecture enable bounded delegation",
+      "evidence_source_ids": ["src-001-ccby4"],
+      "confidence": "high"
+    }
+  ],
+  "unsupported_tempting_claims": [
+    {
+      "claim": "HMAC-SHA256 is a novel contribution of this work",
+      "why_tempting": "HMAC is mentioned prominently in the paper",
+      "why_unsupported": "HMAC-SHA256 is a standard cryptographic primitive, not a novel contribution"
+    }
+  ],
+  "contradictory_evidence": [],
+  "source_authority_boundaries": [
+    {
+      "source_id": "src-001-ccby4",
+      "authority_scope": "typed tuple architecture for AI governance",
+      "boundary": "does not cover general cryptographic protocol design"
+    }
+  ],
+  "temporal_version_constraints": [
+    {
+      "constraint": "v2 envelope architecture effective from 2026-04-17",
+      "effective_date": "2026-04-17",
+      "version_dependency": "v1 used flat schema without envelope layers"
+    }
+  ],
+  "required_citations": ["src-001-ccby4"],
+  "acceptable_uncertainty": "low",
+  "hallucination_traps": [
+    {
+      "trap": "Citing a secondary blog post as the primary source",
+      "expected_error": "fabricated or misattributed citation"
+    }
+  ],
+  "reading_requirement": "single_source",
+  "human_reviewed_rationale": "Reviewed by independent evaluator — task is straightforward authority lookup"
+}

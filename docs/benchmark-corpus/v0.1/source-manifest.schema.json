@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/benchmark-corpus/v0.1/source-manifest.schema.json",
+  "title": "Benchmark Source Manifest v0.1",
+  "description": "Source metadata for benchmark corpus packets.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_id",
+    "title",
+    "author_or_organization",
+    "source_type",
+    "publication_date",
+    "version_or_edition",
+    "effective_date",
+    "retrieval_date",
+    "canonical_url_or_locator",
+    "license_or_rights_posture",
+    "public_domain_status",
+    "content_hash",
+    "source_authority_roles",
+    "quality_flags",
+    "privacy_or_sensitivity"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "benchmark_source_manifest.v0.1"},
+    "source_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string"},
+    "author_or_organization": {"type": "string"},
+    "source_type": {
+      "type": "string",
+      "enum": ["journal_article", "conference_paper", "book", "book_chapter",
+               "technical_report", "government_document", "dataset", "software",
+               "standard", "legal_document", "historical_document", "web_page",
+               "documentation", "preprint", "other"]
+    },
+    "publication_date": {"type": "string", "format": "date"},
+    "version_or_edition": {"type": "string"},
+    "effective_date": {"type": ["string", "null"], "format": "date"},
+    "retrieval_date": {"type": "string", "format": "date"},
+    "canonical_url_or_locator": {"type": "string"},
+    "license_or_rights_posture": {
+      "type": "string",
+      "enum": ["public_domain", "cc-by-4.0", "cc-by-sa-4.0", "cc-by-nc-4.0",
+               "mit", "apache-2.0", "arxiv-mit", "open-access", "restricted",
+               "unknown"]
+    },
+    "public_domain_status": {
+      "type": "string",
+      "enum": ["confirmed_public_domain", "presumed_public_domain",
+               "not_public_domain", "unknown"]
+    },
+    "content_hash": {"type": "string"},
+    "local_or_object_storage_locator": {"type": ["string", "null"]},
+    "source_authority_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["primary_source", "secondary_source", "tertiary_source",
+                 "authority", "correction", "retraction", "supersession",
+                 "translation", "edition", "commentary"]
+      }
+    },
+    "known_corrections_or_retractions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "ocr_or_extraction_method": {"type": ["string", "null"]},
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["ocr_defects", "missing_pages", "incomplete_extraction",
+                 "translation_uncertainty", "format_conversion_loss",
+                 "known_errors", "superseded", "retracted", "clean"]
+      }
+    },
+    "included_segments": {"type": "array", "items": {"type": "string"}},
+    "excluded_segments_and_reason": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["segment", "reason"],
+        "properties": {
+          "segment": {"type": "string"},
+          "reason": {"type": "string"}
+        }
+      }
+    },
+    "privacy_or_sensitivity": {
+      "type": "string",
+      "enum": ["public_safe", "sensitive", "restricted", "private"]
+    },
+    "citation_format": {"type": "string"}
+  },
+  "additionalProperties": false
+}

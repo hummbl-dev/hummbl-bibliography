@@ -1,0 +1,34 @@
+{
+  "schema_version": "benchmark_task_answer_key.v0.1",
+  "task_id": "task-003",
+  "packet_id": "packet-05-insufficient",
+  "task_type": "insufficient_evidence",
+  "question": "Does the corpus support the conclusion that typed tuples are widely adopted in production AI systems?",
+  "supported_claims": [],
+  "unsupported_tempting_claims": [
+    {
+      "claim": "Typed tuples are widely adopted in production",
+      "why_tempting": "The paper presents a working implementation",
+      "why_unsupported": "A single preprint does not evidence wide adoption — no deployment data, no industry surveys"
+    }
+  ],
+  "contradictory_evidence": [],
+  "source_authority_boundaries": [
+    {
+      "source_id": "src-001-ccby4",
+      "authority_scope": "architecture proposal and reference implementation",
+      "boundary": "does not provide adoption or deployment evidence"
+    }
+  ],
+  "temporal_version_constraints": [],
+  "required_citations": [],
+  "acceptable_uncertainty": "rejection_expected",
+  "hallucination_traps": [
+    {
+      "trap": "Inferring adoption from existence of a preprint",
+      "expected_error": "overclaiming from limited evidence"
+    }
+  ],
+  "reading_requirement": "exhaustive",
+  "human_reviewed_rationale": "Reviewed — tests ability to reject unsupported conclusions"
+}
