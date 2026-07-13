@@ -26,17 +26,17 @@ To verify:
 
 ```bash
 # macOS
-shasum -a 256 governance/lexicon/acronyms.v0.1.json
+shasum -a 256 governance/lexicon/acronyms.v0.2.json
 
 # Linux
-sha256sum governance/lexicon/acronyms.v0.1.json
+sha256sum governance/lexicon/acronyms.v0.2.json
 ```
 
 Python equivalent:
 
 ```python
 import hashlib, json
-with open("acronyms.v0.1.json", "rb") as f:
+with open("acronyms.v0.2.json", "rb") as f:
     print(hashlib.sha256(f.read()).hexdigest())
 ```
 
@@ -54,7 +54,7 @@ Files matching these rules will produce identical checksums across:
 ```bash
 python3 -c "
 import json
-with open('governance/lexicon/acronyms.v0.1.json', 'r', encoding='utf-8') as f:
+with open('governance/lexicon/acronyms.v0.2.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 print('Valid JSON')
 print(f'Keys: {list(data.keys())}')
