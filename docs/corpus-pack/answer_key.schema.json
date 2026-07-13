@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/corpus-pack/v0.1/answer_key.schema.json",
+  "title": "Corpus Pack Answer Key v0.1",
+  "type": "object",
+  "required": ["task_id", "correct_answer", "acceptable_alternatives", "required_citations"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "correct_answer": {"type": "object"},
+    "acceptable_alternatives": {"type": "array", "items": {"type": "object"}},
+    "required_citations": {"type": "array", "items": {"type": "string"}},
+    "common_errors": {"type": "array", "items": {"type": "object"}},
+    "scoring_rubric": {"type": "object"},
+    "human_reviewer": {"type": "string"},
+    "review_date": {"type": "string", "format": "date"}
+  }
+}

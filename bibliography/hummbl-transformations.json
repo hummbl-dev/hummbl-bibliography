@@ -3,82 +3,1550 @@
     "P": {
       "name": "Perspective/Identity",
       "description": "Frame and name what is. Anchor or shift point of view.",
-      "models": ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10", "P11", "P12", "P13", "P14", "P15", "P16", "P17", "P18", "P19", "P20"]
+      "models": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17",
+        "P18",
+        "P19",
+        "P20"
+      ]
     },
     "IN": {
       "name": "Inversion",
       "description": "Reverse assumptions. Examine opposites, edges, negations.",
-      "models": ["IN1", "IN2", "IN3", "IN4", "IN5", "IN6", "IN7", "IN8", "IN9", "IN10", "IN11", "IN12", "IN13", "IN14", "IN15", "IN16", "IN17", "IN18", "IN19", "IN20"]
+      "models": [
+        "IN1",
+        "IN2",
+        "IN3",
+        "IN4",
+        "IN5",
+        "IN6",
+        "IN7",
+        "IN8",
+        "IN9",
+        "IN10",
+        "IN11",
+        "IN12",
+        "IN13",
+        "IN14",
+        "IN15",
+        "IN16",
+        "IN17",
+        "IN18",
+        "IN19",
+        "IN20"
+      ]
     },
     "CO": {
       "name": "Composition",
       "description": "Combine parts into coherent wholes.",
-      "models": ["CO1", "CO2", "CO3", "CO4", "CO5", "CO6", "CO7", "CO8", "CO9", "CO10", "CO11", "CO12", "CO13", "CO14", "CO15", "CO16", "CO17", "CO18", "CO19", "CO20"]
+      "models": [
+        "CO1",
+        "CO2",
+        "CO3",
+        "CO4",
+        "CO5",
+        "CO6",
+        "CO7",
+        "CO8",
+        "CO9",
+        "CO10",
+        "CO11",
+        "CO12",
+        "CO13",
+        "CO14",
+        "CO15",
+        "CO16",
+        "CO17",
+        "CO18",
+        "CO19",
+        "CO20"
+      ]
     },
     "DE": {
       "name": "Decomposition",
       "description": "Break complex systems into constituent parts.",
-      "models": ["DE1", "DE2", "DE3", "DE4", "DE5", "DE6", "DE7", "DE8", "DE9", "DE10", "DE11", "DE12", "DE13", "DE14", "DE15", "DE16", "DE17", "DE18", "DE19", "DE20"]
+      "models": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4",
+        "DE5",
+        "DE6",
+        "DE7",
+        "DE8",
+        "DE9",
+        "DE10",
+        "DE11",
+        "DE12",
+        "DE13",
+        "DE14",
+        "DE15",
+        "DE16",
+        "DE17",
+        "DE18",
+        "DE19",
+        "DE20"
+      ]
     },
     "RE": {
       "name": "Recursion",
       "description": "Apply operations iteratively, with outputs becoming inputs.",
-      "models": ["RE1", "RE2", "RE3", "RE4", "RE5", "RE6", "RE7", "RE8", "RE9", "RE10", "RE11", "RE12", "RE13", "RE14", "RE15", "RE16", "RE17", "RE18", "RE19", "RE20"]
+      "models": [
+        "RE1",
+        "RE2",
+        "RE3",
+        "RE4",
+        "RE5",
+        "RE6",
+        "RE7",
+        "RE8",
+        "RE9",
+        "RE10",
+        "RE11",
+        "RE12",
+        "RE13",
+        "RE14",
+        "RE15",
+        "RE16",
+        "RE17",
+        "RE18",
+        "RE19",
+        "RE20"
+      ]
     },
     "SY": {
       "name": "Meta-Systems",
       "description": "Understand systems of systems, coordination, and emergent dynamics.",
-      "models": ["SY1", "SY2", "SY3", "SY4", "SY5", "SY6", "SY7", "SY8", "SY9", "SY10", "SY11", "SY12", "SY13", "SY14", "SY15", "SY16", "SY17", "SY18", "SY19", "SY20"]
+      "models": [
+        "SY1",
+        "SY2",
+        "SY3",
+        "SY4",
+        "SY5",
+        "SY6",
+        "SY7",
+        "SY8",
+        "SY9",
+        "SY10",
+        "SY11",
+        "SY12",
+        "SY13",
+        "SY14",
+        "SY15",
+        "SY16",
+        "SY17",
+        "SY18",
+        "SY19",
+        "SY20"
+      ]
     }
   },
   "mappings": {
-    "Meadows2008ThinkingSystems": ["SY1", "SY5", "RE3", "CO1"],
-    "Kahneman2011Thinking": ["P2", "IN1", "DE4"],
-    "Simon1996Sciences": ["CO2", "DE2"],
-    "Norman2013DesignEveryday": ["P1", "CO1"],
-    "Pearl2009Causality": ["IN2", "RE1"],
-    "Lakoff1980MetaphorsWeLive": ["P3", "SY2"],
-    "Hofstadter1979Godel": ["RE1", "RE2", "SY3"],
-    "Kuhn1996Structure": ["P2", "IN1"],
-    "Tufte2001VisualDisplay": ["P1", "SY4"],
-    "Taleb2007BlackSwan": ["IN2", "P3"],
-    "Alexander1977Pattern": ["CO1", "SY1"],
-    "Senge1990FifthDiscipline": ["SY1", "RE3"],
-    "VonNeumann1944GameTheory": ["IN1", "CO2"],
-    "Miller1956MagicalNumber": ["DE3", "CO2"],
-    "Gladwell2000TippingPoint": ["SY5", "RE2"],
-    "Schon1983ReflectivePractitioner": ["P1", "RE1"],
-    "Gibson1979EcologicalApproach": ["P1", "IN1"],
-    "Tversky1974Judgment": ["IN1", "DE1"],
-    "Simon1955Behavioral": ["DE2", "P2"],
-    "March1991Exploration": ["CO1", "SY2"],
-    "Weick1993Collapse": ["P1", "RE1"],
-    "Dunbar1995InVivo": ["RE2", "CO1"],
-    "Gentner1983Structure": ["CO3", "SY2"],
-    "Gigerenzer1996Reasoning": ["DE1", "IN2"],
-    "Larkin1980Expert": ["DE2", "CO2"],
-    "Chi1981Categorization": ["DE1", "P2"],
-    "Treisman1980Features": ["P1", "CO1"],
-    "Newell1972Human": ["RE1", "DE3"],
-    "Csikszentmihalyi1990Flow": ["SY3", "RE2"],
-    "Nisbett1977Telling": ["P2", "IN1"],
-    "Wason1968Reasoning": ["IN2", "RE1"],
-    "Simons1999Gorilla": ["P1", "IN1"],
-    "Hutchins1995Cognition": ["SY2", "CO3"],
-    "Ries2011LeanStartup": ["RE3", "DE2"],
-    "Brown2009ChangeByDesign": ["CO1", "RE2"],
-    "Kim2016PhoenixProject": ["SY1", "CO2"],
-    "Kotter1996Leading": ["SY4", "RE3"],
-    "Heath2007MadeToStick": ["SY2", "CO1"],
-    "Thaler2008Nudge": ["IN1", "CO1"],
-    "Duhigg2012PowerOfHabit": ["RE2", "SY1"],
-    "Collins2001GoodToGreat": ["SY1", "CO2"],
-    "Pink2009Drive": ["P1", "SY3"],
-    "Sutherland2014Scrum": ["RE3", "CO1"],
-    "Schwartz2004Paradox": ["IN2", "DE4"],
-    "Christensen1997Innovators": ["IN2", "SY5"],
-    "Ariely2008Predictably": ["IN1", "P2"],
-    "Goleman1995Emotional": ["P1", "SY2"],
-    "Gladwell2008Outliers": ["DE3", "SY4"]
+    "Meadows2008ThinkingSystems": [
+      "SY1",
+      "SY5",
+      "RE3",
+      "CO1"
+    ],
+    "Kahneman2011Thinking": [
+      "P2",
+      "IN1",
+      "DE4"
+    ],
+    "Simon1996Sciences": [
+      "CO2",
+      "DE2"
+    ],
+    "Norman2013DesignEveryday": [
+      "P1",
+      "CO1"
+    ],
+    "Pearl2009Causality": [
+      "IN2",
+      "RE1"
+    ],
+    "Lakoff1980MetaphorsWeLive": [
+      "P3",
+      "SY2"
+    ],
+    "Hofstadter1979Godel": [
+      "RE1",
+      "RE2",
+      "SY3"
+    ],
+    "Kuhn1996Structure": [
+      "P2",
+      "IN1"
+    ],
+    "Tufte2001VisualDisplay": [
+      "P1",
+      "SY4"
+    ],
+    "Taleb2007BlackSwan": [
+      "IN2",
+      "P3"
+    ],
+    "Alexander1977Pattern": [
+      "CO1",
+      "SY1"
+    ],
+    "Senge1990FifthDiscipline": [
+      "SY1",
+      "RE3"
+    ],
+    "VonNeumann1944GameTheory": [
+      "IN1",
+      "CO2"
+    ],
+    "Miller1956MagicalNumber": [
+      "DE3",
+      "CO2"
+    ],
+    "Gladwell2000TippingPoint": [
+      "SY5",
+      "RE2"
+    ],
+    "Schon1983ReflectivePractitioner": [
+      "P1",
+      "RE1"
+    ],
+    "Gibson1979EcologicalApproach": [
+      "P1",
+      "IN1"
+    ],
+    "Tversky1974Judgment": [
+      "IN1",
+      "DE1"
+    ],
+    "Simon1955Behavioral": [
+      "DE2",
+      "P2"
+    ],
+    "March1991Exploration": [
+      "CO1",
+      "SY2"
+    ],
+    "Weick1993Collapse": [
+      "P1",
+      "RE1"
+    ],
+    "Dunbar1995InVivo": [
+      "RE2",
+      "CO1"
+    ],
+    "Gentner1983Structure": [
+      "CO3",
+      "SY2"
+    ],
+    "Gigerenzer1996Reasoning": [
+      "DE1",
+      "IN2"
+    ],
+    "Larkin1980Expert": [
+      "DE2",
+      "CO2"
+    ],
+    "Chi1981Categorization": [
+      "DE1",
+      "P2"
+    ],
+    "Treisman1980Features": [
+      "P1",
+      "CO1"
+    ],
+    "Newell1972Human": [
+      "RE1",
+      "DE3"
+    ],
+    "Csikszentmihalyi1990Flow": [
+      "SY3",
+      "RE2"
+    ],
+    "Nisbett1977Telling": [
+      "P2",
+      "IN1"
+    ],
+    "Wason1968Reasoning": [
+      "IN2",
+      "RE1"
+    ],
+    "Simons1999Gorilla": [
+      "P1",
+      "IN1"
+    ],
+    "Hutchins1995Cognition": [
+      "SY2",
+      "CO3"
+    ],
+    "Ries2011LeanStartup": [
+      "RE3",
+      "DE2"
+    ],
+    "Brown2009ChangeByDesign": [
+      "CO1",
+      "RE2"
+    ],
+    "Kim2016PhoenixProject": [
+      "SY1",
+      "CO2"
+    ],
+    "Kotter1996Leading": [
+      "SY4",
+      "RE3"
+    ],
+    "Heath2007MadeToStick": [
+      "SY2",
+      "CO1"
+    ],
+    "Thaler2008Nudge": [
+      "IN1",
+      "CO1"
+    ],
+    "Duhigg2012PowerOfHabit": [
+      "RE2",
+      "SY1"
+    ],
+    "Collins2001GoodToGreat": [
+      "SY1",
+      "CO2"
+    ],
+    "Pink2009Drive": [
+      "P1",
+      "SY3"
+    ],
+    "Sutherland2014Scrum": [
+      "RE3",
+      "CO1"
+    ],
+    "Schwartz2004Paradox": [
+      "IN2",
+      "DE4"
+    ],
+    "Christensen1997Innovators": [
+      "IN2",
+      "SY5"
+    ],
+    "Ariely2008Predictably": [
+      "IN1",
+      "P2"
+    ],
+    "Goleman1995Emotional": [
+      "P1",
+      "SY2"
+    ],
+    "Gladwell2008Outliers": [
+      "DE3",
+      "SY4"
+    ],
+    "Licklider1960ManComputer": [
+      "SY1",
+      "CO1",
+      "P1"
+    ],
+    "Grudin1988WhyCSCW": [
+      "SY2",
+      "DE3"
+    ],
+    "Olson2000DistanceMatters": [
+      "DE5",
+      "SY4"
+    ],
+    "Klein2005CommonGround": [
+      "CO1",
+      "P5",
+      "SY11"
+    ],
+    "Salas2005BigFive": [
+      "DE6",
+      "CO1"
+    ],
+    "Hollnagel2005JointCognitive": [
+      "SY1",
+      "CO20",
+      "P11"
+    ],
+    "Lee2004TrustAutomation": [
+      "P5",
+      "SY11",
+      "IN2"
+    ],
+    "Williams2000PairProgramming": [
+      "CO1",
+      "RE1"
+    ],
+    "Noy2023ProductivityAI": [
+      "DE9",
+      "RE11"
+    ],
+    "ONeill2022HumanAutonomy": [
+      "SY1",
+      "P11",
+      "CO19"
+    ],
+    "Rahwan2018SocietyLoop": [
+      "SY11",
+      "RE2",
+      "P2"
+    ],
+    "Bansal2019MentalModels": [
+      "P1",
+      "DE4",
+      "SY4"
+    ],
+    "CannonBowers1993SharedMentalModels": [
+      "P1",
+      "CO1",
+      "SY4"
+    ],
+    "Endsley1995SituationAwareness": [
+      "DE4",
+      "SY4",
+      "P1"
+    ],
+    "Malone1994InterdisciplinaryCoordination": [
+      "SY1",
+      "CO2"
+    ],
+    "Parasuraman2000AdaptiveAutomation": [
+      "RE2",
+      "DE6",
+      "P11"
+    ],
+    "Arrieta2020ExplainableAI": [
+      "P8",
+      "DE9",
+      "CO18"
+    ],
+    "Chen2018HumanRobotTeaming": [
+      "P11",
+      "CO19",
+      "SY1"
+    ],
+    "Vicente1999CognitiveWorkAnalysis": [
+      "DE4",
+      "P1",
+      "SY1"
+    ],
+    "Helmreich1999CRM": [
+      "RE1",
+      "P20",
+      "IN2"
+    ],
+    "Goodfellow2015Adversarial": [
+      "IN10",
+      "IN16",
+      "DE13"
+    ],
+    "Carlini2017Evaluating": [
+      "IN10",
+      "DE9",
+      "RE11"
+    ],
+    "Biggio2018Wild": [
+      "IN10",
+      "DE6",
+      "SY14"
+    ],
+    "Saltzer1975Protection": [
+      "DE17",
+      "IN12",
+      "CO9"
+    ],
+    "Rose2020ZeroTrust": [
+      "IN12",
+      "DE17",
+      "SY11"
+    ],
+    "Birgison2014Macaroons": [
+      "IN12",
+      "CO9",
+      "DE17"
+    ],
+    "Perez2022RedTeaming": [
+      "IN10",
+      "IN7",
+      "DE9"
+    ],
+    "Katz2017Reluplex": [
+      "DE12",
+      "IN6",
+      "CO16"
+    ],
+    "Papernot2016Distillation": [
+      "CO16",
+      "IN10",
+      "RE11"
+    ],
+    "Shokri2017Membership": [
+      "IN10",
+      "DE9",
+      "IN5"
+    ],
+    "Papernot2018SoK": [
+      "DE6",
+      "SY14",
+      "IN10"
+    ],
+    "Guo2024Threats": [
+      "IN10",
+      "DE13",
+      "RE17"
+    ],
+    "Dwork2006DifferentialPrivacy": [
+      "IN5",
+      "DE5",
+      "IN19"
+    ],
+    "Castro1999PBFT": [
+      "SY11",
+      "CO16",
+      "IN2"
+    ],
+    "Gentry2009Homomorphic": [
+      "CO16",
+      "IN12",
+      "DE12"
+    ],
+    "SLSA2023SupplyChain": [
+      "DE13",
+      "SY11",
+      "RE17"
+    ],
+    "MITRE2024ATLAS": [
+      "DE6",
+      "IN10",
+      "SY14"
+    ],
+    "Ohrimenko2016SecureEnclaves": [
+      "IN12",
+      "CO16",
+      "DE11"
+    ],
+    "Lyu2020FederatedSecurity": [
+      "IN10",
+      "SY14",
+      "DE13"
+    ],
+    "Greshake2023PromptInjection": [
+      "IN10",
+      "IN7",
+      "DE13"
+    ],
+    "Holland1995HiddenOrder": [
+      "SY1",
+      "SY5",
+      "RE1"
+    ],
+    "Kauffman1993Origins": [
+      "SY5",
+      "SY9",
+      "IN1"
+    ],
+    "Prigogine1984Order": [
+      "SY5",
+      "SY9",
+      "RE1"
+    ],
+    "Strogatz2015Nonlinear": [
+      "DE12",
+      "SY9",
+      "IN1"
+    ],
+    "Wiener1961Cybernetics": [
+      "SY1",
+      "RE2",
+      "CO20"
+    ],
+    "Ashby1956Cybernetics": [
+      "SY1",
+      "DE6",
+      "RE2"
+    ],
+    "Beer1981Brain": [
+      "SY1",
+      "CO20",
+      "SY11"
+    ],
+    "Barabasi1999Emergence": [
+      "SY5",
+      "DE9",
+      "CO2"
+    ],
+    "Watts1998SmallWorld": [
+      "SY5",
+      "DE9",
+      "CO2"
+    ],
+    "Albert2002Statistical": [
+      "DE9",
+      "SY5",
+      "DE5"
+    ],
+    "Woods2015FourConcepts": [
+      "SY14",
+      "P1",
+      "IN2"
+    ],
+    "Dekker2011Drift": [
+      "IN2",
+      "SY9",
+      "RE2"
+    ],
+    "Maturana1980Autopoiesis": [
+      "SY1",
+      "CO20",
+      "P1"
+    ],
+    "Wright1932Roles": [
+      "DE6",
+      "IN1",
+      "SY5"
+    ],
+    "Langton1990EdgeChaos": [
+      "SY9",
+      "SY5",
+      "IN1"
+    ],
+    "Bonabeau1999SwarmIntelligence": [
+      "SY1",
+      "CO2",
+      "RE2"
+    ],
+    "Achlioptas2009Percolation": [
+      "SY9",
+      "DE9",
+      "IN1"
+    ],
+    "Newman2005PowerLaws": [
+      "DE9",
+      "SY5",
+      "DE5"
+    ],
+    "Walker2004Resilience": [
+      "SY14",
+      "RE1",
+      "P1"
+    ],
+    "Gunderson2002Panarchy": [
+      "SY1",
+      "RE14",
+      "SY9"
+    ],
+    "OpenAI2024o1SystemCard": [
+      "RE1",
+      "DE4",
+      "IN6"
+    ],
+    "DeepSeek2025R1": [
+      "RE1",
+      "DE4",
+      "CO16"
+    ],
+    "Snell2024ScalingTestTime": [
+      "RE1",
+      "DE9",
+      "SY18"
+    ],
+    "Lightman2023PRM": [
+      "RE11",
+      "IN6",
+      "DE9"
+    ],
+    "OpenAI2025o3SystemCard": [
+      "RE1",
+      "DE4",
+      "CO16"
+    ],
+    "Cobbe2021GSM8K": [
+      "DE9",
+      "RE11",
+      "CO16"
+    ],
+    "Zelikman2022STAR": [
+      "RE1",
+      "RE14",
+      "CO1"
+    ],
+    "Uesato2022ProcessOutcome": [
+      "RE11",
+      "DE9",
+      "IN6"
+    ],
+    "Wang2023SelfConsistency": [
+      "CO1",
+      "RE1",
+      "DE9"
+    ],
+    "Madaan2023SelfRefine": [
+      "RE1",
+      "RE14",
+      "DE9"
+    ],
+    "Anthropic2024Claude3": [
+      "CO20",
+      "P1",
+      "DE4"
+    ],
+    "Zheng2024JudgeBench": [
+      "DE9",
+      "RE11",
+      "CO16"
+    ],
+    "Chen2024AlphaCode2": [
+      "RE1",
+      "CO16",
+      "DE6"
+    ],
+    "Gemini2024Team": [
+      "CO20",
+      "DE4",
+      "SY18"
+    ],
+    "Guo2024Critique": [
+      "RE1",
+      "RE14",
+      "IN6"
+    ],
+    "Anthropic2025ClaudeModel": [
+      "CO20",
+      "P1",
+      "DE4"
+    ],
+    "Kumar2024ScalingInference": [
+      "RE1",
+      "DE9",
+      "SY18"
+    ],
+    "OpenAI2024o1Mini": [
+      "RE1",
+      "DE4",
+      "CO16"
+    ],
+    "OpenAI2024o1Tech": [
+      "RE1",
+      "RE14",
+      "DE4"
+    ],
+    "Trinh2024AlphaGeometry": [
+      "RE1",
+      "DE4",
+      "IN6"
+    ],
+    "Laird2012Standard": [
+      "SY1",
+      "RE2",
+      "DE4"
+    ],
+    "Rasmussen1983Skills": [
+      "DE6",
+      "DE4",
+      "P1"
+    ],
+    "Frith2007Making": [
+      "P5",
+      "SY4",
+      "CO1"
+    ],
+    "Klein1993Recognition": [
+      "P1",
+      "DE4",
+      "RE1"
+    ],
+    "Ericsson1995LongTerm": [
+      "RE1",
+      "DE3",
+      "CO1"
+    ],
+    "BrownCollinsDuguid1989Situated": [
+      "P1",
+      "CO1",
+      "SY1"
+    ],
+    "Sternberg1999Successful": [
+      "DE6",
+      "P1",
+      "CO1"
+    ],
+    "Kim2013PhoenixProject": [
+      "DE8",
+      "RE2",
+      "SY11"
+    ],
+    "Davenport2018AIAdvantage": [
+      "DE6",
+      "P10",
+      "CO20"
+    ],
+    "Agrawal2018PredictionMachines": [
+      "P1",
+      "DE9",
+      "SY18"
+    ],
+    "Lencioni2002FiveDysfunctions": [
+      "DE6",
+      "P5",
+      "IN1"
+    ],
+    "Ferriss2009FourHourWorkweek": [
+      "DE5",
+      "IN13",
+      "P1"
+    ],
+    "McChristal2015TeamOfTeams": [
+      "SY1",
+      "CO1",
+      "DE17"
+    ],
+    "Russell2019HumanCompatible": [
+      "P1",
+      "SY11",
+      "IN2"
+    ],
+    "Amodei2016ConcreteProblems": [
+      "DE13",
+      "IN2",
+      "SY14"
+    ],
+    "Christiano2017DeepRL": [
+      "RE2",
+      "P2",
+      "CO16"
+    ],
+    "Bai2022ConstitutionalAI": [
+      "P20",
+      "SY11",
+      "RE2"
+    ],
+    "Gabriel2020Values": [
+      "P20",
+      "P17",
+      "SY11"
+    ],
+    "Leike2018Scalable": [
+      "RE1",
+      "SY11",
+      "P2"
+    ],
+    "Hendrycks2022Unsolved": [
+      "DE13",
+      "IN2",
+      "SY14"
+    ],
+    "Wooldridge2009MultiAgent": [
+      "SY1",
+      "DE6",
+      "CO2"
+    ],
+    "Shoham2008Multiagent": [
+      "SY1",
+      "DE6",
+      "IN1"
+    ],
+    "Dorigo2006AntColony": [
+      "SY1",
+      "CO2",
+      "RE2"
+    ],
+    "Durfee2001Distributed": [
+      "SY1",
+      "CO16",
+      "DE17"
+    ],
+    "Stone2000MultiagentSurvey": [
+      "SY1",
+      "DE6",
+      "RE2"
+    ],
+    "Park2023GenerativeAgents": [
+      "SY1",
+      "P1",
+      "CO1"
+    ],
+    "Shostack2014ThreatModeling": [
+      "DE13",
+      "IN10",
+      "DE17"
+    ],
+    "Ngo2022AlignmentProblem": [
+      "P1",
+      "IN2",
+      "RE2"
+    ],
+    "Lamport1978Clocks": [
+      "DE12",
+      "CO9",
+      "SY18"
+    ],
+    "Brewer2012CAP": [
+      "DE17",
+      "IN1",
+      "SY14"
+    ],
+    "Bengio2024Managing": [
+      "IN2",
+      "SY14",
+      "IN18"
+    ],
+    "Bostrom2014Superintelligence": [
+      "SY1",
+      "P1",
+      "IN2"
+    ],
+    "Turing1950Computing": [
+      "P1",
+      "IN6",
+      "DE4"
+    ],
+    "Nygard2018ReleaseIt": [
+      "DE13",
+      "RE2",
+      "SY14"
+    ],
+    "Grasse1959Stigmergy": [
+      "SY1",
+      "CO2",
+      "RE2"
+    ],
+    "Theraulaz1999Stigmergy": [
+      "SY1",
+      "CO2",
+      "DE6"
+    ],
+    "Rao1995BDI": [
+      "P1",
+      "DE4",
+      "CO9"
+    ],
+    "Meyer1992DesignByContract": [
+      "CO9",
+      "DE12",
+      "IN6"
+    ],
+    "Kreps2013Log": [
+      "CO20",
+      "RE17",
+      "SY18"
+    ],
+    "HadfieldMenell2017OffSwitch": [
+      "P2",
+      "IN2",
+      "CO9"
+    ],
+    "Sabater2005Trust": [
+      "SY11",
+      "P5",
+      "CO1"
+    ],
+    "Sridharan2018Observability": [
+      "DE9",
+      "SY18",
+      "RE2"
+    ],
+    "Fowler2005EventSourcing": [
+      "RE17",
+      "CO20",
+      "DE4"
+    ],
+    "Newman2021Microservices": [
+      "DE3",
+      "DE17",
+      "CO9"
+    ],
+    "Basiri2016ChaosEngineering": [
+      "IN10",
+      "SY14",
+      "RE2"
+    ],
+    "Beyer2016SRE": [
+      "RE2",
+      "SY18",
+      "DE8"
+    ],
+    "Morris2016InfrastructureAsCode": [
+      "DE3",
+      "CO16",
+      "RE17"
+    ],
+    "Helland2012Idempotency": [
+      "DE12",
+      "CO9",
+      "IN6"
+    ],
+    "Garcia1987Sagas": [
+      "DE8",
+      "RE1",
+      "CO9"
+    ],
+    "Young2010CQRS": [
+      "DE3",
+      "DE17",
+      "CO9"
+    ],
+    "Mahdavi2013FeatureToggles": [
+      "DE17",
+      "RE11",
+      "CO9"
+    ],
+    "Schermann2018Canary": [
+      "RE11",
+      "IN10",
+      "SY14"
+    ],
+    "Rosenthal2020ChaosEngineeringBook": [
+      "IN10",
+      "SY14",
+      "RE2"
+    ],
+    "Rittel1973WickedProblems": [
+      "IN1",
+      "DE4",
+      "SY1"
+    ],
+    "EUAIAct2024": [
+      "SY11",
+      "P10",
+      "DE17"
+    ],
+    "OWASP2025LLM": [
+      "DE13",
+      "IN10",
+      "DE6"
+    ],
+    "Dennis1966Capabilities": [
+      "DE17",
+      "CO9",
+      "IN12"
+    ],
+    "Sandhu1996RBAC": [
+      "DE6",
+      "DE17",
+      "SY11"
+    ],
+    "Brundage2020Verifiable": [
+      "IN6",
+      "CO18",
+      "DE9"
+    ],
+    "Sculley2015TechDebt": [
+      "DE13",
+      "DE8",
+      "IN20"
+    ],
+    "Li2023TrustworthyAI": [
+      "CO20",
+      "SY11",
+      "DE6"
+    ],
+    "Liang2023HELM": [
+      "DE9",
+      "DE5",
+      "RE11"
+    ],
+    "Anthropic2024MCP": [
+      "CO9",
+      "CO16",
+      "DE17"
+    ],
+    "ISO42001": [
+      "RE1",
+      "SY11",
+      "DE6"
+    ],
+    "ISO27001": [
+      "DE6",
+      "SY11",
+      "RE1"
+    ],
+    "SOC2Framework": [
+      "DE6",
+      "IN6",
+      "RE11"
+    ],
+    "GDPR2016": [
+      "DE5",
+      "IN5",
+      "DE11"
+    ],
+    "Abraham2019DataGovernance": [
+      "DE6",
+      "DE9",
+      "RE17"
+    ],
+    "Raji2020Auditing": [
+      "IN6",
+      "CO18",
+      "DE6"
+    ],
+    "Mitchell2019ModelCards": [
+      "P8",
+      "CO18",
+      "DE9"
+    ],
+    "Gebru2021Datasheets": [
+      "DE9",
+      "CO18",
+      "P8"
+    ],
+    "Floridi2018AI4PeopleT6": [
+      "P20",
+      "SY11",
+      "CO20"
+    ],
+    "NISTRMF2023": [
+      "SY11",
+      "DE6",
+      "RE2"
+    ],
+    "Yao2023ReAct": [
+      "RE1",
+      "CO1",
+      "DE4"
+    ],
+    "Wei2022ChainOfThought": [
+      "DE4",
+      "RE1",
+      "CO1"
+    ],
+    "Lewis2020RAG": [
+      "CO16",
+      "DE9",
+      "RE17"
+    ],
+    "Schick2023Toolformer": [
+      "CO16",
+      "CO9",
+      "RE1"
+    ],
+    "Liu2024AgentBench": [
+      "DE9",
+      "RE11",
+      "SY18"
+    ],
+    "Jimenez2024SWEBench": [
+      "DE9",
+      "CO16",
+      "RE11"
+    ],
+    "Wang2024LLMAgentSurvey": [
+      "SY1",
+      "DE6",
+      "CO1"
+    ],
+    "Zhuge2024GPTSwarm": [
+      "SY1",
+      "CO2",
+      "RE1"
+    ],
+    "Ong2024RouteLLM": [
+      "DE17",
+      "SY18",
+      "RE11"
+    ],
+    "Shinn2023Reflexion": [
+      "RE1",
+      "RE14",
+      "P1"
+    ],
+    "Schulhoff2024PromptReport": [
+      "DE6",
+      "P8",
+      "CO1"
+    ],
+    "Wang2023Voyager": [
+      "RE1",
+      "CO1",
+      "SY1"
+    ],
+    "Zhou2024LATS": [
+      "DE4",
+      "RE1",
+      "CO1"
+    ],
+    "Patil2023Gorilla": [
+      "CO16",
+      "CO9",
+      "DE6"
+    ],
+    "Packer2023MemGPT": [
+      "DE3",
+      "RE17",
+      "CO20"
+    ],
+    "Khattab2024DSPy": [
+      "CO16",
+      "RE1",
+      "DE17"
+    ],
+    "Wu2023AutoGen": [
+      "SY1",
+      "CO1",
+      "CO16"
+    ],
+    "Du2023Debate": [
+      "CO1",
+      "IN6",
+      "RE11"
+    ],
+    "Yao2023TreeOfThoughts": [
+      "DE4",
+      "DE3",
+      "RE1"
+    ],
+    "Sumers2024CognitiveArchitectures": [
+      "SY1",
+      "DE4",
+      "CO20"
+    ],
+    "Craik1943NatureExplanation": [
+      "P1",
+      "DE4",
+      "SY1"
+    ],
+    "Gentner1983MentalModels": [
+      "P1",
+      "DE4",
+      "CO1"
+    ],
+    "Flavell1979Metacognition": [
+      "P1",
+      "RE1",
+      "DE4"
+    ],
+    "Anderson1982KnowledgeCompilation": [
+      "RE1",
+      "DE3",
+      "CO1"
+    ],
+    "Chase1973PerceptionChess": [
+      "DE3",
+      "P1",
+      "CO1"
+    ],
+    "Sweller1988CognitiveLoad": [
+      "DE5",
+      "DE3",
+      "P1"
+    ],
+    "Walsh1991OrganizationalMemory": [
+      "CO20",
+      "RE17",
+      "SY1"
+    ],
+    "Wegner1987TransactiveMemory": [
+      "CO1",
+      "SY4",
+      "DE3"
+    ],
+    "Nonaka1994KnowledgeCreation": [
+      "RE1",
+      "CO1",
+      "P1"
+    ],
+    "Hollan2000DistributedCognition": [
+      "SY1",
+      "CO20",
+      "DE4"
+    ],
+    "Norman1991CognitiveArtifacts": [
+      "P1",
+      "CO1",
+      "DE4"
+    ],
+    "Luhmann1981Zettelkasten": [
+      "CO20",
+      "RE17",
+      "DE6"
+    ],
+    "Piaget1952Origins": [
+      "RE1",
+      "P1",
+      "DE4"
+    ],
+    "Bartlett1932Remembering": [
+      "RE17",
+      "P1",
+      "CO20"
+    ],
+    "Lave1991SituatedLearning": [
+      "P1",
+      "CO1",
+      "RE14"
+    ],
+    "Wenger1998CommunitiesPractice": [
+      "SY1",
+      "CO1",
+      "P5"
+    ],
+    "Ericsson1993DeliberatePractice": [
+      "RE1",
+      "DE3",
+      "CO1"
+    ],
+    "Dervin1998SenseMaking": [
+      "P1",
+      "P8",
+      "CO20"
+    ],
+    "Pirolli1999InformationForaging": [
+      "DE9",
+      "P1",
+      "SY4"
+    ],
+    "Spiro1990CognitiveFlexibility": [
+      "P17",
+      "DE3",
+      "CO1"
+    ],
+    "Coase1937NatureFirm": [
+      "DE4",
+      "SY11",
+      "P2"
+    ],
+    "Williamson1985EconomicInstitutions": [
+      "SY11",
+      "CO9",
+      "DE4"
+    ],
+    "Rochet2003PlatformCompetition": [
+      "SY5",
+      "SY11",
+      "DE17"
+    ],
+    "Parker2005TwoSidedNetworkEffects": [
+      "SY5",
+      "CO2",
+      "DE9"
+    ],
+    "Shapiro1999InformationRules": [
+      "SY5",
+      "P10",
+      "DE9"
+    ],
+    "Vickrey1961Counterspeculation": [
+      "IN1",
+      "CO2",
+      "DE12"
+    ],
+    "Nordhaus2021EconomicSingularity": [
+      "SY9",
+      "P1",
+      "IN2"
+    ],
+    "Kaplan2020ScalingLaws": [
+      "DE9",
+      "SY18",
+      "RE1"
+    ],
+    "Chen2023FrugalGPT": [
+      "DE5",
+      "DE17",
+      "RE11"
+    ],
+    "Brynjolfsson2016DataDriven": [
+      "DE9",
+      "RE11",
+      "SY18"
+    ],
+    "Agrawal2019EconomicPolicy": [
+      "SY11",
+      "P10",
+      "DE6"
+    ],
+    "Amershi2019SoftwareEngineering": [
+      "DE8",
+      "RE2",
+      "DE6"
+    ],
+    "Milgrom1982TheoryAuctions": [
+      "IN1",
+      "CO2",
+      "DE12"
+    ],
+    "Hart1995FirmsContracts": [
+      "CO9",
+      "DE4",
+      "SY11"
+    ],
+    "Akerlof1970Lemons": [
+      "IN5",
+      "IN1",
+      "DE9"
+    ],
+    "Holmstrom1979MoralHazard": [
+      "IN2",
+      "SY11",
+      "DE12"
+    ],
+    "Ostrom1990GoverningCommons": [
+      "SY11",
+      "CO1",
+      "DE17"
+    ],
+    "Armbrust2010CloudComputing": [
+      "DE3",
+      "DE17",
+      "CO16"
+    ],
+    "Zachariadis2012API": [
+      "CO9",
+      "DE17",
+      "SY5"
+    ],
+    "Buterin2014Ethereum": [
+      "CO16",
+      "DE17",
+      "SY11"
+    ],
+    "Chesney2019DeepFakes": [
+      "IN5",
+      "DE13",
+      "SY14"
+    ],
+    "Kirchenbauer2023Watermark": [
+      "DE9",
+      "IN12",
+      "RE11"
+    ],
+    "Kirchenbauer2024Reliability": [
+      "DE9",
+      "IN10",
+      "RE11"
+    ],
+    "Dathathri2024SynthID": [
+      "DE9",
+      "IN12",
+      "RE11"
+    ],
+    "Agrawal2026C2PA": [
+      "IN6",
+      "DE13",
+      "CO18"
+    ],
+    "Nemecek2026IntegrityClash": [
+      "IN6",
+      "DE13",
+      "CO18"
+    ],
+    "DeepfakeMediaForensics2024": [
+      "DE9",
+      "IN10",
+      "RE11"
+    ],
+    "DeepfakeDetectorsSoK2024": [
+      "DE9",
+      "IN10",
+      "DE6"
+    ],
+    "DefensesAIVisualMedia2025": [
+      "DE9",
+      "IN10",
+      "CO16"
+    ],
+    "DeepfakeDetectionReview2024": [
+      "DE9",
+      "IN10",
+      "DE6"
+    ],
+    "NATOStratComDeepfakes2019": [
+      "DE9",
+      "SY14",
+      "IN5"
+    ],
+    "RAND2025ProvenanceOverpromise": [
+      "IN6",
+      "SY14",
+      "DE13"
+    ],
+    "Vorvoreanu2023RAIMaturity": [
+      "DE6",
+      "CO20",
+      "RE1"
+    ],
+    "Metaxa2024NISTMM": [
+      "DE6",
+      "SY11",
+      "RE1"
+    ],
+    "Phuong2024DangerousCapabilities": [
+      "DE13",
+      "IN10",
+      "RE11"
+    ],
+    "Weidinger2024HolisticSafety": [
+      "DE9",
+      "CO20",
+      "RE11"
+    ],
+    "Paulhus1991CMM": [
+      "RE1",
+      "DE6",
+      "SY11"
+    ],
+    "Chrissis2011CMMI": [
+      "RE1",
+      "DE6",
+      "SY11"
+    ],
+    "Alsheibani2018AIReadiness": [
+      "DE6",
+      "P1",
+      "CO20"
+    ],
+    "Pumplun2021AICapabilityMaturity": [
+      "DE6",
+      "RE1",
+      "CO20"
+    ],
+    "Akbarighatar2024RAIGlobal": [
+      "DE6",
+      "SY11",
+      "RE1"
+    ],
+    "Gengler2024OrgAIGovMaturity": [
+      "DE6",
+      "P1",
+      "CO20"
+    ],
+    "Shevlane2025EmergingPractices": [
+      "DE13",
+      "IN10",
+      "RE11"
+    ],
+    "Floridi2018AI4People": [
+      "P20",
+      "SY11",
+      "CO20"
+    ],
+    "Brynjolfsson2023Maturity": [
+      "DE9",
+      "RE11",
+      "CO20"
+    ],
+    "Shevlane2023AISafetyFrameworks": [
+      "DE13",
+      "IN10",
+      "RE11"
+    ],
+    "Hogarth2023FrontierTaskforce": [
+      "DE9",
+      "SY11",
+      "CO20"
+    ]
   }
 }

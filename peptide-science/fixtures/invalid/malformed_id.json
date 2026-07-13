@@ -1,0 +1,8 @@
+{
+  "source_id": "INVALID-ID-FORMAT",
+  "title": "Invalid test source — bad source_id format",
+  "source_type": "primary_research",
+  "authority_posture": "primary_experimental",
+  "primary_or_secondary": "primary",
+  "accessed_date": "2026-07-10"
+}

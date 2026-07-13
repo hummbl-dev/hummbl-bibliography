@@ -1,0 +1,8 @@
+{
+  "source_id": "PEP-REG-2024",
+  "title": "Invalid regulatory source — missing jurisdiction and issued_date",
+  "source_type": "regulatory",
+  "authority_posture": "official_regulatory",
+  "primary_or_secondary": "secondary",
+  "accessed_date": "2026-07-10"
+}

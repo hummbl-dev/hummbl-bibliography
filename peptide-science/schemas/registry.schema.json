@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/peptide-bibliography/registry.v0.1.json",
+  "title": "Peptide Science Bibliography Registry v0.1",
+  "description": "Complete bibliography registry for peptide science",
+  "type": "object",
+  "required": ["registry_id", "version", "sources"],
+  "properties": {
+    "registry_id": {
+      "type": "string",
+      "const": "PEP-BIB-REGISTRY"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v\\d+\\.\\d+$"
+    },
+    "description": {"type": "string"},
+    "sources": {
+      "type": "array",
+      "items": {"$ref": "source-entry.schema.json"}
+    },
+    "domain_coverage": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "source_count_by_class": {
+      "type": "object",
+      "additionalProperties": {"type": "integer"}
+    }
+  },
+  "additionalProperties": false
+}

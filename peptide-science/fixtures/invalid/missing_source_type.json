@@ -1,0 +1,9 @@
+{
+  "source_id": "PEP-BAD-0000",
+  "title": "Invalid test source — missing source_type",
+  "authors_or_organization": "Test Author",
+  "year": 1900,
+  "authority_posture": "primary_experimental",
+  "primary_or_secondary": "primary",
+  "accessed_date": "2026-07-10"
+}
