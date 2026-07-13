@@ -20,10 +20,13 @@
     "keywords": "node src/extract-keywords.js ../bibliography",
     "query": "node src/query.js ../bibliography",
     "merge": "node src/merge-entries.js",
-    "test": "npm run validate && npm run check-duplicates && npm run check-required-fields && npm run validate:memory-palace",
+    "grounding:build": "node src/build-scientific-grounding.js",
+    "grounding:check": "node src/build-scientific-grounding.js --check",
+    "test": "npm run validate && npm run check-duplicates && npm run check-required-fields && npm run validate:memory-palace && npm run grounding:check && npm run test:unit",
     "validate:memory-palace": "node scripts/check-memory-palace-aliases.js",
     "test:memory-palace": "node --test scripts/check-memory-palace-aliases.test.js",
-    "precommit": "npm run validate && npm run validate:memory-palace",
+    "test:unit": "node --test scripts/find-missing-dois.test.js scripts/fix-duplicates-args.test.js scripts/check-memory-palace-aliases.test.js scripts/maintenance-cli.test.js scripts/citation-graph.test.js scripts/watch.test.js scripts/generate-docs.test.js scripts/parse-audit-report.test.js scripts/security-audit-workflow.test.js",
+    "precommit": "npm run validate && npm run validate:memory-palace && npm run test:unit",
     "type-check": "tsc --noEmit",
     "build": "tsc",
     "generate-docs": "node scripts/generate-docs.js",
@@ -40,27 +43,39 @@
   "author": "HUMMBL Team",
   "license": "MIT",
   "dependencies": {
-    "@citation-js/core": "^0.7.0",
-    "@citation-js/plugin-bibtex": "^0.7.0",
-    "axios": "^1.17.0",
+    "@citation-js/core": "^0.8.1",
+    "@citation-js/plugin-bibtex": "^0.8.1",
+    "axios": "^1.18.1",
     "chalk": "^5.6.2",
-    "commander": "^15.0.0"
+    "commander": "^15.0.0",
+    "d3": "^7.9.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.7",
-    "postcss": "^8.5.15",
+    "lint-staged": "^17.0.8",
+    "postcss": "^8.5.16",
     "postcss-functions": "^4.0.2",
     "postcss-js": "^5.1.0",
     "postcss-nested": "^7.0.2",
-    "prettier": "^3.8.4",
-    "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3"
+    "prettier": "^3.9.4",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^7.0.2"
   },
   "lint-staged": {
     "../bibliography/*.bib": [
       "npm run validate:ci --",
       "npm run check-dups"
+    ],
+    "src/**/*.js": [
+      "node --check"
+    ],
+    "*.json": [
+      "node -e \"JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))\""
+    ],
+    "../.github/workflows/*.yml": [
+      "node -e \"const s=require('fs').readFileSync(process.argv[1],'utf8');if(!s.includes('on:'))process.exit(1)\""
     ]
   }
 }

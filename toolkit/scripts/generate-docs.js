@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * HUMMBL Base120 Documentation Generator
+ * HUMBL Base120 Documentation Generator
  * Auto-generates reference docs from canonical source
  */
 
-import { BASE120_MODELS } from '../dist/utils/validateModelCode.js';
+import { BASE120_MODELS } from '../src/utils/base120Models.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -13,7 +13,7 @@ import path from 'path';
  * Generate quick reference markdown
  */
 function generateQuickReference() {
-  let markdown = '# HUMMBL Base120 Quick Reference\n\n';
+  let markdown = '# HUMBL Base120 Quick Reference\n\n';
   markdown += '**Version**: 1.0-production\n';
   markdown += '**Generated**: ' + new Date().toISOString().split('T')[0] + '\n';
   markdown += '**Source**: Canonical Base120 Framework\n\n';
@@ -47,7 +47,7 @@ function generateQuickReference() {
  * Generate detailed reference with examples
  */
 function generateDetailedReference() {
-  let markdown = '# HUMMBL Base120 - Complete Reference\n\n';
+  let markdown = '# HUMBL Base120 - Complete Reference\n\n';
   markdown += '**Version**: 1.0-production\n';
   markdown += '**Generated**: ' + new Date().toISOString().split('T')[0] + '\n\n';
   markdown += '---\n\n';
@@ -103,7 +103,7 @@ function generateJsonData() {
  * Generate TypeScript types
  */
 function generateTypes() {
-  let types = '// HUMMBL Base120 TypeScript Types\n';
+  let types = '// HUMBL Base120 TypeScript Types\n';
   types += '// Auto-generated from canonical source\n\n';
 
   types += 'export type TransformationType = ';
@@ -159,7 +159,7 @@ function getTransformationDescription(transformation) {
 function getModelDescription(code) {
   // In a full implementation, this would have detailed descriptions
   // For now, return a placeholder
-  return `HUMMBL Base120 framework entry: ${code}`;
+  return `HUMBL Base120 framework entry: ${code}`;
 }
 
 function getUsageExample(code) {

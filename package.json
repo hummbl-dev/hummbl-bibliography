@@ -11,6 +11,8 @@
     "check-required-fields": "npm --prefix toolkit run check-required-fields",
     "stats": "npm --prefix toolkit run stats",
     "stats:json": "npm --prefix toolkit run stats:json",
+    "grounding:build": "npm --prefix toolkit run grounding:build",
+    "grounding:check": "npm --prefix toolkit run grounding:check",
     "lint": "npm --prefix toolkit run lint --if-present"
   },
   "repository": {

@@ -1,15 +1,26 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+# Run validation and secret scanning before commit
+echo "🔍 Running pre-commit checks..."
 
-# Run validation in the toolkit directory
-echo "🔍 Running pre-commit validation..."
-cd toolkit && npm run validate
+ROOT="$(git rev-parse --show-toplevel)"
 
-# Capture the exit code
+# 1. Secret scanning via gitleaks
+echo "   Scanning staged files for secrets..."
+if ! gitleaks protect --staged --config "$ROOT/.gitleaks.toml" --verbose 2>&1; then
+  echo "❌ Gitleaks detected potential secrets in staged files!"
+  echo "   To review: gitleaks protect --staged --config $ROOT/.gitleaks.toml --verbose"
+  echo "   To bypass (NOT RECOMMENDED): git commit --no-verify"
+  exit 1
+fi
+
+# 2. Bibliography validation
+echo "   Validating bibliography files..."
+cd "$ROOT/toolkit" && npm run validate
 VALIDATION_RESULT=$?
 
-# Return to the root directory
-cd ..
+if [ $VALIDATION_RESULT -ne 0 ]; then
+  echo "❌ Bibliography validation failed!"
+  exit 1
+fi
 
-# Exit with the validation result
-exit $VALIDATION_RESULT
+echo "✅ Pre-commit checks passed."
+exit 0
