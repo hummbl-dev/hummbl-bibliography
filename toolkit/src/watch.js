@@ -72,7 +72,11 @@ log(`Watching ${bibDir}`);
 log(`Press Ctrl+C to stop\n`);
 
 // Run initial validation
-spawnSync('node', [validateScript, bibDir], { stdio: 'inherit' });
+const initialResult = spawnSync('node', [validateScript, bibDir], { stdio: 'inherit' });
+if (initialResult.status !== 0) {
+  log('Initial validation failed');
+  process.exit(1);
+}
 
 // Watch all .bib files
 const bibFiles = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
