@@ -1,0 +1,28 @@
+# Lint commit message against Conventional Commits format
+echo "📝 Validating commit message format..."
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+# Read the commit message from the file passed as first argument
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Skip merge commits
+if echo "$COMMIT_MSG" | grep -q "^Merge "; then
+  exit 0
+fi
+
+# Run commitlint
+cd "$ROOT/toolkit" && echo "$COMMIT_MSG" | npx commitlint --verbose 2>&1
+
+COMMITLINT_RESULT=$?
+
+if [ $COMMITLINT_RESULT -ne 0 ]; then
+  echo "❌ Commit message does not follow Conventional Commits format!"
+  echo "   Expected format: type(scope): description"
+  echo "   Types: feat, fix, docs, style, refactor, perf, test, chore, ci, build, revert"
+  echo "   To bypass (NOT RECOMMENDED): git commit --no-verify"
+  exit 1
+fi
+
+exit 0

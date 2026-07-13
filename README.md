@@ -5,7 +5,7 @@
 ![ISBN Coverage](https://img.shields.io/badge/ISBNs-28%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
 
 A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
@@ -99,12 +99,12 @@ Based on latest analysis (April 2026):
 
 - **Total Entries**: 260 unique works across 13 tiers
 - **Transformation Coverage** (tag count across all entries):
-  - SY (Synthesis): 152
+  - SY (Synthesis): 132
+  - P (Perspective): 120
   - CO (Composition): 119
   - RE (Recursion): 117
   - DE (Decomposition): 108
   - IN (Inversion): 101
-  - P (Perspective): 80
 - **Quality Metrics**:
   - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
@@ -171,9 +171,9 @@ All submissions are automatically validated via pre-commit hooks and CI/CD.
 
 Current priorities for quality improvement:
 
-- **Perspective (P)**: 80 tags (11.8%) -- underrepresented vs. 16.7% ideal
-- **Inversion (IN)**: 101 tags -- below the current average of 112.8
-- **Decomposition (DE)**: 108 tags -- slightly below the current average of 112.8
+- **Perspective (P)**: 120 tags -- near the current average of 116.2
+- **Inversion (IN)**: 101 tags -- below the current average of 116.2
+- **Decomposition (DE)**: 108 tags -- slightly below the current average of 116.2
 - **DOI coverage**: 70.8% overall
 - **ISBN coverage**: 27.7% overall; strongest in book-heavy tiers
 
@@ -247,7 +247,7 @@ Part of the [HUMMBL](https://github.com/hummbl-dev) cognitive AI architecture:
 
 **Maintained by**: HUMMBL Team  
 **Last Updated**: 2026-04-08  
-**Version**: 2.0.0
+**Version**: 1.3.0
 
 ## Repository Health
 
