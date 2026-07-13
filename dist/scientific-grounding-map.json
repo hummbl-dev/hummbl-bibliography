@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 260,
+    "total_sources": 321,
     "thematic_tiers": {
       "T1": 20,
       "T2": 20,
@@ -55,21 +55,21 @@
       "T13": 20
     },
     "evidence_tiers": {
-      "foundational": 80,
+      "foundational": 141,
       "empirical": 60,
       "applied": 40,
       "governance": 20,
       "emerging": 60
     },
     "downstream_ref_coverage": {
-      "bki_evidence": 17,
-      "arcana_citations": 39
+      "bki_evidence": 18,
+      "arcana_citations": 40
     },
     "metadata_debt": {
-      "critical": 4,
+      "critical": 5,
       "high": 7,
-      "medium": 25,
-      "low": 38
+      "medium": 40,
+      "low": 76
     }
   },
   "sources": [
@@ -3504,6 +3504,2127 @@
           "field": "arxiv_id",
           "priority": "low",
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Agrawal2026C2PA",
+      "title": "Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation",
+      "author": "Agrawal, Anubhav and others",
+      "year": "2026",
+      "type": "misc",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "C2PA",
+        "formal methods",
+        "provenance",
+        "security analysis"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Chesney2019DeepFakes",
+      "title": "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security",
+      "author": "Chesney, Robert and Citron, Danielle Keats",
+      "year": "2019",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "California Law Review",
+      "keywords": [
+        "deepfakes",
+        "liar's dividend",
+        "provenance",
+        "regulation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Dathathri2024SynthID",
+      "title": "Scalable Watermarking for Identifying Large Language Model Outputs",
+      "author": "Dathathri, Sumanth and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Nature",
+      "keywords": [
+        "Google DeepMind",
+        "LLM",
+        "SynthID",
+        "production",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "DeepfakeDetectionReview2024",
+      "title": "A Comprehensive Review of DeepFake Detection Using Advanced Machine Learning and Fusion Methods",
+      "author": "Various",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.3390/electronics13010095",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Electronics",
+      "keywords": [
+        "deepfake",
+        "detection",
+        "fusion",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "DeepfakeDetectorsSoK2024",
+      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
+      "author": "Various",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint arXiv:2401.04364",
+      "keywords": [
+        "benchmark",
+        "deepfake",
+        "detection",
+        "systematization"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2401.04364",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        },
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "DeepfakeMediaForensics2024",
+      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
+      "author": "Various",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint arXiv:2408.00388",
+      "keywords": [
+        "deepfake",
+        "detection",
+        "forensics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2408.00388",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        },
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "DefensesAIVisualMedia2025",
+      "title": "A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication",
+      "author": "Deng, Jingyi and Lin, Chenhao and Zhao, Zhengyu and Liu, Shuai and Peng, Zhe and Wang, Qian and Shen, Chao",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "ACM Computing Surveys",
+      "keywords": [
+        "AI-generated media",
+        "authentication",
+        "defenses",
+        "detection",
+        "disruption"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Kirchenbauer2023Watermark",
+      "title": "A Watermark for Large Language Models",
+      "author": "Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Katz, Jonathan and Miers, Ian and Goldstein, Tom",
+      "year": "2023",
+      "type": "inproceedings",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM",
+        "detection",
+        "provenance",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Kirchenbauer2024Reliability",
+      "title": "On the Reliability of Watermarks for Large Language Models",
+      "author": "Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Shu, Manli and Saifullah, Khalid and Kong, Tom and Fernando, Naren and Saha, Aniruddha and Goldblum, Micah and Goldstein, Tom",
+      "year": "2024",
+      "type": "inproceedings",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM",
+        "adversarial",
+        "robustness",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "NATOStratComDeepfakes2019",
+      "title": "Deepfakes: Primer and Forecast",
+      "author": "NATO Strategic Communications Centre of Excellence",
+      "year": "2019",
+      "type": "techreport",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "NATO",
+        "deepfakes",
+        "strategic communications",
+        "threat assessment"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Nemecek2026IntegrityClash",
+      "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+      "author": "Nemecek, Jacob and others",
+      "year": "2026",
+      "type": "inproceedings",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "C2PA",
+        "integrity clash",
+        "provenance conflict",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "RAND2025ProvenanceOverpromise",
+      "title": "Overpromising on Digital Provenance and Security",
+      "author": "RAND Corporation",
+      "year": "2025",
+      "type": "misc",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "C2PA",
+        "overpromise",
+        "policy",
+        "provenance"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Akbarighatar2024RAIGlobal",
+      "title": "Responsible AI in the Global Context: Maturity Model and Survey",
+      "author": "Various",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "global",
+        "maturity",
+        "responsible AI",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Alsheibani2018AIReadiness",
+      "title": "Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors",
+      "author": "Alsheibani, Simon and Cheung, Yvonne and Messom, Christopher and others",
+      "year": "2020",
+      "type": "article",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Business and Information Systems Engineering",
+      "keywords": [
+        "AI readiness",
+        "interview study",
+        "organizational"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Brynjolfsson2023Maturity",
+      "title": "Generative AI at Work",
+      "author": "Brynjolfsson, Erik and Li, Danielle and Raymond, Lindsey",
+      "year": "2023",
+      "type": "techreport",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "generative AI",
+        "organizational",
+        "productivity"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Chrissis2011CMMI",
+      "title": "CMMI for Development: Guidelines for Process Integration and Product Improvement",
+      "author": "Chrissis, Mary Beth and Konrad, Mike and Shrum, Sandra",
+      "year": "2011",
+      "type": "book",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "CMMI",
+        "heritage",
+        "maturity",
+        "process improvement"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "isbn",
+          "priority": "medium",
+          "reason": "Book-like entry should carry an ISBN when available."
+        }
+      ]
+    },
+    {
+      "key": "Floridi2018AI4People",
+      "title": "AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
+      "author": "Floridi, Luciano and others",
+      "year": "2018",
+      "type": "article",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Minds and Machines",
+      "keywords": [
+        "AI4People",
+        "ethics",
+        "governance",
+        "principles"
+      ],
+      "downstream_refs": [
+        {
+          "surface": "bki_evidence",
+          "section": "hummbl_governance_failure_thesis",
+          "role": "supporting_entry",
+          "strength": "MODERATE",
+          "note": "AI4People framework — identifies human/social prerequisites for AI ethics adoption; governance without human-centered foundation fails."
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "foucault",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Archaeologist of Power — power/knowledge, discourse, biopolitics"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "gramsci",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Left Mirror — hegemony, organic intellectuals, war of position"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "habermas",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "popper",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Falsificationist — critical rationalism, falsification, open society"
+        }
+      ],
+      "arxiv_id": null,
+      "source_status": "grounding_gap",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "critical",
+          "reason": "Referenced in downstream grounding surfaces and missing DOI."
+        }
+      ]
+    },
+    {
+      "key": "Gengler2024OrgAIGovMaturity",
+      "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
+      "author": "Gengler, Eric and Schmalenbach, Klaus",
+      "year": "2024",
+      "type": "inproceedings",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI governance",
+        "case study",
+        "maturity",
+        "multinational"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Hogarth2023FrontierTaskforce",
+      "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
+      "author": "Hogarth, Ian",
+      "year": "2023",
+      "type": "techreport",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AISI",
+        "UK",
+        "frontier AI",
+        "institutional",
+        "taskforce"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Metaxa2024NISTMM",
+      "title": "Evolving AI Risk Management: A Maturity Model based on the NIST AI Risk Management Framework",
+      "author": "Various",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "NIST AI RMF",
+        "maturity model",
+        "risk management"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Paulhus1991CMM",
+      "title": "Capability Maturity Model for Software (Version 1.0)",
+      "author": "Paulhus, William and Weber, Charles and Humphrey, Watts",
+      "year": "1991",
+      "type": "techreport",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "CMM",
+        "SEI",
+        "capability maturity",
+        "heritage",
+        "software"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Phuong2024DangerousCapabilities",
+      "title": "Evaluating Frontier Models for Dangerous Capabilities",
+      "author": "Phuong, Mary and Aitchison, Matthew and Catt, Edmund and others",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Google DeepMind",
+        "dangerous capabilities",
+        "evaluation",
+        "frontier AI"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Pumplun2021AICapabilityMaturity",
+      "title": "Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model",
+      "author": "Various",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Information Systems Frontiers",
+      "keywords": [
+        "AI capability",
+        "case study",
+        "diffusion",
+        "maturity"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Shevlane2023AISafetyFrameworks",
+      "title": "Model evaluation for extreme risks",
+      "author": "Shevlane, Tomek and Farquhar, Sebastian and others",
+      "year": "2023",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Google DeepMind",
+        "extreme risks",
+        "model evaluation",
+        "safety"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Shevlane2025EmergingPractices",
+      "title": "Emerging Practices in Frontier AI Safety Frameworks",
+      "author": "Shevlane, Tomek and others",
+      "year": "2025",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "capability thresholds",
+        "comparative",
+        "frontier AI",
+        "safety frameworks"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Vorvoreanu2023RAIMaturity",
+      "title": "Towards a Responsible AI Organizational Maturity Model",
+      "author": "Vorvoreanu, Mihaela and Heger, Amy and Passi, Sahil and Dhanorkar, Saurabh and Kahn, Zahra and Wang, Richard",
+      "year": "2023",
+      "type": "techreport",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "maturity model",
+        "organizational",
+        "responsible AI"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Weidinger2024HolisticSafety",
+      "title": "Holistic Safety and Responsibility Evaluations of Advanced AI Models",
+      "author": "Weidinger, Laura and Shevlane, Tomek and Brennan, Joseph and others",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Gemini",
+        "Google DeepMind",
+        "holistic",
+        "safety evaluation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bender2018DataStatements",
+      "title": "Data Statements for Natural Language Processing: A Position Paper",
+      "author": "Bender, Emily M. and Friedman, Batya and McMillan-Major, Angelina and Shmitchell, Shmargaret",
+      "year": "2018",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint",
+      "keywords": [
+        "NLP",
+        "data statements",
+        "documentation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Bender2021StochasticParrots",
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "author": "Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM",
+        "dataset",
+        "provenance",
+        "risks"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Chmielinski2022NutritionLabel",
+      "title": "The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data",
+      "author": "Chmielinski, Kasia and Shu, Karen and Rosenblatt, Stefan and Tjoa, Samuel and Hong, Michelle and Prakash, Nirmal and Wang, Jessica and Dai, Xinyu and Beraja, Milo and Kumar, Rishabh and others",
+      "year": "2022",
+      "type": "inproceedings",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "data quality",
+        "dataset nutrition",
+        "framework"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Hutchinson2021Accountability",
+      "title": "Towards Accountability for Machine Learning Datasets",
+      "author": "Hutchinson, Ben and Mitchell, Margaret",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "accountability",
+        "auditing",
+        "dataset documentation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Longpre2024DataProvenance",
+      "title": "A Data Provenance Initiative for Large Language Models",
+      "author": "Longpre, Shayne and Lu, Xinyi and Chen, Yifan and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Nature Machine Intelligence",
+      "keywords": [
+        "LLM",
+        "audit",
+        "data provenance",
+        "license"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Pushkarna2022DataCards",
+      "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+      "author": "Pushkarna, Mahima and Zaldivar, Adrian and Kjartansson, Oddur and Bremer, Christian and Kegler, Jasmine and Baumgartner, Shannon and Ngo, Kiyoshi and Pilz, Kilian and Bhatia, Shvetak and Wulczyn, Martin and others",
+      "year": "2022",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Google Research",
+      "keywords": [
+        "data cards",
+        "dataset documentation",
+        "transparency"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Sambasivan2021DataCascades",
+      "title": "\"Everyone wants to do the model work, not the data work\": Data Cascades in High-Stakes AI",
+      "author": "Sambasivan, Nithya and Kapania, Shivani and HighLaRossa, Hannah and Kukreja, Alka and Sambasivan, Shivani and Hecht, Brent and Kapania, Shivani",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "data cascades",
+        "data quality",
+        "empirical"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Abadi2016DP-SGD",
+      "title": "Deep Learning with Differential Privacy",
+      "author": "Abadi, Martin and Chu, Andy and Goodfellow, Ian and McMahan, H. Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li",
+      "year": "2016",
+      "type": "inproceedings",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "DP-SGD",
+        "deep learning",
+        "differential privacy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Carlini2021Extracting",
+      "title": "Extracting Training Data from Large Language Models",
+      "author": "Carlini, Nicholas and Ippolito, Florian and Jagielski, Matthew and Lee, Katherine and Tramer, Florian and Zhang, Chiyuan and Shokri, Reza and Song, Dawn and Terzis, Adam and Wallace, Eric",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM",
+        "memorization",
+        "privacy attack",
+        "training data extraction"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "EDPB2024Opinion28",
+      "title": "Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models",
+      "author": "European Data Protection Board",
+      "year": "2024",
+      "type": "techreport",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI models",
+        "EDPB",
+        "GDPR",
+        "legal basis",
+        "privacy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Hu2024SurveyMIA",
+      "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
+      "author": "Hu, Hongsheng and Shokri, Reza and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "ACM Computing Surveys",
+      "keywords": [
+        "MIA",
+        "membership inference",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Nasr2021Memorization",
+      "title": "Adversarial Inference Activates Neuron Trojans: Memorization in ML",
+      "author": "Nasr, Milad and Shokri, Reza and Houmansadr, Amir",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "DP-SGD bypass",
+        "adversarial",
+        "membership inference"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "OECD2024AIPrivacy",
+      "title": "AI, Data Governance and Privacy",
+      "author": "OECD",
+      "year": "2024",
+      "type": "techreport",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI principles",
+        "OECD",
+        "governance",
+        "privacy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Shokri2015Privacy",
+      "title": "Privacy-Preserving Deep Learning via Secure Multi-Party Computation",
+      "author": "Shokri, Reza and Shmatikov, Vitaly",
+      "year": "2015",
+      "type": "inproceedings",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "federated learning",
+        "privacy",
+        "secure computation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "AlonBarkat2024EffectiveOversight",
+      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+      "author": "Alon-Barkat, Saar and Busuioc, M. Amos",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of Public Administration Research and Theory",
+      "keywords": [
+        "fairness",
+        "human oversight",
+        "signal detection"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Bucinca2023DecisionControl",
+      "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
+      "author": "Bucinca, Zana and Malaya, Maja and Gajos, Krzysztof Z.",
+      "year": "2023",
+      "type": "inproceedings",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "cognitive load",
+        "decision control",
+        "explanations"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Busuioc2025AutomationBiasAIA",
+      "title": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
+      "author": "Busuioc, M. Amos and Alon-Barkat, Saar",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Law, Innovation and Technology",
+      "keywords": [
+        "EU AI Act",
+        "automation bias",
+        "legal"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Carey2023HumanControl",
+      "title": "Human Control: Definitions and Algorithms",
+      "author": "Carey, Ryan and Everitt, Tom and Sherburne, Luke and others",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint",
+      "keywords": [
+        "corrigibility",
+        "human control",
+        "shutdown"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "deKoning2023ManyMeaningsMHC",
+      "title": "The Many Meanings of Meaningful Human Control",
+      "author": "de Koning, Pim and van der Waa, Jeroen and van den Hoven, Jeroen and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Philosophy & Technology",
+      "keywords": [
+        "ethics",
+        "meaningful human control"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Schlicker2024AutomationBiasPublicAdmin",
+      "title": "Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology",
+      "author": "Schlicker, Fabian and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Law, Innovation and Technology",
+      "keywords": [
+        "automation bias",
+        "law",
+        "public administration"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "vanDerWaa2023ActionableMHC",
+      "title": "Meaningful Human Control: Actionable Properties for AI System Development",
+      "author": "van der Waa, Jeroen and Verdiesen, Jurriaan and van Diggelen, Jeroen and van den Hoven, Jeroen",
+      "year": "2023",
+      "type": "inproceedings",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "actionable",
+        "design",
+        "meaningful human control"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Vogel2025AutomationBiasReview",
+      "title": "Exploring Automation Bias in Human-AI Collaboration: A Review and Implications for Explainable AI",
+      "author": "Vogel, Tobias and K{\\\"o}ppen, Eva and others",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Computers in Human Behavior",
+      "keywords": [
+        "XAI",
+        "automation bias",
+        "systematic review"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Wischnewski2023TrustCalibration",
+      "title": "Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-of-the-Art and Future Directions",
+      "author": "Wischnewski, Sven and Korber, Christiane",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Theoretical Issues in Ergonomics Science",
+      "keywords": [
+        "automation",
+        "survey",
+        "trust calibration"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Yang2023TrustDynamics",
+      "title": "Toward Quantifying Trust Dynamics: How People Adjust Their Trust After Moment-to-Moment Interaction With Automation",
+      "author": "Yang, X. Jessie and Wafa, Sarah Al and Unni, Aakash and Itoh, Makoto",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Human Factors",
+      "keywords": [
+        "automation",
+        "experimental",
+        "trust dynamics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Aldous2024DeploymentCorrections",
+      "title": "Deployment Corrections: An Incident Response Framework for Frontier AI",
+      "author": "Aldous, Peter and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint",
+      "keywords": [
+        "deployment corrections",
+        "frontier AI",
+        "incident response"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Barrett2024CybersecurityFrameworks",
+      "title": "Adapting Cybersecurity Frameworks to Frontier AI",
+      "author": "Barrett, Brian and others",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint",
+      "keywords": [
+        "cybersecurity",
+        "frontier AI",
+        "incident framework"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Clarke2024UKIncidentReporting",
+      "title": "UK AI Incident Reporting: Gap Analysis",
+      "author": "Clarke, Sarah and others",
+      "year": "2024",
+      "type": "techreport",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "UK",
+        "gap analysis",
+        "incident reporting"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Hodgson2024CSETAIHarm",
+      "title": "CSET AI Harm Framework",
+      "author": "Hodgson, Rebecca and others",
+      "year": "2023",
+      "type": "techreport",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI harm",
+        "CSET",
+        "taxonomy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "McGregor2021AIID",
+      "title": "Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database",
+      "author": "McGregor, Sean and others",
+      "year": "2021",
+      "type": "inproceedings",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI incident",
+        "database",
+        "taxonomy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Naveed2025MLMonitoring",
+      "title": "ML Monitoring: A Multivocal Literature Review",
+      "author": "Naveed, Kamran and others",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint",
+      "keywords": [
+        "ML monitoring",
+        "drift detection",
+        "multivocal review"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "NIST2025AI8004",
+      "title": "NIST AI 800-4: Post-Deployment Monitoring Challenges",
+      "author": "NIST",
+      "year": "2025",
+      "type": "techreport",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "NIST",
+        "monitoring",
+        "post-deployment"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "OECD2025CommonReporting",
+      "title": "OECD Common Reporting Framework for AI Incidents",
+      "author": "OECD",
+      "year": "2025",
+      "type": "techreport",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "OECD",
+        "harmonization",
+        "incident reporting"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Schuett2023ThreeLines",
+      "title": "Three Lines of Defense for AI Risks",
+      "author": "Schuett, Sebastian",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI & Society",
+      "keywords": [
+        "risk management",
+        "three lines of defense"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Widder2024PostDeploymentOversight",
+      "title": "Post-Deployment Regulatory Oversight for GPAI/LLMs",
+      "author": "Widder, Dawn and others",
+      "year": "2024",
+      "type": "inproceedings",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "GPAI",
+        "LLM",
+        "oversight",
+        "post-deployment"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "low",
+          "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
     },
@@ -8887,6 +11008,52 @@
       ]
     },
     {
+      "key": "Floridi2018AI4People",
+      "title": "AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "critical",
+      "reason": "Referenced in downstream grounding surfaces and missing DOI.",
+      "downstream_refs": [
+        {
+          "surface": "bki_evidence",
+          "section": "hummbl_governance_failure_thesis",
+          "role": "supporting_entry",
+          "strength": "MODERATE",
+          "note": "AI4People framework — identifies human/social prerequisites for AI ethics adoption; governance without human-centered foundation fails."
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "foucault",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Archaeologist of Power — power/knowledge, discourse, biopolitics"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "gramsci",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Left Mirror — hegemony, organic intellectuals, war of position"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "habermas",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "popper",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Falsificationist — critical rationalism, falsification, open society"
+        }
+      ]
+    },
+    {
       "key": "GDPR2016",
       "title": "Regulation (EU) 2016/679 --- General Data Protection Regulation",
       "bibliography_tier": "T6",
@@ -9000,6 +11167,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Alsheibani2018AIReadiness",
+      "title": "Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Anthropic2024Claude3",
       "title": "The {Claude} 3 Model Family: Opus, Sonnet, Haiku",
       "bibliography_tier": "T13",
@@ -9055,6 +11232,16 @@
       ]
     },
     {
+      "key": "Brynjolfsson2023Maturity",
+      "title": "Generative AI at Work",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Buterin2014Ethereum",
       "title": "A Next-Generation Smart Contract and Decentralized Application Platform",
       "bibliography_tier": "T9",
@@ -9072,6 +11259,26 @@
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Chesney2019DeepFakes",
+      "title": "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Chrissis2011CMMI",
+      "title": "CMMI for Development: Guidelines for Process Integration and Product Improvement",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "isbn",
+      "priority": "medium",
+      "reason": "Book-like entry should carry an ISBN when available.",
       "downstream_refs": []
     },
     {
@@ -9103,10 +11310,60 @@
       "downstream_refs": []
     },
     {
+      "key": "Dathathri2024SynthID",
+      "title": "Scalable Watermarking for Identifying Large Language Model Outputs",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "DeepfakeMediaForensics2024",
+      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "DefensesAIVisualMedia2025",
+      "title": "A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Fowler2005EventSourcing",
       "title": "Event Sourcing",
       "bibliography_tier": "T5",
       "evidence_tier": "applied",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Gengler2024OrgAIGovMaturity",
+      "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Hogarth2023FrontierTaskforce",
+      "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
@@ -9149,6 +11406,16 @@
           "note": "Metrologist — Goodhart's Law, Campbell's Law, proxy metrics"
         }
       ]
+    },
+    {
+      "key": "Kirchenbauer2023Watermark",
+      "title": "A Watermark for Large Language Models",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
     },
     {
       "key": "Kreps2013Log",
@@ -9207,6 +11474,26 @@
       "downstream_refs": []
     },
     {
+      "key": "NATOStratComDeepfakes2019",
+      "title": "Deepfakes: Primer and Forecast",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Nemecek2026IntegrityClash",
+      "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Norman1991CognitiveArtifacts",
       "title": "Cognitive Artifacts",
       "bibliography_tier": "T8",
@@ -9247,6 +11534,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Paulhus1991CMM",
+      "title": "Capability Maturity Model for Software (Version 1.0)",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Piaget1952Origins",
       "title": "The Origins of Intelligence in Children",
       "bibliography_tier": "T8",
@@ -9257,10 +11554,30 @@
       "downstream_refs": []
     },
     {
+      "key": "Pumplun2021AICapabilityMaturity",
+      "title": "Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "SOC2Framework",
       "title": "SOC 2 --- Trust Services Criteria",
       "bibliography_tier": "T6",
       "evidence_tier": "governance",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Vorvoreanu2023RAIMaturity",
+      "title": "Towards a Responsible AI Organizational Maturity Model",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
@@ -9297,6 +11614,36 @@
       "downstream_refs": []
     },
     {
+      "key": "Abadi2016DP-SGD",
+      "title": "Deep Learning with Differential Privacy",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Aldous2024DeploymentCorrections",
+      "title": "Deployment Corrections: An Incident Response Framework for Frontier AI",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "AlonBarkat2024EffectiveOversight",
+      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Amodei2016ConcreteProblems",
       "title": "Concrete Problems in AI Safety",
       "bibliography_tier": "T4",
@@ -9317,6 +11664,76 @@
       "downstream_refs": []
     },
     {
+      "key": "Barrett2024CybersecurityFrameworks",
+      "title": "Adapting Cybersecurity Frameworks to Frontier AI",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Bender2018DataStatements",
+      "title": "Data Statements for Natural Language Processing: A Position Paper",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Bender2021StochasticParrots",
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Bucinca2023DecisionControl",
+      "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Busuioc2025AutomationBiasAIA",
+      "title": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Carey2023HumanControl",
+      "title": "Human Control: Definitions and Algorithms",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Carlini2021Extracting",
+      "title": "Extracting Training Data from Large Language Models",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Chen2023FrugalGPT",
       "title": "{FrugalGPT}: How to Use Large Language Models While Reducing Cost and Improving Performance",
       "bibliography_tier": "T9",
@@ -9327,10 +11744,60 @@
       "downstream_refs": []
     },
     {
+      "key": "Chmielinski2022NutritionLabel",
+      "title": "The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Clarke2024UKIncidentReporting",
+      "title": "UK AI Incident Reporting: Gap Analysis",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Cobbe2021GSM8K",
       "title": "Training Verifiers to Solve Math Word Problems",
       "bibliography_tier": "T13",
       "evidence_tier": "emerging",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "DeepfakeDetectorsSoK2024",
+      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "DeepfakeDetectorsSoK2024",
+      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "DeepfakeMediaForensics2024",
+      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
@@ -9347,6 +11814,16 @@
       "downstream_refs": []
     },
     {
+      "key": "deKoning2023ManyMeaningsMHC",
+      "title": "The Many Meanings of Meaningful Human Control",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Du2023Debate",
       "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
       "bibliography_tier": "T7",
@@ -9354,6 +11831,16 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "EDPB2024Opinion28",
+      "title": "Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -9407,6 +11894,36 @@
       "downstream_refs": []
     },
     {
+      "key": "Hodgson2024CSETAIHarm",
+      "title": "CSET AI Harm Framework",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Hu2024SurveyMIA",
+      "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Hutchinson2021Accountability",
+      "title": "Towards Accountability for Machine Learning Datasets",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Kaplan2020ScalingLaws",
       "title": "Scaling Laws for Neural Language Models",
       "bibliography_tier": "T9",
@@ -9424,6 +11941,16 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Kirchenbauer2024Reliability",
+      "title": "On the Reliability of Watermarks for Large Language Models",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -9467,6 +11994,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Longpre2024DataProvenance",
+      "title": "A Data Provenance Initiative for Large Language Models",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Madaan2023Selfrefine",
       "title": "{Self-Refine}: Iterative Refinement with Self-Feedback",
       "bibliography_tier": "T13",
@@ -9474,6 +12011,66 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "McGregor2021AIID",
+      "title": "Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Nasr2021Memorization",
+      "title": "Adversarial Inference Activates Neuron Trojans: Memorization in ML",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Naveed2025MLMonitoring",
+      "title": "ML Monitoring: A Multivocal Literature Review",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "NIST2025AI8004",
+      "title": "NIST AI 800-4: Post-Deployment Monitoring Challenges",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "OECD2024AIPrivacy",
+      "title": "AI, Data Governance and Privacy",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "OECD2025CommonReporting",
+      "title": "OECD Common Reporting Framework for AI Incidents",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -9517,6 +12114,26 @@
       "downstream_refs": []
     },
     {
+      "key": "Pushkarna2022DataCards",
+      "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Sambasivan2021DataCascades",
+      "title": "\"Everyone wants to do the model work, not the data work\": Data Cascades in High-Stakes AI",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Schick2023Toolformer",
       "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
       "bibliography_tier": "T7",
@@ -9524,6 +12141,26 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Schlicker2024AutomationBiasPublicAdmin",
+      "title": "Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Schuett2023ThreeLines",
+      "title": "Three Lines of Defense for AI Risks",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -9544,6 +12181,16 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Shokri2015Privacy",
+      "title": "Privacy-Preserving Deep Learning via Secure Multi-Party Computation",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -9577,6 +12224,26 @@
       "downstream_refs": []
     },
     {
+      "key": "vanDerWaa2023ActionableMHC",
+      "title": "Meaningful Human Control: Actionable Properties for AI System Development",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Vogel2025AutomationBiasReview",
+      "title": "Exploring Automation Bias in Human-AI Collaboration: A Review and Implications for Explainable AI",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Wang2023Selfconsistency",
       "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
       "bibliography_tier": "T13",
@@ -9607,6 +12274,26 @@
       "downstream_refs": []
     },
     {
+      "key": "Widder2024PostDeploymentOversight",
+      "title": "Post-Deployment Regulatory Oversight for GPAI/LLMs",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Wischnewski2023TrustCalibration",
+      "title": "Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-of-the-Art and Future Directions",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Wu2023AutoGen",
       "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
       "bibliography_tier": "T7",
@@ -9614,6 +12301,16 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Yang2023TrustDynamics",
+      "title": "Toward Quantifying Trust Dynamics: How People Adjust Their Trust After Moment-to-Moment Interaction With Automation",
+      "bibliography_tier": "T18",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "low",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {

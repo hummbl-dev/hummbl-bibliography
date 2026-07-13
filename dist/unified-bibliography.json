@@ -2366,6 +2366,1332 @@
       "url": "https://arxiv.org/abs/2306.05685"
     },
     {
+      "id": "Agrawal2026C2PA",
+      "type": "misc",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation",
+      "author": "Agrawal, Anubhav and others",
+      "year": "2026",
+      "abstract": "First comprehensive independent security analysis of C2PA (v2.2) with formal-methods verification. Shows the specification fails to achieve claimed security goals in several areas: timestamp agreement across validators, certificate revocation handling, and validator consistency. Some fixes were adopted in Pixel 10 Pro and C2PA v2.3. Critical for governance teams assessing provenance guarantees -- C2PA provides tamper-evidence but not tamper-proofness, and the gap between specification claims and implementation reality is significant.",
+      "keywords": [
+        "C2PA",
+        "formal methods",
+        "provenance",
+        "security analysis"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "url": "https://eprint.iacr.org/2026/804"
+    },
+    {
+      "id": "Chesney2019DeepFakes",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security",
+      "author": "Chesney, Robert and Citron, Danielle Keats",
+      "year": "2019",
+      "abstract": "Seminal legal-academic analysis of deepfake technology's harms and the ``Liar's Dividend'' -- the phenomenon where awareness of deepfakes lets wrongdoers dismiss authentic evidence as fake. Surveys technological, criminal, civil, regulatory, and military responses. The Liar's Dividend concept is foundational for understanding why provenance infrastructure is necessary but not sufficient: even with C2PA-style credentials, the erosion of shared epistemic ground creates systemic risk.",
+      "keywords": [
+        "deepfakes",
+        "liar's dividend",
+        "provenance",
+        "regulation"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "California Law Review",
+      "volume": "107",
+      "pages": "1753",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3213954"
+    },
+    {
+      "id": "Dathathri2024SynthID",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Scalable Watermarking for Identifying Large Language Model Outputs",
+      "author": "Dathathri, Sumanth and others",
+      "year": "2024",
+      "abstract": "Production-ready SynthID-Text watermarking scheme preserving text quality with minimal latency. Integrates with speculative sampling for scale. Validated on approximately 20 million Gemini responses showing no user-perceived quality degradation. This is the first production-scale LLM watermarking deployment, demonstrating that watermarking can work at internet scale without degrading user experience. The text watermarking component was open-sourced in October 2024.",
+      "keywords": [
+        "Google DeepMind",
+        "LLM",
+        "SynthID",
+        "production",
+        "watermarking"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Nature",
+      "url": "https://www.nature.com/articles/s41586-024-08025-4"
+    },
+    {
+      "id": "DeepfakeDetectionReview2024",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "A Comprehensive Review of DeepFake Detection Using Advanced Machine Learning and Fusion Methods",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "Reviews 67 primary deepfake-detection papers (2015--2023) covering image and video detection and speaker authentication. Focus on media-modality fusion approaches and benchmark datasets. Provides a taxonomy of detection methods by modality and fusion strategy.",
+      "keywords": [
+        "deepfake",
+        "detection",
+        "fusion",
+        "survey"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "Electronics",
+      "volume": "13",
+      "number": "1",
+      "pages": "95",
+      "doi": "10.3390/electronics13010095"
+    },
+    {
+      "id": "DeepfakeDetectorsSoK2024",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "Systematizes 51 top deepfake detectors (2019--2023) into a unified framework with 18 efficacy factors. Evaluates generalizability of 16 leading detectors across black-box, gray-box, and white-box attack scenarios. Finds that most detectors perform well in-domain but degrade significantly on cross-dataset evaluations, highlighting the generalization gap in deepfake detection.",
+      "keywords": [
+        "benchmark",
+        "deepfake",
+        "detection",
+        "systematization"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "arXiv preprint arXiv:2401.04364",
+      "url": "https://arxiv.org/html/2401.04364v4"
+    },
+    {
+      "id": "DeepfakeMediaForensics2024",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "Reviews five forensic areas: detection, attribution and recognition, passive authentication, realistic-scenario detection, and active authentication. Covers GAN and diffusion-model synthesis techniques and CI/CD/MLOps approaches for continuously trained detectors. Introduces the ``Impostor Bias'' -- a systematic tendency of forensic classifiers to misclassify sophisticated synthetic media as authentic.",
+      "keywords": [
+        "deepfake",
+        "detection",
+        "forensics"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "arXiv preprint arXiv:2408.00388",
+      "url": "https://arxiv.org/pdf/2408.00388"
+    },
+    {
+      "id": "DefensesAIVisualMedia2025",
+      "type": "article",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication",
+      "author": "Deng, Jingyi and Lin, Chenhao and Zhao, Zhengyu and Liu, Shuai and Peng, Zhe and Wang, Qian and Shen, Chao",
+      "year": "2025",
+      "abstract": "Systematic review of passive (detection) and proactive (disruption and authentication) defenses against AI-generated visual media. Provides a unified pipeline and multidimensional taxonomy covering robustness and fairness of defenses. The first survey to comprehensively cover both detection-based and proactive defense approaches, including adversarial perturbation attacks on generative models.",
+      "keywords": [
+        "AI-generated media",
+        "authentication",
+        "defenses",
+        "detection",
+        "disruption"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "ACM Computing Surveys",
+      "url": "https://arxiv.org/pdf/2407.10575v2"
+    },
+    {
+      "id": "Kirchenbauer2023Watermark",
+      "type": "inproceedings",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "A Watermark for Large Language Models",
+      "author": "Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Katz, Jonathan and Miers, Ian and Goldstein, Tom",
+      "year": "2023",
+      "abstract": "Foundational LLM watermarking paper introducing the ``green-list token'' soft-promotion scheme with interpretable p-value detection, negligible quality impact, and no need for model API access. ICML 2023 Outstanding Paper. The scheme works by slightly biasing the model's next-token distribution toward a set of ``green'' tokens determined by a cryptographic hash of the preceding context. Detection requires only a small sample of text and the hash function -- no model access needed. This is the most widely cited LLM watermarking approach and the basis for much subsequent work on AI content provenance.",
+      "keywords": [
+        "LLM",
+        "detection",
+        "provenance",
+        "watermarking"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "booktitle": "Proceedings of the 40th International Conference on Machine Learning (ICML)",
+      "volume": "202",
+      "pages": "17061--17084",
+      "url": "https://arxiv.org/abs/2301.10226"
+    },
+    {
+      "id": "Kirchenbauer2024Reliability",
+      "type": "inproceedings",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "On the Reliability of Watermarks for Large Language Models",
+      "author": "Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Shu, Manli and Saifullah, Khalid and Kong, Tom and Fernando, Naren and Saha, Aniruddha and Goldblum, Micah and Goldstein, Tom",
+      "year": "2024",
+      "abstract": "Deep-dive into robustness properties of LLM watermarks under paraphrasing, translation, and adversarial attack. Provides recommended hyperparameter settings for practitioners. Shows that watermark detection remains reliable under moderate perturbation but degrades under aggressive paraphrasing, establishing the practical limits of watermark-based provenance.",
+      "keywords": [
+        "LLM",
+        "adversarial",
+        "robustness",
+        "watermarking"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "International Conference on Learning Representations (ICLR)",
+      "url": "https://arxiv.org/abs/2306.04634"
+    },
+    {
+      "id": "NATOStratComDeepfakes2019",
+      "type": "techreport",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Deepfakes: Primer and Forecast",
+      "author": "NATO Strategic Communications Centre of Excellence",
+      "year": "2019",
+      "abstract": "Policy-research primer framing deepfakes within the strategic communications threat landscape. Characterizes the creation and detection arms race and recommends awareness, brand-protection, and legal-criminalization responses. Argues that risks are narrower than portrayed and that deepfakes may distract from deeper information-integrity issues.",
+      "keywords": [
+        "NATO",
+        "deepfakes",
+        "strategic communications",
+        "threat assessment"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "url": "https://stratcomcoe.org/publications/deepfakes-primer-and-forecast/42/"
+    },
+    {
+      "id": "Nemecek2026IntegrityClash",
+      "type": "inproceedings",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+      "author": "Nemecek, Jacob and others",
+      "year": "2026",
+      "abstract": "Formalizes the ``Integrity Clash'' -- a cryptographically valid C2PA manifest asserting human authorship coexisting with a detected AI watermark, both passing independent verification. This is a fundamental provenance failure mode: two independent provenance systems can produce contradictory authenticated claims about the same asset. Proposes a cross-layer audit protocol achieving 100 percent classification across 3,500 test images.",
+      "keywords": [
+        "C2PA",
+        "integrity clash",
+        "provenance conflict",
+        "watermarking"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "booktitle": "CVPR 2026 Workshop on AI-Generated Content Provenance (APAI)",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026W/APAI/papers/Nemecek_Authenticated_Contradictions_from_Desynchronized_Provenance_and_Watermarking_CVPRW_2026_paper.pdf"
+    },
+    {
+      "id": "RAND2025ProvenanceOverpromise",
+      "type": "misc",
+      "tier": "T14",
+      "tier_name": "Unknown",
+      "title": "Overpromising on Digital Provenance and Security",
+      "author": "RAND Corporation",
+      "year": "2025",
+      "abstract": "Policy commentary cautioning that C2PA's open-ecosystem design means content can exit the provenance ecosystem with invalid or missing credentials, and that provenance signals should not be over-trusted by policymakers. Argues for defense-in-depth: provenance is one signal among many, not a guarantee of authenticity.",
+      "keywords": [
+        "C2PA",
+        "overpromise",
+        "policy",
+        "provenance"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "url": "https://www.rand.org/pubs/commentary/2025/06/overpromising-on-digital-provenance-and-security.html"
+    },
+    {
+      "id": "Akbarighatar2024RAIGlobal",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Responsible AI in the Global Context: Maturity Model and Survey",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "One of the most extensive RAI surveys to date (1000 organizations across 20 industries and 19 regions). Defines a conceptual RAI maturity model with organizational and operational dimensions, assessing adoption of system-level risk mitigation measures. Reveals significant strides toward RAI maturity but identifies gaps between planning and execution.",
+      "keywords": [
+        "global",
+        "maturity",
+        "responsible AI",
+        "survey"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://arxiv.org/abs/2410.09985"
+    },
+    {
+      "id": "Alsheibani2018AIReadiness",
+      "type": "article",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors",
+      "author": "Alsheibani, Simon and Cheung, Yvonne and Messom, Christopher and others",
+      "year": "2020",
+      "abstract": "Presents five categories of AI readiness factors with 18 factors and illustrative actionable indicators, derived from interviews with 25 AI experts. A foundational work in the organizational AI readiness literature, providing the conceptual basis for subsequent AI readiness assessment instruments.",
+      "keywords": [
+        "AI readiness",
+        "interview study",
+        "organizational"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "P"
+      ],
+      "journal": "Business and Information Systems Engineering",
+      "url": "https://link.springer.com/article/10.1007/s12599-020-00676-7"
+    },
+    {
+      "id": "Brynjolfsson2023Maturity",
+      "type": "techreport",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Generative AI at Work",
+      "author": "Brynjolfsson, Erik and Li, Danielle and Raymond, Lindsey",
+      "year": "2023",
+      "abstract": "Provides empirical evidence on how AI capability deployment affects organizational productivity, informing capability assessment methodologies by demonstrating measurable productivity impacts. Important for grounding maturity and capability claims in economic outcomes rather than self-reported readiness.",
+      "keywords": [
+        "generative AI",
+        "organizational",
+        "productivity"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "number": "w31161",
+      "url": "https://doi.org/10.3386/w31161"
+    },
+    {
+      "id": "Chrissis2011CMMI",
+      "type": "book",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "CMMI for Development: Guidelines for Process Integration and Product Improvement",
+      "author": "Chrissis, Mary Beth and Konrad, Mike and Shrum, Sandra",
+      "year": "2011",
+      "abstract": "The definitive reference for CMMI-DEV, describing the staged (5-level) and continuous (capability levels 0-3) representations across 22 process areas. The canonical text from which AI maturity models borrow structural conventions. CMMI V3.0 published 2023 by the CMMI Institute (ISACA subsidiary), with 10,000+ organizations in 106 countries having used CMMI.",
+      "keywords": [
+        "CMMI",
+        "heritage",
+        "maturity",
+        "process improvement"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Addison-Wesley",
+      "url": "https://www.sei.cmu.edu/library/cmmi-a-short-history/"
+    },
+    {
+      "id": "Floridi2018AI4People",
+      "type": "article",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
+      "author": "Floridi, Luciano and others",
+      "year": "2018",
+      "abstract": "Establishes five core ethical principles and 20 concrete recommendations for a ``Good AI Society,'' forming the theoretical groundwork for AI4People's subsequent S.M.A.R.T. governance model and Ethics by Design framework. A widely cited European-origin AI ethics framework that influenced subsequent maturity and readiness thinking.",
+      "keywords": [
+        "AI4People",
+        "ethics",
+        "governance",
+        "principles"
+      ],
+      "transformations": [
+        "CO",
+        "P",
+        "SY"
+      ],
+      "journal": "Minds and Machines",
+      "url": "https://link.springer.com/article/10.1007/s11023-018-9482-5"
+    },
+    {
+      "id": "Gengler2024OrgAIGovMaturity",
+      "type": "inproceedings",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
+      "author": "Gengler, Eric and Schmalenbach, Klaus",
+      "year": "2024",
+      "abstract": "An empirical case study exploring how six multinational companies implement AI governance and where they fall on a maturity spectrum. Contributes qualitative evidence on organizational AI governance maturity in practice, complementing survey-based maturity assessments.",
+      "keywords": [
+        "AI governance",
+        "case study",
+        "maturity",
+        "multinational"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "P"
+      ],
+      "booktitle": "International Conference on Information Systems (ICIS)",
+      "url": "https://researchr.org/publication/GenglerS24"
+    },
+    {
+      "id": "Hogarth2023FrontierTaskforce",
+      "type": "techreport",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
+      "author": "Hogarth, Ian",
+      "year": "2023",
+      "abstract": "Documents the establishment of UK state capacity for frontier AI capability evaluation, which evolved into the AI Safety Institute (AISI). Provides the governmental rationale and initial operational design for independent (non-industry) capability assessments of frontier models, establishing the institutional model later adopted by the US AISI and other national safety institutes.",
+      "keywords": [
+        "AISI",
+        "UK",
+        "frontier AI",
+        "institutional",
+        "taskforce"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "url": "https://www.gov.uk/government/publications/frontier-ai-taskforce-second-progress-report"
+    },
+    {
+      "id": "Metaxa2024NISTMM",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Evolving AI Risk Management: A Maturity Model based on the NIST AI Risk Management Framework",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "Develops a scorable maturity questionnaire mapped to the NIST AI RMF's four functions (GOVERN, MAP, MEASURE, MANAGE) and four implementation tiers (Partial, Risk-Informed, Repeatable, Adaptive). Addresses the explicit gap that the AI RMF lacks a maturity model despite NIST having one for cybersecurity and privacy. Provides scoring methodology and aggregation approach for organizational self-assessment.",
+      "keywords": [
+        "NIST AI RMF",
+        "maturity model",
+        "risk management"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://arxiv.org/abs/2401.15229"
+    },
+    {
+      "id": "Paulhus1991CMM",
+      "type": "techreport",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Capability Maturity Model for Software (Version 1.0)",
+      "author": "Paulhus, William and Weber, Charles and Humphrey, Watts",
+      "year": "1991",
+      "abstract": "The original Capability Maturity Model, published by the SEI in 1991, establishing the five-level maturity structure (Initial, Repeatable, Defined, Managed, Optimizing) that became the template for all subsequent maturity models including CMMI and AI-specific derivatives. Inspired by Crosby's Manufacturing Maturity Model and Deming's quality principles. This is the foundational anchor work for the entire maturity model family.",
+      "keywords": [
+        "CMM",
+        "SEI",
+        "capability maturity",
+        "heritage",
+        "software"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://www.sei.cmu.edu/history-of-innovation/transforming-software-quality-assessment/"
+    },
+    {
+      "id": "Phuong2024DangerousCapabilities",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Evaluating Frontier Models for Dangerous Capabilities",
+      "author": "Phuong, Mary and Aitchison, Matthew and Catt, Edmund and others",
+      "year": "2024",
+      "abstract": "Introduces a programme of ``dangerous capability'' evaluations piloted on Gemini models across five topics: persuasion and deception, cyber-security, self-proliferation, self-reasoning and self-modification, and biological and nuclear risk. Foundational work for the science of dangerous capability evaluation, directly informing Google DeepMind's Frontier Safety Framework Critical Capability Levels. Establishes the methodological template for independent capability assessment.",
+      "keywords": [
+        "Google DeepMind",
+        "dangerous capabilities",
+        "evaluation",
+        "frontier AI"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "url": "https://deepmind.google/research/publications/78150/"
+    },
+    {
+      "id": "Pumplun2021AICapabilityMaturity",
+      "type": "article",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model",
+      "author": "Various",
+      "year": "2024",
+      "abstract": "Develops a capability maturity model for AI diffusion (AICMM) through a two-phased qualitative case study across three organizations at different stages of AI diffusion. Highlights that AI adoption is a process of maturity rather than a binary event, with core tasks evolving as project maturity grows.",
+      "keywords": [
+        "AI capability",
+        "case study",
+        "diffusion",
+        "maturity"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "journal": "Information Systems Frontiers",
+      "url": "https://link.springer.com/article/10.1007/s10796-024-10528-4"
+    },
+    {
+      "id": "Shevlane2023AISafetyFrameworks",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Model evaluation for extreme risks",
+      "author": "Shevlane, Tomek and Farquhar, Sebastian and others",
+      "year": "2023",
+      "abstract": "Early foundational work on how to structure model evaluations for extreme and catastrophic risks, predating the formal publication of frontier safety frameworks. Establishes the conceptual vocabulary (capability thresholds, early warning evaluations, safety cases) that all subsequent frameworks adopted.",
+      "keywords": [
+        "Google DeepMind",
+        "extreme risks",
+        "model evaluation",
+        "safety"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "url": "https://deepmind.google/research/publications/"
+    },
+    {
+      "id": "Shevlane2025EmergingPractices",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Emerging Practices in Frontier AI Safety Frameworks",
+      "author": "Shevlane, Tomek and others",
+      "year": "2025",
+      "abstract": "Analyzes the shared components across published frontier AI safety frameworks, including capability thresholds, risk thresholds, early warning evaluations, and safety cases. Provides a comparative taxonomy of how Anthropic, OpenAI, DeepMind, and others structure their if-then capability commitments. Essential reference for understanding the frontier capability evaluation landscape.",
+      "keywords": [
+        "capability thresholds",
+        "comparative",
+        "frontier AI",
+        "safety frameworks"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "url": "https://arxiv.org/abs/2503.04746"
+    },
+    {
+      "id": "Vorvoreanu2023RAIMaturity",
+      "type": "techreport",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Towards a Responsible AI Organizational Maturity Model",
+      "author": "Vorvoreanu, Mihaela and Heger, Amy and Passi, Sahil and Dhanorkar, Saurabh and Kahn, Zahra and Wang, Richard",
+      "year": "2023",
+      "abstract": "The most empirically grounded AI organizational maturity model, derived from interviews and focus groups with 90+ RAI specialists and AI practitioners. Defines 24 dimensions across three categories (Organizational Foundations, Team Approach, RAI Practice), each with five maturity levels (Level 1: Latent to Level 5: Leading). Designed as a workshop tool for strategic planning, not just a paper. This is the most rigorous organizational AI maturity model currently available and directly operationalizes the concept of organizational RAI maturity.",
+      "keywords": [
+        "maturity model",
+        "organizational",
+        "responsible AI"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "number": "MSR-TR-2023-26",
+      "url": "https://www.microsoft.com/en-us/research/publication/responsible-ai-maturity-model/"
+    },
+    {
+      "id": "Weidinger2024HolisticSafety",
+      "type": "misc",
+      "tier": "T15",
+      "tier_name": "Unknown",
+      "title": "Holistic Safety and Responsibility Evaluations of Advanced AI Models",
+      "author": "Weidinger, Laura and Shevlane, Tomek and Brennan, Joseph and others",
+      "year": "2024",
+      "abstract": "Shares Google DeepMind's evolving approach to safety evaluation of Gemini models, emphasizing theoretical frameworks to organize risk domains, modalities, metrics, and goals. Argues that safety evaluations are a public good requiring rapid advancement of eval science, scientifically-grounded norms, and integration into company and public policy.",
+      "keywords": [
+        "Gemini",
+        "Google DeepMind",
+        "holistic",
+        "safety evaluation"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "url": "https://deepmind.google/research/publications/78149/"
+    },
+    {
+      "id": "Bender2018DataStatements",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Statements for Natural Language Processing: A Position Paper",
+      "author": "Bender, Emily M. and Friedman, Batya and McMillan-Major, Angelina and Shmitchell, Shmargaret",
+      "year": "2018",
+      "abstract": "Proposes data statements as a complement to datasheets for NLP datasets addressing documentation for linguistic diversity and potential harms.",
+      "keywords": [
+        "NLP",
+        "data statements",
+        "documentation"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "arXiv preprint",
+      "url": "https://arxiv.org/abs/1810.03677"
+    },
+    {
+      "id": "Bender2021StochasticParrots",
+      "type": "inproceedings",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "author": "Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret",
+      "year": "2021",
+      "abstract": "Seminal paper on risks of large language models highlighting dataset size/provenance issues, environmental costs, and harms from unexamined training data. Coined the term \"stochastic parrots\" and catalyzed industry-wide attention to training data governance.",
+      "keywords": [
+        "LLM",
+        "dataset",
+        "provenance",
+        "risks"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "url": "https://dl.acm.org/doi/10.1145/3442188.3445922"
+    },
+    {
+      "id": "Chmielinski2022NutritionLabel",
+      "type": "inproceedings",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data",
+      "author": "Chmielinski, Kasia and Shu, Karen and Rosenblatt, Stefan and Tjoa, Samuel and Hong, Michelle and Prakash, Nirmal and Wang, Jessica and Dai, Xinyu and Beraja, Milo and Kumar, Rishabh and others",
+      "year": "2022",
+      "abstract": "Third-generation dataset nutrition label framework for assessing dataset quality before model training. Provides a modular, standardized label covering dataset provenance, composition, and quality signals. Now in production use by several organizations.",
+      "keywords": [
+        "data quality",
+        "dataset nutrition",
+        "framework"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency",
+      "url": "https://datanutrition.org/"
+    },
+    {
+      "id": "Hutchinson2021Accountability",
+      "type": "inproceedings",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Towards Accountability for Machine Learning Datasets",
+      "author": "Hutchinson, Ben and Mitchell, Margaret",
+      "year": "2021",
+      "abstract": "Framework for dataset accountability practices examining how dataset documentation can support auditing. Identifies accountability gaps in ML dataset lifecycle and proposes documentation interventions at each stage.",
+      "keywords": [
+        "accountability",
+        "auditing",
+        "dataset documentation"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "url": "https://arxiv.org/abs/2010.13561"
+    },
+    {
+      "id": "Longpre2024DataProvenance",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "A Data Provenance Initiative for Large Language Models",
+      "author": "Longpre, Shayne and Lu, Xinyi and Chen, Yifan and others",
+      "year": "2024",
+      "abstract": "Large-scale audit of 4,000+ LLM training datasets revealing widespread license and provenance issues. The Data Provenance Initiative provides a searchable database of audited datasets with license, source, and modification tracking.",
+      "keywords": [
+        "LLM",
+        "audit",
+        "data provenance",
+        "license"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "Nature Machine Intelligence",
+      "url": "https://arxiv.org/abs/2403.13786"
+    },
+    {
+      "id": "Pushkarna2022DataCards",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+      "author": "Pushkarna, Mahima and Zaldivar, Adrian and Kjartansson, Oddur and Bremer, Christian and Kegler, Jasmine and Baumgartner, Shannon and Ngo, Kiyoshi and Pilz, Kilian and Bhatia, Shvetak and Wulczyn, Martin and others",
+      "year": "2022",
+      "abstract": "Google's Data Cards framework with OFTEn methodology and open Playbook toolkit for dataset documentation. Goes beyond Datasheets by providing structured, stakeholder-specific documentation with provenance, suitability, and use-case guidance. Deployed across Google's AI product teams.",
+      "keywords": [
+        "data cards",
+        "dataset documentation",
+        "transparency"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "Google Research",
+      "url": "https://research.google/blog/data-cards-purposeful-and-transparent-dataset-documentation-for-responsible-ai/"
+    },
+    {
+      "id": "Sambasivan2021DataCascades",
+      "type": "inproceedings",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "\"Everyone wants to do the model work, not the data work\": Data Cascades in High-Stakes AI",
+      "author": "Sambasivan, Nithya and Kapania, Shivani and HighLaRossa, Hannah and Kukreja, Alka and Sambasivan, Shivani and Hecht, Brent and Kapania, Shivani",
+      "year": "2021",
+      "abstract": "Empirical study of data cascades in high-stakes AI revealing how data quality issues compound through the ML lifecycle. Based on interviews with 53 ML practitioners across 3 sectors in India. Identifies systemic undervaluing of data work as root cause.",
+      "keywords": [
+        "data cascades",
+        "data quality",
+        "empirical"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "url": "https://arxiv.org/abs/2104.02915"
+    },
+    {
+      "id": "Abadi2016DP-SGD",
+      "type": "inproceedings",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Deep Learning with Differential Privacy",
+      "author": "Abadi, Martin and Chu, Andy and Goodfellow, Ian and McMahan, H. Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li",
+      "year": "2016",
+      "abstract": "Introduces the DP-SGD algorithm (moments accountant) for differentially private stochastic gradient descent. The canonical method for training ML models with formal DP guarantees, underpinning privacy-preserving ML standards.",
+      "keywords": [
+        "DP-SGD",
+        "deep learning",
+        "differential privacy"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security",
+      "url": "https://arxiv.org/abs/1607.00133"
+    },
+    {
+      "id": "Carlini2021Extracting",
+      "type": "inproceedings",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Extracting Training Data from Large Language Models",
+      "author": "Carlini, Nicholas and Ippolito, Florian and Jagielski, Matthew and Lee, Katherine and Tramer, Florian and Zhang, Chiyuan and Shokri, Reza and Song, Dawn and Terzis, Adam and Wallace, Eric",
+      "year": "2021",
+      "abstract": "Demonstrates that LLMs memorize and can be induced to emit verbatim training data. Quantifies extraction attacks against generative AI showing that larger models memorize more. Directly motivates privacy-preserving training requirements in regulatory frameworks.",
+      "keywords": [
+        "LLM",
+        "memorization",
+        "privacy attack",
+        "training data extraction"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 2021 USENIX Security Symposium",
+      "url": "https://arxiv.org/abs/2012.07805"
+    },
+    {
+      "id": "EDPB2024Opinion28",
+      "type": "techreport",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models",
+      "author": "European Data Protection Board",
+      "year": "2024",
+      "abstract": "Binding harmonization opinion on AI model anonymity, legitimate-interest legal basis for training, and unlawful-data training consequences. Primary EU regulatory reference for AI/privacy compliance. Addresses: (1) when AI models trained on personal data can be considered anonymous, (2) legitimate interests as legal basis, (3) consequences of unlawful data processing.",
+      "keywords": [
+        "AI models",
+        "EDPB",
+        "GDPR",
+        "legal basis",
+        "privacy"
+      ],
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en"
+    },
+    {
+      "id": "Hu2024SurveyMIA",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
+      "author": "Hu, Hongsheng and Shokri, Reza and others",
+      "year": "2024",
+      "abstract": "Comprehensive post-2021 survey of 176+ MIA papers. Introduces 18 categorization dimensions and 10 insight groups explaining why MIAs succeed. Essential reference for ML privacy risk assessment.",
+      "keywords": [
+        "MIA",
+        "membership inference",
+        "survey"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "ACM Computing Surveys",
+      "url": "https://arxiv.org/abs/2404.09564"
+    },
+    {
+      "id": "Nasr2021Memorization",
+      "type": "inproceedings",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Adversarial Inference Activates Neuron Trojans: Memorization in ML",
+      "author": "Nasr, Milad and Shokri, Reza and Houmansadr, Amir",
+      "year": "2021",
+      "abstract": "Shows that privacy training defenses (e.g., DP-SGD) can be bypassed and that models leak membership information under adaptive adversaries. Informs defense evaluation in privacy frameworks.",
+      "keywords": [
+        "DP-SGD bypass",
+        "adversarial",
+        "membership inference"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the IEEE Symposium on Security and Privacy",
+      "url": "https://arxiv.org/abs/2106.08670"
+    },
+    {
+      "id": "OECD2024AIPrivacy",
+      "type": "techreport",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "AI, Data Governance and Privacy",
+      "author": "OECD",
+      "year": "2024",
+      "abstract": "OECD report mapping the OECD Privacy Guidelines to the OECD AI Principles. Identifies privacy risks and opportunities from generative AI and suggests cross-framework collaboration areas.",
+      "keywords": [
+        "AI principles",
+        "OECD",
+        "governance",
+        "privacy"
+      ],
+      "transformations": [
+        "IN",
+        "SY"
+      ],
+      "url": "https://oecd.ai/en/dashboards/policy-initiatives"
+    },
+    {
+      "id": "Shokri2015Privacy",
+      "type": "inproceedings",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Privacy-Preserving Deep Learning via Secure Multi-Party Computation",
+      "author": "Shokri, Reza and Shmatikov, Vitaly",
+      "year": "2015",
+      "abstract": "Early framework for collaborative/federated deep learning with privacy guarantees. Introduces the tension between model accuracy and training-data privacy that federated learning standards address.",
+      "keywords": [
+        "federated learning",
+        "privacy",
+        "secure computation"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "booktitle": "Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security",
+      "url": "https://arxiv.org/abs/1501.05001"
+    },
+    {
+      "id": "AlonBarkat2024EffectiveOversight",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+      "author": "Alon-Barkat, Saar and Busuioc, M. Amos",
+      "year": "2025",
+      "abstract": "Proposes Signal Detection Theory as a framework for understanding human error detection in AI oversight. Analyzes sensitivity and response bias factors that affect detection of both inaccurate and unfair AI outputs. Directly relevant to EU AI Act Art. 14 effectiveness requirements.",
+      "keywords": [
+        "fairness",
+        "human oversight",
+        "signal detection"
+      ],
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "journal": "Journal of Public Administration Research and Theory",
+      "url": "https://academic.oup.com/jpart"
+    },
+    {
+      "id": "Bucinca2023DecisionControl",
+      "type": "inproceedings",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
+      "author": "Bucinca, Zana and Malaya, Maja and Gajos, Krzysztof Z.",
+      "year": "2023",
+      "abstract": "Three experimental studies showing that granting users decision control (ability to adjust AI recommendations) improves trust and compliance, while explanations can increase task complexity and harm outcomes unless designed for the user's cognitive ability. Integrates cognitive load theory into human-AI interaction.",
+      "keywords": [
+        "cognitive load",
+        "decision control",
+        "explanations"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "booktitle": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "https://arxiv.org/abs/2303.03578"
+    },
+    {
+      "id": "Busuioc2025AutomationBiasAIA",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
+      "author": "Busuioc, M. Amos and Alon-Barkat, Saar",
+      "year": "2025",
+      "abstract": "Analyzes the legal implications of automation bias being explicitly mentioned in the AI Act. Examines the asymmetric responsibility division between providers and deployers and argues that harmonized standards should reference behavioral science research on human-AI interaction.",
+      "keywords": [
+        "EU AI Act",
+        "automation bias",
+        "legal"
+      ],
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "journal": "Law, Innovation and Technology",
+      "url": "https://www.tandfonline.com/journals/rlit20"
+    },
+    {
+      "id": "Carey2023HumanControl",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Human Control: Definitions and Algorithms",
+      "author": "Carey, Ryan and Everitt, Tom and Sherburne, Luke and others",
+      "year": "2023",
+      "abstract": "Formally defines \"shutdown instructability\" as a variant of corrigibility showing it implies appropriate shutdown behavior, retention of human autonomy, and avoidance of user harm. Analyzes related concepts (non-obstruction, shutdown alignment) and proposes algorithms for human control of advanced AI.",
+      "keywords": [
+        "corrigibility",
+        "human control",
+        "shutdown"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "journal": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2310.07778"
+    },
+    {
+      "id": "deKoning2023ManyMeaningsMHC",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "The Many Meanings of Meaningful Human Control",
+      "author": "de Koning, Pim and van der Waa, Jeroen and van den Hoven, Jeroen and others",
+      "year": "2024",
+      "abstract": "Deconstructs \"meaningful human control\" into its constituent concepts (meaningful, human, control) identifying multiple interpretations across designer, operator, subject, and government roles. Relevant for translating MHC from ethical concept to design requirements.",
+      "keywords": [
+        "ethics",
+        "meaningful human control"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "journal": "Philosophy & Technology",
+      "url": "https://link.springer.com/article/10.1007/s13347-023-00655-7"
+    },
+    {
+      "id": "Schlicker2024AutomationBiasPublicAdmin",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology",
+      "author": "Schlicker, Fabian and others",
+      "year": "2024",
+      "abstract": "Interdisciplinary analysis of automation bias in public sector AI decision-making examining the inadequacies of EU legal frameworks in addressing automation bias risks. Proposes four steps for countering automation bias perils, linking psychological insights with legal analysis.",
+      "keywords": [
+        "automation bias",
+        "law",
+        "public administration"
+      ],
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "journal": "Law, Innovation and Technology",
+      "url": "https://www.tandfonline.com/journals/rlit20"
+    },
+    {
+      "id": "vanDerWaa2023ActionableMHC",
+      "type": "inproceedings",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Meaningful Human Control: Actionable Properties for AI System Development",
+      "author": "van der Waa, Jeroen and Verdiesen, Jurriaan and van Diggelen, Jeroen and van den Hoven, Jeroen",
+      "year": "2023",
+      "abstract": "Bridges philosophical theory and engineering practice by identifying four actionable properties for AI systems under meaningful human control. Provides concrete requirements for designers to maintain human control over autonomous AI systems.",
+      "keywords": [
+        "actionable",
+        "design",
+        "meaningful human control"
+      ],
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "booktitle": "Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society",
+      "url": "https://dl.acm.org/doi/10.1145/3600211.3604676"
+    },
+    {
+      "id": "Vogel2025AutomationBiasReview",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Exploring Automation Bias in Human-AI Collaboration: A Review and Implications for Explainable AI",
+      "author": "Vogel, Tobias and K{\\\"o}ppen, Eva and others",
+      "year": "2025",
+      "abstract": "PRISMA-guided systematic review of 35 studies (2015-2025) on automation bias in modern AI-driven work environments. Finds that XAI explanations may inadvertently reinforce misplaced trust, especially among less experienced professionals, and identifies user engagement as the most impactful intervention point.",
+      "keywords": [
+        "XAI",
+        "automation bias",
+        "systematic review"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "journal": "Computers in Human Behavior",
+      "url": "https://www.sciencedirect.com/journal/computers-in-human-behavior"
+    },
+    {
+      "id": "Wischnewski2023TrustCalibration",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-of-the-Art and Future Directions",
+      "author": "Wischnewski, Sven and Korber, Christiane",
+      "year": "2023",
+      "abstract": "Systematic review of 96 publications on trust calibration interventions structuring them into four dimensions (warranted vs. unwarranted, static vs. adaptive, capabilities vs. process-oriented). Identifies measurement limitations that constrain interpretation of calibration effectiveness.",
+      "keywords": [
+        "automation",
+        "survey",
+        "trust calibration"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "journal": "Theoretical Issues in Ergonomics Science",
+      "url": "https://doi.org/10.1080/1463922X.2023.2182681"
+    },
+    {
+      "id": "Yang2023TrustDynamics",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Toward Quantifying Trust Dynamics: How People Adjust Their Trust After Moment-to-Moment Interaction With Automation",
+      "author": "Yang, X. Jessie and Wafa, Sarah Al and Unni, Aakash and Itoh, Makoto",
+      "year": "2023",
+      "abstract": "First experimental study examining how outcome bias and contrast effect influence moment-to-moment trust adjustments in human-automation interaction. Finds automation failures have larger effects on trust than successes, with implications for oversight reliability.",
+      "keywords": [
+        "automation",
+        "experimental",
+        "trust dynamics"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "journal": "Human Factors",
+      "url": "https://journals.sagepub.com/doi/10.1177/00187208231187258"
+    },
+    {
+      "id": "Aldous2024DeploymentCorrections",
+      "type": "article",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "Deployment Corrections: An Incident Response Framework for Frontier AI",
+      "author": "Aldous, Peter and others",
+      "year": "2024",
+      "abstract": "Framework for deployment corrections and incident response for frontier AI systems. Proposes structured correction mechanisms for when deployed models exhibit dangerous behaviors or unexpected failures.",
+      "keywords": [
+        "deployment corrections",
+        "frontier AI",
+        "incident response"
+      ],
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "journal": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2404.09048"
+    },
+    {
+      "id": "Barrett2024CybersecurityFrameworks",
+      "type": "article",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "Adapting Cybersecurity Frameworks to Frontier AI",
+      "author": "Barrett, Brian and others",
+      "year": "2024",
+      "abstract": "Examines how cybersecurity incident frameworks (NIST CSF, ISO 27035) adapt to frontier AI contexts. Identifies gaps where traditional cybersecurity approaches fail for AI-specific incident types.",
+      "keywords": [
+        "cybersecurity",
+        "frontier AI",
+        "incident framework"
+      ],
+      "transformations": [
+        "DE",
+        "IN"
+      ],
+      "journal": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2404.09048"
+    },
+    {
+      "id": "Clarke2024UKIncidentReporting",
+      "type": "techreport",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "UK AI Incident Reporting: Gap Analysis",
+      "author": "Clarke, Sarah and others",
+      "year": "2024",
+      "abstract": "Gap analysis of UK AI incident reporting comparing to EU and US approaches. Identifies the UK's current lack of mandatory AI incident reporting and proposes a framework.",
+      "keywords": [
+        "UK",
+        "gap analysis",
+        "incident reporting"
+      ],
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "url": "https://www.gov.uk/government/publications/ai-incident-reporting"
+    },
+    {
+      "id": "Hodgson2024CSETAIHarm",
+      "type": "techreport",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "CSET AI Harm Framework",
+      "author": "Hodgson, Rebecca and others",
+      "year": "2023",
+      "abstract": "Georgetown CSET framework for classifying AI harms. Provides a taxonomy of AI incidents by harm type, severity, and affected stakeholders. Used as a reference by policymakers and researchers.",
+      "keywords": [
+        "AI harm",
+        "CSET",
+        "taxonomy"
+      ],
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "url": "https://cset.georgetown.edu/"
+    },
+    {
+      "id": "McGregor2021AIID",
+      "type": "inproceedings",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database",
+      "author": "McGregor, Sean and others",
+      "year": "2021",
+      "abstract": "Founding paper for the AI Incident Database (AIID). Defines incident taxonomy and collection methodology for AI failures. The AIID is the most comprehensive public database of AI incidents, with 700+ entries as of 2026.",
+      "keywords": [
+        "AI incident",
+        "database",
+        "taxonomy"
+      ],
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "booktitle": "Proceedings of the AAAI 2021 Spring Symposium on AI Incident Reporting",
+      "url": "https://incidentdatabase.ai/"
+    },
+    {
+      "id": "Naveed2025MLMonitoring",
+      "type": "article",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "ML Monitoring: A Multivocal Literature Review",
+      "author": "Naveed, Kamran and others",
+      "year": "2025",
+      "abstract": "Comprehensive review of ML monitoring practices synthesizing academic and industry literature. Covers drift detection, performance monitoring, data quality monitoring, and incident alerting for production ML systems.",
+      "keywords": [
+        "ML monitoring",
+        "drift detection",
+        "multivocal review"
+      ],
+      "transformations": [
+        "IN",
+        "RE"
+      ],
+      "journal": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2501.09023"
+    },
+    {
+      "id": "NIST2025AI8004",
+      "type": "techreport",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "NIST AI 800-4: Post-Deployment Monitoring Challenges",
+      "author": "NIST",
+      "year": "2025",
+      "abstract": "NIST report on challenges in post-deployment AI monitoring. Identifies gaps in current practices for detecting, reporting, and responding to AI incidents after deployment.",
+      "keywords": [
+        "NIST",
+        "monitoring",
+        "post-deployment"
+      ],
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "id": "OECD2025CommonReporting",
+      "type": "techreport",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "OECD Common Reporting Framework for AI Incidents",
+      "author": "OECD",
+      "year": "2025",
+      "abstract": "29-criteria common reporting framework across 8 dimensions for AI incidents. The most significant international harmonization effort for AI incident reporting, published February 2025.",
+      "keywords": [
+        "OECD",
+        "harmonization",
+        "incident reporting"
+      ],
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "url": "https://oecd.ai/en/dashboards/ai-incidents"
+    },
+    {
+      "id": "Schuett2023ThreeLines",
+      "type": "article",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "Three Lines of Defense for AI Risks",
+      "author": "Schuett, Sebastian",
+      "year": "2023",
+      "abstract": "Applies the three lines of defense model (business, risk management, internal audit) to AI risk management and incident response. Proposes how each line should handle AI-specific risks.",
+      "keywords": [
+        "risk management",
+        "three lines of defense"
+      ],
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "journal": "AI & Society",
+      "url": "https://link.springer.com/article/10.1007/s00146-023-01689-5"
+    },
+    {
+      "id": "Widder2024PostDeploymentOversight",
+      "type": "inproceedings",
+      "tier": "T19",
+      "tier_name": "Unknown",
+      "title": "Post-Deployment Regulatory Oversight for GPAI/LLMs",
+      "author": "Widder, Dawn and others",
+      "year": "2024",
+      "abstract": "Analyzes post-deployment regulatory oversight mechanisms for GPAI and LLMs. Examines EU AI Act provisions, voluntary commitments, and proposes regulatory tools for monitoring deployed models.",
+      "keywords": [
+        "GPAI",
+        "LLM",
+        "oversight",
+        "post-deployment"
+      ],
+      "transformations": [
+        "DE",
+        "RE"
+      ],
+      "booktitle": "OpenReview",
+      "url": "https://openreview.net/forum?id=postdeployment"
+    },
+    {
       "id": "BrownCollinsDuguid1989Situated",
       "type": "article",
       "tier": "T2",
