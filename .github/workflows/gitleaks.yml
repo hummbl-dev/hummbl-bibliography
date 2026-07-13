@@ -20,6 +20,6 @@ jobs:
           fetch-depth: 0
 
       - name: Gitleaks scan
-        run: gitleaks detect --config-path .gitleaks.toml --verbose --redact
+        run: gitleaks detect --verbose --redact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
