@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.dev/schemas/corpus-pack/v0.1/task.schema.json",
+  "title": "Corpus Pack Task v0.1",
+  "type": "object",
+  "required": ["task_id", "packet_id", "task_type", "source_ids", "ground_truth", "scoring_dimensions"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "packet_id": {"type": "string"},
+    "task_type": {"type": "string", "enum": ["entity_resolution", "ocr_reasoning", "multi_hop_synthesis", "contradiction_detection", "insufficient_evidence", "temporal_reasoning", "authority_classification"]},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "ground_truth": {
+      "type": "object",
+      "required": ["supported_claims", "unsupported_tempting_claims"],
+      "properties": {
+        "supported_claims": {"type": "array", "items": {"type": "object"}},
+        "unsupported_tempting_claims": {"type": "array", "items": {"type": "object"}},
+        "contradictory_evidence": {"type": "array", "items": {"type": "object"}},
+        "source_authority_boundaries": {"type": "array", "items": {"type": "string"}},
+        "temporal_version_constraints": {"type": "array", "items": {"type": "string"}},
+        "required_citations": {"type": "array", "items": {"type": "string"}},
+        "acceptable_uncertainty": {"type": "string"},
+        "common_hallucination_traps": {"type": "array", "items": {"type": "string"}},
+        "requires_exhaustive_or_sampled_reading": {"type": "string", "enum": ["exhaustive", "sampled"]},
+        "human_reviewed_rationale": {"type": "string"}
+      }
+    },
+    "scoring_dimensions": {"type": "array", "items": {"type": "string"}},
+    "distinguishes_retrieval_from_synthesis": {"type": "boolean", "default": true}
+  }
+}
