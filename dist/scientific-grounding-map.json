@@ -38,9 +38,9 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 341,
+    "total_sources": 345,
     "thematic_tiers": {
-      "T1": 29,
+      "T1": 33,
       "T2": 20,
       "T3": 20,
       "T4": 20,
@@ -55,7 +55,7 @@
       "T13": 26
     },
     "evidence_tiers": {
-      "foundational": 153,
+      "foundational": 157,
       "empirical": 60,
       "applied": 40,
       "governance": 20,
@@ -68,7 +68,7 @@
     "metadata_debt": {
       "critical": 5,
       "high": 8,
-      "medium": 40,
+      "medium": 42,
       "low": 76
     }
   },
@@ -99,6 +99,84 @@
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
+    },
+    {
+      "key": "Anon1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "author": "Washington Post Book World",
+      "year": "1980",
+      "type": "article",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "The Washington Post",
+      "keywords": [
+        "Wittgenstein",
+        "book review",
+        "earliest use",
+        "grammar of reality",
+        "journalism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Bhartrhari5thCVakyapadiya",
+      "title": "Vākyapadīya",
+      "author": "Bhartṛhari",
+      "year": "450",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar",
+        "non-Western genealogy",
+        "ontology",
+        "word-monism",
+        "śabda-brahman"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "isbn",
+          "priority": "medium",
+          "reason": "Book-like entry should carry an ISBN when available."
+        }
+      ]
     },
     {
       "key": "Bohm1980WholenessImplicate",
@@ -314,6 +392,40 @@
           "note": "ARCANA Coordinator — cross-domain synthesis, convergence mapping"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "KaderbhaiGrammarRealityVakyapadiya",
+      "title": "The Grammar of Reality: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "author": "Kaderbhai, Aamir",
+      "year": "2018",
+      "type": "online",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar of reality",
+        "metaphysical pluralism",
+        "realism",
+        "sphoṭa"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -602,6 +714,37 @@
         "chunking",
         "cognitive limits",
         "working memory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Moss1995GrammarConsciousness",
+      "title": "The Grammar of Consciousness: An Exploration of Tacit Knowing",
+      "author": "Moss, Edward",
+      "year": "1995",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0333625331",
+      "journal": null,
+      "keywords": [
+        "Polanyi",
+        "consciousness",
+        "grammar",
+        "structure of consciousness",
+        "tacit knowing"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -11849,6 +11992,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Anon1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "bibliography_tier": "T1",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Anthropic2024Claude3",
       "title": "The {Claude} 3 Model Family: Opus, Sonnet, Haiku",
       "bibliography_tier": "T13",
@@ -11876,6 +12029,16 @@
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Bhartrhari5thCVakyapadiya",
+      "title": "Vākyapadīya",
+      "bibliography_tier": "T1",
+      "evidence_tier": "foundational",
+      "field": "isbn",
+      "priority": "medium",
+      "reason": "Book-like entry should carry an ISBN when available.",
       "downstream_refs": []
     },
     {
