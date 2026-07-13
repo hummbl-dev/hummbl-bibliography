@@ -1,0 +1,145 @@
+% T14_provenance.bib — Content Provenance, Synthetic Media, and Deepfake Regulation
+% Added 2026-06-27 to fill Family 18 gap identified in bibliography cross-reference
+%
+% These entries cover content credentials (C2PA), synthetic media detection,
+% watermarking, deepfake regulation, and provenance chains.
+
+@article{Chesney2019DeepFakes,
+  title = {Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security},
+  author = {Chesney, Robert and Citron, Danielle Keats},
+  year = {2019},
+  journal = {California Law Review},
+  volume = {107},
+  pages = {1753},
+  url = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3213954},
+  abstract = {Seminal legal-academic analysis of deepfake technology's harms and the ``Liar's Dividend'' -- the phenomenon where awareness of deepfakes lets wrongdoers dismiss authentic evidence as fake. Surveys technological, criminal, civil, regulatory, and military responses. The Liar's Dividend concept is foundational for understanding why provenance infrastructure is necessary but not sufficient: even with C2PA-style credentials, the erosion of shared epistemic ground creates systemic risk.},
+  keywords = {deepfakes, provenance, liar's dividend, regulation, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY},
+  nist_functions = {GOVERN MAP},
+}
+
+@inproceedings{Kirchenbauer2023Watermark,
+  title = {A Watermark for Large Language Models},
+  author = {Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Katz, Jonathan and Miers, Ian and Goldstein, Tom},
+  year = {2023},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+  series = {PMLR},
+  volume = {202},
+  pages = {17061--17084},
+  url = {https://arxiv.org/abs/2301.10226},
+  abstract = {Foundational LLM watermarking paper introducing the ``green-list token'' soft-promotion scheme with interpretable p-value detection, negligible quality impact, and no need for model API access. ICML 2023 Outstanding Paper. The scheme works by slightly biasing the model's next-token distribution toward a set of ``green'' tokens determined by a cryptographic hash of the preceding context. Detection requires only a small sample of text and the hash function -- no model access needed. This is the most widely cited LLM watermarking approach and the basis for much subsequent work on AI content provenance.},
+  keywords = {watermarking, LLM, provenance, detection, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@inproceedings{Kirchenbauer2024Reliability,
+  title = {On the Reliability of Watermarks for Large Language Models},
+  author = {Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Shu, Manli and Saifullah, Khalid and Kong, Tom and Fernando, Naren and Saha, Aniruddha and Goldblum, Micah and Goldstein, Tom},
+  year = {2024},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  url = {https://arxiv.org/abs/2306.04634},
+  abstract = {Deep-dive into robustness properties of LLM watermarks under paraphrasing, translation, and adversarial attack. Provides recommended hyperparameter settings for practitioners. Shows that watermark detection remains reliable under moderate perturbation but degrades under aggressive paraphrasing, establishing the practical limits of watermark-based provenance.},
+  keywords = {watermarking, LLM, robustness, adversarial, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MEASURE},
+}
+
+@article{Dathathri2024SynthID,
+  title = {Scalable Watermarking for Identifying Large Language Model Outputs},
+  author = {Dathathri, Sumanth and others},
+  year = {2024},
+  journal = {Nature},
+  url = {https://www.nature.com/articles/s41586-024-08025-4},
+  abstract = {Production-ready SynthID-Text watermarking scheme preserving text quality with minimal latency. Integrates with speculative sampling for scale. Validated on approximately 20 million Gemini responses showing no user-perceived quality degradation. This is the first production-scale LLM watermarking deployment, demonstrating that watermarking can work at internet scale without degrading user experience. The text watermarking component was open-sourced in October 2024.},
+  keywords = {SynthID, watermarking, LLM, production, Google DeepMind, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@misc{Agrawal2026C2PA,
+  title = {Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation},
+  author = {Agrawal, Anubhav and others},
+  year = {2026},
+  howpublished = {IACR ePrint 2026/804},
+  url = {https://eprint.iacr.org/2026/804},
+  abstract = {First comprehensive independent security analysis of C2PA (v2.2) with formal-methods verification. Shows the specification fails to achieve claimed security goals in several areas: timestamp agreement across validators, certificate revocation handling, and validator consistency. Some fixes were adopted in Pixel 10 Pro and C2PA v2.3. Critical for governance teams assessing provenance guarantees -- C2PA provides tamper-evidence but not tamper-proofness, and the gap between specification claims and implementation reality is significant.},
+  keywords = {C2PA, provenance, security analysis, formal methods, HUMMBL:IN, HUMMBL:DE, HUMMBL:CO},
+  nist_functions = {MAP MEASURE},
+}
+
+@inproceedings{Nemecek2026IntegrityClash,
+  title = {Authenticated Contradictions from Desynchronized Provenance and Watermarking},
+  author = {Nemecek, Jacob and others},
+  year = {2026},
+  booktitle = {CVPR 2026 Workshop on AI-Generated Content Provenance (APAI)},
+  url = {https://openaccess.thecvf.com/content/CVPR2026W/APAI/papers/Nemecek_Authenticated_Contradictions_from_Desynchronized_Provenance_and_Watermarking_CVPRW_2026_paper.pdf},
+  abstract = {Formalizes the ``Integrity Clash'' -- a cryptographically valid C2PA manifest asserting human authorship coexisting with a detected AI watermark, both passing independent verification. This is a fundamental provenance failure mode: two independent provenance systems can produce contradictory authenticated claims about the same asset. Proposes a cross-layer audit protocol achieving 100 percent classification across 3,500 test images.},
+  keywords = {C2PA, watermarking, integrity clash, provenance conflict, HUMMBL:IN, HUMMBL:DE, HUMMBL:CO},
+  nist_functions = {MAP MEASURE},
+}
+
+@article{DeepfakeMediaForensics2024,
+  title = {Deepfake Media Forensics: State of the Art and Challenges Ahead},
+  author = {{Various}},
+  year = {2024},
+  journal = {arXiv preprint arXiv:2408.00388},
+  url = {https://arxiv.org/pdf/2408.00388},
+  abstract = {Reviews five forensic areas: detection, attribution and recognition, passive authentication, realistic-scenario detection, and active authentication. Covers GAN and diffusion-model synthesis techniques and CI/CD/MLOps approaches for continuously trained detectors. Introduces the ``Impostor Bias'' -- a systematic tendency of forensic classifiers to misclassify sophisticated synthetic media as authentic.},
+  keywords = {deepfake, forensics, detection, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+  nist_functions = {MEASURE MAP},
+}
+
+@article{DeepfakeDetectorsSoK2024,
+  title = {SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework},
+  author = {{Various}},
+  year = {2024},
+  journal = {arXiv preprint arXiv:2401.04364},
+  url = {https://arxiv.org/html/2401.04364v4},
+  abstract = {Systematizes 51 top deepfake detectors (2019--2023) into a unified framework with 18 efficacy factors. Evaluates generalizability of 16 leading detectors across black-box, gray-box, and white-box attack scenarios. Finds that most detectors perform well in-domain but degrade significantly on cross-dataset evaluations, highlighting the generalization gap in deepfake detection.},
+  keywords = {deepfake, detection, systematization, benchmark, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MEASURE},
+}
+
+@article{DefensesAIVisualMedia2025,
+  title = {A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication},
+  author = {Deng, Jingyi and Lin, Chenhao and Zhao, Zhengyu and Liu, Shuai and Peng, Zhe and Wang, Qian and Shen, Chao},
+  year = {2025},
+  journal = {ACM Computing Surveys},
+  url = {https://arxiv.org/pdf/2407.10575v2},
+  abstract = {Systematic review of passive (detection) and proactive (disruption and authentication) defenses against AI-generated visual media. Provides a unified pipeline and multidimensional taxonomy covering robustness and fairness of defenses. The first survey to comprehensively cover both detection-based and proactive defense approaches, including adversarial perturbation attacks on generative models.},
+  keywords = {AI-generated media, defenses, detection, disruption, authentication, HUMMBL:DE, HUMMBL:IN, HUMMBL:CO},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@article{DeepfakeDetectionReview2024,
+  title = {A Comprehensive Review of DeepFake Detection Using Advanced Machine Learning and Fusion Methods},
+  author = {{Various}},
+  year = {2024},
+  journal = {Electronics},
+  volume = {13},
+  number = {1},
+  pages = {95},
+  doi = {10.3390/electronics13010095},
+  abstract = {Reviews 67 primary deepfake-detection papers (2015--2023) covering image and video detection and speaker authentication. Focus on media-modality fusion approaches and benchmark datasets. Provides a taxonomy of detection methods by modality and fusion strategy.},
+  keywords = {deepfake, detection, fusion, survey, HUMMBL:DE, HUMMBL:IN},
+  nist_functions = {MEASURE},
+}
+
+@techreport{NATOStratComDeepfakes2019,
+  title = {Deepfakes: Primer and Forecast},
+  author = {{NATO Strategic Communications Centre of Excellence}},
+  year = {2019},
+  institution = {NATO StratCom COE},
+  url = {https://stratcomcoe.org/publications/deepfakes-primer-and-forecast/42/},
+  abstract = {Policy-research primer framing deepfakes within the strategic communications threat landscape. Characterizes the creation and detection arms race and recommends awareness, brand-protection, and legal-criminalization responses. Argues that risks are narrower than portrayed and that deepfakes may distract from deeper information-integrity issues.},
+  keywords = {deepfakes, strategic communications, NATO, threat assessment, HUMMBL:DE, HUMMBL:SY, HUMMBL:IN},
+  nist_functions = {MAP GOVERN},
+}
+
+@misc{RAND2025ProvenanceOverpromise,
+  title = {Overpromising on Digital Provenance and Security},
+  author = {{RAND Corporation}},
+  year = {2025},
+  howpublished = {RAND Commentary},
+  url = {https://www.rand.org/pubs/commentary/2025/06/overpromising-on-digital-provenance-and-security.html},
+  abstract = {Policy commentary cautioning that C2PA's open-ecosystem design means content can exit the provenance ecosystem with invalid or missing credentials, and that provenance signals should not be over-trusted by policymakers. Argues for defense-in-depth: provenance is one signal among many, not a guarantee of authenticity.},
+  keywords = {C2PA, provenance, policy, overpromise, HUMMBL:IN, HUMMBL:SY, HUMMBL:DE},
+  nist_functions = {GOVERN MAP},
+}

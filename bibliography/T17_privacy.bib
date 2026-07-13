@@ -1,0 +1,83 @@
+% T17_privacy.bib — Privacy in AI/ML Systems
+% Added 2026-06-27 to fill Family 16 gap identified in bibliography cross-reference
+%
+% These entries cover differential privacy, membership inference attacks,
+% LLM training data extraction, privacy-preserving ML, and federated learning privacy.
+% Note: Dwork2006DifferentialPrivacy is in T11_security.bib (with DOI) — not duplicated here.
+
+@inproceedings{Carlini2021Extracting,
+  title = {Extracting Training Data from Large Language Models},
+  author = {Carlini, Nicholas and Ippolito, Florian and Jagielski, Matthew and Lee, Katherine and Tramer, Florian and Zhang, Chiyuan and Shokri, Reza and Song, Dawn and Terzis, Adam and Wallace, Eric},
+  year = {2021},
+  booktitle = {Proceedings of the 2021 USENIX Security Symposium},
+  url = {https://arxiv.org/abs/2012.07805},
+  abstract = {Demonstrates that LLMs memorize and can be induced to emit verbatim training data. Quantifies extraction attacks against generative AI showing that larger models memorize more. Directly motivates privacy-preserving training requirements in regulatory frameworks.},
+  keywords = {LLM, training data extraction, memorization, privacy attack, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@inproceedings{Shokri2015Privacy,
+  title = {Privacy-Preserving Deep Learning via Secure Multi-Party Computation},
+  author = {Shokri, Reza and Shmatikov, Vitaly},
+  year = {2015},
+  booktitle = {Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security},
+  url = {https://arxiv.org/abs/1501.05001},
+  abstract = {Early framework for collaborative/federated deep learning with privacy guarantees. Introduces the tension between model accuracy and training-data privacy that federated learning standards address.},
+  keywords = {federated learning, privacy, secure computation, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@inproceedings{Nasr2021Memorization,
+  title = {Adversarial Inference Activates Neuron Trojans: Memorization in ML},
+  author = {Nasr, Milad and Shokri, Reza and Houmansadr, Amir},
+  year = {2021},
+  booktitle = {Proceedings of the IEEE Symposium on Security and Privacy},
+  url = {https://arxiv.org/abs/2106.08670},
+  abstract = {Shows that privacy training defenses (e.g., DP-SGD) can be bypassed and that models leak membership information under adaptive adversaries. Informs defense evaluation in privacy frameworks.},
+  keywords = {membership inference, adversarial, DP-SGD bypass, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MEASURE MANAGE},
+}
+
+@article{Hu2024SurveyMIA,
+  title = {A Survey on Membership Inference Attacks and Defenses in Machine Learning},
+  author = {Hu, Hongsheng and Shokri, Reza and others},
+  year = {2024},
+  journal = {ACM Computing Surveys},
+  url = {https://arxiv.org/abs/2404.09564},
+  abstract = {Comprehensive post-2021 survey of 176+ MIA papers. Introduces 18 categorization dimensions and 10 insight groups explaining why MIAs succeed. Essential reference for ML privacy risk assessment.},
+  keywords = {membership inference, survey, MIA, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MAP MEASURE},
+}
+
+@techreport{OECD2024AIPrivacy,
+  title = {AI, Data Governance and Privacy},
+  author = {{OECD}},
+  year = {2024},
+  institution = {Organisation for Economic Co-operation and Development},
+  url = {https://oecd.ai/en/dashboards/policy-initiatives},
+  abstract = {OECD report mapping the OECD Privacy Guidelines to the OECD AI Principles. Identifies privacy risks and opportunities from generative AI and suggests cross-framework collaboration areas.},
+  keywords = {OECD, privacy, AI principles, governance, HUMMBL:SY, HUMMBL:IN},
+  nist_functions = {GOVERN MAP},
+}
+
+@techreport{EDPB2024Opinion28,
+  title = {Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models},
+  author = {{European Data Protection Board}},
+  year = {2024},
+  institution = {EDPB},
+  url = {https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en},
+  abstract = {Binding harmonization opinion on AI model anonymity, legitimate-interest legal basis for training, and unlawful-data training consequences. Primary EU regulatory reference for AI/privacy compliance. Addresses: (1) when AI models trained on personal data can be considered anonymous, (2) legitimate interests as legal basis, (3) consequences of unlawful data processing.},
+  keywords = {EDPB, AI models, privacy, legal basis, GDPR, HUMMBL:DE, HUMMBL:SY},
+  nist_functions = {GOVERN MANAGE},
+}
+
+@inproceedings{Abadi2016DP-SGD,
+  title = {Deep Learning with Differential Privacy},
+  author = {Abadi, Martin and Chu, Andy and Goodfellow, Ian and McMahan, H. Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li},
+  year = {2016},
+  booktitle = {Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security},
+  url = {https://arxiv.org/abs/1607.00133},
+  abstract = {Introduces the DP-SGD algorithm (moments accountant) for differentially private stochastic gradient descent. The canonical method for training ML models with formal DP guarantees, underpinning privacy-preserving ML standards.},
+  keywords = {differential privacy, DP-SGD, deep learning, HUMMBL:IN, HUMMBL:DE},
+  nist_functions = {MEASURE MANAGE},
+}
