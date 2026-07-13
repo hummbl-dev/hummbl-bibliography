@@ -20,7 +20,9 @@ jobs:
           fetch-depth: 0
 
       - name: Install commitlint
-        run: npm install -g @commitlint/cli @commitlint/config-conventional
+        run: |
+          export PATH=$HOME/.npm-global/bin:$PATH
+          npm install -g @commitlint/cli @commitlint/config-conventional
 
       - name: Create commitlint config
         run: |
@@ -29,6 +31,7 @@ jobs:
       - name: Lint commits (push)
         if: github.event_name == 'push'
         run: |
+          export PATH=$HOME/.npm-global/bin:$PATH
           FROM="${{ github.event.before }}"
           TO="${{ github.event.after }}"
           # Handle initial commit (before is all zeros)
@@ -40,5 +43,6 @@ jobs:
       - name: Lint commits (pull request)
         if: github.event_name == 'pull_request'
         run: |
+          export PATH=$HOME/.npm-global/bin:$PATH
           # Check all commits in the PR branch
           npx commitlint --from "${{ github.event.pull_request.base.sha }}" --to "${{ github.event.pull_request.head.sha }}" --verbose
