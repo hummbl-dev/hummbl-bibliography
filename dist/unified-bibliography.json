@@ -1969,6 +1969,84 @@
       "isbn": "978-1-4094-2221-1"
     },
     {
+      "id": "Diaconescu2008InstitutionModelTheory",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institution-independent Model Theory",
+      "author": "Diaconescu, R\\u{a}zvan",
+      "year": "2008",
+      "abstract": "This monograph provides a comprehensive treatment of institution theory and model theory independent of concrete logical systems. Topics include Grothendieck institutions, preservation, axiomatizability, interpolation, and definability, all developed at the institution-abstract level so that results apply uniformly across logics.",
+      "keywords": [
+        "Grothendieck institutions",
+        "institution theory",
+        "interpolation",
+        "model theory"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Birkh\\\"{a}user Basel",
+      "doi": "10.1007/978-3-7643-8708-2",
+      "isbn": "978-3-7643-8708-2",
+      "note": "Peer-reviewed academic monograph (Studies in Universal Logic series)."
+    },
+    {
+      "id": "GoguenBurstall1992Institutions",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institutions: Abstract Model Theory for Specification and Programming",
+      "author": "Goguen, J. A. and Burstall, R. M.",
+      "year": "1992",
+      "abstract": "Institutions are defined as a four-tuple comprising signatures, sentences, models, and a satisfaction relation, together with the satisfaction condition: for any signature morphism, a sentence holds in a reduct model if and only if the translated sentence holds in the original model. The paper proves that this condition captures the invariant notion of truth-preservation across logical systems and establishes institutions as the appropriate level of abstraction for specification and programming semantics.",
+      "keywords": [
+        "abstract model theory",
+        "institution theory",
+        "satisfaction condition",
+        "signature morphisms"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Journal of the ACM",
+      "volume": "39",
+      "number": "1",
+      "pages": "95--146",
+      "doi": "10.1145/147508.147524",
+      "note": "Peer-reviewed journal article (JACM)."
+    },
+    {
+      "id": "GoguenRosu2002InstitutionMorphisms",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institution Morphisms",
+      "author": "Goguen, J. A. and Ro\\c{s}u, G.",
+      "year": "2002",
+      "abstract": "Institution morphisms and comorphisms are introduced as structure-preserving maps between institutions, with a duality between them. Theoroidal variants generalize morphisms to map theories rather than mere signatures. Completeness and cocompleteness results are established for categories of institutions and morphisms, providing the categorical infrastructure for heterogeneous specification.",
+      "keywords": [
+        "comorphisms",
+        "heterogeneous specifications",
+        "institution morphisms",
+        "structure-preserving maps"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Formal Aspects of Computing",
+      "volume": "13",
+      "pages": "274--307",
+      "doi": "10.1007/s001650200013",
+      "note": "Peer-reviewed journal article."
+    },
+    {
       "id": "Gunderson2002Panarchy",
       "type": "book",
       "tier": "T12",
@@ -2475,6 +2553,31 @@
       "url": "https://arxiv.org/abs/2501.12948"
     },
     {
+      "id": "FeitosaDOttaviano2001ConservativeTranslations",
+      "type": "article",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Conservative Translations",
+      "author": "Feitosa, H. A. and D'Ottaviano, I. M. L.",
+      "year": "2001",
+      "abstract": "Conservative translation between logics is introduced as a map that strongly preserves logical consequence. The paper provides necessary and sufficient conditions for a translation to be conservative, establishing the formal criteria under which a translation from one logic to another preserves the consequence relation in both directions.",
+      "keywords": [
+        "conservative translations",
+        "logical consequence",
+        "truth preservation"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Annals of Pure and Applied Logic",
+      "volume": "108",
+      "pages": "205--227",
+      "doi": "10.1016/S0168-0072(00)00046-4",
+      "note": "Peer-reviewed journal article."
+    },
+    {
       "id": "Gemini2024Team",
       "type": "article",
       "tier": "T13",
@@ -2495,6 +2598,32 @@
       "journal": "arXiv preprint arXiv:2312.11805",
       "doi": "10.48550/arXiv.2312.11805",
       "url": "https://arxiv.org/abs/2312.11805"
+    },
+    {
+      "id": "GreenKarvounarakisTannen2007ProvenanceSemirings",
+      "type": "inproceedings",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Provenance Semirings",
+      "author": "Green, T. J. and Karvounarakis, G. and Tannen, V.",
+      "year": "2007",
+      "abstract": "This paper shows that relational algebra calculations for incomplete databases, probabilistic databases, bag semantics, and why-provenance are particular cases of the same general algorithms involving semirings. Polynomials are proposed as a comprehensive provenance representation that subsumes all these instances.",
+      "keywords": [
+        "database",
+        "polynomial representation",
+        "provenance",
+        "semirings"
+      ],
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "PODS 2007",
+      "publisher": "ACM",
+      "pages": "31--40",
+      "doi": "10.1145/1265530.1265535",
+      "note": "Peer-reviewed conference paper (PODS)."
     },
     {
       "id": "Guo2024Critique",
@@ -6532,6 +6661,56 @@
       ]
     },
     {
+      "id": "Aravind2026EpistemicCorrigibility",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems",
+      "author": "Aravind, A. A.",
+      "year": "2026",
+      "abstract": "\"Epistemic corrigibility\" is introduced as the institutional capacity to recognize when AI systems reproduce outdated or epistemically unjust knowledge structures and to revise or replace them. Five institutional design principles are derived: epistemic audit, categorical diversity mandates, epistemic sunset provisions, mandatory human interpretive oversight, and transparency of paradigmatic commitments.",
+      "keywords": [
+        "epistemic audit",
+        "epistemic corrigibility",
+        "institutional design",
+        "sunset provisions"
+      ],
+      "transformations": [
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "doi": "10.5281/zenodo.20262088",
+      "url": "https://doi.org/10.5281/zenodo.20262088",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo."
+    },
+    {
+      "id": "Chen2026CordonSemanticTransactions",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+      "author": "Chen, Z. and others",
+      "year": "2026",
+      "abstract": "Cordon is a transactional runtime for tool-using LLM agents. A \"semantic transaction\" is defined as a task-level execution boundary binding tool intents, result lineage, reversible local state, staged external effects, delegated authority, and audit metadata. The implementation uses a transaction manager with shadow state, an effect outbox, and a recovery log.",
+      "keywords": [
+        "LLM agents",
+        "effect staging",
+        "provenance",
+        "semantic transactions",
+        "transaction boundary"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://arxiv.org/abs/2606.17573",
+      "note": "arXiv preprint; not peer-reviewed. Accepted to EuroSys 2027 per preprint. Provenance: arXiv self-upload."
+    },
+    {
       "id": "Du2023Debate",
       "type": "inproceedings",
       "tier": "T7",
@@ -6817,6 +6996,30 @@
       "url": "https://arxiv.org/abs/2303.11366"
     },
     {
+      "id": "Soares2015Corrigibility",
+      "type": "inproceedings",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Corrigibility",
+      "author": "Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer",
+      "year": "2015",
+      "abstract": "Corrigibility is introduced as the property of agents that cooperate with corrective intervention despite default incentives to resist shutdown or modification. The paper analyzes utility functions for safe shutdown behavior and shows that no proposed utility function satisfies all intuitive desiderata for corrigibility simultaneously.",
+      "keywords": [
+        "AI safety",
+        "corrective intervention",
+        "corrigibility",
+        "shutdown"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "AAAI Workshop on AI Ethics",
+      "pages": "1--12",
+      "note": "Peer-reviewed workshop paper (AAAI)."
+    },
+    {
       "id": "Sumers2024CognitiveArchitectures",
       "type": "inproceedings",
       "tier": "T7",
@@ -7013,6 +7216,30 @@
       "booktitle": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
       "doi": "10.48550/arXiv.2305.10601",
       "url": "https://arxiv.org/abs/2305.10601"
+    },
+    {
+      "id": "Yao2024TauBench",
+      "type": "inproceedings",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "author": "Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik",
+      "year": "2024",
+      "abstract": "$\\tau$-bench is a benchmark that emulates dynamic conversations between a simulated user and a language agent equipped with domain-specific API tools and policy guidelines. Evaluation compares the database state at the end of the conversation against an annotated goal state. The pass$^k$ metric is introduced to measure reliability across multiple independent runs. The benchmark shows that state-of-the-art agents succeed on fewer than 50% of tasks.",
+      "keywords": [
+        "agent benchmark",
+        "policy compliance",
+        "tool-agent-user interaction",
+        "trajectory evaluation"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "ICLR 2025",
+      "url": "https://arxiv.org/abs/2406.12045",
+      "note": "Peer-reviewed conference paper (ICLR 2025). arXiv preprint at https://arxiv.org/abs/2406.12045."
     },
     {
       "id": "Zhou2024LATS",

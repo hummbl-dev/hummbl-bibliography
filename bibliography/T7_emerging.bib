@@ -255,3 +255,56 @@
   annotation = {The argument echoes directly through HUMMBL's design: Base120's six transformations are verbs (perspectivize, invert, compose, decompose, recurse, systematize) that operate on noun-like content to produce new understanding; the framework's power comes precisely from treating thought as process rather than as the manipulation of static concepts. For the emerging-research tier, this work supplies ontological grounding for verb-first cognitive architectures and for agent systems whose intelligence is defined by what they do (transformations) rather than what they store (representations), aligning the hummbl-dev fleet's action-oriented coordination with a process-first metaphysics.},
   keywords = {process ontology, substance ontology, verbs, nouns, Bohm, Whitehead, cosmic lexicon, HUMMBL:SY, HUMMBL:IN, HUMMBL:CO, HUMMBL:DE, HUMMBL:P}
 }
+
+% =============================================================================
+% Grammar of Reality prior-art corpus — added 2026-07-13
+% Agent evaluation, semantic transactions, and corrigibility sources for the
+% grammar-governed interpreter lineage.
+% =============================================================================
+
+@inproceedings{Yao2024TauBench,
+  title     = {{$\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains}},
+  author    = {Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik},
+  year      = {2024},
+  booktitle = {ICLR 2025},
+  url       = {https://arxiv.org/abs/2406.12045},
+  abstract  = {$\tau$-bench is a benchmark that emulates dynamic conversations between a simulated user and a language agent equipped with domain-specific API tools and policy guidelines. Evaluation compares the database state at the end of the conversation against an annotated goal state. The pass$^k$ metric is introduced to measure reliability across multiple independent runs. The benchmark shows that state-of-the-art agents succeed on fewer than 50\% of tasks.},
+  annotation = {For HUMMBL, $\tau$-bench provides a concrete evaluation methodology for grammar-governed agents: multi-turn, tool-using scenarios with policy constraints. The pass$^k$ metric measures reliability relevant to grammar-governed interpretation. Conceptual ancestry only — $\tau$-bench does not test grammar governance specifically.},
+  keywords  = {agent benchmark, tool-agent-user interaction, policy compliance, trajectory evaluation, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE},
+  note      = {Peer-reviewed conference paper (ICLR 2025). arXiv preprint at https://arxiv.org/abs/2406.12045.}
+}
+
+@online{Chen2026CordonSemanticTransactions,
+  title     = {{Cordon: Semantic Transactions for Tool-Using LLM Agents}},
+  author    = {Chen, Z. and others},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2606.17573},
+  abstract  = {Cordon is a transactional runtime for tool-using LLM agents. A "semantic transaction" is defined as a task-level execution boundary binding tool intents, result lineage, reversible local state, staged external effects, delegated authority, and audit metadata. The implementation uses a transaction manager with shadow state, an effect outbox, and a recovery log.},
+  annotation = {For HUMMBL, Cordon provides the architectural pattern for semantic transaction boundaries — defining boundaries within which meaning is preserved and outside of which it may be lost. The lineage tracking and staged effects concepts are relevant to provenance preservation. Conceptual ancestry only.},
+  keywords  = {semantic transactions, LLM agents, transaction boundary, provenance, effect staging, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE, HUMMBL:RE},
+  note      = {arXiv preprint; not peer-reviewed. Accepted to EuroSys 2027 per preprint. Provenance: arXiv self-upload.}
+}
+
+@inproceedings{Soares2015Corrigibility,
+  title     = {Corrigibility},
+  author    = {Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer},
+  year      = {2015},
+  booktitle = {AAAI Workshop on AI Ethics},
+  pages     = {1--12},
+  abstract  = {Corrigibility is introduced as the property of agents that cooperate with corrective intervention despite default incentives to resist shutdown or modification. The paper analyzes utility functions for safe shutdown behavior and shows that no proposed utility function satisfies all intuitive desiderata for corrigibility simultaneously.},
+  annotation = {For HUMMBL, corrigibility provides the foundational concept for the requirement that grammars remain revisable when reality resists. The failure to satisfy all desiderata is itself relevant — it shows grammar correction is non-trivial. Conceptual ancestry only.},
+  keywords  = {corrigibility, AI safety, shutdown, corrective intervention, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE},
+  note      = {Peer-reviewed workshop paper (AAAI).}
+}
+
+@online{Aravind2026EpistemicCorrigibility,
+  title     = {{Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems}},
+  author    = {Aravind, A. A.},
+  year      = {2026},
+  url       = {https://doi.org/10.5281/zenodo.20262088},
+  doi       = {10.5281/zenodo.20262088},
+  abstract  = {"Epistemic corrigibility" is introduced as the institutional capacity to recognize when AI systems reproduce outdated or epistemically unjust knowledge structures and to revise or replace them. Five institutional design principles are derived: epistemic audit, categorical diversity mandates, epistemic sunset provisions, mandatory human interpretive oversight, and transparency of paradigmatic commitments.},
+  annotation = {For HUMMBL, epistemic corrigibility is directly relevant to the requirement that grammars remain corrigible when reality resists. The five design principles could be adapted to grammar systems. Conceptual ancestry only.},
+  keywords  = {epistemic corrigibility, institutional design, epistemic audit, sunset provisions, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE, HUMMBL:P},
+  note      = {Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo.}
+}

@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 345,
+    "total_sources": 354,
     "thematic_tiers": {
       "T1": 33,
       "T2": 20,
@@ -46,20 +46,20 @@
       "T4": 20,
       "T5": 20,
       "T6": 20,
-      "T7": 22,
+      "T7": 26,
       "T8": 21,
       "T9": 20,
       "T10": 20,
       "T11": 20,
-      "T12": 22,
-      "T13": 26
+      "T12": 25,
+      "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 157,
+      "foundational": 160,
       "empirical": 60,
       "applied": 40,
       "governance": 20,
-      "emerging": 68
+      "emerging": 74
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
@@ -67,7 +67,7 @@
     },
     "metadata_debt": {
       "critical": 5,
-      "high": 8,
+      "high": 10,
       "medium": 41,
       "low": 76
     }
@@ -2856,6 +2856,96 @@
       "metadata_debt": []
     },
     {
+      "key": "Diaconescu2008InstitutionModelTheory",
+      "title": "Institution-independent Model Theory",
+      "author": "Diaconescu, R\\u{a}zvan",
+      "year": "2008",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/978-3-7643-8708-2",
+      "has_isbn": true,
+      "isbn": "978-3-7643-8708-2",
+      "journal": null,
+      "keywords": [
+        "Grothendieck institutions",
+        "institution theory",
+        "interpolation",
+        "model theory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "GoguenBurstall1992Institutions",
+      "title": "Institutions: Abstract Model Theory for Specification and Programming",
+      "author": "Goguen, J. A. and Burstall, R. M.",
+      "year": "1992",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/147508.147524",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of the ACM",
+      "keywords": [
+        "abstract model theory",
+        "institution theory",
+        "satisfaction condition",
+        "signature morphisms"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "GoguenRosu2002InstitutionMorphisms",
+      "title": "Institution Morphisms",
+      "author": "Goguen, J. A. and Ro\\c{s}u, G.",
+      "year": "2002",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s001650200013",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Formal Aspects of Computing",
+      "keywords": [
+        "comorphisms",
+        "heterogeneous specifications",
+        "institution morphisms",
+        "structure-preserving maps"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Gunderson2002Panarchy",
       "title": "Panarchy: Understanding Transformations in Human and Natural Systems",
       "author": "Gunderson, Lance H. and Holling, C. S.",
@@ -3558,6 +3648,35 @@
       ]
     },
     {
+      "key": "FeitosaDOttaviano2001ConservativeTranslations",
+      "title": "Conservative Translations",
+      "author": "Feitosa, H. A. and D'Ottaviano, I. M. L.",
+      "year": "2001",
+      "type": "article",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1016/S0168-0072(00)00046-4",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Annals of Pure and Applied Logic",
+      "keywords": [
+        "conservative translations",
+        "logical consequence",
+        "truth preservation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Gemini2024Team",
       "title": "Gemini: A Family of Highly Capable Multimodal Models",
       "author": "{Gemini Team} and {Google}",
@@ -3590,6 +3709,36 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "GreenKarvounarakisTannen2007ProvenanceSemirings",
+      "title": "Provenance Semirings",
+      "author": "Green, T. J. and Karvounarakis, G. and Tannen, V.",
+      "year": "2007",
+      "type": "inproceedings",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/1265530.1265535",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "database",
+        "polynomial representation",
+        "provenance",
+        "semirings"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Guo2024Critique",
@@ -9548,6 +9697,69 @@
       ]
     },
     {
+      "key": "Aravind2026EpistemicCorrigibility",
+      "title": "Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems",
+      "author": "Aravind, A. A.",
+      "year": "2026",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.5281/zenodo.20262088",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "epistemic audit",
+        "epistemic corrigibility",
+        "institutional design",
+        "sunset provisions"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Chen2026CordonSemanticTransactions",
+      "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+      "author": "Chen, Z. and others",
+      "year": "2026",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM agents",
+        "effect staging",
+        "provenance",
+        "semantic transactions",
+        "transaction boundary"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Du2023Debate",
       "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
       "author": "Du, Yilun and Li, Shuang and Torralba, Antonio and Tenenbaum, Joshua B. and Mordatch, Igor",
@@ -9987,6 +10199,42 @@
       ]
     },
     {
+      "key": "Soares2015Corrigibility",
+      "title": "Corrigibility",
+      "author": "Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer",
+      "year": "2015",
+      "type": "inproceedings",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI safety",
+        "corrective intervention",
+        "corrigibility",
+        "shutdown"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "priority_metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "high",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
       "key": "Sumers2024CognitiveArchitectures",
       "title": "Cognitive Architectures for Language Agents",
       "author": "Sumers, Theodore R. and Yao, Shunyu and Narasimhan, Karthik and Griffiths, Thomas L.",
@@ -10264,6 +10512,42 @@
           "field": "arxiv_id",
           "priority": "low",
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Yao2024TauBench",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "author": "Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik",
+      "year": "2024",
+      "type": "inproceedings",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "agent benchmark",
+        "policy compliance",
+        "tool-agent-user interaction",
+        "trajectory evaluation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "priority_metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "high",
+          "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
     },
@@ -11970,6 +12254,26 @@
       "title": "{SLSA}: Supply-chain Levels for Software Artifacts",
       "bibliography_tier": "T11",
       "evidence_tier": "empirical",
+      "field": "doi",
+      "priority": "high",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Soares2015Corrigibility",
+      "title": "Corrigibility",
+      "bibliography_tier": "T7",
+      "evidence_tier": "emerging",
+      "field": "doi",
+      "priority": "high",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Yao2024TauBench",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "bibliography_tier": "T7",
+      "evidence_tier": "emerging",
       "field": "doi",
       "priority": "high",
       "reason": "Paper-like entry should carry a DOI when available.",
