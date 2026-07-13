@@ -13,6 +13,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { normalizeOutboundUrl } from './citation-graph-url-policy.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -407,7 +408,7 @@ function main({ bibDir }) {
     authors: extractAuthors(entry.fields.author),
     year: entry.fields.year || '',
     doi: entry.fields.doi || '',
-    url: entry.fields.url || '',
+    url: normalizeOutboundUrl(entry.fields.url) || '',
     tags: extractHummblTags(entry.fields.keywords || ''),
     file: entry.file,
   }));

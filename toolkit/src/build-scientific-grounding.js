@@ -13,6 +13,7 @@ const INPUTS = {
 };
 
 const OUTPUT = path.join(rootDir, 'dist', 'scientific-grounding-map.json');
+const BIBLIOGRAPHY_DIR = path.join(rootDir, 'bibliography');
 
 const THEMATIC_TIERS = {
   T1: { name: 'Canonical', evidence_tier: 'foundational' },
@@ -45,6 +46,397 @@ const BOOK_LIKE_TYPES = new Set(['book', 'booklet', 'manual']);
 
 function readJson(jsonPath) {
   return JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+}
+
+const HMBL_TAGS = new Set(['P', 'IN', 'CO', 'DE', 'RE', 'SY']);
+
+function asString(value) {
+  return value == null ? '' : String(value).trim();
+}
+
+function pickField(entry, candidates) {
+  const names = Array.isArray(candidates) ? candidates : [candidates];
+  for (const name of names) {
+    if (entry && Object.prototype.hasOwnProperty.call(entry, name)) return entry[name];
+  }
+
+  const keys = Object.keys(entry || {});
+  for (const key of keys) {
+    for (const name of names) {
+      if (key.toLowerCase() === name.toLowerCase()) return entry[key];
+    }
+  }
+  return undefined;
+}
+
+function normalizeKeywordList(value) {
+  if (Array.isArray(value)) {
+    return [...value]
+      .map(item => asString(item).replace(/[{}]/g, '').trim())
+      .filter(Boolean)
+      .sort();
+  }
+
+  if (typeof value !== 'string') return [];
+
+  return value
+    .replace(/[{}]/g, '')
+    .split(',')
+    .map(value => asString(value))
+    .filter(Boolean)
+    .sort();
+}
+
+function isEscaped(text, index) {
+  let escapes = 0;
+  let cursor = index - 1;
+  while (cursor >= 0 && text[cursor] === '\\') {
+    escapes += 1;
+    cursor -= 1;
+  }
+  return escapes % 2 === 1;
+}
+
+function hasBalancedBraces(value) {
+  let depth = 0;
+  for (let i = 0; i < value.length; i++) {
+    const char = value[i];
+    if (char === '{' && !isEscaped(value, i)) depth += 1;
+    if (char === '}' && !isEscaped(value, i)) depth -= 1;
+    if (depth < 0) return false;
+  }
+  return depth === 0;
+}
+
+function normalizeTextValue(value) {
+  let text = asString(value).trim();
+  if (!text) return '';
+
+  while (text.length > 1) {
+    const first = text[0];
+    const last = text[text.length - 1];
+    if ((first === '{' && last === '}') && hasBalancedBraces(text.slice(1, -1))) {
+      text = text.slice(1, -1).trim();
+      continue;
+    }
+
+    if (first === '"' && last === '"') {
+      text = text.slice(1, -1).trim();
+      continue;
+    }
+
+    break;
+  }
+
+  return text
+    .replace(/\s+/g, ' ')
+    .replace(/\\([{}%_#&$])/g, '$1')
+    .trim();
+}
+
+function readBibValue(source, start) {
+  const rawSegment = source.slice(start);
+  const trimmed = rawSegment.trimStart();
+  const offset = rawSegment.length - trimmed.length;
+  let i = start + offset;
+  if (i >= source.length) return { value: '', next: i };
+
+  const first = source[i];
+  if (first === '{') {
+    let depth = 0;
+    for (; i < source.length; i++) {
+      const char = source[i];
+      if (char === '{' && !isEscaped(source, i)) depth += 1;
+      if (char === '}' && !isEscaped(source, i)) {
+        depth -= 1;
+        if (depth === 0) {
+          return { value: source.slice(start + offset, i + 1), next: i + 1 };
+        }
+      }
+    }
+    throw new Error(`Malformed brace-delimited field in bibliography file while parsing "${source.slice(start, start + 80)}..."`);
+  }
+
+  if (first === '"') {
+    for (i += 1; i < source.length; i++) {
+      if (source[i] === '"' && !isEscaped(source, i)) {
+        return { value: source.slice(start + offset, i + 1), next: i + 1 };
+      }
+    }
+    throw new Error(`Malformed quote-delimited field in bibliography file while parsing "${source.slice(start, start + 80)}..."`);
+  }
+
+  while (i < source.length && source[i] !== ',') i += 1;
+  return { value: source.slice(start + offset, i).trim(), next: i };
+}
+
+function parseBibFields(body) {
+  const fields = {};
+  let cursor = 0;
+
+  while (cursor < body.length) {
+    while (cursor < body.length && (/\s|,/.test(body[cursor]))) cursor += 1;
+    if (cursor >= body.length) break;
+    if (body[cursor] === '%') {
+      const nextLine = body.indexOf('\n', cursor);
+      cursor = nextLine < 0 ? body.length : nextLine + 1;
+      continue;
+    }
+
+    const nameMatch = /^[A-Za-z][A-Za-z0-9_-]*/.exec(body.slice(cursor));
+    if (!nameMatch) {
+      cursor += 1;
+      continue;
+    }
+
+    const name = nameMatch[0];
+    cursor += name.length;
+    while (cursor < body.length && /\s/.test(body[cursor])) cursor += 1;
+    if (body[cursor] !== '=') {
+      cursor += 1;
+      continue;
+    }
+
+    cursor += 1;
+    const next = readBibValue(body, cursor);
+    fields[name.toLowerCase()] = normalizeTextValue(next.value);
+    cursor = next.next;
+
+    while (cursor < body.length && body[cursor] !== ',') {
+      if (body[cursor] === '\n') break;
+      if (!/\s/.test(body[cursor])) break;
+      cursor += 1;
+    }
+    if (body[cursor] === ',') cursor += 1;
+  }
+
+  return fields;
+}
+
+function parseBibEntriesFromFile(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const entries = [];
+  const header = /@([A-Za-z][A-Za-z0-9_-]*)\s*\{/g;
+  let headerMatch = header.exec(raw);
+
+  while (headerMatch !== null) {
+    const entryType = headerMatch[1].toLowerCase();
+    const openIndex = headerMatch.index + headerMatch[0].lastIndexOf('{');
+    const keyStart = openIndex + 1;
+    const commaIndex = raw.indexOf(',', keyStart);
+    if (commaIndex === -1) {
+      throw new Error(`Malformed bibliography entry in ${filePath}: missing key delimiter`);
+    }
+
+    const id = asString(raw.slice(keyStart, commaIndex)).trim();
+    if (!id) throw new Error(`Malformed bibliography entry in ${filePath}: empty citation key`);
+
+    let depth = 0;
+    let closeIndex = -1;
+    for (let i = openIndex; i < raw.length; i++) {
+      const char = raw[i];
+      if (char === '{' && !isEscaped(raw, i)) depth += 1;
+      if (char === '}' && !isEscaped(raw, i)) {
+        depth -= 1;
+        if (depth === 0) {
+          closeIndex = i;
+          break;
+        }
+      }
+    }
+
+    if (closeIndex < 0) {
+      throw new Error(`Malformed bibliography entry "${id}" in ${filePath}: missing closing brace`);
+    }
+
+    const body = raw.slice(commaIndex + 1, closeIndex);
+    const fields = parseBibFields(body);
+    if (!Object.prototype.hasOwnProperty.call(fields, 'title')) {
+      throw new Error(`Malformed bibliography entry "${id}" in ${filePath}: missing title`);
+    }
+
+    entries.push({
+      type: entryType,
+      id,
+      fields
+    });
+
+    header.lastIndex = closeIndex + 1;
+    headerMatch = header.exec(raw);
+  }
+
+  if (entries.length === 0) {
+    throw new Error(`No .bib entries found in ${filePath}`);
+  }
+
+  return entries;
+}
+
+function normalizeAuthor(value) {
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  if (Array.isArray(value)) {
+    return value.map(item => normalizeAuthor(item)).filter(Boolean).join(' and ');
+  }
+  if (typeof value === 'object') {
+    if (value.family && value.given) return `${value.family}, ${value.given}`;
+    if (value.family) return value.family;
+    if (value.given) return value.given;
+    if (value.literal) return value.literal;
+  }
+  return asString(value);
+}
+
+function normalizeYear(value, entry) {
+  if (value != null && asString(value) !== '') return asString(value);
+  const issued = pickField(entry, ['issued']);
+  if (issued && Array.isArray(issued['date-parts']) && issued['date-parts'][0]?.length > 0) {
+    return asString(issued['date-parts'][0][0]);
+  }
+  return '';
+}
+
+function tierFromFile(filename) {
+  const m = filename.match(/^(T\d+)_/);
+  return m ? m[1] : 'Unknown';
+}
+
+function normalizeKeywordTags(keywords) {
+  return normalizeKeywordList(keywords)
+    .filter(keyword => !/^HUMMBL:[A-Za-z]{1,2}$/i.test(keyword));
+}
+
+function normalizeTransformationTags(keywords, explicit) {
+  const explicitSet = new Set((explicit || []).map(value => asString(value).toUpperCase()).filter(Boolean));
+  const keywordSet = new Set(
+    normalizeKeywordList(keywords)
+      .map(tag => tag.match(/^HUMMBL:([A-Za-z]{1,2})$/i))
+      .filter(Boolean)
+      .map(match => match[1].toUpperCase())
+  );
+  const merged = new Set([...explicitSet, ...keywordSet].filter(tag => HMBL_TAGS.has(tag)));
+  return [...merged].sort();
+}
+
+function normalizeForGroundingCompare(entry, context) {
+  const tier = asString(context?.tier || pickField(entry, ['tier', 'bibliography_tier']));
+  const tierName = asString(
+    context?.tierName ||
+      pickField(entry, ['tier_name', 'bibliography_tier_name']) ||
+      context?.name
+  );
+  const id = asString(pickField(entry, ['id', 'citation-key']));
+  const type = asString(pickField(entry, ['type'])).toLowerCase().split('-')[0];
+  const title = asString(pickField(entry, ['title']));
+  const author = normalizeAuthor(pickField(entry, ['author']));
+  const year = normalizeYear(pickField(entry, ['year']), entry);
+  const doi = asString(pickField(entry, ['doi', 'DOI']));
+  const abstract = asString(pickField(entry, ['abstract']));
+  const keywordValue = pickField(entry, ['keywords', 'keyword', 'keyw']);
+  const keywords = normalizeKeywordTags(keywordValue);
+  const transformations = normalizeTransformationTags(keywordValue, pickField(entry, ['transformations']));
+
+  return {
+    id,
+    type,
+    title,
+    author,
+    year,
+    doi,
+    abstract,
+    keywords,
+    transformations,
+    tier,
+    tier_name: tierName
+  };
+}
+
+function canonicalString(value) {
+  if (Array.isArray(value)) {
+    return `[${value.map(canonicalString).join(',')}]`;
+  }
+  if (value && typeof value === 'object') {
+    const keys = Object.keys(value).sort();
+    const parts = keys.map(key => `${JSON.stringify(key)}:${canonicalString(value[key])}`);
+    return `{${parts.join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function assertUnifiedBibliographyCurrent(unified) {
+  if (!Array.isArray(unified?.entries)) {
+    throw new Error('dist/unified-bibliography.json is missing the entries array; regenerate it before grounding build/check.');
+  }
+
+  const bibFiles = fs.readdirSync(BIBLIOGRAPHY_DIR).filter(file => file.endsWith('.bib')).sort();
+  const fromBib = new Map();
+
+  for (const file of bibFiles) {
+    const filePath = path.join(BIBLIOGRAPHY_DIR, file);
+    const tier = tierFromFile(file);
+    const tierName = THEMATIC_TIERS[tier]?.name || 'Unknown';
+    const entries = parseBibEntriesFromFile(filePath);
+
+    if (entries.length === 0) {
+      throw new Error(`No valid entries found in ${file} while validating unified bibliography parity`);
+    }
+
+    for (const entry of entries) {
+      const canonicalEntry = normalizeForGroundingCompare(
+        {
+          ...entry.fields,
+          id: entry.id,
+          type: entry.type
+        },
+        {
+          tier,
+          tierName
+        }
+      );
+      const key = canonicalEntry.id;
+      if (fromBib.has(key)) {
+        throw new Error(`Duplicate citation key ${key} found between canonical BibTeX sources`);
+      }
+      fromBib.set(key, canonicalEntry);
+    }
+  }
+
+  const fromUnified = new Map();
+
+  for (const entry of unified.entries) {
+    const key = asString(entry.id);
+    if (!key) {
+      throw new Error('dist/unified-bibliography.json contains an entry without an id; regenerate it before grounding build/check.');
+    }
+    if (fromUnified.has(key)) {
+      throw new Error(`dist/unified-bibliography.json contains a duplicate id ${key}`);
+    }
+    fromUnified.set(
+      key,
+      normalizeForGroundingCompare(entry, {
+        tier: entry.tier || entry.bibliography_tier,
+        tierName: entry.tier_name || entry.bibliography_tier_name
+      })
+    );
+  }
+
+  if (fromBib.size !== fromUnified.size) {
+    throw new Error('dist/unified-bibliography.json is stale relative to bibliography/**/*.bib; regenerate the normalized export before grounding build/check.');
+  }
+
+  for (const [key, expectedEntry] of fromBib) {
+    const unifiedEntry = fromUnified.get(key);
+    if (!unifiedEntry) {
+      throw new Error(`dist/unified-bibliography.json is stale: missing canonical entry ${key}; regenerate the normalized export before grounding build/check.`);
+    }
+    if (canonicalString(expectedEntry) !== canonicalString(unifiedEntry)) {
+      throw new Error(`dist/unified-bibliography.json is stale or mismatched for entry ${key}; regenerate the normalized export before grounding build/check.`);
+    }
+  }
+
+  if (fromUnified.size !== fromBib.size) {
+    throw new Error('dist/unified-bibliography.json is stale relative to bibliography/**/*.bib; regenerate the normalized export before grounding build/check.');
+  }
 }
 
 function isObject(value) {
@@ -196,6 +588,7 @@ function sortDebtPriority(priority) {
 
 function buildOutput() {
   const unified = readJson(INPUTS.unifiedBibliography);
+  assertUnifiedBibliographyCurrent(unified);
   const bkiEvidence = readJson(INPUTS.bkiEvidence);
   const arcanaCitations = readJson(INPUTS.arcanaCitations);
   const refsByKey = collectGroundingRefs(bkiEvidence, arcanaCitations);
@@ -307,11 +700,29 @@ function checkOutput(output) {
   console.log(`✓ Scientific grounding export is current (${path.relative(rootDir, OUTPUT)})`);
 }
 
-const output = buildOutput();
+const isScript = process.argv[1] === fileURLToPath(import.meta.url);
+if (isScript) {
+  const output = buildOutput();
 
-if (process.argv.includes('--check')) {
-  checkOutput(output);
-} else {
-  writeOutput(output);
-  console.log(`Wrote ${path.relative(rootDir, OUTPUT)}`);
+  if (process.argv.includes('--check')) {
+    checkOutput(output);
+  } else {
+    writeOutput(output);
+    console.log(`Wrote ${path.relative(rootDir, OUTPUT)}`);
+  }
 }
+
+export {
+  parseBibEntriesFromFile,
+  normalizeForGroundingCompare,
+  normalizeAuthor,
+  normalizeYear,
+  normalizeKeywordTags,
+  normalizeTransformationTags,
+  normalizeKeywordList,
+  tierFromFile,
+  asString,
+  pickField,
+  THEMATIC_TIERS,
+  BIBLIOGRAPHY_DIR,
+};

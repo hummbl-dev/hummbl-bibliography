@@ -32,6 +32,7 @@ class DuplicateChecker {
     this.titleMap = new Map(); // normalized title -> entries
     this.doiMap = new Map(); // DOI -> entries
     this.isbnMap = new Map(); // ISBN -> entries
+    this.loadErrors = [];
   }
 
   normalizeTitle(title) {
@@ -54,6 +55,10 @@ class DuplicateChecker {
       const content = fs.readFileSync(filepath, 'utf8');
       const citation = new Cite(content, { forceType: '@bibtex/text' });
       const entries = citation.data;
+
+      if (!Array.isArray(entries) || entries.length === 0) {
+        throw new Error('No valid BibTeX entries found');
+      }
 
       console.log(chalk.blue(`  Found ${entries.length} entries`));
 
@@ -102,7 +107,8 @@ class DuplicateChecker {
       return entries.length;
     } catch (err) {
       console.error(chalk.red(`  ❌ Error loading ${filename}: ${err.message}`));
-      return 0;
+      this.loadErrors.push(`${filename}: ${err.message}`);
+      throw new Error(`Unable to parse ${filename}: ${err.message}`);
     }
   }
 
@@ -190,8 +196,7 @@ class DuplicateChecker {
       .map(f => path.join(this.bibDir, f));
 
     if (bibFiles.length === 0) {
-      console.log(chalk.red('\n❌ No .bib files found in ' + this.bibDir));
-      process.exit(1);
+      throw new Error('No .bib files found in ' + this.bibDir);
     }
 
     // Load all files

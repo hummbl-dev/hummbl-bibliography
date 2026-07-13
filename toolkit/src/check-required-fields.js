@@ -23,7 +23,22 @@ const REQUIRED_FIELDS = {
 const DEFAULT_REQUIRED_FIELDS = ['title', 'author', 'year'];
 
 function parseBibFile(filepath) {
-  const content = fs.readFileSync(filepath, 'utf8');
+  let content;
+
+  try {
+    content = fs.readFileSync(filepath, 'utf8');
+  } catch (error) {
+    throw new Error(`Unable to read ${filepath}: ${error.message}`);
+  }
+
+  if (!content.trim()) {
+    throw new Error(`No valid BibTeX content found in ${filepath}`);
+  }
+
+  if (!/@\w+\s*\{/.test(content)) {
+    throw new Error(`No valid BibTeX entries found in ${filepath}`);
+  }
+
   const entries = {};
   const entryRegex = /@(\w+)\{([^,]+),([\s\S]*?)(?=\n\})/g;
   let match;
@@ -43,6 +58,10 @@ function parseBibFile(filepath) {
     }
 
     entries[key] = { type, fields };
+  }
+
+  if (Object.keys(entries).length === 0) {
+    throw new Error(`No valid BibTeX entries found in ${filepath}`);
   }
 
   return entries;
@@ -68,8 +87,8 @@ const bibFiles = fs.readdirSync(bibPath)
   .map(file => path.join(bibPath, file));
 
 if (bibFiles.length === 0) {
-  console.error(chalk.yellow(`No .bib files found in ${bibPath}`));
-  process.exit(0);
+  console.error(chalk.red(`No .bib files found in ${bibPath}`));
+  process.exit(1);
 }
 
 let hasErrors = false;
@@ -114,7 +133,7 @@ for (const file of bibFiles) {
 }
 
 // Generate report
-if (missingFieldsReport.length > 0) {
+if (missingFieldsReport.length > 0 || hasErrors) {
   console.log(chalk.bold('\n❌ Missing Required Fields:'));
   console.log('='.repeat(80));
 
@@ -126,9 +145,13 @@ if (missingFieldsReport.length > 0) {
   });
 
   console.log('\n' + '='.repeat(80));
-  console.log(chalk.red.bold(`\nFound ${missingFieldsReport.length} entries with missing required fields`));
+  if (missingFieldsReport.length > 0) {
+    console.log(chalk.red.bold(`\nFound ${missingFieldsReport.length} entries with missing required fields`));
+  } else {
+    console.log(chalk.red.bold('\nInput processing failed; no valid entries were evaluated'));
+  }
 
-  if (options.failOnMissing) {
+  if (hasErrors || options.failOnMissing) {
     process.exit(1);
   }
 } else {

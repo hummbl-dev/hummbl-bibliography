@@ -9,10 +9,13 @@
     "validate:ci": "npm --prefix toolkit run validate:ci",
     "check-dups": "npm --prefix toolkit run check-dups",
     "check-required-fields": "npm --prefix toolkit run check-required-fields",
+    "find-dois": "npm --prefix toolkit run find-dois",
+    "keywords": "npm --prefix toolkit run keywords",
     "stats": "npm --prefix toolkit run stats",
     "stats:json": "npm --prefix toolkit run stats:json",
     "grounding:build": "npm --prefix toolkit run grounding:build",
     "grounding:check": "npm --prefix toolkit run grounding:check",
+    "generate-unified": "npm --prefix toolkit run generate-unified",
     "lint": "npm --prefix toolkit run lint --if-present"
   },
   "repository": {
