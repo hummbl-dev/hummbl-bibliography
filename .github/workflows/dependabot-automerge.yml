@@ -19,7 +19,7 @@ permissions:
 jobs:
   auto-merge:
     name: Merge verified Dependabot PRs
-    runs-on: ubuntu-latest
+    runs-on: self-hosted, Linux, X64, wsl, bibliography
     steps:
       - name: Evaluate and squash-merge eligible PRs
         uses: actions/github-script@v9
