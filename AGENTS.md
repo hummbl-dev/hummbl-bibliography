@@ -4,7 +4,7 @@
 **hummbl-bibliography** — HUMMBL Bibliography: provenance corpus, BibTeX citations, and position papers for Base120, HCC, BKI, and AI governance research. 260 curated academic works across 13 thematic tiers, mapped to 6 cognitive transformations. TeX/BibTeX + Node.js toolkit, MIT.
 
 ## Scope
-- In scope: Bibliography management system with 260 entries across 13 tiers (Canonical, Empirical, Applied, Agentic, Engineering, Governance, Emerging, Cognition, Economics, Collaboration, Security, Complexity, Reasoning). BibTeX source files, validation toolkit, DOI enrichment, duplicate detection, HUMMBL transformation keyword extraction, statistics reporting.
+- In scope: Bibliography management system with 260 entries across 13 tiers (verify: `find bibliography -name '*.bib' -exec grep '@' {} \; | wc -l` entries, `find bibliography -name '*.bib' | wc -l` tiers) — Canonical, Empirical, Applied, Agentic, Engineering, Governance, Emerging, Cognition, Economics, Collaboration, Security, Complexity, Reasoning. BibTeX source files, validation toolkit, DOI enrichment, duplicate detection, HUMMBL transformation keyword extraction, statistics reporting.
 - Out of scope: Runtime reasoning engine, agent orchestration, governance enforcement. This is a provenance and citation corpus.
 
 ## Setup
@@ -28,7 +28,7 @@ npm run find-dois     # Find missing DOIs
 ## Conventions
 - BibTeX is the canonical source format; entries in `bibliography/` directory
 - Each entry requires: abstract (150–300 words), HUMMBL transformation tags (P, IN, CO, DE, RE, SY)
-- 13 thematic tiers, 20 entries each
+- 13 thematic tiers, 20 entries each (current: verify with `for tier in bibliography/T*.bib; do echo "$tier: $(grep -c '@' "$tier")"; done`)
 - Mappings in `mappings/`; sources in `sources/`; reports in `reports/`
 - Commit format: Conventional Commits
 - Branch naming: `type/agent/short-desc`
