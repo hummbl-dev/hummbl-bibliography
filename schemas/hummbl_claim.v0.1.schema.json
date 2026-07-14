@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hummbl-dev/hummbl-bibliography/main/schemas/hummbl_claim.v0.1.schema.json",
+  "title": "HUMMBL Atomic Claim v0.1",
+  "description": "Schema for a single atomic HUMMBL claim — the smallest unit of propositional content that can be independently sourced, evaluated, and cited.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "registry_id",
+    "registry_status",
+    "last_reviewed_at",
+    "claim_domains",
+    "evidence_tiers",
+    "claims",
+    "generated_counts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "hummbl_claim.v0.1"
+    },
+    "registry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registry_status": {
+      "enum": ["candidate", "validated", "promoted_with_scope", "retired"]
+    },
+    "last_reviewed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "claim_domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["code", "title", "description"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": ["BKI", "BIO", "BRO", "CON", "OPS", "ARC"]
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_tiers": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["code", "title", "description"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "established",
+              "peer_reviewed",
+              "theoretical",
+              "heuristic",
+              "aspirational",
+              "unvalidated",
+              "operational",
+              "constitutional"
+            ]
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "domain",
+          "claim_text",
+          "evidence_tier",
+          "canonical_source",
+          "source_quote",
+          "claim_nature",
+          "extracted_at",
+          "extracted_by"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^(BKI|BIO|BRO|CON|OPS|ARC)-[A-Z0-9_-]+$",
+            "minLength": 1
+          },
+          "domain": {
+            "type": "string",
+            "enum": ["BKI", "BIO", "BRO", "CON", "OPS", "ARC"]
+          },
+          "claim_text": {
+            "type": "string",
+            "minLength": 10,
+            "description": "The atomic claim, stated as a single testable proposition."
+          },
+          "evidence_tier": {
+            "type": "string",
+            "enum": [
+              "established",
+              "peer_reviewed",
+              "theoretical",
+              "heuristic",
+              "aspirational",
+              "unvalidated",
+              "operational",
+              "constitutional"
+            ]
+          },
+          "canonical_source": {
+            "type": "object",
+            "required": ["file_path", "status"],
+            "properties": {
+              "file_path": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Repository-relative or absolute path to the canonical source file."
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "canonical",
+                  "draft",
+                  "approved",
+                  "candidate",
+                  "specification",
+                  "concept_instrument",
+                  "operational"
+                ]
+              },
+              "version": {
+                "type": "string",
+                "description": "Version string if stated in the source."
+              },
+              "date": {
+                "type": "string",
+                "description": "Date or version date if stated in the source."
+              }
+            },
+            "additionalProperties": false
+          },
+          "source_quote": {
+            "type": "string",
+            "minLength": 5,
+            "description": "Verbatim quote from the canonical source that grounds this claim."
+          },
+          "claim_nature": {
+            "type": "string",
+            "enum": [
+              "established_fact",
+              "theory",
+              "heuristic",
+              "aspiration",
+              "constitutional_invariant",
+              "operational_protocol",
+              "concept_instrument",
+              "design_claim"
+            ],
+            "description": "How the claim is stated in the source — fact, theory, heuristic, aspiration, invariant, protocol, or design claim."
+          },
+          "supporting_sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["file_path"],
+              "properties": {
+                "file_path": { "type": "string", "minLength": 1 },
+                "relationship": {
+                  "type": "string",
+                  "enum": ["corroborates", "extends", "contradicts", "contextualizes"]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "bibliography_keys": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "BibTeX citation keys from the HUMMBL Bibliography that support this claim, if known."
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["severity", "description"],
+              "properties": {
+                "severity": {
+                  "type": "string",
+                  "enum": ["low", "medium", "high", "critical"]
+                },
+                "description": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            },
+            "description": "Known risks: overstatement, unsupported assertion, contradiction with other claims, etc."
+          },
+          "unresolved": {
+            "type": "boolean",
+            "default": false,
+            "description": "True if this claim has unresolved questions, contradictions, or gaps that require Phase -1B adjudication."
+          },
+          "extracted_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "extracted_by": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Optional extraction notes, caveats, or cross-references."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "generated_counts": {
+      "type": "object",
+      "required": ["total_claims", "by_domain", "by_evidence_tier"],
+      "properties": {
+        "total_claims": { "type": "integer", "minimum": 0 },
+        "by_domain": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "by_evidence_tier": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "unresolved_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
