@@ -1,6 +1,6 @@
 # SITREP: HUMMBL Bibliography Repository
 
-**Generated**: 2026-04-09
+**Generated**: 2026-07-16
 **Location**: `PROJECTS/hummbl-bibliography/`
 
 ---
@@ -8,25 +8,25 @@
 ## Current Status
 
 ### Repository Health
-- **Validation**: 0 errors, 21 warnings (all warnings are missing DOIs/ISBNs)
+- **Validation**: 0 errors, 62 warnings (all warnings are missing DOIs/ISBNs)
 - **Duplicates**: 0 (resolved 9 cross-tier duplicates in this audit)
 - **Pre-commit Hooks**: Configured and active
-- **CI/CD**: GitHub Actions workflow operational
+- **CI/CD**: GitHub Actions execution currently unverified; see blockers below
 
 ### Corpus Metrics
-- **Total Entries**: 260 (13 tiers x 20 entries)
-- **DOI Coverage**: 184/260 (70.8%)
-- **ISBN Coverage**: 72/260 (27.7%)
-- **Abstract Coverage**: 260/260 (100%)
-- **HUMMBL Keyword Coverage**: 260/260 (100%)
+- **Total Entries**: 321 across 19 canonical BibTeX files
+- **DOI Coverage**: 185/321 (57.6%)
+- **ISBN Coverage**: 72/321 (22.4%)
+- **Abstract Coverage**: 321/321 (100%)
+- **HUMMBL Keyword Coverage**: 321/321 (100%)
 
 | Metric | Value |
 |--------|-------|
-| Total entries | **260** (20 × 13 tiers) |
-| Tiers | 13 (T1–T13) |
-| Entries with DOIs | 184 (70.8% overall) |
+| Total entries | **321** (19 canonical BibTeX files) |
+| Thematic tiers | 13 legacy tiers plus extended corpus files |
+| Entries with DOIs | 185 (57.6% overall) |
 | T7 DOI coverage | **20/20 (100%)** |
-| T13 DOI coverage | **13/20 (65%)** (arXiv papers) |
+| T13 DOI coverage | Current tier-level metric should be regenerated from stats |
 | T1 DOI coverage | 6/20 (30%) |
 | T3 DOI coverage | 0/20 (all trade books; annotated) |
 | T5 DOI coverage | 7/20 (35%) |
@@ -63,7 +63,7 @@ Overall grade B-. Critical missing: `Edmondson1999PsychologicalSafety`.
 ### ✅ Open Brain Ingest Script
 `scripts/ingest_to_open_brain.py` — stdlib-only; `--dry-run` (default) or `--post` to live.
 
-### ✅ llms.txt Updated to 260 entries
+### ⚠️ llms.txt requires regeneration against the 321-entry corpus
 AI-readable index regenerated to include T13; now 1,100+ lines.
 
 ### ✅ DOI Audit: All 240 pre-T13 Entries Complete

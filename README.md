@@ -1,14 +1,14 @@
 # HUMMBL Bibliography
 
-![Total Entries](https://img.shields.io/badge/entries-260-blue)
-![DOI Coverage](https://img.shields.io/badge/DOIs-71%25-yellowgreen)
-![ISBN Coverage](https://img.shields.io/badge/ISBNs-28%25-yellow)
+![Total Entries](https://img.shields.io/badge/entries-321-blue)
+![DOI Coverage](https://img.shields.io/badge/DOIs-58%25-yellowgreen)
+![ISBN Coverage](https://img.shields.io/badge/ISBNs-22%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
 
-A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 260 curated academic and practitioner works organized into 13 thematic tiers, mapped to 6 cognitive transformations.
+A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 321 curated academic and practitioner works across 19 canonical BibTeX files, including the original 13 thematic tiers, mapped to 6 cognitive transformations.
 
 Learn more at [hummbl.io](https://hummbl.io).
 
@@ -27,7 +27,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 
 ## 📚 Bibliography Structure
 
-### Thirteen Thematic Tiers (20 entries each)
+### Thematic Tiers
 
 | Tier | Domain | Examples |
 |------|--------|----------|
@@ -45,7 +45,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 | **T12: Complexity** | Complex adaptive systems | Holland, Kauffman, networks, cybernetics |
 | **T13: Reasoning** | Advanced reasoning systems | o-series model cards, AlphaCode, Claude |
 
-All 260 entries have abstracts (150-300 words) and HUMMBL transformation tags.
+All 321 validated entries have abstracts (150-300 words) and HUMMBL transformation tags.
 
 ## 🚀 Quick Start
 
@@ -95,9 +95,9 @@ npm test
 
 ## 📊 Current Metrics
 
-Based on latest analysis (April 2026):
+Based on the validated corpus as of July 16, 2026:
 
-- **Total Entries**: 260 unique works across 13 tiers
+- **Total Entries**: 321 unique works across 19 canonical BibTeX files
 - **Transformation Coverage** (tag count across all entries):
   - SY (Synthesis): 132
   - P (Perspective): 120
@@ -108,8 +108,8 @@ Based on latest analysis (April 2026):
 - **Quality Metrics**:
   - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
-  - 70.8% have DOIs (184/260)
-  - 27.7% have ISBNs (72/260)
+  - 57.6% have DOIs (185/321)
+  - 22.4% have ISBNs (72/321)
   - 0 validation errors, 0 duplicates
 
 ## 🔄 HUMMBL Transformation Mapping

@@ -1,24 +1,24 @@
 # CI Health — hummbl-dev/hummbl-bibliography
 
-Last updated: 2026-06-19
+Last updated: 2026-07-16
 
 ## Known Issues
 
-### 1. npm Audit Blocking Dependabot Updates (priority-0.4)
-- **Workflow affected:** `ci.yml` — "Lint / Test / Audit" job
-- **Symptom:** `npm audit --omit=dev --audit-level=high` fails the entire CI, blocking Dependabot security PRs
-- **Root cause:** Bibliography toolkit CI has a hard failure on any high-severity npm advisory
-- **Status:** PR #65 makes the audit step non-blocking (`continue-on-error: true`) with warning annotations
-- **Action needed:** Merge PR #65
+### Current blockers
 
-## Recently Fixed
-- PR #65 created — makes npm audit non-blocking for non-production toolkit
+- GitHub Actions execution/billing is degraded; affected runs must be treated as unverified.
+- The registered self-hosted runner `wsl-bib` is offline for non-pull-request workflows.
+- Security-audit artifact storage is exhausted, so audit artifacts cannot currently be retained.
+- The validation workflow will fail until the README entry badge matches generated statistics (currently 321).
+
+## Recently fixed
+- npm audit is now non-blocking in `ci.yml` (`continue-on-error: true`); high-severity findings remain visible as warnings.
 
 ## CI Workflows
 | Workflow | Status | Notes |
 |----------|--------|-------|
-| `ci.yml` | Partial failure | npm audit blocks Dependabot bumps |
-| `security-audit.yml` | Unknown | Not recently checked |
-| `validate.yml` | Unknown | Not recently checked |
+| `ci.yml` | Unverified | Actions execution/billing outage; local test suite passes |
+| `security-audit.yml` | Blocked | Artifact storage quota exhausted; runner unavailable for non-PR events |
+| `validate.yml` | Expected failure | README badge count is stale: 260 vs generated total 321 |
 
 Generated with [Devin](https://devin.ai)
