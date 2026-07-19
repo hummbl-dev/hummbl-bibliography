@@ -226,3 +226,85 @@
   abstract = {This paper proposes CoALA (Cognitive Architectures for Language Agents), a conceptual framework that organizes the design space of language agent architectures by drawing on cognitive science principles. CoALA decomposes agents into three components: memory (working memory for in-context state, episodic memory for past experiences, semantic memory for world knowledge, and procedural memory for action policies), action space (internal actions like reasoning and retrieval, and external actions like tool use and communication), and decision-making (how the agent selects among actions, ranging from simple prompting to learned policies to explicit planning). The framework reveals that most existing language agents implement narrow subsets of this design space and identifies underexplored combinations -- such as agents with learned retrieval policies over episodic memory, or agents that use planning over internal reasoning actions. CoALA provides a systematic vocabulary for comparing architectures: ReAct uses working memory with alternating internal-external actions, Voyager adds procedural memory for skill accumulation, and MemGPT implements explicit memory management. For hummbl-dev, the CoALA taxonomy maps precisely to the Cognitive Ledger Protocol architecture: the CLP's five memory pools (ledger, bus, briefings, findings, MEMORY.md) implement episodic, semantic, and working memory; the seven adapters implement the external action space; and the scheduler/sprint-recommender implements the decision-making module.},
   keywords = {cognitive architecture, language agents, memory systems, HUMMBL:P, HUMMBL:DE, HUMMBL:CO}
 }
+
+% =============================================================================
+% Grammar of Reality prior-art corpus — added 2026-07-13
+% Emerging ontology frameworks using the "grammar of reality" framing.
+% =============================================================================
+
+@online{URM2StructuralGrammar2025,
+  title  = {{URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)}},
+  author = {{URM$^2$ Working Group}},
+  year   = {2025},
+  publisher = {Zenodo},
+  doi    = {10.5281/zenodo.17741588},
+  note = {Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by URM² Working Group.},
+  abstract = {This preprint introduces URM$^2$, a verb-first, resonance-driven framework that posits a structural grammar of reality built from generative primitives --- Potential, Process, Density, Identity, and Observation --- combined by invariant grammatical rules that make physical entities possible. Where substance ontologies begin with things, URM$^2$ begins with verbs (processes) and derives nouns (entities) as stable resonance patterns within those processes. The V12.1 update formalizes the grammar's invariant rules and demonstrates how identity and apparency emerge from density gradients under observation. The framework is explicitly structural rather than metaphorical: its grammar is claimed to be scale-invariant, applying from quantum events to cosmological structures.},
+  annotation = {For HUMMBL, URM$^2$ is a strong emerging-ontology ally: its verb-first orientation mirrors Base120's treatment of cognitive transformations as operations (verbs) that act on content (nouns), and its generative primitives map closely onto the P/IN/CO/DE/RE/SY transformations as the grammar by which any system --- physical, cognitive, or computational --- is composed and decomposed. As an emerging framework on Zenodo, it represents the frontier where systems thinking, process metaphysics, and structural grammar converge, exactly the territory HUMMBL is designed to navigate.},
+  keywords = {URM2, structural grammar, verb-noun ontology, process ontology, resonance, generative primitives, identity, density, apparency, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE, HUMMBL:P, HUMMBL:RE}
+}
+
+@online{GrammarOfReality2025NounsToVerbs,
+  title  = {The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon},
+  author = {{Grammar of Reality Project}},
+  year   = {2025},
+  publisher = {Zenodo},
+  doi    = {10.5281/zenodo.15829350},
+  note = {Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by "Grammar of Reality Project."},
+  abstract = {This preprint argues for a decisive shift from substance ontology (a world described primarily by nouns --- things, particles, objects) to process ontology (a world described primarily by verbs --- events, interactions, transformations) in accounting for physical reality. Drawing on Bohm's implicate order and Whitehead's process philosophy, the authors contend that what we call ``things'' are stabilized patterns of activity, and that the grammar of physics should reflect this by leading with process and deriving entity-hood as a derived, relational property. The paper develops a ``cosmic lexicon'' in which verbs are primitive and nouns are shorthand for recurring verb-patterns.},
+  annotation = {The argument echoes directly through HUMMBL's design: Base120's six transformations are verbs (perspectivize, invert, compose, decompose, recurse, systematize) that operate on noun-like content to produce new understanding; the framework's power comes precisely from treating thought as process rather than as the manipulation of static concepts. For the emerging-research tier, this work supplies ontological grounding for verb-first cognitive architectures and for agent systems whose intelligence is defined by what they do (transformations) rather than what they store (representations), aligning the hummbl-dev fleet's action-oriented coordination with a process-first metaphysics.},
+  keywords = {process ontology, substance ontology, verbs, nouns, Bohm, Whitehead, cosmic lexicon, HUMMBL:SY, HUMMBL:IN, HUMMBL:CO, HUMMBL:DE, HUMMBL:P}
+}
+
+% =============================================================================
+% Grammar of Reality prior-art corpus — added 2026-07-13
+% Agent evaluation, semantic transactions, and corrigibility sources for the
+% grammar-governed interpreter lineage.
+% =============================================================================
+
+@inproceedings{Yao2024TauBench,
+  title     = {{$\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains}},
+  author    = {Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik},
+  year      = {2024},
+  booktitle = {ICLR 2025},
+  url       = {https://arxiv.org/abs/2406.12045},
+  abstract  = {$\tau$-bench is a benchmark that emulates dynamic conversations between a simulated user and a language agent equipped with domain-specific API tools and policy guidelines. Evaluation compares the database state at the end of the conversation against an annotated goal state. The pass$^k$ metric is introduced to measure reliability across multiple independent runs. The benchmark shows that state-of-the-art agents succeed on fewer than 50\% of tasks.},
+  annotation = {For HUMMBL, $\tau$-bench provides a concrete evaluation methodology for grammar-governed agents: multi-turn, tool-using scenarios with policy constraints. The pass$^k$ metric measures reliability relevant to grammar-governed interpretation. Conceptual ancestry only — $\tau$-bench does not test grammar governance specifically.},
+  keywords  = {agent benchmark, tool-agent-user interaction, policy compliance, trajectory evaluation, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE},
+  note      = {Peer-reviewed conference paper (ICLR 2025). arXiv preprint at https://arxiv.org/abs/2406.12045.}
+}
+
+@online{Chen2026CordonSemanticTransactions,
+  title     = {{Cordon: Semantic Transactions for Tool-Using LLM Agents}},
+  author    = {Chen, Z. and others},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2606.17573},
+  abstract  = {Cordon is a transactional runtime for tool-using LLM agents. A "semantic transaction" is defined as a task-level execution boundary binding tool intents, result lineage, reversible local state, staged external effects, delegated authority, and audit metadata. The implementation uses a transaction manager with shadow state, an effect outbox, and a recovery log.},
+  annotation = {For HUMMBL, Cordon provides the architectural pattern for semantic transaction boundaries — defining boundaries within which meaning is preserved and outside of which it may be lost. The lineage tracking and staged effects concepts are relevant to provenance preservation. Conceptual ancestry only.},
+  keywords  = {semantic transactions, LLM agents, transaction boundary, provenance, effect staging, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE, HUMMBL:RE},
+  note      = {arXiv preprint; not peer-reviewed. Accepted to EuroSys 2027 per preprint. Provenance: arXiv self-upload.}
+}
+
+@inproceedings{Soares2015Corrigibility,
+  title     = {Corrigibility},
+  author    = {Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer},
+  year      = {2015},
+  booktitle = {AAAI Workshop on AI Ethics},
+  pages     = {1--12},
+  abstract  = {Corrigibility is introduced as the property of agents that cooperate with corrective intervention despite default incentives to resist shutdown or modification. The paper analyzes utility functions for safe shutdown behavior and shows that no proposed utility function satisfies all intuitive desiderata for corrigibility simultaneously.},
+  annotation = {For HUMMBL, corrigibility provides the foundational concept for the requirement that grammars remain revisable when reality resists. The failure to satisfy all desiderata is itself relevant — it shows grammar correction is non-trivial. Conceptual ancestry only.},
+  keywords  = {corrigibility, AI safety, shutdown, corrective intervention, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE},
+  note      = {Peer-reviewed workshop paper (AAAI).}
+}
+
+@online{Aravind2026EpistemicCorrigibility,
+  title     = {{Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems}},
+  author    = {Aravind, A. A.},
+  year      = {2026},
+  url       = {https://doi.org/10.5281/zenodo.20262088},
+  doi       = {10.5281/zenodo.20262088},
+  abstract  = {"Epistemic corrigibility" is introduced as the institutional capacity to recognize when AI systems reproduce outdated or epistemically unjust knowledge structures and to revise or replace them. Five institutional design principles are derived: epistemic audit, categorical diversity mandates, epistemic sunset provisions, mandatory human interpretive oversight, and transparency of paradigmatic commitments.},
+  annotation = {For HUMMBL, epistemic corrigibility is directly relevant to the requirement that grammars remain corrigible when reality resists. The five design principles could be adapted to grammar systems. Conceptual ancestry only.},
+  keywords  = {epistemic corrigibility, institutional design, epistemic audit, sunset provisions, HUMMBL:SY, HUMMBL:DE, HUMMBL:RE, HUMMBL:P},
+  note      = {Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo.}
+}

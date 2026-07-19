@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hummbl-dev/hummbl-bibliography/main/schemas/bibliography-schema-registry-v0.1.schema.json",
+  "title": "HUMMBL Bibliography Schema Registry v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "registry_id",
+    "registry_status",
+    "last_reviewed_at",
+    "categories",
+    "records",
+    "generated_counts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "bibliography_schema_registry.v0.1"
+    },
+    "registry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registry_status": {
+      "enum": [
+        "candidate",
+        "validated",
+        "promoted_with_scope",
+        "retired"
+      ]
+    },
+    "last_reviewed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "description"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "aliases",
+          "category",
+          "kind",
+          "scope",
+          "governing_body",
+          "parent_family",
+          "representation_model",
+          "serializations",
+          "validation_artifacts",
+          "current_version",
+          "lifecycle_status",
+          "introduced",
+          "supersedes",
+          "superseded_by",
+          "official_homepage",
+          "specification_urls",
+          "source_accessed_at",
+          "citation_record_support",
+          "reference_list_support",
+          "authority_data_support",
+          "provenance_support",
+          "relationship_support",
+          "round_trip_status",
+          "related_schemas",
+          "notes",
+          "evidence_status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "conceptual_model",
+              "cataloging_rule",
+              "record_schema",
+              "exchange_format",
+              "metadata_schema",
+              "ontology_vocabulary",
+              "application_profile",
+              "style_rule",
+              "protocol",
+              "identifier_system",
+              "adjacent_schema",
+              "container_or_bundle",
+              "registration_schema"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "governing_body": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parent_family": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "representation_model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "serializations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "validation_artifacts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "current_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lifecycle_status": {
+            "enum": [
+              "candidate",
+              "active",
+              "legacy",
+              "superseded",
+              "vendor_controlled",
+              "style_rule",
+              "protocol",
+              "identifier_system",
+              "experimental",
+              "unverified"
+            ]
+          },
+          "introduced": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supersedes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "superseded_by": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "official_homepage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "specification_urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "source_accessed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "citation_record_support": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "reference_list_support": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "authority_data_support": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "provenance_support": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "relationship_support": {
+            "enum": [
+              "yes",
+              "partial",
+              "no",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "round_trip_status": {
+            "enum": [
+              "not_assessed",
+              "lossless_claimed",
+              "lossy",
+              "mixed",
+              "unknown"
+            ]
+          },
+          "related_schemas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "notes": {
+            "type": "string"
+          },
+          "evidence_status": {
+            "enum": [
+              "preserved_from_taxonomy_doc",
+              "candidate_seed",
+              "verified_primary_source",
+              "partial_primary_source",
+              "needs_authoritative_source"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "generated_counts": {
+      "type": "object",
+      "required": ["total_records", "by_category", "by_kind"],
+      "properties": {
+        "total_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "by_category": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "by_kind": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

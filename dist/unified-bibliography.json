@@ -45,6 +45,61 @@
       "isbn": "978-0195019193"
     },
     {
+      "id": "Bhartrhari5thCVakyapadiya",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Vākyapadīya",
+      "author": "Bhartṛhari",
+      "year": "450",
+      "abstract": "Bhartṛhari's Vākyapadīya is a foundational work of Indian philosophy of language that posits śabda-brahman (word-monism): the thesis that language and reality are ontologically identical at the ultimate level, with grammar serving as the path to understanding ultimate reality. Bhartṛhari argues that correct grammatical analysis is not merely a linguistic exercise but a direct engagement with the structure of reality itself, since the word principle (śabda-tattva) is the ground of all phenomenal appearance. The Vākyapadīya moves grammatical analysis squarely into the realm of philosophy, arguing that grammar can be considered a darśana (philosophical school) providing insight into ultimate reality. The cited translation is by K.A. Subramania Iyer, published by Motilal Banarsidass.",
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar",
+        "non-Western genealogy",
+        "ontology",
+        "word-monism",
+        "śabda-brahman"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Motilal Banarsidass",
+      "isbn": "9788120829886",
+      "note": "Conceptual ancestry only — not evidence of historical use of the English phrase \"grammar of reality.\" The śabda-brahman tradition establishes a non-Western genealogy for the concept that language and reality share a grammatical structure, but the English phrase is not used. Dating approximate: IEP gives 450-510 CE. Primary text in Sanskrit; cited translation is K.A. Subramania Iyer (Motilal Banarsidass). ISBN 9788120829886 is for Kanda II."
+    },
+    {
+      "id": "Bohm1980WholenessImplicate",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Wholeness and the Implicate Order",
+      "author": "Bohm, David",
+      "year": "1980",
+      "abstract": "This work proposes a fundamental reconception of reality in terms of the distinction between implicate and explicate orders. Bohm argues that the apparent fragmentation of the world into separate, independently existing objects is a product of the explicate order—the unfolded, manifest level of reality—while the deeper implicate order enfolds the whole into each part, making reality an undivided totality in constant process. He introduces the rheomode, an experimental linguistic structure designed to make process rather than substance the primary grammatical category, demonstrating that the grammar of substance-based language may itself obscure the processual nature of reality. The work bridges physics, philosophy of language, and epistemology, making the grammar of process vs substance its central thematic contribution.",
+      "keywords": [
+        "grammar of process",
+        "implicate order",
+        "process philosophy",
+        "rheomode",
+        "wholeness"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Routledge",
+      "doi": "10.4324/9780203950870",
+      "isbn": "978-0415283855"
+    },
+    {
       "id": "Csikszentmihalyi1990Flow",
       "type": "book",
       "tier": "T1",
@@ -108,6 +163,60 @@
       "isbn": "978-0316316965"
     },
     {
+      "id": "Hacker2002WittgensteinGrammar",
+      "type": "incollection",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Wittgenstein's Grammar: Through Thick and Thin",
+      "author": "Hacker, P. M. S.",
+      "year": "2002",
+      "abstract": "This chapter provides the canonical scholarly treatment of Wittgenstein's conception of grammar as constitutive of meaning, tracing its evolution from the thin, purely logical grammar of the Tractatus to the thick, reality-soaked grammar of the later and final works. Hacker demonstrates that Wittgenstein's notion of grammar undergoes a profound transformation: in the early period, grammar consists of the logical scaffolding shared by language and world, formal and content-neutral; in the Philosophical Investigations, grammar becomes the autonomous network of rules that constitutes meaning within language games and forms of life, interwoven with practice and institution; and in On Certainty, grammar becomes fully reality-soaked, with hinge propositions blurring the boundary between grammatical rules and empirical claims. Hacker argues that this trajectory reveals grammar to be not a static formal structure but a dynamic, practice-embedded framework that hardens and shifts through use. The chapter clarifies the distinction between grammatical and empirical propositions, the autonomy of grammar, and the sense in which grammar determines what counts as sense.",
+      "keywords": [
+        "Wittgenstein",
+        "constitutive rules",
+        "grammar",
+        "philosophy of language",
+        "thick grammar",
+        "thin grammar"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "booktitle": "Wittgenstein: Connections and Controversies",
+      "publisher": "Oxford University Press",
+      "doi": "10.1093/0199254012.001.0001",
+      "isbn": "978-0199254019"
+    },
+    {
+      "id": "Heidegger1927BeingTime",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Being and Time",
+      "author": "Heidegger, Martin",
+      "year": "1927",
+      "abstract": "This foundational work of twentieth-century philosophy undertakes the question of the meaning of being through an analytic of Dasein—the entity for whom being is an issue. Heidegger argues that intelligibility—the disclosedness of beings as something—is not a property of isolated subjects but is constituted through Dasein's situated engagement in a world, structured by care, temporality, and projection. The work introduces the ontological difference between being and beings, and demonstrates that the structures through which beings become intelligible—the existentialia—function as a grammar of being: a set of constitutive structures that determine what can appear as a being, how it can be encountered, and within what horizon of sense.",
+      "keywords": [
+        "Dasein",
+        "grammar of being",
+        "intelligibility",
+        "ontological difference",
+        "ontology",
+        "phenomenology"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Blackwell",
+      "isbn": "978-0631194562"
+    },
+    {
       "id": "Hofstadter1979Godel",
       "type": "book",
       "tier": "T1",
@@ -127,6 +236,33 @@
       ],
       "publisher": "Basic Books",
       "isbn": "978-0465026562"
+    },
+    {
+      "id": "KaderbhaiGrammarRealityVakyapadiya",
+      "type": "online",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "author": "Kaderbhai, Aamir",
+      "year": "2018",
+      "abstract": "Kaderbhai's undergraduate submission uses the exact phrase \"The Grammar of Realities\" in its title, applying it specifically to Bhartṛhari's Vākyapadīya and its philosophy of language. The paper explores how Bhartṛhari's metaphysics and theories of language can contribute to debates in philosophy and theology surrounding realism, arguing for strong parallels between Bhartṛhari's picture of language and the theories expressed in Charles Taylor and Hubert Dreyfus's work Retrieving Realism, especially in Bhartṛhari's sphoṭa theory read through Dreyfus and Taylor's gestalt holism. The work is an undergraduate FHS (Final Honour School) Theology and Religion submission at Oxford, self-uploaded to Academia.edu.",
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar of reality",
+        "metaphysical pluralism",
+        "realism",
+        "sphoṭa"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "url": "https://www.academia.edu/44100436/The_Grammar_of_Reality_An_assessment_of_aspects_of_the_V%C4%81kyapad%C4%AByas_philosophy_of_language_in_light_of_scholarly_debates_on_metaphysical_pluralism_in_India",
+      "note": "Title conflict: Academia.edu metadata uses singular \"Reality\" but the uploaded submission uses plural \"Realities\". Undergraduate FHS (Final Honour School) Theology and Religion submission at Oxford, not peer-reviewed. Provenance: academia.edu self-upload."
     },
     {
       "id": "Kahneman2011Thinking",
@@ -149,6 +285,30 @@
       "publisher": "Farrar, Straus and Giroux",
       "doi": "10.1037/e412042005-001",
       "isbn": "978-0374533557"
+    },
+    {
+      "id": "Kant1787CritiquePureReason",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Critique of Pure Reason",
+      "author": "Kant, Immanuel",
+      "year": "1787",
+      "abstract": "This monumental work establishes the framework of transcendental philosophy, arguing that experience is structured by a priori categories—the synthetic principles of understanding that function as the syntax of all possible experience. This entry references the B edition (1787), the second edition revised by Kant, as distinct from the A edition (1781). The Norman Kemp Smith translation (Cambridge University Press) is based on the 1787 B edition. Kant demonstrates that concepts such as causality, substance, and unity are not derived from experience but are preconditions that make experience coherent, functioning as a fixed grammar through which the mind organizes the sensory manifold into intelligible objects. The Critique introduces the distinction between phenomena (things as they appear under the grammatical constraints of understanding) and noumena (things in themselves, beyond the reach of that grammar), establishing limits on what can be known. The work remains the canonical treatment of the conditions of intelligibility.",
+      "keywords": [
+        "a priori",
+        "categories",
+        "epistemology",
+        "syntax of experience",
+        "transcendental philosophy"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "publisher": "Cambridge University Press",
+      "isbn": "978-0521657297"
     },
     {
       "id": "Kuhn1996Structure",
@@ -215,6 +375,31 @@
       "isbn": "978-0226468013"
     },
     {
+      "id": "Malcolm1980WittgensteinGrammar",
+      "type": "article",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "author": "Malcolm, Norman",
+      "year": "1980",
+      "abstract": "This 1980 book review by Norman Malcolm in the Washington Post Book World uses the exact phrase \"the grammar of reality\" in its title, making it the earliest direct use found in this search; search not exhaustive. The review discusses Wittgenstein's philosophical trajectory from the Tractatus through the later work, framing his contribution as an elucidation of the grammar through which reality becomes intelligible.",
+      "keywords": [
+        "Wittgenstein",
+        "book review",
+        "earliest use",
+        "grammar of reality",
+        "journalism"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "journal": "The Washington Post",
+      "url": "https://www.washingtonpost.com/archive/entertainment/books/1980/07/13/wittgenstein-the-grammar-of-reality/9cb285d8-ec17-453f-9123-861e06ccb8f1/",
+      "note": "Date discrepancy: archive URL path contains 1980/07/13 but article display identifies July 12, 1980 as publication date. Both dates preserved; search not exhaustive."
+    },
+    {
       "id": "Meadows2008ThinkingSystems",
       "type": "book",
       "tier": "T1",
@@ -257,6 +442,31 @@
       "number": "2",
       "pages": "81--97",
       "doi": "10.1037/h0043158"
+    },
+    {
+      "id": "Moss1995GrammarConsciousness",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Grammar of Consciousness: An Exploration of Tacit Knowing",
+      "author": "Moss, Edward",
+      "year": "1995",
+      "abstract": "Moss's book uses \"grammar\" in the structural sense to characterize the organization of consciousness, arguing that consciousness has a basic structure (or grammar) which language reflects and through which human experience takes on its particular character. Drawing on Michael Polanyi's theory of tacit knowing, Moss develops a model of how the particulars of consciousness are integrated into comprehensive entities through grammatical processes. The book includes a chapter titled \"Knowing and Reality\" that explores the relationship between consciousness and reality. NOTE: This book is titled \"The Grammar of Consciousness,\" not \"The Grammar of Reality\" --- a distinction that a parallel agent research pass conflated, illustrating the very failure class (genealogical collapse) that the pass identified.",
+      "keywords": [
+        "Polanyi",
+        "consciousness",
+        "grammar",
+        "structure of consciousness",
+        "tacit knowing"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "publisher": "St. Martin's Press",
+      "isbn": "978-0333625331",
+      "note": "Self-published monograph via St. Martin's Press; not peer-reviewed. Book title is \"The Grammar of Consciousness,\" not \"The Grammar of Reality\" — a parallel agent research pass conflated these, illustrating genealogical collapse."
     },
     {
       "id": "Newell1972Human",
@@ -322,6 +532,29 @@
       "publisher": "Cambridge University Press",
       "doi": "10.1017/CBO9780511803161",
       "isbn": "978-0521895606"
+    },
+    {
+      "id": "Pearson1892GrammarScience",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Grammar of Science",
+      "author": "Pearson, Karl",
+      "year": "1892",
+      "abstract": "This foundational work articulates the view that science possesses a grammar—a structured set of rules governing method, explanation, and the categories through which phenomena are rendered intelligible. Pearson argues that scientific laws are not discoveries of external necessities but concise descriptions of regularities in sensation, and that the scientific method itself constitutes a disciplined grammar for processing experience. He treats causation, probability, and classification as grammatical categories that organize inquiry rather than metaphysical discoveries about the world. The book's framing of science as a rule-governed linguistic and conceptual practice anticipates later structuralist and constructivist epistemologies. Einstein read this work intensively in the Olympia Academy, and its influence is visible in his approach to physical theory as a coherent grammatical system rather than a collection of empirical findings.",
+      "keywords": [
+        "categories of explanation",
+        "grammar of reality",
+        "philosophy of science",
+        "scientific method"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "publisher": "Adam & Charles Black",
+      "isbn": "978-0486425388"
     },
     {
       "id": "Schon1983ReflectivePractitioner",
@@ -447,6 +680,109 @@
       ],
       "publisher": "Princeton University Press",
       "isbn": "978-0691130613"
+    },
+    {
+      "id": "Whitehead1929ProcessReality",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Process and Reality: An Essay in Cosmology",
+      "author": "Whitehead, Alfred North",
+      "year": "1929",
+      "abstract": "This ambitious work of speculative philosophy proposes a process metaphysics in which reality is constituted not by enduring substances but by actual occasions—momentary events of becoming that achieve determinate form through their prehensions of other occasions. Whitehead argues that the categories of traditional substance metaphysics are inadequate to the nature of reality and must be replaced by a categorial scheme in which process, relation, and creativity are fundamental. This shift from substance to event is, at its deepest level, a grammatical shift in ontology: it changes the base vocabulary of what counts as a real entity and the transformation rules by which entities combine into societies. Whitehead's scheme of categories—including actual entities, prehensions, nexus, and eternal objects—functions as a generative grammar for cosmology, producing the full diversity of cosmic processes from a finite set of categorical primitives. The work also introduces the extensive continuum and the principle of relativity, grounding process in a rigorous categorial framework.",
+      "keywords": [
+        "actual occasions",
+        "cosmology",
+        "grammatical shift",
+        "ontology",
+        "process metaphysics"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Free Press",
+      "isbn": "978-0029345702"
+    },
+    {
+      "id": "Wittgenstein1921Tractatus",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Tractatus Logico-Philosophicus",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1921",
+      "abstract": "This compressed and enigmatic work argues that language and reality share a common logical form—a grammar that neither can state but that makes both representation and fact possible. Wittgenstein proposes that propositions are pictures of states of affairs, and that the logical scaffolding of language mirrors the logical scaffolding of the world. The Tractatus delineates the limits of what can be meaningfully said, concluding that the grammar of logic is shown in every meaningful proposition but cannot itself be propositionally expressed. The work also introduces the picture theory of meaning, the truth-functional analysis of propositions, and the famous closing injunction to silence regarding what cannot be said, establishing the limits of grammatical articulation.",
+      "keywords": [
+        "grammar of reality",
+        "logical atomism",
+        "logical form",
+        "philosophy of language",
+        "picture theory"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "publisher": "Routledge",
+      "doi": "10.4324/9781315110739",
+      "isbn": "978-0415251858"
+    },
+    {
+      "id": "Wittgenstein1953PhilosophicalInvestigations",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Philosophical Investigations",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1953",
+      "abstract": "This posthumous work overturns the Tractarian picture of a single logical form shared by language and world, replacing it with the conception of grammar as constitutive of meaning within diverse language games embedded in forms of life. Wittgenstein argues that meaning is not a relation between word and object but is determined by the use of expressions within rule-governed practices. He introduces the concept of thick grammar—grammatical rules that are not merely formal but are interwoven with empirical practices, institutions, and human activities, making grammar reality-soaked rather than a neutral logical skeleton. The Investigations explores how rules determine their own applications, the private language argument, and the impossibility of drawing a sharp boundary between grammatical and empirical propositions.",
+      "keywords": [
+        "forms of life",
+        "language games",
+        "meaning as use",
+        "philosophy of language",
+        "rule-following",
+        "thick grammar"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "publisher": "Wiley-Blackwell",
+      "doi": "10.1002/9781444310526",
+      "isbn": "978-0631231271"
+    },
+    {
+      "id": "Wittgenstein1969OnCertainty",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "On Certainty",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1969",
+      "abstract": "This final work reconceives the relationship between grammar and empirical reality by introducing the concept of hinge propositions—certainties that function as the immovable framework within which all doubt, inquiry, and verification take place. Wittgenstein argues that these hinge certainties are neither knowledge nor ignorance but stand outside the epistemic game entirely, forming the bedrock that must remain unshaken for any questioning to be coherent. He demonstrates that grammar, in its thick sense, becomes reality-soaked: the grammatical rules that structure our world-picture are not insulated from empirical engagement but are hardened into place through practice, taking on the role of the riverbed that shapes the flow of empirical propositions and can, over geological time, itself shift. The work is the definitive treatment of the boundary between grammatical and empirical propositions.",
+      "keywords": [
+        "epistemology",
+        "grammar",
+        "grammaticalization of experience",
+        "hinge certainty",
+        "reality-soaked grammar",
+        "skepticism"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "Wiley-Blackwell",
+      "doi": "10.1002/9781444312773",
+      "isbn": "978-0631231134"
     },
     {
       "id": "Arrieta2020ExplainableAI",
@@ -1582,6 +1918,33 @@
       "isbn": "978-0-19-513159-8"
     },
     {
+      "id": "Cabrera2025GrammarReality",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "The Grammar of Reality: The Organizing Principles of Structure and Emergence",
+      "author": "Cabrera, Derek and Cabrera, Laura",
+      "year": "2025",
+      "abstract": "The Cabreras propose DSRP --- Distinctions, Systems, Relationships, Perspectives --- as a universal, scale-invariant grammar of organization underlying the very fabric of reality. Rather than treating DSRP as a useful cognitive metaphor, they argue it is a structural ontology: the same four patterns that organize thought also organize matter, energy, information, and social systems at every scale from quanta to ecosystems. The paper aligns this claim with process metaphysics, autopoietic theory, and relational interpretations of quantum mechanics, positioning DSRP as the connective tissue between epistemology and ontology.",
+      "keywords": [
+        "DSRP",
+        "emergence",
+        "process metaphysics",
+        "relational quantum mechanics",
+        "scale invariance",
+        "structural ontology",
+        "systems thinking"
+      ],
+      "transformations": [
+        "CO",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "journal": "Journal of Systems Thinking",
+      "doi": "10.54120/001c.138685"
+    },
+    {
       "id": "Dekker2011Drift",
       "type": "book",
       "tier": "T12",
@@ -1604,6 +1967,84 @@
       "publisher": "Ashgate",
       "doi": "10.1201/9781315257396",
       "isbn": "978-1-4094-2221-1"
+    },
+    {
+      "id": "Diaconescu2008InstitutionModelTheory",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institution-independent Model Theory",
+      "author": "Diaconescu, R\\u{a}zvan",
+      "year": "2008",
+      "abstract": "This monograph provides a comprehensive treatment of institution theory and model theory independent of concrete logical systems. Topics include Grothendieck institutions, preservation, axiomatizability, interpolation, and definability, all developed at the institution-abstract level so that results apply uniformly across logics.",
+      "keywords": [
+        "Grothendieck institutions",
+        "institution theory",
+        "interpolation",
+        "model theory"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Birkh\\\"{a}user Basel",
+      "doi": "10.1007/978-3-7643-8708-2",
+      "isbn": "978-3-7643-8708-2",
+      "note": "Peer-reviewed academic monograph (Studies in Universal Logic series)."
+    },
+    {
+      "id": "GoguenBurstall1992Institutions",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institutions: Abstract Model Theory for Specification and Programming",
+      "author": "Goguen, J. A. and Burstall, R. M.",
+      "year": "1992",
+      "abstract": "Institutions are defined as a four-tuple comprising signatures, sentences, models, and a satisfaction relation, together with the satisfaction condition: for any signature morphism, a sentence holds in a reduct model if and only if the translated sentence holds in the original model. The paper proves that this condition captures the invariant notion of truth-preservation across logical systems and establishes institutions as the appropriate level of abstraction for specification and programming semantics.",
+      "keywords": [
+        "abstract model theory",
+        "institution theory",
+        "satisfaction condition",
+        "signature morphisms"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Journal of the ACM",
+      "volume": "39",
+      "number": "1",
+      "pages": "95--146",
+      "doi": "10.1145/147508.147524",
+      "note": "Peer-reviewed journal article (JACM)."
+    },
+    {
+      "id": "GoguenRosu2002InstitutionMorphisms",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Institution Morphisms",
+      "author": "Goguen, J. A. and Ro\\c{s}u, G.",
+      "year": "2002",
+      "abstract": "Institution morphisms and comorphisms are introduced as structure-preserving maps between institutions, with a duality between them. Theoroidal variants generalize morphisms to map theories rather than mere signatures. Completeness and cocompleteness results are established for categories of institutions and morphisms, providing the categorical infrastructure for heterogeneous specification.",
+      "keywords": [
+        "comorphisms",
+        "heterogeneous specifications",
+        "institution morphisms",
+        "structure-preserving maps"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Formal Aspects of Computing",
+      "volume": "13",
+      "pages": "274--307",
+      "doi": "10.1007/s001650200013",
+      "note": "Peer-reviewed journal article."
     },
     {
       "id": "Gunderson2002Panarchy",
@@ -1778,6 +2219,31 @@
       "isbn": "978-0-553-34363-2"
     },
     {
+      "id": "Rovelli2017RealityNotWhatItSeems",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Reality Is Not What It Seems: The Journey to Quantum Gravity",
+      "author": "Rovelli, Carlo",
+      "year": "2017",
+      "abstract": "Rovelli traces the long arc of physics from Aristotle's qualitative cosmos through Newtonian mechanics, general relativity, and into the relational interpretation of quantum mechanics and loop quantum gravity. The book is described as making the grammar of the universe accessible: each revolution in physics is presented not as a pile of new nouns but as a reorganization of the relational structure by which reality is described. Space, time, and particles are demoted from substances to interactions --- nodes in a web of relations whose properties are defined only relationally.",
+      "keywords": [
+        "history of physics",
+        "loop quantum gravity",
+        "process ontology",
+        "quantum gravity",
+        "relational quantum mechanics"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Penguin",
+      "isbn": "978-0141983219"
+    },
+    {
       "id": "Strogatz2015Nonlinear",
       "type": "book",
       "tier": "T12",
@@ -1926,6 +2392,59 @@
       "pages": "356--366"
     },
     {
+      "id": "Abramson2009GrammarReality",
+      "type": "online",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "The Grammar of Reality: Why the Deep Structure of Mathematics May Tell Us Something Profound About the Nature of Existence",
+      "author": "Abramson, John",
+      "year": "2009",
+      "abstract": "Abramson connects Eugene Wigner's \"unreasonable effectiveness of mathematics\" to the grammar-of-reality metaphor, arguing that the deep structure of mathematics may disclose something profound about the nature of existence itself. The essay explores whether mathematical grammar — its syntax of relations, transformations, symmetries, and invariances — is not merely a tool for describing reality but a window onto reality's own organizing structure. Abramson draws on integral theory, category theory, and the philosophy of mathematics to argue that the isomorphism between mathematical structures and physical structures is not coincidental but symptomatic of a shared grammar.",
+      "keywords": [
+        "Wigner",
+        "category theory",
+        "deep structure",
+        "grammar of reality",
+        "integral theory",
+        "mathematics"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://www.integralworld.net/abramson8.html",
+      "note": "Self-published/blog essay; not peer-reviewed."
+    },
+    {
+      "id": "Anonymous2026BecomingPossibility",
+      "type": "online",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "The Becoming of Possibility: Book {II}. The Grammar of Reality",
+      "author": "The Becoming of Possibility",
+      "year": "2026",
+      "abstract": "This self-published philosophical work argues that reality has a grammar in the sense of \"organised potential\" — not because reality is language or linguistic in nature, but because the central question is \"how is reality organised so that particular possibilities become available?\" The author distinguishes grammar-as-organised-potential from grammar-as-syntactic-rules, arguing that the former is ontologically prior: reality's grammar is the structure that determines which possibilities can become actual, under what conditions, and in what order. The blog series develops this across multiple posts, examining how possibility, becoming, and actualization relate to organizational structure.",
+      "keywords": [
+        "actualization",
+        "becoming",
+        "grammar of reality",
+        "ontology",
+        "organised potential",
+        "possibility"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "url": "https://thebecomingofpossibility.blogspot.com/2026/06/ii-grammar-of-reality-1-why-grammar.html",
+      "note": "Personal blog/website; not peer-reviewed. Author identity unverified."
+    },
+    {
       "id": "Anthropic2024Claude3",
       "type": "article",
       "tier": "T13",
@@ -2034,6 +2553,31 @@
       "url": "https://arxiv.org/abs/2501.12948"
     },
     {
+      "id": "FeitosaDOttaviano2001ConservativeTranslations",
+      "type": "article",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Conservative Translations",
+      "author": "Feitosa, H. A. and D'Ottaviano, I. M. L.",
+      "year": "2001",
+      "abstract": "Conservative translation between logics is introduced as a map that strongly preserves logical consequence. The paper provides necessary and sufficient conditions for a translation to be conservative, establishing the formal criteria under which a translation from one logic to another preserves the consequence relation in both directions.",
+      "keywords": [
+        "conservative translations",
+        "logical consequence",
+        "truth preservation"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Annals of Pure and Applied Logic",
+      "volume": "108",
+      "pages": "205--227",
+      "doi": "10.1016/S0168-0072(00)00046-4",
+      "note": "Peer-reviewed journal article."
+    },
+    {
       "id": "Gemini2024Team",
       "type": "article",
       "tier": "T13",
@@ -2054,6 +2598,32 @@
       "journal": "arXiv preprint arXiv:2312.11805",
       "doi": "10.48550/arXiv.2312.11805",
       "url": "https://arxiv.org/abs/2312.11805"
+    },
+    {
+      "id": "GreenKarvounarakisTannen2007ProvenanceSemirings",
+      "type": "inproceedings",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Provenance Semirings",
+      "author": "Green, T. J. and Karvounarakis, G. and Tannen, V.",
+      "year": "2007",
+      "abstract": "This paper shows that relational algebra calculations for incomplete databases, probabilistic databases, bag semantics, and why-provenance are particular cases of the same general algorithms involving semirings. Polynomials are proposed as a comprehensive provenance representation that subsumes all these instances.",
+      "keywords": [
+        "database",
+        "polynomial representation",
+        "provenance",
+        "semirings"
+      ],
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "PODS 2007",
+      "publisher": "ACM",
+      "pages": "31--40",
+      "doi": "10.1145/1265530.1265535",
+      "note": "Peer-reviewed conference paper (PODS)."
     },
     {
       "id": "Guo2024Critique",
@@ -2145,6 +2715,31 @@
       "url": "https://arxiv.org/abs/2303.17651"
     },
     {
+      "id": "McGinn2024GrammarReality",
+      "type": "article",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "On the Relations Between Grammar and Reality: A {Wittgensteinian} Study",
+      "author": "McGinn, Marie",
+      "year": "2024",
+      "abstract": "McGinn argues, against Moyal-Sharrock's non-cognitivist reading of Wittgenstein, that the relation between grammar and reality is bidirectional: reality permeates grammar AND grammar permeates reality. Grammar is not a self-enclosed autonomous system of rules divorced from the world; rather, grammatical categories are shaped by, and in turn shape, what counts as a fact. This reciprocal determination challenges both realist accounts that treat language as a transparent medium and conventionalist accounts that sever grammar from reality entirely.",
+      "keywords": [
+        "Wittgenstein",
+        "epistemology",
+        "grammar",
+        "philosophy of language",
+        "reality"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Analysis: Journal of Philosophical Research, University of Zaragoza",
+      "url": "https://papiro.unizar.es/ojs/index.php/analisis/en/article/view/4189"
+    },
+    {
       "id": "OpenAI2024o1Mini",
       "type": "article",
       "tier": "T13",
@@ -2229,6 +2824,58 @@
       ],
       "journal": "Technical Report, OpenAI",
       "url": "https://openai.com/index/o3-o4-mini-system-card/"
+    },
+    {
+      "id": "Peat2002RoleLanguage",
+      "type": "online",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "The Role of Language in Science",
+      "author": "Peat, F. David",
+      "year": "2002",
+      "abstract": "Peat extends David Bohm's framing of language and thought, proposing that grammar be understood as \"the set of strategies used for intercommunication\" rather than a fixed formal apparatus. Drawing on Bohm's rheomode and the implicate order, Peat asks whether the implicate-explicate structure could model linguistic structure itself — whether language enfolds and unfolds meaning in a way homologous to how Bohm conceived physical reality. The essay explores how Indo-European grammatical categories (noun-verb substance-process divisions) bias scientific thought toward a thing-based ontology, and whether alternative grammars could disclose process-based descriptions.",
+      "keywords": [
+        "Bohm",
+        "grammar",
+        "implicate order",
+        "language",
+        "process ontology",
+        "science"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "url": "https://www.fdavidpeat.com/bibliography/essays/lang.htm",
+      "note": "Self-published essay; not peer-reviewed."
+    },
+    {
+      "id": "Priest2015LinguisticConstruction",
+      "type": "online",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "The Linguistic Construction of Reality",
+      "author": "Priest, Graham",
+      "year": "2015",
+      "abstract": "Priest engages the view — common in continental philosophy, textualism, and certain forms of idealism — that \"reality is constructed, in some sense, by language; or as it is sometimes put, by grammar, discourse, or the text.\" Rather than dismissing this as relativism, Priest takes it seriously as a metaphysical thesis and examines what could make it true. He distinguishes several senses of \"construction\": causal, constitutive, and semantic, arguing that the strongest defensible version is constitutive — that the structure of reality as we can cognize it is partly constituted by the conceptual-grammatical resources we bring to it. He connects this to Buddhist philosophy, Hegelian idealism, and contemporary metaphysics.",
+      "keywords": [
+        "Buddhism",
+        "grammar",
+        "idealism",
+        "linguistic construction",
+        "metaphysics",
+        "textualism"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P",
+        "RE"
+      ],
+      "url": "https://grahampriest.net/?ddownload=850",
+      "note": "Self-published; not peer-reviewed."
     },
     {
       "id": "Snell2024ScalingTestTime",
@@ -2320,6 +2967,35 @@
       "journal": "International Conference on Learning Representations",
       "doi": "10.48550/arXiv.2203.11171",
       "url": "https://arxiv.org/abs/2203.11171"
+    },
+    {
+      "id": "Weaver1953EthicsRhetoric",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "The Ethics of Rhetoric",
+      "author": "Weaver, Richard M.",
+      "year": "1953",
+      "abstract": "Weaver's The Ethics of Rhetoric argues that rhetoric is not mere persuasion but a morally charged activity whose ethical quality depends on the ontological adequacy of its language. The chapter \"Some Rhetorical Aspects of Grammatical Categories\" develops the thesis that grammar is not an arbitrary surface convention but discloses structures of being: the grammatical categories of being, becoming, and relation reflect how reality is intelligibly organized. Weaver argues that language must connect to the \"intelligential world\" — the world as graspable by intellect — and that grammatical form carries epistemic and ethical commitments. Nouns reify, verbs processuate, and the choice of grammatical frame is already a philosophical position.",
+      "keywords": [
+        "becoming",
+        "being",
+        "ethics",
+        "grammar",
+        "ontology",
+        "relation",
+        "rhetoric"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Regnery",
+      "isbn": "978-0935792337",
+      "note": "Reprinted 1985, ISI Press",
+      "address": "Chicago"
     },
     {
       "id": "Zelikman2022STAR",
@@ -5985,6 +6661,56 @@
       ]
     },
     {
+      "id": "Aravind2026EpistemicCorrigibility",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems",
+      "author": "Aravind, A. A.",
+      "year": "2026",
+      "abstract": "\"Epistemic corrigibility\" is introduced as the institutional capacity to recognize when AI systems reproduce outdated or epistemically unjust knowledge structures and to revise or replace them. Five institutional design principles are derived: epistemic audit, categorical diversity mandates, epistemic sunset provisions, mandatory human interpretive oversight, and transparency of paradigmatic commitments.",
+      "keywords": [
+        "epistemic audit",
+        "epistemic corrigibility",
+        "institutional design",
+        "sunset provisions"
+      ],
+      "transformations": [
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "doi": "10.5281/zenodo.20262088",
+      "url": "https://doi.org/10.5281/zenodo.20262088",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo."
+    },
+    {
+      "id": "Chen2026CordonSemanticTransactions",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+      "author": "Chen, Z. and others",
+      "year": "2026",
+      "abstract": "Cordon is a transactional runtime for tool-using LLM agents. A \"semantic transaction\" is defined as a task-level execution boundary binding tool intents, result lineage, reversible local state, staged external effects, delegated authority, and audit metadata. The implementation uses a transaction manager with shadow state, an effect outbox, and a recovery log.",
+      "keywords": [
+        "LLM agents",
+        "effect staging",
+        "provenance",
+        "semantic transactions",
+        "transaction boundary"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "url": "https://arxiv.org/abs/2606.17573",
+      "note": "arXiv preprint; not peer-reviewed. Accepted to EuroSys 2027 per preprint. Provenance: arXiv self-upload."
+    },
+    {
       "id": "Du2023Debate",
       "type": "inproceedings",
       "tier": "T7",
@@ -6007,6 +6733,35 @@
       "booktitle": "Proceedings of the Forty-first International Conference on Machine Learning (ICML 2024)",
       "doi": "10.48550/arXiv.2305.14325",
       "url": "https://arxiv.org/abs/2305.14325"
+    },
+    {
+      "id": "GrammarOfReality2025NounsToVerbs",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon",
+      "author": "Grammar of Reality Project",
+      "year": "2025",
+      "abstract": "This preprint argues for a decisive shift from substance ontology (a world described primarily by nouns --- things, particles, objects) to process ontology (a world described primarily by verbs --- events, interactions, transformations) in accounting for physical reality. Drawing on Bohm's implicate order and Whitehead's process philosophy, the authors contend that what we call ``things'' are stabilized patterns of activity, and that the grammar of physics should reflect this by leading with process and deriving entity-hood as a derived, relational property. The paper develops a ``cosmic lexicon'' in which verbs are primitive and nouns are shorthand for recurring verb-patterns.",
+      "keywords": [
+        "Bohm",
+        "Whitehead",
+        "cosmic lexicon",
+        "nouns",
+        "process ontology",
+        "substance ontology",
+        "verbs"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.15829350",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by \"Grammar of Reality Project.\""
     },
     {
       "id": "Jimenez2024SWEBench",
@@ -6241,6 +6996,30 @@
       "url": "https://arxiv.org/abs/2303.11366"
     },
     {
+      "id": "Soares2015Corrigibility",
+      "type": "inproceedings",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Corrigibility",
+      "author": "Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer",
+      "year": "2015",
+      "abstract": "Corrigibility is introduced as the property of agents that cooperate with corrective intervention despite default incentives to resist shutdown or modification. The paper analyzes utility functions for safe shutdown behavior and shows that no proposed utility function satisfies all intuitive desiderata for corrigibility simultaneously.",
+      "keywords": [
+        "AI safety",
+        "corrective intervention",
+        "corrigibility",
+        "shutdown"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "AAAI Workshop on AI Ethics",
+      "pages": "1--12",
+      "note": "Peer-reviewed workshop paper (AAAI)."
+    },
+    {
       "id": "Sumers2024CognitiveArchitectures",
       "type": "inproceedings",
       "tier": "T7",
@@ -6262,6 +7041,37 @@
       "booktitle": "Transactions on Machine Learning Research (TMLR)",
       "doi": "10.48550/arXiv.2309.02427",
       "url": "https://arxiv.org/abs/2309.02427"
+    },
+    {
+      "id": "URM2StructuralGrammar2025",
+      "type": "online",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)",
+      "author": "URM$^2$ Working Group",
+      "year": "2025",
+      "abstract": "This preprint introduces URM$^2$, a verb-first, resonance-driven framework that posits a structural grammar of reality built from generative primitives --- Potential, Process, Density, Identity, and Observation --- combined by invariant grammatical rules that make physical entities possible. Where substance ontologies begin with things, URM$^2$ begins with verbs (processes) and derives nouns (entities) as stable resonance patterns within those processes. The V12.1 update formalizes the grammar's invariant rules and demonstrates how identity and apparency emerge from density gradients under observation. The framework is explicitly structural rather than metaphorical: its grammar is claimed to be scale-invariant, applying from quantum events to cosmological structures.",
+      "keywords": [
+        "URM2",
+        "apparency",
+        "density",
+        "generative primitives",
+        "identity",
+        "process ontology",
+        "resonance",
+        "structural grammar",
+        "verb-noun ontology"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Zenodo",
+      "doi": "10.5281/zenodo.17741588",
+      "note": "Zenodo preprint; not peer-reviewed. Provenance: self-uploaded to Zenodo by URM² Working Group."
     },
     {
       "id": "Wang2023Voyager",
@@ -6406,6 +7216,30 @@
       "booktitle": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
       "doi": "10.48550/arXiv.2305.10601",
       "url": "https://arxiv.org/abs/2305.10601"
+    },
+    {
+      "id": "Yao2024TauBench",
+      "type": "inproceedings",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "author": "Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik",
+      "year": "2024",
+      "abstract": "$\\tau$-bench is a benchmark that emulates dynamic conversations between a simulated user and a language agent equipped with domain-specific API tools and policy guidelines. Evaluation compares the database state at the end of the conversation against an annotated goal state. The pass$^k$ metric is introduced to measure reliability across multiple independent runs. The benchmark shows that state-of-the-art agents succeed on fewer than 50% of tasks.",
+      "keywords": [
+        "agent benchmark",
+        "policy compliance",
+        "tool-agent-user interaction",
+        "trajectory evaluation"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "booktitle": "ICLR 2025",
+      "url": "https://arxiv.org/abs/2406.12045",
+      "note": "Peer-reviewed conference paper (ICLR 2025). arXiv preprint at https://arxiv.org/abs/2406.12045."
     },
     {
       "id": "Zhou2024LATS",
@@ -6874,6 +7708,34 @@
       "number": "2",
       "pages": "257--285",
       "doi": "10.1016/0364-0213(88)90023-7"
+    },
+    {
+      "id": "Thalos2014GrammarOfExperience",
+      "type": "article",
+      "tier": "T8",
+      "tier_name": "Cognition",
+      "title": "The Grammar of Experience",
+      "author": "Thalos, Mariam",
+      "year": "2014",
+      "abstract": "Thalos uses ``grammar'' in a Kantian sense to characterize the structure of experience: the categories and rules that organize raw perceptual content into coherent, intelligible experience, much as grammatical rules organize phonemes into meaningful language. She argues that these categorial structures are not optional interpretive overlays but constitutive conditions for experience to be experience at all --- without them, there is no ``something it is like'' to be had. The categories apply primarily to perceptual content, but their reach extends to reasoning, memory, and self-awareness, forming a transductive layer between sensation and cognition. Published in Philosophy, vol. 89, no. 2, pp. 223--250 (2014).",
+      "keywords": [
+        "Kantian categories",
+        "categorial rules",
+        "grammar of experience",
+        "perceptual structure",
+        "philosophy of mind"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "SY"
+      ],
+      "journal": "Philosophy",
+      "volume": "89",
+      "number": "2",
+      "pages": "223--250",
+      "doi": "10.1017/s0031819114000023"
     },
     {
       "id": "Walsh1991OrganizationalMemory",

@@ -270,3 +270,78 @@
   abstract  = {Gunderson and Holling introduce panarchy --- a framework for understanding the nested adaptive cycles that characterize complex systems across scales. Each adaptive cycle passes through four phases: exploitation (rapid growth, r), conservation (stability and rigidity, K), release (creative destruction, omega), and reorganization (innovation and restructuring, alpha). Panarchy's key insight is that these cycles are nested: fast, small-scale cycles are embedded within slow, large-scale cycles, and cross-scale interactions (``revolt'' from small to large, ``remember'' from large to small) drive system dynamics. The ``revolt'' connection allows small-scale crises to cascade upward; the ``remember'' connection allows large-scale memory to facilitate small-scale renewal. The hummbl-dev ecosystem operates as a panarchy across multiple scales. Fast cycles: individual agent sessions move through exploitation (generating code), conservation (committing and testing), release (session end), and reorganization (next session bootstrap via CLP). Medium cycles: sprint cadences move through exploitation (parallel lane execution), conservation (integration testing), release (sprint retrospective), and reorganization (next sprint planning). Slow cycles: architectural phases move through exploitation (new capability development), conservation (hardening and testing), release (deprecation of old systems), and reorganization (new architecture). The ``remember'' connection flows from slow to fast via frozen contracts and boot context injection; the ``revolt'' connection flows from fast to slow when agent sessions reveal architectural inadequacies that force system-level change.},
   keywords  = {panarchy, adaptive cycles, cross-scale dynamics, creative destruction, HUMMBL:RE, HUMMBL:SY, HUMMBL:DE}
 }
+
+% =============================================================================
+% Grammar of Reality prior-art corpus — added 2026-07-13
+% Systems thinking and complexity sources for the grammar-of-reality lineage.
+% =============================================================================
+
+@article{Cabrera2025GrammarReality,
+  title   = {The Grammar of Reality: The Organizing Principles of Structure and Emergence},
+  author  = {Cabrera, Derek and Cabrera, Laura},
+  year    = {2025},
+  journal = {Journal of Systems Thinking},
+  doi     = {10.54120/001c.138685},
+  abstract = {The Cabreras propose DSRP --- Distinctions, Systems, Relationships, Perspectives --- as a universal, scale-invariant grammar of organization underlying the very fabric of reality. Rather than treating DSRP as a useful cognitive metaphor, they argue it is a structural ontology: the same four patterns that organize thought also organize matter, energy, information, and social systems at every scale from quanta to ecosystems. The paper aligns this claim with process metaphysics, autopoietic theory, and relational interpretations of quantum mechanics, positioning DSRP as the connective tissue between epistemology and ontology.},
+  annotation = {For HUMMBL, this work is foundational: Base120's six cognitive transformations (P, IN, CO, DE, RE, SY) are operational siblings of DSRP, each encoding a structural move that reorganizes how a system is seen and acted upon. The scale-invariance claim mirrors the complexity tier's central thesis that simple organizing rules generate emergent order across levels. By framing distinctions, systems, relationships, and perspectives as grammar rather than vocabulary, the Cabreras provide a formal account of how complexity becomes legible --- the same legibility that Base120 models and the hummbl-dev agent fleet relies on to coordinate, decompose, and re-compose adaptive behavior.},
+  keywords = {DSRP, systems thinking, structural ontology, emergence, scale invariance, process metaphysics, relational quantum mechanics, HUMMBL:SY, HUMMBL:P, HUMMBL:CO, HUMMBL:RE}
+}
+
+@book{Rovelli2017RealityNotWhatItSeems,
+  title     = {Reality Is Not What It Seems: The Journey to Quantum Gravity},
+  author    = {Rovelli, Carlo},
+  year      = {2017},
+  publisher = {Penguin},
+  isbn      = {978-0141983219},
+  % No DOI available -- Penguin trade book; no registered DOI
+  abstract = {Rovelli traces the long arc of physics from Aristotle's qualitative cosmos through Newtonian mechanics, general relativity, and into the relational interpretation of quantum mechanics and loop quantum gravity. The book is described as making the grammar of the universe accessible: each revolution in physics is presented not as a pile of new nouns but as a reorganization of the relational structure by which reality is described. Space, time, and particles are demoted from substances to interactions --- nodes in a web of relations whose properties are defined only relationally.},
+  annotation = {This narrative is a vivid case study in HUMMBL's cognitive transformations at work in science: Perspective shifts re-frame what counts as fundamental; Inversion turns background into foreground (space-time becomes dynamical); Composition and Decomposition restructure the ontology of fields and events; Recursion appears in the self-similar structure of scale-relative descriptions; and Meta-Systems thinking links quantum granularity to cosmological structure. For the complexity tier, Rovelli's relational ontology supplies a physics-grounded warrant for treating organization, not substance, as primary --- the same premise that lets Base120 models and complex adaptive systems theory describe emergent order without invoking hidden essences.},
+  keywords = {quantum gravity, relational quantum mechanics, loop quantum gravity, process ontology, history of physics, HUMMBL:SY, HUMMBL:IN, HUMMBL:RE, HUMMBL:P}
+}
+
+% =============================================================================
+% Grammar of Reality prior-art corpus — added 2026-07-13
+% Institution theory sources for the grammar-governed interpreter lineage.
+% =============================================================================
+
+@article{GoguenBurstall1992Institutions,
+  title     = {Institutions: Abstract Model Theory for Specification and Programming},
+  author    = {Goguen, J. A. and Burstall, R. M.},
+  year      = {1992},
+  journal   = {Journal of the ACM},
+  volume    = {39},
+  number    = {1},
+  pages     = {95--146},
+  doi       = {10.1145/147508.147524},
+  abstract  = {Institutions are defined as a four-tuple comprising signatures, sentences, models, and a satisfaction relation, together with the satisfaction condition: for any signature morphism, a sentence holds in a reduct model if and only if the translated sentence holds in the original model. The paper proves that this condition captures the invariant notion of truth-preservation across logical systems and establishes institutions as the appropriate level of abstraction for specification and programming semantics.},
+  annotation = {For HUMMBL, institution theory provides the mathematical foundation for formalizing "grammars of reality" as logical systems and meaning-preserving translations between them. The satisfaction condition is exactly the formal requirement that translations preserve truth. This is conceptual ancestry only — no evidence of historical connection to the grammar-governed interpreter concept.},
+  keywords  = {institution theory, abstract model theory, satisfaction condition, signature morphisms, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE},
+  note      = {Peer-reviewed journal article (JACM).}
+}
+
+@article{GoguenRosu2002InstitutionMorphisms,
+  title     = {Institution Morphisms},
+  author    = {Goguen, J. A. and Ro\c{s}u, G.},
+  year      = {2002},
+  journal   = {Formal Aspects of Computing},
+  volume    = {13},
+  pages     = {274--307},
+  doi       = {10.1007/s001650200013},
+  abstract  = {Institution morphisms and comorphisms are introduced as structure-preserving maps between institutions, with a duality between them. Theoroidal variants generalize morphisms to map theories rather than mere signatures. Completeness and cocompleteness results are established for categories of institutions and morphisms, providing the categorical infrastructure for heterogeneous specification.},
+  annotation = {For HUMMBL, institution morphisms provide the formal framework for mapping one grammar of reality to another while preserving structure. The directionality (morphism vs comorphism) is relevant to bidirectional grammar translation. Conceptual ancestry only.},
+  keywords  = {institution morphisms, comorphisms, structure-preserving maps, heterogeneous specifications, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE},
+  note      = {Peer-reviewed journal article.}
+}
+
+@book{Diaconescu2008InstitutionModelTheory,
+  title     = {Institution-independent Model Theory},
+  author    = {Diaconescu, R\u{a}zvan},
+  year      = {2008},
+  publisher = {Birkh\"{a}user Basel},
+  isbn      = {978-3-7643-8708-2},
+  doi       = {10.1007/978-3-7643-8708-2},
+  abstract  = {This monograph provides a comprehensive treatment of institution theory and model theory independent of concrete logical systems. Topics include Grothendieck institutions, preservation, axiomatizability, interpolation, and definability, all developed at the institution-abstract level so that results apply uniformly across logics.},
+  annotation = {For HUMMBL, this book provides the reference for doing model theory "by translation" — the formal machinery for reasoning about grammars without committing to a single one. Conceptual ancestry only.},
+  keywords  = {institution theory, model theory, Grothendieck institutions, interpolation, HUMMBL:SY, HUMMBL:CO, HUMMBL:DE},
+  note      = {Peer-reviewed academic monograph (Studies in Universal Logic series).}
+}
