@@ -38,14 +38,14 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 446,
+    "total_sources": 447,
     "thematic_tiers": {
       "T1": 47,
       "T2": 26,
       "T3": 23,
       "T4": 20,
       "T5": 22,
-      "T6": 19,
+      "T6": 20,
       "T7": 26,
       "T8": 21,
       "T9": 21,
@@ -58,7 +58,7 @@
       "foundational": 237,
       "empirical": 71,
       "applied": 45,
-      "governance": 19,
+      "governance": 20,
       "emerging": 74
     },
     "downstream_ref_coverage": {
@@ -12145,6 +12145,38 @@
           "note": "Grand Strategist — balance of power, realpolitik, international order"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "OSTP2022AIBillOfRights",
+      "title": "Blueprint for an AI Bill of Rights: Making Automated Systems Protect the Rights of the American People",
+      "author": "Office of Science and Technology Policy",
+      "year": "2022",
+      "type": "misc",
+      "bibliography_tier": "T6",
+      "bibliography_tier_name": "Governance",
+      "evidence_tier": "governance",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI Bill of Rights",
+        "OSTP",
+        "algorithmic discrimination",
+        "governance",
+        "rights-based"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []

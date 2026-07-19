@@ -8764,6 +8764,30 @@
       "doi": "10.6028/NIST.AI.100-1"
     },
     {
+      "id": "OSTP2022AIBillOfRights",
+      "type": "misc",
+      "tier": "T6",
+      "tier_name": "Governance",
+      "title": "Blueprint for an AI Bill of Rights: Making Automated Systems Protect the Rights of the American People",
+      "author": "Office of Science and Technology Policy",
+      "year": "2022",
+      "abstract": "The OSTP AI Bill of Rights establishes five principles for the design and deployment of automated systems: (1) Safe and Effective Systems -- systems should undergo pre-deployment testing and risk assessment; (2) Algorithmic Discrimination Protections -- systems should not contribute to discrimination and should be evaluated for equity; (3) Data Privacy -- systems should include data privacy safeguards and protect against unchecked surveillance; (4) Notice and Explanation -- people should know that an automated system is being used and understand its outcomes; (5) Human Alternatives, Consideration, and Fallback -- people should have access to human alternatives where appropriate. The blueprint includes technical companions for each principle, describing specific practices for implementation. Unlike the EU AI Act, the AI Bill of Rights is non-binding but has influenced federal agency AI policies and procurement requirements. For HUMMBL, the AI Bill of Rights provides the US rights-based governance framework: it complements the EU AI Act (risk-based) and NIST AI RMF (process-based) to form the three major Western AI governance approaches. The five principles map to HUMMBL transformations: Safe/Effective to IN (inversion of risk), Discrimination to DE (decomposition of impact), Privacy to IN, Notice to P (perspective transparency), Human Alternatives to CO (composition of human-AI systems).",
+      "keywords": [
+        "AI Bill of Rights",
+        "OSTP",
+        "algorithmic discrimination",
+        "governance",
+        "rights-based"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "url": "https://www.whitehouse.gov/ostp/ai-bill-of-rights/"
+    },
+    {
       "id": "OWASP2025LLM",
       "type": "techreport",
       "tier": "T6",
