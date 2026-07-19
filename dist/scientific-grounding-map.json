@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 447,
+    "total_sources": 455,
     "thematic_tiers": {
       "T1": 47,
       "T2": 26,
@@ -52,14 +52,14 @@
       "T10": 22,
       "T11": 23,
       "T12": 28,
-      "T13": 28
+      "T13": 36
     },
     "evidence_tiers": {
       "foundational": 237,
       "empirical": 71,
       "applied": 45,
       "governance": 20,
-      "emerging": 74
+      "emerging": 82
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
@@ -4390,6 +4390,35 @@
       ]
     },
     {
+      "key": "Gigerenzer2007GutFeelings",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "author": "Gigerenzer, Gerd",
+      "year": "2007",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780670038633",
+      "journal": null,
+      "keywords": [
+        "decision making",
+        "ecological rationality",
+        "heuristics",
+        "intuition"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "GreenKarvounarakisTannen2007ProvenanceSemirings",
       "title": "Provenance Semirings",
       "author": "Green, T. J. and Karvounarakis, G. and Tannen, V.",
@@ -4452,6 +4481,66 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "Holyoak1995MentalLeaps",
+      "title": "Mental Leaps: Analogy in Creative Thought",
+      "author": "Holyoak, Keith J. and Thagard, Paul",
+      "year": "1995",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780262082315",
+      "journal": null,
+      "keywords": [
+        "analogy",
+        "cognitive science",
+        "creative thought",
+        "relational reasoning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "JohnsonLaird1983MentalModels",
+      "title": "Mental Models: Toward a Cognitive Science of Language, Inference, and Consciousness",
+      "author": "Johnson-Laird, Philip N.",
+      "year": "1983",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780674568828",
+      "journal": null,
+      "keywords": [
+        "cognitive science",
+        "consciousness",
+        "inference",
+        "mental models",
+        "reasoning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Kumar2024ScalingInference",
@@ -4593,6 +4682,35 @@
           "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
+    },
+    {
+      "key": "Oaksford2007BayesianRationality",
+      "title": "Bayesian Rationality: The Probabilistic Approach to Human Reasoning",
+      "author": "Oaksford, Mike and Chater, Nick",
+      "year": "2007",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780198524496",
+      "journal": null,
+      "keywords": [
+        "Bayesian reasoning",
+        "cognitive science",
+        "probability",
+        "rationality"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "OpenAI2024o1Mini",
@@ -4798,6 +4916,35 @@
       "metadata_debt": []
     },
     {
+      "key": "Sloman2005CausalModels",
+      "title": "Causal Models: How People Think About the World and Its Alternatives",
+      "author": "Sloman, Steven A.",
+      "year": "2005",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780195183115",
+      "journal": null,
+      "keywords": [
+        "causal cognition",
+        "causal models",
+        "cognitive science",
+        "counterfactual reasoning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Snell2024ScalingTestTime",
       "title": "Scaling {LLM} Test-Time Compute Optimally Improves Performance on Challenging Tasks",
       "author": "Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral",
@@ -4832,6 +4979,66 @@
       ]
     },
     {
+      "key": "Tenenbaum2011GrowMind",
+      "title": "How to Grow a Mind: Statistics, Structure, and Abstraction",
+      "author": "Tenenbaum, Joshua B. and Kemp, Charles and Griffiths, Thomas L. and Goodman, Noah D.",
+      "year": "2011",
+      "type": "article",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "P",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1126/science.1197557",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Science",
+      "keywords": [
+        "Bayesian cognition",
+        "abstraction",
+        "cognitive development",
+        "hierarchical models",
+        "learning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Thagard2000Coherence",
+      "title": "Coherence in Thought and Action",
+      "author": "Thagard, Paul",
+      "year": "2000",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780262201316",
+      "journal": null,
+      "keywords": [
+        "cognitive science",
+        "coherence",
+        "constraint satisfaction",
+        "epistemology",
+        "ethics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Trinh2024AlphaGeometry",
       "title": "Solving Olympiad Geometry without Human Demonstrations",
       "author": "Trinh, Trieu H. and Wu, Yuhuai and Le, Quoc V. and He, He and Luong, Thang",
@@ -4853,6 +5060,35 @@
         "formal verification",
         "neuro-symbolic reasoning",
         "olympiad"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Tversky1983Extensional",
+      "title": "Extensional versus Intuitive Reasoning: The Conjunction Fallacy in Probability Judgment",
+      "author": "Tversky, Amos and Kahneman, Daniel",
+      "year": "1983",
+      "type": "article",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.1037/0033-295X.90.4.293",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Psychological Review",
+      "keywords": [
+        "conjunction fallacy",
+        "heuristics",
+        "probability judgment",
+        "representativeness"
       ],
       "downstream_refs": [],
       "arxiv_id": null,

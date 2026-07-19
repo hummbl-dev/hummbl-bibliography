@@ -3146,6 +3146,29 @@
       "url": "https://arxiv.org/abs/2312.11805"
     },
     {
+      "id": "Gigerenzer2007GutFeelings",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "author": "Gigerenzer, Gerd",
+      "year": "2007",
+      "abstract": "Gigerenzer presents the case that unconscious intuitions — \"gut feelings\" — are not irrational impulses but adaptive cognitive strategies shaped by evolution. He introduces fast-and-frugal heuristics that exploit environmental structure to make better decisions than complex rational analysis in many real-world situations. The recognition heuristic, the take-the-best heuristic, and the gaze heuristic demonstrate that less information can lead to better decisions. This challenges the heuristics-and-biases tradition by showing that heuristics are not biases but rational adaptations, grounding HUMMBL Perspective (P) and Inversion (IN) operators in the ecological rationality framework.",
+      "keywords": [
+        "decision making",
+        "ecological rationality",
+        "heuristics",
+        "intuition"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "publisher": "Viking",
+      "isbn": "9780670038633",
+      "address": "New York, NY"
+    },
+    {
       "id": "GreenKarvounarakisTannen2007ProvenanceSemirings",
       "type": "inproceedings",
       "tier": "T13",
@@ -3192,6 +3215,54 @@
       "journal": "arXiv preprint arXiv:2411.16646",
       "doi": "10.48550/arXiv.2411.16646",
       "url": "https://arxiv.org/abs/2411.16646"
+    },
+    {
+      "id": "Holyoak1995MentalLeaps",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Mental Leaps: Analogy in Creative Thought",
+      "author": "Holyoak, Keith J. and Thagard, Paul",
+      "year": "1995",
+      "abstract": "Holyoak and Thagard present analogy as a fundamental mechanism of human cognition, enabling creative thought through the transfer of relational structure from a familiar source domain to a novel target domain. They develop the multiconstraint theory of analogy, identifying three constraints — similarity, structure, and purpose — that govern analogical reasoning. The book traces analogy from scientific discovery (Rutherford atom, Darwin evolution) to everyday problem-solving and legal reasoning, demonstrating that analogical thinking is not a peripheral rhetorical device but a core cognitive process. Grounds HUMMBL Perspective (P), Synthesis (SY), and Recursion (RE) operators in the cognitive science of analogical reasoning.",
+      "keywords": [
+        "analogy",
+        "cognitive science",
+        "creative thought",
+        "relational reasoning"
+      ],
+      "transformations": [
+        "P",
+        "RE",
+        "SY"
+      ],
+      "publisher": "MIT Press",
+      "isbn": "9780262082315",
+      "address": "Cambridge, MA"
+    },
+    {
+      "id": "JohnsonLaird1983MentalModels",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Mental Models: Toward a Cognitive Science of Language, Inference, and Consciousness",
+      "author": "Johnson-Laird, Philip N.",
+      "year": "1983",
+      "abstract": "Johnson-Laird proposes that human reasoning operates not on formal logic or syntactic rules, but on mental models — internal representations of the world that capture the structure of situations. The theory explains how people draw conclusions by constructing, evaluating, and manipulating models of premises. It accounts for systematic reasoning errors as limitations in working memory capacity for model construction, not as logical failures. The framework unifies language understanding, deduction, induction, and consciousness under a single representational architecture, grounding HUMMBL Perspective (P) and Synthesis (SY) operators in the cognitive science of mental representation.",
+      "keywords": [
+        "cognitive science",
+        "consciousness",
+        "inference",
+        "mental models",
+        "reasoning"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "publisher": "Harvard University Press",
+      "isbn": "9780674568828",
+      "address": "Cambridge, MA"
     },
     {
       "id": "Kumar2024ScalingInference",
@@ -3284,6 +3355,29 @@
       ],
       "journal": "Analysis: Journal of Philosophical Research, University of Zaragoza",
       "url": "https://papiro.unizar.es/ojs/index.php/analisis/en/article/view/4189"
+    },
+    {
+      "id": "Oaksford2007BayesianRationality",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Bayesian Rationality: The Probabilistic Approach to Human Reasoning",
+      "author": "Oaksford, Mike and Chater, Nick",
+      "year": "2007",
+      "abstract": "Oaksford and Chater argue that human reasoning is not fundamentally logical but probabilistic — governed by Bayesian principles rather than formal deductive logic. They reinterpret classical reasoning tasks (Wason selection task, syllogistic reasoning) as optimal Bayesian inference under uncertainty, showing that apparent \"errors\" in human reasoning are actually rational responses given the probabilistic structure of the environment. This paradigm shift from logic to probability as the framework for human rationality grounds HUMMBL Perspective (P) and Inversion (IN) operators by reframing the rationality debate itself.",
+      "keywords": [
+        "Bayesian reasoning",
+        "cognitive science",
+        "probability",
+        "rationality"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780198524496",
+      "address": "Oxford, UK"
     },
     {
       "id": "OpenAI2024o1Mini",
@@ -3424,6 +3518,29 @@
       "note": "Self-published; not peer-reviewed."
     },
     {
+      "id": "Sloman2005CausalModels",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Causal Models: How People Think About the World and Its Alternatives",
+      "author": "Sloman, Steven A.",
+      "year": "2005",
+      "abstract": "Sloman argues that human cognition is fundamentally causal model-based: people reason about the world by constructing mental models of causal relationships, not by tracking statistical correlations. The book presents evidence that causal models enable counterfactual reasoning, intervention prediction, and explanation — capabilities that go beyond what associative learning can provide. The distinction between causal and statistical reasoning explains systematic deviations from normative probability judgments and provides a framework for understanding how people reason about what could have been. Grounds HUMMBL Perspective (P) and Decomposition (DE) operators in the cognitive science of causal representation.",
+      "keywords": [
+        "causal cognition",
+        "causal models",
+        "cognitive science",
+        "counterfactual reasoning"
+      ],
+      "transformations": [
+        "DE",
+        "P"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780195183115",
+      "address": "Oxford, UK"
+    },
+    {
       "id": "Snell2024ScalingTestTime",
       "type": "article",
       "tier": "T13",
@@ -3444,6 +3561,56 @@
       "journal": "arXiv preprint arXiv:2408.03314",
       "doi": "10.48550/arXiv.2408.03314",
       "url": "https://arxiv.org/abs/2408.03314"
+    },
+    {
+      "id": "Tenenbaum2011GrowMind",
+      "type": "article",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "How to Grow a Mind: Statistics, Structure, and Abstraction",
+      "author": "Tenenbaum, Joshua B. and Kemp, Charles and Griffiths, Thomas L. and Goodman, Noah D.",
+      "year": "2011",
+      "abstract": "Tenenbaum and colleagues argue that human cognition learns structured representations from sparse data through Bayesian inference over hierarchical generative models. They present a computational framework where the mind grows by inferring the latent structure of the world — from object categories to social relationships to physical causality — using probabilistic inference that balances fit with simplicity. The theory explains how children learn from single examples, how experts abstract principles from specific cases, and how the mind builds causal models that support counterfactual reasoning. Grounds HUMMBL Perspective (P) and Recursion (RE) operators in the Bayesian program of cognitive development.",
+      "keywords": [
+        "Bayesian cognition",
+        "abstraction",
+        "cognitive development",
+        "hierarchical models",
+        "learning"
+      ],
+      "transformations": [
+        "P",
+        "RE"
+      ],
+      "journal": "Science",
+      "volume": "331",
+      "number": "6022",
+      "pages": "1279--1285",
+      "doi": "10.1126/science.1197557"
+    },
+    {
+      "id": "Thagard2000Coherence",
+      "type": "book",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Coherence in Thought and Action",
+      "author": "Thagard, Paul",
+      "year": "2000",
+      "abstract": "Thagard develops a unified theory of coherence as the central principle governing human thought and action. He proposes that reasoning, explanation, deliberation, and ethical judgment all operate through constraint satisfaction — maximizing coherence among beliefs, goals, and actions. The theory integrates epistemology, ethics, and cognitive science under a computational framework where coherence is formally defined as constraint satisfaction. This synthesis of diverse cognitive domains under a single principle grounds HUMMBL Synthesis (SY) and Perspective (P) operators in a formal theory of cognitive integration.",
+      "keywords": [
+        "cognitive science",
+        "coherence",
+        "constraint satisfaction",
+        "epistemology",
+        "ethics"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "publisher": "MIT Press",
+      "isbn": "9780262201316",
+      "address": "Cambridge, MA"
     },
     {
       "id": "Trinh2024AlphaGeometry",
@@ -3468,6 +3635,31 @@
       "pages": "476--482",
       "doi": "10.1038/s41586-023-06747-5",
       "url": "https://www.nature.com/articles/s41586-023-06747-5"
+    },
+    {
+      "id": "Tversky1983Extensional",
+      "type": "article",
+      "tier": "T13",
+      "tier_name": "Reasoning",
+      "title": "Extensional versus Intuitive Reasoning: The Conjunction Fallacy in Probability Judgment",
+      "author": "Tversky, Amos and Kahneman, Daniel",
+      "year": "1983",
+      "abstract": "Tversky and Kahneman demonstrate the conjunction fallacy: people systematically judge the conjunction of two events as more probable than either event alone, violating the extensional logic of probability theory. In the famous Linda problem, subjects rate \"Linda is a feminist bank teller\" as more probable than \"Linda is a bank teller,\" despite the conjunction rule. This finding reveals that human reasoning often relies on intuitive representativeness heuristics rather than extensional (set-theoretic) logic, with broad implications for rationality, judgment under uncertainty, and the architecture of human inference. Directly grounds HUMMBL Perspective (P) and Inversion (IN) operators by showing how cognitive reframing of the same problem changes judgments.",
+      "keywords": [
+        "conjunction fallacy",
+        "heuristics",
+        "probability judgment",
+        "representativeness"
+      ],
+      "transformations": [
+        "IN",
+        "P"
+      ],
+      "journal": "Psychological Review",
+      "volume": "90",
+      "number": "4",
+      "pages": "293--315",
+      "doi": "10.1037/0033-295X.90.4.293"
     },
     {
       "id": "Uesato2022ProcessOutcome",
