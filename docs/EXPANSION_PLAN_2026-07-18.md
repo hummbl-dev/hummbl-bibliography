@@ -1,9 +1,56 @@
 # HUMMBL Dual-Repo Expansion Plan
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 **Date**: 2026-07-18
 **Repos**: hummbl-bibliography, hummbl-research
-**Status**: Proposed
+**Status**: Waves 1A-5A COMPLETE
+
+---
+
+## 0. Completion Status (updated 2026-07-19)
+
+| Wave | Description | Entries Added | Status | Commit(s) |
+|------|-------------|---------------|--------|-----------|
+| 1A | IN-grounding entries | 12 | COMPLETE | 321e72c |
+| 2A | CO-grounding entries | 8 | COMPLETE | ceb6807 |
+| 3A | T14 Provenance fill | 8 | COMPLETE | 694cae7 |
+| 3A | T15 Maturity fill | 5 | COMPLETE | 7885f10 |
+| 3A | T16 Data Governance fill | 13 | COMPLETE | 195bd34 |
+| 3A | T17 Privacy fill | 13 | COMPLETE | 0e3023f |
+| 3A | T18 Human Oversight fill | 10 | COMPLETE | 364d5f8 |
+| 3A | T19 Incident Response fill | 10 | COMPLETE | ffa3536 |
+| 4A | ARCANA social theory | 14 | COMPLETE | 388bef3 |
+| 5A | T6 Governance fill | 1 | COMPLETE | (Wave 5) |
+| **Total** | | **94** | | |
+
+### Bibliography State After Expansion
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Total entries | 353 | 447 |
+| Tiers at 20+ | 13/19 | **19/19** |
+| Tiers below 20 | 6 | **0** |
+| Entries with abstracts | 100% | 100% |
+| Entries with keywords | 100% | 100% |
+| Entries with DOI | ~58% | 61.7% |
+
+### Research-Side Updates
+
+| Update | Status | Commit |
+|--------|--------|--------|
+| Grounding manifest: CO refs (8) | COMPLETE | b41a158 |
+| Grounding manifest: IN refs (12) | COMPLETE | b41a158 |
+| Grounding manifest: ARCANA refs (14) | COMPLETE | b41a158 |
+| SCIENTIFIC_GROUNDING.md expanded | COMPLETE | ae99b27 |
+| GitHub issues filed | 3 filed | #125, #126, #127 |
+
+### Remaining Work (Future Waves)
+
+| Wave | Description | Status |
+|------|-------------|--------|
+| 1B/2B | Operator re-scoring against new refs | PENDING (issues #125, #126, #127) |
+| 6A | Expand overfilled tiers (T1, T7, T12, T13) | PROPOSED |
+| 7A | Bibliography-to-model cross-reference validation | PROPOSED |
 
 ---
 
