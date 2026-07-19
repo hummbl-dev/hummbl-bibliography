@@ -38,10 +38,10 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 432,
+    "total_sources": 446,
     "thematic_tiers": {
-      "T1": 36,
-      "T2": 23,
+      "T1": 47,
+      "T2": 26,
       "T3": 23,
       "T4": 20,
       "T5": 22,
@@ -55,8 +55,8 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 226,
-      "empirical": 68,
+      "foundational": 237,
+      "empirical": 71,
       "applied": 45,
       "governance": 19,
       "emerging": 74
@@ -68,7 +68,7 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 41,
+      "medium": 42,
       "low": 65
     }
   },
@@ -168,6 +168,66 @@
       "metadata_debt": []
     },
     {
+      "key": "Burnham1941ManagerialRevolution",
+      "title": "The Managerial Revolution: What Is Happening in the World",
+      "author": "Burnham, James",
+      "year": "1941",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780837156785",
+      "journal": null,
+      "keywords": [
+        "Burnham",
+        "bureaucratic power",
+        "managerial revolution",
+        "managerialism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Chomsky1988ManufacturingConsent",
+      "title": "Manufacturing Consent: The Political Economy of the Mass Media",
+      "author": "Chomsky, Noam and Herman, Edward S.",
+      "year": "1988",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780394554480",
+      "journal": null,
+      "keywords": [
+        "Chomsky",
+        "manufacturing consent",
+        "media",
+        "propaganda model"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Csikszentmihalyi1990Flow",
       "title": "Flow: The Psychology of Optimal Experience",
       "author": "Csikszentmihalyi, Mihaly",
@@ -252,6 +312,36 @@
       "metadata_debt": []
     },
     {
+      "key": "Gramsci1929PrisonNotebooks",
+      "title": "Prison Notebooks",
+      "author": "Gramsci, Antonio",
+      "year": "1929",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780231157428",
+      "journal": null,
+      "keywords": [
+        "Gramsci",
+        "civil society",
+        "hegemony",
+        "organic intellectual"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hacker2002WittgensteinGrammar",
       "title": "Wittgenstein's Grammar: Through Thick and Thin",
       "author": "Hacker, P. M. S.",
@@ -318,6 +408,43 @@
       "metadata_debt": []
     },
     {
+      "key": "Heidegger1954QuestionTechnology",
+      "title": "The Question Concerning Technology",
+      "author": "Heidegger, Martin",
+      "year": "1954",
+      "type": "article",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "The Question Concerning Technology and Other Essays (1977 English translation)",
+      "keywords": [
+        "Heidegger",
+        "enframing",
+        "revealing",
+        "standing reserve",
+        "technology"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
       "key": "Hofstadter1979Godel",
       "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
       "author": "Hofstadter, Douglas R.",
@@ -349,6 +476,36 @@
           "note": "ARCANA Coordinator — cross-domain synthesis, convergence mapping"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "IbnKhaldun1377Muqaddimah",
+      "title": "The Muqaddimah: An Introduction to History",
+      "author": "Ibn Khaldun",
+      "year": "1377",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780691120064",
+      "journal": null,
+      "keywords": [
+        "Ibn Khaldun",
+        "asabiyyah",
+        "cyclical history",
+        "social cohesion"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -617,6 +774,67 @@
       ]
     },
     {
+      "key": "Marx1867Capital",
+      "title": "Capital: Critique of Political Economy, Volume 1",
+      "author": "Marx, Karl",
+      "year": "1867",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780140445688",
+      "journal": null,
+      "keywords": [
+        "Marx",
+        "capital",
+        "commodity fetishism",
+        "exploitation",
+        "surplus value"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "McLuhan1964UnderstandingMedia",
+      "title": "Understanding Media: The Extensions of Man",
+      "author": "McLuhan, Marshall",
+      "year": "1964",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780262631594",
+      "journal": null,
+      "keywords": [
+        "McLuhan",
+        "extensions",
+        "media",
+        "medium is the message"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Meadows2008ThinkingSystems",
       "title": "Thinking in Systems: A Primer",
       "author": "Meadows, Donella H.",
@@ -774,6 +992,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Nietzsche1887Genealogy",
+      "title": "On the Genealogy of Morals",
+      "author": "Nietzsche, Friedrich",
+      "year": "1887",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780679724629",
+      "journal": null,
+      "keywords": [
+        "Nietzsche",
+        "ascetic ideal",
+        "genealogy",
+        "morality",
+        "power"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Norman2013DesignEveryday",
       "title": "The Design of Everyday Things",
       "author": "Norman, Donald A.",
@@ -795,6 +1044,36 @@
         "affordances",
         "design",
         "usability"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Pareto1935MindSociety",
+      "title": "The Mind and Society (Trattato di Sociologia Generale)",
+      "author": "Pareto, Vilfredo",
+      "year": "1935",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780486794075",
+      "journal": null,
+      "keywords": [
+        "Pareto",
+        "elite circulation",
+        "non-logical action",
+        "residues"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -1156,6 +1435,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Veblen1899LeisureClass",
+      "title": "The Theory of the Leisure Class",
+      "author": "Veblen, Thorstein",
+      "year": "1899",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780199552580",
+      "journal": null,
+      "keywords": [
+        "Veblen",
+        "conspicuous consumption",
+        "emulation",
+        "leisure class",
+        "status"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "VonNeumann1944GameTheory",
       "title": "Theory of Games and Economic Behavior",
       "author": "von Neumann, John and Morgenstern, Oskar",
@@ -1215,6 +1525,37 @@
         "reframing",
         "second-order change",
         "systems theory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Weber1922EconomySociety",
+      "title": "Economy and Society: An Outline of Interpretive Sociology",
+      "author": "Weber, Max",
+      "year": "1922",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780520034947",
+      "journal": null,
+      "keywords": [
+        "Weber",
+        "authority",
+        "ideal types",
+        "iron cage",
+        "rationalization"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -8562,6 +8903,67 @@
       "metadata_debt": []
     },
     {
+      "key": "Bateson1972EcologyMind",
+      "title": "Steps to an Ecology of Mind",
+      "author": "Bateson, Gregory",
+      "year": "1972",
+      "type": "book",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780226039050",
+      "journal": null,
+      "keywords": [
+        "Bateson",
+        "double bind",
+        "ecology of mind",
+        "metalogues"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bourdieu1977OutlineTheory",
+      "title": "Outline of a Theory of Practice",
+      "author": "Bourdieu, Pierre",
+      "year": "1977",
+      "type": "book",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "P",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1017/CBO9780511812507",
+      "has_isbn": true,
+      "isbn": "9780521291641",
+      "journal": null,
+      "keywords": [
+        "cultural capital",
+        "field",
+        "habitus",
+        "practice",
+        "social reproduction"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "BrownCollinsDuguid1989Situated",
       "title": "Situated Cognition and the Culture of Learning",
       "author": "Brown, John Seely and Collins, Allan and Duguid, Paul",
@@ -8760,6 +9162,37 @@
         "bounded rationality",
         "fast-and-frugal",
         "heuristics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Habermas1981CommunicativeAction",
+      "title": "The Theory of Communicative Action",
+      "author": "Habermas, Jurgen",
+      "year": "1981",
+      "type": "book",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780807015013",
+      "journal": null,
+      "keywords": [
+        "Habermas",
+        "colonization",
+        "communicative action",
+        "lifeworld",
+        "system"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -14772,6 +15205,16 @@
       "key": "Gengler2024OrgAIGovMaturity",
       "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
       "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Heidegger1954QuestionTechnology",
+      "title": "The Question Concerning Technology",
+      "bibliography_tier": "T1",
       "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",

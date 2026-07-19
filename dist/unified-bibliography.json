@@ -100,6 +100,54 @@
       "isbn": "978-0415283855"
     },
     {
+      "id": "Burnham1941ManagerialRevolution",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Managerial Revolution: What Is Happening in the World",
+      "author": "Burnham, James",
+      "year": "1941",
+      "abstract": "Burnham argues that capitalism is being replaced not by socialism (as Marx predicted) but by managerialism -- a system in which managers, not owners or workers, control the means of production. The managerial revolution occurs because modern production is too complex for owners to direct directly, requiring a new class of professional managers who possess technical knowledge but not capital. Burnham predicts the convergence of capitalist and socialist systems toward managerialism, with managers in both systems exercising effective control through their monopoly on organizational knowledge. The book influenced Orwell's 1984 and is foundational to the study of bureaucratic power. For HUMMBL, Burnham's thesis provides a framework for understanding AI governance as a potential managerial revolution: AI systems may shift control from domain experts to those who manage the AI infrastructure, creating a new managerial class. The owner-manager-worker triad connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "Burnham",
+        "bureaucratic power",
+        "managerial revolution",
+        "managerialism"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "John Day Company",
+      "isbn": "9780837156785",
+      "address": "New York"
+    },
+    {
+      "id": "Chomsky1988ManufacturingConsent",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Manufacturing Consent: The Political Economy of the Mass Media",
+      "author": "Chomsky, Noam and Herman, Edward S.",
+      "year": "1988",
+      "abstract": "Chomsky and Herman present the propaganda model of mass media, arguing that corporate media manufactures consent for elite policies through five filters: ownership (media owned by large corporations), advertising (media funded by advertisers, not audiences), sourcing (media relies on official sources), flak (negative responses discipline dissent), and anti-communism (ideological framework for framing threats). The model explains how media can be free from government censorship yet systematically produce content that serves elite interests. For HUMMBL, the propaganda model provides a framework for understanding how AI-mediated information systems can manufacture consent at scale: recommendation algorithms, content moderation, and search ranking are new filters that operate through engagement optimization rather than editorial control. The five-filter model connects to the DE (Decomposition) transformation -- decomposing media bias into distinct filtering mechanisms. The manufacturing-consent concept connects to the IN (Inversion) inversion -- inverting the democratic function of media into a control mechanism.",
+      "keywords": [
+        "Chomsky",
+        "manufacturing consent",
+        "media",
+        "propaganda model"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Pantheon Books",
+      "isbn": "9780394554480",
+      "address": "New York"
+    },
+    {
       "id": "Csikszentmihalyi1990Flow",
       "type": "book",
       "tier": "T1",
@@ -163,6 +211,30 @@
       "isbn": "978-0316316965"
     },
     {
+      "id": "Gramsci1929PrisonNotebooks",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Prison Notebooks",
+      "author": "Gramsci, Antonio",
+      "year": "1929",
+      "abstract": "Gramsci introduces the concept of cultural hegemony -- the process by which a ruling class maintains power not through coercion but through consent, by shaping the cultural and ideological framework that defines what is thinkable. Hegemony operates through civil society (education, media, religion) rather than the state, making it invisible to those within it. The Prison Notebooks also introduce the concept of the organic intellectual -- a thinker who emerges from a social class and articulates its interests, as opposed to the traditional intellectual who claims neutrality. Gramsci's analysis of hegemony explains why revolution did not occur in the West as Marx predicted: the working class was integrated into the hegemonic culture rather than radicalized by economic conditions. For HUMMBL, cultural hegemony provides the framework for understanding how AI governance frameworks can become hegemonic -- defining what counts as legitimate governance in ways that serve existing power structures. The hegemony-coercion-consent triad connects to the SY (Synthesis) transformation.",
+      "keywords": [
+        "Gramsci",
+        "civil society",
+        "hegemony",
+        "organic intellectual"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Columbia University Press",
+      "isbn": "9780231157428",
+      "address": "New York"
+    },
+    {
       "id": "Hacker2002WittgensteinGrammar",
       "type": "incollection",
       "tier": "T1",
@@ -217,6 +289,30 @@
       "isbn": "978-0631194562"
     },
     {
+      "id": "Heidegger1954QuestionTechnology",
+      "type": "article",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Question Concerning Technology",
+      "author": "Heidegger, Martin",
+      "year": "1954",
+      "abstract": "Heidegger argues that technology is not merely a tool but a way of revealing -- a mode of bringing forth truth that he calls Gestell (enframing). Under enframing, everything is revealed as Bestand (standing reserve), a resource to be optimized and consumed. The danger of technology is not that it might malfunction but that it might succeed: that the technological way of revealing might crowd out all other ways of understanding being. Heidegger argues that the essence of technology is nothing technological -- it is a mode of understanding that precedes and shapes any particular technology. For HUMMBL, Heidegger's analysis provides the deepest philosophical critique of AI governance: the danger is not that AI might fail but that it might succeed in reducing all decision-making to optimization, crowding out other modes of understanding. The enframing-standing-reserve framework connects to the IN (Inversion) inversion -- inverting the tool to reveal the way of revealing.",
+      "keywords": [
+        "Heidegger",
+        "enframing",
+        "revealing",
+        "standing reserve",
+        "technology"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "journal": "The Question Concerning Technology and Other Essays (1977 English translation)",
+      "pages": "3--35"
+    },
+    {
       "id": "Hofstadter1979Godel",
       "type": "book",
       "tier": "T1",
@@ -236,6 +332,30 @@
       ],
       "publisher": "Basic Books",
       "isbn": "978-0465026562"
+    },
+    {
+      "id": "IbnKhaldun1377Muqaddimah",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Muqaddimah: An Introduction to History",
+      "author": "Ibn Khaldun",
+      "year": "1377",
+      "abstract": "Ibn Khaldun's Muqaddimah is considered the first work of sociology and historiography, introducing the concept of asabiyyah (social cohesion/group solidarity) as the driving force of historical change. Ibn Khaldun argues that dynasties rise through asabiyyah (the solidarity of desert tribes), establish cities and luxury, and then decline as luxury erodes asabiyyah -- a cyclical theory of history with a typical dynasty lifespan of three generations. He analyzes the economic effects of taxation (high taxes reduce revenue by discouraging production), the role of religion in strengthening asabiyyah, and the distinction between rural (tough, cohesive) and urban (soft, fragmented) society. For HUMMBL, Ibn Khaldun's asabiyyah concept provides a foundational framework for understanding organizational cohesion and decline: AI governance systems, like dynasties, may rise through technical cohesion and decline as institutional complexity erodes the original solidarity. The cyclical theory connects to the RE (Recursion) transformation.",
+      "keywords": [
+        "Ibn Khaldun",
+        "asabiyyah",
+        "cyclical history",
+        "social cohesion"
+      ],
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Princeton University Press",
+      "isbn": "9780691120064",
+      "address": "Princeton, NJ"
     },
     {
       "id": "KaderbhaiGrammarRealityVakyapadiya",
@@ -400,6 +520,55 @@
       "note": "Date discrepancy: archive URL path contains 1980/07/13 but article display identifies July 12, 1980 as publication date. Both dates preserved; search not exhaustive."
     },
     {
+      "id": "Marx1867Capital",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Capital: Critique of Political Economy, Volume 1",
+      "author": "Marx, Karl",
+      "year": "1867",
+      "abstract": "Marx's Capital analyzes the capitalist mode of production through the concepts of commodity (a good produced for exchange), surplus value (the difference between the value workers produce and their wages), and exploitation (the extraction of surplus value). The book introduces the theory of commodity fetishism: under capitalism, social relations between people appear as relations between things (commodities), obscuring the exploitation underlying production. Marx analyzes the tendency of the rate of profit to fall, the concentration of capital, and the proletarianization of the middle class. For HUMMBL, Capital provides the foundational critique of economic structures that AI systems operate within: AI as a means of production that can either democratize or concentrate surplus value extraction. The commodity fetishism concept connects to the IN (Inversion) inversion -- inverting the appearance of commodities to reveal the underlying social relations.",
+      "keywords": [
+        "Marx",
+        "capital",
+        "commodity fetishism",
+        "exploitation",
+        "surplus value"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Penguin Classics",
+      "isbn": "9780140445688",
+      "address": "London"
+    },
+    {
+      "id": "McLuhan1964UnderstandingMedia",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Understanding Media: The Extensions of Man",
+      "author": "McLuhan, Marshall",
+      "year": "1964",
+      "abstract": "McLuhan introduces the concept that \"the medium is the message\" -- the content of a medium is less important than the structural changes it produces in human perception and social organization. Media are extensions of the human nervous system: the wheel extends the foot, the book extends the eye, electronic media extend the central nervous system. McLuhan distinguishes hot media (high definition, low participation) from cool media (low definition, high participation). The book predicts that electronic media would end the Gutenberg galaxy (the linear, sequential thinking fostered by print) and return humanity to a tribal mode of simultaneous, multi-sensory experience. For HUMMBL, McLuhan's framework provides the media-theoretical foundation for understanding AI as a medium: AI extends human cognition, and the structural changes it produces (automation of judgment, acceleration of decision) are more significant than any particular AI output. The medium-message distinction connects to the P (Perspective) transformation.",
+      "keywords": [
+        "McLuhan",
+        "extensions",
+        "media",
+        "medium is the message"
+      ],
+      "transformations": [
+        "DE",
+        "P",
+        "SY"
+      ],
+      "publisher": "MIT Press",
+      "isbn": "9780262631594",
+      "address": "Cambridge, MA"
+    },
+    {
       "id": "Meadows2008ThinkingSystems",
       "type": "book",
       "tier": "T1",
@@ -490,6 +659,31 @@
       "isbn": "978-0134454030"
     },
     {
+      "id": "Nietzsche1887Genealogy",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "On the Genealogy of Morals",
+      "author": "Nietzsche, Friedrich",
+      "year": "1887",
+      "abstract": "Nietzsche's Genealogy traces the historical origins of moral concepts, arguing that what we call morality is the product of power struggles rather than divine or rational foundations. The three essays examine: (1) the transformation of \"good\" (originally meaning noble) and \"bad\" (originally meaning common) into \"good\" (meaning selfless) and \"evil\" (meaning powerful), (2) the origin of guilt in the creditor-debtor relationship, and (3) the ascetic ideal -- the valorization of self-denial as a response to the meaninglessness of existence. Nietzsche's method is genealogical: rather than asking what morality means, he asks how it came to mean what it does. For HUMMBL, the genealogical method is a powerful IN (Inversion) tool: instead of analyzing what a concept means, invert it to ask how it acquired its meaning. The power-morality connection provides a framework for examining how AI governance norms are products of power relations rather than neutral principles.",
+      "keywords": [
+        "Nietzsche",
+        "ascetic ideal",
+        "genealogy",
+        "morality",
+        "power"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "RE"
+      ],
+      "publisher": "Vintage Books",
+      "isbn": "9780679724629",
+      "address": "New York"
+    },
+    {
       "id": "Norman2013DesignEveryday",
       "type": "book",
       "tier": "T1",
@@ -510,6 +704,30 @@
       "publisher": "Basic Books",
       "doi": "10.15358/9783800648108",
       "isbn": "978-0465050659"
+    },
+    {
+      "id": "Pareto1935MindSociety",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Mind and Society (Trattato di Sociologia Generale)",
+      "author": "Pareto, Vilfredo",
+      "year": "1935",
+      "abstract": "Pareto distinguishes between logical actions (actions that are instrumentally rational) and non-logical actions (actions driven by sentiments and residues). He identifies six classes of residues -- the persistent emotional patterns that underlie non-logical action -- including the residue of combinations (innovation), the persistence of aggregates (conservatism), and the residue of sentiments. Pareto argues that elites maintain power through a combination of force and persuasion (derivations), and that elite circulation -- the replacement of one elite by another -- is the primary mechanism of social change. The concept of residues provides a framework for understanding why logical arguments often fail to change behavior: the underlying residues, not the surface arguments, drive action. For HUMMBL, Pareto's logical/non-logical distinction connects to the IN (Inversion) inversion -- inverting the surface argument to reveal the underlying residue. The elite circulation concept connects to the RE (Recursion) transformation.",
+      "keywords": [
+        "Pareto",
+        "elite circulation",
+        "non-logical action",
+        "residues"
+      ],
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Dover Publications",
+      "isbn": "9780486794075",
+      "address": "New York"
     },
     {
       "id": "Pearl2009Causality",
@@ -710,6 +928,31 @@
       "isbn": "978-0961392147"
     },
     {
+      "id": "Veblen1899LeisureClass",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Theory of the Leisure Class",
+      "author": "Veblen, Thorstein",
+      "year": "1899",
+      "abstract": "Veblen introduces the concept of conspicuous consumption -- the purchase and display of goods not for utility but to signal social status. The leisure class engages in conspicuous leisure (non-productive time use) and conspicuous consumption (non-utilitarian expenditure) to demonstrate freedom from productive labor. Veblen argues that these behaviors are not irrational but follow the logic of status competition: in societies where wealth confers status, the visible waste of resources becomes the primary means of status display. The book introduces the concept of pecuniary emulation -- the adoption of upper-class consumption patterns by lower classes, creating a cascading status competition. For HUMMBL, Veblen's framework provides the economic-sociological foundation for understanding AI consumption patterns: conspicuous computation (using expensive AI models to signal sophistication rather than solve problems) and pecuniary emulation in AI adoption. The conspicuous consumption concept connects to the IN (Inversion) inversion -- inverting the appearance of utility to reveal status competition.",
+      "keywords": [
+        "Veblen",
+        "conspicuous consumption",
+        "emulation",
+        "leisure class",
+        "status"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780199552580",
+      "address": "New York"
+    },
+    {
       "id": "VonNeumann1944GameTheory",
       "type": "book",
       "tier": "T1",
@@ -753,6 +996,31 @@
       "publisher": "W. W. Norton & Company",
       "isbn": "9780393011043",
       "address": "New York"
+    },
+    {
+      "id": "Weber1922EconomySociety",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Economy and Society: An Outline of Interpretive Sociology",
+      "author": "Weber, Max",
+      "year": "1922",
+      "abstract": "Weber's magnum opus introduces the foundational concepts of interpretive sociology: social action (action oriented to the behavior of others), ideal types (analytical constructs that capture the essential features of a phenomenon), and the three types of authority (traditional, charismatic, legal-rational). The book analyzes the rationalization process -- the progressive displacement of tradition and emotion by calculation and efficiency -- across law, politics, religion, and economy. Weber's famous \"iron cage\" metaphor describes the unintended consequence of rationalization: individuals become trapped in systems of their own making, governed by bureaucratic rules that no one chose but everyone must follow. For HUMMBL, Weber's rationalization thesis provides the sociological framework for understanding how AI governance systems can become iron cages -- bureaucratic structures that constrain the very human judgment they were designed to enable. The ideal type method connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "Weber",
+        "authority",
+        "ideal types",
+        "iron cage",
+        "rationalization"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "University of California Press",
+      "isbn": "9780520034947",
+      "address": "Berkeley"
     },
     {
       "id": "Whitehead1929ProcessReality",
@@ -6115,6 +6383,56 @@
       "doi": "10.2307/2391848"
     },
     {
+      "id": "Bateson1972EcologyMind",
+      "type": "book",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "Steps to an Ecology of Mind",
+      "author": "Bateson, Gregory",
+      "year": "1972",
+      "abstract": "Bateson's collected essays introduce the concept of mind as an ecological system -- not a property of individuals but of the relationships between organisms and their environment. The book introduces the double bind theory of schizophrenia (contradictory messages that create no-win situations), the concept of metalogues (conversations about the structure of the conversation), and the distinction between digital communication (discrete, arbitrary signs) and analogic communication (continuous, iconic signs). Bateson argues that the unit of survival is not the organism but the organism-plus-environment, and that the unit of mind is not the brain but the brain-plus-body-plus-environment. For HUMMBL, Bateson's ecological concept of mind provides the deepest framework for understanding AI systems as ecological rather than individual: AI governance must consider the system-plus-environment, not just the AI system in isolation. The double bind theory connects to the IN (Inversion) inversion -- contradictory constraints that create no-win situations. The digital-analogic distinction connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "Bateson",
+        "double bind",
+        "ecology of mind",
+        "metalogues"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "University of Chicago Press",
+      "isbn": "9780226039050",
+      "address": "Chicago"
+    },
+    {
+      "id": "Bourdieu1977OutlineTheory",
+      "type": "book",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "Outline of a Theory of Practice",
+      "author": "Bourdieu, Pierre",
+      "year": "1977",
+      "abstract": "Bourdieu introduces the concepts of habitus, field, and cultural capital to explain how social structures reproduce themselves through embodied dispositions rather than conscious choice. Habitus is the system of durable, transposable dispositions that generates practices and perceptions; field is the structured social space in which agents compete for positions; cultural capital is the non-economic resources (education, taste, language) that enable social mobility. The book argues that practice is neither purely rational (following rules) nor purely structural (determined by position) but emerges from the interaction between habitus and field. For HUMMBL, Bourdieu's framework provides the sociological foundation for understanding how cognitive transformations are socially situated: the same mental model produces different practices depending on the agent's habitus and field position. The habitus-field-practice triad connects to the SY (Synthesis) transformation -- synthesizing structure and agency.",
+      "keywords": [
+        "cultural capital",
+        "field",
+        "habitus",
+        "practice",
+        "social reproduction"
+      ],
+      "transformations": [
+        "DE",
+        "P",
+        "SY"
+      ],
+      "publisher": "Cambridge University Press",
+      "doi": "10.1017/CBO9780511812507",
+      "isbn": "9780521291641",
+      "address": "Cambridge"
+    },
+    {
       "id": "BrownCollinsDuguid1989Situated",
       "type": "article",
       "tier": "T2",
@@ -6283,6 +6601,31 @@
       "number": "4",
       "pages": "650--669",
       "doi": "10.1037/0033-295X.103.4.650"
+    },
+    {
+      "id": "Habermas1981CommunicativeAction",
+      "type": "book",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "The Theory of Communicative Action",
+      "author": "Habermas, Jurgen",
+      "year": "1981",
+      "abstract": "Habermas distinguishes between instrumental action (oriented toward success, governed by technical rules) and communicative action (oriented toward mutual understanding, governed by social norms). The theory introduces the concept of the lifeworld -- the background of shared meanings and practices that make communication possible -- and the system -- the economic and administrative structures that operate according to their own logic. Habermas argues that modernity is characterized by the colonization of the lifeworld by the system: economic and administrative rationality increasingly displaces communicative understanding. For HUMMBL, the lifeworld-system distinction provides a framework for understanding how AI systems can colonize human communication: recommendation algorithms, content moderation, and automated decision-making are system-level interventions into the lifeworld of shared understanding. The instrumental-communicative distinction connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "Habermas",
+        "colonization",
+        "communicative action",
+        "lifeworld",
+        "system"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Beacon Press",
+      "isbn": "9780807015013",
+      "address": "Boston"
     },
     {
       "id": "Hutchins1995Cognition",
