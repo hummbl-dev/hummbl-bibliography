@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 455,
+    "total_sources": 458,
     "thematic_tiers": {
       "T1": 47,
       "T2": 26,
@@ -51,11 +51,11 @@
       "T9": 21,
       "T10": 22,
       "T11": 23,
-      "T12": 28,
+      "T12": 31,
       "T13": 36
     },
     "evidence_tiers": {
-      "foundational": 237,
+      "foundational": 240,
       "empirical": 71,
       "applied": 45,
       "governance": 20,
@@ -3336,6 +3336,35 @@
       "metadata_debt": []
     },
     {
+      "key": "BarYam1997Dynamics",
+      "title": "Dynamics of Complex Systems",
+      "author": "Bar-Yam, Yaneer",
+      "year": "1997",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780738201294",
+      "journal": null,
+      "keywords": [
+        "complex systems",
+        "emergence",
+        "multiscale analysis",
+        "nonlinear dynamics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Beer1981Brain",
       "title": "Brain of the Firm",
       "author": "Beer, Stafford",
@@ -3685,6 +3714,35 @@
       "metadata_debt": []
     },
     {
+      "key": "Ladyman2007EverythingMustGo",
+      "title": "Every Thing Must Go: Metaphysics Naturalized",
+      "author": "Ladyman, James and Ross, David and Spurrett, David and Collier, John",
+      "year": "2007",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780199274196",
+      "journal": null,
+      "keywords": [
+        "complexity",
+        "emergence",
+        "naturalized metaphysics",
+        "scale-relative ontology"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Langton1990EdgeChaos",
       "title": "Computation at the Edge of Chaos: Phase Transitions and Emergent Computation",
       "author": "Langton, Christopher G.",
@@ -3762,6 +3820,36 @@
           "note": "Systems Theorist — autopoiesis, functional differentiation, social systems"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Mitchell2009Complexity",
+      "title": "Complexity: A Guided Tour",
+      "author": "Mitchell, Melanie",
+      "year": "2009",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780195124415",
+      "journal": null,
+      "keywords": [
+        "chaos",
+        "complexity science",
+        "emergence",
+        "genetic algorithms",
+        "networks"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []

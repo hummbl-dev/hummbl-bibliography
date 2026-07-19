@@ -2369,6 +2369,29 @@
       "doi": "10.1126/science.286.5439.509"
     },
     {
+      "id": "BarYam1997Dynamics",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Dynamics of Complex Systems",
+      "author": "Bar-Yam, Yaneer",
+      "year": "1997",
+      "abstract": "Bar-Yam presents a comprehensive mathematical framework for analyzing complex systems, unifying concepts from nonlinear dynamics, chaos theory, statistical mechanics, and information theory. The text develops formal tools for studying emergent behavior in systems ranging from neural networks to ecosystems to social organizations, with emphasis on how microscopic interactions produce macroscopic patterns. The framework introduces multiscale analysis as a key methodology for understanding complexity — how system behavior changes across levels of description. Grounds HUMMBL Decomposition (DE) and Synthesis (SY) operators in the formal mathematical tradition of complex systems science.",
+      "keywords": [
+        "complex systems",
+        "emergence",
+        "multiscale analysis",
+        "nonlinear dynamics"
+      ],
+      "transformations": [
+        "DE",
+        "SY"
+      ],
+      "publisher": "Perseus Books",
+      "isbn": "9780738201294",
+      "address": "Reading, MA"
+    },
+    {
       "id": "Beer1981Brain",
       "type": "book",
       "tier": "T12",
@@ -2640,6 +2663,29 @@
       "isbn": "978-0-19-507951-7"
     },
     {
+      "id": "Ladyman2007EverythingMustGo",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Every Thing Must Go: Metaphysics Naturalized",
+      "author": "Ladyman, James and Ross, David and Spurrett, David and Collier, John",
+      "year": "2007",
+      "abstract": "Ladyman and colleagues argue that metaphysics must be naturalized — grounded in actual science rather than a priori reasoning. They develop a scale-relative ontology for complex systems, proposing that reality is structured by real patterns at multiple levels of organization, with no privileged fundamental level. The book applies complexity science to philosophy, arguing that emergent properties are real causal agents at their own scale and cannot be reduced to physics alone. This naturalistic metaphysics provides a philosophical foundation for HUMMBL Perspective (P) and Synthesis (SY) operators by grounding multi-level analysis in a rigorous ontological framework.",
+      "keywords": [
+        "complexity",
+        "emergence",
+        "naturalized metaphysics",
+        "scale-relative ontology"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780199274196",
+      "address": "Oxford, UK"
+    },
+    {
       "id": "Langton1990EdgeChaos",
       "type": "article",
       "tier": "T12",
@@ -2689,6 +2735,30 @@
       "volume": "42",
       "doi": "10.1007/978-94-009-8947-4",
       "isbn": "978-90-277-1016-1"
+    },
+    {
+      "id": "Mitchell2009Complexity",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Complexity: A Guided Tour",
+      "author": "Mitchell, Melanie",
+      "year": "2009",
+      "abstract": "Mitchell provides an accessible survey of complexity science — the study of systems with many interacting parts that produce emergent collective behavior. The book covers chaos, fractals, genetic algorithms, cellular automata, self-organizing systems, and network science, tracing the field from its Santa Fe Institute origins to current frontiers. Mitchell critically examines whether complexity science constitutes a genuine scientific revolution or a collection of metaphorical tools, offering a balanced perspective on the field achievements and limitations. The tour through multiple perspectives on complexity — from information theory to evolutionary computation — grounds HUMMBL Perspective (P) and Synthesis (SY) operators in the complexity science tradition.",
+      "keywords": [
+        "chaos",
+        "complexity science",
+        "emergence",
+        "genetic algorithms",
+        "networks"
+      ],
+      "transformations": [
+        "P",
+        "SY"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780195124415",
+      "address": "Oxford, UK"
     },
     {
       "id": "Newman2005PowerLaws",
