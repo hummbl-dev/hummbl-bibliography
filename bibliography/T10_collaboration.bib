@@ -279,3 +279,28 @@
   abstract  = {Helmreich, Merritt, and Wilhelm summarize the evolution and impact of Crew Resource Management (CRM) in aviation --- a systematic approach to training flight crews in non-technical skills: communication, leadership, decision-making, situational awareness, and team management. CRM emerged from the finding that most aviation accidents result from failures of team coordination, not individual technical errors. The authors report that CRM training reduces error rates by improving crew communication, establishing shared mental models, and creating psychological safety for junior crew members to challenge senior officers' decisions. CRM provides the conceptual template for multi-agent governance in hummbl-dev. The agent guardrails system implements CRM's graduated authority structure: the human operator is the captain, Claude is the first officer with audit authority, and Gemini and Kimi are crew members with constrained roles. The bus protocol implements CRM's standardized communication --- structured message types (STATUS, PROPOSAL, BLOCKED) replace ambiguous free-form communication, reducing the communication failures that CRM was designed to address. The kill switch escalation levels implement CRM's graded emergency protocols. Most critically, CRM's emphasis on challenging unsafe actions is embodied in the audit gate: Claude can and does challenge Gemini's actions (metric inflation, scope violations), implementing the cross-check behavior that prevents drift into failure.},
   keywords  = {Crew Resource Management, aviation safety, team communication, error management, HUMMBL:CO, HUMMBL:SY, HUMMBL:IN}
 }
+
+@book{Reason1990HumanError,
+  title     = {Human Error},
+  author    = {Reason, James},
+  year      = {1990},
+  publisher = {Cambridge University Press},
+  address   = {Cambridge},
+  doi       = {10.1017/CBO9780511831193},
+  isbn      = {9780521314190},
+  abstract  = {Reason's comprehensive treatment of human error introduces the Swiss Cheese Model of accident causation: defenses against hazards are conceptualized as slices of Swiss cheese, each with holes representing weaknesses. An accident occurs when the holes in multiple layers momentarily align, allowing a trajectory of accident opportunity to pass through all defenses. The holes arise from "latent conditions" -- design decisions, maintenance deferrals, or organizational pressures that create hidden weaknesses in the system -- and "active failures" -- the immediate unsafe acts of operators. Reason distinguishes slips (correct intention, wrong execution), lapses (memory failures), mistakes (wrong intention), and violations (intentional deviation from rules). The book's key insight is that human error is not a cause but a symptom -- a signal that the system's defenses have failed. For HUMMBL, the Swiss Cheese Model is a foundational IN transformation framework: failure mode analysis as the mapping of holes across defense layers, and critical chain analysis as the identification of alignment conditions. The latent/active distinction maps to the IN operator's dependency linking: latent conditions are the structural failure modes that persist across time, while active failures are the triggers that activate them. Reason's framework also connects to the DE transformation -- decomposing accidents into contributing factors across time and system layers.},
+  keywords  = {human error, Swiss Cheese Model, latent conditions, active failures, accident causation, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY},
+}
+
+@book{Dekker2014FieldGuide,
+  title     = {The Field Guide to Understanding 'Human Error'},
+  author    = {Dekker, Sidney},
+  year      = {2014},
+  publisher = {CRC Press},
+  address   = {Boca Raton},
+  edition   = {3rd},
+  doi       = {10.1201/9781315239675},
+  isbn      = {9781472439055},
+  abstract  = {Dekker challenges the "new view" of human error, arguing that what we call human error is not a cause but a label we apply after the fact to behavior that made sense to the operator at the time. Rather than asking "who failed?" Dekker advocates asking "why did it make sense for people to do what they did?" The book introduces "drift into failure" as a gradual process where incremental adaptations to production pressure erode safety margins without any single decision crossing a clear threshold. Dekker contrasts the old view (human error as cause, fix the human) with the new view (human error as symptom, fix the system). He examines how hindsight bias distorts accident analysis -- making the outcome seem inevitable and the operators' choices seem obviously wrong -- and advocates for "local rationality" analysis that reconstructs the situation from the operator's perspective. For HUMMBL, Dekker's drift model is a critical IN transformation pattern: failure modes that emerge not from discrete events but from gradual, invisible erosion. The IN operator must detect not only acute failure modes but also chronic drift conditions. The local rationality principle connects to the P (Perspective) transformation: inversion requires understanding the system from the perspective of its components, not just from the outside. Hindsight bias is itself an inversion failure -- analyzing failure modes from the perspective of the known outcome rather than the uncertain present.},
+  keywords  = {human error, drift into failure, hindsight bias, local rationality, safety, HUMMBL:IN, HUMMBL:P, HUMMBL:DE},
+}

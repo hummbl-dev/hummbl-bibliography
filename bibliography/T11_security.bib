@@ -311,3 +311,39 @@
   nist_functions     = {MAP MANAGE},
   eu_ai_act_articles = {9 15},
 }
+
+@book{Perrow1984NormalAccidents,
+  title     = {Normal Accidents: Living with High-Risk Technologies},
+  author    = {Perrow, Charles},
+  year      = {1984},
+  publisher = {Princeton University Press},
+  address   = {Princeton, NJ},
+  doi       = {10.1515/9781400828494},
+  isbn      = {9780691004129},
+  abstract  = {Perrow introduces Normal Accident Theory (NAT), arguing that certain types of system failures are inevitable -- "normal" -- given specific structural characteristics. The theory identifies two key dimensions: interactive complexity (the presence of unfamiliar, unplanned, or unexpected sequences that are not visible or immediately comprehensible to operators) and tight coupling (the absence of slack or buffers, so that processes happen fast and cannot be turned off). Systems that are both complexly interactive and tightly coupled -- nuclear power plants, chemical processing, aviation, military operations -- experience accidents that are "normal" in the sense that no amount of operator training, safety devices, or organizational reform can prevent them entirely. Perrow shows that safety devices themselves increase complexity, potentially creating new accident pathways. The book challenges the engineering assumption that all accidents are preventable with sufficient safeguards. For HUMMBL, NAT is a foundational IN transformation framework: the IN operator must identify systems where failure is structurally inevitable, not merely possible. The complexity/coupling matrix provides a taxonomy for classifying failure modes by their structural origin. Perrow's insight that safety devices can create new failure modes is directly relevant to AI governance -- adding oversight mechanisms can introduce new complexity that creates novel accident pathways. The theory also connects to the DE transformation: decomposing systems into their complexity and coupling characteristics to predict accident propensity.},
+  keywords  = {normal accident theory, interactive complexity, tight coupling, system failure, high-risk systems, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY},
+}
+
+@book{Hollnagel2006Resilience,
+  title     = {Resilience Engineering: Concepts and Precepts},
+  author    = {Hollnagel, Erik and Woods, David D. and Leveson, Nancy G.},
+  year      = {2006},
+  publisher = {Ashgate},
+  address   = {Aldershot, UK},
+  doi-unavailable = {Ashgate original edition; no DOI assigned (Ashgate acquired by Routledge, ebook DOI may exist under Routledge imprint)},
+  isbn      = {9780754646419},
+  abstract  = {Hollnagel, Woods, and Leveson's edited volume establishes resilience engineering as a distinct discipline, shifting safety management from a reactive posture (investigating what went wrong) to a proactive one (understanding what goes right). Resilience is defined as the intrinsic ability of a system to adjust its functioning before, during, or after changes and disturbances so that it can sustain required operations under both expected and unexpected conditions. The book identifies four cornerstones of resilience: knowing what to do (response), knowing what to look for (monitoring), knowing what to expect (anticipation), and knowing what has happened (learning). Unlike traditional safety engineering, which focuses on preventing specific failure modes, resilience engineering focuses on building systems that can adapt to unforeseen failures. For HUMMBL, resilience engineering inverts the traditional IN transformation: instead of cataloging specific failure modes, it asks what capabilities allow a system to survive any failure mode. The four cornerstones map to HUMMBL transformations: anticipation connects to IN (inverting to predict failures), monitoring connects to RE (recursive observation), response connects to CO (composing corrective actions), and learning connects to SY (synthesizing experience). The book's emphasis on "what goes right" as a source of safety intelligence is itself an inversion -- studying success rather than failure to understand system resilience.},
+  keywords  = {resilience engineering, safety, adaptation, anticipation, monitoring, HUMMBL:IN, HUMMBL:RE, HUMMBL:CO, HUMMBL:SY},
+}
+
+@book{Leveson2012STAMP,
+  title     = {Engineering a Safer World: Systems Thinking Applied to Safety},
+  author    = {Leveson, Nancy G.},
+  year      = {2012},
+  publisher = {MIT Press},
+  address   = {Cambridge, MA},
+  doi       = {10.7551/mitpress/8179.001.0001},
+  isbn      = {9780262297301},
+  abstract  = {Leveson presents STAMP (Systems-Theoretic Accident Model and Processes), a new accident causation model based on systems theory rather than the traditional chain-of-events model. STAMP views accidents as resulting from inadequate control rather than component failures: safety is an emergent property of the system's control structure, not a property of individual components. The model introduces safety constraints -- the conditions that must be satisfied to prevent accidents -- and shows how they can be violated by inadequate control actions, missing feedback, or flawed mental models of the controllers. Leveson provides CAST (Causal Analysis based on STAMP) for accident analysis and STPA (STAMP-based Process Analysis) for hazard analysis, both of which go beyond traditional FMEA and fault tree analysis by examining the social and organizational control structure, not just the technical components. For HUMMBL, STAMP is a powerful IN transformation framework: it inverts the traditional cause-effect model of failure analysis, replacing it with a control-theoretic model where failure is the result of inadequate enforcement of safety constraints. The IN operator's critical chain analysis can be enhanced by STAMP's control structure mapping: instead of tracing failure propagation through components, trace the control actions (or lack thereof) that allowed the failure to emerge. STAMP's emphasis on mental models and flawed assumptions connects to the P transformation -- perspective errors at the controller level can produce systemic failures.},
+  keywords  = {STAMP, systems theory, safety constraints, accident causation, control structure, HUMMBL:IN, HUMMBL:DE, HUMMBL:SY},
+}

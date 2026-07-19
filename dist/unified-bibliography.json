@@ -557,6 +557,30 @@
       "isbn": "978-0486425388"
     },
     {
+      "id": "Popper1959LogicDiscovery",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "The Logic of Scientific Discovery",
+      "author": "Popper, Karl R.",
+      "year": "1959",
+      "abstract": "Popper's foundational work on the philosophy of science introduces falsification as the demarcation criterion between science and non-science. Rather than verifying theories through induction, Popper argues that scientific theories must be falsifiable -- they must make predictions that could, in principle, be proven false. The stronger a theory's falsifiability, the more informative it is. This inverts the traditional verificationist epistemology: a theory is not scientific because it can be confirmed, but because it can be refuted. Popper addresses the problem of induction by showing that science does not rely on it -- instead, science progresses through bold conjectures and rigorous attempts at refutation. For HUMMBL, Popper's falsificationism grounds the IN (Inversion) transformation: the systematic search for failure modes, counterexamples, and disconfirming evidence is the operationalization of falsification. A reasoning system that cannot be falsified is not scientific; a mental model that cannot be inverted is not robust. The Logic of Scientific Discovery provides the epistemological foundation for treating inversion as a first-class reasoning operation rather than an afterthought.",
+      "keywords": [
+        "demarcation",
+        "epistemology",
+        "falsification",
+        "philosophy of science"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "RE"
+      ],
+      "publisher": "Routledge",
+      "isbn": "9780415278447",
+      "address": "London"
+    },
+    {
       "id": "Schon1983ReflectivePractitioner",
       "type": "book",
       "tier": "T1",
@@ -641,6 +665,31 @@
       "isbn": "978-1400063512"
     },
     {
+      "id": "Taleb2012Antifragile",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Antifragile: Things That Gain from Disorder",
+      "author": "Taleb, Nassim Nicholas",
+      "year": "2012",
+      "abstract": "Taleb introduces the concept of antifragility -- a property of systems that not only survive stress, disorder, and volatility but actually improve from it. This is beyond resilience (which resists shocks and stays the same) and robustness (which absorbs shocks without change). Antifragile systems -- evolution, muscle hypertrophy, trial-and-error innovation -- benefit from randomness and uncertainty. Taleb identifies the \"fragilista\" as someone who underestimates disorder and over-engineers for stability, inadvertently creating systems that are fragile to tail risks. The book's central inversion: instead of trying to predict and prevent specific failures, design systems that gain from failure. The barbell strategy (90% safe, 10% aggressive) exploits this by keeping most of the system in a robust state while exposing a small portion to high-variance opportunities. For HUMMBL, antifragility is the positive-space counterpart to IN's negative-space analysis: inversion identifies what makes systems fragile, and antifragile design inverts fragility into a source of strength. The concept also challenges the RE (Recursion) transformation: iterative systems should not merely converge to stability but should improve through perturbation. Taleb's \"skin in the game\" principle connects to governance -- decision-makers must bear the consequences of their decisions to avoid antifragility for themselves at the expense of fragility for others.",
+      "keywords": [
+        "antifragility",
+        "barbell strategy",
+        "disorder",
+        "tail risk",
+        "volatility"
+      ],
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Random House",
+      "isbn": "9781400067824",
+      "address": "New York"
+    },
+    {
       "id": "Tufte2001VisualDisplay",
       "type": "book",
       "tier": "T1",
@@ -680,6 +729,30 @@
       ],
       "publisher": "Princeton University Press",
       "isbn": "978-0691130613"
+    },
+    {
+      "id": "Watzlawick1974Change",
+      "type": "book",
+      "tier": "T1",
+      "tier_name": "Canonical",
+      "title": "Change: Principles of Problem Formation and Problem Resolution",
+      "author": "Watzlawick, Paul and Weakland, John H. and Fisch, Richard",
+      "year": "1974",
+      "abstract": "Watzlawick, Weakland, and Fisch introduce the distinction between first-order change (more of the same within an existing system) and second-order change (a fundamental shift in the system's rules). Drawing on Bateson's double bind theory and the Mental Research Institute's brief therapy tradition, they show how attempted solutions often become the problem: repeating a failed strategy harder, simplifying a complex situation prematurely, or insisting on utopian perfection. Paradoxical interventions -- prescribing the symptom, reframing, or changing the frame -- demonstrate how inversion can resolve problems that resist direct attack. The book's core insight is that problems are often maintained by the very logic used to solve them, and that resolution requires stepping outside that logic entirely. For HUMMBL, this grounds the IN transformation's approach to paradoxical and second-order inversion: sometimes the failure mode is not in the system's components but in its governing rules. Inverting the rules themselves -- rather than optimizing within them -- is a distinct class of inversion that Watzlawick's framework makes explicit. The reframing techniques also connect to the P (Perspective) transformation, showing that inversion and perspective-shifting are complementary operations.",
+      "keywords": [
+        "paradoxical intervention",
+        "reframing",
+        "second-order change",
+        "systems theory"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "W. W. Norton & Company",
+      "isbn": "9780393011043",
+      "address": "New York"
     },
     {
       "id": "Whitehead1929ProcessReality",
@@ -886,6 +959,32 @@
       "number": "3",
       "pages": "259--282",
       "doi": "10.1080/1463922X.2017.1315750"
+    },
+    {
+      "id": "Dekker2014FieldGuide",
+      "type": "book",
+      "tier": "T10",
+      "tier_name": "Collaboration",
+      "title": "The Field Guide to Understanding 'Human Error'",
+      "author": "Dekker, Sidney",
+      "year": "2014",
+      "abstract": "Dekker challenges the \"new view\" of human error, arguing that what we call human error is not a cause but a label we apply after the fact to behavior that made sense to the operator at the time. Rather than asking \"who failed?\" Dekker advocates asking \"why did it make sense for people to do what they did?\" The book introduces \"drift into failure\" as a gradual process where incremental adaptations to production pressure erode safety margins without any single decision crossing a clear threshold. Dekker contrasts the old view (human error as cause, fix the human) with the new view (human error as symptom, fix the system). He examines how hindsight bias distorts accident analysis -- making the outcome seem inevitable and the operators' choices seem obviously wrong -- and advocates for \"local rationality\" analysis that reconstructs the situation from the operator's perspective. For HUMMBL, Dekker's drift model is a critical IN transformation pattern: failure modes that emerge not from discrete events but from gradual, invisible erosion. The IN operator must detect not only acute failure modes but also chronic drift conditions. The local rationality principle connects to the P (Perspective) transformation: inversion requires understanding the system from the perspective of its components, not just from the outside. Hindsight bias is itself an inversion failure -- analyzing failure modes from the perspective of the known outcome rather than the uncertain present.",
+      "keywords": [
+        "drift into failure",
+        "hindsight bias",
+        "human error",
+        "local rationality",
+        "safety"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "CRC Press",
+      "doi": "10.1201/9781315239675",
+      "isbn": "9781472439055",
+      "address": "Boca Raton"
     },
     {
       "id": "Endsley1995SituationAwareness",
@@ -1216,6 +1315,32 @@
       "doi": "10.1007/s10676-017-9430-8"
     },
     {
+      "id": "Reason1990HumanError",
+      "type": "book",
+      "tier": "T10",
+      "tier_name": "Collaboration",
+      "title": "Human Error",
+      "author": "Reason, James",
+      "year": "1990",
+      "abstract": "Reason's comprehensive treatment of human error introduces the Swiss Cheese Model of accident causation: defenses against hazards are conceptualized as slices of Swiss cheese, each with holes representing weaknesses. An accident occurs when the holes in multiple layers momentarily align, allowing a trajectory of accident opportunity to pass through all defenses. The holes arise from \"latent conditions\" -- design decisions, maintenance deferrals, or organizational pressures that create hidden weaknesses in the system -- and \"active failures\" -- the immediate unsafe acts of operators. Reason distinguishes slips (correct intention, wrong execution), lapses (memory failures), mistakes (wrong intention), and violations (intentional deviation from rules). The book's key insight is that human error is not a cause but a symptom -- a signal that the system's defenses have failed. For HUMMBL, the Swiss Cheese Model is a foundational IN transformation framework: failure mode analysis as the mapping of holes across defense layers, and critical chain analysis as the identification of alignment conditions. The latent/active distinction maps to the IN operator's dependency linking: latent conditions are the structural failure modes that persist across time, while active failures are the triggers that activate them. Reason's framework also connects to the DE transformation -- decomposing accidents into contributing factors across time and system layers.",
+      "keywords": [
+        "Swiss Cheese Model",
+        "accident causation",
+        "active failures",
+        "human error",
+        "latent conditions"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Cambridge University Press",
+      "doi": "10.1017/CBO9780511831193",
+      "isbn": "9780521314190",
+      "address": "Cambridge"
+    },
+    {
       "id": "Salas2005BigFive",
       "type": "article",
       "tier": "T10",
@@ -1508,6 +1633,32 @@
       "note": "arXiv:2403.13682"
     },
     {
+      "id": "Hollnagel2006Resilience",
+      "type": "book",
+      "tier": "T11",
+      "tier_name": "Security",
+      "title": "Resilience Engineering: Concepts and Precepts",
+      "author": "Hollnagel, Erik and Woods, David D. and Leveson, Nancy G.",
+      "year": "2006",
+      "abstract": "Hollnagel, Woods, and Leveson's edited volume establishes resilience engineering as a distinct discipline, shifting safety management from a reactive posture (investigating what went wrong) to a proactive one (understanding what goes right). Resilience is defined as the intrinsic ability of a system to adjust its functioning before, during, or after changes and disturbances so that it can sustain required operations under both expected and unexpected conditions. The book identifies four cornerstones of resilience: knowing what to do (response), knowing what to look for (monitoring), knowing what to expect (anticipation), and knowing what has happened (learning). Unlike traditional safety engineering, which focuses on preventing specific failure modes, resilience engineering focuses on building systems that can adapt to unforeseen failures. For HUMMBL, resilience engineering inverts the traditional IN transformation: instead of cataloging specific failure modes, it asks what capabilities allow a system to survive any failure mode. The four cornerstones map to HUMMBL transformations: anticipation connects to IN (inverting to predict failures), monitoring connects to RE (recursive observation), response connects to CO (composing corrective actions), and learning connects to SY (synthesizing experience). The book's emphasis on \"what goes right\" as a source of safety intelligence is itself an inversion -- studying success rather than failure to understand system resilience.",
+      "keywords": [
+        "adaptation",
+        "anticipation",
+        "monitoring",
+        "resilience engineering",
+        "safety"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Ashgate",
+      "isbn": "9780754646419",
+      "address": "Aldershot, UK"
+    },
+    {
       "id": "Katz2017Reluplex",
       "type": "inproceedings",
       "tier": "T11",
@@ -1532,6 +1683,32 @@
       "volume": "10426",
       "pages": "97--117",
       "doi": "10.1007/978-3-319-63387-9_5"
+    },
+    {
+      "id": "Leveson2012STAMP",
+      "type": "book",
+      "tier": "T11",
+      "tier_name": "Security",
+      "title": "Engineering a Safer World: Systems Thinking Applied to Safety",
+      "author": "Leveson, Nancy G.",
+      "year": "2012",
+      "abstract": "Leveson presents STAMP (Systems-Theoretic Accident Model and Processes), a new accident causation model based on systems theory rather than the traditional chain-of-events model. STAMP views accidents as resulting from inadequate control rather than component failures: safety is an emergent property of the system's control structure, not a property of individual components. The model introduces safety constraints -- the conditions that must be satisfied to prevent accidents -- and shows how they can be violated by inadequate control actions, missing feedback, or flawed mental models of the controllers. Leveson provides CAST (Causal Analysis based on STAMP) for accident analysis and STPA (STAMP-based Process Analysis) for hazard analysis, both of which go beyond traditional FMEA and fault tree analysis by examining the social and organizational control structure, not just the technical components. For HUMMBL, STAMP is a powerful IN transformation framework: it inverts the traditional cause-effect model of failure analysis, replacing it with a control-theoretic model where failure is the result of inadequate enforcement of safety constraints. The IN operator's critical chain analysis can be enhanced by STAMP's control structure mapping: instead of tracing failure propagation through components, trace the control actions (or lack thereof) that allowed the failure to emerge. STAMP's emphasis on mental models and flawed assumptions connects to the P transformation -- perspective errors at the controller level can produce systemic failures.",
+      "keywords": [
+        "STAMP",
+        "accident causation",
+        "control structure",
+        "safety constraints",
+        "systems theory"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "MIT Press",
+      "doi": "10.7551/mitpress/8179.001.0001",
+      "isbn": "9780262297301",
+      "address": "Cambridge, MA"
     },
     {
       "id": "Lyu2020FederatedSecurity",
@@ -1675,6 +1852,32 @@
       "publisher": "Association for Computational Linguistics",
       "pages": "3419--3448",
       "doi": "10.18653/v1/2022.emnlp-main.225"
+    },
+    {
+      "id": "Perrow1984NormalAccidents",
+      "type": "book",
+      "tier": "T11",
+      "tier_name": "Security",
+      "title": "Normal Accidents: Living with High-Risk Technologies",
+      "author": "Perrow, Charles",
+      "year": "1984",
+      "abstract": "Perrow introduces Normal Accident Theory (NAT), arguing that certain types of system failures are inevitable -- \"normal\" -- given specific structural characteristics. The theory identifies two key dimensions: interactive complexity (the presence of unfamiliar, unplanned, or unexpected sequences that are not visible or immediately comprehensible to operators) and tight coupling (the absence of slack or buffers, so that processes happen fast and cannot be turned off). Systems that are both complexly interactive and tightly coupled -- nuclear power plants, chemical processing, aviation, military operations -- experience accidents that are \"normal\" in the sense that no amount of operator training, safety devices, or organizational reform can prevent them entirely. Perrow shows that safety devices themselves increase complexity, potentially creating new accident pathways. The book challenges the engineering assumption that all accidents are preventable with sufficient safeguards. For HUMMBL, NAT is a foundational IN transformation framework: the IN operator must identify systems where failure is structurally inevitable, not merely possible. The complexity/coupling matrix provides a taxonomy for classifying failure modes by their structural origin. Perrow's insight that safety devices can create new failure modes is directly relevant to AI governance -- adding oversight mechanisms can introduce new complexity that creates novel accident pathways. The theory also connects to the DE transformation: decomposing systems into their complexity and coupling characteristics to predict accident propensity.",
+      "keywords": [
+        "high-risk systems",
+        "interactive complexity",
+        "normal accident theory",
+        "system failure",
+        "tight coupling"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Princeton University Press",
+      "doi": "10.1515/9781400828494",
+      "isbn": "9780691004129",
+      "address": "Princeton, NJ"
     },
     {
       "id": "Rose2020ZeroTrust",
@@ -4396,6 +4599,32 @@
       "url": "https://openreview.net/forum?id=postdeployment"
     },
     {
+      "id": "Argyris1976DoubleLoop",
+      "type": "article",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "Single-Loop and Double-Loop Models in Research on Decision Making",
+      "author": "Argyris, Chris",
+      "year": "1976",
+      "abstract": "Argyris introduces the distinction between single-loop and double-loop learning in organizational decision-making. Single-loop learning detects and corrects errors within existing governing variables -- the organization's assumptions, goals, and norms remain unquestioned while actions are adjusted to achieve them. Double-loop learning goes further: it questions and modifies the governing variables themselves. When a thermostat set to 68 degrees detects the room is too cold and turns on the heat, that is single-loop learning. When the thermostat asks why it is set to 68 degrees, that is double-loop learning. Argyris shows that organizations often resist double-loop learning because it threatens established power structures, norms, and professional identities. The gap between espoused theory (what people say they do) and theory-in-use (what they actually do) creates defensive routines that prevent double-loop inquiry. For HUMMBL, double-loop learning is a specific form of the IN transformation: inverting not just the solution but the problem definition itself. When an AI system's outputs are wrong, single-loop learning adjusts the model; double-loop learning asks whether the objective function, the training data, or the entire framing is mis-specified. The IN operator's failure mode analysis should include double-loop failures -- cases where the system is optimizing the wrong objective because the objective itself was never questioned.",
+      "keywords": [
+        "decision making",
+        "defensive routines",
+        "double-loop learning",
+        "organizational learning"
+      ],
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "journal": "Administrative Science Quarterly",
+      "volume": "21",
+      "number": "3",
+      "pages": "363--375",
+      "doi": "10.2307/2391848"
+    },
+    {
       "id": "BrownCollinsDuguid1989Situated",
       "type": "article",
       "tier": "T2",
@@ -4587,6 +4816,31 @@
       "publisher": "MIT Press",
       "doi": "10.7551/mitpress/1881.001.0001",
       "isbn": "978-0262581486"
+    },
+    {
+      "id": "Kahneman2021Noise",
+      "type": "book",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "Noise: A Flaw in Human Judgment",
+      "author": "Kahneman, Daniel and Sibony, Olivier and Sunstein, Cass R.",
+      "year": "2021",
+      "abstract": "Kahneman, Sibony, and Sunstein distinguish between bias (systematic error) and noise (random variability) in human judgment. Where bias is a directional drift, noise is scatter -- the unwanted variability that produces different judgments from different people (or the same person at different times) facing identical cases. The authors demonstrate that in domains ranging from medicine to criminal sentencing to insurance underwriting, noise is often a larger source of error than bias, yet it receives far less attention because it is invisible in individual cases and only visible in aggregate. They introduce \"noise audits\" as a methodology for measuring variability and propose decision hygiene procedures -- structured decision processes, independent judgments, base-rate anchors -- to reduce noise without introducing new biases. For HUMMBL, noise is a distinct class of inversion target: while bias represents a predictable failure mode, noise represents an unpredictable one. The IN transformation must identify both systematic failures (bias) and stochastic failures (noise). The noise audit methodology is directly applicable to AI system evaluation: running the same input through a model multiple times, or through multiple models, and measuring the variance in outputs. Decision hygiene maps to the RE transformation -- structured, iterative processes that reduce both bias and noise through decomposition and aggregation.",
+      "keywords": [
+        "bias",
+        "decision hygiene",
+        "judgment",
+        "noise",
+        "variability"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "publisher": "Little, Brown Spark",
+      "isbn": "9780316451390",
+      "address": "New York"
     },
     {
       "id": "Klein1993Recognition",
@@ -4829,6 +5083,31 @@
       "number": "4157",
       "pages": "1124--1131",
       "doi": "10.1126/science.185.4157.1124"
+    },
+    {
+      "id": "Vaughan1996Challenger",
+      "type": "book",
+      "tier": "T2",
+      "tier_name": "Empirical",
+      "title": "The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA",
+      "author": "Vaughan, Diane",
+      "year": "1996",
+      "abstract": "Vaughan's sociological analysis of the Challenger disaster introduces the concept of \"normalization of deviance\" -- the process by which technically anomalous results become accepted as normal through repeated exposure without negative consequences. Engineers at NASA had observed O-ring erosion on previous flights, but because each erosion event did not result in catastrophe, the anomaly was redefined as an acceptable risk rather than a warning sign. Vaughan traces how organizational culture, production pressure, and structural secrecy combined to create a decision-making environment where deviation from safety standards became routine. The book challenges the \"bad actor\" narrative of the Challenger disaster, showing that no individual made a deliberately reckless decision -- instead, the system's culture made the dangerous choice appear reasonable. For HUMMBL, normalization of deviance is a critical IN transformation pattern: failure modes that are initially detected but then dismissed because they have not yet caused harm. The IN operator must identify not only active failure modes but also normalized deviance -- conditions that have been reclassified from \"anomaly\" to \"acceptable\" without rigorous justification. Vaughan's work also demonstrates that inversion must operate at the cultural level, not just the technical level: the failure was not in the O-ring but in the social system that normalized its degradation.",
+      "keywords": [
+        "NASA",
+        "normalization of deviance",
+        "organizational culture",
+        "risk",
+        "safety"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "publisher": "University of Chicago Press",
+      "isbn": "9780226851754",
+      "address": "Chicago"
     },
     {
       "id": "Wason1968Reasoning",
@@ -5203,6 +5482,31 @@
       ],
       "publisher": "Portfolio/Penguin",
       "isbn": "978-1591847489"
+    },
+    {
+      "id": "Munger2005Almanack",
+      "type": "book",
+      "tier": "T3",
+      "tier_name": "Applied",
+      "title": "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
+      "author": "Munger, Charles T.",
+      "year": "2005",
+      "abstract": "Munger's collected talks and writings emphasize the practice of inversion as a primary decision-making tool: \"Tell me where I'm going to die, so I never go there.\" Rather than trying to figure out how to succeed, Munger advocates figuring out how to fail -- and then avoiding those patterns. His approach combines multiple mental models from psychology, economics, physics, and biology to build a \"latticework\" of frameworks that can be applied across domains. The book catalogs standard cognitive biases and failure patterns: incentive-caused bias, social proof errors, authority bias, and the \"twaddle tendency\" of experts speaking outside their domain. Munger's inversion is not merely negative thinking but a systematic method for identifying and eliminating failure modes before attempting to optimize for success. For HUMMBL, Munger represents the applied, practitioner-side tradition of the IN transformation: inversion as a daily decision-making discipline rather than an academic theory. The latticework of mental models connects to the SY transformation -- synthesis across domains -- while the inversion practice itself is the operational core of IN. The book's emphasis on avoiding stupidity rather than seeking brilliance reframes the optimization problem: the best strategy may be minimizing the worst outcomes rather than maximizing the best ones.",
+      "keywords": [
+        "cognitive biases",
+        "decision making",
+        "inversion",
+        "mental models",
+        "value investing"
+      ],
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "publisher": "Donning Company Publishers",
+      "isbn": "9781578643035",
+      "address": "Virginia Beach, VA"
     },
     {
       "id": "Pink2009Drive",

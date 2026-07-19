@@ -38,26 +38,26 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 353,
+    "total_sources": 365,
     "thematic_tiers": {
-      "T1": 33,
-      "T2": 20,
-      "T3": 20,
+      "T1": 36,
+      "T2": 23,
+      "T3": 21,
       "T4": 20,
       "T5": 20,
       "T6": 19,
       "T7": 26,
       "T8": 21,
       "T9": 20,
-      "T10": 20,
-      "T11": 20,
+      "T10": 22,
+      "T11": 23,
       "T12": 25,
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 160,
-      "empirical": 60,
-      "applied": 40,
+      "foundational": 163,
+      "empirical": 68,
+      "applied": 41,
       "governance": 19,
       "emerging": 74
     },
@@ -875,6 +875,36 @@
       "metadata_debt": []
     },
     {
+      "key": "Popper1959LogicDiscovery",
+      "title": "The Logic of Scientific Discovery",
+      "author": "Popper, Karl R.",
+      "year": "1959",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780415278447",
+      "journal": null,
+      "keywords": [
+        "demarcation",
+        "epistemology",
+        "falsification",
+        "philosophy of science"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Schon1983ReflectivePractitioner",
       "title": "The Reflective Practitioner: How Professionals Think in Action",
       "author": "Schön, Donald A.",
@@ -1068,6 +1098,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Taleb2012Antifragile",
+      "title": "Antifragile: Things That Gain from Disorder",
+      "author": "Taleb, Nassim Nicholas",
+      "year": "2012",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9781400067824",
+      "journal": null,
+      "keywords": [
+        "antifragility",
+        "barbell strategy",
+        "disorder",
+        "tail risk",
+        "volatility"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Tufte2001VisualDisplay",
       "title": "The Visual Display of Quantitative Information",
       "author": "Tufte, Edward R.",
@@ -1126,6 +1187,36 @@
           "note": "Institutional Economist — conspicuous consumption, pecuniary emulation, engineers vs price system"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Watzlawick1974Change",
+      "title": "Change: Principles of Problem Formation and Problem Resolution",
+      "author": "Watzlawick, Paul and Weakland, John H. and Fisch, Richard",
+      "year": "1974",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780393011043",
+      "journal": null,
+      "keywords": [
+        "paradoxical intervention",
+        "reframing",
+        "second-order change",
+        "systems theory"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1388,6 +1479,37 @@
         "human-robot teaming",
         "situation awareness",
         "trust"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Dekker2014FieldGuide",
+      "title": "The Field Guide to Understanding 'Human Error'",
+      "author": "Dekker, Sidney",
+      "year": "2014",
+      "type": "book",
+      "bibliography_tier": "T10",
+      "bibliography_tier_name": "Collaboration",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.1201/9781315239675",
+      "has_isbn": true,
+      "isbn": "9781472439055",
+      "journal": null,
+      "keywords": [
+        "drift into failure",
+        "hindsight bias",
+        "human error",
+        "local rationality",
+        "safety"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -1839,6 +1961,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Reason1990HumanError",
+      "title": "Human Error",
+      "author": "Reason, James",
+      "year": "1990",
+      "type": "book",
+      "bibliography_tier": "T10",
+      "bibliography_tier_name": "Collaboration",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1017/CBO9780511831193",
+      "has_isbn": true,
+      "isbn": "9780521314190",
+      "journal": null,
+      "keywords": [
+        "Swiss Cheese Model",
+        "accident causation",
+        "active failures",
+        "human error",
+        "latent conditions"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Salas2005BigFive",
       "title": "Is There a ``Big Five'' in Teamwork?",
       "author": "Salas, Eduardo and Sims, Dana E. and Burke, C. Shawn",
@@ -2225,6 +2378,38 @@
       ]
     },
     {
+      "key": "Hollnagel2006Resilience",
+      "title": "Resilience Engineering: Concepts and Precepts",
+      "author": "Hollnagel, Erik and Woods, David D. and Leveson, Nancy G.",
+      "year": "2006",
+      "type": "book",
+      "bibliography_tier": "T11",
+      "bibliography_tier_name": "Security",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "CO",
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780754646419",
+      "journal": null,
+      "keywords": [
+        "adaptation",
+        "anticipation",
+        "monitoring",
+        "resilience engineering",
+        "safety"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Katz2017Reluplex",
       "title": "Reluplex: An Efficient {SMT} Solver for Verifying Deep Neural Networks",
       "author": "Katz, Guy and Barrett, Clark and Dill, David L. and Julian, Kyle and Kochenderfer, Mykel J.",
@@ -2248,6 +2433,37 @@
         "formal verification",
         "neural networks",
         "safety properties"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Leveson2012STAMP",
+      "title": "Engineering a Safer World: Systems Thinking Applied to Safety",
+      "author": "Leveson, Nancy G.",
+      "year": "2012",
+      "type": "book",
+      "bibliography_tier": "T11",
+      "bibliography_tier_name": "Security",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.7551/mitpress/8179.001.0001",
+      "has_isbn": true,
+      "isbn": "9780262297301",
+      "journal": null,
+      "keywords": [
+        "STAMP",
+        "accident causation",
+        "control structure",
+        "safety constraints",
+        "systems theory"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -2439,6 +2655,37 @@
         "language models",
         "red teaming",
         "safety evaluation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Perrow1984NormalAccidents",
+      "title": "Normal Accidents: Living with High-Risk Technologies",
+      "author": "Perrow, Charles",
+      "year": "1984",
+      "type": "book",
+      "bibliography_tier": "T11",
+      "bibliography_tier_name": "Security",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1515/9781400828494",
+      "has_isbn": true,
+      "isbn": "9780691004129",
+      "journal": null,
+      "keywords": [
+        "high-risk systems",
+        "interactive complexity",
+        "normal accident theory",
+        "system failure",
+        "tight coupling"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -6337,6 +6584,36 @@
       ]
     },
     {
+      "key": "Argyris1976DoubleLoop",
+      "title": "Single-Loop and Double-Loop Models in Research on Decision Making",
+      "author": "Argyris, Chris",
+      "year": "1976",
+      "type": "article",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "IN",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.2307/2391848",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Administrative Science Quarterly",
+      "keywords": [
+        "decision making",
+        "defensive routines",
+        "double-loop learning",
+        "organizational learning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "BrownCollinsDuguid1989Situated",
       "title": "Situated Cognition and the Culture of Learning",
       "author": "Brown, John Seely and Collins, Allan and Duguid, Paul",
@@ -6574,6 +6851,37 @@
           "note": "Distributed cognition — knowledge is embedded in practices, artifacts, and social relationships, not reducible to individual propositional content."
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Kahneman2021Noise",
+      "title": "Noise: A Flaw in Human Judgment",
+      "author": "Kahneman, Daniel and Sibony, Olivier and Sunstein, Cass R.",
+      "year": "2021",
+      "type": "book",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780316451390",
+      "journal": null,
+      "keywords": [
+        "bias",
+        "decision hygiene",
+        "judgment",
+        "noise",
+        "variability"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -6861,6 +7169,37 @@
         "cognitive bias",
         "decision making",
         "heuristics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Vaughan1996Challenger",
+      "title": "The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA",
+      "author": "Vaughan, Diane",
+      "year": "1996",
+      "type": "book",
+      "bibliography_tier": "T2",
+      "bibliography_tier_name": "Empirical",
+      "evidence_tier": "empirical",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780226851754",
+      "journal": null,
+      "keywords": [
+        "NASA",
+        "normalization of deviance",
+        "organizational culture",
+        "risk",
+        "safety"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -7348,6 +7687,37 @@
         "adaptive organizations",
         "empowered execution",
         "shared consciousness"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Munger2005Almanack",
+      "title": "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
+      "author": "Munger, Charles T.",
+      "year": "2005",
+      "type": "book",
+      "bibliography_tier": "T3",
+      "bibliography_tier_name": "Applied",
+      "evidence_tier": "applied",
+      "transformations": [
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9781578643035",
+      "journal": null,
+      "keywords": [
+        "cognitive biases",
+        "decision making",
+        "inversion",
+        "mental models",
+        "value investing"
       ],
       "downstream_refs": [],
       "arxiv_id": null,

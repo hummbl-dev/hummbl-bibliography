@@ -256,3 +256,40 @@
   abstract = {This paper presents the theory of successful intelligence, which defines intelligence as the ability to achieve success in life according to one's personal standards, within one's sociocultural context, by capitalizing on strengths and compensating for weaknesses. Sternberg identifies three interrelated aspects: analytical intelligence (the ability to analyze, evaluate, and compare), creative intelligence (the ability to create, invent, and discover), and practical intelligence (the ability to apply, implement, and use knowledge in real-world contexts). The theory challenges traditional IQ-based conceptions by demonstrating that practical and creative abilities predict real-world success independently of analytical abilities. Sternberg provides empirical evidence from studies of business managers, military leaders, and academics showing that the three abilities are partially independent and jointly predict performance better than any single measure. For HUMMBL, the triarchic model maps to the Base120 transformation types: analytical intelligence corresponds to Decomposition and Inversion, creative intelligence to Composition and Recursion, and practical intelligence to Perspective and Systems thinking.},
   keywords = {successful intelligence, triarchic theory, practical intelligence, HUMMBL:DE, HUMMBL:SY, HUMMBL:P}
 }
+
+@article{Argyris1976DoubleLoop,
+  title     = {Single-Loop and Double-Loop Models in Research on Decision Making},
+  author    = {Argyris, Chris},
+  year      = {1976},
+  journal   = {Administrative Science Quarterly},
+  volume    = {21},
+  number    = {3},
+  pages     = {363--375},
+  doi       = {10.2307/2391848},
+  abstract  = {Argyris introduces the distinction between single-loop and double-loop learning in organizational decision-making. Single-loop learning detects and corrects errors within existing governing variables -- the organization's assumptions, goals, and norms remain unquestioned while actions are adjusted to achieve them. Double-loop learning goes further: it questions and modifies the governing variables themselves. When a thermostat set to 68 degrees detects the room is too cold and turns on the heat, that is single-loop learning. When the thermostat asks why it is set to 68 degrees, that is double-loop learning. Argyris shows that organizations often resist double-loop learning because it threatens established power structures, norms, and professional identities. The gap between espoused theory (what people say they do) and theory-in-use (what they actually do) creates defensive routines that prevent double-loop inquiry. For HUMMBL, double-loop learning is a specific form of the IN transformation: inverting not just the solution but the problem definition itself. When an AI system's outputs are wrong, single-loop learning adjusts the model; double-loop learning asks whether the objective function, the training data, or the entire framing is mis-specified. The IN operator's failure mode analysis should include double-loop failures -- cases where the system is optimizing the wrong objective because the objective itself was never questioned.},
+  keywords  = {double-loop learning, organizational learning, decision making, defensive routines, HUMMBL:IN, HUMMBL:RE, HUMMBL:SY},
+}
+
+@book{Vaughan1996Challenger,
+  title     = {The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA},
+  author    = {Vaughan, Diane},
+  year      = {1996},
+  publisher = {University of Chicago Press},
+  address   = {Chicago},
+  doi-unavailable = {University of Chicago Press book; no DOI assigned for 1996 edition},
+  isbn      = {9780226851754},
+  abstract  = {Vaughan's sociological analysis of the Challenger disaster introduces the concept of "normalization of deviance" -- the process by which technically anomalous results become accepted as normal through repeated exposure without negative consequences. Engineers at NASA had observed O-ring erosion on previous flights, but because each erosion event did not result in catastrophe, the anomaly was redefined as an acceptable risk rather than a warning sign. Vaughan traces how organizational culture, production pressure, and structural secrecy combined to create a decision-making environment where deviation from safety standards became routine. The book challenges the "bad actor" narrative of the Challenger disaster, showing that no individual made a deliberately reckless decision -- instead, the system's culture made the dangerous choice appear reasonable. For HUMMBL, normalization of deviance is a critical IN transformation pattern: failure modes that are initially detected but then dismissed because they have not yet caused harm. The IN operator must identify not only active failure modes but also normalized deviance -- conditions that have been reclassified from "anomaly" to "acceptable" without rigorous justification. Vaughan's work also demonstrates that inversion must operate at the cultural level, not just the technical level: the failure was not in the O-ring but in the social system that normalized its degradation.},
+  keywords  = {normalization of deviance, organizational culture, risk, safety, NASA, HUMMBL:IN, HUMMBL:SY, HUMMBL:DE},
+}
+
+@book{Kahneman2021Noise,
+  title     = {Noise: A Flaw in Human Judgment},
+  author    = {Kahneman, Daniel and Sibony, Olivier and Sunstein, Cass R.},
+  year      = {2021},
+  publisher = {Little, Brown Spark},
+  address   = {New York},
+  doi-unavailable = {Little Brown trade book; no DOI assigned},
+  isbn      = {9780316451390},
+  abstract  = {Kahneman, Sibony, and Sunstein distinguish between bias (systematic error) and noise (random variability) in human judgment. Where bias is a directional drift, noise is scatter -- the unwanted variability that produces different judgments from different people (or the same person at different times) facing identical cases. The authors demonstrate that in domains ranging from medicine to criminal sentencing to insurance underwriting, noise is often a larger source of error than bias, yet it receives far less attention because it is invisible in individual cases and only visible in aggregate. They introduce "noise audits" as a methodology for measuring variability and propose decision hygiene procedures -- structured decision processes, independent judgments, base-rate anchors -- to reduce noise without introducing new biases. For HUMMBL, noise is a distinct class of inversion target: while bias represents a predictable failure mode, noise represents an unpredictable one. The IN transformation must identify both systematic failures (bias) and stochastic failures (noise). The noise audit methodology is directly applicable to AI system evaluation: running the same input through a model multiple times, or through multiple models, and measuring the variance in outputs. Decision hygiene maps to the RE transformation -- structured, iterative processes that reduce both bias and noise through decomposition and aggregation.},
+  keywords  = {noise, bias, judgment, variability, decision hygiene, HUMMBL:IN, HUMMBL:DE, HUMMBL:RE},
+}
