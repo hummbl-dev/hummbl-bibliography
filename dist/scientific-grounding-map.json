@@ -68,8 +68,8 @@
     "metadata_debt": {
       "critical": 5,
       "high": 7,
-      "medium": 38,
-      "low": 66
+      "medium": 34,
+      "low": 59
     }
   },
   "sources": [
@@ -3581,8 +3581,8 @@
         "IN",
         "RE"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1038/s41586-024-08025-4",
       "has_isbn": false,
       "isbn": null,
       "journal": "Nature",
@@ -3595,14 +3595,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "DeepfakeDetectionReview2024",
@@ -3646,8 +3640,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1109/eurosp63326.2025.00055",
       "has_isbn": false,
       "isbn": null,
       "journal": "arXiv preprint arXiv:2401.04364",
@@ -3661,11 +3655,6 @@
       "arxiv_id": "2401.04364",
       "source_status": "metadata_debt",
       "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        },
         {
           "field": "arxiv_id",
           "priority": "low",
@@ -3687,8 +3676,8 @@
         "IN",
         "RE"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2408.00388",
       "has_isbn": false,
       "isbn": null,
       "journal": "arXiv preprint arXiv:2408.00388",
@@ -3701,11 +3690,6 @@
       "arxiv_id": "2408.00388",
       "source_status": "metadata_debt",
       "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        },
         {
           "field": "arxiv_id",
           "priority": "low",
@@ -3727,8 +3711,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1145/3770916",
       "has_isbn": false,
       "isbn": null,
       "journal": "ACM Computing Surveys",
@@ -3741,14 +3725,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Kirchenbauer2023Watermark",
@@ -3799,8 +3777,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2306.04634",
       "has_isbn": false,
       "isbn": null,
       "journal": null,
@@ -3811,13 +3789,13 @@
         "watermarking"
       ],
       "downstream_refs": [],
-      "arxiv_id": null,
+      "arxiv_id": "2306.04634",
       "source_status": "metadata_debt",
       "metadata_debt": [
         {
-          "field": "doi",
+          "field": "arxiv_id",
           "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
     },
@@ -4314,8 +4292,8 @@
         "DE",
         "RE"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1007/s10796-024-10528-4",
       "has_isbn": false,
       "isbn": null,
       "journal": "Information Systems Frontiers",
@@ -4327,14 +4305,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Shevlane2023AISafetyFrameworks",
@@ -4593,8 +4565,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1038/s42256-024-00878-8",
       "has_isbn": false,
       "isbn": null,
       "journal": "Nature Machine Intelligence",
@@ -4606,14 +4578,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Pushkarna2022DataCards",
@@ -4783,8 +4749,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1145/3523273",
       "has_isbn": false,
       "isbn": null,
       "journal": "ACM Computing Surveys",
@@ -4795,14 +4761,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Nasr2021Memorization",
@@ -4914,8 +4874,8 @@
         "DE",
         "P"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1007/s11023-024-09701-0",
       "has_isbn": false,
       "isbn": null,
       "journal": "Journal of Public Administration Research and Theory",
@@ -4926,14 +4886,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Bucinca2023DecisionControl",
@@ -4982,8 +4936,8 @@
         "DE",
         "P"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1017/err.2025.10033",
       "has_isbn": false,
       "isbn": null,
       "journal": "Law, Innovation and Technology",
@@ -4994,14 +4948,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Carey2023HumanControl",
@@ -5145,8 +5093,8 @@
         "IN",
         "P"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1007/s00146-025-02422-7",
       "has_isbn": false,
       "isbn": null,
       "journal": "Computers in Human Behavior",
@@ -5157,14 +5105,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Wischnewski2023TrustCalibration",
@@ -5269,8 +5211,8 @@
         "DE",
         "IN"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2408.07933",
       "has_isbn": false,
       "isbn": null,
       "journal": "arXiv preprint",
@@ -5280,13 +5222,13 @@
         "incident framework"
       ],
       "downstream_refs": [],
-      "arxiv_id": null,
+      "arxiv_id": "2408.07933",
       "source_status": "metadata_debt",
       "metadata_debt": [
         {
-          "field": "doi",
+          "field": "arxiv_id",
           "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
     },
@@ -5371,8 +5313,8 @@
         "IN",
         "RE"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1609/AAAI.V35I17.17817",
       "has_isbn": false,
       "isbn": null,
       "journal": null,
@@ -5383,14 +5325,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Naveed2025MLMonitoring",
@@ -5405,8 +5341,8 @@
         "IN",
         "RE"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2509.14294",
       "has_isbn": false,
       "isbn": null,
       "journal": "arXiv preprint",
@@ -5416,13 +5352,13 @@
         "multivocal review"
       ],
       "downstream_refs": [],
-      "arxiv_id": null,
+      "arxiv_id": "2509.14294",
       "source_status": "metadata_debt",
       "metadata_debt": [
         {
-          "field": "doi",
+          "field": "arxiv_id",
           "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
     },
@@ -11228,36 +11164,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Dathathri2024SynthID",
-      "title": "Scalable Watermarking for Identifying Large Language Model Outputs",
-      "bibliography_tier": "T14",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "DeepfakeMediaForensics2024",
-      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
-      "bibliography_tier": "T14",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "DefensesAIVisualMedia2025",
-      "title": "A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication",
-      "bibliography_tier": "T14",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Fowler2005EventSourcing",
       "title": "Event Sourcing",
       "bibliography_tier": "T5",
@@ -11462,16 +11368,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Pumplun2021AICapabilityMaturity",
-      "title": "Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model",
-      "bibliography_tier": "T15",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "SOC2Framework",
       "title": "SOC 2 --- Trust Services Criteria",
       "bibliography_tier": "T6",
@@ -11532,16 +11428,6 @@
       "downstream_refs": []
     },
     {
-      "key": "AlonBarkat2024EffectiveOversight",
-      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
-      "bibliography_tier": "T18",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Amodei2016ConcreteProblems",
       "title": "Concrete Problems in AI Safety",
       "bibliography_tier": "T4",
@@ -11566,24 +11452,14 @@
       "title": "Adapting Cybersecurity Frameworks to Frontier AI",
       "bibliography_tier": "T19",
       "evidence_tier": "foundational",
-      "field": "doi",
+      "field": "arxiv_id",
       "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
       "downstream_refs": []
     },
     {
       "key": "Bucinca2023DecisionControl",
       "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
-      "bibliography_tier": "T18",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Busuioc2025AutomationBiasAIA",
-      "title": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
       "bibliography_tier": "T18",
       "evidence_tier": "foundational",
       "field": "doi",
@@ -11649,16 +11525,6 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
-      "downstream_refs": []
-    },
-    {
-      "key": "DeepfakeDetectorsSoK2024",
-      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
-      "bibliography_tier": "T14",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -11782,16 +11648,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Hu2024SurveyMIA",
-      "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
-      "bibliography_tier": "T17",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Kaplan2020ScalingLaws",
       "title": "Scaling Laws for Neural Language Models",
       "bibliography_tier": "T9",
@@ -11826,9 +11682,9 @@
       "title": "On the Reliability of Watermarks for Large Language Models",
       "bibliography_tier": "T14",
       "evidence_tier": "foundational",
-      "field": "doi",
+      "field": "arxiv_id",
       "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
       "downstream_refs": []
     },
     {
@@ -11872,16 +11728,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Longpre2024DataProvenance",
-      "title": "A Data Provenance Initiative for Large Language Models",
-      "bibliography_tier": "T16",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Madaan2023Selfrefine",
       "title": "{Self-Refine}: Iterative Refinement with Self-Feedback",
       "bibliography_tier": "T13",
@@ -11889,16 +11735,6 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
-      "downstream_refs": []
-    },
-    {
-      "key": "McGregor2021AIID",
-      "title": "Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database",
-      "bibliography_tier": "T19",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
@@ -11916,9 +11752,9 @@
       "title": "ML Monitoring: A Multivocal Literature Review",
       "bibliography_tier": "T19",
       "evidence_tier": "foundational",
-      "field": "doi",
+      "field": "arxiv_id",
       "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
       "downstream_refs": []
     },
     {
@@ -12059,16 +11895,6 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Vogel2025AutomationBiasReview",
-      "title": "Exploring Automation Bias in Human-AI Collaboration: A Review and Implications for Explainable AI",
-      "bibliography_tier": "T18",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {

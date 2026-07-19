@@ -3111,6 +3111,7 @@
         "RE"
       ],
       "journal": "Nature",
+      "doi": "10.1038/s41586-024-08025-4",
       "url": "https://www.nature.com/articles/s41586-024-08025-4"
     },
     {
@@ -3158,6 +3159,7 @@
         "IN"
       ],
       "journal": "arXiv preprint arXiv:2401.04364",
+      "doi": "10.1109/eurosp63326.2025.00055",
       "url": "https://arxiv.org/html/2401.04364v4"
     },
     {
@@ -3180,6 +3182,7 @@
         "RE"
       ],
       "journal": "arXiv preprint arXiv:2408.00388",
+      "doi": "10.48550/arXiv.2408.00388",
       "url": "https://arxiv.org/pdf/2408.00388"
     },
     {
@@ -3204,6 +3207,7 @@
         "IN"
       ],
       "journal": "ACM Computing Surveys",
+      "doi": "10.1145/3770916",
       "url": "https://arxiv.org/pdf/2407.10575v2"
     },
     {
@@ -3252,6 +3256,7 @@
         "IN"
       ],
       "booktitle": "International Conference on Learning Representations (ICLR)",
+      "doi": "10.48550/arXiv.2306.04634",
       "url": "https://arxiv.org/abs/2306.04634"
     },
     {
@@ -3566,6 +3571,7 @@
         "RE"
       ],
       "journal": "Information Systems Frontiers",
+      "doi": "10.1007/s10796-024-10528-4",
       "url": "https://link.springer.com/article/10.1007/s10796-024-10528-4"
     },
     {
@@ -3765,6 +3771,7 @@
         "IN"
       ],
       "journal": "Nature Machine Intelligence",
+      "doi": "10.1038/s42256-024-00878-8",
       "url": "https://arxiv.org/abs/2403.13786"
     },
     {
@@ -3896,6 +3903,7 @@
         "IN"
       ],
       "journal": "ACM Computing Surveys",
+      "doi": "10.1145/3523273",
       "url": "https://arxiv.org/abs/2404.09564"
     },
     {
@@ -3981,6 +3989,7 @@
         "P"
       ],
       "journal": "Journal of Public Administration Research and Theory",
+      "doi": "10.1007/s11023-024-09701-0",
       "url": "https://academic.oup.com/jpart"
     },
     {
@@ -4023,6 +4032,7 @@
         "P"
       ],
       "journal": "Law, Innovation and Technology",
+      "doi": "10.1017/err.2025.10033",
       "url": "https://www.tandfonline.com/journals/rlit20"
     },
     {
@@ -4128,6 +4138,7 @@
         "P"
       ],
       "journal": "Computers in Human Behavior",
+      "doi": "10.1007/s00146-025-02422-7",
       "url": "https://www.sciencedirect.com/journal/computers-in-human-behavior"
     },
     {
@@ -4214,6 +4225,7 @@
         "IN"
       ],
       "journal": "arXiv preprint",
+      "doi": "10.48550/arXiv.2408.07933",
       "url": "https://arxiv.org/abs/2404.09048"
     },
     {
@@ -4275,6 +4287,7 @@
         "RE"
       ],
       "booktitle": "Proceedings of the AAAI 2021 Spring Symposium on AI Incident Reporting",
+      "doi": "10.1609/AAAI.V35I17.17817",
       "url": "https://incidentdatabase.ai/"
     },
     {
@@ -4296,6 +4309,7 @@
         "RE"
       ],
       "journal": "arXiv preprint",
+      "doi": "10.48550/arXiv.2509.14294",
       "url": "https://arxiv.org/abs/2501.09023"
     },
     {
