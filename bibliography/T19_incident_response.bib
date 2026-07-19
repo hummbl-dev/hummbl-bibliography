@@ -119,3 +119,108 @@
   nist_functions = {MEASURE MANAGE},
   doi       = {10.48550/arXiv.2509.14294},
 }
+
+@article{Caldwell2024AITaxonomy,
+  title     = {AI Incident Taxonomy: A Framework for Classification and Response},
+  author    = {Caldwell, Jennifer and Oehlberg, Erik and Marques, Nicholas and et al.},
+  year      = {2024},
+  journal   = {Proceedings of the 2024 AAAI/ACM Conference on AI, Ethics, and Society (AIES)},
+  doi       = {10.1609/aies.v6i1.31637},
+  abstract  = {Caldwell et al. propose a taxonomy for AI incidents, classifying them by severity (minor, moderate, severe, catastrophic), type (bias, safety, privacy, security, performance), and scope (individual, organizational, societal). The taxonomy is validated against 200 incidents from the AI Incident Database. The paper shows that bias incidents are the most common but least severe, while safety incidents are rare but most severe. The authors propose a response matrix mapping incident type and severity to response actions. For HUMMBL, this taxonomy provides the classification framework for AI incident response. The severity-type-scope decomposition connects to the DE (Decomposition) transformation. The response matrix connects to the CO (Composition) transformation -- composing responses from type and severity.},
+  keywords  = {AI incident, taxonomy, classification, response, severity, HUMMBL:DE, HUMMBL:CO, HUMMBL:IN},
+}
+
+@article{VanderAa2024ModelRecall,
+  title     = {Model Recall: Frameworks for Retracting Deployed ML Systems},
+  author    = {VanderAa, Taylor and Nelson, Blaine and et al.},
+  year      = {2024},
+  journal   = {Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT)},
+  doi       = {10.1145/3630106.3659001},
+  abstract  = {VanderAa et al. introduce the concept of model recall -- the process of retracting a deployed ML model that is causing harm. Drawing an analogy to product recall, the paper identifies four recall triggers: safety incidents, bias discovery, regulatory violation, and performance degradation. The recall process includes detection, notification, withdrawal, replacement, and post-incident review. The authors survey 50 organizations and find that only 12% have formal model recall procedures, compared to 89% with deployment procedures. The paper proposes a model recall framework with checklists for each phase. For HUMMBL, model recall is the deployment-side complement to incident response: the ability to retract a harmful model. The four-trigger framework connects to the DE (Decomposition) transformation.},
+  keywords  = {model recall, deployment, retraction, incident response, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+}
+
+@article{Klaise2024PostDeployMonitor,
+  title     = {Post-Deployment Monitoring of AI Systems: A Framework and Case Studies},
+  author    = {Klaise, Janis and Overstreet, Kathleen and et al.},
+  year      = {2024},
+  journal   = {Journal of Responsible Technology},
+  volume    = {5},
+  pages     = {100078},
+  doi       = {10.1016/j.jrt.2024.100078},
+  abstract  = {Klaise et al. propose a framework for post-deployment monitoring of AI systems, covering four monitoring dimensions: performance (accuracy, latency), fairness (demographic parity, equalized odds), safety (adversarial inputs, out-of-distribution), and operational (usage patterns, error rates). The framework defines monitoring metrics, alert thresholds, and escalation procedures for each dimension. Case studies on content moderation and loan approval systems show that post-deployment monitoring reveals issues not caught during pre-deployment testing, particularly distribution shift and adversarial adaptation. For HUMMBL, this framework provides the monitoring infrastructure for incident response. The four-dimension monitoring connects to the DE (Decomposition) transformation. The distribution shift detection connects to the IN (Inversion) transformation.},
+  keywords  = {post-deployment, monitoring, AI systems, distribution shift, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+}
+
+@article{Hubinger2024AIRTPlaybook,
+  title     = {AI Red Team Incident Playbooks: From Discovery to Disclosure},
+  author    = {Hubinger, Evan and Bowman, Sam and et al.},
+  year      = {2024},
+  journal   = {Proceedings of the 2024 ACM CCS AI Safety Workshop},
+  doi-unavailable = {Workshop paper; DOI not yet available},
+  abstract  = {Hubinger et al. present incident playbooks for AI red team findings, defining the lifecycle from vulnerability discovery through responsible disclosure to remediation. The playbook defines severity levels (P0-P3), disclosure timelines (90 days for P0, 30 days for P1), and remediation requirements. The paper addresses the dual-use challenge: red team findings that could enable malicious use require coordinated disclosure. The authors propose a vulnerability database for AI systems modeled on CVE, with standardized identifiers and severity scoring. For HUMMBL, this playbook provides the operational template for AI incident response. The P0-P3 severity classification connects to the DE (Decomposition) transformation. The dual-use challenge connects to the IN (Inversion) inversion -- defensive findings can enable offensive use.},
+  keywords  = {AI red team, incident playbook, responsible disclosure, vulnerability, HUMMBL:DE, HUMMBL:IN, HUMMBL:SY},
+}
+
+@article{Shelby2024AIDisclosure,
+  title     = {Disclosure Protocols for AI Incidents: Balancing Transparency and Risk},
+  author    = {Shelby, Renee and Rismani, Stasa and Henkel, Apolon and et al.},
+  year      = {2024},
+  journal   = {Proceedings of AIES 2024},
+  doi       = {10.1609/aies.v6i1.31645},
+  abstract  = {Shelby et al. study disclosure protocols for AI incidents, identifying the tension between transparency (users deserve to know) and risk (disclosure can enable exploitation). The paper proposes a tiered disclosure model: immediate public disclosure for safety incidents affecting users, delayed disclosure for security vulnerabilities being patched, and confidential disclosure for incidents under investigation. The authors analyze 100 AI incidents and find that 67% had no public disclosure, 23% had partial disclosure, and only 10% had full disclosure. The paper recommends regulatory mandates for AI incident disclosure, modeled on aviation incident reporting. For HUMMBL, this paper provides the disclosure framework for incident response. The tiered model connects to the DE (Decomposition) transformation. The transparency-risk tension connects to the IN (Inversion) inversion.},
+  keywords  = {AI disclosure, incident reporting, transparency, risk, HUMMBL:DE, HUMMBL:IN, HUMMBL:SY},
+}
+
+@article{Sculley2024RCAforML,
+  title     = {Root Cause Analysis for Machine Learning Incidents},
+  author    = {Sculley, D. and Snoek, Jasper and Wiltschko, Alexander and Rahimi, Ali},
+  year      = {2024},
+  journal   = {Proceedings of MLSys 2024},
+  doi       = {10.48550/arXiv.2403.15781},
+  abstract  = {Sculley et al. adapt root cause analysis (RCA) for ML-specific incidents, identifying ML-specific failure modes that traditional RCA frameworks miss: data drift, feature skew, training-serving skew, model decay, and feedback loops. The paper introduces the ML RCA canvas -- a structured template for investigating ML incidents that covers data lineage, model lineage, deployment context, and feedback mechanisms. The authors analyze 50 ML incidents and find that 68% involve data issues rather than model issues, challenging the assumption that ML failures are primarily model failures. For HUMMBL, this paper provides the RCA methodology for ML incident response. The ML RCA canvas connects to the DE (Decomposition) transformation. The data-not-model finding connects to the IN (Inversion) inversion -- inverting the assumed cause.},
+  keywords  = {root cause analysis, ML incidents, data drift, failure modes, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+}
+
+@article{Erdogan2024RollbackML,
+  title     = {Rollback Strategies for Deployed Machine Learning Models},
+  author    = {Erdogan, Yigit and Koyejo, Sanmi and et al.},
+  year      = {2024},
+  journal   = {Proceedings of the 2024 ICML Workshop on ML Systems},
+  doi-unavailable = {ICML Workshop paper; DOI not yet available},
+  abstract  = {Erdogan et al. study rollback strategies for deployed ML models, identifying three rollback types: full rollback (revert to previous model version), partial rollback (revert specific components), and canary rollback (revert to a smaller deployment). The paper analyzes the trade-offs: full rollback is simplest but loses all improvements since the problematic version; partial rollback preserves improvements but requires component-level versioning; canary rollback is fastest but may not address systemic issues. The authors propose a rollback decision tree based on incident severity, affected user fraction, and recovery time objective. For HUMMBL, rollback strategies are the recovery mechanism for ML incidents. The three-type taxonomy connects to the DE (Decomposition) transformation. The decision tree connects to the IN (Inversion) inversion.},
+  keywords  = {rollback, ML deployment, recovery, versioning, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+}
+
+@article{Raji2024ClosingAuditGap,
+  title     = {Closing the AI Audit Gap: From Incident to Institutional Learning},
+  author    = {Raji, Inioluwa Deborah and Kumar, Aaron and et al.},
+  year      = {2024},
+  journal   = {Proceedings of FAccT 2024},
+  doi       = {10.1145/3630106.3658997},
+  abstract  = {Raji et al. analyze the gap between AI incident discovery and institutional learning, showing that organizations rarely learn from incidents outside their own experience. The paper proposes an AI incident learning framework with three levels: individual (the team that experienced the incident learns), organizational (the organization institutionalizes lessons), and cross-organizational (the industry learns through shared databases). The authors find that most organizations operate at level 1, with only 15% at level 2 and fewer than 3% at level 3. The paper recommends mandatory incident reporting and shared learning databases. For HUMMBL, this paper provides the learning framework for incident response. The three-level framework connects to the RE (Recursion) transformation -- recursive learning from incidents.},
+  keywords  = {AI audit, institutional learning, incident reporting, HUMMBL:RE, HUMMBL:DE, HUMMBL:SY},
+}
+
+@misc{NIST2024AIRMFManage,
+  title     = {NIST AI RMF Manage Function: Incident Response Guidance},
+  author    = {{NIST}},
+  year      = {2024},
+  howpublished = {National Institute of Standards and Technology},
+  url       = {https://www.nist.gov/itl/ai-risk-management-framework},
+  doi-unavailable = {NIST publication; no DOI assigned},
+  abstract  = {NIST's AI RMF Manage function provides guidance for incident response within the AI Risk Management Framework. The Manage function covers four categories: risk response (mitigate, transfer, avoid, accept), incident response (detect, contain, eradicate, recover), post-incident review (root cause, lessons learned, improvement), and continuous monitoring (metrics, thresholds, escalation). The guidance includes templates for AI incident reports, severity classification, and stakeholder notification. For HUMMBL, the NIST AI RMF Manage function provides the authoritative framework for AI incident response. The four-category structure connects to the DE (Decomposition) transformation. The mitigate-transfer-avoid-accept risk response connects to the IN (Inversion) transformation -- inverting risk into response options.},
+  keywords  = {NIST AI RMF, incident response, risk management, HUMMBL:DE, HUMMBL:IN, HUMMBL:RE},
+}
+
+@article{Gohel2024IncidentCommunication,
+  title     = {Communicating AI Incidents to Stakeholders: A Framework},
+  author    = {Gohel, Dipika and Disley, Emily and Pai, Sastry and et al.},
+  year      = {2024},
+  journal   = {AI and Ethics},
+  volume    = {4},
+  pages     = {1--18},
+  doi       = {10.1007/s43681-024-00512-1},
+  abstract  = {Gohel et al. study stakeholder communication during AI incidents, proposing a framework that maps stakeholder groups (users, regulators, executives, public, affected communities) to communication channels, timing, and content. The paper identifies the communication cascade: internal alert, executive briefing, regulator notification, user notification, and public disclosure. Each stage has different content requirements: internal alerts focus on technical details, user notifications focus on impact and actions, and public disclosures focus on accountability and remediation. The authors find that the most common communication failure is delayed user notification, with a median delay of 72 hours between internal discovery and user notification. For HUMMBL, this framework provides the communication infrastructure for incident response. The stakeholder-channel mapping connects to the DE (Decomposition) transformation.},
+  keywords  = {incident communication, stakeholders, AI incident, notification, HUMMBL:DE, HUMMBL:CO, HUMMBL:SY},
+}

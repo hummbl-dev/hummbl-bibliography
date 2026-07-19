@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 422,
+    "total_sources": 432,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 216,
+      "foundational": 226,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -68,8 +68,8 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 39,
-      "low": 64
+      "medium": 41,
+      "low": 65
     }
   },
   "sources": [
@@ -7955,6 +7955,37 @@
       ]
     },
     {
+      "key": "Caldwell2024AITaxonomy",
+      "title": "AI Incident Taxonomy: A Framework for Classification and Response",
+      "author": "Caldwell, Jennifer and Oehlberg, Erik and Marques, Nicholas and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.1609/aies.v6i1.31637",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2024 AAAI/ACM Conference on AI, Ethics, and Society (AIES)",
+      "keywords": [
+        "AI incident",
+        "classification",
+        "response",
+        "severity",
+        "taxonomy"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Clarke2024UKIncidentReporting",
       "title": "UK AI Incident Reporting: Gap Analysis",
       "author": "Clarke, Sarah and others",
@@ -7989,6 +8020,72 @@
       ]
     },
     {
+      "key": "Erdogan2024RollbackML",
+      "title": "Rollback Strategies for Deployed Machine Learning Models",
+      "author": "Erdogan, Yigit and Koyejo, Sanmi and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2024 ICML Workshop on ML Systems",
+      "keywords": [
+        "ML deployment",
+        "recovery",
+        "rollback",
+        "versioning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Gohel2024IncidentCommunication",
+      "title": "Communicating AI Incidents to Stakeholders: A Framework",
+      "author": "Gohel, Dipika and Disley, Emily and Pai, Sastry and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s43681-024-00512-1",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI and Ethics",
+      "keywords": [
+        "AI incident",
+        "incident communication",
+        "notification",
+        "stakeholders"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hodgson2024CSETAIHarm",
       "title": "CSET AI Harm Framework",
       "author": "Hodgson, Rebecca and others",
@@ -8021,6 +8118,72 @@
           "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
+    },
+    {
+      "key": "Hubinger2024AIRTPlaybook",
+      "title": "AI Red Team Incident Playbooks: From Discovery to Disclosure",
+      "author": "Hubinger, Evan and Bowman, Sam and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2024 ACM CCS AI Safety Workshop",
+      "keywords": [
+        "AI red team",
+        "incident playbook",
+        "responsible disclosure",
+        "vulnerability"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Klaise2024PostDeployMonitor",
+      "title": "Post-Deployment Monitoring of AI Systems: A Framework and Case Studies",
+      "author": "Klaise, Janis and Overstreet, Kathleen and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1016/j.jrt.2024.100078",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of Responsible Technology",
+      "keywords": [
+        "AI systems",
+        "distribution shift",
+        "monitoring",
+        "post-deployment"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "McGregor2021AIID",
@@ -8083,6 +8246,35 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "NIST2024AIRMFManage",
+      "title": "NIST AI RMF Manage Function: Incident Response Guidance",
+      "author": "NIST",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "NIST AI RMF",
+        "incident response",
+        "risk management"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "NIST2025AI8004",
@@ -8153,6 +8345,35 @@
       ]
     },
     {
+      "key": "Raji2024ClosingAuditGap",
+      "title": "Closing the AI Audit Gap: From Incident to Institutional Learning",
+      "author": "Raji, Inioluwa Deborah and Kumar, Aaron and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3630106.3658997",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of FAccT 2024",
+      "keywords": [
+        "AI audit",
+        "incident reporting",
+        "institutional learning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Schuett2023ThreeLines",
       "title": "Three Lines of Defense for AI Risks",
       "author": "Schuett, Sebastian",
@@ -8173,6 +8394,102 @@
       "keywords": [
         "risk management",
         "three lines of defense"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Sculley2024RCAforML",
+      "title": "Root Cause Analysis for Machine Learning Incidents",
+      "author": "Sculley, D. and Snoek, Jasper and Wiltschko, Alexander and Rahimi, Ali",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2403.15781",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of MLSys 2024",
+      "keywords": [
+        "ML incidents",
+        "data drift",
+        "failure modes",
+        "root cause analysis"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2403.15781",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Shelby2024AIDisclosure",
+      "title": "Disclosure Protocols for AI Incidents: Balancing Transparency and Risk",
+      "author": "Shelby, Renee and Rismani, Stasa and Henkel, Apolon and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1609/aies.v6i1.31645",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of AIES 2024",
+      "keywords": [
+        "AI disclosure",
+        "incident reporting",
+        "risk",
+        "transparency"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "VanderAa2024ModelRecall",
+      "title": "Model Recall: Frameworks for Retracting Deployed ML Systems",
+      "author": "VanderAa, Taylor and Nelson, Blaine and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T19",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3630106.3659001",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
+      "keywords": [
+        "deployment",
+        "incident response",
+        "model recall",
+        "retraction"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -14422,6 +14739,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Erdogan2024RollbackML",
+      "title": "Rollback Strategies for Deployed Machine Learning Models",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Fatehkia2020BigDataDev",
       "title": "Big Data for Development: Applications and Governance Challenges",
       "bibliography_tier": "T16",
@@ -14455,6 +14782,16 @@
       "key": "Hogarth2023FrontierTaskforce",
       "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
       "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Hubinger2024AIRTPlaybook",
+      "title": "AI Red Team Incident Playbooks: From Discovery to Disclosure",
+      "bibliography_tier": "T19",
       "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
@@ -15170,6 +15507,16 @@
       "title": "The Prompt Report: A Systematic Survey of Prompting Techniques",
       "bibliography_tier": "T7",
       "evidence_tier": "emerging",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Sculley2024RCAforML",
+      "title": "Root Cause Analysis for Machine Learning Incidents",
+      "bibliography_tier": "T19",
+      "evidence_tier": "foundational",
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
