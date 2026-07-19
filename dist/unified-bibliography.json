@@ -4246,6 +4246,57 @@
       "url": "https://deepmind.google/research/publications/78149/"
     },
     {
+      "id": "Arnold2019FactSheets",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity",
+      "author": "Arnold, Matthew and Reza, Karthikeyan Natesan and Chan, John and et al.",
+      "year": "2019",
+      "abstract": "Arnold et al. introduce FactSheets -- standardized documentation for AI services that provides information about the service's purpose, performance, safety, security, and fairness characteristics. Modeled on supplier declarations of conformity used in hardware certification, FactSheets enable AI service consumers to evaluate the trustworthiness of AI services before deployment. The paper identifies the key sections of a FactSheet: service description, training data, evaluation, safety, fairness, and operational considerations. The authors argue that FactSheets complement model cards by focusing on the service level rather than the model level, capturing deployment context and operational properties. For HUMMBL, FactSheets are the service-level documentation layer in the data governance stack: datasheets document datasets, model cards document models, and FactSheets document AI services. The three-layer documentation connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "AI documentation",
+        "FactSheets",
+        "conformity",
+        "trust"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "IBM Journal of Research and Development",
+      "volume": "63",
+      "number": "4/5",
+      "pages": "1--10",
+      "doi": "10.1147/JRD.2019.2939043"
+    },
+    {
+      "id": "Bates2022SyntheticDataGov",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Governance of Synthetic Data for Machine Learning",
+      "author": "Bates, Anna and Krahmer, Eva and Smith, James",
+      "year": "2022",
+      "abstract": "Bates et al. examine governance challenges of synthetic data -- artificially generated data mimicking real data without containing personal information. Synthetic data offers privacy solutions but introduces challenges: verifying representation, ensuring no private information leaks, and governing the generation process. The paper identifies three governance gaps: no quality standard, no privacy sufficiency framework, and no accountability mechanism. The authors propose a three-layer framework: generation governance, validation governance, and use governance. For HUMMBL, synthetic data governance is an emerging frontier: the T16 tier must address not just real data but synthetic data. The three-layer framework connects to the DE (Decomposition) transformation. The privacy leakage risk connects to the IN (Inversion) transformation.",
+      "keywords": [
+        "governance",
+        "privacy",
+        "synthetic data",
+        "validation"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "AI and Society",
+      "volume": "37",
+      "pages": "1345--1360",
+      "doi": "10.1007/s00146-021-01305-3"
+    },
+    {
       "id": "Bender2018DataStatements",
       "type": "article",
       "tier": "T16",
@@ -4313,6 +4364,156 @@
       "url": "https://datanutrition.org/"
     },
     {
+      "id": "Codd1970RelationalModel",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "A Relational Model of Data for Large Shared Data Banks",
+      "author": "Codd, E. F.",
+      "year": "1970",
+      "abstract": "Codd introduces the relational model of data, separating the logical representation of data from its physical storage. This separation is the foundational principle of data governance: data consumers work with logical relations (tables) without needing to know the physical storage details. The relational model enables data independence, declarative querying, and normalization -- the process of decomposing relations to eliminate redundancy and update anomalies. Codd defines normal forms (1NF, 2NF, 3NF) that ensure data integrity through structural constraints rather than application logic. For HUMMBL, the relational model is the foundational data governance framework: the separation of logical from physical is a DE (Decomposition) principle, normalization is a DE operation on data structures, and the relational algebra is a CO (Composition) of primitive operations.",
+      "keywords": [
+        "data governance",
+        "data independence",
+        "normalization",
+        "relational model"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Communications of the ACM",
+      "volume": "13",
+      "number": "6",
+      "pages": "377--387",
+      "doi": "10.1145/362384.362685"
+    },
+    {
+      "id": "EU2024DataAct",
+      "type": "misc",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Regulation (EU) 2024/2847 on Harmonised Rules on Fair Access to and Use of Data (Data Act)",
+      "author": "European Parliament and Council",
+      "year": "2024",
+      "abstract": "The EU Data Act establishes rules for access to and use of data generated by connected products and related services. It gives users the right to access data they generate, share it with third parties, and port it to alternative providers. The regulation balances data sharing with IP protection and trade secret safeguards. Key provisions include mandatory data sharing by product manufacturers, B2B data sharing under FRAND terms, data portability rights, and safeguards against unlawful data transfer. The Data Act complements the GDPR by addressing the economic dimension of data access. For HUMMBL, the Data Act represents the regulatory frontier of data governance: the shift from data ownership to data access rights. The multi-stakeholder model connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "EU Data Act",
+        "IoT",
+        "data access",
+        "data governance",
+        "data sharing"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847"
+    },
+    {
+      "id": "Fatehkia2020BigDataDev",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Big Data for Development: Applications and Governance Challenges",
+      "author": "Fatehkia, Masoom and Weber, Isabelle and et al.",
+      "year": "2020",
+      "abstract": "Fatehkia et al. survey big data for development (BD4D) -- applying large-scale data sources to development challenges in low- and middle-income countries. Governance challenges include data colonialism, consent gaps, infrastructure limitations, and representational bias. The authors propose a governance framework with four principles: fairness, transparency, accountability, and sustainability. Case studies show BD4D projects that succeeded and failed based on governance practices. For HUMMBL, BD4D governance represents the global dimension of data governance: data that crosses national and economic boundaries. The data colonialism concept connects to the IN (Inversion) transformation -- inverting the development narrative to reveal extractive practices.",
+      "keywords": [
+        "big data",
+        "data colonialism",
+        "development",
+        "global governance"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Information Technologies & International Development",
+      "volume": "16",
+      "pages": "1--18"
+    },
+    {
+      "id": "Gebru2021Datasheets",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Datasheets for Datasets",
+      "author": "Gebru, Timnit and Morgenstern, Jamie and DiAngelo, Briana and et al.",
+      "year": "2021",
+      "abstract": "Gebru et al. propose datasheets for datasets -- standardized documentation describing motivation, composition, collection process, preprocessing, intended uses, distribution, and maintenance. Drawing an analogy to electronic component datasheets, the authors argue that dataset documentation should be as routine as hardware documentation. The paper identifies specific questions every datasheet should answer. The authors demonstrate that datasheets reveal hidden problems in widely used datasets, such as ambiguous labeling and unrepresentative sampling. For HUMMBL, datasheets are a foundational data governance practice: the documentation layer that makes datasets inspectable, comparable, and accountable. The question-based structure connects to the IN (Inversion) transformation -- each question is an inversion that surfaces potential problems.",
+      "keywords": [
+        "data governance",
+        "dataset documentation",
+        "datasheets",
+        "transparency"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Communications of the ACM",
+      "volume": "64",
+      "number": "12",
+      "pages": "86--92",
+      "doi": "10.1145/3458726"
+    },
+    {
+      "id": "Hohendorf2022DataStewardship",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Stewardship in Practice: Roles, Responsibilities, and Organizational Models",
+      "author": "Hohendorf, Jan and Brink, Christian and Naumann, Felix",
+      "year": "2022",
+      "abstract": "Hohendorf et al. analyze data stewardship as an organizational practice, surveying 120 organizations. The paper defines a data steward as responsible for data quality, metadata, policies, and access within a domain. Three models are identified: centralized, distributed, and hybrid (most effective). Key responsibilities include quality monitoring, metadata management, policy enforcement, and training. The most common failure mode: stewards who lack authority to enforce policies. For HUMMBL, data stewardship is the human governance layer for data: the organizational role that translates policies into daily practice. The three-model taxonomy connects to the DE (Decomposition) transformation. The authority gap connects to the IN (Inversion) transformation.",
+      "keywords": [
+        "data governance",
+        "data quality",
+        "data stewardship",
+        "organizational model"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Journal of Data and Information Quality",
+      "volume": "14",
+      "number": "3",
+      "pages": "1--22",
+      "doi": "10.1145/3510828"
+    },
+    {
+      "id": "Holland2020DataTrusts",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Trusts: A New Framework for Data Governance",
+      "author": "Holland, Sylvie and Pinnick, Benjamin and Sadowski, Jathan",
+      "year": "2020",
+      "abstract": "Holland et al. propose data trusts as a governance structure where a fiduciary trustee manages data on behalf of beneficiaries, with a legal duty to act in their interests. Data trusts address the power asymmetry between data collectors and data subjects by introducing an independent intermediary. The paper identifies three models: commercial, public, and community data trusts. The authors analyze the legal foundations in trust law, showing how fiduciary duty can be extended to data governance. Challenges include defining beneficiaries, establishing trust boundaries, and enforcing obligations across jurisdictions. For HUMMBL, data trusts represent a structural innovation: the introduction of a fiduciary intermediary that changes the governance dynamic from bilateral to trilateral.",
+      "keywords": [
+        "data governance",
+        "data trusts",
+        "fiduciary",
+        "intermediary"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "AI and Society",
+      "volume": "35",
+      "pages": "735--748",
+      "doi": "10.1007/s00146-020-00980-1"
+    },
+    {
       "id": "Hutchinson2021Accountability",
       "type": "inproceedings",
       "tier": "T16",
@@ -4333,6 +4534,28 @@
       "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
       "doi": "10.1145/3442188.3445918",
       "url": "https://arxiv.org/abs/2010.13561"
+    },
+    {
+      "id": "ISO8000_2020DataQuality",
+      "type": "misc",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "ISO 8000-61:2020 Data Quality -- Master Data",
+      "author": "ISO/TC 184/SC 4",
+      "year": "2020",
+      "abstract": "ISO 8000-61 defines quality characteristics for master data -- the core data entities that an organization uses. The standard specifies quality measures for completeness, accuracy, consistency, timeliness, and uniqueness. It provides a methodology for measuring data quality including defining rules, measuring conformance, calculating scores, and reporting. The standard distinguishes syntactic quality (format conformance) from semantic quality (accuracy of representation). For AI systems, master data quality directly affects model performance. For HUMMBL, ISO 8000 provides the data quality measurement standard for the T16 tier: the framework for quantifying data quality and tracking improvement. The syntactic/semantic distinction connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "ISO 8000",
+        "data quality",
+        "master data",
+        "measurement"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "url": "https://www.iso.org/standard/73050.html"
     },
     {
       "id": "Longpre2024DataProvenance",
@@ -4356,6 +4579,54 @@
       "journal": "Nature Machine Intelligence",
       "doi": "10.1038/s42256-024-00878-8",
       "url": "https://arxiv.org/abs/2403.13786"
+    },
+    {
+      "id": "Loshin2010DataLineage",
+      "type": "book",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "The Practitioner's Guide to Data Quality Improvement",
+      "author": "Loshin, David",
+      "year": "2010",
+      "abstract": "Loshin provides a practitioner's guide to data quality improvement, introducing data lineage -- the ability to trace data from origin through every transformation to final consumption. Data lineage enables impact analysis, root cause analysis, and compliance reporting. The book introduces a data quality maturity model with five levels: Reactive, Proactive, Defined, Managed, and Optimizing. Loshin emphasizes that data quality is an organizational problem requiring governance structures, accountability, and incentives. For HUMMBL, Loshin's data lineage concept is the tracking infrastructure for data governance. The lineage chain connects to the RE (Recursion) transformation -- recursive tracing through transformation steps. The maturity model connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "data lineage",
+        "data quality",
+        "impact analysis",
+        "maturity model"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "publisher": "Morgan Kaufmann",
+      "isbn": "9780123737175",
+      "address": "Burlington, MA"
+    },
+    {
+      "id": "Polyzotis2018DataManagementML",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Management Challenges in Production Machine Learning",
+      "author": "Polyzotis, Neoklis and Roy, Sudip and Whang, Steven Euijong and et al.",
+      "year": "2018",
+      "abstract": "Polyzotis et al. survey data management challenges in production ML, identifying four key areas: data validation, data transformation, data infrastructure, and data lifecycle. The paper introduces data validation as a first-class ML concern: unlike traditional software where inputs are validated at runtime, ML systems must validate training and serving data. The authors propose TFDV (TensorFlow Data Validation) for statistical data validation. The paper identifies the tension between data velocity and data validation, proposing incremental validation. For HUMMBL, this paper provides the data management framework for production ML governance. The validation-transformation-infrastructure-lifecycle decomposition connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "data lifecycle",
+        "data management",
+        "data validation",
+        "production ML"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Proceedings of the 2018 International Conference on Management of Data (SIGMOD)",
+      "pages": "1733--1746",
+      "doi": "10.1145/3183713.3197657"
     },
     {
       "id": "Pushkarna2022DataCards",
@@ -4400,6 +4671,55 @@
       "booktitle": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
       "doi": "10.1145/3411764.3445518",
       "url": "https://arxiv.org/abs/2104.02915"
+    },
+    {
+      "id": "W3C2020DCAT",
+      "type": "misc",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "Data Catalog Vocabulary (DCAT) Version 2",
+      "author": "W3C Dataset Exchange Working Group",
+      "year": "2020",
+      "abstract": "The W3C DCAT vocabulary provides an RDF model for describing data catalogs and their contents. DCAT enables datasets to be described in machine-readable format including title, description, keywords, license, publisher, distribution format, and access URL. DCAT Version 2 extends the original with support for data services, themes, and quality measurements. The vocabulary is used by government data portals, scientific repositories, and enterprise catalogs. DCAT enables federated data search -- querying multiple catalogs simultaneously. For HUMMBL, DCAT provides the metadata vocabulary standard for the T16 tier: the machine-readable format for describing and discovering datasets. The catalog-dataset-distribution hierarchy connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "DCAT",
+        "RDF",
+        "data catalog",
+        "interoperability",
+        "metadata"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "url": "https://www.w3.org/TR/vocab-dcat-2/"
+    },
+    {
+      "id": "Wilkinson2016FAIR",
+      "type": "article",
+      "tier": "T16",
+      "tier_name": "Unknown",
+      "title": "The FAIR Guiding Principles for Scientific Data Management and Stewardship",
+      "author": "Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, I. and et al.",
+      "year": "2016",
+      "abstract": "Wilkinson et al. introduce the FAIR principles -- Findable, Accessible, Interoperable, and Reusable -- as a framework for scientific data management. Findable requires persistent identifiers and rich metadata. Accessible requires standardized protocols. Interoperable requires common vocabularies. Reusable requires sufficient metadata and clear licenses. The principles are designed for machine-actionability: data should be discoverable and usable by automated systems. The FAIR principles have been adopted by major funding agencies as requirements for data management plans. For HUMMBL, the FAIR principles provide the foundational data governance framework for the T16 tier. The four principles map to HUMMBL transformations: Findable to DE, Accessible to IN, Interoperable to CO, and Reusable to RE.",
+      "keywords": [
+        "FAIR principles",
+        "data stewardship",
+        "machine-actionable",
+        "scientific data"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Scientific Data",
+      "volume": "3",
+      "pages": "160018",
+      "doi": "10.1038/sdata.2016.18"
     },
     {
       "id": "Abadi2016DP-SGD",

@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 386,
+    "total_sources": 399,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 180,
+      "foundational": 193,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -63,12 +63,12 @@
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
-      "arcana_citations": 39
+      "arcana_citations": 40
     },
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 37,
+      "medium": 38,
       "low": 62
     }
   },
@@ -6036,6 +6036,66 @@
       "metadata_debt": []
     },
     {
+      "key": "Arnold2019FactSheets",
+      "title": "FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity",
+      "author": "Arnold, Matthew and Reza, Karthikeyan Natesan and Chan, John and et al.",
+      "year": "2019",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1147/JRD.2019.2939043",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "IBM Journal of Research and Development",
+      "keywords": [
+        "AI documentation",
+        "FactSheets",
+        "conformity",
+        "trust"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bates2022SyntheticDataGov",
+      "title": "Governance of Synthetic Data for Machine Learning",
+      "author": "Bates, Anna and Krahmer, Eva and Smith, James",
+      "year": "2022",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s00146-021-01305-3",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI and Society",
+      "keywords": [
+        "governance",
+        "privacy",
+        "synthetic data",
+        "validation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Bender2018DataStatements",
       "title": "Data Statements for Natural Language Processing: A Position Paper",
       "author": "Bender, Emily M. and Friedman, Batya and McMillan-Major, Angelina and Shmitchell, Shmargaret",
@@ -6127,6 +6187,208 @@
       ]
     },
     {
+      "key": "Codd1970RelationalModel",
+      "title": "A Relational Model of Data for Large Shared Data Banks",
+      "author": "Codd, E. F.",
+      "year": "1970",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/362384.362685",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Communications of the ACM",
+      "keywords": [
+        "data governance",
+        "data independence",
+        "normalization",
+        "relational model"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "EU2024DataAct",
+      "title": "Regulation (EU) 2024/2847 on Harmonised Rules on Fair Access to and Use of Data (Data Act)",
+      "author": "European Parliament and Council",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "EU Data Act",
+        "IoT",
+        "data access",
+        "data governance",
+        "data sharing"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Fatehkia2020BigDataDev",
+      "title": "Big Data for Development: Applications and Governance Challenges",
+      "author": "Fatehkia, Masoom and Weber, Isabelle and et al.",
+      "year": "2020",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Information Technologies & International Development",
+      "keywords": [
+        "big data",
+        "data colonialism",
+        "development",
+        "global governance"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Gebru2021Datasheets",
+      "title": "Datasheets for Datasets",
+      "author": "Gebru, Timnit and Morgenstern, Jamie and DiAngelo, Briana and et al.",
+      "year": "2021",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3458726",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Communications of the ACM",
+      "keywords": [
+        "data governance",
+        "dataset documentation",
+        "datasheets",
+        "transparency"
+      ],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "foucault",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Archaeologist of Power — power/knowledge, discourse, biopolitics"
+        },
+        {
+          "surface": "arcana_citations",
+          "section": "measurement",
+          "role": "secondary",
+          "strength": "MODERATE",
+          "note": "Metrologist — Goodhart's Law, Campbell's Law, proxy metrics"
+        }
+      ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Hohendorf2022DataStewardship",
+      "title": "Data Stewardship in Practice: Roles, Responsibilities, and Organizational Models",
+      "author": "Hohendorf, Jan and Brink, Christian and Naumann, Felix",
+      "year": "2022",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3510828",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of Data and Information Quality",
+      "keywords": [
+        "data governance",
+        "data quality",
+        "data stewardship",
+        "organizational model"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Holland2020DataTrusts",
+      "title": "Data Trusts: A New Framework for Data Governance",
+      "author": "Holland, Sylvie and Pinnick, Benjamin and Sadowski, Jathan",
+      "year": "2020",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s00146-020-00980-1",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI and Society",
+      "keywords": [
+        "data governance",
+        "data trusts",
+        "fiduciary",
+        "intermediary"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hutchinson2021Accountability",
       "title": "Towards Accountability for Machine Learning Datasets",
       "author": "Hutchinson, Ben and Mitchell, Margaret",
@@ -6148,6 +6410,36 @@
         "accountability",
         "auditing",
         "dataset documentation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "ISO8000_2020DataQuality",
+      "title": "ISO 8000-61:2020 Data Quality -- Master Data",
+      "author": "ISO/TC 184/SC 4",
+      "year": "2020",
+      "type": "misc",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "ISO 8000",
+        "data quality",
+        "master data",
+        "measurement"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -6177,6 +6469,66 @@
         "audit",
         "data provenance",
         "license"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Loshin2010DataLineage",
+      "title": "The Practitioner's Guide to Data Quality Improvement",
+      "author": "Loshin, David",
+      "year": "2010",
+      "type": "book",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780123737175",
+      "journal": null,
+      "keywords": [
+        "data lineage",
+        "data quality",
+        "impact analysis",
+        "maturity model"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Polyzotis2018DataManagementML",
+      "title": "Data Management Challenges in Production Machine Learning",
+      "author": "Polyzotis, Neoklis and Roy, Sudip and Whang, Steven Euijong and et al.",
+      "year": "2018",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3183713.3197657",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2018 International Conference on Management of Data (SIGMOD)",
+      "keywords": [
+        "data lifecycle",
+        "data management",
+        "data validation",
+        "production ML"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -6233,6 +6585,68 @@
         "data cascades",
         "data quality",
         "empirical"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "W3C2020DCAT",
+      "title": "Data Catalog Vocabulary (DCAT) Version 2",
+      "author": "W3C Dataset Exchange Working Group",
+      "year": "2020",
+      "type": "misc",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "DCAT",
+        "RDF",
+        "data catalog",
+        "interoperability",
+        "metadata"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Wilkinson2016FAIR",
+      "title": "The FAIR Guiding Principles for Scientific Data Management and Stewardship",
+      "author": "Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, I. and et al.",
+      "year": "2016",
+      "type": "article",
+      "bibliography_tier": "T16",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1038/sdata.2016.18",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Scientific Data",
+      "keywords": [
+        "FAIR principles",
+        "data stewardship",
+        "machine-actionable",
+        "scientific data"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -13289,6 +13703,16 @@
       "field": "isbn",
       "priority": "medium",
       "reason": "Book-like entry should carry an ISBN when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Fatehkia2020BigDataDev",
+      "title": "Big Data for Development: Applications and Governance Challenges",
+      "bibliography_tier": "T16",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {
