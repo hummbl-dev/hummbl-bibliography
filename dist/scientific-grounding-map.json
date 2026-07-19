@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 381,
+    "total_sources": 386,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 175,
+      "foundational": 180,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -68,7 +68,7 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 36,
+      "medium": 37,
       "low": 62
     }
   },
@@ -5413,6 +5413,42 @@
       ]
     },
     {
+      "key": "Berry2024AIReadinessIndex",
+      "title": "The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption",
+      "author": "Berry, Michael and Westfall, Leslie and Aziz, Ammar",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of Organizational Computing and Electronic Commerce",
+      "keywords": [
+        "AI readiness",
+        "adoption",
+        "assessment",
+        "organizational maturity"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
       "key": "Brynjolfsson2023Maturity",
       "title": "Generative AI at Work",
       "author": "Brynjolfsson, Erik and Li, Danielle and Raymond, Lindsey",
@@ -5592,6 +5628,36 @@
       ]
     },
     {
+      "key": "Google2024AIPrinciplesMaturity",
+      "title": "Google AI Principles: Responsible AI Maturity Model",
+      "author": "Google Responsible AI Team",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Google AI principles",
+        "five levels",
+        "maturity model",
+        "responsible AI"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hogarth2023FrontierTaskforce",
       "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
       "author": "Hogarth, Ian",
@@ -5629,6 +5695,36 @@
       ]
     },
     {
+      "key": "ISO42001_2023",
+      "title": "ISO/IEC 42001:2023 Artificial Intelligence Management System",
+      "author": "ISO/IEC JTC 1/SC 42",
+      "year": "2023",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI management system",
+        "ISO 42001",
+        "certification",
+        "governance maturity"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Metaxa2024NISTMM",
       "title": "Evolving AI Risk Management: A Maturity Model based on the NIST AI Risk Management Framework",
       "author": "Various",
@@ -5651,6 +5747,66 @@
         "NIST AI RMF",
         "maturity model",
         "risk management"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Microsoft2024AIMaturity",
+      "title": "Microsoft AI Maturity Model: A Framework for Organizational AI Capability",
+      "author": "Microsoft Responsible AI Standard",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Microsoft AI",
+        "capability assessment",
+        "maturity model",
+        "organizational"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "OECD2024AIClassification",
+      "title": "OECD Framework for the Classification of AI Systems",
+      "author": "OECD",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T15",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI classification",
+        "OECD",
+        "governance framework",
+        "risk tiering"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -13017,6 +13173,16 @@
       "title": "Claude 3.5 Model Family: Sonnet and Haiku",
       "bibliography_tier": "T13",
       "evidence_tier": "emerging",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Berry2024AIReadinessIndex",
+      "title": "The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption",
+      "bibliography_tier": "T15",
+      "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
