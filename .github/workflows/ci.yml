@@ -22,7 +22,7 @@ permissions:
 jobs:
   build-and-test:
     name: Lint / Test / Audit (Node ${{ matrix.node-version }})
-    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || fromJSON('["self-hosted","Linux","X64","wsl","bibliography"]') }}
+    runs-on: [self-hosted, Linux, X64, wsl, bibliography]
     strategy:
       matrix:
         node-version: [20, 24]
@@ -82,7 +82,7 @@ jobs:
 
   codeql:
     name: CodeQL Static Analysis
-    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || fromJSON('["self-hosted","Linux","X64","wsl","bibliography"]') }}
+    runs-on: [self-hosted, Linux, X64, wsl, bibliography]
     permissions:
       security-events: write
     steps:
