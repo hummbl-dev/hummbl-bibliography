@@ -22,7 +22,7 @@ jobs:
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
     steps:
       - name: Evaluate and squash-merge eligible PRs
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
             const DEPENDABOT_LOGIN = "dependabot[bot]";
@@ -56,7 +56,7 @@ jobs:
                 const previous = checks.get(run.name);
                 if (
                   !previous ||
-                  new Date(run.completed_at || 0) > new Date(previous.completed_at || 0)
+                  run.id > previous.id
                 ) {
                   checks.set(run.name, run);
                 }
@@ -127,6 +127,22 @@ jobs:
               });
               if (humanChangesRequested) {
                 throw new Error("A human reviewer requested changes.");
+              }
+
+              const authorLogin = pr.user?.login?.toLowerCase() || "";
+              const currentHeadApproved = reviews.some((review) => {
+                const reviewerLogin = review.user?.login?.toLowerCase() || "";
+                return (
+                  reviewerLogin &&
+                  reviewerLogin !== authorLogin &&
+                  review.state === "APPROVED" &&
+                  review.commit_id === pr.head.sha
+                );
+              });
+              if (!currentHeadApproved) {
+                throw new Error(
+                  "A non-author approval for the current head is required."
+                );
               }
             };
 
