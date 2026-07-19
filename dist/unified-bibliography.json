@@ -9236,6 +9236,56 @@
       "note": "arXiv preprint; not peer-reviewed. Accepted to EuroSys 2027 per preprint. Provenance: arXiv self-upload."
     },
     {
+      "id": "Christian2020Alignment",
+      "type": "book",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "The Alignment Problem: Machine Learning and Where It Can Go Wrong",
+      "author": "Christian, Brian",
+      "year": "2020",
+      "abstract": "Christian surveys the alignment problem — the challenge of ensuring that machine learning systems pursue the goals their designers intend rather than misaligned proxies. The book traces alignment failures from early reward hacking to contemporary concerns about large language models, covering inverse reinforcement learning, preference learning, and human feedback approaches. Christian frames alignment as fundamentally a problem of human values, cognitive science, and philosophy, not just engineering, connecting technical ML research to deeper questions about what we want systems to do and how we communicate intent. Grounds HUMMBL Inversion (IN), Perspective (P), and Decomposition (DE) operators in the alignment literature.",
+      "keywords": [
+        "alignment",
+        "inverse reinforcement learning",
+        "machine learning",
+        "reward hacking",
+        "values"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "W.W. Norton and Company",
+      "isbn": "9780393635793",
+      "address": "New York, NY"
+    },
+    {
+      "id": "Crawford2021AtlasAI",
+      "type": "book",
+      "tier": "T7",
+      "tier_name": "Emerging",
+      "title": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence",
+      "author": "Crawford, Kate",
+      "year": "2021",
+      "abstract": "Crawford maps the hidden infrastructure of artificial intelligence, revealing the material, labor, and environmental costs that underlie AI systems. From lithium mines in the Atacama to data annotation work camps in Kenya, she traces the supply chains that make AI possible, challenging the framing of AI as immaterial and autonomous. The book argues that AI is neither artificial nor intelligent in isolation — it is deeply embedded in human labor, environmental extraction, and political power structures. This inversion of the standard AI narrative grounds HUMMBL Perspective (P), Inversion (IN), and Decomposition (DE) operators in a critical materialist analysis of AI.",
+      "keywords": [
+        "AI ethics",
+        "environment",
+        "labor",
+        "material infrastructure",
+        "power"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "Yale University Press",
+      "isbn": "9780300209570",
+      "address": "New Haven, CT"
+    },
+    {
       "id": "Du2023Debate",
       "type": "inproceedings",
       "tier": "T7",

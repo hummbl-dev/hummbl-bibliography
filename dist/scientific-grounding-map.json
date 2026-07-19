@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 458,
+    "total_sources": 460,
     "thematic_tiers": {
       "T1": 47,
       "T2": 26,
@@ -46,7 +46,7 @@
       "T4": 20,
       "T5": 22,
       "T6": 20,
-      "T7": 26,
+      "T7": 28,
       "T8": 21,
       "T9": 21,
       "T10": 22,
@@ -59,7 +59,7 @@
       "empirical": 71,
       "applied": 45,
       "governance": 20,
-      "emerging": 82
+      "emerging": 84
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
@@ -12808,6 +12808,68 @@
         "provenance",
         "semantic transactions",
         "transaction boundary"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Christian2020Alignment",
+      "title": "The Alignment Problem: Machine Learning and Where It Can Go Wrong",
+      "author": "Christian, Brian",
+      "year": "2020",
+      "type": "book",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780393635793",
+      "journal": null,
+      "keywords": [
+        "alignment",
+        "inverse reinforcement learning",
+        "machine learning",
+        "reward hacking",
+        "values"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Crawford2021AtlasAI",
+      "title": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence",
+      "author": "Crawford, Kate",
+      "year": "2021",
+      "type": "book",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780300209570",
+      "journal": null,
+      "keywords": [
+        "AI ethics",
+        "environment",
+        "labor",
+        "material infrastructure",
+        "power"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
