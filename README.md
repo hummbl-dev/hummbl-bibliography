@@ -1,14 +1,14 @@
 # HUMMBL Bibliography
 
-![Total Entries](https://img.shields.io/badge/entries-321-blue)
-![DOI Coverage](https://img.shields.io/badge/DOIs-58%25-yellowgreen)
-![ISBN Coverage](https://img.shields.io/badge/ISBNs-22%25-yellow)
+![Total Entries](https://img.shields.io/badge/entries-353-blue)
+![DOI Coverage](https://img.shields.io/badge/DOIs-65%25-yellowgreen)
+![ISBN Coverage](https://img.shields.io/badge/ISBNs-24%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
 
-A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 321 curated academic and practitioner works across 19 canonical BibTeX files, including the original 13 thematic tiers, mapped to 6 cognitive transformations.
+A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 353 curated academic and practitioner works across 19 canonical BibTeX files, including the original 13 thematic tiers, mapped to 6 cognitive transformations.
 
 Learn more at [hummbl.io](https://hummbl.io).
 
