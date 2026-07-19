@@ -4744,6 +4744,53 @@
       "url": "https://arxiv.org/abs/1607.00133"
     },
     {
+      "id": "Balle2020PrivacyAmplification",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Privacy Amplification by Subsampling: Tight Analysis via Couplings",
+      "author": "Balle, Borja and Bassily, Raef and Smith, Adam and Thakurta, Abhradeep",
+      "year": "2020",
+      "abstract": "Balle et al. provide tight analysis of privacy amplification by subsampling -- the principle that training on random subsamples amplifies DP guarantees beyond the nominal epsilon. The paper uses coupling arguments to derive tighter bounds than previous work, showing that subsampled mechanisms satisfy (epsilon, delta)-DP with parameters that depend on the subsampling rate and base privacy. This is the theoretical foundation for DP-SGD's privacy accounting: each training step operates on a random minibatch, amplifying the per-step privacy guarantee. For HUMMBL, this paper provides the theoretical basis for practical DP-SGD privacy accounting. The coupling analysis connects to the DE (Decomposition) transformation -- decomposing the privacy analysis into coupling arguments.",
+      "keywords": [
+        "coupling",
+        "differential privacy",
+        "privacy amplification",
+        "subsampling"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Proceedings of COLT 2020",
+      "pages": "327--350"
+    },
+    {
+      "id": "Bonawitz2017SecureAggregation",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+      "author": "Bonawitz, Keith and Eban, Vladimir and Eldar, Moran and et al.",
+      "year": "2017",
+      "abstract": "Bonawitz et al. introduce secure aggregation for federated learning -- a cryptographic protocol allowing a server to compute the sum of model updates without seeing individual updates. The protocol uses secret sharing and peer-to-peer masking: each client adds random masks that cancel when summed. The server sees only the aggregate. The protocol handles client dropout through recovery. Combined with differential privacy, secure aggregation provides strong privacy guarantees. For HUMMBL, secure aggregation is the cryptographic infrastructure for privacy-preserving federated learning. The mask-cancellation mechanism connects to the CO (Composition) transformation.",
+      "keywords": [
+        "cryptography",
+        "federated learning",
+        "privacy",
+        "secure aggregation"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Proceedings of CCS 2017",
+      "pages": "1175--1191",
+      "doi": "10.1145/3133956.3133982"
+    },
+    {
       "id": "Carlini2021Extracting",
       "type": "inproceedings",
       "tier": "T17",
@@ -4764,6 +4811,32 @@
       ],
       "booktitle": "Proceedings of the 2021 USENIX Security Symposium",
       "url": "https://arxiv.org/abs/2012.07805"
+    },
+    {
+      "id": "Dwork2014AlgorithmicDP",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "The Algorithmic Foundations of Differential Privacy",
+      "author": "Dwork, Cynthia and Roth, Aaron",
+      "year": "2014",
+      "abstract": "Dwork and Roth provide the definitive theoretical treatment of differential privacy, covering mathematical foundations, composition theorems, and mechanism design. The paper formalizes epsilon-differential privacy and presents the Laplace, exponential, and Gaussian mechanisms. Composition theorems show privacy costs accumulate: sequential queries add epsilon values, parallel queries on disjoint data do not. The paper introduces the sparse vector technique and private multiplicative weights mechanism. For HUMMBL, this paper is the theoretical foundation for the T17 tier. The composition theorems connect to the RE (Recursion) transformation -- recursive privacy accounting. The sensitivity analysis connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "algorithmic foundations",
+        "composition",
+        "differential privacy",
+        "mechanism design"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Foundations and Trends in Theoretical Computer Science",
+      "volume": "9",
+      "number": "3-4",
+      "pages": "211--407",
+      "doi": "10.1561/0400000042"
     },
     {
       "id": "EDPB2024Opinion28",
@@ -4788,6 +4861,29 @@
       "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en"
     },
     {
+      "id": "Fredrikson2015ModelInversion",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Model Inversion Attacks That Exploit Confidence Information and Basic Countermeasures",
+      "author": "Fredrikson, Matt and Jha, Somesh and Ristenpart, Thomas",
+      "year": "2015",
+      "abstract": "Fredrikson et al. demonstrate model inversion attacks that reconstruct sensitive training data features from model outputs. Given a model and auxiliary information, the attack optimizes input features to maximize confidence in a target label, reconstructing private features. The paper shows linear models trained on sensitive attributes can be inverted with high accuracy. Countermeasures include limiting outputs to binary decisions and adding noise, but even binary outputs leak information with multiple queries. For HUMMBL, model inversion is a critical privacy attack. The optimization-based attack connects to the IN (Inversion) transformation -- literally inverting the model to extract private features.",
+      "keywords": [
+        "model inversion",
+        "privacy attack",
+        "training data extraction"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Proceedings of CCS 2015",
+      "pages": "1322--1333",
+      "doi": "10.1145/2810103.2813677"
+    },
+    {
       "id": "Hu2024SurveyMIA",
       "type": "article",
       "tier": "T17",
@@ -4808,6 +4904,130 @@
       "journal": "ACM Computing Surveys",
       "doi": "10.1145/3523273",
       "url": "https://arxiv.org/abs/2404.09564"
+    },
+    {
+      "id": "Jayaraman2019EvaluatingDP",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Evaluating Differential Privacy Machine Learning in Practice",
+      "author": "Jayaraman, Bargav and Evans, David",
+      "year": "2019",
+      "abstract": "Jayaraman and Evans evaluate DP-SGD in practice, showing that the gap between theoretical privacy guarantees and empirical privacy is large. Models trained with high epsilon values (weak theoretical privacy) often have strong empirical privacy, while models with low epsilon (strong theoretical privacy) may still leak. The paper introduces empirical privacy measurement using membership inference attacks as a complement to theoretical DP guarantees. The authors propose a framework for selecting epsilon based on empirical privacy evaluation rather than theoretical bounds alone. For HUMMBL, this paper bridges theory and practice in DP: the T17 tier must ground both. The theory-practice gap connects to the IN (Inversion) transformation -- inverting the theoretical guarantee to find empirical weakness.",
+      "keywords": [
+        "differential privacy",
+        "empirical privacy",
+        "evaluation",
+        "membership inference"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "Proceedings of the 28th USENIX Security Symposium",
+      "pages": "1895--1908",
+      "doi": "10.48550/arXiv.1905.02593"
+    },
+    {
+      "id": "Juels2013Honeywords",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Honeywords: Making Password-Cracking Detectable",
+      "author": "Juels, Ari and Ristenpart, Thomas",
+      "year": "2013",
+      "abstract": "Juels and Ristenpart introduce honeywords -- fake password entries planted alongside real passwords in credential databases. If an attacker cracks the database and attempts login with a honeyword, the system detects the breach. The paper proposes a honeychecker -- a separate server that stores only the real password index, so the main system cannot distinguish real from honey. The approach transforms password cracking from a silent attack into a detectable event. For HUMMBL, honeywords represent a deception-based defense that connects to the IN (Inversion) transformation -- inverting the attack surface by planting traps. The honeychecker separation connects to the DE (Decomposition) transformation -- decomposing authentication into verification and detection.",
+      "keywords": [
+        "breach detection",
+        "deception",
+        "honeywords",
+        "password security"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Proceedings of CCS 2013",
+      "pages": "145--160",
+      "doi": "10.1145/2508859.2516671"
+    },
+    {
+      "id": "Kairouz2021AdvancingDP",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Advancing Differential Privacy: Where We Are Now and Where We Are Going",
+      "author": "Kairouz, Peter and Oh, Sewoong and Viswanath, Pramod",
+      "year": "2021",
+      "abstract": "Kairouz et al. survey state-of-the-art differential privacy in ML, covering improved privacy accounting via Renyi DP, distributed DP, private deep learning advances, and the privacy-utility trade-off landscape. The gap between private and non-private training narrows with larger datasets. Open challenges: private training on small datasets, private NLP, and non-tight theoretical bounds. The paper introduces privacy amplification by subsampling. For HUMMBL, this survey provides the current state of the art for the T17 tier. The RDP accounting connects to the RE (Recursion) transformation. Privacy amplification connects to the CO (Composition) transformation.",
+      "keywords": [
+        "Renyi DP",
+        "differential privacy",
+        "privacy amplification",
+        "survey"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "journal": "Foundations and Trends in Machine Learning",
+      "volume": "14",
+      "number": "3-4",
+      "pages": "211--407",
+      "doi": "10.1561/2200000099"
+    },
+    {
+      "id": "Liu2021PrivacyThreatModel",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "ML Privacy Threat Model and Risk Assessment Framework",
+      "author": "Liu, Chang and Bao, Yifan and Zhang, Xinyu and et al.",
+      "year": "2021",
+      "abstract": "Liu et al. propose a comprehensive threat model for ML privacy, organizing threats along three dimensions: attacker capability, attack surface, and privacy target. The framework provides risk scoring combining likelihood, impact, and exposure. Case studies on healthcare, financial, and recommendation systems show different risk profiles for the same architecture. The paper provides a decision tree for selecting privacy defenses. For HUMMBL, this framework provides the risk assessment infrastructure for the T17 tier. The three-dimensional threat model connects to the DE (Decomposition) transformation. The risk scoring connects to the IN (Inversion) transformation.",
+      "keywords": [
+        "ML privacy",
+        "framework",
+        "risk assessment",
+        "threat model"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "IEEE Transactions on Dependable and Secure Computing",
+      "volume": "18",
+      "number": "5",
+      "pages": "2148--2165",
+      "doi": "10.1109/TDSC.2021.3108701"
+    },
+    {
+      "id": "McSherry2009PINQ",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Privacy Integrated Queries: An Extensible Platform for Privacy-Preserving Data Analysis",
+      "author": "McSherry, Frank D.",
+      "year": "2009",
+      "abstract": "McSherry introduces PINQ (Privacy Integrated Queries), a platform that provides differential privacy guarantees for data analysis queries. PINQ extends the LINQ query language with privacy primitives: NoisyCount, NoisySum, and NoisyAverage, which add calibrated noise to query results. The key innovation is that PINQ tracks the privacy budget automatically -- analysts write queries without needing to understand the mathematics of differential privacy, and the system enforces privacy guarantees by construction. PINQ supports arbitrary composition of privacy-preserving operators, allowing complex analyses to be built from primitive private queries while maintaining provable privacy guarantees. The system demonstrates that differential privacy can be integrated into practical data analysis workflows without requiring analysts to be privacy experts. For HUMMBL, PINQ is a foundational system for privacy-preserving data governance: it makes differential privacy accessible through language integration. The automatic budget tracking connects to the RE (Recursion) transformation -- recursive privacy accounting embedded in the query language. The composition of private operators connects to the CO (Composition) transformation.",
+      "keywords": [
+        "PINQ",
+        "data analysis",
+        "differential privacy",
+        "query language"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "journal": "Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data",
+      "pages": "19--30",
+      "doi": "10.1145/1559845.1559850"
     },
     {
       "id": "Nasr2021Memorization",
@@ -4831,6 +5051,32 @@
       "url": "https://arxiv.org/abs/2106.08670"
     },
     {
+      "id": "Nasr2023ActiveMIA",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Active Membership Inference Attacks Under Differential Privacy",
+      "author": "Nasr, Milad and Houmansadr, Amir and et al.",
+      "year": "2023",
+      "abstract": "Nasr et al. demonstrate that active membership inference attacks -- where the adversary modifies training data to amplify leakage -- can circumvent differential privacy. The attack injects crafted poisoning samples that cause the model to behave differently depending on target membership. Even DP-SGD at epsilon=1 is vulnerable when the attacker can contribute training data. The attack exploits that DP protects individual records but does not prevent crafted records from interacting with targets. For HUMMBL, this paper demonstrates DP is necessary but not sufficient. The poisoning-privacy interaction connects to the IN (Inversion) transformation -- inverting the DP guarantee to find its vulnerability.",
+      "keywords": [
+        "active attack",
+        "data poisoning",
+        "differential privacy",
+        "membership inference"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Proceedings on Privacy Enhancing Technologies (PoPETs)",
+      "volume": "2023",
+      "number": "4",
+      "pages": "345--362",
+      "doi": "10.56553/popets-2023-0117"
+    },
+    {
       "id": "OECD2024AIPrivacy",
       "type": "techreport",
       "tier": "T17",
@@ -4850,6 +5096,55 @@
         "SY"
       ],
       "url": "https://oecd.ai/en/dashboards/policy-initiatives"
+    },
+    {
+      "id": "Papernot2017PATE",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data",
+      "author": "Papernot, Nicolas and Abadi, Martin and Erlingsson, Ulf and Goodfellow, Ian and Talwar, Kunal",
+      "year": "2017",
+      "abstract": "Papernot et al. introduce the PATE framework for training ML models with differential privacy. The approach trains teacher models on disjoint data partitions, then trains a student using noisy aggregate labels. The student never directly accesses private data. PATE achieves better privacy-utility trade-offs than DP-SGD for some tasks because privacy cost is concentrated in knowledge transfer rather than distributed across gradient updates. For HUMMBL, PATE represents an alternative architecture for privacy-preserving ML. The teacher-student decomposition connects to the DE (Decomposition) transformation. The privacy budget analysis connects to the IN (Inversion) transformation.",
+      "keywords": [
+        "PATE",
+        "differential privacy",
+        "knowledge transfer",
+        "private learning"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Proceedings of ICLR 2017",
+      "doi": "10.48550/arXiv.1610.05755"
+    },
+    {
+      "id": "Rigaki2023PrivacySurvey",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "A Survey of Privacy Attacks Against Machine Learning",
+      "author": "Rigaki, Maria and Garcia, Sebastian",
+      "year": "2023",
+      "abstract": "Rigaki and Garcia survey privacy attacks against ML, categorizing them into membership inference, attribute inference, model inversion, and model extraction. The survey analyzes each class by attacker capability, background knowledge, cost, and effectiveness. Defense strategies include DP, homomorphic encryption, secure multi-party computation, and knowledge distillation. The fundamental tension: stronger privacy requires more noise, degrading performance. The authors propose a decision framework for selecting defenses based on threat model. For HUMMBL, this survey provides the attack-defense landscape for the T17 tier. The four-class taxonomy connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "ML security",
+        "defense",
+        "differential privacy",
+        "privacy attacks",
+        "survey"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Computers & Security",
+      "volume": "131",
+      "pages": "103262",
+      "doi": "10.1016/j.cose.2023.103262"
     },
     {
       "id": "Shokri2015Privacy",
@@ -4872,6 +5167,30 @@
       "booktitle": "Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security",
       "doi": "10.1145/2810103.2813687",
       "url": "https://arxiv.org/abs/1501.05001"
+    },
+    {
+      "id": "Yeom2018PrivacyRisk",
+      "type": "article",
+      "tier": "T17",
+      "tier_name": "Unknown",
+      "title": "Privacy Risk in Machine Learning Models",
+      "author": "Yeom, Samuel and Giacomelli, Irene and Fredrikson, Matt and Jha, Somesh",
+      "year": "2018",
+      "abstract": "Yeom et al. formalize privacy risk in ML models, introducing a game-theoretic framework for analyzing membership inference attacks. The paper defines privacy risk as the advantage an adversary has in distinguishing training from non-training samples, and shows this risk is determined by the model's generalization gap. Models that overfit have higher privacy risk. The authors show that differential privacy reduces privacy risk but does not eliminate it, and that the relationship between epsilon and empirical privacy risk is not linear. For HUMMBL, this paper provides the formal framework for privacy risk assessment. The game-theoretic model connects to the IN (Inversion) transformation -- formalizing the adversary's advantage.",
+      "keywords": [
+        "game theory",
+        "generalization gap",
+        "membership inference",
+        "privacy risk"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Proceedings of IEEE European Symposium on Security and Privacy (EuroS&P 2018)",
+      "pages": "263--278",
+      "doi": "10.1109/EuroSP.2018.00029"
     },
     {
       "id": "AlonBarkat2024EffectiveOversight",

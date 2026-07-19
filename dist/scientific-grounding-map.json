@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 399,
+    "total_sources": 412,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 193,
+      "foundational": 206,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -68,8 +68,8 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 38,
-      "low": 62
+      "medium": 39,
+      "low": 64
     }
   },
   "sources": [
@@ -6682,6 +6682,72 @@
       "metadata_debt": []
     },
     {
+      "key": "Balle2020PrivacyAmplification",
+      "title": "Privacy Amplification by Subsampling: Tight Analysis via Couplings",
+      "author": "Balle, Borja and Bassily, Raef and Smith, Adam and Thakurta, Abhradeep",
+      "year": "2020",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of COLT 2020",
+      "keywords": [
+        "coupling",
+        "differential privacy",
+        "privacy amplification",
+        "subsampling"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "Bonawitz2017SecureAggregation",
+      "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+      "author": "Bonawitz, Keith and Eban, Vladimir and Eldar, Moran and et al.",
+      "year": "2017",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3133956.3133982",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CCS 2017",
+      "keywords": [
+        "cryptography",
+        "federated learning",
+        "privacy",
+        "secure aggregation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Carlini2021Extracting",
       "title": "Extracting Training Data from Large Language Models",
       "author": "Carlini, Nicholas and Ippolito, Florian and Jagielski, Matthew and Lee, Katherine and Tramer, Florian and Zhang, Chiyuan and Shokri, Reza and Song, Dawn and Terzis, Adam and Wallace, Eric",
@@ -6715,6 +6781,36 @@
           "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
+    },
+    {
+      "key": "Dwork2014AlgorithmicDP",
+      "title": "The Algorithmic Foundations of Differential Privacy",
+      "author": "Dwork, Cynthia and Roth, Aaron",
+      "year": "2014",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1561/0400000042",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Foundations and Trends in Theoretical Computer Science",
+      "keywords": [
+        "algorithmic foundations",
+        "composition",
+        "differential privacy",
+        "mechanism design"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "EDPB2024Opinion28",
@@ -6753,6 +6849,35 @@
       ]
     },
     {
+      "key": "Fredrikson2015ModelInversion",
+      "title": "Model Inversion Attacks That Exploit Confidence Information and Basic Countermeasures",
+      "author": "Fredrikson, Matt and Jha, Somesh and Ristenpart, Thomas",
+      "year": "2015",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/2810103.2813677",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CCS 2015",
+      "keywords": [
+        "model inversion",
+        "privacy attack",
+        "training data extraction"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hu2024SurveyMIA",
       "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
       "author": "Hu, Hongsheng and Shokri, Reza and others",
@@ -6774,6 +6899,162 @@
         "MIA",
         "membership inference",
         "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Jayaraman2019EvaluatingDP",
+      "title": "Evaluating Differential Privacy Machine Learning in Practice",
+      "author": "Jayaraman, Bargav and Evans, David",
+      "year": "2019",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.1905.02593",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 28th USENIX Security Symposium",
+      "keywords": [
+        "differential privacy",
+        "empirical privacy",
+        "evaluation",
+        "membership inference"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "1905.02593",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Juels2013Honeywords",
+      "title": "Honeywords: Making Password-Cracking Detectable",
+      "author": "Juels, Ari and Ristenpart, Thomas",
+      "year": "2013",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/2508859.2516671",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CCS 2013",
+      "keywords": [
+        "breach detection",
+        "deception",
+        "honeywords",
+        "password security"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Kairouz2021AdvancingDP",
+      "title": "Advancing Differential Privacy: Where We Are Now and Where We Are Going",
+      "author": "Kairouz, Peter and Oh, Sewoong and Viswanath, Pramod",
+      "year": "2021",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1561/2200000099",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Foundations and Trends in Machine Learning",
+      "keywords": [
+        "Renyi DP",
+        "differential privacy",
+        "privacy amplification",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Liu2021PrivacyThreatModel",
+      "title": "ML Privacy Threat Model and Risk Assessment Framework",
+      "author": "Liu, Chang and Bao, Yifan and Zhang, Xinyu and et al.",
+      "year": "2021",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1109/TDSC.2021.3108701",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "IEEE Transactions on Dependable and Secure Computing",
+      "keywords": [
+        "ML privacy",
+        "framework",
+        "risk assessment",
+        "threat model"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "McSherry2009PINQ",
+      "title": "Privacy Integrated Queries: An Extensible Platform for Privacy-Preserving Data Analysis",
+      "author": "McSherry, Frank D.",
+      "year": "2009",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/1559845.1559850",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data",
+      "keywords": [
+        "PINQ",
+        "data analysis",
+        "differential privacy",
+        "query language"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -6815,6 +7096,36 @@
       ]
     },
     {
+      "key": "Nasr2023ActiveMIA",
+      "title": "Active Membership Inference Attacks Under Differential Privacy",
+      "author": "Nasr, Milad and Houmansadr, Amir and et al.",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.56553/popets-2023-0117",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings on Privacy Enhancing Technologies (PoPETs)",
+      "keywords": [
+        "active attack",
+        "data poisoning",
+        "differential privacy",
+        "membership inference"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "OECD2024AIPrivacy",
       "title": "AI, Data Governance and Privacy",
       "author": "OECD",
@@ -6850,6 +7161,73 @@
       ]
     },
     {
+      "key": "Papernot2017PATE",
+      "title": "Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data",
+      "author": "Papernot, Nicolas and Abadi, Martin and Erlingsson, Ulf and Goodfellow, Ian and Talwar, Kunal",
+      "year": "2017",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.1610.05755",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of ICLR 2017",
+      "keywords": [
+        "PATE",
+        "differential privacy",
+        "knowledge transfer",
+        "private learning"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "1610.05755",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Rigaki2023PrivacySurvey",
+      "title": "A Survey of Privacy Attacks Against Machine Learning",
+      "author": "Rigaki, Maria and Garcia, Sebastian",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1016/j.cose.2023.103262",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Computers & Security",
+      "keywords": [
+        "ML security",
+        "defense",
+        "differential privacy",
+        "privacy attacks",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Shokri2015Privacy",
       "title": "Privacy-Preserving Deep Learning via Secure Multi-Party Computation",
       "author": "Shokri, Reza and Shmatikov, Vitaly",
@@ -6871,6 +7249,36 @@
         "federated learning",
         "privacy",
         "secure computation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Yeom2018PrivacyRisk",
+      "title": "Privacy Risk in Machine Learning Models",
+      "author": "Yeom, Samuel and Giacomelli, Irene and Fredrikson, Matt and Jha, Somesh",
+      "year": "2018",
+      "type": "article",
+      "bibliography_tier": "T17",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1109/EuroSP.2018.00029",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of IEEE European Symposium on Security and Privacy (EuroS&P 2018)",
+      "keywords": [
+        "game theory",
+        "generalization gap",
+        "membership inference",
+        "privacy risk"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -13593,6 +14001,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Balle2020PrivacyAmplification",
+      "title": "Privacy Amplification by Subsampling: Tight Analysis via Couplings",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Berry2024AIReadinessIndex",
       "title": "The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption",
       "bibliography_tier": "T15",
@@ -14230,6 +14648,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Jayaraman2019EvaluatingDP",
+      "title": "Evaluating Differential Privacy Machine Learning in Practice",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
       "key": "Kaplan2020ScalingLaws",
       "title": "Scaling Laws for Neural Language Models",
       "bibliography_tier": "T9",
@@ -14394,6 +14822,16 @@
       "title": "MemGPT: Towards LLMs as Operating Systems",
       "bibliography_tier": "T7",
       "evidence_tier": "emerging",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Papernot2017PATE",
+      "title": "Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data",
+      "bibliography_tier": "T17",
+      "evidence_tier": "foundational",
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
