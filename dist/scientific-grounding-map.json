@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 373,
+    "total_sources": 381,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 167,
+      "foundational": 175,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -68,8 +68,8 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 35,
-      "low": 60
+      "medium": 36,
+      "low": 62
     }
   },
   "sources": [
@@ -4720,6 +4720,74 @@
       "metadata_debt": []
     },
     {
+      "key": "Bui2023ProvenanceEvaluation",
+      "title": "A Unified Framework for Content Provenance Evaluation",
+      "author": "Bui, Tri and Agarwal, Shishir and Yu, Ning and Lyu, Minjun",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops",
+      "keywords": [
+        "benchmark",
+        "fingerprinting",
+        "provenance evaluation",
+        "trade-off",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
+      "key": "C2PA2024Spec",
+      "title": "C2PA Specification Version 2.1",
+      "author": "C2PA Technical Working Group",
+      "year": "2024",
+      "type": "misc",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "C2PA",
+        "content credentials",
+        "content provenance",
+        "cryptographic manifest",
+        "media authenticity"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Chesney2019DeepFakes",
       "title": "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security",
       "author": "Chesney, Robert and Citron, Danielle Keats",
@@ -4911,6 +4979,110 @@
       "metadata_debt": []
     },
     {
+      "key": "Fernandez2023StableSignature",
+      "title": "The Stable Signature: Rooting Watermarks in Latent Diffusion Models",
+      "author": "Fernandez, Pierre and Couairon, Guillaume and Jegou, Herve and Furon, Teddy and Vincent, Matthijs",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2303.15435",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Advances in Neural Information Processing Systems (NeurIPS 2023)",
+      "keywords": [
+        "latent diffusion",
+        "model watermarking",
+        "provenance",
+        "stable signature",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2303.15435",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Fernandez2023SynthIDImage",
+      "title": "Three Bricks to Consolidate Watermarks in the Era of Diffusion Models",
+      "author": "Fernandez, Pierre and Couairon, Guillaume and Furon, Teddy and Jegou, Herve",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2306.07654",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "arXiv preprint arXiv:2306.07654",
+      "keywords": [
+        "SynthID",
+        "diffusion models",
+        "latent space",
+        "provenance",
+        "watermarking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2306.07654",
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Guarnera2023DeepfakeDetection",
+      "title": "Fighting Deepfakes by Detecting GAN Fingerprints",
+      "author": "Guarnera, Luca and Giudice, Oliver and Battiato, Sebastiano",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1109/TIFS.2023.3290938",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "IEEE Transactions on Information Forensics and Security",
+      "keywords": [
+        "GAN fingerprint",
+        "deepfake detection",
+        "forensic attribution",
+        "provenance"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Kirchenbauer2023Watermark",
       "title": "A Watermark for Large Language Models",
       "author": "Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Katz, Jonathan and Miers, Ian and Goldstein, Tom",
@@ -5077,6 +5249,98 @@
         "overpromise",
         "policy",
         "provenance"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Saberi2024DeepfakeRegulation",
+      "title": "Deepfakes, Generative AI, and the Need for Regulatory Response",
+      "author": "Saberi, Ali and Zaman, Roshan and Khan, Niamatullah",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s43681-024-00468-2",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI and Ethics",
+      "keywords": [
+        "AI Act",
+        "content moderation",
+        "deepfake regulation",
+        "provenance law",
+        "synthetic media"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "W3C2023VerifiableCredentials",
+      "title": "Verifiable Credentials Data Model v2.0",
+      "author": "W3C Verifiable Credentials Working Group",
+      "year": "2023",
+      "type": "misc",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "W3C",
+        "cryptographic provenance",
+        "selective disclosure",
+        "verifiable credentials"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Wang2024DeepfakeSurvey",
+      "title": "Deepfake Detection: A Comprehensive Survey of Methods and Challenges",
+      "author": "Wang, Shu and Fu, Yuyang and Liu, Ying and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T14",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3673600",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "ACM Computing Surveys",
+      "keywords": [
+        "adversarial robustness",
+        "deepfake detection",
+        "generalization",
+        "media forensics",
+        "survey"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -12794,6 +13058,16 @@
       "downstream_refs": []
     },
     {
+      "key": "Bui2023ProvenanceEvaluation",
+      "title": "A Unified Framework for Content Provenance Evaluation",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "Buterin2014Ethereum",
       "title": "A Next-Generation Smart Contract and Decentralized Application Platform",
       "bibliography_tier": "T9",
@@ -13283,6 +13557,26 @@
       "field": "doi",
       "priority": "low",
       "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Fernandez2023StableSignature",
+      "title": "The Stable Signature: Rooting Watermarks in Latent Diffusion Models",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Fernandez2023SynthIDImage",
+      "title": "Three Bricks to Consolidate Watermarks in the Era of Diffusion Models",
+      "bibliography_tier": "T14",
+      "evidence_tier": "foundational",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
       "downstream_refs": []
     },
     {
