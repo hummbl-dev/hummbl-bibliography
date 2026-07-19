@@ -52,7 +52,8 @@
   publisher = {AAAI Press},
   % No DOI available -- conference paper (ICMAS 1995); DOI not found via CrossRef or AAAI/IEEE/ACM
   abstract = {This paper bridges the gap between the formal BDI (Beliefs-Desires-Intentions) logic and practical agent implementations. Rao and Georgeff present a computational model where agents maintain beliefs about the world, desires representing goals, and intentions as committed plans of action. The key contribution is showing how the abstract BDI logic can be translated into an implementable architecture with concrete data structures and execution cycles. The paper introduces the concept of plan libraries, event-driven plan selection, and the interplay between goal deliberation and means-ends reasoning. The BDI framework has become the dominant paradigm for designing rational agents, influencing systems from Jason/AgentSpeak to JACK and Jadex. Multi-agent systems built at hummbl-dev -- with agents that maintain context (beliefs), pursue tasks (desires), and commit to plans (intentions) -- follow this architectural pattern.},
-  keywords = {BDI, agent architecture, beliefs desires intentions, HUMMBL:CO, HUMMBL:RE, HUMMBL:DE}
+  keywords = {BDI, agent architecture, beliefs desires intentions, HUMMBL:CO, HUMMBL:RE, HUMMBL:DE},
+  doi-unavailable = {conference paper (ICMAS 1995); DOI not found via CrossRef or AAAI/IEEE/ACM},
 }
 
 @article{Meyer1992DesignByContract,
@@ -76,7 +77,8 @@
   url = {https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying},
   % No DOI available -- practitioner blog post on LinkedIn Engineering Blog; no registered DOI
   abstract = {This influential essay argues that the append-only log is the most fundamental data structure in distributed systems, unifying databases, message queues, event stores, and replication protocols under a single abstraction. Kreps demonstrates how logs enable total ordering of events, exactly-once semantics, and system-of-record guarantees when used as the canonical data store. The essay draws on experience building Apache Kafka at LinkedIn to show how log-centric architecture simplifies system design by making all state changes explicit, ordered, and replayable. The append-only governance bus (TSV), append-only audit log (JSONL), and the Cognitive Ledger Protocol (append-only JSONL with content hashing) in the hummbl-dev ecosystem are all implementations of this unifying log abstraction.},
-  keywords = {append-only log, event sourcing, distributed systems, HUMMBL:SY, HUMMBL:CO}
+  keywords = {append-only log, event sourcing, distributed systems, HUMMBL:SY, HUMMBL:CO},
+  doi-unavailable = {practitioner blog post on LinkedIn Engineering Blog; no registered DOI},
 }
 
 @inproceedings{HadfieldMenell2017OffSwitch,
@@ -123,7 +125,8 @@
   journal = {martinfowler.com},
   % No DOI -- this is a practitioner essay on martinfowler.com, not a journal article
   abstract = {This foundational essay introduces Event Sourcing as an architectural pattern where application state is determined by a sequence of events rather than by storing the current state directly. Instead of mutating a database record, every change is captured as an immutable event appended to an event log. The current state can be reconstructed at any point by replaying events from the beginning. Fowler identifies key benefits: complete audit trail, temporal queries (''what was the state at time T?''), event replay for debugging, and the ability to derive new projections from historical events. The pattern pairs naturally with CQRS (Command Query Responsibility Segregation) where writes append events and reads query materialized views. The founder-mode event store (SQLite-backed EventStore) and the append-only governance bus (JSONL) are direct implementations of event sourcing: every state change is an immutable event, the current state is derivable from the event sequence, and the full history is preserved for audit and replay.},
-  keywords = {event sourcing, immutable events, audit trail, HUMMBL:SY, HUMMBL:RE}
+  keywords = {event sourcing, immutable events, audit trail, HUMMBL:SY, HUMMBL:RE},
+  doi-unavailable = {practitioner blog post; no registered DOI},
 }
 
 @book{Newman2021Microservices,
@@ -204,7 +207,8 @@
   journal = {cqrs.files.wordpress.com},
   % No DOI -- this is a practitioner whitepaper, widely cited but not formally published
   abstract = {This seminal document defines Command Query Responsibility Segregation (CQRS), a pattern that separates the write model (commands that change state) from the read model (queries that return data). Young argues that in complex domains, the data model optimized for writes (normalized, consistency-focused) differs fundamentally from the data model optimized for reads (denormalized, performance-focused), and forcing both through a single model creates unnecessary complexity. CQRS pairs naturally with Event Sourcing: commands produce events that are appended to the event store (write side), and read models are projections built by consuming these events (read side). The founder-mode architecture implements CQRS implicitly: the coordination bus and governance log are write-optimized append-only stores (command side), while the health probes, briefing generation, and CLP retriever are read-optimized projections that consume these event streams to produce materialized views for the founder's consumption.},
-  keywords = {CQRS, command query separation, read write models, HUMMBL:DE, HUMMBL:CO}
+  keywords = {CQRS, command query separation, read write models, HUMMBL:DE, HUMMBL:CO},
+  doi-unavailable = {this is a practitioner whitepaper, widely cited but not formally published},
 }
 
 @article{Mahdavi2013FeatureToggles,
@@ -215,7 +219,8 @@
   % No formal DOI -- practitioner reference widely cited in software engineering literature
   % No DOI available -- practitioner blog post; no registered DOI
   abstract = {This reference document catalogs the taxonomy and best practices for feature toggles (feature flags): mechanisms that allow modifying system behavior without deploying new code. The document classifies toggles into four categories by longevity and dynamism: release toggles (trunk-based development, short-lived), experiment toggles (A/B testing, medium-lived), ops toggles (circuit breakers, kill switches, long-lived), and permission toggles (feature gating by user segment, long-lived). Key practices include keeping toggle scope minimal, planning toggle removal, and testing all toggle combinations. The founder-mode codebase uses feature flags extensively: the IDP delegation token system is feature-flagged via ENABLE\_IDP, the Ollama adapter is disabled via configuration on the MacBook but enabled on nodezero, and the kill switch itself functions as an ops toggle with four graduated modes (DISENGAGED through EMERGENCY). The agent guardrails system implements permission toggles via GEMINI\_SESSION and trust tier checks.},
-  keywords = {feature toggles, feature flags, trunk-based development, HUMMBL:CO, HUMMBL:SY}
+  keywords = {feature toggles, feature flags, trunk-based development, HUMMBL:CO, HUMMBL:SY},
+  doi-unavailable = {this is a practitioner whitepaper, widely cited but not formally published},
 }
 
 @inproceedings{Schermann2018Canary,

@@ -16,7 +16,8 @@
   url       = {https://openai.com/index/openai-o1-system-card/},
   % No DOI available -- technical report; DOI not registered
   abstract  = {System card for OpenAI's o1 model series, documenting safety evaluations, capabilities, and limitations of the chain-of-thought reasoning model. Describes the model's ability to reason before responding using extended internal deliberation (the 'thinking' process), performance on AIME, GPQA, and code generation benchmarks, and frontier risk evaluations including CBRN uplift and persuasion. Establishes the baseline capability profile for test-time compute scaling. Directly relevant to HUMMBL's pull engine design: o1-class models are the primary pull target for expensive reasoning tasks.},
-  keywords  = {reasoning models, test-time compute, safety evaluation, HUMMBL:RE, HUMMBL:IN}
+  keywords  = {reasoning models, test-time compute, safety evaluation, HUMMBL:RE, HUMMBL:IN},
+  doi-unavailable = {technical report; DOI not registered},
 }
 
 @article{DeepSeek2025R1,
@@ -60,7 +61,8 @@
   url       = {https://openai.com/index/o3-o4-mini-system-card/},
   % No DOI available -- technical report; DOI not registered
   abstract  = {System card for OpenAI o3 and o4-mini, documenting significantly improved performance over o1 across frontier benchmarks: ARC-AGI (87.5%), AIME 2024 (96.7%), ELO on Codeforces (2724). Introduces tool use during reasoning (including code execution), enabling agentic capabilities within the reasoning loop. Documents safety evaluations under ASL-3 Responsible Scaling Policy. o3 represents a qualitative shift: reasoning models that can call tools mid-thought, directly relevant to HUMMBL's pull engine design where the model may request data during deliberation.},
-  keywords  = {reasoning models, agentic reasoning, tool use, safety evaluation, HUMMBL:RE, HUMMBL:CO}
+  keywords  = {reasoning models, agentic reasoning, tool use, safety evaluation, HUMMBL:RE, HUMMBL:CO},
+  doi-unavailable = {technical report; DOI not registered},
 }
 
 @article{Cobbe2021GSM8K,
@@ -126,7 +128,8 @@
   url       = {https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf},
   % No DOI available -- technical report; DOI not registered
   abstract  = {Model card for the Claude 3 family documenting capabilities, safety properties, and evaluation results across Opus, Sonnet, and Haiku. Reports performance on coding, mathematical reasoning, multilingual tasks, vision, and long-context retrieval. Documents Constitutional AI training, harmlessness evaluations, and responsible scaling policy (RSP) context. Establishes Claude 3 Opus as the frontier reasoning baseline at the time of HUMMBL's architecture decisions. The 200K context window enables full session-level governance receipts to be included in the reasoning context.},
-  keywords  = {foundation model, constitutional AI, safety evaluation, HUMMBL:IN, HUMMBL:RE}
+  keywords  = {foundation model, constitutional AI, safety evaluation, HUMMBL:IN, HUMMBL:RE},
+  doi-unavailable = {technical report; DOI not registered},
 }
 
 @article{Zheng2024JudgeBench,
@@ -148,7 +151,8 @@
   url       = {https://storage.googleapis.com/deepmind-media/AlphaCode2/AlphaCode2_Tech_Report.pdf},
   % No DOI available -- technical report; DOI not registered
   abstract  = {AlphaCode 2 achieves competitive-programming performance above the 85th percentile of human competitors using a Gemini-based model with specialized fine-tuning and a large-scale sampling-and-filtering approach. Generates up to 1M candidate solutions per problem and filters using clustering and scoring heuristics. Documents the system-level engineering for sampling, filtering, and scoring at scale. The large-scale sampling-then-filter architecture directly informs the pull engine's best-of-N architecture for high-stakes governance decisions.},
-  keywords  = {code generation, competitive programming, sampling, HUMMBL:RE, HUMMBL:DE}
+  keywords  = {code generation, competitive programming, sampling, HUMMBL:RE, HUMMBL:DE},
+  doi-unavailable = {technical report; DOI not registered},
 }
 
 @article{Gemini2024Team,
@@ -181,7 +185,8 @@
   url       = {https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_5.pdf},
   % No DOI available -- technical report; DOI not registered
   abstract  = {Model card for Claude 3.5 Sonnet and Haiku, documenting improved performance on software engineering (SWE-bench: 49% resolve rate), agentic task completion, and extended thinking capabilities. Claude 3.5 Sonnet is the primary pull engine model in HUMMBL's architecture as of April 2026 — it is the model that executes governance reasoning, generates receipts, and operates the skill loop in founder-mode. The extended thinking mode is the direct implementation of the pull phase in the push/pull architecture.},
-  keywords  = {foundation model, agentic capabilities, extended thinking, HUMMBL:IN, HUMMBL:RE}
+  keywords  = {foundation model, agentic capabilities, extended thinking, HUMMBL:IN, HUMMBL:RE},
+  doi-unavailable = {technical report; DOI not registered},
 }
 
 @article{Kumar2024ScalingInference,
@@ -203,7 +208,8 @@
   url       = {https://openai.com/index/learning-to-reason-with-llms/},
   % No DOI available -- practitioner blog post on OpenAI blog; no registered DOI
   abstract  = {Technical blog post announcing o1 and o1-mini, introducing the concept of 'thinking time' as a distinct phase before response generation. Documents that o1 achieves 83rd percentile on Codeforces, passes qualifying exams for PhD programs in biology, chemistry, and physics, and ranks in the top 500 in competitive programming. The post introduces the paradigm of spending more compute at inference time to improve reasoning quality — the conceptual foundation for the pull engine's design. o1-mini is the cost-efficient pull target for routine governance tasks.},
-  keywords  = {reasoning models, test-time compute, thinking, HUMMBL:RE, HUMMBL:IN}
+  keywords  = {reasoning models, test-time compute, thinking, HUMMBL:RE, HUMMBL:IN},
+  doi-unavailable = {practitioner blog post on OpenAI blog; no registered DOI},
 }
 
 @article{OpenAI2024o1Tech,
