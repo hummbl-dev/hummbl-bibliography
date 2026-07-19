@@ -38,38 +38,38 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 321,
+    "total_sources": 353,
     "thematic_tiers": {
-      "T1": 20,
+      "T1": 33,
       "T2": 20,
       "T3": 20,
       "T4": 20,
       "T5": 20,
-      "T6": 20,
-      "T7": 20,
-      "T8": 20,
+      "T6": 19,
+      "T7": 26,
+      "T8": 21,
       "T9": 20,
       "T10": 20,
       "T11": 20,
-      "T12": 20,
-      "T13": 20
+      "T12": 25,
+      "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 141,
+      "foundational": 160,
       "empirical": 60,
       "applied": 40,
-      "governance": 20,
-      "emerging": 60
+      "governance": 19,
+      "emerging": 74
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
-      "arcana_citations": 40
+      "arcana_citations": 39
     },
     "metadata_debt": {
       "critical": 5,
-      "high": 7,
-      "medium": 34,
-      "low": 59
+      "high": 9,
+      "medium": 35,
+      "low": 60
     }
   },
   "sources": [
@@ -94,6 +94,73 @@
       "keywords": [
         "architecture",
         "design patterns"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bhartrhari5thCVakyapadiya",
+      "title": "Vākyapadīya",
+      "author": "Bhartṛhari",
+      "year": "450",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9788120829886",
+      "journal": null,
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar",
+        "non-Western genealogy",
+        "ontology",
+        "word-monism",
+        "śabda-brahman"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bohm1980WholenessImplicate",
+      "title": "Wholeness and the Implicate Order",
+      "author": "Bohm, David",
+      "year": "1980",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.4324/9780203950870",
+      "has_isbn": true,
+      "isbn": "978-0415283855",
+      "journal": null,
+      "keywords": [
+        "grammar of process",
+        "implicate order",
+        "process philosophy",
+        "rheomode",
+        "wholeness"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -185,6 +252,72 @@
       "metadata_debt": []
     },
     {
+      "key": "Hacker2002WittgensteinGrammar",
+      "title": "Wittgenstein's Grammar: Through Thick and Thin",
+      "author": "Hacker, P. M. S.",
+      "year": "2002",
+      "type": "incollection",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.1093/0199254012.001.0001",
+      "has_isbn": true,
+      "isbn": "978-0199254019",
+      "journal": null,
+      "keywords": [
+        "Wittgenstein",
+        "constitutive rules",
+        "grammar",
+        "philosophy of language",
+        "thick grammar",
+        "thin grammar"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Heidegger1927BeingTime",
+      "title": "Being and Time",
+      "author": "Heidegger, Martin",
+      "year": "1927",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0631194562",
+      "journal": null,
+      "keywords": [
+        "Dasein",
+        "grammar of being",
+        "intelligibility",
+        "ontological difference",
+        "ontology",
+        "phenomenology"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hofstadter1979Godel",
       "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
       "author": "Hofstadter, Douglas R.",
@@ -221,6 +354,40 @@
       "metadata_debt": []
     },
     {
+      "key": "KaderbhaiGrammarRealityVakyapadiya",
+      "title": "The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "author": "Kaderbhai, Aamir",
+      "year": "2018",
+      "type": "online",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Bhartṛhari",
+        "Indian philosophy",
+        "Vākyapadīya",
+        "grammar of reality",
+        "metaphysical pluralism",
+        "realism",
+        "sphoṭa"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Kahneman2011Thinking",
       "title": "Thinking, Fast and Slow",
       "author": "Kahneman, Daniel",
@@ -242,6 +409,37 @@
       "keywords": [
         "cognitive bias",
         "dual-process theory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Kant1787CritiquePureReason",
+      "title": "Critique of Pure Reason",
+      "author": "Kant, Immanuel",
+      "year": "1787",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0521657297",
+      "journal": null,
+      "keywords": [
+        "a priori",
+        "categories",
+        "epistemology",
+        "syntax of experience",
+        "transcendental philosophy"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -382,6 +580,43 @@
       "metadata_debt": []
     },
     {
+      "key": "Malcolm1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "author": "Malcolm, Norman",
+      "year": "1980",
+      "type": "article",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "The Washington Post",
+      "keywords": [
+        "Wittgenstein",
+        "book review",
+        "earliest use",
+        "grammar of reality",
+        "journalism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "medium",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
       "key": "Meadows2008ThinkingSystems",
       "title": "Thinking in Systems: A Primer",
       "author": "Meadows, Donella H.",
@@ -473,6 +708,37 @@
         "chunking",
         "cognitive limits",
         "working memory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Moss1995GrammarConsciousness",
+      "title": "The Grammar of Consciousness: An Exploration of Tacit Knowing",
+      "author": "Moss, Edward",
+      "year": "1995",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0333625331",
+      "journal": null,
+      "keywords": [
+        "Polanyi",
+        "consciousness",
+        "grammar",
+        "structure of consciousness",
+        "tacit knowing"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -574,6 +840,36 @@
           "note": "ARCANA Coordinator — cross-domain synthesis, convergence mapping"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Pearson1892GrammarScience",
+      "title": "The Grammar of Science",
+      "author": "Pearson, Karl",
+      "year": "1892",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0486425388",
+      "journal": null,
+      "keywords": [
+        "categories of explanation",
+        "grammar of reality",
+        "philosophy of science",
+        "scientific method"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -830,6 +1126,134 @@
           "note": "Institutional Economist — conspicuous consumption, pecuniary emulation, engineers vs price system"
         }
       ],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Whitehead1929ProcessReality",
+      "title": "Process and Reality: An Essay in Cosmology",
+      "author": "Whitehead, Alfred North",
+      "year": "1929",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0029345702",
+      "journal": null,
+      "keywords": [
+        "actual occasions",
+        "cosmology",
+        "grammatical shift",
+        "ontology",
+        "process metaphysics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Wittgenstein1921Tractatus",
+      "title": "Tractatus Logico-Philosophicus",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1921",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.4324/9781315110739",
+      "has_isbn": true,
+      "isbn": "978-0415251858",
+      "journal": null,
+      "keywords": [
+        "grammar of reality",
+        "logical atomism",
+        "logical form",
+        "philosophy of language",
+        "picture theory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Wittgenstein1953PhilosophicalInvestigations",
+      "title": "Philosophical Investigations",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1953",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.1002/9781444310526",
+      "has_isbn": true,
+      "isbn": "978-0631231271",
+      "journal": null,
+      "keywords": [
+        "forms of life",
+        "language games",
+        "meaning as use",
+        "philosophy of language",
+        "rule-following",
+        "thick grammar"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Wittgenstein1969OnCertainty",
+      "title": "On Certainty",
+      "author": "Wittgenstein, Ludwig",
+      "year": "1969",
+      "type": "book",
+      "bibliography_tier": "T1",
+      "bibliography_tier_name": "Canonical",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": true,
+      "doi": "10.1002/9781444312773",
+      "has_isbn": true,
+      "isbn": "978-0631231134",
+      "journal": null,
+      "keywords": [
+        "epistemology",
+        "grammar",
+        "grammaticalization of experience",
+        "hinge certainty",
+        "reality-soaked grammar",
+        "skepticism"
+      ],
+      "downstream_refs": [],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -2368,6 +2792,40 @@
       "metadata_debt": []
     },
     {
+      "key": "Cabrera2025GrammarReality",
+      "title": "The Grammar of Reality: The Organizing Principles of Structure and Emergence",
+      "author": "Cabrera, Derek and Cabrera, Laura",
+      "year": "2025",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.54120/001c.138685",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of Systems Thinking",
+      "keywords": [
+        "DSRP",
+        "emergence",
+        "process metaphysics",
+        "relational quantum mechanics",
+        "scale invariance",
+        "structural ontology",
+        "systems thinking"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Dekker2011Drift",
       "title": "Drift into Failure: From Hunting Broken Components to Understanding Complex Systems",
       "author": "Dekker, Sidney",
@@ -2391,6 +2849,96 @@
         "drift into failure",
         "organizational accidents",
         "safety"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Diaconescu2008InstitutionModelTheory",
+      "title": "Institution-independent Model Theory",
+      "author": "Diaconescu, R\\u{a}zvan",
+      "year": "2008",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/978-3-7643-8708-2",
+      "has_isbn": true,
+      "isbn": "978-3-7643-8708-2",
+      "journal": null,
+      "keywords": [
+        "Grothendieck institutions",
+        "institution theory",
+        "interpolation",
+        "model theory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "GoguenBurstall1992Institutions",
+      "title": "Institutions: Abstract Model Theory for Specification and Programming",
+      "author": "Goguen, J. A. and Burstall, R. M.",
+      "year": "1992",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/147508.147524",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Journal of the ACM",
+      "keywords": [
+        "abstract model theory",
+        "institution theory",
+        "satisfaction condition",
+        "signature morphisms"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "GoguenRosu2002InstitutionMorphisms",
+      "title": "Institution Morphisms",
+      "author": "Goguen, J. A. and Ro\\c{s}u, G.",
+      "year": "2002",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s001650200013",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Formal Aspects of Computing",
+      "keywords": [
+        "comorphisms",
+        "heterogeneous specifications",
+        "institution morphisms",
+        "structure-preserving maps"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -2630,6 +3178,38 @@
       "metadata_debt": []
     },
     {
+      "key": "Rovelli2017RealityNotWhatItSeems",
+      "title": "Reality Is Not What It Seems: The Journey to Quantum Gravity",
+      "author": "Rovelli, Carlo",
+      "year": "2017",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "IN",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0141983219",
+      "journal": null,
+      "keywords": [
+        "history of physics",
+        "loop quantum gravity",
+        "process ontology",
+        "quantum gravity",
+        "relational quantum mechanics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Strogatz2015Nonlinear",
       "title": "Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering",
       "author": "Strogatz, Steven H.",
@@ -2830,6 +3410,73 @@
       ]
     },
     {
+      "key": "Abramson2009GrammarReality",
+      "title": "The Grammar of Reality: Why the Deep Structure of Mathematics May Tell Us Something Profound About the Nature of Existence",
+      "author": "Abramson, John",
+      "year": "2009",
+      "type": "online",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Wigner",
+        "category theory",
+        "deep structure",
+        "grammar of reality",
+        "integral theory",
+        "mathematics"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Anonymous2026BecomingPossibility",
+      "title": "The Becoming of Possibility: Book {II}. The Grammar of Reality",
+      "author": "The Becoming of Possibility",
+      "year": "2026",
+      "type": "online",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "actualization",
+        "becoming",
+        "grammar of reality",
+        "ontology",
+        "organised potential",
+        "possibility"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Anthropic2024Claude3",
       "title": "The {Claude} 3 Model Family: Opus, Sonnet, Haiku",
       "author": "Anthropic",
@@ -3001,6 +3648,35 @@
       ]
     },
     {
+      "key": "FeitosaDOttaviano2001ConservativeTranslations",
+      "title": "Conservative Translations",
+      "author": "Feitosa, H. A. and D'Ottaviano, I. M. L.",
+      "year": "2001",
+      "type": "article",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1016/S0168-0072(00)00046-4",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Annals of Pure and Applied Logic",
+      "keywords": [
+        "conservative translations",
+        "logical consequence",
+        "truth preservation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Gemini2024Team",
       "title": "Gemini: A Family of Highly Capable Multimodal Models",
       "author": "{Gemini Team} and {Google}",
@@ -3033,6 +3709,36 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "GreenKarvounarakisTannen2007ProvenanceSemirings",
+      "title": "Provenance Semirings",
+      "author": "Green, T. J. and Karvounarakis, G. and Tannen, V.",
+      "year": "2007",
+      "type": "inproceedings",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/1265530.1265535",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "database",
+        "polynomial representation",
+        "provenance",
+        "semirings"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Guo2024Critique",
@@ -3168,6 +3874,44 @@
           "field": "arxiv_id",
           "priority": "low",
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "McGinn2024GrammarReality",
+      "title": "On the Relations Between Grammar and Reality: A {Wittgensteinian} Study",
+      "author": "McGinn, Marie",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Analysis: Journal of Philosophical Research, University of Zaragoza",
+      "keywords": [
+        "Wittgenstein",
+        "epistemology",
+        "grammar",
+        "philosophy of language",
+        "reality"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "priority_metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "high",
+          "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
     },
@@ -3309,6 +4053,72 @@
       ]
     },
     {
+      "key": "Peat2002RoleLanguage",
+      "title": "The Role of Language in Science",
+      "author": "Peat, F. David",
+      "year": "2002",
+      "type": "online",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Bohm",
+        "grammar",
+        "implicate order",
+        "language",
+        "process ontology",
+        "science"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Priest2015LinguisticConstruction",
+      "title": "The Linguistic Construction of Reality",
+      "author": "Priest, Graham",
+      "year": "2015",
+      "type": "online",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "IN",
+        "P",
+        "RE"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Buddhism",
+        "grammar",
+        "idealism",
+        "linguistic construction",
+        "metaphysics",
+        "textualism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Snell2024ScalingTestTime",
       "title": "Scaling {LLM} Test-Time Compute Optimally Improves Performance on Challenging Tasks",
       "author": "Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral",
@@ -3438,6 +4248,40 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "Weaver1953EthicsRhetoric",
+      "title": "The Ethics of Rhetoric",
+      "author": "Weaver, Richard M.",
+      "year": "1953",
+      "type": "book",
+      "bibliography_tier": "T13",
+      "bibliography_tier_name": "Reasoning",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "978-0935792337",
+      "journal": null,
+      "keywords": [
+        "becoming",
+        "being",
+        "ethics",
+        "grammar",
+        "ontology",
+        "relation",
+        "rhetoric"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Zelikman2022STAR",
@@ -8182,50 +9026,6 @@
       ]
     },
     {
-      "key": "Gebru2021Datasheets",
-      "title": "Datasheets for Datasets",
-      "author": "Gebru, Timnit and Morgenstern, Jamie and Vecchione, Brenda and Vaughan, Jennifer Wortman and Wallach, Hanna and Daum{\\'e} III, Hal and Crawford, Kate",
-      "year": "2021",
-      "type": "article",
-      "bibliography_tier": "T6",
-      "bibliography_tier_name": "Governance",
-      "evidence_tier": "governance",
-      "transformations": [
-        "CO",
-        "RE"
-      ],
-      "has_doi": true,
-      "doi": "10.1145/3458723",
-      "has_isbn": false,
-      "isbn": null,
-      "journal": "Communications of the ACM",
-      "keywords": [
-        "data governance",
-        "datasets",
-        "datasheets",
-        "documentation"
-      ],
-      "downstream_refs": [
-        {
-          "surface": "arcana_citations",
-          "section": "foucault",
-          "role": "primary",
-          "strength": "STRONG",
-          "note": "Archaeologist of Power — power/knowledge, discourse, biopolitics"
-        },
-        {
-          "surface": "arcana_citations",
-          "section": "measurement",
-          "role": "secondary",
-          "strength": "MODERATE",
-          "note": "Metrologist — Goodhart's Law, Campbell's Law, proxy metrics"
-        }
-      ],
-      "arxiv_id": null,
-      "source_status": "ready",
-      "metadata_debt": []
-    },
-    {
       "key": "ISO27001",
       "title": "ISO/IEC 27001:2022 --- Information Security, Cybersecurity and Privacy Protection --- Information Security Management Systems --- Requirements",
       "author": "International Organization for Standardization",
@@ -8717,6 +9517,69 @@
       ]
     },
     {
+      "key": "Aravind2026EpistemicCorrigibility",
+      "title": "Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems",
+      "author": "Aravind, A. A.",
+      "year": "2026",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.5281/zenodo.20262088",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "epistemic audit",
+        "epistemic corrigibility",
+        "institutional design",
+        "sunset provisions"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Chen2026CordonSemanticTransactions",
+      "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+      "author": "Chen, Z. and others",
+      "year": "2026",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "LLM agents",
+        "effect staging",
+        "provenance",
+        "semantic transactions",
+        "transaction boundary"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Du2023Debate",
       "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
       "author": "Du, Yilun and Li, Shuang and Torralba, Antonio and Tenenbaum, Joshua B. and Mordatch, Igor",
@@ -8751,6 +9614,41 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "GrammarOfReality2025NounsToVerbs",
+      "title": "The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon",
+      "author": "Grammar of Reality Project",
+      "year": "2025",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN",
+        "P",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.5281/zenodo.15829350",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "Bohm",
+        "Whitehead",
+        "cosmic lexicon",
+        "nouns",
+        "process ontology",
+        "substance ontology",
+        "verbs"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Jimenez2024SWEBench",
@@ -9121,6 +10019,42 @@
       ]
     },
     {
+      "key": "Soares2015Corrigibility",
+      "title": "Corrigibility",
+      "author": "Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer",
+      "year": "2015",
+      "type": "inproceedings",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "AI safety",
+        "corrective intervention",
+        "corrigibility",
+        "shutdown"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "priority_metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "high",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
+    },
+    {
       "key": "Sumers2024CognitiveArchitectures",
       "title": "Cognitive Architectures for Language Agents",
       "author": "Sumers, Theodore R. and Yao, Shunyu and Narasimhan, Karthik and Griffiths, Thomas L.",
@@ -9154,6 +10088,43 @@
           "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
         }
       ]
+    },
+    {
+      "key": "URM2StructuralGrammar2025",
+      "title": "URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)",
+      "author": "URM$^2$ Working Group",
+      "year": "2025",
+      "type": "online",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.5281/zenodo.17741588",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "URM2",
+        "apparency",
+        "density",
+        "generative primitives",
+        "identity",
+        "process ontology",
+        "resonance",
+        "structural grammar",
+        "verb-noun ontology"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Wang2023Voyager",
@@ -9355,6 +10326,42 @@
       ],
       "downstream_refs": [],
       "arxiv_id": "2305.10601",
+      "source_status": "priority_metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "arxiv_id",
+          "priority": "low",
+          "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field."
+        }
+      ]
+    },
+    {
+      "key": "Yao2024TauBench",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "author": "Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik",
+      "year": "2024",
+      "type": "inproceedings",
+      "bibliography_tier": "T7",
+      "bibliography_tier_name": "Emerging",
+      "evidence_tier": "emerging",
+      "transformations": [
+        "DE",
+        "RE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.48550/arXiv.2406.12045",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": null,
+      "keywords": [
+        "agent benchmark",
+        "policy compliance",
+        "tool-agent-user interaction",
+        "trajectory evaluation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": "2406.12045",
       "source_status": "priority_metadata_debt",
       "metadata_debt": [
         {
@@ -10004,6 +11011,38 @@
         "instructional design",
         "schema acquisition",
         "working memory"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Thalos2014GrammarOfExperience",
+      "title": "The Grammar of Experience",
+      "author": "Thalos, Mariam",
+      "year": "2014",
+      "type": "article",
+      "bibliography_tier": "T8",
+      "bibliography_tier_name": "Cognition",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "P",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1017/s0031819114000023",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Philosophy",
+      "keywords": [
+        "Kantian categories",
+        "categorial rules",
+        "grammar of experience",
+        "perceptual structure",
+        "philosophy of mind"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -10981,6 +12020,16 @@
       "downstream_refs": []
     },
     {
+      "key": "McGinn2024GrammarReality",
+      "title": "On the Relations Between Grammar and Reality: A {Wittgensteinian} Study",
+      "bibliography_tier": "T13",
+      "evidence_tier": "emerging",
+      "field": "doi",
+      "priority": "high",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
       "key": "MITRE2024ATLAS",
       "title": "{ATLAS}: Adversarial Threat Landscape for {AI} Systems",
       "bibliography_tier": "T11",
@@ -11025,6 +12074,16 @@
       "title": "{SLSA}: Supply-chain Levels for Software Artifacts",
       "bibliography_tier": "T11",
       "evidence_tier": "empirical",
+      "field": "doi",
+      "priority": "high",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Soares2015Corrigibility",
+      "title": "Corrigibility",
+      "bibliography_tier": "T7",
+      "evidence_tier": "emerging",
       "field": "doi",
       "priority": "high",
       "reason": "Paper-like entry should carry a DOI when available.",
@@ -11282,6 +12341,16 @@
       "title": "Feature Toggles (aka Feature Flags)",
       "bibliography_tier": "T5",
       "evidence_tier": "applied",
+      "field": "doi",
+      "priority": "medium",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Malcolm1980WittgensteinGrammar",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "bibliography_tier": "T1",
+      "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
@@ -11960,6 +13029,16 @@
     {
       "key": "Yao2023TreeOfThoughts",
       "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "bibliography_tier": "T7",
+      "evidence_tier": "emerging",
+      "field": "arxiv_id",
+      "priority": "low",
+      "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Yao2024TauBench",
+      "title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
       "bibliography_tier": "T7",
       "evidence_tier": "emerging",
       "field": "arxiv_id",
