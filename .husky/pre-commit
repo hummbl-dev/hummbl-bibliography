@@ -1,3 +1,29 @@
+# Pre-commit hook: identity guard + validation + secret scanning
+
+# --- Guard 0a: Deterministic commit identity block ---
+# Only hummbl-dev <noreply@hummbl.dev> is permitted as commit author/committer.
+# Blocks any other identity (Devin AI, codex, Claude, agent bots, personal accounts).
+# Bypass: SKIP_IDENTITY_GUARD=1 (operator override only)
+if [ "${SKIP_IDENTITY_GUARD:-0}" != "1" ]; then
+  REQUIRED_NAME="hummbl-dev"
+  REQUIRED_EMAIL="noreply@hummbl.dev"
+  ACTUAL_NAME=$(git config user.name 2>/dev/null || echo "")
+  ACTUAL_EMAIL=$(git config user.email 2>/dev/null || echo "")
+  if [ "$ACTUAL_NAME" != "$REQUIRED_NAME" ] || [ "$ACTUAL_EMAIL" != "$REQUIRED_EMAIL" ]; then
+    echo ""
+    echo "BLOCKED [Guard 0a]: Commit identity does not match the permitted identity."
+    echo "  Required:  $REQUIRED_NAME <$REQUIRED_EMAIL>"
+    echo "  Detected:  $ACTUAL_NAME <$ACTUAL_EMAIL>"
+    echo ""
+    echo "Only hummbl-dev <noreply@hummbl.dev> may commit on this account."
+    echo "Set the correct identity:"
+    echo "  git -c user.name='hummbl-dev' -c user.email='noreply@hummbl.dev' commit ..."
+    echo ""
+    echo "Bypass (operator only): SKIP_IDENTITY_GUARD=1 git commit ..."
+    exit 1
+  fi
+fi
+
 # Run validation and secret scanning before commit
 echo "🔍 Running pre-commit checks..."
 
