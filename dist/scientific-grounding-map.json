@@ -38,26 +38,26 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 365,
+    "total_sources": 373,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
-      "T3": 21,
+      "T3": 23,
       "T4": 20,
-      "T5": 20,
+      "T5": 22,
       "T6": 19,
       "T7": 26,
       "T8": 21,
-      "T9": 20,
+      "T9": 21,
       "T10": 22,
       "T11": 23,
-      "T12": 25,
+      "T12": 28,
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 163,
+      "foundational": 167,
       "empirical": 68,
-      "applied": 41,
+      "applied": 45,
       "governance": 19,
       "emerging": 74
     },
@@ -67,7 +67,7 @@
     },
     "metadata_debt": {
       "critical": 5,
-      "high": 9,
+      "high": 10,
       "medium": 35,
       "low": 60
     }
@@ -2876,6 +2876,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Anderson1972MoreIsDifferent",
+      "title": "More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science",
+      "author": "Anderson, Philip W.",
+      "year": "1972",
+      "type": "article",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1126/science.177.4047.393",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Science",
+      "keywords": [
+        "broken symmetry",
+        "complexity",
+        "emergence",
+        "hierarchy",
+        "reductionism"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Ashby1956Cybernetics",
       "title": "An Introduction to Cybernetics",
       "author": "Ashby, W. Ross",
@@ -3253,6 +3284,36 @@
       "metadata_debt": []
     },
     {
+      "key": "Holland1998Emergence",
+      "title": "Emergence: From Chaos to Order",
+      "author": "Holland, John H.",
+      "year": "1998",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780201149432",
+      "journal": null,
+      "keywords": [
+        "complex systems",
+        "constrained generating procedures",
+        "emergence",
+        "self-organization"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Kauffman1993Origins",
       "title": "The Origins of Order: Self-Organization and Selection in Evolution",
       "author": "Kauffman, Stuart A.",
@@ -3388,6 +3449,36 @@
         "complex systems",
         "heavy-tailed distributions",
         "power laws"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Page2017Diversity",
+      "title": "The Diversity Bonus: How Great Teams Pay Off in the Knowledge Economy",
+      "author": "Page, Scott E.",
+      "year": "2017",
+      "type": "book",
+      "bibliography_tier": "T12",
+      "bibliography_tier_name": "Complexity",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "IN",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780691175368",
+      "journal": null,
+      "keywords": [
+        "cognitive diversity",
+        "collective intelligence",
+        "diversity",
+        "prediction theorem"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -7293,6 +7384,37 @@
       "metadata_debt": []
     },
     {
+      "key": "Alexander1979TimelessBuilding",
+      "title": "The Timeless Way of Building",
+      "author": "Alexander, Christopher",
+      "year": "1979",
+      "type": "book",
+      "bibliography_tier": "T3",
+      "bibliography_tier_name": "Applied",
+      "evidence_tier": "applied",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780195024029",
+      "journal": null,
+      "keywords": [
+        "architecture",
+        "composition",
+        "design",
+        "pattern language",
+        "quality"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Ariely2008Predictably",
       "title": "Predictably Irrational: The Hidden Forces That Shape Our Decisions",
       "author": "Ariely, Dan",
@@ -7314,6 +7436,36 @@
         "behavioral economics",
         "decision making",
         "irrationality"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Arthur2009Technology",
+      "title": "The Nature of Technology: What It Is and How It Evolves",
+      "author": "Arthur, W. Brian",
+      "year": "2009",
+      "type": "book",
+      "bibliography_tier": "T3",
+      "bibliography_tier_name": "Applied",
+      "evidence_tier": "applied",
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9781416544067",
+      "journal": null,
+      "keywords": [
+        "combinatorial evolution",
+        "innovation",
+        "recombination",
+        "technology"
       ],
       "downstream_refs": [],
       "arxiv_id": null,
@@ -8602,6 +8754,36 @@
       ]
     },
     {
+      "key": "Gamma1994DesignPatterns",
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": "Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John",
+      "year": "1994",
+      "type": "book",
+      "bibliography_tier": "T5",
+      "bibliography_tier_name": "Engineering",
+      "evidence_tier": "applied",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780201633610",
+      "journal": null,
+      "keywords": [
+        "composition",
+        "design patterns",
+        "object-oriented",
+        "software engineering"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Garcia1987Sagas",
       "title": "Sagas",
       "author": "Garcia-Molina, Hector and Salem, Kenneth",
@@ -9025,6 +9207,43 @@
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
+    },
+    {
+      "key": "Simon1962Architecture",
+      "title": "The Architecture of Complexity",
+      "author": "Simon, Herbert A.",
+      "year": "1962",
+      "type": "article",
+      "bibliography_tier": "T5",
+      "bibliography_tier_name": "Engineering",
+      "evidence_tier": "applied",
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the American Philosophical Society",
+      "keywords": [
+        "architecture",
+        "complex systems",
+        "evolution",
+        "hierarchy",
+        "near-decomposability"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "metadata_debt",
+      "metadata_debt": [
+        {
+          "field": "doi",
+          "priority": "high",
+          "reason": "Paper-like entry should carry a DOI when available."
+        }
+      ]
     },
     {
       "key": "Sridharan2018Observability",
@@ -11844,6 +12063,36 @@
       "metadata_debt": []
     },
     {
+      "key": "Frenken2006Innovation",
+      "title": "Technological Innovation and Complexity Theory",
+      "author": "Frenken, Koen",
+      "year": "2006",
+      "type": "article",
+      "bibliography_tier": "T9",
+      "bibliography_tier_name": "Economics",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1080/10438590500141189",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Economics of Innovation and New Technology",
+      "keywords": [
+        "NK model",
+        "fitness landscape",
+        "modularity",
+        "recombinant innovation"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Hart1995FirmsContracts",
       "title": "Firms, Contracts, and Financial Structure",
       "author": "Hart, Oliver",
@@ -12432,6 +12681,16 @@
     {
       "key": "Rao1995BDI",
       "title": "BDI Agents: From Theory to Practice",
+      "bibliography_tier": "T5",
+      "evidence_tier": "applied",
+      "field": "doi",
+      "priority": "high",
+      "reason": "Paper-like entry should carry a DOI when available.",
+      "downstream_refs": []
+    },
+    {
+      "key": "Simon1962Architecture",
+      "title": "The Architecture of Complexity",
       "bibliography_tier": "T5",
       "evidence_tier": "applied",
       "field": "doi",

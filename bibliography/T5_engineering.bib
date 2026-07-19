@@ -246,3 +246,28 @@
   abstract = {This book expands chaos engineering from Netflix's original practice into a comprehensive discipline applicable to any complex system. The authors define chaos engineering as the facilitation of experiments to uncover systemic weaknesses, distinguishing it from simple fault injection by emphasizing hypothesis-driven experimentation against steady-state metrics. Key principles include: define steady state as measurable output, hypothesize that steady state will continue in both control and experimental groups, introduce realistic variables (server failures, network partitions, clock skew, resource exhaustion), and try to disprove the hypothesis. The book covers organizational adoption, including building the case for chaos engineering and integrating it into CI/CD pipelines through automated chaos experiments. The founder-mode chaos test suite and circuit breaker testing embody these principles: each test defines a steady-state expectation (service responds correctly), introduces a failure variable (adapter timeout, authentication failure, rate limiting), and verifies that the system degrades gracefully through circuit breaker state transitions and kill switch escalation.},
   keywords = {chaos engineering, resilience, steady state, hypothesis testing, HUMMBL:IN, HUMMBL:SY}
 }
+
+@article{Simon1962Architecture,
+  title     = {The Architecture of Complexity},
+  author    = {Simon, Herbert A.},
+  year      = {1962},
+  journal   = {Proceedings of the American Philosophical Society},
+  volume    = {106},
+  number    = {6},
+  pages     = {467--482},
+  doi-unavailable = {American Philosophical Society proceedings from 1962; no DOI assigned},
+  abstract  = {Simon argues that complex systems are nearly always hierarchical -- composed of interrelated subsystems, each of which is itself hierarchical. He introduces near-decomposability: in a nearly decomposable system, the interactions among subsystems are weak but not negligible. The short-run behavior of each subsystem is approximately independent of the others, while the long-run behavior depends only weakly on the others. Simon demonstrates that hierarchic systems evolve more rapidly than non-hierarchic systems of comparable size, because stable intermediate forms accelerate the evolutionary process. He uses the watchmakers Hora and Tempus as a parable: Hora assembles watches in subassemblies that can be put down without breaking, while Tempus assembles each watch as a single unit. For HUMMBL, Simon's near-decomposability is a foundational principle for the CO (Composition) transformation: effective compositions are hierarchically structured with weak inter-subsystem coupling.},
+  keywords  = {hierarchy, near-decomposability, complex systems, architecture, evolution, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY},
+}
+
+@book{Gamma1994DesignPatterns,
+  title     = {Design Patterns: Elements of Reusable Object-Oriented Software},
+  author    = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
+  year      = {1994},
+  publisher = {Addison-Wesley},
+  address   = {Reading, MA},
+  doi-unavailable = {Addison-Wesley trade book; no DOI assigned},
+  isbn      = {9780201633610},
+  abstract  = {The Gang of Four's seminal work catalogs 23 design patterns for object-oriented software, organized into creational, structural, and behavioral categories. Each pattern names a recurring design problem, describes its solution, and identifies consequences. Key patterns include Adapter (composing incompatible interfaces), Composite (treating individual objects and compositions uniformly), Observer (one-to-many notification), and Strategy (interchangeable algorithms). The book's central insight is that good software design is fundamentally about composition: not just writing new code but combining existing components in patterns that produce desired properties. For HUMMBL, the Design Patterns catalog is a concrete, practitioner-grounded model for the CO (Composition) transformation: each pattern is a named composition strategy with known properties and trade-offs. The structural/behavioral distinction maps to HUMMBL's separation of static composition from dynamic composition.},
+  keywords  = {design patterns, object-oriented, software engineering, composition, HUMMBL:CO, HUMMBL:DE, HUMMBL:SY},
+}

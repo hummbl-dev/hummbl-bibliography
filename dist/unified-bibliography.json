@@ -2025,6 +2025,33 @@
       "doi": "10.1103/RevModPhys.74.47"
     },
     {
+      "id": "Anderson1972MoreIsDifferent",
+      "type": "article",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science",
+      "author": "Anderson, Philip W.",
+      "year": "1972",
+      "abstract": "Anderson's seminal essay argues that reductionism is insufficient for understanding nature. At each level of complexity, entirely new properties emerge that cannot be deduced from the lower level, even with complete knowledge of the lower-level laws. A symmetry that holds at one scale is broken at a higher scale, producing qualitatively new behavior. Anderson traces this from particle physics through chemistry, biology, and psychology, showing that each level has its own fundamental laws that are not derivable from the level below. For HUMMBL, Anderson's argument is the foundational justification for the CO (Composition) transformation: composition is not merely aggregation but a symmetry-breaking operation that produces new properties. The CO operator must recognize that combining components creates a new level of organization with its own laws -- laws that cannot be predicted by analyzing the components in isolation.",
+      "keywords": [
+        "broken symmetry",
+        "complexity",
+        "emergence",
+        "hierarchy",
+        "reductionism"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Science",
+      "volume": "177",
+      "number": "4047",
+      "pages": "393--396",
+      "doi": "10.1126/science.177.4047.393"
+    },
+    {
       "id": "Ashby1956Cybernetics",
       "type": "book",
       "tier": "T12",
@@ -2297,6 +2324,30 @@
       "isbn": "978-0-201-44230-4"
     },
     {
+      "id": "Holland1998Emergence",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "Emergence: From Chaos to Order",
+      "author": "Holland, John H.",
+      "year": "1998",
+      "abstract": "Holland presents a theory of emergence -- how complex systems produce behaviors that cannot be predicted from the properties of their individual components. Drawing on games like chess, neural networks, and ecosystems, Holland identifies the conditions under which emergent behavior arises: a small number of rules or laws that generate significant complexity through their interaction. He introduces constrained generating procedures (CGPs) as a formal framework for modeling emergent systems, where the composition of simple mechanisms produces systems with qualitatively new properties. The book distinguishes emergence from mere complication: a system is emergent when its behavior cannot be deduced from inspecting its components in isolation. For HUMMBL, Holland's framework grounds the CO (Composition) transformation: the central question of composition is not just how to combine components but understanding when and why combinations produce emergent properties that exceed the sum of their parts. The CGP formalism provides a computational basis for the CO operator's integration scoring.",
+      "keywords": [
+        "complex systems",
+        "constrained generating procedures",
+        "emergence",
+        "self-organization"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Addison-Wesley",
+      "isbn": "9780201149432",
+      "address": "Reading, MA"
+    },
+    {
       "id": "Kauffman1993Origins",
       "type": "book",
       "tier": "T12",
@@ -2396,6 +2447,30 @@
       "number": "5",
       "pages": "323--351",
       "doi": "10.1080/00107510500052444"
+    },
+    {
+      "id": "Page2017Diversity",
+      "type": "book",
+      "tier": "T12",
+      "tier_name": "Complexity",
+      "title": "The Diversity Bonus: How Great Teams Pay Off in the Knowledge Economy",
+      "author": "Page, Scott E.",
+      "year": "2017",
+      "abstract": "Page formalizes the Diversity Prediction Theorem: the collective error of a group equals the average individual error minus the diversity of the group. This mathematical result shows that diversity is not merely a social good but a cognitive asset -- a diverse group of less-capable individuals can outperform a homogeneous group of more-capable individuals because their different perspectives cancel out individual biases. Page identifies cognitive diversity (different mental models) and identity diversity (different backgrounds) as two types, with cognitive diversity producing the prediction bonus. The book distinguishes between diverse crowds (independent predictions) and diverse teams (interactive collaboration). For HUMMBL, Page's theorem is a foundational result for the CO (Composition) transformation: the value of composition depends on the diversity of the components being combined. The CO operator should prefer composing diverse models over similar ones.",
+      "keywords": [
+        "cognitive diversity",
+        "collective intelligence",
+        "diversity",
+        "prediction theorem"
+      ],
+      "transformations": [
+        "CO",
+        "IN",
+        "SY"
+      ],
+      "publisher": "Princeton University Press",
+      "isbn": "9780691175368",
+      "address": "Princeton, NJ"
     },
     {
       "id": "Prigogine1984Order",
@@ -5181,6 +5256,31 @@
       "isbn": "978-1633695733"
     },
     {
+      "id": "Alexander1979TimelessBuilding",
+      "type": "book",
+      "tier": "T3",
+      "tier_name": "Applied",
+      "title": "The Timeless Way of Building",
+      "author": "Alexander, Christopher",
+      "year": "1979",
+      "abstract": "Alexander introduces the concept of the quality without a name -- a fundamental property of good architecture that emerges from the pattern of relationships among elements. He argues that buildings become alive through pattern languages -- shared vocabularies of design patterns that compose into coherent wholes. Each pattern describes a recurring problem and its solution in context, and patterns connect to other patterns to form a language. The composition of patterns is not mechanical but generative: each pattern creates the context for others, and the whole emerges from the interaction. For HUMMBL, Alexander's pattern language is a foundational model for the CO (Composition) transformation: composition as the generative interconnection of patterns, where the quality of the whole depends not on the quality of individual parts but on the pattern of their relationships.",
+      "keywords": [
+        "architecture",
+        "composition",
+        "design",
+        "pattern language",
+        "quality"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Oxford University Press",
+      "isbn": "9780195024029",
+      "address": "New York"
+    },
+    {
       "id": "Ariely2008Predictably",
       "type": "book",
       "tier": "T3",
@@ -5200,6 +5300,30 @@
       ],
       "publisher": "Harper",
       "isbn": "978-0061353246"
+    },
+    {
+      "id": "Arthur2009Technology",
+      "type": "book",
+      "tier": "T3",
+      "tier_name": "Applied",
+      "title": "The Nature of Technology: What It Is and How It Evolves",
+      "author": "Arthur, W. Brian",
+      "year": "2009",
+      "abstract": "Arthur argues that all technologies are combinations of pre-existing technologies -- a recursive, combinatorial process where each new technology becomes a building block for future technologies. This explains the exponential character of technological progress: as the number of available components grows, the number of possible combinations grows combinatorially. Innovation occurs through recombination of existing components, discovery of new principles, and repurposing of existing technologies to new domains. The book challenges the linear model of innovation, showing that technology evolves through a branching, recursive process more like biological evolution than engineering design. For HUMMBL, Arthur's combinatorial theory is a foundational model for the CO (Composition) transformation: composition as the primary engine of innovation, where the value of a new combination depends on the affordances of its components and the creativity of their interconnection.",
+      "keywords": [
+        "combinatorial evolution",
+        "innovation",
+        "recombination",
+        "technology"
+      ],
+      "transformations": [
+        "CO",
+        "RE",
+        "SY"
+      ],
+      "publisher": "Free Press",
+      "isbn": "9781416544067",
+      "address": "New York"
     },
     {
       "id": "Brown2009ChangeByDesign",
@@ -6155,6 +6279,30 @@
       "journal": "martinfowler.com"
     },
     {
+      "id": "Gamma1994DesignPatterns",
+      "type": "book",
+      "tier": "T5",
+      "tier_name": "Engineering",
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": "Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John",
+      "year": "1994",
+      "abstract": "The Gang of Four's seminal work catalogs 23 design patterns for object-oriented software, organized into creational, structural, and behavioral categories. Each pattern names a recurring design problem, describes its solution, and identifies consequences. Key patterns include Adapter (composing incompatible interfaces), Composite (treating individual objects and compositions uniformly), Observer (one-to-many notification), and Strategy (interchangeable algorithms). The book's central insight is that good software design is fundamentally about composition: not just writing new code but combining existing components in patterns that produce desired properties. For HUMMBL, the Design Patterns catalog is a concrete, practitioner-grounded model for the CO (Composition) transformation: each pattern is a named composition strategy with known properties and trade-offs. The structural/behavioral distinction maps to HUMMBL's separation of static composition from dynamic composition.",
+      "keywords": [
+        "composition",
+        "design patterns",
+        "object-oriented",
+        "software engineering"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "publisher": "Addison-Wesley",
+      "isbn": "9780201633610",
+      "address": "Reading, MA"
+    },
+    {
       "id": "Garcia1987Sagas",
       "type": "inproceedings",
       "tier": "T5",
@@ -6472,6 +6620,32 @@
       "number": "2",
       "pages": "26--31",
       "doi": "10.1109/MS.2017.3571578"
+    },
+    {
+      "id": "Simon1962Architecture",
+      "type": "article",
+      "tier": "T5",
+      "tier_name": "Engineering",
+      "title": "The Architecture of Complexity",
+      "author": "Simon, Herbert A.",
+      "year": "1962",
+      "abstract": "Simon argues that complex systems are nearly always hierarchical -- composed of interrelated subsystems, each of which is itself hierarchical. He introduces near-decomposability: in a nearly decomposable system, the interactions among subsystems are weak but not negligible. The short-run behavior of each subsystem is approximately independent of the others, while the long-run behavior depends only weakly on the others. Simon demonstrates that hierarchic systems evolve more rapidly than non-hierarchic systems of comparable size, because stable intermediate forms accelerate the evolutionary process. He uses the watchmakers Hora and Tempus as a parable: Hora assembles watches in subassemblies that can be put down without breaking, while Tempus assembles each watch as a single unit. For HUMMBL, Simon's near-decomposability is a foundational principle for the CO (Composition) transformation: effective compositions are hierarchically structured with weak inter-subsystem coupling.",
+      "keywords": [
+        "architecture",
+        "complex systems",
+        "evolution",
+        "hierarchy",
+        "near-decomposability"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "SY"
+      ],
+      "journal": "Proceedings of the American Philosophical Society",
+      "volume": "106",
+      "number": "6",
+      "pages": "467--482"
     },
     {
       "id": "Sridharan2018Observability",
@@ -8314,6 +8488,32 @@
       "number": "16",
       "pages": "386--405",
       "doi": "10.1111/j.1468-0335.1937.tb00002.x"
+    },
+    {
+      "id": "Frenken2006Innovation",
+      "type": "article",
+      "tier": "T9",
+      "tier_name": "Economics",
+      "title": "Technological Innovation and Complexity Theory",
+      "author": "Frenken, Koen",
+      "year": "2006",
+      "abstract": "Frenken applies complexity theory to the economics of innovation, arguing that technological progress is driven by recombinant innovation -- the creation of new technologies by combining existing ones in novel ways. Drawing on Kauffman's NK model, Frenken models the innovation landscape as a fitness landscape where the value of a combination depends on interdependencies among its components. The paper introduces modular innovation: when technologies are decomposable into modules, innovation can proceed by replacing individual modules rather than redesigning the entire system. The optimal level of modularity depends on the ruggedness of the fitness landscape: in smooth landscapes, tightly coupled systems perform better; in rugged landscapes, modular systems are more adaptable. For HUMMBL, Frenken's framework connects the CO (Composition) transformation to economic theory: composition is the engine of economic growth. The modularity insight is directly applicable -- the CO operator should prefer modular compositions when the problem landscape is uncertain.",
+      "keywords": [
+        "NK model",
+        "fitness landscape",
+        "modularity",
+        "recombinant innovation"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "journal": "Economics of Innovation and New Technology",
+      "volume": "15",
+      "number": "2",
+      "pages": "137--155",
+      "doi": "10.1080/10438590500141189"
     },
     {
       "id": "Hart1995FirmsContracts",
