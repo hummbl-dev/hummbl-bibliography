@@ -3086,6 +3086,7 @@
       "journal": "California Law Review",
       "volume": "107",
       "pages": "1753",
+      "doi": "10.2139/ssrn.3213954",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3213954"
     },
     {
@@ -3228,6 +3229,7 @@
       "booktitle": "Proceedings of the 40th International Conference on Machine Learning (ICML)",
       "volume": "202",
       "pages": "17061--17084",
+      "doi": "10.48550/arXiv.2301.10226",
       "url": "https://arxiv.org/abs/2301.10226"
     },
     {
@@ -3673,6 +3675,7 @@
         "IN"
       ],
       "journal": "arXiv preprint",
+      "doi": "10.1162/tacl_a_00041",
       "url": "https://arxiv.org/abs/1810.03677"
     },
     {
@@ -3695,6 +3698,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "doi": "10.1145/3442188.3445922",
       "url": "https://dl.acm.org/doi/10.1145/3442188.3445922"
     },
     {
@@ -3716,6 +3720,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency",
+      "doi": "10.48550/arXiv.2201.03954",
       "url": "https://datanutrition.org/"
     },
     {
@@ -3737,6 +3742,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "doi": "10.1145/3442188.3445918",
       "url": "https://arxiv.org/abs/2010.13561"
     },
     {
@@ -3780,6 +3786,7 @@
         "IN"
       ],
       "journal": "Google Research",
+      "doi": "10.1145/3531146.3533231",
       "url": "https://research.google/blog/data-cards-purposeful-and-transparent-dataset-documentation-for-responsible-ai/"
     },
     {
@@ -3801,6 +3808,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "doi": "10.1145/3411764.3445518",
       "url": "https://arxiv.org/abs/2104.02915"
     },
     {
@@ -3822,6 +3830,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security",
+      "doi": "10.1145/2976749.2978318",
       "url": "https://arxiv.org/abs/1607.00133"
     },
     {
@@ -3950,6 +3959,7 @@
         "IN"
       ],
       "booktitle": "Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security",
+      "doi": "10.1145/2810103.2813687",
       "url": "https://arxiv.org/abs/1501.05001"
     },
     {
@@ -4096,6 +4106,7 @@
         "P"
       ],
       "booktitle": "Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society",
+      "doi": "10.1007/s43681-022-00167-3",
       "url": "https://dl.acm.org/doi/10.1145/3600211.3604676"
     },
     {
@@ -4138,6 +4149,7 @@
         "P"
       ],
       "journal": "Theoretical Issues in Ergonomics Science",
+      "doi": "10.1145/3544548.3581197",
       "url": "https://doi.org/10.1080/1463922X.2023.2182681"
     },
     {
@@ -4159,6 +4171,7 @@
         "P"
       ],
       "journal": "Human Factors",
+      "doi": "10.1177/00187208211034716",
       "url": "https://journals.sagepub.com/doi/10.1177/00187208231187258"
     },
     {
@@ -4343,6 +4356,7 @@
         "SY"
       ],
       "journal": "AI & Society",
+      "doi": "10.1007/s00146-023-01811-0",
       "url": "https://link.springer.com/article/10.1007/s00146-023-01689-5"
     },
     {
