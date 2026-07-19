@@ -1051,3 +1051,213 @@ Final tier stats:
   TOTAL: 447
 [2026-07-19T04:48:04.758Z] 
 Wave 5 COMPLETE: ok
+[2026-07-19T11:47:25.712Z] 
+# Wave 6 Dry Run (pre-flight only)
+[2026-07-19T11:47:25.714Z] Started: 2026-07-19T11:47:25.714Z
+[2026-07-19T11:47:25.714Z] Initial tier stats:
+[2026-07-19T11:47:25.718Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 28
+  T13_reasoning.bib: 28
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 26
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 447
+[2026-07-19T11:47:25.719Z] 
+--- wave6-t13: T13 Reasoning: strengthen P and SY tags (+8 entries) ---
+[2026-07-19T11:47:25.719Z]   Entries: 8
+[2026-07-19T11:47:25.719Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:47:25.725Z]   Pre-flight: PASSED (no conflicts)
+[2026-07-19T11:47:25.725Z] 
+--- wave6-t12: T12 Complexity: strengthen P tag (+3 entries) ---
+[2026-07-19T11:47:25.725Z]   Entries: 3
+[2026-07-19T11:47:25.726Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:47:25.731Z]   Pre-flight: PASSED (no conflicts)
+[2026-07-19T11:47:25.731Z] 
+--- wave6-t7: T7 Emerging: strengthen IN and P tags (+2 entries) ---
+[2026-07-19T11:47:25.731Z]   Entries: 2
+[2026-07-19T11:47:25.731Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:47:25.736Z]   Pre-flight: PASSED (no conflicts)
+[2026-07-19T11:47:25.736Z] 
+Dry run complete.
+[2026-07-19T11:47:33.405Z] 
+# Wave 6: Strengthen P, IN, SY Tags in Overfilled Tiers
+[2026-07-19T11:47:33.407Z] Started: 2026-07-19T11:47:33.407Z
+[2026-07-19T11:47:33.407Z] Initial tier stats:
+[2026-07-19T11:47:33.411Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 28
+  T13_reasoning.bib: 28
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 26
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 447
+[2026-07-19T11:47:33.412Z] 
+[2026-07-19T11:47:33.412Z] 
+--- Batch 1/3: wave6-t13 ---
+[2026-07-19T11:47:33.412Z] 
+=== BATCH: wave6-t13 — T13 Reasoning: strengthen P and SY tags (+8 entries) ===
+[2026-07-19T11:47:33.413Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:47:33.420Z]   Pre-flight: no conflicts found
+[2026-07-19T11:47:33.422Z]   Appended Tversky1983Extensional to T13_reasoning.bib
+[2026-07-19T11:47:33.423Z]   Appended JohnsonLaird1983MentalModels to T13_reasoning.bib
+[2026-07-19T11:47:33.424Z]   Appended Oaksford2007BayesianRationality to T13_reasoning.bib
+[2026-07-19T11:47:33.424Z]   Appended Gigerenzer2007GutFeelings to T13_reasoning.bib
+[2026-07-19T11:47:33.425Z]   Appended Thagard2000Coherence to T13_reasoning.bib
+[2026-07-19T11:47:33.426Z]   Appended Holyoak1995MentalLeaps to T13_reasoning.bib
+[2026-07-19T11:47:33.427Z]   Appended Sloman2005CausalModels to T13_reasoning.bib
+[2026-07-19T11:47:33.428Z]   Appended Tenenbaum2011GrowMind to T13_reasoning.bib
+[2026-07-19T11:47:34.666Z]   Validation: 0 errors, 0 warnings
+[2026-07-19T11:47:35.758Z]   Duplicates: none
+[2026-07-19T11:47:36.904Z]   Dist regenerated
+[2026-07-19T11:47:44.353Z]   Tests: 100 pass, 0 fail
+[2026-07-19T11:47:46.108Z]   Committed
+[2026-07-19T11:47:48.301Z]   Pushed
+[2026-07-19T11:47:48.301Z]   Post-batch tier stats:
+[2026-07-19T11:47:48.305Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 28
+  T13_reasoning.bib: 36
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 26
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 455
+[2026-07-19T11:47:48.306Z]   BATCH wave6-t13 COMPLETE: 8 entries added
+[2026-07-19T11:47:50.311Z] 
+--- Batch 2/3: wave6-t12 ---
+[2026-07-19T11:47:50.312Z] 
+=== BATCH: wave6-t12 — T12 Complexity: strengthen P tag (+3 entries) ===
+[2026-07-19T11:47:50.312Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:47:50.320Z]   Pre-flight: no conflicts found
+[2026-07-19T11:47:50.321Z]   Appended Mitchell2009Complexity to T12_complexity.bib
+[2026-07-19T11:47:50.322Z]   Appended BarYam1997Dynamics to T12_complexity.bib
+[2026-07-19T11:47:50.323Z]   Appended Ladyman2007EverythingMustGo to T12_complexity.bib
+[2026-07-19T11:47:51.460Z]   Validation: 0 errors, 0 warnings
+[2026-07-19T11:47:52.572Z]   Duplicates: none
+[2026-07-19T11:47:53.685Z]   Dist regenerated
+[2026-07-19T11:48:01.432Z]   Tests: 100 pass, 0 fail
+[2026-07-19T11:48:03.328Z]   Committed
+[2026-07-19T11:48:05.470Z]   Pushed
+[2026-07-19T11:48:05.471Z]   Post-batch tier stats:
+[2026-07-19T11:48:05.475Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 31
+  T13_reasoning.bib: 36
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 26
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 458
+[2026-07-19T11:48:05.475Z]   BATCH wave6-t12 COMPLETE: 3 entries added
+[2026-07-19T11:48:07.477Z] 
+--- Batch 3/3: wave6-t7 ---
+[2026-07-19T11:48:07.477Z] 
+=== BATCH: wave6-t7 — T7 Emerging: strengthen IN and P tags (+2 entries) ===
+[2026-07-19T11:48:07.478Z]   Pre-flight: checking for duplicates...
+[2026-07-19T11:48:07.486Z]   Pre-flight: no conflicts found
+[2026-07-19T11:48:07.487Z]   Appended Christian2020Alignment to T7_emerging.bib
+[2026-07-19T11:48:07.488Z]   Appended Crawford2021AtlasAI to T7_emerging.bib
+[2026-07-19T11:48:08.671Z]   Validation: 0 errors, 0 warnings
+[2026-07-19T11:48:09.865Z]   Duplicates: none
+[2026-07-19T11:48:11.127Z]   Dist regenerated
+[2026-07-19T11:48:18.859Z]   Tests: 100 pass, 0 fail
+[2026-07-19T11:48:20.616Z]   Committed
+[2026-07-19T11:48:22.784Z]   Pushed
+[2026-07-19T11:48:22.785Z]   Post-batch tier stats:
+[2026-07-19T11:48:22.789Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 31
+  T13_reasoning.bib: 36
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 28
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 460
+[2026-07-19T11:48:22.789Z]   BATCH wave6-t7 COMPLETE: 2 entries added
+[2026-07-19T11:48:24.795Z] 
+=== WAVE 6 SUMMARY ===
+[2026-07-19T11:48:24.796Z] Batches succeeded: 3/3
+[2026-07-19T11:48:24.796Z] Batches failed: 0/3
+[2026-07-19T11:48:24.796Z] Total entries added: 13
+[2026-07-19T11:48:24.797Z] 
+Final tier stats:
+[2026-07-19T11:48:24.800Z]   T10_collaboration.bib: 22
+  T11_security.bib: 23
+  T12_complexity.bib: 31
+  T13_reasoning.bib: 36
+  T14_provenance.bib: 20
+  T15_maturity.bib: 20
+  T16_data_governance.bib: 20
+  T17_privacy.bib: 20
+  T18_human_oversight.bib: 20
+  T19_incident_response.bib: 20
+  T1_canonical.bib: 47
+  T2_empirical.bib: 26
+  T3_applied.bib: 23
+  T4_agentic.bib: 20
+  T5_engineering.bib: 22
+  T6_governance.bib: 20
+  T7_emerging.bib: 28
+  T8_cognition.bib: 21
+  T9_economics.bib: 21
+  TOTAL: 460
+[2026-07-19T11:48:24.800Z] 
+Wave 6 complete.
