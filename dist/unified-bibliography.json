@@ -5215,6 +5215,75 @@
       "url": "https://academic.oup.com/jpart"
     },
     {
+      "id": "Amershi2019Guidelines",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Guidelines for Human-AI Interaction",
+      "author": "Amershi, Saleema and Weld, Dan and Vorvoreanu, Mihaela and et al.",
+      "year": "2019",
+      "abstract": "Amershi et al. present 18 guidelines for human-AI interaction, derived from a survey of 20 years of HCI literature. The guidelines cover four phases: initially (set expectations, reveal context), during interaction (support efficient correction, scope services), when wrong (make it easy to undo, support recovery), and over time (learn from user behavior, update and improve). The guidelines were validated through practitioner surveys and are now widely adopted in industry. For HUMMBL, these guidelines provide the design-level implementation of human oversight: concrete interface patterns that ensure humans can effectively monitor, correct, and control AI systems. The initially-during-wrong-over-time structure connects to the RE (Recursion) transformation -- oversight as an iterative process.",
+      "keywords": [
+        "HCI",
+        "guidelines",
+        "human-AI interaction",
+        "interface design"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "journal": "Proceedings of CHI 2019",
+      "doi": "10.1145/3290605.3300233"
+    },
+    {
+      "id": "Bansal2021DoesAIHelp",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Does the Whole Exceed Its Parts? The Effects of AI Explanations and Complementary Human Capabilities",
+      "author": "Bansal, Gagan and Wu, Tongshuang and Zhou, Joyce and et al.",
+      "year": "2021",
+      "abstract": "Bansal et al. study when AI explanations help or hurt human decision-making. The paper shows that AI explanations improve performance when the AI is correct but hurt performance when the AI is wrong -- explanations increase trust in incorrect predictions. The effect is moderated by human expertise: experts are better at identifying when AI explanations are wrong. The authors find that showing AI confidence scores is more effective than showing explanations, as confidence helps humans calibrate trust. For HUMMBL, this paper reveals a paradox of oversight: explanations designed to improve oversight can actually undermine it by increasing trust in wrong answers. The explanation-trust interaction connects to the IN (Inversion) transformation -- inverting the intended benefit of explanations into a risk.",
+      "keywords": [
+        "AI explanations",
+        "complementary",
+        "human decision-making",
+        "trust calibration"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Proceedings of CHI 2021",
+      "doi": "10.1145/3411764.3445717"
+    },
+    {
+      "id": "Bucinca2021CognitiveForcing",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Cognitive Forcing Functions for Human-AI Collaboration",
+      "author": "Bucinca, Zana and Lin, Zelda and Gajos, Krzysztof and Glassman, Elena",
+      "year": "2021",
+      "abstract": "Bucinca et al. introduce cognitive forcing functions -- interface features that slow down human decision-making to reduce automation bias. The paper tests three forcing functions: requiring a prediction before seeing AI output, adding a delay before AI recommendations, and requiring explanation of disagreement. Results show that forcing functions improve decision accuracy but reduce user satisfaction and perceived efficiency. The key finding: the most effective interventions are often the least liked by users, creating a tension between effectiveness and adoption. For HUMMBL, cognitive forcing functions are a practical oversight mechanism: design choices that counteract automation bias by introducing friction. The forcing-before-seeing approach connects to the IN (Inversion) inversion -- inverting the flow from AI-to-human to human-to-AI.",
+      "keywords": [
+        "automation bias",
+        "cognitive forcing",
+        "human-AI collaboration",
+        "interface design"
+      ],
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "journal": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "doi": "10.1145/3411764.3445580"
+    },
+    {
       "id": "Bucinca2023DecisionControl",
       "type": "inproceedings",
       "tier": "T18",
@@ -5299,6 +5368,154 @@
       "url": "https://link.springer.com/article/10.1007/s13347-023-00655-7"
     },
     {
+      "id": "Endsley2019AutomationIrony",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Automation and the Irony of Automation",
+      "author": "Endsley, Mica R.",
+      "year": "2019",
+      "abstract": "Endsley analyzes the irony of automation: as systems become more automated, humans are less involved in routine operation but must still handle exceptional situations -- exactly the situations they are least prepared for due to skill atrophy. The paper identifies the out-of-the-loop performance problem: operators of highly automated systems lose situational awareness and perform poorly when manual intervention is needed. Endsley proposes adaptive automation -- dynamically allocating tasks between human and automation based on workload and state -- as a solution. For HUMMBL, the irony of automation is a critical oversight challenge: more automation can reduce oversight effectiveness by degrading the human's ability to intervene. The out-of-the-loop problem connects to the IN (Inversion) inversion -- automation inverts the intended oversight improvement into a degradation.",
+      "keywords": [
+        "adaptive automation",
+        "automation irony",
+        "out-of-the-loop",
+        "situational awareness"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Human Factors",
+      "volume": "61",
+      "number": "2",
+      "pages": "201--212",
+      "doi": "10.1177/0018720819831354"
+    },
+    {
+      "id": "Goddard2024TrustRepair",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Trust Repair After AI Failure: Strategies and Effectiveness",
+      "author": "Goddard, Kate and Roudposhti, Mahdie and Bansal, Gagan and et al.",
+      "year": "2024",
+      "abstract": "Goddard et al. study trust repair after AI system failures, comparing strategies: apologies, promises of improvement, explanations, and demonstrations of corrected behavior. The paper shows that explanations are the most effective trust repair strategy, while apologies alone are insufficient. Trust repair is harder after competence failures (the AI was wrong) than after integrity failures (the AI was deceptive). The authors find that repeated failures compound trust loss non-linearly, and that trust once lost is difficult to recover. For HUMMBL, trust repair is a critical oversight lifecycle phase: what happens after the human catches an AI error. The competence-integrity distinction connects to the DE (Decomposition) transformation -- decomposing trust failure into distinct types.",
+      "keywords": [
+        "AI failure",
+        "human oversight",
+        "trust calibration",
+        "trust repair"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "volume": "31",
+      "number": "2",
+      "pages": "1--38",
+      "doi": "10.1145/3635050"
+    },
+    {
+      "id": "Green2022HumanOversightSurvey",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Human Oversight of AI Systems: A Survey of Mechanisms and Effectiveness",
+      "author": "Green, Ben and Chen, Yiling",
+      "year": "2022",
+      "abstract": "Green and Chen survey human oversight mechanisms for AI systems, categorizing them into pre-deployment (testing, validation), in-deployment (monitoring, alerts, human-in-the-loop), and post-deployment (auditing, incident response). The survey identifies the oversight paradox: oversight mechanisms are most needed for high-stakes decisions but are least effective in those contexts because of time pressure, cognitive load, and automation bias. The authors argue that oversight should be treated as a socio-technical system, not just a technical feature. For HUMMBL, this survey provides the oversight landscape for the T18 tier. The pre-in-post decomposition connects to the DE (Decomposition) transformation. The oversight paradox connects to the IN (Inversion) transformation -- inverting the intended protection into a vulnerability.",
+      "keywords": [
+        "human oversight",
+        "mechanisms",
+        "socio-technical",
+        "survey"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "ACM Computing Surveys",
+      "volume": "55",
+      "number": "2",
+      "pages": "1--37",
+      "doi": "10.1145/3509914"
+    },
+    {
+      "id": "Liao2023OverrideDesign",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Designing Override Authority in Human-AI Teams",
+      "author": "Liao, Q. Vera and Wang, Han and Liu, Yang and et al.",
+      "year": "2023",
+      "abstract": "Liao et al. study override authority -- the design of who can override whom in human-AI teams. The paper identifies three override models: human-override (human can always override AI), AI-override (AI can override human), and mutual-override (both can override with justification). Studies show that human-override models produce the highest user satisfaction but not always the best outcomes, as users override correct AI decisions due to bias. Mutual-override models produce the best outcomes when override requires justification. For HUMMBL, override authority design is a structural oversight decision: how power is distributed between human and AI. The three-model taxonomy connects to the DE (Decomposition) transformation. The bias-override interaction connects to the IN (Inversion) transformation.",
+      "keywords": [
+        "human-AI teams",
+        "override authority",
+        "power distribution"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "Proceedings of CSCW 2023",
+      "doi": "10.1145/3579608"
+    },
+    {
+      "id": "Norman1994ThingsThatMakeUsSmart",
+      "type": "book",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Things That Make Us Smart: Defending Human Attributes in the Age of the Machine",
+      "author": "Norman, Donald A.",
+      "year": "1994",
+      "abstract": "Norman argues that human cognition is augmented by artifacts -- tools, representations, and technologies that extend our cognitive capabilities. He distinguishes between experiential cognition (rapid, effortless pattern recognition) and reflective cognition (slow, effortful deliberation), and argues that different tasks require different cognitive modes. The book analyzes how technology can either support or undermine human cognition: well-designed artifacts augment reflective cognition by providing external representations that make complex relationships visible, while poorly designed artifacts force humans into experiential mode when reflection is needed. Norman introduces the concept of cognitive artifacts -- tools that change the nature of the cognitive task, not just its efficiency. For HUMMBL, Norman's experiential-reflective distinction is foundational for human oversight design: AI systems that trigger experiential cognition (fast, automatic responses) when reflective cognition (slow, deliberative judgment) is needed undermine oversight. The artifact-as-task-transformer concept connects to the P (Perspective) transformation -- artifacts change how we see the problem.",
+      "keywords": [
+        "cognitive artifacts",
+        "experiential cognition",
+        "human augmentation",
+        "reflective cognition"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "Addison-Wesley",
+      "isbn": "9780201626959",
+      "address": "Reading, MA"
+    },
+    {
+      "id": "Robbins2024MHC",
+      "type": "article",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Meaningful Human Control: Concepts and Implementation",
+      "author": "Robbins, Hamish and Danks, David and Sinnott-Armstrong, Walter",
+      "year": "2024",
+      "abstract": "Robbins et al. analyze meaningful human control (MHC) as a governance concept, distinguishing it from mere human oversight. MHC requires that humans can understand, direct, and correct AI system behavior in a way that maintains moral responsibility. The paper identifies three conditions for MHC: tracking (the system follows human intentions), tracing (the system's behavior can be explained), and appropriateness (the human's intentions are morally appropriate). The authors analyze implementation challenges: what level of understanding is required, how to handle time-critical decisions, and how to distribute control across teams. For HUMMBL, MHC is the normative standard for human oversight: not just that a human is in the loop, but that the human's control is meaningful. The tracking-tracing-appropriateness framework connects to the DE (Decomposition) transformation.",
+      "keywords": [
+        "governance",
+        "meaningful human control",
+        "moral responsibility"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "journal": "AI and Society",
+      "volume": "39",
+      "pages": "1--16",
+      "doi": "10.1007/s00146-023-01753-5"
+    },
+    {
       "id": "Schlicker2024AutomationBiasPublicAdmin",
       "type": "article",
       "tier": "T18",
@@ -5318,6 +5535,30 @@
       ],
       "journal": "Law, Innovation and Technology",
       "url": "https://www.tandfonline.com/journals/rlit20"
+    },
+    {
+      "id": "Suchman1987PlansSituated",
+      "type": "book",
+      "tier": "T18",
+      "tier_name": "Unknown",
+      "title": "Plans and Situated Actions: The Problem of Human-Machine Communication",
+      "author": "Suchman, Lucy",
+      "year": "1987",
+      "abstract": "Suchman challenges the classical planning model of human action, arguing that plans are not the cause of action but a resource for its interpretation. Drawing on ethnomethodology and situated action theory, she demonstrates that human action is fundamentally situated -- shaped by the specific circumstances in which it occurs rather than following pre-defined plans. The book analyzes human-machine communication, showing that the failure of interactive systems often stems from assuming that human action follows plans rather than situated reasoning. Suchman argues that effective human-machine interaction requires systems that can accommodate the situated, context-dependent nature of human action rather than forcing it into pre-defined scripts. For HUMMBL, Suchman's situated action theory is a foundational critique of AI oversight design: oversight systems that assume human action follows plans will fail because humans act situatedly. The plan-vs-situated-action distinction connects to the IN (Inversion) inversion -- inverting the assumed primacy of plans to reveal the primacy of situation.",
+      "keywords": [
+        "ethnomethodology",
+        "human-machine communication",
+        "plans",
+        "situated action"
+      ],
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "publisher": "Cambridge University Press",
+      "isbn": "9780521391867",
+      "address": "Cambridge"
     },
     {
       "id": "vanDerWaa2023ActionableMHC",

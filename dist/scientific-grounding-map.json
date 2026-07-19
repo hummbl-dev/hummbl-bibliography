@@ -38,7 +38,7 @@
     "npm test"
   ],
   "summary": {
-    "total_sources": 412,
+    "total_sources": 422,
     "thematic_tiers": {
       "T1": 36,
       "T2": 23,
@@ -55,7 +55,7 @@
       "T13": 28
     },
     "evidence_tiers": {
-      "foundational": 206,
+      "foundational": 216,
       "empirical": 68,
       "applied": 45,
       "governance": 19,
@@ -7314,6 +7314,96 @@
       "metadata_debt": []
     },
     {
+      "key": "Amershi2019Guidelines",
+      "title": "Guidelines for Human-AI Interaction",
+      "author": "Amershi, Saleema and Weld, Dan and Vorvoreanu, Mihaela and et al.",
+      "year": "2019",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3290605.3300233",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CHI 2019",
+      "keywords": [
+        "HCI",
+        "guidelines",
+        "human-AI interaction",
+        "interface design"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bansal2021DoesAIHelp",
+      "title": "Does the Whole Exceed Its Parts? The Effects of AI Explanations and Complementary Human Capabilities",
+      "author": "Bansal, Gagan and Wu, Tongshuang and Zhou, Joyce and et al.",
+      "year": "2021",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3411764.3445717",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CHI 2021",
+      "keywords": [
+        "AI explanations",
+        "complementary",
+        "human decision-making",
+        "trust calibration"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Bucinca2021CognitiveForcing",
+      "title": "Cognitive Forcing Functions for Human-AI Collaboration",
+      "author": "Bucinca, Zana and Lin, Zelda and Gajos, Krzysztof and Glassman, Elena",
+      "year": "2021",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "CO",
+        "DE",
+        "IN"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3411764.3445580",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "keywords": [
+        "automation bias",
+        "cognitive forcing",
+        "human-AI collaboration",
+        "interface design"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Bucinca2023DecisionControl",
       "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
       "author": "Bucinca, Zana and Malaya, Maja and Gajos, Krzysztof Z.",
@@ -7443,6 +7533,184 @@
       ]
     },
     {
+      "key": "Endsley2019AutomationIrony",
+      "title": "Automation and the Irony of Automation",
+      "author": "Endsley, Mica R.",
+      "year": "2019",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1177/0018720819831354",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Human Factors",
+      "keywords": [
+        "adaptive automation",
+        "automation irony",
+        "out-of-the-loop",
+        "situational awareness"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Goddard2024TrustRepair",
+      "title": "Trust Repair After AI Failure: Strategies and Effectiveness",
+      "author": "Goddard, Kate and Roudposhti, Mahdie and Bansal, Gagan and et al.",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "RE"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3635050",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "keywords": [
+        "AI failure",
+        "human oversight",
+        "trust calibration",
+        "trust repair"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Green2022HumanOversightSurvey",
+      "title": "Human Oversight of AI Systems: A Survey of Mechanisms and Effectiveness",
+      "author": "Green, Ben and Chen, Yiling",
+      "year": "2022",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3509914",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "ACM Computing Surveys",
+      "keywords": [
+        "human oversight",
+        "mechanisms",
+        "socio-technical",
+        "survey"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Liao2023OverrideDesign",
+      "title": "Designing Override Authority in Human-AI Teams",
+      "author": "Liao, Q. Vera and Wang, Han and Liu, Yang and et al.",
+      "year": "2023",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1145/3579608",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "Proceedings of CSCW 2023",
+      "keywords": [
+        "human-AI teams",
+        "override authority",
+        "power distribution"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Norman1994ThingsThatMakeUsSmart",
+      "title": "Things That Make Us Smart: Defending Human Attributes in the Age of the Machine",
+      "author": "Norman, Donald A.",
+      "year": "1994",
+      "type": "book",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780201626959",
+      "journal": null,
+      "keywords": [
+        "cognitive artifacts",
+        "experiential cognition",
+        "human augmentation",
+        "reflective cognition"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
+      "key": "Robbins2024MHC",
+      "title": "Meaningful Human Control: Concepts and Implementation",
+      "author": "Robbins, Hamish and Danks, David and Sinnott-Armstrong, Walter",
+      "year": "2024",
+      "type": "article",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "SY"
+      ],
+      "has_doi": true,
+      "doi": "10.1007/s00146-023-01753-5",
+      "has_isbn": false,
+      "isbn": null,
+      "journal": "AI and Society",
+      "keywords": [
+        "governance",
+        "meaningful human control",
+        "moral responsibility"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
+    },
+    {
       "key": "Schlicker2024AutomationBiasPublicAdmin",
       "title": "Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology",
       "author": "Schlicker, Fabian and others",
@@ -7475,6 +7743,36 @@
           "reason": "Paper-like entry should carry a DOI when available."
         }
       ]
+    },
+    {
+      "key": "Suchman1987PlansSituated",
+      "title": "Plans and Situated Actions: The Problem of Human-Machine Communication",
+      "author": "Suchman, Lucy",
+      "year": "1987",
+      "type": "book",
+      "bibliography_tier": "T18",
+      "bibliography_tier_name": "Unknown",
+      "evidence_tier": "foundational",
+      "transformations": [
+        "DE",
+        "IN",
+        "P"
+      ],
+      "has_doi": false,
+      "doi": null,
+      "has_isbn": true,
+      "isbn": "9780521391867",
+      "journal": null,
+      "keywords": [
+        "ethnomethodology",
+        "human-machine communication",
+        "plans",
+        "situated action"
+      ],
+      "downstream_refs": [],
+      "arxiv_id": null,
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "vanDerWaa2023ActionableMHC",
