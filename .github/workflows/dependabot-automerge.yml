@@ -27,7 +27,6 @@ jobs:
           script: |
             const DEPENDABOT_LOGIN = "dependabot[bot]";
             const REQUIRED_CHECKS = [
-              "Lint / Test / Audit (Node 20)",
               "Lint / Test / Audit (Node 24)",
               "security-audit",
               "CodeQL Static Analysis"

@@ -1,10 +1,13 @@
 // lib.mjs — Harness utility functions for overnight bibliography expansion
 // v2: adds pre-flight duplicate detection, dry-run mode, stats, rollback
 import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 
-const REPO = 'C:\\Users\\Owner\\PROJECTS\\hummbl-bibliography';
-const LOG_FILE = `${REPO}\\harness\\overnight-log.md`;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO = path.resolve(__dirname, '..');
+const LOG_FILE = path.join(REPO, 'harness', 'overnight-log.md');
 
 export function log(msg) {
   const ts = new Date().toISOString();
@@ -19,7 +22,7 @@ export function log(msg) {
 // ============================================================
 
 function loadExistingKeys() {
-  const bibDir = `${REPO}\\bibliography`;
+  const bibDir = path.join(REPO, 'bibliography');
   const files = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib'));
   const keys = new Set();
   const titles = new Map(); // lowercase title -> key
@@ -27,7 +30,7 @@ function loadExistingKeys() {
   const isbns = new Map();  // isbn -> key
 
   for (const file of files) {
-    const content = fs.readFileSync(`${bibDir}\\${file}`, 'utf8');
+    const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
     // Match entry keys
     const entryRegex = /@(\w+)\{([^,]+),/g;
     let match;
@@ -118,7 +121,7 @@ export function preflightCheck(entries) {
 
 export function appendEntries(entries) {
   for (const e of entries) {
-    const filepath = `${REPO}\\bibliography\\${e.file}`;
+    const filepath = path.join(REPO, 'bibliography', e.file);
     let content = fs.readFileSync(filepath, 'utf8');
     let bib = `\n@${e.type}{${e.key},\n`;
     bib += `  title     = {${e.title}},\n`;
@@ -202,8 +205,8 @@ export function runCheckDups() {
 
 export function regenerateDist() {
   try {
-    execSync('npm run generate-unified 2>&1', { cwd: `${REPO}\\toolkit`, encoding: 'utf8', timeout: 30000 });
-    execSync('npm run grounding:build 2>&1', { cwd: `${REPO}\\toolkit`, encoding: 'utf8', timeout: 30000 });
+    execSync('npm run generate-unified 2>&1', { cwd: path.join(REPO, 'toolkit'), encoding: 'utf8', timeout: 30000 });
+    execSync('npm run grounding:build 2>&1', { cwd: path.join(REPO, 'toolkit'), encoding: 'utf8', timeout: 30000 });
     log('  Dist regenerated');
     return true;
   } catch (err) {
@@ -236,12 +239,12 @@ export function runTests() {
 // ============================================================
 
 export function generateStats() {
-  const bibDir = `${REPO}\\bibliography`;
+  const bibDir = path.join(REPO, 'bibliography');
   const files = fs.readdirSync(bibDir).filter(f => f.endsWith('.bib')).sort();
   let total = 0;
   const stats = [];
   for (const file of files) {
-    const content = fs.readFileSync(`${bibDir}\\${file}`, 'utf8');
+    const content = fs.readFileSync(path.join(bibDir, file), 'utf8');
     const count = (content.match(/@\w+\{/g) || []).length;
     total += count;
     const below = count < 20 ? ' <<<' : '';

@@ -12,6 +12,25 @@ paths = [
   '''\.github/workflows/.*\.yml''',
 ]
 
+# BKI evidence mapping file contains citation keys (not secrets) that trigger
+# generic-api-key detection due to entropy. These are academic citation
+# identifiers, not credentials.
+[[allowlists]]
+description = "BKI evidence mapping citation keys (not secrets)"
+paths = [
+  '''mappings/bki_evidence\.json''',
+]
+
+# Generated dist output and harness entry files contain citation keys and
+# bibliography metadata that trigger generic-api-key detection due to entropy.
+# These are academic citation identifiers and bibliography data, not credentials.
+[[allowlists]]
+description = "Generated dist and harness bibliography data (citation keys, not secrets)"
+paths = [
+  '''dist/.*\.json''',
+  '''harness/entries-wave.*\.mjs''',
+]
+
 # The GITHUB_TOKEN reference in workflow files is a variable, not a secret
 [[allowlists]]
 description = "GitHub Actions GITHUB_TOKEN variable references (not actual secrets)"
