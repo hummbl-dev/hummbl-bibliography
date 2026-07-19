@@ -3,6 +3,10 @@
   "registry_path": "sources/bibliography/bibliography-schema-registry-v0.1.json",
   "valid": [
     {
+      "name": "full registry",
+      "record_ids": []
+    },
+    {
       "name": "conceptual + record + style slice",
       "record_ids": [
         "ifla-library-reference-model-lrm",
@@ -29,32 +33,138 @@
       }
     },
     {
-      "name": "unknown_category",
+      "name": "missing_registry_status",
+      "mutation": {
+        "type": "delete_top_field",
+        "field": "registry_status"
+      }
+    },
+    {
+      "name": "bad_registry_status",
+      "mutation": {
+        "type": "set_top_field",
+        "field": "registry_status",
+        "value": "not-a-status"
+      }
+    },
+    {
+      "name": "bad_last_reviewed_at",
+      "mutation": {
+        "type": "set_top_field",
+        "field": "last_reviewed_at",
+        "value": "2026-13-40"
+      }
+    },
+    {
+      "name": "malformed_record_id",
       "record_id": "lrmoo",
       "mutation": {
         "type": "set_field",
-        "field": "category",
-        "value": "not-a-category"
+        "field": "id",
+        "value": "bad id"
       }
     },
     {
-      "name": "bad_evidence_status",
+      "name": "unexpected_property",
       "record_id": "functional-requirements-for-bibliographic-records-frbr",
       "mutation": {
-        "type": "set_field",
-        "field": "evidence_status",
-        "value": "totally_fake"
+        "type": "add_field",
+        "field": "unexpected_property",
+        "value": true
       }
     },
     {
-      "name": "self_related_schema",
+      "name": "empty_required_string",
       "record_id": "functional-requirements-for-authority-data-frad",
       "mutation": {
         "type": "set_field",
-        "field": "related_schemas",
+        "field": "name",
+        "value": ""
+      }
+    },
+    {
+      "name": "malformed_specification_url",
+      "record_id": "functional-requirements-for-subject-authority-data-frsad",
+      "mutation": {
+        "type": "set_field",
+        "field": "specification_urls",
         "value": [
-          "functional-requirements-for-authority-data-frad"
+          "not-a-uri"
         ]
+      }
+    },
+    {
+      "name": "wrong_type_aliases",
+      "record_id": "frbroo",
+      "mutation": {
+        "type": "set_field",
+        "field": "aliases",
+        "value": "not-an-array"
+      }
+    },
+    {
+      "name": "duplicate_alias_within_record",
+      "record_id": "international-standard-bibliographic-description-isbd",
+      "mutation": {
+        "type": "set_field",
+        "field": "aliases",
+        "value": [
+          "dup",
+          "dup"
+        ]
+      }
+    },
+    {
+      "name": "dangling_parent_family",
+      "record_id": "resource-description-and-access-rda",
+      "mutation": {
+        "type": "set_field",
+        "field": "parent_family",
+        "value": "missing-family"
+      }
+    },
+    {
+      "name": "asymmetric_supersession",
+      "record_id": "rda-element-sets-rda-registry",
+      "mutation": {
+        "type": "set_field",
+        "field": "supersedes",
+        "value": [
+          "anglo-american-cataloguing-rules-second-edition-aacr2"
+        ]
+      }
+    },
+    {
+      "name": "bad_counts_total",
+      "mutation": {
+        "type": "corrupt_counts",
+        "field": "total_records",
+        "value": 999
+      }
+    },
+    {
+      "name": "bad_counts_group",
+      "mutation": {
+        "type": "corrupt_counts",
+        "field": "by_preservation_group",
+        "value": {
+          "archival_museum_and_cultural_resource_schemas": 999,
+          "bibliographic_and_citation_ontologies": 36,
+          "bibliography_style_schemas_and_output_rules": 28,
+          "citation_manager_and_bibliography_interchange_formats": 29,
+          "conceptual_models_and_rules": 16,
+          "general_repository_and_web_discovery_metadata": 30,
+          "library_record_schemas_and_exchange_formats": 34,
+          "research_data_and_software_citation_schemas": 35,
+          "scholarly_publishing_doi_registration_and_full_text_schemas": 31
+        }
+      }
+    },
+    {
+      "name": "replace_root",
+      "mutation": {
+        "type": "replace_root",
+        "value": "not-an-object"
       }
     }
   ]

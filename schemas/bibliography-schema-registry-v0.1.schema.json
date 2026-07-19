@@ -8,7 +8,7 @@
     "registry_id",
     "registry_status",
     "last_reviewed_at",
-    "categories",
+    "preservation_groups",
     "records",
     "generated_counts"
   ],
@@ -32,9 +32,10 @@
       "type": "string",
       "format": "date"
     },
-    "categories": {
+    "preservation_groups": {
       "type": "array",
       "minItems": 8,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": ["id", "title", "description"],
@@ -58,13 +59,14 @@
     "records": {
       "type": "array",
       "minItems": 1,
+      "uniqueItems": false,
       "items": {
         "type": "object",
         "required": [
           "id",
           "name",
           "aliases",
-          "category",
+          "preservation_group",
           "kind",
           "scope",
           "governing_body",
@@ -73,7 +75,9 @@
           "serializations",
           "validation_artifacts",
           "current_version",
+          "admission_status",
           "lifecycle_status",
+          "governance_model",
           "introduced",
           "supersedes",
           "superseded_by",
@@ -101,12 +105,13 @@
           },
           "aliases": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
             }
           },
-          "category": {
+          "preservation_group": {
             "type": "string",
             "minLength": 1
           },
@@ -128,7 +133,8 @@
             ]
           },
           "scope": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "governing_body": {
             "type": [
@@ -150,6 +156,7 @@
           },
           "serializations": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
@@ -157,6 +164,8 @@
           },
           "validation_artifacts": {
             "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
@@ -168,18 +177,34 @@
               "null"
             ]
           },
-          "lifecycle_status": {
+          "admission_status": {
             "enum": [
               "candidate",
+              "validated",
+              "promoted_with_scope",
+              "rejected",
+              "retired"
+            ]
+          },
+          "lifecycle_status": {
+            "enum": [
+              "unknown",
               "active",
-              "legacy",
+              "deprecated",
               "superseded",
+              "withdrawn",
+              "historical"
+            ]
+          },
+          "governance_model": {
+            "enum": [
+              "unknown",
+              "standards_body",
+              "community",
               "vendor_controlled",
-              "style_rule",
-              "protocol",
-              "identifier_system",
-              "experimental",
-              "unverified"
+              "public_institution",
+              "consortium",
+              "mixed"
             ]
           },
           "introduced": {
@@ -190,6 +215,7 @@
           },
           "supersedes": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
@@ -197,6 +223,7 @@
           },
           "superseded_by": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
@@ -206,10 +233,12 @@
             "type": [
               "string",
               "null"
-            ]
+            ],
+            "format": "uri"
           },
           "specification_urls": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "format": "uri"
@@ -219,7 +248,8 @@
             "type": [
               "string",
               "null"
-            ]
+            ],
+            "format": "date"
           },
           "citation_record_support": {
             "enum": [
@@ -277,6 +307,7 @@
           },
           "related_schemas": {
             "type": "array",
+            "uniqueItems": true,
             "items": {
               "type": "string",
               "minLength": 1
@@ -300,13 +331,13 @@
     },
     "generated_counts": {
       "type": "object",
-      "required": ["total_records", "by_category", "by_kind"],
+      "required": ["total_records", "by_preservation_group", "by_kind"],
       "properties": {
         "total_records": {
           "type": "integer",
           "minimum": 0
         },
-        "by_category": {
+        "by_preservation_group": {
           "type": "object",
           "additionalProperties": {
             "type": "integer",

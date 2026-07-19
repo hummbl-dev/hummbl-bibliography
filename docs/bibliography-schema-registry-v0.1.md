@@ -28,6 +28,14 @@ Records keep these distinctions separate:
 - identifier system
 - adjacent schema
 
+Each record carries:
+
+- `preservation_group`: the source taxonomy section retained for preservation
+- `kind`: the primary mutually exclusive classification
+- `admission_status`: registry admission state
+- `lifecycle_status`: artifact lifecycle state
+- `governance_model`: governance/ownership posture
+
 The current registry snapshot is a preserved taxonomy slice. It is not yet a fully sourced admission list for every item.
 
 ## Validation

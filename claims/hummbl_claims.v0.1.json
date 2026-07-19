@@ -1,0 +1,701 @@
+{
+  "schema_version": "hummbl_claim.v0.1",
+  "registry_id": "hummbl_claims_v0.1",
+  "registry_status": "candidate",
+  "last_reviewed_at": "2026-07-16",
+  "claim_domains": [
+    {
+      "code": "BKI",
+      "title": "Belonging as Knowledge Infrastructure",
+      "description": "Claims from BKI theory — the belonging-as-precondition thesis, four propositions, and convergence claims."
+    },
+    {
+      "code": "BIO",
+      "title": "Biocognitive OS",
+      "description": "Claims about the 6 biocognitive modes and the 18-question diagnostic instrument."
+    },
+    {
+      "code": "BRO",
+      "title": "Broccolilly Heuristic",
+      "description": "Claims about the S×T×C×D→R multiplicative heuristic and its failure-mode diagnostics."
+    },
+    {
+      "code": "CON",
+      "title": "Constitutional Tiers",
+      "description": "Claims from the constitutional layer — Truth-Mode, Survival-Mode, Operator-Mode, Succession-Mode."
+    },
+    {
+      "code": "OPS",
+      "title": "Operational Primitives",
+      "description": "Claims about Base120, Krineia, HRSI, coordination bus, kill switch, circuit breaker, and TUPLES."
+    },
+    {
+      "code": "ARC",
+      "title": "Architecture",
+      "description": "Claims about how the three HUMMBL layers connect and the system's structural advantage."
+    }
+  ],
+  "evidence_tiers": [
+    {
+      "code": "constitutional",
+      "title": "Constitutional Invariant",
+      "description": "Stated as a non-overridable constitutional constraint. Cannot be triggered or exited."
+    },
+    {
+      "code": "theoretical",
+      "title": "Theoretical Proposition",
+      "description": "Stated as a theoretical claim with a cited evidence base but not independently validated by HUMMBL."
+    },
+    {
+      "code": "heuristic",
+      "title": "Heuristic",
+      "description": "Stated as a conceptual framework, not a quantitative model. Predicts qualitative patterns."
+    },
+    {
+      "code": "operational",
+      "title": "Operational Protocol",
+      "description": "Stated as an established operational protocol with a running implementation."
+    },
+    {
+      "code": "unvalidated",
+      "title": "Unvalidated Instrument",
+      "description": "Stated as a concept instrument that has not been psychometrically or externally validated."
+    },
+    {
+      "code": "aspirational",
+      "title": "Aspirational",
+      "description": "Stated as a goal or intended future state, not as a current capability."
+    },
+    {
+      "code": "established",
+      "title": "Established",
+      "description": "Stated as an established fact with broad external consensus."
+    },
+    {
+      "code": "peer_reviewed",
+      "title": "Peer-Reviewed Evidence Base",
+      "description": "Grounded in peer-reviewed literature cited by the source."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "BKI-CORE",
+      "domain": "BKI",
+      "claim_text": "Belonging is the structural precondition for knowledge creation, transmission, and transformation — not a soft social outcome.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Belonging is the structural precondition for knowledge creation, transmission, and transformation — not a soft social outcome.",
+      "claim_nature": "theory",
+      "supporting_sources": [
+        {
+          "file_path": ".agents/rules/hummbl-primitives.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "The core BKI thesis. Inverts the conventional model that treats knowledge as content flowing through a clear channel."
+    },
+    {
+      "claim_id": "BKI-P1-COGNITIVE-SCAFFOLDING",
+      "domain": "BKI",
+      "claim_text": "Belonging is a neurobiological prerequisite for higher-order cognition: social threat activates amygdala, raises cortisol, and suppresses the prefrontal cortex, making the receiver physically incapable of the cognitive operations that knowledge transfer requires.",
+      "evidence_tier": "peer_reviewed",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "When an organism perceives social threat, the amygdala activates, cortisol rises, and the prefrontal cortex (the seat of abstraction, planning, and metacognition) is suppressed. In low-belonging states, the receiver is physically incapable of the cognitive operations that knowledge transfer requires.",
+      "claim_nature": "theory",
+      "supporting_sources": [
+        {
+          "file_path": ".agents/rules/hummbl-primitives.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "bibliography_keys": ["ledoux1996", "ledoux2015", "arnsten1998", "sapolsky2017", "edmondson1999", "edmondson2019"],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "Evidence base cited: LeDoux (1996, 2015), Arnsten (1998), Sapolsky (2017), Edmondson (1999, 2019). Bibliography keys are inferred from author+year and require Phase -1B verification against actual .bib entries."
+    },
+    {
+      "claim_id": "BKI-P1-COMPLIANCE-THEATER",
+      "domain": "BKI",
+      "claim_text": "Training programs, governance rollouts, compliance education, and AI alignment work delivered into threat-state organizations produce compliance theater — the appearance of adoption without the substance.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Training programs, governance rollouts, compliance education, and AI alignment work all fail when delivered into threat-state organizations. The content may be flawless; the receiver cannot process it. The result is 'compliance theater' — the appearance of adoption without the substance.",
+      "claim_nature": "theory",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BKI-P1-HRSI-SIGNAL",
+      "domain": "BKI",
+      "claim_text": "HRSI baseline (Safety/Mattering/Connection) below threshold predicts compliance-theater outcomes.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "HRSI baseline (Safety/Mattering/Connection) below threshold predicts compliance-theater outcomes.",
+      "claim_nature": "theory",
+      "risks": [
+        {
+          "severity": "high",
+          "description": "This is a predictive claim (HRSI predicts compliance theater) that has not been empirically tested. The HRSI instrument itself is unvalidated (see BIO-STATUS). The prediction is theoretical, not demonstrated."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BKI-P2-RELATIONAL-VALIDATION",
+      "domain": "BKI",
+      "claim_text": "Knowledge claims gain epistemic authority through belonging networks, not logical validity alone; a claim's truth-status is socially constituted before it is logically constituted.",
+      "evidence_tier": "peer_reviewed",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Knowledge claims gain epistemic authority through belonging networks, not logical validity alone. A claim's truth-status is socially constituted before it is logically constituted. This is not relativism — the underlying empirical referent is real — but it is realism about how knowledge actually circulates.",
+      "claim_nature": "theory",
+      "bibliography_keys": ["baumeister1995", "kahn1990", "mayer1995"],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "Evidence base cited: Baumeister & Leary (1995), Kahn (1990), Mayer, Davis & Schoorman (1995). Bibliography keys inferred from author+year."
+    },
+    {
+      "claim_id": "BKI-P2-TRUST-ASYMMETRY",
+      "domain": "BKI",
+      "claim_text": "A correct claim from a low-trust source will be rejected; a flawed claim from a high-trust source will be accepted.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "A correct claim from a low-trust source will be rejected; a flawed claim from a high-trust source will be accepted.",
+      "claim_nature": "theory",
+      "risks": [
+        {
+          "severity": "medium",
+          "description": "Stated as an absolute ('will be rejected' / 'will be accepted') rather than a probabilistic tendency. The source does not cite empirical evidence for this specific asymmetry; it is an inference from the relational validation proposition."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BKI-P3-EMBODIED-KNOWING",
+      "domain": "BKI",
+      "claim_text": "Wisdom transmits somatically; instructional delivery reaches propositional content only. Apprenticeship, lived practice, and direct co-presence transmit competencies that curriculum cannot.",
+      "evidence_tier": "peer_reviewed",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Wisdom transmits somatically; instructional delivery reaches propositional content only. There is knowledge in the body that the propositions cannot capture. Apprenticeship, lived practice, and direct co-presence transmit competencies that curriculum cannot.",
+      "claim_nature": "theory",
+      "bibliography_keys": ["lave1991", "wenger1998", "argyris1978"],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "Evidence base cited: Lave & Wenger (1991), Wenger (1998), Argyris & Schön (1978)."
+    },
+    {
+      "claim_id": "BKI-P4-SYMBOLIC-SYSTEMS",
+      "domain": "BKI",
+      "claim_text": "Shared symbolic languages emerge FROM belonging structures; imposing vocabulary before belonging inverts the causal arrow.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Shared symbolic languages emerge FROM belonging structures; imposing vocabulary before belonging inverts the causal arrow.",
+      "claim_nature": "theory",
+      "bibliography_keys": ["vygotsky1978", "mezirow2000"],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "Evidence base cited: Vygotsky (ZPD), Mezirow (transformative learning), harm-reduction practice (Zendo Project, Fireside Project)."
+    },
+    {
+      "claim_id": "BKI-P4-VOCABULARY-ANTIGEN",
+      "domain": "BKI",
+      "claim_text": "When a governance framework introduces specialized vocabulary into an organization that lacks the relational substrate, the vocabulary becomes a rejection antigen — a symbol of the imposing party rather than a tool for the receiving party.",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "When a governance framework introduces specialized vocabulary into an organization that lacks the relational substrate, the vocabulary becomes a rejection antigen. The terms become symbols of the imposing party rather than tools for the receiving party.",
+      "claim_nature": "theory",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BKI-BROC-MULTIPLICATIVE",
+      "domain": "BKI",
+      "claim_text": "The Broccolilly Heuristic (S×T×C×D→R) is multiplicative, not additive: if any factor is near zero, the result is near zero, regardless of the remaining factors.",
+      "evidence_tier": "heuristic",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Multiplicative, not additive. If any factor is near zero, the result is near zero. Most knowledge-transfer failures are diagnosable as one factor collapsing while the others are intact.",
+      "claim_nature": "heuristic",
+      "supporting_sources": [
+        {
+          "file_path": ".agents/rules/hummbl-primitives.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BKI-CONVERGENCE",
+      "domain": "BKI",
+      "claim_text": "BKI has independent convergence with harm-reduction practice (Zendo Project, Fireside Project), educational psychology (Vygotsky, Mezirow), somatic practices, and cybernetic governance (requisite variety arguments).",
+      "evidence_tier": "theoretical",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "The BKI frame has independent convergence with: Harm-reduction practice (Zendo Project, Fireside Project)... Educational psychology... Somatic practices... Cybernetic governance... BKI is not a novel discovery — it is a synthesis that names the precondition layer most institutional knowledge frameworks ignore.",
+      "claim_nature": "theory",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "The source explicitly states 'BKI is not a novel discovery — it is a synthesis.' This is an important honesty signal."
+    },
+    {
+      "claim_id": "BIO-SIX-MODES",
+      "domain": "BIO",
+      "claim_text": "There are six biocognitive modes — Sensory, Emotive, Cognitive, Somatic, Relational, and Temporal — that describe how teams process AI governance challenges.",
+      "evidence_tier": "unvalidated",
+      "canonical_source": {
+        "file_path": ".agents/skills/biocognitive-assessment/SKILL.md",
+        "status": "concept_instrument",
+        "version": "1.0.0"
+      },
+      "source_quote": "six biocognitive modes (Sensory / Emotive / Cognitive / Somatic / Relational / Temporal)",
+      "claim_nature": "concept_instrument",
+      "risks": [
+        {
+          "severity": "high",
+          "description": "The 6-mode taxonomy is a HUMMBL-internal design choice, not derived from established cognitive science literature. The source states questions were 'designed from BKI theory + Biocognitive OS mode definitions' — a self-referential grounding."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BIO-DIAGNOSTIC-INSTRUMENT",
+      "domain": "BIO",
+      "claim_text": "An 18-question diagnostic instrument (3 questions per mode, 1-5 Likert scale) can identify dominant and suppressed biocognitive modes and diagnose belonging gaps in teams.",
+      "evidence_tier": "unvalidated",
+      "canonical_source": {
+        "file_path": ".agents/skills/biocognitive-assessment/SKILL.md",
+        "status": "concept_instrument",
+        "version": "1.0.0"
+      },
+      "source_quote": "Administer the 18-question HUMMBL Biocognitive OS diagnostic. Identifies dominant mode, secondary mode, belonging condition diagnosis, and top 3 governance interventions.",
+      "claim_nature": "concept_instrument",
+      "risks": [
+        {
+          "severity": "critical",
+          "description": "The instrument is explicitly marked as 'CONCEPT INSTRUMENT — not validated with external groups.' Scoring rubric is 'face-valid, not psychometrically validated.' The claim that it 'can identify' modes and 'diagnose' belonging gaps is unvalidated. Do not represent as validated in enterprise sales materials."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BIO-VALIDATION-STATUS",
+      "domain": "BIO",
+      "claim_text": "The Biocognitive OS Assessment is a concept instrument that has not been psychometrically validated or tested with external groups; it should not be represented as validated until external validation is complete.",
+      "evidence_tier": "unvalidated",
+      "canonical_source": {
+        "file_path": ".agents/skills/biocognitive-assessment/SKILL.md",
+        "status": "concept_instrument",
+        "version": "1.0.0"
+      },
+      "source_quote": "Current status: CONCEPT INSTRUMENT — not validated with external groups. Questions designed from BKI theory + Biocognitive OS mode definitions. Scoring rubric is face-valid, not psychometrically validated. Do not represent as validated in enterprise sales materials until external validation is complete.",
+      "claim_nature": "concept_instrument",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "This is an honesty claim — the source correctly discloses its own validation status. It is the most well-grounded claim in the BIO domain."
+    },
+    {
+      "claim_id": "BRO-FOUR-FACTOR-CANONICAL",
+      "domain": "BRO",
+      "claim_text": "The canonical Broccolilly heuristic is 4-factor (S×T×C×D→R); an earlier 5-factor version including Integration (S×T×I×C×D=R) was retired 2026-05-07.",
+      "evidence_tier": "heuristic",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Status: 4-factor heuristic (canonical). An earlier 5-factor version including Integration was retired 2026-05-07.",
+      "claim_nature": "heuristic",
+      "supporting_sources": [
+        {
+          "file_path": ".agents/rules/hummbl-primitives.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "BRO-FAILURE-DIAGNOSIS",
+      "domain": "BRO",
+      "claim_text": "Most knowledge-transfer failures are diagnosable as one Broccolilly factor collapsing while the others remain intact; framework designers typically optimize C (clarity) and assume the other factors are constants.",
+      "evidence_tier": "heuristic",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Most knowledge-transfer failures are diagnosable as one factor collapsing while the others are intact... The standard failure mode: framework designers optimize C (clarity) and assume the others are constants. They are not constants.",
+      "claim_nature": "heuristic",
+      "risks": [
+        {
+          "severity": "medium",
+          "description": "'Most' is an unquantified generalization. The claim is a heuristic diagnosis pattern, not an empirically measured frequency."
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "CON-TRUTH-MODE",
+      "domain": "CON",
+      "claim_text": "Truth-Mode is Constitutional Tier 0 — the epistemic honesty floor. No mode may override it. Every claim is tiered (A/B/C per claim-honesty-protocol) and every source is tiered (1-7 per grounding-source-policy).",
+      "evidence_tier": "constitutional",
+      "canonical_source": {
+        "file_path": ".agents/skills/truth-mode/SKILL.md",
+        "status": "canonical",
+        "version": "0.1.0"
+      },
+      "source_quote": "Constitutional Tier 0 — epistemic honesty floor. No mode may override. Every claim is tiered (A/B/C per claim-honesty-protocol). Every source is tiered (1-7 per grounding-source-policy). Always active. Cannot be triggered or exited.",
+      "claim_nature": "constitutional_invariant",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "CON-SURVIVAL-MODE",
+      "domain": "CON",
+      "claim_text": "Survival-Mode is Constitutional Tier 0 — operator existence is the precondition for everything; it is always active and overrides all other modes.",
+      "evidence_tier": "constitutional",
+      "canonical_source": {
+        "file_path": ".agents/skills/survival-mode/SKILL.md",
+        "status": "canonical",
+        "version": "0.1.0"
+      },
+      "source_quote": "Constitutional Tier 0 — operator existence is the precondition for everything. Always active, overrides all modes. Survival-mode overrides all other modes. When survival-mode is active, no other mode's rules apply.",
+      "claim_nature": "constitutional_invariant",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "CON-OPERATOR-MODE",
+      "domain": "CON",
+      "claim_text": "Operator-Mode is Constitutional Tier 0 — human authority is supreme. All agent authority is delegated, not inherent. The operator may override any decision and revoke any delegation. No agent may refuse operator instruction.",
+      "evidence_tier": "constitutional",
+      "canonical_source": {
+        "file_path": ".agents/skills/operator-mode/SKILL.md",
+        "status": "canonical",
+        "version": "0.1.0"
+      },
+      "source_quote": "Constitutional Tier 0 — human authority is supreme. All agent authority is delegated, not inherent. Operator may override any decision, revoke any delegation. No agent may refuse operator instruction (may raise concern, must comply).",
+      "claim_nature": "constitutional_invariant",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "CON-SUCCESSION-MODE",
+      "domain": "CON",
+      "claim_text": "Succession-Mode is Constitutional Tier 5 — it defines what happens when the operator is no longer available. It requires pre-registration and overrides all other modes when active.",
+      "evidence_tier": "constitutional",
+      "canonical_source": {
+        "file_path": ".agents/skills/succession-mode/SKILL.md",
+        "status": "approved",
+        "version": "0.1.0"
+      },
+      "source_quote": "Constitutional Tier 5 — what happens when the operator is no longer available. A will, not a feature. Pre-registration required. Succession-mode overrides all other modes. When active, only the operator's pre-registered directives govern.",
+      "claim_nature": "constitutional_invariant",
+      "risks": [
+        {
+          "severity": "medium",
+          "description": "Status is 'approved' not 'canonical' — lower authority tier than the other three constitutional claims. Requires pre-registration to be operational."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-BASE120-DEFINITION",
+      "domain": "OPS",
+      "claim_text": "Base120 is 120 reasoning operators in 6 families (P, IN, CO, DE, RE, SY) that choose HOW to reason. It operates ON world models — it is not itself a world model. Operator selection is recorded in tuples (auditable).",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "120 reasoning operators in 6 families... Chooses how to reason. Does NOT represent what is believed. Operates ON world models — it is not a world model. Operator selection is recorded in tuples (auditable).",
+      "claim_nature": "operational_protocol",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-WM-DISTINCTION",
+      "domain": "OPS",
+      "claim_text": "World Models (WM) are stateful beliefs about environments, actors, and dynamics. WM ≠ Base120 — they are architecturally distinct. HUMMBL's strongest claim is 'a governed mental-model layer for reasoning over partial world models.'",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "Stateful beliefs about environments, actors, and dynamics. WM is what Base120 operates on — it is not a layer of HUMMBL, it is the substrate Base120 reasons over. HUMMBL's strongest claim: 'a governed mental-model layer for reasoning over partial world models.' Hard invariant: WM ≠ Base120.",
+      "claim_nature": "design_claim",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin",
+      "notes": "The source explicitly calls this 'HUMMBL's strongest claim' — worth tracking for overstatement risk in external materials."
+    },
+    {
+      "claim_id": "OPS-KRINEIA-INVARIANTS",
+      "domain": "OPS",
+      "claim_text": "Krineia is the audit layer with 5 invariants: (1) append-only, (2) no reward-path self-reference, (3) minimal operators (exactly 3), (4) external analysis only, (5) trust-root separation. It proves governance happened and never feeds back into inference.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "The audit layer. Proves governance happened. Never feeds back into inference. 5 Invariants: 1. Append-only — the log only grows; no deletes, no mutations, ever. 2. No reward-path self-reference... 3. Minimal operators — exactly 3... 4. External analysis only... 5. Trust-root separation.",
+      "claim_nature": "operational_protocol",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-KRINEIA-OPERATORS",
+      "domain": "OPS",
+      "claim_text": "Krineia has exactly 3 operators: append() (distinguish-now), project() (distinguish-for-view), cut() (distinguish-as-evidence). These map to three modes of krinein (κρίνειν, to distinguish).",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "Minimal operators — exactly 3: append(), project(), cut(). These map to three modes of krinein (κρίνειν, to distinguish): append = distinguish-now, project = distinguish-for-view, cut = distinguish-as-evidence.",
+      "claim_nature": "operational_protocol",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-COORDINATION-BUS",
+      "domain": "OPS",
+      "claim_text": "The coordination bus is an append-only TSV log with 5 columns (timestamp_utc, from, to, type, message). Historical entries are never edited or deleted. Posting uses flock-based mutual exclusion via the canonical bus writer.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/bus-protocol.md",
+        "status": "canonical"
+      },
+      "source_quote": "The multi-agent bus at _state/coordination/messages.tsv is append-only TSV. Always use the canonical bus writer path for posting (flock-based mutual exclusion). Never edit or delete historical entries.",
+      "claim_nature": "operational_protocol",
+      "supporting_sources": [
+        {
+          "file_path": "PROJECTS/founder-mode/AGENTS.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-KILL-SWITCH",
+      "domain": "OPS",
+      "claim_text": "The kill switch has 4 modes: DISENGAGED → HALT_NONCRITICAL → HALT_ALL → EMERGENCY.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/skills/kill-switch/SKILL.md",
+        "status": "operational",
+        "version": "0.1.0"
+      },
+      "source_quote": "Modes: DISENGAGED, HALT_NONCRITICAL, HALT_ALL, EMERGENCY",
+      "claim_nature": "operational_protocol",
+      "supporting_sources": [
+        {
+          "file_path": "PROJECTS/founder-mode/AGENTS.md",
+          "relationship": "corroborates"
+        }
+      ],
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-CIRCUIT-BREAKER",
+      "domain": "OPS",
+      "claim_text": "The circuit breaker has 3 states: CLOSED → HALF_OPEN → OPEN. It wraps every external adapter.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": "PROJECTS/founder-mode/AGENTS.md",
+        "status": "canonical"
+      },
+      "source_quote": "Circuit Breaker | circuit_breaker.py | 3 states: CLOSED → HALF_OPEN → OPEN. Wraps every external adapter.",
+      "claim_nature": "operational_protocol",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-HRSI-DIMENSIONS",
+      "domain": "OPS",
+      "claim_text": "HRSI is the operational measurement layer of BKI with 3 dimensions (Safety, Mattering, Connection) scored 1-5 each. Composite ≥4.0 is healthy; 2.0-2.9 is substrate failure likely; <2.0 is critical.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/HRSI.md",
+        "status": "specification",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "Three dimensions, scored 1–5 each: Safety, Mattering, Connection. Composite score: mean of three dimensions (range 1.0–5.0). ≥ 4.0: Healthy. 2.0–2.9: Substrate failure likely. < 2.0: Critical.",
+      "claim_nature": "operational_protocol",
+      "risks": [
+        {
+          "severity": "high",
+          "description": "HRSI is a self-designed instrument. The threshold semantics (≥4.0 healthy, <2.0 critical) are specified but not empirically calibrated against external outcomes. The HRSI spec itself does not cite validation studies for these thresholds."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-HRSI-OPERATOR-GATING",
+      "domain": "OPS",
+      "claim_text": "HRSI state gates Base120 operator selection: high belonging (≥3.5 composite) makes all operator families valid; medium (2.5-3.4) prefers P and CO, avoids IN; low (<2.5) allows only P and basic CO.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/HRSI.md",
+        "status": "specification",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "High belonging (≥ 3.5 composite): all operator families valid (P, IN, CO, DE, RE, SY). Medium belonging (2.5–3.4): prefer P (Perspective) and CO (Composition); avoid IN (Inversion) which requires high trust. Low belonging (< 2.5): only P (Perspective) and basic CO; all others deferred.",
+      "claim_nature": "operational_protocol",
+      "risks": [
+        {
+          "severity": "high",
+          "description": "The specific threshold values (3.5, 2.5) and operator-family gating rules are design decisions, not empirically validated. Whether IN (Inversion) actually 'requires high trust' is a theoretical inference from BKI-P2, not a measured property."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "OPS-TUPLES-CONVERGENCE",
+      "domain": "OPS",
+      "claim_text": "TUPLES (CONTRACT · DCT · EVIDENCE) is the atomic governance record that captures who chose which reasoning operator (Base120), over what world state (WM), under what delegation authority (Krineia), with what belonging preconditions met (BKI).",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "All three layers converge in TUPLES (CONTRACT · DCT · EVIDENCE) — the atomic governance record that captures: who chose which reasoning operator (Base120), over what world state (WM), under what delegation authority (Krineia), with what belonging preconditions met (BKI). A tuple is the proof that governance happened.",
+      "claim_nature": "design_claim",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "ARC-THREE-LAYERS",
+      "domain": "ARC",
+      "claim_text": "HUMMBL has 3 theoretical layers: Base120 (WHAT — governed mental-model layer), Krineia (HOW — append-only sovereign audit), BKI (WHY — belonging infrastructure). They converge in TUPLES.",
+      "evidence_tier": "operational",
+      "canonical_source": {
+        "file_path": ".agents/rules/hummbl-primitives.md",
+        "status": "canonical"
+      },
+      "source_quote": "Krineia → HOW to build sovereign audit systems (append-only, external analysis). MM/Base120 → WHAT HUMMBL is (governed mental-model layer over partial world models). BKI → WHY governance frameworks fail and what HUMMBL structurally fixes. Together: HUMMBL is a governed mental-model layer (Base120) that creates the belonging infrastructure (BKI) for AI governance adoption, with append-only audit trails as proof of sovereignty (Krineia).",
+      "claim_nature": "design_claim",
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    },
+    {
+      "claim_id": "ARC-STRUCTURAL-ADVANTAGE",
+      "domain": "ARC",
+      "claim_text": "HUMMBL's structural advantage is that it can detect substrate failure before delivery, not after, by operationalizing all three primitives (Base120 + Krineia + BKI) — belonging-state checks gate which reasoning operators are valid, and receipt audits trace where the framework was actually adopted vs only nominally received.",
+      "evidence_tier": "aspirational",
+      "canonical_source": {
+        "file_path": "PROJECTS/PSI/playground/hummbl-bki/theory/THEORY_MASTER.md",
+        "status": "canonical",
+        "version": "v1.0",
+        "date": "2026-06-13"
+      },
+      "source_quote": "By operationalizing all three primitives (Base120 + Krineia + BKI), the system can detect substrate failure before delivery, not after. Belonging-state checks gate which reasoning operators are valid; receipt audits trace where the framework was actually adopted vs only nominally received.",
+      "claim_nature": "aspiration",
+      "risks": [
+        {
+          "severity": "high",
+          "description": "This is stated as a current capability ('the system can detect') but the detection mechanism depends on HRSI (unvalidated), operator gating thresholds (unvalidated), and receipt audit infrastructure that is partially implemented. The claim conflates design intent with demonstrated capability."
+        }
+      ],
+      "unresolved": true,
+      "extracted_at": "2026-07-16",
+      "extracted_by": "devin"
+    }
+  ],
+  "generated_counts": {
+    "total_claims": 32,
+    "by_domain": {
+      "BKI": 11,
+      "BIO": 3,
+      "BRO": 2,
+      "CON": 4,
+      "OPS": 10,
+      "ARC": 2
+    },
+    "by_evidence_tier": {
+      "theoretical": 7,
+      "peer_reviewed": 3,
+      "heuristic": 3,
+      "constitutional": 4,
+      "operational": 11,
+      "unvalidated": 3,
+      "aspirational": 1
+    },
+    "unresolved_count": 8
+  }
+}
