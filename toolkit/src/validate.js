@@ -35,6 +35,9 @@ class BibValidator {
     this.warnings = [];
     this.totalEntries = 0;
     this.citationKeys = new Set();
+    // When true, validate() calls process.exit() at the end. Set to false
+    // for programmatic/test consumers so the process is not killed.
+    this.exitAfterValidate = true;
   }
 
   log(message, color = 'white') {
@@ -85,12 +88,24 @@ class BibValidator {
     }
 
     // Type-specific fields
+    // An entry may declare a persistent identifier as unavailable via a
+    // `doi-unavailable` / `isbn-unavailable` BibTeX field. When present and
+    // non-empty, the corresponding Missing DOI / Missing ISBN warning is
+    // suppressed — the entry has explicitly attested that no such identifier
+    // exists (e.g. pre-DOI publications, technical reports, whitepapers).
+    // Evidence for the attestation must be recorded in
+    // reports/no-doi-evidence.md (enforced by convention, not by code).
+    const doiUnavailable = rawEntry['doi-unavailable'] && rawEntry['doi-unavailable'].trim();
+    const isbnUnavailable = rawEntry['isbn-unavailable'] && rawEntry['isbn-unavailable'].trim();
+
     if (type === 'book') {
       if (!entry.publisher) {
         this.error(filename, key, 'Missing required field: publisher');
       }
       if (!entry.ISBN) {
-        this.warn(filename, key, 'Missing ISBN');
+        if (!isbnUnavailable) {
+          this.warn(filename, key, 'Missing ISBN');
+        }
       } else {
         // Check ISBN format
         const isbnClean = entry.ISBN.replace(/[-\s]/g, '');
@@ -103,7 +118,9 @@ class BibValidator {
         this.error(filename, key, 'Missing required field: journal/booktitle');
       }
       if (!entry.DOI) {
-        this.warn(filename, key, 'Missing DOI');
+        if (!doiUnavailable) {
+          this.warn(filename, key, 'Missing DOI');
+        }
       }
     }
 
@@ -137,7 +154,7 @@ class BibValidator {
     const lines = entryText.split('\n');
     
     for (const line of lines) {
-      const match = line.match(/^\s*(\w+)\s*=\s*\{(.+)\}\s*,?\s*$/);
+      const match = line.match(/^\s*([\w-]+)\s*=\s*\{(.+)\}\s*,?\s*$/);
       if (match) {
         const [, key, value] = match;
         fields[key.toLowerCase()] = value.trim();
@@ -235,17 +252,27 @@ class BibValidator {
     // Exit with error code if critical errors found
     if (this.errors.length > 0) {
       this.log('\n❌ Validation failed with critical errors', 'red');
-      process.exit(1);
+      if (this.exitAfterValidate) process.exit(1);
+      return;
     }
 
     this.log('');
-    process.exit(0);
+    if (this.exitAfterValidate) process.exit(0);
   }
 }
 
-// Run validator
-const validator = new BibValidator(bibDir, ciMode);
-validator.validate().catch(err => {
-  console.error(chalk.red('Fatal error:'), err);
-  process.exit(1);
-});
+// Export for testing (module consumers). The CLI path below only runs when
+// this file is executed directly as the entry point.
+export { BibValidator };
+
+// Run validator when invoked as the entry point (not when imported).
+// `import.meta.url === ...` would be ideal, but Node's --test runner can
+// re-invoke the module; guard on a process argv check instead.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === __filename;
+if (isMain) {
+  const validator = new BibValidator(bibDir, ciMode);
+  validator.validate().catch(err => {
+    console.error(chalk.red('Fatal error:'), err);
+    process.exit(1);
+  });
+}
