@@ -2,7 +2,7 @@
   "schema_version": "hummbl_claim.v0.1",
   "registry_id": "hummbl_claims_v0.1",
   "registry_status": "candidate",
-  "last_reviewed_at": "2026-07-16",
+  "last_reviewed_at": "2026-07-21",
   "claim_domains": [
     {
       "code": "BKI",
@@ -120,10 +120,18 @@
           "relationship": "corroborates"
         }
       ],
-      "bibliography_keys": ["ledoux1996", "ledoux2015", "arnsten1998", "sapolsky2017", "edmondson1999", "edmondson2019"],
+      "bibliography_keys": [],
       "extracted_at": "2026-07-16",
       "extracted_by": "devin",
-      "notes": "Evidence base cited: LeDoux (1996, 2015), Arnsten (1998), Sapolsky (2017), Edmondson (1999, 2019). Bibliography keys are inferred from author+year and require Phase -1B verification against actual .bib entries."
+      "notes": "Evidence base cited: LeDoux (1996, 2015), Arnsten (1998), Sapolsky (2017), Edmondson (1999, 2019). Bibliography keys are inferred from author+year and require Phase -1B verification against actual .bib entries. Phantom bibliography keys moved to pending_bibliography_keys: ['ledoux1996', 'ledoux2015', 'arnsten1998', 'sapolsky2017', 'edmondson1999', 'edmondson2019']. These works are cited in the source but have no corresponding .bib entry.",
+      "pending_bibliography_keys": [
+        "ledoux1996",
+        "ledoux2015",
+        "arnsten1998",
+        "sapolsky2017",
+        "edmondson1999",
+        "edmondson2019"
+      ]
     },
     {
       "claim_id": "BKI-P1-COMPLIANCE-THEATER",
@@ -177,10 +185,15 @@
       },
       "source_quote": "Knowledge claims gain epistemic authority through belonging networks, not logical validity alone. A claim's truth-status is socially constituted before it is logically constituted. This is not relativism — the underlying empirical referent is real — but it is realism about how knowledge actually circulates.",
       "claim_nature": "theory",
-      "bibliography_keys": ["baumeister1995", "kahn1990", "mayer1995"],
+      "bibliography_keys": [],
       "extracted_at": "2026-07-16",
       "extracted_by": "devin",
-      "notes": "Evidence base cited: Baumeister & Leary (1995), Kahn (1990), Mayer, Davis & Schoorman (1995). Bibliography keys inferred from author+year."
+      "notes": "Evidence base cited: Baumeister & Leary (1995), Kahn (1990), Mayer, Davis & Schoorman (1995). Bibliography keys inferred from author+year. Phantom bibliography keys moved to pending_bibliography_keys: ['baumeister1995', 'kahn1990', 'mayer1995']. These works are cited in the source but have no corresponding .bib entry.",
+      "pending_bibliography_keys": [
+        "baumeister1995",
+        "kahn1990",
+        "mayer1995"
+      ]
     },
     {
       "claim_id": "BKI-P2-TRUST-ASYMMETRY",
@@ -218,7 +231,11 @@
       },
       "source_quote": "Wisdom transmits somatically; instructional delivery reaches propositional content only. There is knowledge in the body that the propositions cannot capture. Apprenticeship, lived practice, and direct co-presence transmit competencies that curriculum cannot.",
       "claim_nature": "theory",
-      "bibliography_keys": ["lave1991", "wenger1998", "argyris1978"],
+      "bibliography_keys": [
+        "Lave1991SituatedLearning",
+        "Wenger1998CommunitiesPractice",
+        "Argyris1976DoubleLoop"
+      ],
       "extracted_at": "2026-07-16",
       "extracted_by": "devin",
       "notes": "Evidence base cited: Lave & Wenger (1991), Wenger (1998), Argyris & Schön (1978)."
@@ -236,10 +253,14 @@
       },
       "source_quote": "Shared symbolic languages emerge FROM belonging structures; imposing vocabulary before belonging inverts the causal arrow.",
       "claim_nature": "theory",
-      "bibliography_keys": ["vygotsky1978", "mezirow2000"],
+      "bibliography_keys": [],
       "extracted_at": "2026-07-16",
       "extracted_by": "devin",
-      "notes": "Evidence base cited: Vygotsky (ZPD), Mezirow (transformative learning), harm-reduction practice (Zendo Project, Fireside Project)."
+      "notes": "Evidence base cited: Vygotsky (ZPD), Mezirow (transformative learning), harm-reduction practice (Zendo Project, Fireside Project). Phantom bibliography keys moved to pending_bibliography_keys: ['vygotsky1978', 'mezirow2000']. These works are cited in the source but have no corresponding .bib entry.",
+      "pending_bibliography_keys": [
+        "vygotsky1978",
+        "mezirow2000"
+      ]
     },
     {
       "claim_id": "BKI-P4-VOCABULARY-ANTIGEN",
