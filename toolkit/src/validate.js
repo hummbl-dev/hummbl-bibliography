@@ -107,9 +107,9 @@ class BibValidator {
           this.warn(filename, key, 'Missing ISBN');
         }
       } else {
-        // Check ISBN format
+        // Check ISBN format (ISBN-10 with optional X checksum, or ISBN-13)
         const isbnClean = entry.ISBN.replace(/[-\s]/g, '');
-        if (!/^\d{10}(\d{3})?$/.test(isbnClean)) {
+        if (!/^(\d{9}[\dX]|\d{13})$/i.test(isbnClean)) {
           this.error(filename, key, 'Malformed ISBN');
         }
       }
