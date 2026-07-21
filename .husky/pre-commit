@@ -26,6 +26,7 @@ fi
 
 # Run validation and secret scanning before commit
 echo "🔍 Running pre-commit checks..."
+npm run sync-llms
 
 ROOT="$(git rev-parse --show-toplevel)"
 

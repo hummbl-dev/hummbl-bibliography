@@ -1,1105 +1,1885 @@
 # HUMMBL Bibliography — llms.txt
 # AI-readable index of the HUMMBL research bibliography.
-# 260 entries across 13 tiers. Last updated: 2026-04-09.
+# 460 entries across 19 tiers. Last updated: 2026-07-21.
 #
 # Query API: node toolkit/src/query.js --keyword HUMMBL:BKI --format json
 # Direct DOI access: https://doi.org/{doi}
 #
-# HUMMBL keyword legend:
-#   HUMMBL:BKI  Belonging as Knowledge Infrastructure
-#   HUMMBL:SY   System-level governance / sovereignty
-#   HUMMBL:RE   Reasoning / inference quality
-#   HUMMBL:IN   Infrastructure / operations
-#   HUMMBL:DE   Design patterns / architecture
-#   HUMMBL:TR   Trust & transparency
-#   HUMMBL:CO   Coordination / multi-agent
-#   HUMMBL:AL   Alignment & safety
-#   HUMMBL:GO   Governance & compliance
-#   HUMMBL:SE   Security & adversarial robustness
-#   HUMMBL:EC   Economics & incentives
-#   HUMMBL:HF   Human factors & teaming
-#   HUMMBL:ML   ML methods & evaluation
-#   HUMMBL:KM   Knowledge management
-#   HUMMBL:CX   Complexity & emergence
-#
-# NIST AI RMF functions: GOVERN MAP MEASURE MANAGE
 
-## T1: Canonical Foundations (Complexity, Cybernetics, Cognition) (20 entries)
+## T1: Canonical (47 entries)
 
-- **Alexander1977Pattern** (Alexander, 1977) no-doi
-  A Pattern Language: Towns, Buildings, Construction
-  Keywords: HUMMBL:CO HUMMBL:SY
-
-- **Csikszentmihalyi1990Flow** (Csikszentmihalyi, 1990) no-doi
-  Flow: The Psychology of Optimal Experience
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Gibson1979EcologicalApproach** (Gibson, 1979) no-doi
-  The Ecological Approach to Visual Perception
-  Keywords: HUMMBL:P HUMMBL:IN
-
-- **Gladwell2000TippingPoint** (Gladwell, 2000) no-doi
-  The Tipping Point: How Little Things Can Make a Big Difference
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Hofstadter1979Godel** (Hofstadter, 1979) no-doi
-  Gödel, Escher, Bach: An Eternal Golden Braid
-  Keywords: HUMMBL:RE HUMMBL:SY
-
-- **Kahneman2011Thinking** (Kahneman, 2011) doi:10.1037/e412042005-001
-  Thinking, Fast and Slow
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:DE
-
-- **Kuhn1996Structure** (Kuhn, 1996) doi:10.7208/chicago/9780226458106.001.0001
-  The Structure of Scientific Revolutions
-  Keywords: HUMMBL:P HUMMBL:IN
-
-- **Laird2012Standard** (Laird, 2012) no-doi
-  The Soar Cognitive Architecture
-  Keywords: HUMMBL:CO HUMMBL:RE
-
-- **Lakoff1980MetaphorsWeLive** (Lakoff, 1980) no-doi
-  Metaphors We Live By
-  Keywords: HUMMBL:P HUMMBL:SY
-
-- **Meadows2008ThinkingSystems** (Meadows, 2008) no-doi
+- **Meadows2008ThinkingSystems** (Meadows, Donella H., 2008) no-doi
   Thinking in Systems: A Primer
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:CO
+  Keywords: HUMMBL:systems thinking
 
-- **Miller1956MagicalNumber** (Miller, 1956) doi:10.1037/h0043158
-  The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information
-  Keywords: HUMMBL:DE HUMMBL:CO
+- **Kahneman2011Thinking** (Kahneman, Daniel, 2011) doi:10.1037/e412042005-001
+  Thinking, Fast and Slow
+  Keywords: HUMMBL:cognitive bias HUMMBL:dual-process theory
 
-- **Newell1972Human** (Newell, 1972) no-doi
-  Human Problem Solving
-  Keywords: HUMMBL:RE HUMMBL:DE
-
-- **Norman2013DesignEveryday** (Norman, 2013) doi:10.15358/9783800648108
-  The Design of Everyday Things
-  Keywords: HUMMBL:P HUMMBL:CO
-
-- **Pearl2009Causality** (Pearl, 2009) doi:10.1017/CBO9780511803161
-  Causality: Models, Reasoning, and Inference
-  Keywords: HUMMBL:IN HUMMBL:RE
-
-- **Schon1983ReflectivePractitioner** (Schön, 1983) no-doi
-  The Reflective Practitioner: How Professionals Think in Action
-  Keywords: HUMMBL:P HUMMBL:RE
-
-- **Senge1990FifthDiscipline** (Senge, 1990) no-doi
-  The Fifth Discipline: The Art and Practice of the Learning Organization
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Simon1996Sciences** (Simon, 1996) doi:10.7551/mitpress/1881.001.0001
+- **Simon1996Sciences** (Simon, Herbert A., 1996) no-doi
   The Sciences of the Artificial
-  Keywords: HUMMBL:CO HUMMBL:DE
+  Keywords: HUMMBL:artificial intelligence HUMMBL:bounded rationality HUMMBL:design science
 
-- **Taleb2007BlackSwan** (Taleb, 2007) no-doi
-  The Black Swan: The Impact of the Highly Improbable
-  Keywords: HUMMBL:IN HUMMBL:P
+- **Newell1972Human** (Newell, Allen and Simon, Herbert A., 1972) no-doi
+  Human Problem Solving
+  Keywords: HUMMBL:heuristic search HUMMBL:information processing HUMMBL:problem solving
 
-- **Tufte2001VisualDisplay** (Tufte, 2001) no-doi
+- **Csikszentmihalyi1990Flow** (Csikszentmihalyi, Mihaly, 1990) no-doi
+  Flow: The Psychology of Optimal Experience
+  Keywords: HUMMBL:flow HUMMBL:intrinsic motivation HUMMBL:optimal experience
+
+- **Norman2013DesignEveryday** (Norman, Donald A., 2013) doi:10.15358/9783800648108
+  The Design of Everyday Things
+  Keywords: HUMMBL:affordances HUMMBL:design HUMMBL:usability
+
+- **Pearl2009Causality** (Pearl, Judea, 2009) doi:10.1017/CBO9780511803161
+  Causality: Models, Reasoning, and Inference
+  Keywords: HUMMBL:causal models HUMMBL:causality HUMMBL:inference
+
+- **Lakoff1980MetaphorsWeLive** (Lakoff, George and Johnson, Mark, 1980) doi:10.7208/chicago/9780226470993.001.0001
+  Metaphors We Live By
+  Keywords: HUMMBL:cognitive linguistics HUMMBL:conceptual systems HUMMBL:metaphor
+
+- **Hofstadter1979Godel** (Hofstadter, Douglas R., 1979) no-doi
+  Gödel, Escher, Bach: An Eternal Golden Braid
+  Keywords: HUMMBL:consciousness HUMMBL:recursion HUMMBL:self-reference
+
+- **Kuhn1996Structure** (Kuhn, Thomas S., 1996) doi:10.7208/chicago/9780226458106.001.0001
+  The Structure of Scientific Revolutions
+  Keywords: HUMMBL:paradigm shift HUMMBL:scientific method
+
+- **Tufte2001VisualDisplay** (Tufte, Edward R., 2001) no-doi
   The Visual Display of Quantitative Information
-  Keywords: HUMMBL:P HUMMBL:SY
+  Keywords: HUMMBL:data visualization HUMMBL:information design
 
-- **VonNeumann1944GameTheory** (Neumann, 1944) no-doi
+- **Taleb2007BlackSwan** (Taleb, Nassim Nicholas, 2007) no-doi
+  The Black Swan: The Impact of the Highly Improbable
+  Keywords: HUMMBL:probability HUMMBL:rare events HUMMBL:uncertainty
+
+- **Alexander1977Pattern** (Alexander, Christopher and Ishikawa, Sara and Silverstein, Murray, 1977) no-doi
+  A Pattern Language: Towns, Buildings, Construction
+  Keywords: HUMMBL:architecture HUMMBL:design patterns
+
+- **Senge1990FifthDiscipline** (Senge, Peter M., 1990) no-doi
+  The Fifth Discipline: The Art and Practice of the Learning Organization
+  Keywords: HUMMBL:organizational learning HUMMBL:systems thinking
+
+- **VonNeumann1944GameTheory** (von Neumann, John and Morgenstern, Oskar, 1944) no-doi
   Theory of Games and Economic Behavior
-  Keywords: HUMMBL:IN HUMMBL:CO
+  Keywords: HUMMBL:decision theory HUMMBL:game theory HUMMBL:strategic thinking
+
+- **Miller1956MagicalNumber** (Miller, George A., 1956) doi:10.1037/h0043158
+  The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information
+  Keywords: HUMMBL:chunking HUMMBL:cognitive limits HUMMBL:working memory
+
+- **Gladwell2000TippingPoint** (Gladwell, Malcolm, 2000) no-doi
+  The Tipping Point: How Little Things Can Make a Big Difference
+  Keywords: HUMMBL:critical mass HUMMBL:network effects HUMMBL:social epidemics
+
+- **Schon1983ReflectivePractitioner** (Schön, Donald A., 1983) no-doi
+  The Reflective Practitioner: How Professionals Think in Action
+  Keywords: HUMMBL:professional practice HUMMBL:reflection HUMMBL:tacit knowledge
+
+- **Gibson1979EcologicalApproach** (Gibson, James J., 1979) no-doi
+  The Ecological Approach to Visual Perception
+  Keywords: HUMMBL:affordances HUMMBL:ecological psychology HUMMBL:perception
+
+- **Laird2012Standard** (Laird, John E., 2012) no-doi
+  The Soar Cognitive Architecture
+  Keywords: HUMMBL:artificial intelligence HUMMBL:cognitive architecture HUMMBL:cognitive modeling
+
+- **Pearson1892GrammarScience** (Pearson, Karl, 1892) no-doi
+  The Grammar of Science
+  Keywords: HUMMBL:categories of explanation HUMMBL:grammar of reality HUMMBL:philosophy of science HUMMBL:scientific method
+
+- **Kant1787CritiquePureReason** (Kant, Immanuel, 1787) no-doi
+  Critique of Pure Reason
+  Keywords: HUMMBL:a priori HUMMBL:categories HUMMBL:epistemology HUMMBL:syntax of experience HUMMBL:transcendental philosophy
+
+- **Wittgenstein1921Tractatus** (Wittgenstein, Ludwig, 1921) doi:10.4324/9781315110739
+  Tractatus Logico-Philosophicus
+  Keywords: HUMMBL:grammar of reality HUMMBL:logical atomism HUMMBL:logical form HUMMBL:philosophy of language HUMMBL:picture theory
 
+- **Wittgenstein1953PhilosophicalInvestigations** (Wittgenstein, Ludwig, 1953) doi:10.1002/9781444310526
+  Philosophical Investigations
+  Keywords: HUMMBL:forms of life HUMMBL:language games HUMMBL:meaning as use HUMMBL:philosophy of language HUMMBL:rule-following HUMMBL:thick grammar
 
-## T10: Human Factors & Collaborative Systems (20 entries)
+- **Wittgenstein1969OnCertainty** (Wittgenstein, Ludwig, 1969) doi:10.1002/9781444312773
+  On Certainty
+  Keywords: HUMMBL:epistemology HUMMBL:grammar HUMMBL:grammaticalization of experience HUMMBL:hinge certainty HUMMBL:reality-soaked grammar HUMMBL:skepticism
 
-- **Arrieta2020ExplainableAI** (Arrieta, 2020) doi:10.1016/j.inffus.2019.12.012
-  Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible AI
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:CO
+- **Heidegger1927BeingTime** (Heidegger, Martin, 1927) no-doi
+  Being and Time
+  Keywords: HUMMBL:Dasein HUMMBL:grammar of being HUMMBL:intelligibility HUMMBL:ontological difference HUMMBL:ontology HUMMBL:phenomenology
 
-- **Bansal2019MentalModels** (Bansal, 2019) doi:10.1609/hcomp.v7i1.5285
-  Beyond Accuracy: The Role of Mental Models in Human-AI Team Performance
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:CO
+- **Whitehead1929ProcessReality** (Whitehead, Alfred North, 1929) no-doi
+  Process and Reality: An Essay in Cosmology
+  Keywords: HUMMBL:actual occasions HUMMBL:cosmology HUMMBL:grammatical shift HUMMBL:ontology HUMMBL:process metaphysics
 
-- **CannonBowers1993SharedMentalModels** (Cannon-Bowers, 1993) doi:10.1006/obhd.1993.1027
-  Shared Mental Models in Expert Team Decision Making
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:P
+- **Bohm1980WholenessImplicate** (Bohm, David, 1980) doi:10.4324/9780203950870
+  Wholeness and the Implicate Order
+  Keywords: HUMMBL:grammar of process HUMMBL:implicate order HUMMBL:process philosophy HUMMBL:rheomode HUMMBL:wholeness
 
-- **Chen2018HumanRobotTeaming** (Chen, 2018) doi:10.1080/1463922X.2017.1315750
-  Situation Awareness-Based Agent Transparency and Human-Autonomy Teaming Effectiveness
-  Keywords: HUMMBL:P HUMMBL:SY HUMMBL:CO
+- **Hacker2002WittgensteinGrammar** (Hacker, P. M. S., 2002) doi:10.1093/0199254012.001.0001
+  Wittgenstein's Grammar: Through Thick and Thin
+  Keywords: HUMMBL:Wittgenstein HUMMBL:constitutive rules HUMMBL:grammar HUMMBL:philosophy of language HUMMBL:thick grammar HUMMBL:thin grammar
 
-- **Endsley1995SituationAwareness** (Endsley, 1995) doi:10.1518/001872095779049543
-  Toward a Theory of Situation Awareness in Dynamic Systems
-  Keywords: HUMMBL:P HUMMBL:SY HUMMBL:RE
+- **Malcolm1980WittgensteinGrammar** (Malcolm, Norman, 1980) no-doi
+  Wittgenstein: The Grammar of Reality
+  Keywords: HUMMBL:Wittgenstein HUMMBL:book review HUMMBL:earliest use HUMMBL:grammar of reality HUMMBL:journalism
 
-- **Grudin1988WhyCSCW** (Grudin, 1988) doi:10.1145/62266.62273
-  Why CSCW Applications Fail: Problems in the Design and Evaluation of Organizational Interfaces
-  Keywords: HUMMBL:IN HUMMBL:SY HUMMBL:P
+- **Bhartrhari5thCVakyapadiya** (Bhartṛhari, 450) no-doi
+  Vākyapadīya
+  Keywords: HUMMBL:Bhartṛhari HUMMBL:Indian philosophy HUMMBL:Vākyapadīya HUMMBL:grammar HUMMBL:non-Western genealogy HUMMBL:ontology HUMMBL:word-monism HUMMBL:śabda-brahman
 
-- **Helmreich1999CRM** (Helmreich, 1999) doi:10.1136/bmj.320.7237.781
-  On Error Management: Lessons from Aviation
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:IN
+- **KaderbhaiGrammarRealityVakyapadiya** (Kaderbhai, Aamir, 2018) no-doi
+  The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}
+  Keywords: HUMMBL:Bhartṛhari HUMMBL:Indian philosophy HUMMBL:Vākyapadīya HUMMBL:grammar of reality HUMMBL:metaphysical pluralism HUMMBL:realism HUMMBL:sphoṭa
 
-- **Hollnagel2005JointCognitive** (Hollnagel, 2005) doi:10.1201/9781420038194
-  Joint Cognitive Systems: Foundations of Cognitive Systems Engineering
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:P
+- **Moss1995GrammarConsciousness** (Moss, Edward, 1995) no-doi
+  The Grammar of Consciousness: An Exploration of Tacit Knowing
+  Keywords: HUMMBL:Polanyi HUMMBL:consciousness HUMMBL:grammar HUMMBL:structure of consciousness HUMMBL:tacit knowing
 
-- **Klein2005CommonGround** (Klein, 2005) doi:10.1002/0471739448.ch6
-  Common Ground and Coordination in Joint Activity
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:RE
+- **Popper1959LogicDiscovery** (Popper, Karl R., 1959) no-doi
+  The Logic of Scientific Discovery
+  Keywords: HUMMBL:demarcation HUMMBL:epistemology HUMMBL:falsification HUMMBL:philosophy of science
 
-- **Lee2004TrustAutomation** (Lee, 2004) doi:10.1518/hfes.46.1.50_30392
-  Trust in Automation: Designing for Appropriate Reliance
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:DE
+- **Watzlawick1974Change** (Watzlawick, Paul and Weakland, John H. and Fisch, Richard, 1974) no-doi
+  Change: Principles of Problem Formation and Problem Resolution
+  Keywords: HUMMBL:paradoxical intervention HUMMBL:reframing HUMMBL:second-order change HUMMBL:systems theory
 
-- **Licklider1960ManComputer** (Licklider, 1960) doi:10.1109/THFE2.1960.4503259
-  Man-Computer Symbiosis
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:SY
+- **Taleb2012Antifragile** (Taleb, Nassim Nicholas, 2012) no-doi
+  Antifragile: Things That Gain from Disorder
+  Keywords: HUMMBL:antifragility HUMMBL:barbell strategy HUMMBL:disorder HUMMBL:tail risk HUMMBL:volatility
 
-- **Malone1994InterdisciplinaryCoordination** (Malone, 1994) doi:10.1145/174666.174668
-  The Interdisciplinary Study of Coordination
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:DE
+- **Weber1922EconomySociety** (Weber, Max, 1922) no-doi
+  Economy and Society: An Outline of Interpretive Sociology
+  Keywords: HUMMBL:Weber HUMMBL:authority HUMMBL:ideal types HUMMBL:iron cage HUMMBL:rationalization
 
-- **Noy2023ProductivityAI** (Noy, 2023) doi:10.1126/science.adh2586
-  Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
-  Keywords: HUMMBL:CO HUMMBL:P HUMMBL:SY
+- **Burnham1941ManagerialRevolution** (Burnham, James, 1941) no-doi
+  The Managerial Revolution: What Is Happening in the World
+  Keywords: HUMMBL:Burnham HUMMBL:bureaucratic power HUMMBL:managerial revolution HUMMBL:managerialism
 
-- **ONeill2022HumanAutonomy** (O'Neill, 2022) doi:10.1177/0018720820960865
-  Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Chomsky1988ManufacturingConsent** (Chomsky, Noam and Herman, Edward S., 1988) no-doi
+  Manufacturing Consent: The Political Economy of the Mass Media
+  Keywords: HUMMBL:Chomsky HUMMBL:manufacturing consent HUMMBL:media HUMMBL:propaganda model
 
-- **Olson2000DistanceMatters** (Olson, 2000) doi:10.1207/S15327051HCI1523_4
-  Distance Matters
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Gramsci1929PrisonNotebooks** (Gramsci, Antonio, 1929) no-doi
+  Prison Notebooks
+  Keywords: HUMMBL:Gramsci HUMMBL:civil society HUMMBL:hegemony HUMMBL:organic intellectual
 
-- **Parasuraman2000AdaptiveAutomation** (Parasuraman, 2000) doi:10.1109/3468.844354
-  A Model for Types and Levels of Human Interaction with Automation
-  Keywords: HUMMBL:DE HUMMBL:SY HUMMBL:P
+- **Marx1867Capital** (Marx, Karl, 1867) no-doi
+  Capital: Critique of Political Economy, Volume 1
+  Keywords: HUMMBL:Marx HUMMBL:capital HUMMBL:commodity fetishism HUMMBL:exploitation HUMMBL:surplus value
 
-- **Rahwan2018SocietyLoop** (Rahwan, 2018) doi:10.1007/s10676-017-9430-8
-  Society-in-the-Loop: Programming the Algorithmic Social Contract
-  Keywords: HUMMBL:SY HUMMBL:P HUMMBL:IN
+- **Nietzsche1887Genealogy** (Nietzsche, Friedrich, 1887) no-doi
+  On the Genealogy of Morals
+  Keywords: HUMMBL:Nietzsche HUMMBL:ascetic ideal HUMMBL:genealogy HUMMBL:morality HUMMBL:power
 
-- **Salas2005BigFive** (Salas, 2005) doi:10.1177/1046496405277134
-  Is There a ``Big Five'' in Teamwork?
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:SY
+- **Heidegger1954QuestionTechnology** (Heidegger, Martin, 1954) no-doi
+  The Question Concerning Technology
+  Keywords: HUMMBL:Heidegger HUMMBL:enframing HUMMBL:revealing HUMMBL:standing reserve HUMMBL:technology
 
-- **Vicente1999CognitiveWorkAnalysis** (Vicente, 1999) no-doi
-  Cognitive Work Analysis: Toward Safe, Productive, and Healthy Computer-Based Work
-  Keywords: HUMMBL:DE HUMMBL:SY HUMMBL:CO
+- **McLuhan1964UnderstandingMedia** (McLuhan, Marshall, 1964) no-doi
+  Understanding Media: The Extensions of Man
+  Keywords: HUMMBL:McLuhan HUMMBL:extensions HUMMBL:media HUMMBL:medium is the message
 
-- **Williams2000PairProgramming** (Williams, 2000) doi:10.1145/332833.332848
-  All I Really Need to Know About Pair Programming I Learned in Kindergarten
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Veblen1899LeisureClass** (Veblen, Thorstein, 1899) no-doi
+  The Theory of the Leisure Class
+  Keywords: HUMMBL:Veblen HUMMBL:conspicuous consumption HUMMBL:emulation HUMMBL:leisure class HUMMBL:status
 
+- **Pareto1935MindSociety** (Pareto, Vilfredo, 1935) no-doi
+  The Mind and Society (Trattato di Sociologia Generale)
+  Keywords: HUMMBL:Pareto HUMMBL:elite circulation HUMMBL:non-logical action HUMMBL:residues
 
-## T11: AI Security & Adversarial Robustness (20 entries)
+- **IbnKhaldun1377Muqaddimah** (Ibn Khaldun, 1377) no-doi
+  The Muqaddimah: An Introduction to History
+  Keywords: HUMMBL:Ibn Khaldun HUMMBL:asabiyyah HUMMBL:cyclical history HUMMBL:social cohesion
 
-- **Biggio2018Wild** (Biggio, 2018) doi:10.1016/j.patcog.2018.07.023 [MAP MEASURE]
-  Wild Patterns: Ten Years After the Rise of Adversarial Machine Learning
-  Keywords: HUMMBL:P HUMMBL:DE HUMMBL:IN
+## T2: Empirical (26 entries)
 
-- **Birgisson2014Macaroons** (Birgisson, 2014) doi:10.14722/ndss.2014.23212 [GOVERN MANAGE]
-  Macaroons: Cookies with Contextual Caveats for Decentralized Authorization in the Cloud
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:DE
+- **Rasmussen1983Skills** (Rasmussen, Jens, 1983) doi:10.1109/TSMC.1983.6313160
+  Skills, Rules, and Knowledge; Signals, Signs, and Symbols, and Other Distinctions in Human Performance Models
+  Keywords: HUMMBL:cognitive systems engineering HUMMBL:decision making HUMMBL:human performance
 
-- **Carlini2017Evaluating** (Carlini, 2017) doi:10.1109/SP.2017.49 [MEASURE]
-  Towards Evaluating the Robustness of Neural Networks
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:DE
+- **Frith2007Making** (Frith, Chris D. and Frith, Uta, 2007) doi:10.1016/j.cub.2007.05.068
+  Social Cognition in Humans
+  Keywords: HUMMBL:neuroscience HUMMBL:social cognition HUMMBL:theory of mind
 
-- **Castro1999PBFT** (Castro, 2002) doi:10.1145/570907.570913 [MANAGE]
-  Practical Byzantine Fault Tolerance and Proactive Recovery
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:RE
+- **Tversky1974Judgment** (Tversky, Amos and Kahneman, Daniel, 1974) doi:10.1126/science.185.4157.1124
+  Judgment under Uncertainty: Heuristics and Biases
+  Keywords: HUMMBL:cognitive bias HUMMBL:decision making HUMMBL:heuristics
 
-- **Dwork2006DifferentialPrivacy** (Dwork, 2006) doi:10.1007/11681878_14 [MANAGE MEASURE]
-  Calibrating Noise to Sensitivity in Private Data Analysis
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
+- **Simon1955Behavioral** (Simon, Herbert A., 1955) doi:10.2307/1884852
+  A Behavioral Model of Rational Choice
+  Keywords: HUMMBL:bounded rationality HUMMBL:decision making HUMMBL:satisficing
 
-- **Gentry2009Homomorphic** (Gentry, 2009) doi:10.1145/1536414.1536440 [MANAGE]
-  Fully Homomorphic Encryption Using Ideal Lattices
-  Keywords: HUMMBL:CO HUMMBL:IN HUMMBL:DE
+- **March1991Exploration** (March, James G., 1991) doi:10.1287/orsc.2.1.71
+  Exploration and Exploitation in Organizational Learning
+  Keywords: HUMMBL:adaptation HUMMBL:exploration-exploitation HUMMBL:organizational learning
 
-- **Goodfellow2015Adversarial** (Goodfellow, 2015) no-doi [MAP MEASURE]
-  Explaining and Harnessing Adversarial Examples
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
+- **Weick1993Collapse** (Weick, Karl E., 1993) doi:10.2307/2393339
+  The Collapse of Sensemaking in Organizations: The Mann Gulch Disaster
+  Keywords: HUMMBL:crisis management HUMMBL:organizational resilience HUMMBL:sensemaking
 
-- **Greshake2023PromptInjection** (Greshake, 2023) doi:10.48550/arXiv.2302.12173 [MAP MANAGE]
-  Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
+- **Dunbar1995InVivo** (Dunbar, Kevin, 1995) doi:10.7551/mitpress/4879.003.0017
+  How Scientists Really Reason: Scientific Reasoning in Real-World Laboratories
+  Keywords: HUMMBL:analogy HUMMBL:conceptual change HUMMBL:scientific reasoning
 
-- **Guo2024Threats** (Guo, 2024) no-doi [MAP]
-  Threats, Attacks, and Defenses in Machine Unlearning: A Survey
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:SY
+- **Gentner1983Structure** (Gentner, Dedre, 1983) doi:10.1207/s15516709cog0702_3
+  Structure-Mapping: A Theoretical Framework for Analogy
+  Keywords: HUMMBL:analogy HUMMBL:cognitive mapping HUMMBL:reasoning
 
-- **Katz2017Reluplex** (Katz, 2017) doi:10.1007/978-3-319-63387-9_5 [MEASURE]
-  Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks
-  Keywords: HUMMBL:DE HUMMBL:IN HUMMBL:RE
+- **Gigerenzer1996Reasoning** (Gigerenzer, Gerd and Goldstein, Daniel G., 1996) doi:10.1037/0033-295X.103.4.650
+  Reasoning the Fast and Frugal Way: Models of Bounded Rationality
+  Keywords: HUMMBL:bounded rationality HUMMBL:fast-and-frugal HUMMBL:heuristics
 
-- **Lyu2020FederatedSecurity** (Lyu, 2020) doi:10.1109/MSP.2020.2975749 [MAP MANAGE]
-  Threats to Federated Learning: A Comprehensive Survey
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:RE
+- **Larkin1980Expert** (Larkin, Jill and McDermott, John and Simon, Dorothea P. and Simon, Herbert A., 1980) doi:10.1126/science.208.4450.1335
+  Expert and Novice Performance in Solving Physics Problems
+  Keywords: HUMMBL:expertise HUMMBL:knowledge representation HUMMBL:problem solving
 
-- **MITRE2024ATLAS** (Corporation}, 2024) no-doi [MAP MANAGE]
-  ATLAS: Adversarial Threat Landscape for AI Systems
-  Keywords: HUMMBL:DE HUMMBL:IN HUMMBL:SY
+- **Chi1981Categorization** (Chi, Michelene T. H. and Feltovich, Paul J. and Glaser, Robert, 1981) doi:10.1207/s15516709cog0502_2
+  Categorization and Representation of Physics Problems by Experts and Novices
+  Keywords: HUMMBL:categorization HUMMBL:expertise HUMMBL:schema
 
-- **Ohrimenko2016SecureEnclaves** (Ohrimenko, 2016) no-doi [MANAGE]
-  Oblivious Multi-Party Machine Learning on Trusted Processors
-  Keywords: HUMMBL:IN HUMMBL:CO HUMMBL:DE
+- **Treisman1980Features** (Treisman, Anne M. and Gelade, Garry, 1980) doi:10.1016/0010-0285(80)90005-5
+  A Feature-Integration Theory of Attention
+  Keywords: HUMMBL:attention HUMMBL:feature integration HUMMBL:perception
 
-- **Papernot2016Distillation** (Papernot, 2016) doi:10.1109/SP.2016.41 [MANAGE MEASURE]
-  Distillation as a Defense to Adversarial Perturbations Against Deep Neural Networks
-  Keywords: HUMMBL:CO HUMMBL:IN HUMMBL:DE
+- **Nisbett1977Telling** (Nisbett, Richard E. and Wilson, Timothy D., 1977) doi:10.1037/0033-295X.84.3.231
+  Telling More Than We Can Know: Verbal Reports on Mental Processes
+  Keywords: HUMMBL:cognitive processes HUMMBL:introspection HUMMBL:metacognition
 
-- **Papernot2018SoK** (Papernot, 2018) doi:10.1109/EuroSP.2018.00035 [MAP MEASURE MANAGE]
-  SoK: Security and Privacy in Machine Learning
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:CO
+- **Wason1968Reasoning** (Wason, Peter C., 1968) doi:10.1080/14640746808400161
+  Reasoning about a Rule
+  Keywords: HUMMBL:confirmation bias HUMMBL:hypothesis testing HUMMBL:reasoning
 
-- **Perez2022RedTeaming** (Perez, 2022) doi:10.18653/v1/2022.emnlp-main.225 [MAP MEASURE]
-  Red Teaming Language Models with Language Models
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:SY
+- **Simons1999Gorilla** (Simons, Daniel J. and Chabris, Christopher F., 1999) doi:10.1068/p281059
+  Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events
+  Keywords: HUMMBL:attention HUMMBL:inattentional blindness HUMMBL:perception
 
-- **Rose2020ZeroTrust** (Rose, 2020) doi:10.6028/NIST.SP.800-207 [GOVERN MANAGE]
-  Zero Trust Architecture
-  Keywords: HUMMBL:IN HUMMBL:SY HUMMBL:P
+- **Hutchins1995Cognition** (Hutchins, Edwin, 1995) doi:10.7551/mitpress/1881.001.0001
+  Cognition in the Wild
+  Keywords: HUMMBL:distributed cognition HUMMBL:navigation HUMMBL:situated cognition
 
-- **SLSA2023SupplyChain** ((Google, 2023) no-doi [MAP MANAGE]
-  SLSA: Supply-chain Levels for Software Artifacts
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:CO
+- **Klein1993Recognition** (Klein, Gary A., 1993) no-doi
+  A Recognition-Primed Decision (RPD) Model of Rapid Decision Making
+  Keywords: HUMMBL:expertise HUMMBL:naturalistic decision making HUMMBL:pattern recognition
 
-- **Saltzer1975Protection** (Saltzer, 1975) doi:10.1109/PROC.1975.9939 [GOVERN MANAGE]
-  The Protection of Information in Computer Systems
-  Keywords: HUMMBL:P HUMMBL:DE HUMMBL:CO
+- **Ericsson1995LongTerm** (Ericsson, K. Anders and Kintsch, Walter, 1995) doi:10.1037/0033-295X.102.2.211
+  Long-Term Working Memory
+  Keywords: HUMMBL:expertise HUMMBL:retrieval structures HUMMBL:working memory
 
-- **Shokri2017Membership** (Shokri, 2017) doi:10.1109/SP.2017.41 [MAP MEASURE]
-  Membership Inference Attacks Against Machine Learning Models
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:P
+- **BrownCollinsDuguid1989Situated** (Brown, John Seely and Collins, Allan and Duguid, Paul, 1989) doi:10.1207/s15327809jls0401_2
+  Situated Cognition and the Culture of Learning
+  Keywords: HUMMBL:authentic activity HUMMBL:cognitive apprenticeship HUMMBL:situated cognition
 
+- **Sternberg1999Successful** (Sternberg, Robert J., 1999) doi:10.1037/1089-2680.3.4.292
+  The Theory of Successful Intelligence
+  Keywords: HUMMBL:practical intelligence HUMMBL:successful intelligence HUMMBL:triarchic theory
 
-## T12: Complexity Science & Systems Thinking (20 entries)
+- **Argyris1976DoubleLoop** (Argyris, Chris, 1976) doi:10.2307/2391848
+  Single-Loop and Double-Loop Models in Research on Decision Making
+  Keywords: HUMMBL:decision making HUMMBL:defensive routines HUMMBL:double-loop learning HUMMBL:organizational learning
 
-- **Achlioptas2009Percolation** (Achlioptas, 2009) doi:10.1126/science.1167782
-  Explosive Percolation in Random Networks
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:CO
+- **Vaughan1996Challenger** (Vaughan, Diane, 1996) no-doi
+  The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA
+  Keywords: HUMMBL:NASA HUMMBL:normalization of deviance HUMMBL:organizational culture HUMMBL:risk HUMMBL:safety
 
-- **Albert2002Statistical** (Albert, 2002) doi:10.1103/RevModPhys.74.47
-  Statistical Mechanics of Complex Networks
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:IN
+- **Kahneman2021Noise** (Kahneman, Daniel and Sibony, Olivier and Sunstein, Cass R., 2021) no-doi
+  Noise: A Flaw in Human Judgment
+  Keywords: HUMMBL:bias HUMMBL:decision hygiene HUMMBL:judgment HUMMBL:noise HUMMBL:variability
 
-- **Ashby1956Cybernetics** (Ashby, 1956) doi:10.5962/bhl.title.5851
-  An Introduction to Cybernetics
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:DE
+- **Bourdieu1977OutlineTheory** (Bourdieu, Pierre, 1977) doi:10.1017/CBO9780511812507
+  Outline of a Theory of Practice
+  Keywords: HUMMBL:cultural capital HUMMBL:field HUMMBL:habitus HUMMBL:practice HUMMBL:social reproduction
 
-- **Barabasi1999Emergence** (Barab\'{a}si, 1999) doi:10.1126/science.286.5439.509
-  Emergence of Scaling in Random Networks
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Habermas1981CommunicativeAction** (Habermas, Jurgen, 1981) no-doi
+  The Theory of Communicative Action
+  Keywords: HUMMBL:Habermas HUMMBL:colonization HUMMBL:communicative action HUMMBL:lifeworld HUMMBL:system
 
-- **Beer1981Brain** (Beer, 1981) no-doi
-  Brain of the Firm
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:RE
+- **Bateson1972EcologyMind** (Bateson, Gregory, 1972) no-doi
+  Steps to an Ecology of Mind
+  Keywords: HUMMBL:Bateson HUMMBL:double bind HUMMBL:ecology of mind HUMMBL:metalogues
 
-- **Bonabeau1999SwarmIntelligence** (Bonabeau, 1999) no-doi
-  Swarm Intelligence: From Natural to Artificial Systems
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:RE
+## T3: Applied (23 entries)
 
-- **Dekker2011Drift** (Dekker, 2011) doi:10.1201/9781315257396
-  Drift into Failure: From Hunting Broken Components to Understanding Complex Systems
-  Keywords: HUMMBL:P HUMMBL:RE HUMMBL:SY
+- **Ries2011LeanStartup** (Ries, Eric, 2011) no-doi
+  The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+  Keywords: HUMMBL:entrepreneurship HUMMBL:innovation HUMMBL:lean startup
 
-- **Gunderson2002Panarchy** (Gunderson, 2002) no-doi
-  Panarchy: Understanding Transformations in Human and Natural Systems
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:DE
+- **Brown2009ChangeByDesign** (Brown, Tim, 2009) no-doi
+  Change by Design: How Design Thinking Transforms Organizations and Inspires Innovation
+  Keywords: HUMMBL:design thinking HUMMBL:innovation HUMMBL:prototyping
 
-- **Holland1995HiddenOrder** (Holland, 1995) no-doi
-  Hidden Order: How Adaptation Builds Complexity
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:RE
+- **Kim2013PhoenixProject** (Kim, Gene and Behr, Kevin and Spafford, George, 2013) no-doi
+  The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win
+  Keywords: HUMMBL:DevOps HUMMBL:IT management HUMMBL:systems thinking
 
-- **Kauffman1993Origins** (Kauffman, 1993) doi:10.1093/oso/9780195079517.001.0001
-  The Origins of Order: Self-Organization and Selection in Evolution
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:RE
+- **Kotter1996Leading** (Kotter, John P., 1996) no-doi
+  Leading Change
+  Keywords: HUMMBL:change management HUMMBL:leadership HUMMBL:organizational transformation
 
-- **Langton1990EdgeChaos** (Langton, 1990) doi:10.1016/0167-2789(90)90064-V
-  Computation at the Edge of Chaos: Phase Transitions and Emergent Computation
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:IN
+- **Heath2007MadeToStick** (Heath, Chip and Heath, Dan, 2007) no-doi
+  Made to Stick: Why Some Ideas Survive and Others Die
+  Keywords: HUMMBL:communication HUMMBL:memory HUMMBL:storytelling
 
-- **Maturana1980Autopoiesis** (Maturana, 1980) doi:10.1007/978-94-009-8947-4
-  Autopoiesis and Cognition: The Realization of the Living
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:CO
+- **Thaler2008Nudge** (Thaler, Richard H. and Sunstein, Cass R., 2008) no-doi
+  Nudge: Improving Decisions about Health, Wealth, and Happiness
+  Keywords: HUMMBL:behavioral economics HUMMBL:choice architecture HUMMBL:decision making
 
-- **Newman2005PowerLaws** (Newman, 2005) doi:10.1080/00107510500052444
-  Power Laws, Pareto Distributions and Zipf's Law
-  Keywords: HUMMBL:P HUMMBL:DE HUMMBL:SY
+- **Duhigg2012PowerOfHabit** (Duhigg, Charles, 2012) no-doi
+  The Power of Habit: Why We Do What We Do in Life and Business
+  Keywords: HUMMBL:behavior change HUMMBL:habits HUMMBL:neuroscience
 
-- **Prigogine1984Order** (Prigogine, 1984) no-doi
-  Order Out of Chaos: Man's New Dialogue with Nature
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:RE
+- **Collins2001GoodToGreat** (Collins, Jim, 2001) no-doi
+  Good to Great: Why Some Companies Make the Leap...And Others Don't
+  Keywords: HUMMBL:business strategy HUMMBL:leadership HUMMBL:organizational excellence
 
-- **Strogatz2015Nonlinear** (Strogatz, 2015) doi:10.1017/CBO9780511755743
-  Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:IN
+- **Pink2009Drive** (Pink, Daniel H., 2009) no-doi
+  Drive: The Surprising Truth About What Motivates Us
+  Keywords: HUMMBL:autonomy HUMMBL:motivation HUMMBL:purpose
 
-- **Walker2004Resilience** (Walker, 2004) doi:10.5751/ES-00650-090205
-  Resilience, Adaptability and Transformability in Social-Ecological Systems
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:IN
+- **Sutherland2014Scrum** (Sutherland, Jeff and Sutherland, J. J., 2014) no-doi
+  Scrum: The Art of Doing Twice the Work in Half the Time
+  Keywords: HUMMBL:agile HUMMBL:iterative development HUMMBL:project management
 
-- **Watts1998SmallWorld** (Watts, 1998) doi:10.1038/30918
-  Collective Dynamics of `Small-World' Networks
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:RE
+- **Schwartz2004Paradox** (Schwartz, Barry, 2004) no-doi
+  The Paradox of Choice: Why More Is Less
+  Keywords: HUMMBL:choice overload HUMMBL:decision making HUMMBL:satisfaction
 
-- **Wiener1961Cybernetics** (Wiener, 1961) doi:10.7551/mitpress/11810.001.0001
-  Cybernetics: Or Control and Communication in the Animal and the Machine
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:P
+- **Christensen1997Innovators** (Christensen, Clayton M., 1997) no-doi
+  The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail
+  Keywords: HUMMBL:business strategy HUMMBL:disruptive innovation HUMMBL:technology
 
-- **Woods2015FourConcepts** (Woods, 2015) doi:10.1016/j.ress.2015.03.018
-  Four Concepts for Resilience and the Implications for the Future of Resilience Engineering
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:IN
+- **Ariely2008Predictably** (Ariely, Dan, 2008) no-doi
+  Predictably Irrational: The Hidden Forces That Shape Our Decisions
+  Keywords: HUMMBL:behavioral economics HUMMBL:decision making HUMMBL:irrationality
 
-- **Wright1932Roles** (Wright, 1932) no-doi
-  The Roles of Mutation, Inbreeding, Crossbreeding, and Selection in Evolution
-  Keywords: HUMMBL:P HUMMBL:RE HUMMBL:IN
+- **Goleman1995Emotional** (Goleman, Daniel, 1995) no-doi
+  Emotional Intelligence: Why It Can Matter More Than IQ
+  Keywords: HUMMBL:emotional intelligence HUMMBL:empathy HUMMBL:self-awareness
 
+- **Gladwell2008Outliers** (Gladwell, Malcolm, 2008) no-doi
+  Outliers: The Story of Success
+  Keywords: HUMMBL:10000-hour rule HUMMBL:expertise HUMMBL:success
 
-## T13: Post-2024 Reasoning Models (20 entries)
+- **Davenport2018AIAdvantage** (Davenport, Thomas H., 2018) no-doi
+  The AI Advantage: How to Put the Artificial Intelligence Revolution to Work
+  Keywords: HUMMBL:AI augmentation HUMMBL:business transformation HUMMBL:cognitive automation
 
-- **Anthropic2024Claude3** (Anthropic, 2024) no-doi
-  The Claude 3 Model Family: Opus, Sonnet, Haiku
-  Keywords: HUMMBL:IN HUMMBL:RE
+- **Agrawal2018PredictionMachines** (Agrawal, Ajay and Gans, Joshua and Goldfarb, Avi, 2018) no-doi
+  Prediction Machines: The Simple Economics of Artificial Intelligence
+  Keywords: HUMMBL:decision making HUMMBL:economics of AI HUMMBL:judgment HUMMBL:prediction
 
-- **Anthropic2025ClaudeModel** (Anthropic, 2025) no-doi
-  Claude 3.5 Model Family: Sonnet and Haiku
-  Keywords: HUMMBL:IN HUMMBL:RE
+- **Lencioni2002FiveDysfunctions** (Lencioni, Patrick, 2002) no-doi
+  The Five Dysfunctions of a Team: A Leadership Fable
+  Keywords: HUMMBL:accountability HUMMBL:leadership HUMMBL:team dynamics HUMMBL:trust
 
-- **Chen2024AlphaCode2** (DeepMind, 2024) no-doi
-  AlphaCode 2 Technical Report
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **Ferriss2009FourHourWorkweek** (Ferriss, Timothy, 2009) no-doi
+  The 4-Hour Workweek: Escape 9--5, Live Anywhere, and Join the New Rich
+  Keywords: HUMMBL:automation HUMMBL:delegation HUMMBL:lifestyle design HUMMBL:productivity
 
-- **DeepSeek2025R1** (DeepSeek-AI, 2025) doi:10.48550/arXiv.2501.12948
-  DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **McChristal2015TeamOfTeams** (McChrystal, Stanley and Collins, Tantum and Silverman, David and Fussell, Chris, 2015) no-doi
+  Team of Teams: New Rules of Engagement for a Complex World
+  Keywords: HUMMBL:adaptive organizations HUMMBL:empowered execution HUMMBL:shared consciousness
 
-- **Gemini2024Team** (Team}, 2024) doi:10.48550/arXiv.2312.11805
-  Gemini: A Family of Highly Capable Multimodal Models
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **Munger2005Almanack** (Munger, Charles T., 2005) no-doi
+  Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger
+  Keywords: HUMMBL:cognitive biases HUMMBL:decision making HUMMBL:inversion HUMMBL:mental models HUMMBL:value investing
 
-- **Guo2024Critique** (Guo, 2024) doi:10.48550/arXiv.2411.16646
-  Critique-Based Reward: Training Language Models to Self-Critique and Improve
-  Keywords: HUMMBL:RE HUMMBL:CO
+- **Alexander1979TimelessBuilding** (Alexander, Christopher, 1979) no-doi
+  The Timeless Way of Building
+  Keywords: HUMMBL:architecture HUMMBL:composition HUMMBL:design HUMMBL:pattern language HUMMBL:quality
 
-- **Guo2025DeepSeekR1Zero** (Guo, 2025) doi:10.48550/arXiv.2501.12948
-  DeepSeek-R1-Zero: Reasoning Without Supervised Data
-  Keywords: HUMMBL:RE
+- **Arthur2009Technology** (Arthur, W. Brian, 2009) no-doi
+  The Nature of Technology: What It Is and How It Evolves
+  Keywords: HUMMBL:combinatorial evolution HUMMBL:innovation HUMMBL:recombination HUMMBL:technology
 
-- **Kumar2024ScalingInference** (Kumar, 2024) doi:10.48550/arXiv.2410.22480
-  Scaling LLM Inference with Optimized Sample Compute Allocation
-  Keywords: HUMMBL:IN HUMMBL:RE
+## T4: Agentic (20 entries)
 
-- **Lightman2023PRM** (Lightman, 2023) doi:10.48550/arXiv.2305.20050
-  Let's Verify Step by Step
-  Keywords: HUMMBL:RE HUMMBL:IN
+- **Russell2019HumanCompatible** (Russell, Stuart, 2019) no-doi
+  Human Compatible: Artificial Intelligence and the Problem of Control
+  Keywords: HUMMBL:AI alignment HUMMBL:control problem HUMMBL:value alignment
 
-- **Madaan2023Selfrefine** (Madaan, 2023) doi:10.48550/arXiv.2303.17651
-  Self-Refine: Iterative Refinement with Self-Feedback
-  Keywords: HUMMBL:RE HUMMBL:CO
+- **Amodei2016ConcreteProblems** (Amodei, Dario and Olah, Chris and Steinhardt, Jacob and Christiano, Paul and Schulman, John and Man\'{e}, Dan, 2016) doi:10.48550/arXiv.1606.06565
+  Concrete Problems in AI Safety
+  Keywords: HUMMBL:AI safety HUMMBL:distributional shift HUMMBL:reward hacking
 
-- **Ong2024RouteLLM** (Ong, 2024) doi:10.48550/arXiv.2406.18665
+- **Christiano2017DeepRL** (Christiano, Paul F. and Leike, Jan and Brown, Tom and Martic, Miljan and Legg, Shane and Amodei, Dario, 2017) doi:10.48550/arXiv.1706.03741
+  Deep Reinforcement Learning from Human Preferences
+  Keywords: HUMMBL:RLHF HUMMBL:human preferences HUMMBL:reward modeling
+
+- **Bai2022ConstitutionalAI** (Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and Chen, Carol and Olsson, Catherine and Olah, Christopher and Hernandez, Danny and Drain, Dawn and Ganguli, Deep and Li, Dustin and Tran-Johnson, Eli and Perez, Ethan and Kerr, Jamie and Mueller, Jared and Ladish, Jeffrey and Landau, Joshua and Ndousse, Kamal and Lukosuite, Kamile and Lovitt, Liane and Sellitto, Michael and Elhage, Nelson and Schiefer, Nicholas and Mercado, Noemi and DasSarma, Nova and Lasenby, Robert and Larson, Robin and Ringer, Sam and Johnston, Scott and Kravec, Shauna and El Showk, Sheer and Fort, Stanislav and Lanham, Tamera and Telleen-Lawton, Timothy and Conerly, Tom and Henighan, Tom and Hume, Tristan and Bowman, Samuel R. and Hatfield-Dodds, Zac and Mann, Ben and Amodei, Dario and Joseph, Nicholas and McCandlish, Sam and Brown, Tom and Kaplan, Jared, 2022) doi:10.48550/arXiv.2212.08073
+  Constitutional AI: Harmlessness from AI Feedback
+  Keywords: HUMMBL:AI governance HUMMBL:RLAIF HUMMBL:constitutional AI
+
+- **Gabriel2020Values** (Gabriel, Iason, 2020) doi:10.1007/s11023-020-09539-2
+  Artificial Intelligence, Values, and Alignment
+  Keywords: HUMMBL:AI ethics HUMMBL:moral philosophy HUMMBL:value alignment
+
+- **Leike2018Scalable** (Leike, Jan and Krueger, David and Everitt, Tom and Martic, Miljan and Maini, Vishal and Legg, Shane, 2018) doi:10.48550/arXiv.1811.07871
+  Scalable Agent Alignment via Reward Modeling: A Research Direction
+  Keywords: HUMMBL:agent alignment HUMMBL:reward modeling HUMMBL:scalable oversight
+
+- **Hendrycks2022Unsolved** (Hendrycks, Dan and Carlini, Nicholas and Schulman, John and Steinhardt, Jacob, 2022) doi:10.48550/arXiv.2109.13916
+  Unsolved Problems in ML Safety
+  Keywords: HUMMBL:ML safety HUMMBL:alignment HUMMBL:robustness
+
+- **Wooldridge2009MultiAgent** (Wooldridge, Michael, 2009) no-doi
+  An Introduction to MultiAgent Systems
+  Keywords: HUMMBL:BDI architecture HUMMBL:agent coordination HUMMBL:multi-agent systems
+
+- **Shoham2008Multiagent** (Shoham, Yoav and Leyton-Brown, Kevin, 2008) doi:10.1017/cbo9780511811654
+  Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations
+  Keywords: HUMMBL:game theory HUMMBL:mechanism design HUMMBL:multi-agent coordination
+
+- **Dorigo2006AntColony** (Dorigo, Marco and Birattari, Mauro and Stutzle, Thomas, 2006) doi:10.1109/MCI.2006.329691
+  Ant Colony Optimization: Artificial Ants as a Computational Intelligence Technique
+  Keywords: HUMMBL:ant colony optimization HUMMBL:stigmergy HUMMBL:swarm intelligence
+
+- **Durfee2001Distributed** (Durfee, Edmund H., 2001) doi:10.1007/3-540-47745-4_6
+  Distributed Problem Solving and Planning
+  Keywords: HUMMBL:coordination HUMMBL:distributed planning HUMMBL:task decomposition
+
+- **Stone2000MultiagentSurvey** (Stone, Peter and Veloso, Manuela, 2000) doi:10.1023/A:1008942012299
+  Multiagent Systems: A Survey from a Machine Learning Perspective
+  Keywords: HUMMBL:cooperative agents HUMMBL:coordination HUMMBL:multi-agent learning
+
+- **Park2023GenerativeAgents** (Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie Jun and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S., 2023) doi:10.1145/3586183.3606763
+  Generative Agents: Interactive Simulacra of Human Behavior
+  Keywords: HUMMBL:LLM agents HUMMBL:emergent behavior HUMMBL:generative agents
+
+- **Shostack2014ThreatModeling** (Shostack, Adam, 2014) no-doi
+  Threat Modeling: Designing for Security
+  Keywords: HUMMBL:STRIDE HUMMBL:security design HUMMBL:threat modeling
+
+- **Ngo2022AlignmentProblem** (Ngo, Richard and Chan, Lawrence and Mindermann, S\"{o}ren, 2024) doi:10.1613/jair.1.15238
+  The Alignment Problem from a Deep Learning Perspective
+  Keywords: HUMMBL:alignment HUMMBL:deep learning HUMMBL:mesa-optimization HUMMBL:situational awareness
+
+- **Lamport1978Clocks** (Lamport, Leslie, 1978) doi:10.1145/359545.359563
+  Time, Clocks, and the Ordering of Events in a Distributed System
+  Keywords: HUMMBL:causal ordering HUMMBL:distributed systems HUMMBL:logical clocks
+
+- **Brewer2012CAP** (Brewer, Eric, 2012) doi:10.1109/MC.2012.37
+  CAP Twelve Years Later: How the ``Rules'' Have Changed
+  Keywords: HUMMBL:CAP theorem HUMMBL:consistency HUMMBL:distributed systems
+
+- **Bengio2024Managing** (Bengio, Yoshua and Hinton, Geoffrey and Yao, Andrew and Song, Dawn and Abbeel, Pieter and Darrell, Trevor and Harari, Yuval Noah and Zhang, Ya-Qin and Lan, Xue and Shalev-Shwartz, Shai and Hadfield, Gillian and Clune, Jeff and Maharaj, Tegan and Hutter, Frank and Baydin, Atilim Gunes and McIlraith, Sheila and Gao, Qiang and Acharya, Ashvin and Krueger, David and Dragan, Anca and Torr, Philip and Russell, Stuart and Kahneman, Daniel and Brauner, Jan and Gillingham, Soren, 2024) doi:10.1126/science.adn0117
+  Managing Extreme AI Risks amid Rapid Progress
+  Keywords: HUMMBL:AI risk HUMMBL:governance HUMMBL:international coordination HUMMBL:safety research
+
+- **Bostrom2014Superintelligence** (Bostrom, Nick, 2014) no-doi
+  Superintelligence: Paths, Dangers, Strategies
+  Keywords: HUMMBL:control problem HUMMBL:existential risk HUMMBL:superintelligence
+
+- **Turing1950Computing** (Turing, Alan M., 1950) doi:10.1093/mind/LIX.236.433
+  Computing Machinery and Intelligence
+  Keywords: HUMMBL:Turing test HUMMBL:computation HUMMBL:machine intelligence
+
+## T5: Engineering (22 entries)
+
+- **Nygard2018ReleaseIt** (Nygard, Michael T., 2018) no-doi
+  Release It! Design and Deploy Production-Ready Software
+  Keywords: HUMMBL:circuit breaker HUMMBL:resilience HUMMBL:stability patterns
+
+- **Grasse1959Stigmergy** (Grass\'{e}, Pierre-Paul, 1959) doi:10.1007/bf02223791
+  La reconstruction du nid et les coordinations interindividuelles chez Bellicositermes natalensis et Cubitermes sp. La th\'{e}orie de la stigmergie: Essai d'interpr\'{e}tation du comportement des termites constructeurs
+  Keywords: HUMMBL:collective behavior HUMMBL:indirect coordination HUMMBL:stigmergy
+
+- **Theraulaz1999Stigmergy** (Theraulaz, Guy and Bonabeau, Eric, 1999) doi:10.1162/106454699568700
+  A Brief History of Stigmergy
+  Keywords: HUMMBL:coordination HUMMBL:stigmergy HUMMBL:swarm intelligence
+
+- **Rao1995BDI** (Rao, Anand S. and Georgeff, Michael P., 1995) no-doi
+  BDI Agents: From Theory to Practice
+  Keywords: HUMMBL:BDI HUMMBL:agent architecture HUMMBL:beliefs desires intentions
+
+- **Meyer1992DesignByContract** (Meyer, Bertrand, 1992) doi:10.1109/2.161279
+  Applying ``Design by Contract''
+  Keywords: HUMMBL:design by contract HUMMBL:postconditions HUMMBL:preconditions HUMMBL:software reliability
+
+- **Kreps2013Log** (Kreps, Jay, 2013) doi:10.1201/9780849379635.fmatt
+  The Log: What every software engineer should know about real-time data's unifying abstraction
+  Keywords: HUMMBL:append-only log HUMMBL:distributed systems HUMMBL:event sourcing
+
+- **HadfieldMenell2017OffSwitch** (Hadfield-Menell, Dylan and Dragan, Anca D. and Abbeel, Pieter and Russell, Stuart J., 2017) doi:10.1609/aaai.v31i1.11026
+  The Off-Switch Game
+  Keywords: HUMMBL:corrigibility HUMMBL:off-switch HUMMBL:safe interruptibility
+
+- **Sabater2005Trust** (Sabater, Jordi and Sierra, Carles, 2005) doi:10.1007/s10462-004-0041-5
+  Review on Computational Trust and Reputation Models
+  Keywords: HUMMBL:multi-agent systems HUMMBL:reputation HUMMBL:trust
+
+- **Sridharan2018Observability** (Sridharan, Cindy, 2018) no-doi
+  Distributed Systems Observability
+  Keywords: HUMMBL:distributed systems HUMMBL:monitoring HUMMBL:observability
+
+- **Fowler2005EventSourcing** (Fowler, Martin, 2005) no-doi
+  Event Sourcing
+  Keywords: HUMMBL:audit trail HUMMBL:event sourcing HUMMBL:immutable events
+
+- **Newman2021Microservices** (Newman, Sam, 2021) no-doi
+  Building Microservices: Designing Fine-Grained Systems
+  Keywords: HUMMBL:independent deployability HUMMBL:microservices HUMMBL:service decomposition
+
+- **Basiri2016ChaosEngineering** (Basiri, Ali and Behnam, Niosha and de Rooij, Ruud and Hochstein, Lorin and Kosewski, Luke and Reynolds, Justin and Rosenthal, Casey, 2016) doi:10.1109/MS.2016.64
+  Chaos Engineering
+  Keywords: HUMMBL:chaos engineering HUMMBL:fault injection HUMMBL:resilience testing
+
+- **Beyer2016SRE** (Beyer, Betsy and Jones, Chris and Petoff, Jennifer and Murphy, Niall Richard, 2016) no-doi
+  Site Reliability Engineering: How Google Runs Production Systems
+  Keywords: HUMMBL:SLOs HUMMBL:error budgets HUMMBL:site reliability engineering HUMMBL:toil
+
+- **Morris2016InfrastructureAsCode** (Morris, Kief, 2016) no-doi
+  Infrastructure as Code: Managing Servers in the Cloud
+  Keywords: HUMMBL:infrastructure as code HUMMBL:reproducibility HUMMBL:version control
+
+- **Helland2012Idempotency** (Helland, Pat, 2012) doi:10.1145/2160718.2160734
+  Idempotence Is Not a Medical Condition
+  Keywords: HUMMBL:distributed systems HUMMBL:exactly-once HUMMBL:idempotency
+
+- **Garcia1987Sagas** (Garcia-Molina, Hector and Salem, Kenneth, 1987) doi:10.1145/38713.38742
+  Sagas
+  Keywords: HUMMBL:compensating transactions HUMMBL:eventual consistency HUMMBL:saga pattern
+
+- **Young2010CQRS** (Young, Greg, 2010) no-doi
+  CQRS Documents
+  Keywords: HUMMBL:CQRS HUMMBL:command query separation HUMMBL:read write models
+
+- **Mahdavi2013FeatureToggles** (Fowler, Martin and Mahdavi-Hezavehi, Sara, 2013) no-doi
+  Feature Toggles (aka Feature Flags)
+  Keywords: HUMMBL:feature flags HUMMBL:feature toggles HUMMBL:trunk-based development
+
+- **Schermann2018Canary** (Schermann, Gerald and Cito, J{\"u}rgen and Leitner, Philipp and Zdun, Uwe and Gall, Harald C., 2018) doi:10.1109/MS.2017.3571578
+  Continuous Experimentation: Challenges, Implementation Techniques, and Current Research
+  Keywords: HUMMBL:blue-green deployment HUMMBL:canary deployment HUMMBL:continuous experimentation
+
+- **Rosenthal2020ChaosEngineeringBook** (Rosenthal, Casey and Jones, Nora, 2020) no-doi
+  Chaos Engineering: System Resiliency in Practice
+  Keywords: HUMMBL:chaos engineering HUMMBL:hypothesis testing HUMMBL:resilience HUMMBL:steady state
+
+- **Simon1962Architecture** (Simon, Herbert A., 1962) no-doi
+  The Architecture of Complexity
+  Keywords: HUMMBL:architecture HUMMBL:complex systems HUMMBL:evolution HUMMBL:hierarchy HUMMBL:near-decomposability
+
+- **Gamma1994DesignPatterns** (Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John, 1994) no-doi
+  Design Patterns: Elements of Reusable Object-Oriented Software
+  Keywords: HUMMBL:composition HUMMBL:design patterns HUMMBL:object-oriented HUMMBL:software engineering
+
+## T6: Governance (20 entries)
+
+- **Rittel1973WickedProblems** (Rittel, Horst W. J. and Webber, Melvin M., 1973) doi:10.1007/BF01405730
+  Dilemmas in a General Theory of Planning
+  Keywords: HUMMBL:complexity HUMMBL:planning HUMMBL:wicked problems
+
+- **EUAIAct2024** (European Parliament and Council of the European Union, 2024) no-doi
+  Regulation (EU) 2024/1689 Laying Down Harmonised Rules on Artificial Intelligence (AI Act)
+  Keywords: HUMMBL:AI regulation HUMMBL:conformity assessment HUMMBL:risk classification
+
+- **OWASP2025LLM** (OWASP Foundation, 2025) no-doi
+  OWASP Top 10 for Large Language Model Applications 2025
+  Keywords: HUMMBL:LLM security HUMMBL:excessive agency HUMMBL:prompt injection
+
+- **Dennis1966Capabilities** (Dennis, Jack B. and Van Horn, Earl C., 1966) doi:10.1145/365230.365252
+  Programming Semantics for Multiprogrammed Computations
+  Keywords: HUMMBL:access control HUMMBL:capability-based security HUMMBL:least privilege
+
+- **Sandhu1996RBAC** (Sandhu, Ravi S. and Coyne, Edward J. and Feinstein, Hal L. and Youman, Charles E., 1996) doi:10.1109/2.485845
+  Role-Based Access Control Models
+  Keywords: HUMMBL:RBAC HUMMBL:access control HUMMBL:role hierarchy
+
+- **Brundage2020Verifiable** (Brundage, Miles and Avin, Shahar and Wang, Jasmine and Belfield, Haydn and Krueger, Gretchen and Hadfield, Gillian and Khlaaf, Heidy and Yang, Jingying and Toner, Helen and Fong, Ruth and Maharaj, Tegan and Koh, Pang Wei and Myers, Sara and Raghunathan, Rishi and Buolamwini, Joy and Hebert-Johnson, Ursula and Raji, Deborah and Ganguli, Deep and Liang, Percy and Amodei, Dario, 2020) doi:10.48550/arXiv.2004.07213
+  Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims
+  Keywords: HUMMBL:AI audit HUMMBL:trustworthy AI HUMMBL:verifiable claims
+
+- **Sculley2015TechDebt** (Sculley, David and Holt, Gary and Golovin, Daniel and Davydov, Eugene and Phillips, Todd and Ebner, Dietmar and Chaudhary, Vinay and Young, Michael and Crespo, Jean-Fran\c{c}ois and Dennison, Dan, 2015) no-doi
+  Hidden Technical Debt in Machine Learning Systems
+  Keywords: HUMMBL:CACE principle HUMMBL:machine learning systems HUMMBL:technical debt
+
+- **Li2023TrustworthyAI** (Li, Bo and Qi, Peng and Liu, Bo and Di, Shuai and Liu, Jingen and Pei, Jiquan and Yi, Jinfeng and Zhou, Bowen, 2023) doi:10.1145/3555803
+  Trustworthy AI: From Principles to Practices
+  Keywords: HUMMBL:explainability HUMMBL:robustness HUMMBL:safety HUMMBL:trustworthy AI
+
+- **Liang2023HELM** (Liang, Percy and Bommasani, Rishi and Lee, Tony and Tsipras, Dimitris and Soylu, Dilara and Yasunaga, Michihiro and Zhang, Yian and Narang, Deepak and Ren, William and Miao, Shibani and others, 2023) doi:10.48550/arXiv.2211.09110
+  Holistic Evaluation of Language Models
+  Keywords: HUMMBL:benchmarking HUMMBL:evaluation HUMMBL:language models
+
+- **Anthropic2024MCP** (Anthropic, 2024) no-doi
+  Model Context Protocol Specification
+  Keywords: HUMMBL:AI integration HUMMBL:model context protocol HUMMBL:tool use
+
+- **ISO42001** (International Organization for Standardization, 2023) no-doi
+  ISO/IEC 42001:2023 --- Information Technology --- Artificial Intelligence --- Management System
+  Keywords: HUMMBL:AI management system HUMMBL:ISO 42001 HUMMBL:compliance
+
+- **ISO27001** (International Organization for Standardization, 2022) no-doi
+  ISO/IEC 27001:2022 --- Information Security, Cybersecurity and Privacy Protection --- Information Security Management Systems --- Requirements
+  Keywords: HUMMBL:ISMS HUMMBL:ISO 27001 HUMMBL:access control HUMMBL:information security
+
+- **SOC2Framework** (American Institute of Certified Public Accountants, 2017) no-doi
+  SOC 2 --- Trust Services Criteria
+  Keywords: HUMMBL:SOC 2 HUMMBL:audit HUMMBL:compliance HUMMBL:trust services
+
+- **GDPR2016** (European Parliament and Council of the European Union, 2016) no-doi
+  Regulation (EU) 2016/679 --- General Data Protection Regulation
+  Keywords: HUMMBL:GDPR HUMMBL:data protection HUMMBL:data subject rights HUMMBL:privacy
+
+- **Abraham2019DataGovernance** (Abraham, Renu and Schneider, Johannes and vom Brocke, Jan, 2019) doi:10.17705/1jais.00560
+  Data Governance: The Definitive Guide
+  Keywords: HUMMBL:data governance HUMMBL:data quality HUMMBL:decision rights
+
+- **Raji2020Auditing** (Raji, Inioluwa Deborah and Smart, Andrew and White, Rebecca N. and Mitchell, Margaret and Gebru, Timnit and Hutchinson, Ben and Smith-Loud, Jamila and Theron, Daniel and Barnes, Parker, 2020) doi:10.1145/3351095.3372873
+  Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing
+  Keywords: HUMMBL:AI governance HUMMBL:SMACTR HUMMBL:accountability HUMMBL:algorithmic auditing
+
+- **Mitchell2019ModelCards** (Mitchell, Margaret and Wu, Simone and Zaldivar, Andrew and Barnes, Parker and Vasserman, Lucy and Hutchinson, Ben and Spitzer, Elena and Raji, Inioluwa Deborah and Gebru, Timnit, 2019) doi:10.1145/3287560.3287596
+  Model Cards for Model Reporting
+  Keywords: HUMMBL:documentation HUMMBL:model cards HUMMBL:responsible AI HUMMBL:transparency
+
+- **Floridi2018AI4PeopleT6** (Floridi, Luciano and Cowls, Josh and Beltrametti, Monica and Chatila, Raja and Chazerand, Patrice and Dignum, Virginia and Luetge, Christoph and Madelin, Robert and Pagallo, Ugo and Rossi, Francesca and Schafer, Burkhard and Valcke, Peggy and Vayena, Effy, 2018) doi:10.1007/s11023-018-9482-5
+  AI4People --- An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations
+  Keywords: HUMMBL:AI ethics HUMMBL:beneficence HUMMBL:ethical framework HUMMBL:explicability
+
+- **NISTRMF2023** (National Institute of Standards and Technology, 2023) doi:10.6028/NIST.AI.100-1
+  AI Risk Management Framework (AI RMF 1.0)
+  Keywords: HUMMBL:AI governance HUMMBL:NIST AI RMF HUMMBL:risk management
+
+- **OSTP2022AIBillOfRights** (Office of Science and Technology Policy, 2022) no-doi
+  Blueprint for an AI Bill of Rights: Making Automated Systems Protect the Rights of the American People
+  Keywords: HUMMBL:AI Bill of Rights HUMMBL:OSTP HUMMBL:algorithmic discrimination HUMMBL:governance HUMMBL:rights-based
+
+## T7: Emerging (28 entries)
+
+- **Yao2023ReAct** (Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan, 2023) doi:10.48550/arXiv.2210.03629
+  ReAct: Synergizing Reasoning and Acting in Language Models
+  Keywords: HUMMBL:acting HUMMBL:agent architecture HUMMBL:reasoning HUMMBL:tool use
+
+- **Wei2022ChainOfThought** (Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed and Le, Quoc V. and Zhou, Denny, 2022) doi:10.48550/arXiv.2201.11903
+  Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+  Keywords: HUMMBL:chain-of-thought HUMMBL:emergent abilities HUMMBL:prompting HUMMBL:reasoning
+
+- **Lewis2020RAG** (Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K\"{u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt\"{a}schel, Tim and Riedel, Sebastian and Kiela, Douwe, 2020) doi:10.48550/arXiv.2005.11401
+  Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+  Keywords: HUMMBL:knowledge base HUMMBL:non-parametric memory HUMMBL:retrieval-augmented generation
+
+- **Schick2023Toolformer** (Schick, Timo and Dwivedi-Yu, Jane and Dess\`{i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas, 2023) doi:10.48550/arXiv.2302.04761
+  Toolformer: Language Models Can Teach Themselves to Use Tools
+  Keywords: HUMMBL:API calls HUMMBL:self-supervised learning HUMMBL:tool use
+
+- **Liu2024AgentBench** (Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and Dong, Yuxiao and Tang, Jie, 2024) doi:10.48550/arXiv.2308.03688
+  AgentBench: Evaluating LLMs as Agents
+  Keywords: HUMMBL:agent evaluation HUMMBL:agentic capabilities HUMMBL:benchmarks
+
+- **Jimenez2024SWEBench** (Jimenez, Carlos E. and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik R., 2024) doi:10.48550/arXiv.2310.06770
+  SWE-bench: Can Language Models Resolve Real-World GitHub Issues?
+  Keywords: HUMMBL:benchmarks HUMMBL:coding agents HUMMBL:software engineering
+
+- **Wang2024LLMAgentSurvey** (Wang, Lei and Ma, Chen and Feng, Xueyang and Zhang, Zeyu and Yang, Hao and Zhang, Jingsen and Chen, Zhiyuan and Tang, Jiakai and Chen, Xu and Lin, Yankai and Zhao, Wayne Xin and Wei, Zhenhua and Wen, Ji-Rong, 2024) doi:10.1007/s11704-024-40231-1
+  A Survey on Large Language Model based Autonomous Agents
+  Keywords: HUMMBL:LLM agents HUMMBL:agent architecture HUMMBL:autonomous agents HUMMBL:survey
+
+- **Zhuge2024GPTSwarm** (Zhuge, Mingchen and Wang, Wenyi and Kirsch, Louis and Faccio, Francesco and Khizbullin, Dmitrii and Schmidhuber, J\"{u}rgen, 2024) doi:10.48550/arXiv.2402.16823
+  GPTSwarm: Language Agents as Optimizable Graphs
+  Keywords: HUMMBL:graph structure HUMMBL:multi-agent optimization HUMMBL:swarm intelligence
+
+- **Ong2024RouteLLM** (Ong, Isaac and Almahairi, Amjad and Wu, Vincent and Chiang, Wei-Lin and Wu, Tianhao and Gonzalez, Joseph E. and Kadous, M Waleed and Stoica, Ion, 2024) doi:10.48550/arXiv.2406.18665
   RouteLLM: Learning to Route LLMs with Preference Data
-  Keywords: HUMMBL:IN HUMMBL:RE
+  Keywords: HUMMBL:cost optimization HUMMBL:model routing HUMMBL:preference learning
 
-- **OpenAI2024o1Mini** (OpenAI, 2024) no-doi
-  Learning to Reason with LLMs
-  Keywords: HUMMBL:RE HUMMBL:IN
+- **Shinn2023Reflexion** (Shinn, Noah and Cassano, Federico and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu, 2023) doi:10.48550/arXiv.2303.11366
+  Reflexion: Language Agents with Verbal Reinforcement Learning
+  Keywords: HUMMBL:agent learning HUMMBL:episodic memory HUMMBL:self-reflection HUMMBL:verbal reinforcement
+
+- **Schulhoff2024PromptReport** (Schulhoff, Sander and Ilie, Michael and Balepur, Nishant and Kahadze, Konstantine and Liu, Amanda and Si, Chenglei and Li, Yinheng and Gupta, Aayush and Han, HyoJung and Schulhoff, Sevien and others, 2024) doi:10.48550/arXiv.2406.06608
+  The Prompt Report: A Systematic Survey of Prompting Techniques
+  Keywords: HUMMBL:prompt engineering HUMMBL:survey HUMMBL:taxonomy HUMMBL:techniques
+
+- **Wang2023Voyager** (Wang, Guanzhi and Xie, Yuqi and Jiang, Yunfan and Mandlekar, Ajay and Xiao, Chaowei and Zhu, Yuke and Fan, Linxi and Anandkumar, Anima, 2023) doi:10.48550/arXiv.2305.16291
+  Voyager: An Open-Ended Embodied Agent with Large Language Models
+  Keywords: HUMMBL:embodied agents HUMMBL:exploration HUMMBL:lifelong learning HUMMBL:skill library
+
+- **Zhou2024LATS** (Zhou, Andy and Yan, Kai and Shlapentokh-Rothman, Michal and Wang, Haohan and Wang, Yu-Xiong, 2024) doi:10.48550/arXiv.2310.04406
+  Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models
+  Keywords: HUMMBL:Monte Carlo HUMMBL:planning HUMMBL:reasoning HUMMBL:tree search
+
+- **Patil2023Gorilla** (Patil, Shishir G. and Zhang, Tianjun and Wang, Xin and Gonzalez, Joseph E., 2023) doi:10.48550/arXiv.2305.15324
+  Gorilla: Large Language Model Connected with Massive APIs
+  Keywords: HUMMBL:API calling HUMMBL:hallucination reduction HUMMBL:retrieval-augmented HUMMBL:tool use
+
+- **Packer2023MemGPT** (Packer, Charles and Wooders, Sarah and Lin, Kevin and Fang, Vivian and Patil, Shishir G. and Stoica, Ion and Gonzalez, Joseph E., 2023) doi:10.48550/arXiv.2310.08560
+  MemGPT: Towards LLMs as Operating Systems
+  Keywords: HUMMBL:memory management HUMMBL:operating system analogy HUMMBL:virtual context
+
+- **Khattab2024DSPy** (Khattab, Omar and Singhvi, Arnav and Maheshwari, Paridhi and Zhang, Zhiyuan and Santhanam, Keshav and Vardhamanan, Sri and Haq, Saiful and Sharma, Ashutosh and Joshi, Thomas T. and Mober, Hanna and Shah, Pawan Kumar and others, 2024) doi:10.48550/arXiv.2310.03714
+  DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines
+  Keywords: HUMMBL:declarative prompting HUMMBL:pipeline optimization HUMMBL:prompt compilation
+
+- **Wu2023AutoGen** (Wu, Qingyun and Bansal, Gagan and Zhang, Jieyu and Wu, Yiran and Li, Beibin and Zhu, Erkang and Jiang, Li and Zhang, Xiaoyun and Zhang, Shaokun and Liu, Jiale and Awadallah, Ahmed Hassan and White, Ryen W. and Burger, Doug and Wang, Chi, 2023) doi:10.48550/arXiv.2308.08155
+  AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
+  Keywords: HUMMBL:framework HUMMBL:human-in-the-loop HUMMBL:multi-agent conversation
+
+- **Du2023Debate** (Du, Yilun and Li, Shuang and Torralba, Antonio and Tenenbaum, Joshua B. and Mordatch, Igor, 2023) doi:10.48550/arXiv.2305.14325
+  Improving Factuality and Reasoning in Language Models through Multiagent Debate
+  Keywords: HUMMBL:adversarial evaluation HUMMBL:consensus HUMMBL:factuality HUMMBL:multi-agent debate
+
+- **Yao2023TreeOfThoughts** (Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Tom L. and Cao, Yuan and Narasimhan, Karthik, 2024) doi:10.48550/arXiv.2305.10601
+  Tree of Thoughts: Deliberate Problem Solving with Large Language Models
+  Keywords: HUMMBL:backtracking HUMMBL:deliberate reasoning HUMMBL:search HUMMBL:tree of thoughts
+
+- **Sumers2024CognitiveArchitectures** (Sumers, Theodore R. and Yao, Shunyu and Narasimhan, Karthik and Griffiths, Thomas L., 2024) doi:10.48550/arXiv.2309.02427
+  Cognitive Architectures for Language Agents
+  Keywords: HUMMBL:cognitive architecture HUMMBL:language agents HUMMBL:memory systems
+
+- **URM2StructuralGrammar2025** (URM$^2$ Working Group, 2025) doi:10.5281/zenodo.17741588
+  URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)
+  Keywords: HUMMBL:URM2 HUMMBL:apparency HUMMBL:density HUMMBL:generative primitives HUMMBL:identity HUMMBL:process ontology HUMMBL:resonance HUMMBL:structural grammar HUMMBL:verb-noun ontology
+
+- **GrammarOfReality2025NounsToVerbs** (Grammar of Reality Project, 2025) doi:10.5281/zenodo.15829350
+  The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon
+  Keywords: HUMMBL:Bohm HUMMBL:Whitehead HUMMBL:cosmic lexicon HUMMBL:nouns HUMMBL:process ontology HUMMBL:substance ontology HUMMBL:verbs
+
+- **Yao2024TauBench** (Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik, 2024) doi:10.48550/arXiv.2406.12045
+  $\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains
+  Keywords: HUMMBL:agent benchmark HUMMBL:policy compliance HUMMBL:tool-agent-user interaction HUMMBL:trajectory evaluation
+
+- **Chen2026CordonSemanticTransactions** (Chen, Z. and others, 2026) no-doi
+  Cordon: Semantic Transactions for Tool-Using LLM Agents
+  Keywords: HUMMBL:LLM agents HUMMBL:effect staging HUMMBL:provenance HUMMBL:semantic transactions HUMMBL:transaction boundary
+
+- **Soares2015Corrigibility** (Soares, Nate and Fallenstein, Benja and Armstrong, Stuart and Yudkowsky, Eliezer, 2015) no-doi
+  Corrigibility
+  Keywords: HUMMBL:AI safety HUMMBL:corrective intervention HUMMBL:corrigibility HUMMBL:shutdown
+
+- **Aravind2026EpistemicCorrigibility** (Aravind, A. A., 2026) doi:10.5281/zenodo.20262088
+  Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems
+  Keywords: HUMMBL:epistemic audit HUMMBL:epistemic corrigibility HUMMBL:institutional design HUMMBL:sunset provisions
+
+- **Christian2020Alignment** (Christian, Brian, 2020) no-doi
+  The Alignment Problem: Machine Learning and Where It Can Go Wrong
+  Keywords: HUMMBL:alignment HUMMBL:inverse reinforcement learning HUMMBL:machine learning HUMMBL:reward hacking HUMMBL:values
+
+- **Crawford2021AtlasAI** (Crawford, Kate, 2021) no-doi
+  Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence
+  Keywords: HUMMBL:AI ethics HUMMBL:environment HUMMBL:labor HUMMBL:material infrastructure HUMMBL:power
+
+## T8: Cognition (21 entries)
+
+- **Craik1943NatureExplanation** (Craik, Kenneth J. W., 1943) doi:10.2307/2018933
+  The Nature of Explanation
+  Keywords: HUMMBL:cognitive modeling HUMMBL:internal representation HUMMBL:mental models
+
+- **Gentner1983MentalModels** (Gentner, Dedre and Stevens, Albert L., 1983) doi:10.4324/9781315802725
+  Mental Models
+  Keywords: HUMMBL:analogical reasoning HUMMBL:cognitive science HUMMBL:mental models
+
+- **Flavell1979Metacognition** (Flavell, John H., 1979) doi:10.1037/0003-066X.34.10.906
+  Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry
+  Keywords: HUMMBL:cognitive regulation HUMMBL:metacognition HUMMBL:self-monitoring
+
+- **Anderson1982KnowledgeCompilation** (Anderson, John R., 1982) doi:10.1037/0033-295X.89.4.369
+  Acquisition of Cognitive Skill
+  Keywords: HUMMBL:ACT HUMMBL:knowledge compilation HUMMBL:proceduralization HUMMBL:skill acquisition
+
+- **Chase1973PerceptionChess** (Chase, William G. and Simon, Herbert A., 1973) doi:10.1016/0010-0285(73)90004-2
+  Perception in Chess
+  Keywords: HUMMBL:chunking HUMMBL:expertise HUMMBL:pattern recognition HUMMBL:perception
+
+- **Sweller1988CognitiveLoad** (Sweller, John, 1988) doi:10.1016/0364-0213(88)90023-7
+  Cognitive Load During Problem Solving: Effects on Learning
+  Keywords: HUMMBL:cognitive load HUMMBL:instructional design HUMMBL:schema acquisition HUMMBL:working memory
+
+- **Walsh1991OrganizationalMemory** (Walsh, James P. and Ungson, Gerardo Rivera, 1991) doi:10.5465/amr.1991.4278992
+  Organizational Memory
+  Keywords: HUMMBL:decision support HUMMBL:information retention HUMMBL:organizational memory
+
+- **Wegner1987TransactiveMemory** (Wegner, Daniel M., 1987) doi:10.1007/978-1-4612-4634-3_9
+  Transactive Memory: A Contemporary Analysis of the Group Mind
+  Keywords: HUMMBL:distributed knowledge HUMMBL:group cognition HUMMBL:transactive memory
+
+- **Nonaka1994KnowledgeCreation** (Nonaka, Ikujiro, 1994) doi:10.1287/orsc.5.1.14
+  A Dynamic Theory of Organizational Knowledge Creation
+  Keywords: HUMMBL:SECI model HUMMBL:knowledge creation HUMMBL:organizational learning HUMMBL:tacit knowledge
+
+- **Hollan2000DistributedCognition** (Hollan, James D. and Hutchins, Edwin and Kirsh, David, 2000) doi:10.1145/353485.353487
+  Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research
+  Keywords: HUMMBL:HCI HUMMBL:cognitive systems HUMMBL:distributed cognition HUMMBL:external representation
+
+- **Norman1991CognitiveArtifacts** (Norman, Donald A., 1991) no-doi
+  Cognitive Artifacts
+  Keywords: HUMMBL:cognitive artifacts HUMMBL:representational function HUMMBL:task transformation
+
+- **Luhmann1981Zettelkasten** (Luhmann, Niklas, 1981) doi:10.1007/978-3-322-87749-9_19
+  Kommunikation mit Zettelk\"{a}sten: Ein Erfahrungsbericht
+  Keywords: HUMMBL:Zettelkasten HUMMBL:interlinked notes HUMMBL:knowledge management HUMMBL:note-taking
+
+- **Piaget1952Origins** (Piaget, Jean, 1952) doi:10.1037/11494-000
+  The Origins of Intelligence in Children
+  Keywords: HUMMBL:accommodation HUMMBL:assimilation HUMMBL:cognitive development HUMMBL:schema theory
+
+- **Bartlett1932Remembering** (Bartlett, Frederic C., 1932) doi:10.1017/CBO9781139173469
+  Remembering: A Study in Experimental and Social Psychology
+  Keywords: HUMMBL:reconstructive memory HUMMBL:schema theory HUMMBL:serial reproduction
+
+- **Lave1991SituatedLearning** (Lave, Jean and Wenger, Etienne, 1991) doi:10.1017/CBO9780511815355
+  Situated Learning: Legitimate Peripheral Participation
+  Keywords: HUMMBL:communities of practice HUMMBL:legitimate peripheral participation HUMMBL:situated learning
+
+- **Wenger1998CommunitiesPractice** (Wenger, Etienne, 1998) doi:10.1017/CBO9780511803932
+  Communities of Practice: Learning, Meaning, and Identity
+  Keywords: HUMMBL:communities of practice HUMMBL:identity HUMMBL:shared repertoire HUMMBL:social learning
+
+- **Ericsson1993DeliberatePractice** (Ericsson, K. Anders and Krampe, Ralf Th. and Tesch-R\"{o}mer, Clemens, 1993) doi:10.1037/0033-295X.100.3.363
+  The Role of Deliberate Practice in the Acquisition of Expert Performance
+  Keywords: HUMMBL:deliberate practice HUMMBL:expertise HUMMBL:feedback HUMMBL:skill acquisition
+
+- **Dervin1998SenseMaking** (Dervin, Brenda, 1998) doi:10.1108/13673279810249369
+  Sense-Making Theory and Practice: An Overview of User Interests in Knowledge Seeking and Use
+  Keywords: HUMMBL:information seeking HUMMBL:knowledge gaps HUMMBL:sense-making HUMMBL:user-centered design
+
+- **Pirolli1999InformationForaging** (Pirolli, Peter and Card, Stuart, 1999) doi:10.1037/0033-295X.106.4.643
+  Information Foraging
+  Keywords: HUMMBL:HCI HUMMBL:information foraging HUMMBL:information scent HUMMBL:optimal foraging
+
+- **Spiro1990CognitiveFlexibility** (Spiro, Rand J. and Feltovich, Paul J. and Jacobson, Michael J. and Coulson, Richard L., 1990) doi:10.4324/9780203052600-11
+  Cognitive Flexibility, Constructivism, and Hypertext: Random Access Instruction for Advanced Knowledge Acquisition in Ill-Structured Domains
+  Keywords: HUMMBL:cognitive flexibility HUMMBL:hypertext HUMMBL:ill-structured domains HUMMBL:multiple representations
+
+- **Thalos2014GrammarOfExperience** (Thalos, Mariam, 2014) doi:10.1017/s0031819114000023
+  The Grammar of Experience
+  Keywords: HUMMBL:Kantian categories HUMMBL:categorial rules HUMMBL:grammar of experience HUMMBL:perceptual structure HUMMBL:philosophy of mind
+
+## T9: Economics (21 entries)
+
+- **Coase1937NatureFirm** (Coase, Ronald H., 1937) doi:10.1111/j.1468-0335.1937.tb00002.x
+  The Nature of the Firm
+  Keywords: HUMMBL:firm theory HUMMBL:make-or-buy HUMMBL:transaction costs
+
+- **Williamson1985EconomicInstitutions** (Williamson, Oliver E., 1985) no-doi
+  The Economic Institutions of Capitalism: Firms, Markets, Relational Contracting
+  Keywords: HUMMBL:asset specificity HUMMBL:governance structures HUMMBL:transaction costs
+
+- **Rochet2003PlatformCompetition** (Rochet, Jean-Charles and Tirole, Jean, 2003) doi:10.1162/154247603322493212
+  Platform Competition in Two-Sided Markets
+  Keywords: HUMMBL:network effects HUMMBL:platform economics HUMMBL:two-sided markets
+
+- **Parker2005TwoSidedNetworkEffects** (Parker, Geoffrey G. and Van Alstyne, Marshall W., 2005) doi:10.1287/mnsc.1050.0400
+  Two-Sided Network Effects: A Theory of Information Product Design
+  Keywords: HUMMBL:information goods HUMMBL:network effects HUMMBL:platform strategy
+
+- **Shapiro1999InformationRules** (Shapiro, Carl and Varian, Hal R., 1999) no-doi
+  Information Rules: A Strategic Guide to the Network Economy
+  Keywords: HUMMBL:information economics HUMMBL:network effects HUMMBL:switching costs
+
+- **Vickrey1961Counterspeculation** (Vickrey, William, 1961) doi:10.1111/j.1540-6261.1961.tb02789.x
+  Counterspeculation, Auctions, and Competitive Sealed Tenders
+  Keywords: HUMMBL:auction theory HUMMBL:mechanism design HUMMBL:truthful bidding
+
+- **Nordhaus2021EconomicSingularity** (Nordhaus, William D., 2021) doi:10.1257/mac.20170105
+  Are We Approaching an Economic Singularity? Information Technology and the Future of Economic Growth
+  Keywords: HUMMBL:AI singularity HUMMBL:compute costs HUMMBL:economic growth
+
+- **Kaplan2020ScalingLaws** (Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario, 2020) doi:10.48550/arXiv.2001.08361
+  Scaling Laws for Neural Language Models
+  Keywords: HUMMBL:compute costs HUMMBL:neural networks HUMMBL:scaling laws
+
+- **Chen2023FrugalGPT** (Chen, Lingjiao and Zaharia, Matei and Zou, James, 2023) doi:10.48550/arXiv.2305.05176
+  {FrugalGPT}: How to Use Large Language Models While Reducing Cost and Improving Performance
+  Keywords: HUMMBL:LLM inference HUMMBL:cost optimization HUMMBL:model cascade
+
+- **Brynjolfsson2016DataDriven** (Brynjolfsson, Erik and McElheran, Kristina, 2016) doi:10.1257/aer.p20161016
+  The Rapid Adoption of Data-Driven Decision-Making
+  Keywords: HUMMBL:data-driven decisions HUMMBL:productivity HUMMBL:technology adoption
+
+- **Agrawal2019EconomicPolicy** (Agrawal, Ajay and Gans, Joshua and Goldfarb, Avi, 2019) doi:10.1086/699935
+  Economic Policy for Artificial Intelligence
+  Keywords: HUMMBL:AI economics HUMMBL:policy HUMMBL:prediction costs HUMMBL:principal-agent
+
+- **Amershi2019SoftwareEngineering** (Amershi, Saleema and Begel, Andrew and Bird, Christian and DeLine, Robert and Gall, Harald and Kamar, Ece and Nagappan, Nachiappan and Nushi, Besmira and Zimmermann, Thomas, 2019) doi:10.1109/ICSE-SEIP.2019.00042
+  Software Engineering for Machine Learning: A Case Study
+  Keywords: HUMMBL:machine learning HUMMBL:software engineering HUMMBL:technical debt
+
+- **Milgrom1982TheoryAuctions** (Milgrom, Paul R. and Weber, Robert J., 1982) doi:10.2307/1911865
+  A Theory of Auctions and Competitive Bidding
+  Keywords: HUMMBL:affiliation HUMMBL:auction theory HUMMBL:mechanism design HUMMBL:winner's curse
+
+- **Hart1995FirmsContracts** (Hart, Oliver, 1995) doi:10.1093/0198294158.001.0001
+  Firms, Contracts, and Financial Structure
+  Keywords: HUMMBL:firm boundaries HUMMBL:incomplete contracts HUMMBL:residual control rights
+
+- **Akerlof1970Lemons** (Akerlof, George A., 1970) doi:10.2307/1879431
+  The Market for ``Lemons'': Quality Uncertainty and the Market Mechanism
+  Keywords: HUMMBL:adverse selection HUMMBL:information asymmetry HUMMBL:lemons HUMMBL:market failure
+
+- **Holmstrom1979MoralHazard** (Holmstr\"{o}m, Bengt, 1979) doi:10.2307/3003320
+  Moral Hazard and Observability
+  Keywords: HUMMBL:informativeness principle HUMMBL:monitoring HUMMBL:moral hazard HUMMBL:principal-agent
+
+- **Ostrom1990GoverningCommons** (Ostrom, Elinor, 1990) doi:10.1017/CBO9780511807763
+  Governing the Commons: The Evolution of Institutions for Collective Action
+  Keywords: HUMMBL:collective action HUMMBL:commons governance HUMMBL:design principles HUMMBL:institutions
+
+- **Armbrust2010CloudComputing** (Armbrust, Michael and Fox, Armando and Griffith, Rean and Joseph, Anthony D. and Katz, Randy and Konwinski, Andy and Lee, Gunho and Patterson, David and Rabkin, Ariel and Stoica, Ion and Zaharia, Matei, 2010) doi:10.1145/1721654.1721672
+  A View of Cloud Computing
+  Keywords: HUMMBL:cloud computing HUMMBL:economics HUMMBL:pay-per-use HUMMBL:utility computing
+
+- **Zachariadis2012API** (Zachariadis, Markos and Ozcan, Pinar, 2017) doi:10.2139/ssrn.2975199
+  The {API} Economy and Digital Transformation in Financial Services: The Case of Open Banking
+  Keywords: HUMMBL:API economy HUMMBL:composability HUMMBL:open banking HUMMBL:platform strategy
+
+- **Buterin2014Ethereum** (Buterin, Vitalik, 2014) no-doi
+  A Next-Generation Smart Contract and Decentralized Application Platform
+  Keywords: HUMMBL:decentralized governance HUMMBL:incentive design HUMMBL:smart contracts HUMMBL:token economics
+
+- **Frenken2006Innovation** (Frenken, Koen, 2006) doi:10.1080/10438590500141189
+  Technological Innovation and Complexity Theory
+  Keywords: HUMMBL:NK model HUMMBL:fitness landscape HUMMBL:modularity HUMMBL:recombinant innovation
+
+## T10: Collaboration (22 entries)
+
+- **Licklider1960ManComputer** (Licklider, J. C. R., 1960) doi:10.1109/THFE2.1960.4503259
+  Man-Computer Symbiosis
+  Keywords: HUMMBL:cooperation HUMMBL:decision making HUMMBL:human-computer symbiosis
+
+- **Grudin1988WhyCSCW** (Grudin, Jonathan, 1988) doi:10.1145/62266.62273
+  Why {CSCW} Applications Fail: Problems in the Design and Evaluation of Organizational Interfaces
+  Keywords: HUMMBL:CSCW HUMMBL:groupware failure HUMMBL:organizational interfaces
+
+- **Olson2000DistanceMatters** (Olson, Gary M. and Olson, Judith S., 2000) doi:10.1207/S15327051HCI1523_4
+  Distance Matters
+  Keywords: HUMMBL:common ground HUMMBL:distance collaboration HUMMBL:remote work
+
+- **Klein2005CommonGround** (Klein, Gary and Feltovich, Paul J. and Bradshaw, Jeffrey M. and Woods, David D., 2005) doi:10.1002/0471739448.ch6
+  Common Ground and Coordination in Joint Activity
+  Keywords: HUMMBL:common ground HUMMBL:coordination HUMMBL:joint activity HUMMBL:team cognition
+
+- **Salas2005BigFive** (Salas, Eduardo and Sims, Dana E. and Burke, C. Shawn, 2005) doi:10.1177/1046496405277134
+  Is There a ``Big Five'' in Teamwork?
+  Keywords: HUMMBL:shared mental models HUMMBL:team performance HUMMBL:teamwork
+
+- **Hollnagel2005JointCognitive** (Hollnagel, Erik and Woods, David D., 2005) doi:10.1201/9781420038194
+  Joint Cognitive Systems: Foundations of Cognitive Systems Engineering
+  Keywords: HUMMBL:cognitive engineering HUMMBL:joint cognitive systems HUMMBL:resilience
+
+- **Lee2004TrustAutomation** (Lee, John D. and See, Katrina A., 2004) doi:10.1518/hfes.46.1.50_30392
+  Trust in Automation: Designing for Appropriate Reliance
+  Keywords: HUMMBL:automation HUMMBL:calibration HUMMBL:human factors HUMMBL:trust
+
+- **Williams2000PairProgramming** (Williams, Laurie A. and Kessler, Robert R., 2000) doi:10.1145/332833.332848
+  All {I} Really Need to Know About Pair Programming {I} Learned in Kindergarten
+  Keywords: HUMMBL:code quality HUMMBL:collaboration HUMMBL:pair programming
+
+- **Noy2023ProductivityAI** (Noy, Shakked and Zhang, Whitney, 2023) doi:10.1126/science.adh2586
+  Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
+  Keywords: HUMMBL:generative AI HUMMBL:human-AI collaboration HUMMBL:productivity
+
+- **ONeill2022HumanAutonomy** (O'Neill, Thomas and McNeese, Nathan and Barron, Amy and Schelble, Beau, 2022) doi:10.1177/0018720820960865
+  Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature
+  Keywords: HUMMBL:human-autonomy teaming HUMMBL:multi-agent systems HUMMBL:team cognition
+
+- **Rahwan2018SocietyLoop** (Rahwan, Iyad, 2018) doi:10.1007/s10676-017-9430-8
+  Society-in-the-Loop: Programming the Algorithmic Social Contract
+  Keywords: HUMMBL:AI governance HUMMBL:oversight HUMMBL:social contract HUMMBL:society-in-the-loop
+
+- **Bansal2019MentalModels** (Bansal, Gagan and Nushi, Besmira and Kamar, Ece and Lasecki, Walter S. and Weld, Daniel S. and Horvitz, Eric, 2019) doi:10.1609/hcomp.v7i1.5285
+  Beyond Accuracy: The Role of Mental Models in Human-{AI} Team Performance
+  Keywords: HUMMBL:error boundaries HUMMBL:human-AI teams HUMMBL:mental models HUMMBL:trust calibration
+
+- **CannonBowers1993SharedMentalModels** (Cannon-Bowers, Janis A. and Salas, Eduardo and Converse, Sharolyn A., 1993) doi:10.1006/obhd.1993.1027
+  Shared Mental Models in Expert Team Decision Making
+  Keywords: HUMMBL:implicit coordination HUMMBL:shared mental models HUMMBL:team cognition
+
+- **Endsley1995SituationAwareness** (Endsley, Mica R., 1995) doi:10.1518/001872095779049543
+  Toward a Theory of Situation Awareness in Dynamic Systems
+  Keywords: HUMMBL:decision making HUMMBL:dynamic systems HUMMBL:perception HUMMBL:situation awareness
+
+- **Malone1994InterdisciplinaryCoordination** (Malone, Thomas W. and Crowston, Kevin, 1994) doi:10.1145/174666.174668
+  The Interdisciplinary Study of Coordination
+  Keywords: HUMMBL:coordination theory HUMMBL:dependencies HUMMBL:interdisciplinary HUMMBL:resource allocation
+
+- **Parasuraman2000AdaptiveAutomation** (Parasuraman, Raja and Sheridan, Thomas B. and Wickens, Christopher D., 2000) doi:10.1109/3468.844354
+  A Model for Types and Levels of Human Interaction with Automation
+  Keywords: HUMMBL:adaptive automation HUMMBL:human-automation interaction HUMMBL:levels of automation
+
+- **Arrieta2020ExplainableAI** (Arrieta, Alejandro Barredo and D\'{i}az-Rodr\'{i}guez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and Barbado, Alberto and Garcia, Salvador and Gil-Lopez, Sergio and Molina, Daniel and Benjamins, Richard and Chatila, Raja and Herrera, Francisco, 2020) doi:10.1016/j.inffus.2019.12.012
+  Explainable Artificial Intelligence ({XAI}): Concepts, Taxonomies, Opportunities and Challenges Toward Responsible {AI}
+  Keywords: HUMMBL:XAI HUMMBL:explainable AI HUMMBL:responsible AI HUMMBL:transparency HUMMBL:trust
+
+- **Chen2018HumanRobotTeaming** (Chen, Jessie Y. C. and Procci, Katelyn and Boyce, Michael and Wright, Julia and Garcia, Andre and Barnes, Michael, 2018) doi:10.1080/1463922X.2017.1315750
+  Situation Awareness-Based Agent Transparency and Human-Autonomy Teaming Effectiveness
+  Keywords: HUMMBL:agent transparency HUMMBL:human-robot teaming HUMMBL:situation awareness HUMMBL:trust
+
+- **Vicente1999CognitiveWorkAnalysis** (Vicente, Kim J., 1999) doi:10.1201/b12457
+  Cognitive Work Analysis: Toward Safe, Productive, and Healthy Computer-Based Work
+  Keywords: HUMMBL:cognitive work analysis HUMMBL:constraint-based design HUMMBL:sociotechnical systems
+
+- **Helmreich1999CRM** (Helmreich, Robert L. and Merritt, Ashleigh C. and Wilhelm, John A., 1999) doi:10.1136/bmj.320.7237.781
+  On Error Management: Lessons from Aviation
+  Keywords: HUMMBL:Crew Resource Management HUMMBL:aviation safety HUMMBL:error management HUMMBL:team communication
+
+- **Reason1990HumanError** (Reason, James, 1990) doi:10.1017/CBO9780511831193
+  Human Error
+  Keywords: HUMMBL:Swiss Cheese Model HUMMBL:accident causation HUMMBL:active failures HUMMBL:human error HUMMBL:latent conditions
+
+- **Dekker2014FieldGuide** (Dekker, Sidney, 2014) doi:10.1201/9781315239675
+  The Field Guide to Understanding 'Human Error'
+  Keywords: HUMMBL:drift into failure HUMMBL:hindsight bias HUMMBL:human error HUMMBL:local rationality HUMMBL:safety
+
+## T11: Security (23 entries)
+
+- **Goodfellow2015Adversarial** (Goodfellow, Ian J. and Shlens, Jonathon and Szegedy, Christian, 2015) doi:10.48550/arXiv.1412.6572
+  Explaining and Harnessing Adversarial Examples
+  Keywords: HUMMBL:FGSM HUMMBL:adversarial examples HUMMBL:neural networks HUMMBL:robustness
+
+- **Carlini2017Evaluating** (Carlini, Nicholas and Wagner, David, 2017) doi:10.1109/SP.2017.49
+  Towards Evaluating the Robustness of Neural Networks
+  Keywords: HUMMBL:adversarial robustness HUMMBL:defense evaluation HUMMBL:optimization attacks
+
+- **Biggio2018Wild** (Biggio, Battista and Roli, Fabio, 2018) doi:10.1016/j.patcog.2018.07.023
+  Wild Patterns: Ten Years After the Rise of Adversarial Machine Learning
+  Keywords: HUMMBL:adversarial machine learning HUMMBL:evasion HUMMBL:poisoning HUMMBL:threat taxonomy
+
+- **Saltzer1975Protection** (Saltzer, Jerome H. and Schroeder, Michael D., 1975) doi:10.1109/PROC.1975.9939
+  The Protection of Information in Computer Systems
+  Keywords: HUMMBL:access control HUMMBL:least privilege HUMMBL:security principles
+
+- **Rose2020ZeroTrust** (Rose, Scott and Borchert, Oliver and Mitchell, Stu and Connelly, Sean, 2020) doi:10.6028/NIST.SP.800-207
+  Zero Trust Architecture
+  Keywords: HUMMBL:continuous verification HUMMBL:network security HUMMBL:zero trust
+
+- **Birgisson2014Macaroons** (Birgisson, Arnar and Politz, Joe Gibbs and Erlingsson, \'{U}lfar and Taly, Ankur and Vrable, Michael and Lentczner, Mark, 2014) doi:10.14722/ndss.2014.23212
+  Macaroons: Cookies with Contextual Caveats for Decentralized Authorization in the Cloud
+  Keywords: HUMMBL:HMAC HUMMBL:authorization HUMMBL:caveats HUMMBL:decentralized credentials
+
+- **Perez2022RedTeaming** (Perez, Ethan and Huang, Saffron and Song, Francis and Cai, Trevor and Ring, Roman and Aslanides, John and Glaese, Amelia and McAleese, Nat and Irving, Geoffrey, 2022) doi:10.18653/v1/2022.emnlp-main.225
+  Red Teaming Language Models with Language Models
+  Keywords: HUMMBL:automated testing HUMMBL:language models HUMMBL:red teaming HUMMBL:safety evaluation
+
+- **Katz2017Reluplex** (Katz, Guy and Barrett, Clark and Dill, David L. and Julian, Kyle and Kochenderfer, Mykel J., 2017) doi:10.1007/978-3-319-63387-9_5
+  Reluplex: An Efficient {SMT} Solver for Verifying Deep Neural Networks
+  Keywords: HUMMBL:SMT solving HUMMBL:formal verification HUMMBL:neural networks HUMMBL:safety properties
+
+- **Papernot2016Distillation** (Papernot, Nicolas and McDaniel, Patrick and Wu, Xi and Jha, Somesh and Swami, Ananthram, 2016) doi:10.1109/SP.2016.41
+  Distillation as a Defense to Adversarial Perturbations Against Deep Neural Networks
+  Keywords: HUMMBL:adversarial defense HUMMBL:defensive distillation HUMMBL:output transformation
+
+- **Shokri2017Membership** (Shokri, Reza and Stronati, Marco and Song, Congzheng and Shmatikov, Vitaly, 2017) doi:10.1109/SP.2017.41
+  Membership Inference Attacks Against Machine Learning Models
+  Keywords: HUMMBL:machine learning security HUMMBL:membership inference HUMMBL:privacy
+
+- **Papernot2018SoK** (Papernot, Nicolas and McDaniel, Patrick and Sinha, Arunesh and Wellman, Michael P., 2018) doi:10.1109/EuroSP.2018.00035
+  {SoK}: Security and Privacy in Machine Learning
+  Keywords: HUMMBL:ML security HUMMBL:defense in depth HUMMBL:systematization of knowledge HUMMBL:threat models
+
+- **Guo2024Threats** (Guo, Ziyao and Liu, Jingnan and Wang, Yifei and Chen, Minghu and Li, Sheng and Liu, Meng and Wang, Hao, 2024) no-doi
+  Threats, Attacks, and Defenses in Machine Unlearning: A Survey
+  Keywords: HUMMBL:machine unlearning HUMMBL:privacy HUMMBL:right to erasure HUMMBL:verification
+
+- **Dwork2006DifferentialPrivacy** (Dwork, Cynthia and McSherry, Frank and Nissim, Kobbi and Smith, Adam, 2006) doi:10.1007/11681878_14
+  Calibrating Noise to Sensitivity in Private Data Analysis
+  Keywords: HUMMBL:differential privacy HUMMBL:noise calibration HUMMBL:privacy-preserving computation
+
+- **Castro1999PBFT** (Castro, Miguel and Liskov, Barbara, 2002) doi:10.1145/570907.570913
+  Practical {Byzantine} Fault Tolerance and Proactive Recovery
+  Keywords: HUMMBL:Byzantine fault tolerance HUMMBL:distributed consensus HUMMBL:state machine replication
+
+- **Gentry2009Homomorphic** (Gentry, Craig, 2009) doi:10.1145/1536414.1536440
+  Fully Homomorphic Encryption Using Ideal Lattices
+  Keywords: HUMMBL:homomorphic encryption HUMMBL:lattice cryptography HUMMBL:privacy-preserving computation
+
+- **SLSA2023SupplyChain** (SLSA Contributors (Google, Intel, VMware, Linux Foundation), 2023) no-doi
+  {SLSA}: Supply-chain Levels for Software Artifacts
+  Keywords: HUMMBL:build integrity HUMMBL:provenance HUMMBL:software assurance HUMMBL:supply chain security
+
+- **MITRE2024ATLAS** (MITRE Corporation, 2024) no-doi
+  {ATLAS}: Adversarial Threat Landscape for {AI} Systems
+  Keywords: HUMMBL:ATT&CK HUMMBL:adversarial AI HUMMBL:kill chain HUMMBL:threat taxonomy
+
+- **Ohrimenko2016SecureEnclaves** (Ohrimenko, Olga and Schuster, Felix and C\'{e}dric, Fournet and Mehta, Aastha and Nowozin, Sebastian and Vaswani, Kapil and Costa, Manuel, 2016) no-doi
+  Oblivious Multi-Party Machine Learning on Trusted Processors
+  Keywords: HUMMBL:multi-party computation HUMMBL:privacy HUMMBL:secure enclaves HUMMBL:trusted execution
+
+- **Lyu2020FederatedSecurity** (Lyu, Lingjuan and Yu, Han and Yang, Qiang, 2020) doi:10.1109/MSP.2020.2975749
+  Threats to Federated Learning: A Comprehensive Survey
+  Keywords: HUMMBL:distributed security HUMMBL:federated learning HUMMBL:poisoning attacks HUMMBL:privacy
+
+- **Greshake2023PromptInjection** (Greshake, Kai and Abdelnabi, Sahar and Mishra, Shailesh and Endres, Christoph and Holz, Thorsten and Fritz, Mario, 2023) doi:10.48550/arXiv.2302.12173
+  Not What You've Signed Up For: Compromising Real-World {LLM}-Integrated Applications with Indirect Prompt Injection
+  Keywords: HUMMBL:LLM security HUMMBL:application security HUMMBL:indirect attacks HUMMBL:prompt injection
+
+- **Perrow1984NormalAccidents** (Perrow, Charles, 1984) doi:10.1515/9781400828494
+  Normal Accidents: Living with High-Risk Technologies
+  Keywords: HUMMBL:high-risk systems HUMMBL:interactive complexity HUMMBL:normal accident theory HUMMBL:system failure HUMMBL:tight coupling
+
+- **Hollnagel2006Resilience** (Hollnagel, Erik and Woods, David D. and Leveson, Nancy G., 2006) no-doi
+  Resilience Engineering: Concepts and Precepts
+  Keywords: HUMMBL:adaptation HUMMBL:anticipation HUMMBL:monitoring HUMMBL:resilience engineering HUMMBL:safety
+
+- **Leveson2012STAMP** (Leveson, Nancy G., 2012) doi:10.7551/mitpress/8179.001.0001
+  Engineering a Safer World: Systems Thinking Applied to Safety
+  Keywords: HUMMBL:STAMP HUMMBL:accident causation HUMMBL:control structure HUMMBL:safety constraints HUMMBL:systems theory
+
+## T12: Complexity (31 entries)
+
+- **Holland1995HiddenOrder** (Holland, John H., 1995) doi:10.2307/20047667
+  Hidden Order: How Adaptation Builds Complexity
+  Keywords: HUMMBL:Santa Fe Institute HUMMBL:adaptation HUMMBL:complex adaptive systems HUMMBL:emergence
+
+- **Kauffman1993Origins** (Kauffman, Stuart A., 1993) doi:10.1093/oso/9780195079517.001.0001
+  The Origins of Order: Self-Organization and Selection in Evolution
+  Keywords: HUMMBL:Boolean networks HUMMBL:edge of chaos HUMMBL:evolution HUMMBL:self-organization
+
+- **Prigogine1984Order** (Prigogine, Ilya and Stengers, Isabelle, 1984) doi:10.1063/1.2813716
+  Order Out of Chaos: Man's New Dialogue with Nature
+  Keywords: HUMMBL:bifurcation HUMMBL:dissipative structures HUMMBL:far from equilibrium HUMMBL:irreversibility
+
+- **Strogatz2015Nonlinear** (Strogatz, Steven H., 2015) doi:10.1017/CBO9780511755743
+  Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering
+  Keywords: HUMMBL:attractors HUMMBL:bifurcation HUMMBL:chaos HUMMBL:nonlinear dynamics
+
+- **Wiener1961Cybernetics** (Wiener, Norbert, 1961) doi:10.7551/mitpress/11810.001.0001
+  Cybernetics: Or Control and Communication in the Animal and the Machine
+  Keywords: HUMMBL:circular causality HUMMBL:control theory HUMMBL:cybernetics HUMMBL:feedback
+
+- **Ashby1956Cybernetics** (Ashby, W. Ross, 1956) doi:10.5962/bhl.title.5851
+  An Introduction to Cybernetics
+  Keywords: HUMMBL:cybernetics HUMMBL:homeostasis HUMMBL:regulation HUMMBL:requisite variety
+
+- **Beer1981Brain** (Beer, Stafford, 1981) no-doi
+  Brain of the Firm
+  Keywords: HUMMBL:cybernetics HUMMBL:organizational structure HUMMBL:recursion HUMMBL:viable system model
+
+- **Barabasi1999Emergence** (Barab\'{a}si, Albert-L\'{a}szl\'{o} and Albert, R\'{e}ka, 1999) doi:10.1126/science.286.5439.509
+  Emergence of Scaling in Random Networks
+  Keywords: HUMMBL:hubs HUMMBL:power law HUMMBL:preferential attachment HUMMBL:scale-free networks
+
+- **Watts1998SmallWorld** (Watts, Duncan J. and Strogatz, Steven H., 1998) doi:10.1038/30918
+  Collective Dynamics of `Small-World' Networks
+  Keywords: HUMMBL:clustering HUMMBL:network topology HUMMBL:path length HUMMBL:small-world networks
+
+- **Albert2002Statistical** (Albert, R\'{e}ka and Barab\'{a}si, Albert-L\'{a}szl\'{o}, 2002) doi:10.1103/RevModPhys.74.47
+  Statistical Mechanics of Complex Networks
+  Keywords: HUMMBL:cascading failure HUMMBL:complex networks HUMMBL:network science HUMMBL:resilience
+
+- **Woods2015FourConcepts** (Woods, David D., 2015) doi:10.1016/j.ress.2015.03.018
+  Four Concepts for Resilience and the Implications for the Future of Resilience Engineering
+  Keywords: HUMMBL:adaptability HUMMBL:graceful extensibility HUMMBL:resilience engineering
+
+- **Dekker2011Drift** (Dekker, Sidney, 2011) doi:10.1201/9781315257396
+  Drift into Failure: From Hunting Broken Components to Understanding Complex Systems
+  Keywords: HUMMBL:complex systems HUMMBL:drift into failure HUMMBL:organizational accidents HUMMBL:safety
+
+- **Maturana1980Autopoiesis** (Maturana, Humberto R. and Varela, Francisco J., 1980) doi:10.1007/978-94-009-8947-4
+  Autopoiesis and Cognition: The Realization of the Living
+  Keywords: HUMMBL:autopoiesis HUMMBL:living systems HUMMBL:organizational closure HUMMBL:self-production
+
+- **Wright1932Roles** (Wright, Sewall, 1932) no-doi
+  The Roles of Mutation, Inbreeding, Crossbreeding, and Selection in Evolution
+  Keywords: HUMMBL:evolutionary dynamics HUMMBL:fitness landscape HUMMBL:genetic drift HUMMBL:local optima
+
+- **Langton1990EdgeChaos** (Langton, Christopher G., 1990) doi:10.1016/0167-2789(90)90064-V
+  Computation at the Edge of Chaos: Phase Transitions and Emergent Computation
+  Keywords: HUMMBL:cellular automata HUMMBL:edge of chaos HUMMBL:emergent computation HUMMBL:phase transitions
+
+- **Bonabeau1999SwarmIntelligence** (Bonabeau, Eric and Dorigo, Marco and Theraulaz, Guy, 1999) doi:10.1093/oso/9780195131581.001.0001
+  Swarm Intelligence: From Natural to Artificial Systems
+  Keywords: HUMMBL:ant colony HUMMBL:self-organization HUMMBL:stigmergy HUMMBL:swarm intelligence
+
+- **Achlioptas2009Percolation** (Achlioptas, Dimitris and D'Souza, Raissa M. and Spencer, Joel, 2009) doi:10.1126/science.1167782
+  Explosive Percolation in Random Networks
+  Keywords: HUMMBL:cascade failure HUMMBL:percolation theory HUMMBL:phase transitions HUMMBL:random networks
+
+- **Newman2005PowerLaws** (Newman, Mark E. J., 2005) doi:10.1080/00107510500052444
+  Power Laws, {Pareto} Distributions and {Zipf's} Law
+  Keywords: HUMMBL:Zipf HUMMBL:complex systems HUMMBL:heavy-tailed distributions HUMMBL:power laws
+
+- **Walker2004Resilience** (Walker, Brian and Holling, C. S. and Carpenter, Stephen R. and Kinzig, Ann, 2004) doi:10.5751/ES-00650-090205
+  Resilience, Adaptability and Transformability in Social-Ecological Systems
+  Keywords: HUMMBL:adaptability HUMMBL:resilience HUMMBL:social-ecological systems HUMMBL:transformability
+
+- **Gunderson2002Panarchy** (Gunderson, Lance H. and Holling, C. S., 2002) no-doi
+  Panarchy: Understanding Transformations in Human and Natural Systems
+  Keywords: HUMMBL:adaptive cycles HUMMBL:creative destruction HUMMBL:cross-scale dynamics HUMMBL:panarchy
+
+- **Cabrera2025GrammarReality** (Cabrera, Derek and Cabrera, Laura, 2025) doi:10.54120/001c.138685
+  The Grammar of Reality: The Organizing Principles of Structure and Emergence
+  Keywords: HUMMBL:DSRP HUMMBL:emergence HUMMBL:process metaphysics HUMMBL:relational quantum mechanics HUMMBL:scale invariance HUMMBL:structural ontology HUMMBL:systems thinking
+
+- **Rovelli2017RealityNotWhatItSeems** (Rovelli, Carlo, 2017) no-doi
+  Reality Is Not What It Seems: The Journey to Quantum Gravity
+  Keywords: HUMMBL:history of physics HUMMBL:loop quantum gravity HUMMBL:process ontology HUMMBL:quantum gravity HUMMBL:relational quantum mechanics
+
+- **GoguenBurstall1992Institutions** (Goguen, J. A. and Burstall, R. M., 1992) doi:10.1145/147508.147524
+  Institutions: Abstract Model Theory for Specification and Programming
+  Keywords: HUMMBL:abstract model theory HUMMBL:institution theory HUMMBL:satisfaction condition HUMMBL:signature morphisms
+
+- **GoguenRosu2002InstitutionMorphisms** (Goguen, J. A. and Ro\c{s}u, G., 2002) doi:10.1007/s001650200013
+  Institution Morphisms
+  Keywords: HUMMBL:comorphisms HUMMBL:heterogeneous specifications HUMMBL:institution morphisms HUMMBL:structure-preserving maps
+
+- **Diaconescu2008InstitutionModelTheory** (Diaconescu, R\u{a}zvan, 2008) doi:10.1007/978-3-7643-8708-2
+  Institution-independent Model Theory
+  Keywords: HUMMBL:Grothendieck institutions HUMMBL:institution theory HUMMBL:interpolation HUMMBL:model theory
+
+- **Holland1998Emergence** (Holland, John H., 1998) no-doi
+  Emergence: From Chaos to Order
+  Keywords: HUMMBL:complex systems HUMMBL:constrained generating procedures HUMMBL:emergence HUMMBL:self-organization
+
+- **Anderson1972MoreIsDifferent** (Anderson, Philip W., 1972) doi:10.1126/science.177.4047.393
+  More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science
+  Keywords: HUMMBL:broken symmetry HUMMBL:complexity HUMMBL:emergence HUMMBL:hierarchy HUMMBL:reductionism
+
+- **Page2017Diversity** (Page, Scott E., 2017) no-doi
+  The Diversity Bonus: How Great Teams Pay Off in the Knowledge Economy
+  Keywords: HUMMBL:cognitive diversity HUMMBL:collective intelligence HUMMBL:diversity HUMMBL:prediction theorem
+
+- **Mitchell2009Complexity** (Mitchell, Melanie, 2009) no-doi
+  Complexity: A Guided Tour
+  Keywords: HUMMBL:chaos HUMMBL:complexity science HUMMBL:emergence HUMMBL:genetic algorithms HUMMBL:networks
+
+- **BarYam1997Dynamics** (Bar-Yam, Yaneer, 1997) no-doi
+  Dynamics of Complex Systems
+  Keywords: HUMMBL:complex systems HUMMBL:emergence HUMMBL:multiscale analysis HUMMBL:nonlinear dynamics
+
+- **Ladyman2007EverythingMustGo** (Ladyman, James and Ross, David and Spurrett, David and Collier, John, 2007) no-doi
+  Every Thing Must Go: Metaphysics Naturalized
+  Keywords: HUMMBL:complexity HUMMBL:emergence HUMMBL:naturalized metaphysics HUMMBL:scale-relative ontology
+
+## T13: Reasoning (36 entries)
 
 - **OpenAI2024o1SystemCard** (OpenAI, 2024) no-doi
   OpenAI o1 System Card
-  Keywords: HUMMBL:RE HUMMBL:IN
+  Keywords: HUMMBL:reasoning models HUMMBL:safety evaluation HUMMBL:test-time compute
 
-- **OpenAI2024o1Tech** (Jaech, 2024) doi:10.48550/arXiv.2501.12599
-  OpenAI o1 Replication Report: Teaching Language Models to Reason via Process Reward Models
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **DeepSeek2025R1** (DeepSeek-AI, 2025) doi:10.48550/arXiv.2501.12948
+  {DeepSeek-R1}: Incentivizing Reasoning Capability in {LLM}s via Reinforcement Learning
+  Keywords: HUMMBL:chain-of-thought HUMMBL:open weights HUMMBL:reasoning models HUMMBL:reinforcement learning
+
+- **Snell2024ScalingTestTime** (Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral, 2024) doi:10.48550/arXiv.2408.03314
+  Scaling {LLM} Test-Time Compute Optimally Improves Performance on Challenging Tasks
+  Keywords: HUMMBL:process reward models HUMMBL:scaling HUMMBL:test-time compute
+
+- **Lightman2023PRM** (Lightman, Hunter and Kosaraju, Vineet and Burda, Yura and Edwards, Harri and Baker, Bowen and Lee, Teddy and Leike, Jan and Schulman, John and Sutskever, Ilya and Cobbe, Karl, 2023) doi:10.48550/arXiv.2305.20050
+  Let's Verify Step by Step
+  Keywords: HUMMBL:math reasoning HUMMBL:process reward models HUMMBL:step-level verification
 
 - **OpenAI2025o3SystemCard** (OpenAI, 2025) no-doi
   OpenAI o3 and o4-mini System Card
-  Keywords: HUMMBL:RE HUMMBL:CO
+  Keywords: HUMMBL:agentic reasoning HUMMBL:reasoning models HUMMBL:safety evaluation HUMMBL:tool use
 
-- **Snell2024ScalingTestTime** (Snell, 2024) doi:10.48550/arXiv.2408.03314
-  Scaling LLM Test-Time Compute Optimally Improves Performance on Challenging Tasks
-  Keywords: HUMMBL:RE HUMMBL:IN
+- **Cobbe2021GSM8K** (Cobbe, Karl and Kosaraju, Vineet and Bavarian, Mohammad and Chen, Mark and Jun, Heewoo and Kaiser, Lukasz and Plappert, Matthias and Tworek, Jerry and Hilton, Jacob and Nakano, Reiichiro and Hesse, Christopher and Schulman, John, 2021) doi:10.48550/arXiv.2110.14168
+  Training Verifiers to Solve Math Word Problems
+  Keywords: HUMMBL:benchmark HUMMBL:math reasoning HUMMBL:verifier training
 
-- **Wang2023Selfconsistency** (Wang, 2023) doi:10.48550/arXiv.2203.11171
+- **Zelikman2022STAR** (Zelikman, Eric and Wu, Yuhuai and Mu, Jesse and Goodman, Noah D., 2022) doi:10.48550/arXiv.2203.14465
+  {STaR}: Bootstrapping Reasoning with Reasoning
+  Keywords: HUMMBL:chain-of-thought HUMMBL:reasoning bootstrapping HUMMBL:self-improvement
+
+- **Uesato2022ProcessOutcome** (Uesato, Jonathan and Kushman, Nate and Kumar, Ramana and Song, Francis and Siegel, Noah and Wang, Lisa and Creswell, Antonia and Irving, Geoffrey and Higgins, Irina, 2022) doi:10.48550/arXiv.2211.14275
+  Solving Math Word Problems with Process- and Outcome-Based Feedback
+  Keywords: HUMMBL:feedback HUMMBL:math reasoning HUMMBL:process reward models
+
+- **Wang2023Selfconsistency** (Wang, Xuezhi and Wei, Jason and Schuurmans, Dale and Le, Quoc and Chi, Ed and Narang, Sharan and Chowdhery, Aakanksha and Zhou, Denny, 2023) doi:10.48550/arXiv.2203.11171
   Self-Consistency Improves Chain of Thought Reasoning in Language Models
-  Keywords: HUMMBL:RE HUMMBL:IN
+  Keywords: HUMMBL:chain-of-thought HUMMBL:ensemble reasoning HUMMBL:self-consistency
 
-- **Yao2024ToT2** (Yao, 2024) doi:10.48550/arXiv.2305.10601
-  Tree of Thoughts: Deliberate Problem Solving with Large Language Models
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **Madaan2023Selfrefine** (Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and Gupta, Shashank and Prasad Majumder, Bodhisattwa and Hermann, Katherine and Welleck, Sean and Yazdanbakhsh, Amir and Clark, Peter, 2023) doi:10.48550/arXiv.2303.17651
+  {Self-Refine}: Iterative Refinement with Self-Feedback
+  Keywords: HUMMBL:iterative refinement HUMMBL:self-critique HUMMBL:self-improvement
 
-- **Zelikman2022STAR** (Zelikman, 2022) doi:10.48550/arXiv.2203.14465
-  STaR: Bootstrapping Reasoning with Reasoning
-  Keywords: HUMMBL:RE HUMMBL:CO
+- **Anthropic2024Claude3** (Anthropic, 2024) no-doi
+  The {Claude} 3 Model Family: Opus, Sonnet, Haiku
+  Keywords: HUMMBL:constitutional AI HUMMBL:foundation model HUMMBL:safety evaluation
 
-- **Zheng2024JudgeBench** (Zheng, 2024) doi:10.48550/arXiv.2306.05685
-  Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena
-  Keywords: HUMMBL:RE HUMMBL:IN
+- **Zheng2024JudgeBench** (Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and others, 2024) doi:10.48550/arXiv.2306.05685
+  Judging {LLM}-as-a-Judge with {MT-Bench} and Chatbot Arena
+  Keywords: HUMMBL:LLM evaluation HUMMBL:automated judging HUMMBL:self-evaluation
 
+- **Chen2024AlphaCode2** (DeepMind, 2024) no-doi
+  {AlphaCode} 2 Technical Report
+  Keywords: HUMMBL:code generation HUMMBL:competitive programming HUMMBL:sampling
 
-## T2: Empirical Social Science (Teams, Trust, Knowledge) (20 entries)
+- **Gemini2024Team** ({Gemini Team} and {Google}, 2024) doi:10.48550/arXiv.2312.11805
+  Gemini: A Family of Highly Capable Multimodal Models
+  Keywords: HUMMBL:capabilities evaluation HUMMBL:foundation model HUMMBL:multimodal models
 
-- **BrownCollinsDuguid1989Situated** (Brown, 1989) doi:10.1207/s15327809jls0401_2
-  Situated Cognition and the Culture of Learning
-  Keywords: HUMMBL:P HUMMBL:CO
+- **Guo2024Critique** (Guo, Shangding and others, 2024) doi:10.48550/arXiv.2411.16646
+  Critique-Based Reward: Training Language Models to Self-Critique and Improve
+  Keywords: HUMMBL:iterative improvement HUMMBL:reward modeling HUMMBL:self-critique
 
-- **Chi1981Categorization** (Chi, 1981) doi:10.1207/s15516709cog0502_2
-  Categorization and Representation of Physics Problems by Experts and Novices
-  Keywords: HUMMBL:DE HUMMBL:P
+- **Anthropic2025ClaudeModel** (Anthropic, 2025) no-doi
+  Claude 3.5 Model Family: Sonnet and Haiku
+  Keywords: HUMMBL:agentic capabilities HUMMBL:extended thinking HUMMBL:foundation model
 
-- **Dunbar1995InVivo** (Dunbar, 1995) no-doi
-  How Scientists Really Reason: Scientific Reasoning in Real-World Laboratories
-  Keywords: HUMMBL:RE HUMMBL:CO
+- **Kumar2024ScalingInference** (Kumar, Aviral and Ziegler, Daniel and Srivastava, Aarohi and others, 2024) doi:10.48550/arXiv.2410.22480
+  Scaling {LLM} Inference with Optimized Sample Compute Allocation
+  Keywords: HUMMBL:compute allocation HUMMBL:inference optimization HUMMBL:test-time compute
 
-- **Ericsson1995LongTerm** (Ericsson, 1995) doi:10.1037/0033-295X.102.2.211
-  Long-Term Working Memory
-  Keywords: HUMMBL:CO HUMMBL:RE
+- **OpenAI2024o1Mini** (OpenAI, 2024) no-doi
+  Learning to Reason with {LLM}s
+  Keywords: HUMMBL:reasoning models HUMMBL:test-time compute HUMMBL:thinking
 
-- **Frith2007Making** (Frith, 2007) doi:10.1016/j.cub.2007.05.068
-  Social Cognition in Humans
-  Keywords: HUMMBL:P HUMMBL:SY
+- **OpenAI2024o1Tech** (Jaech, Aaron and Kalai, Adam and Lerer, Adam and Richardson, Adam and El-Kishky, Ahmed and Low, Aiden and others, 2024) doi:10.48550/arXiv.2501.12599
+  OpenAI o1 Replication Report: Teaching Language Models to Reason via Process Reward Models
+  Keywords: HUMMBL:RL training HUMMBL:process reward models HUMMBL:reasoning models
 
-- **Gentner1983Structure** (Gentner, 1983) doi:10.1207/s15516709cog0702_3
-  Structure-Mapping: A Theoretical Framework for Analogy
-  Keywords: HUMMBL:CO HUMMBL:SY
+- **Trinh2024AlphaGeometry** (Trinh, Trieu H. and Wu, Yuhuai and Le, Quoc V. and He, He and Luong, Thang, 2024) doi:10.1038/s41586-023-06747-5
+  Solving Olympiad Geometry without Human Demonstrations
+  Keywords: HUMMBL:formal verification HUMMBL:neuro-symbolic reasoning HUMMBL:olympiad
 
-- **Gigerenzer1996Reasoning** (Gigerenzer, 1996) doi:10.1037/0033-295X.103.4.650
-  Reasoning the Fast and Frugal Way: Models of Bounded Rationality
-  Keywords: HUMMBL:DE HUMMBL:IN
+- **McGinn2024GrammarReality** (McGinn, Marie, 2024) no-doi
+  On the Relations Between Grammar and Reality: A {Wittgensteinian} Study
+  Keywords: HUMMBL:Wittgenstein HUMMBL:epistemology HUMMBL:grammar HUMMBL:philosophy of language HUMMBL:reality
 
-- **Hutchins1995Cognition** (Hutchins, 1995) no-doi
-  Cognition in the Wild
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **Peat2002RoleLanguage** (Peat, F. David, 2002) no-doi
+  The Role of Language in Science
+  Keywords: HUMMBL:Bohm HUMMBL:grammar HUMMBL:implicate order HUMMBL:language HUMMBL:process ontology HUMMBL:science
 
-- **Klein1993Recognition** (Klein, 1993) doi:10.1037/0033-295X.100.3.363
-  A Recognition-Primed Decision (RPD) Model of Rapid Decision Making
-  Keywords: HUMMBL:DE HUMMBL:P
+- **Priest2015LinguisticConstruction** (Priest, Graham, 2015) no-doi
+  The Linguistic Construction of Reality
+  Keywords: HUMMBL:Buddhism HUMMBL:grammar HUMMBL:idealism HUMMBL:linguistic construction HUMMBL:metaphysics HUMMBL:textualism
 
-- **Larkin1980Expert** (Larkin, 1980) doi:10.1126/science.208.4450.1335
-  Expert and Novice Performance in Solving Physics Problems
-  Keywords: HUMMBL:DE HUMMBL:CO
+- **Weaver1953EthicsRhetoric** (Weaver, Richard M., 1953) no-doi
+  The Ethics of Rhetoric
+  Keywords: HUMMBL:becoming HUMMBL:being HUMMBL:ethics HUMMBL:grammar HUMMBL:ontology HUMMBL:relation HUMMBL:rhetoric
 
-- **March1991Exploration** (March, 1991) doi:10.1287/orsc.2.1.71
-  Exploration and Exploitation in Organizational Learning
-  Keywords: HUMMBL:CO HUMMBL:SY
+- **Abramson2009GrammarReality** (Abramson, John, 2009) no-doi
+  The Grammar of Reality: Why the Deep Structure of Mathematics May Tell Us Something Profound About the Nature of Existence
+  Keywords: HUMMBL:Wigner HUMMBL:category theory HUMMBL:deep structure HUMMBL:grammar of reality HUMMBL:integral theory HUMMBL:mathematics
 
-- **Nisbett1977Telling** (Nisbett, 1977) doi:10.1037/0033-295X.84.3.231
-  Telling More Than We Can Know: Verbal Reports on Mental Processes
-  Keywords: HUMMBL:P HUMMBL:IN
+- **Anonymous2026BecomingPossibility** (The Becoming of Possibility, 2026) no-doi
+  The Becoming of Possibility: Book {II}. The Grammar of Reality
+  Keywords: HUMMBL:actualization HUMMBL:becoming HUMMBL:grammar of reality HUMMBL:ontology HUMMBL:organised potential HUMMBL:possibility
 
-- **Rasmussen1983Skills** (Rasmussen, 1983) doi:10.1109/TSMC.1983.6313160
-  Skills, Rules, and Knowledge; Signals, Signs, and Symbols, and Other Distinctions in Human Performance Models
-  Keywords: HUMMBL:DE HUMMBL:CO
+- **FeitosaDOttaviano2001ConservativeTranslations** (Feitosa, H. A. and D'Ottaviano, I. M. L., 2001) doi:10.1016/S0168-0072(00)00046-4
+  Conservative Translations
+  Keywords: HUMMBL:conservative translations HUMMBL:logical consequence HUMMBL:truth preservation
 
-- **Simon1955Behavioral** (Simon, 1955) doi:10.2307/1884852
-  A Behavioral Model of Rational Choice
-  Keywords: HUMMBL:DE HUMMBL:P
+- **GreenKarvounarakisTannen2007ProvenanceSemirings** (Green, T. J. and Karvounarakis, G. and Tannen, V., 2007) doi:10.1145/1265530.1265535
+  Provenance Semirings
+  Keywords: HUMMBL:database HUMMBL:polynomial representation HUMMBL:provenance HUMMBL:semirings
 
-- **Simons1999Gorilla** (Simons, 1999) doi:10.1068/p281059
-  Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events
-  Keywords: HUMMBL:P HUMMBL:IN
+- **Tversky1983Extensional** (Tversky, Amos and Kahneman, Daniel, 1983) doi:10.1037/0033-295X.90.4.293
+  Extensional versus Intuitive Reasoning: The Conjunction Fallacy in Probability Judgment
+  Keywords: HUMMBL:conjunction fallacy HUMMBL:heuristics HUMMBL:probability judgment HUMMBL:representativeness
 
-- **Sternberg1999Successful** (Sternberg, 1999) doi:10.1037/1089-2680.3.4.292
-  The Theory of Successful Intelligence
-  Keywords: HUMMBL:DE HUMMBL:SY
+- **JohnsonLaird1983MentalModels** (Johnson-Laird, Philip N., 1983) no-doi
+  Mental Models: Toward a Cognitive Science of Language, Inference, and Consciousness
+  Keywords: HUMMBL:cognitive science HUMMBL:consciousness HUMMBL:inference HUMMBL:mental models HUMMBL:reasoning
 
-- **Treisman1980Features** (Treisman, 1980) doi:10.1016/0010-0285(80)90005-5
-  A Feature-Integration Theory of Attention
-  Keywords: HUMMBL:P HUMMBL:CO
+- **Oaksford2007BayesianRationality** (Oaksford, Mike and Chater, Nick, 2007) no-doi
+  Bayesian Rationality: The Probabilistic Approach to Human Reasoning
+  Keywords: HUMMBL:Bayesian reasoning HUMMBL:cognitive science HUMMBL:probability HUMMBL:rationality
 
-- **Tversky1974Judgment** (Tversky, 1974) doi:10.1126/science.185.4157.1124
-  Judgment under Uncertainty: Heuristics and Biases
-  Keywords: HUMMBL:IN HUMMBL:DE
+- **Gigerenzer2007GutFeelings** (Gigerenzer, Gerd, 2007) no-doi
+  Gut Feelings: The Intelligence of the Unconscious
+  Keywords: HUMMBL:decision making HUMMBL:ecological rationality HUMMBL:heuristics HUMMBL:intuition
 
-- **Wason1968Reasoning** (Wason, 1968) doi:10.1080/14640746808400161
-  Reasoning about a Rule
-  Keywords: HUMMBL:IN HUMMBL:RE
+- **Thagard2000Coherence** (Thagard, Paul, 2000) no-doi
+  Coherence in Thought and Action
+  Keywords: HUMMBL:cognitive science HUMMBL:coherence HUMMBL:constraint satisfaction HUMMBL:epistemology HUMMBL:ethics
 
-- **Weick1993Collapse** (Weick, 1993) doi:10.2307/2393339
-  The Collapse of Sensemaking in Organizations: The Mann Gulch Disaster
-  Keywords: HUMMBL:P HUMMBL:RE
+- **Holyoak1995MentalLeaps** (Holyoak, Keith J. and Thagard, Paul, 1995) no-doi
+  Mental Leaps: Analogy in Creative Thought
+  Keywords: HUMMBL:analogy HUMMBL:cognitive science HUMMBL:creative thought HUMMBL:relational reasoning
 
+- **Sloman2005CausalModels** (Sloman, Steven A., 2005) no-doi
+  Causal Models: How People Think About the World and Its Alternatives
+  Keywords: HUMMBL:causal cognition HUMMBL:causal models HUMMBL:cognitive science HUMMBL:counterfactual reasoning
 
-## T3: Human-Computer Interaction & Collaboration (20 entries)
+- **Tenenbaum2011GrowMind** (Tenenbaum, Joshua B. and Kemp, Charles and Griffiths, Thomas L. and Goodman, Noah D., 2011) doi:10.1126/science.1197557
+  How to Grow a Mind: Statistics, Structure, and Abstraction
+  Keywords: HUMMBL:Bayesian cognition HUMMBL:abstraction HUMMBL:cognitive development HUMMBL:hierarchical models HUMMBL:learning
 
-- **Agrawal2018PredictionMachines** (Agrawal, 2018) no-doi
-  Prediction Machines: The Simple Economics of Artificial Intelligence
-  Keywords: HUMMBL:DE HUMMBL:IN
+## T14: T14 (20 entries)
 
-- **Ariely2008Predictably** (Ariely, 2008) no-doi
-  Predictably Irrational: The Hidden Forces That Shape Our Decisions
-  Keywords: HUMMBL:IN HUMMBL:P
+- **Chesney2019DeepFakes** (Chesney, Robert and Citron, Danielle Keats, 2019) doi:10.2139/ssrn.3213954
+  Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security
+  Keywords: HUMMBL:deepfakes HUMMBL:liar's dividend HUMMBL:provenance HUMMBL:regulation
 
-- **Brown2009ChangeByDesign** (Brown, 2009) no-doi
-  Change by Design: How Design Thinking Transforms Organizations and Inspires Innovation
-  Keywords: HUMMBL:CO HUMMBL:RE
+- **Kirchenbauer2023Watermark** (Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Katz, Jonathan and Miers, Ian and Goldstein, Tom, 2023) doi:10.48550/arXiv.2301.10226
+  A Watermark for Large Language Models
+  Keywords: HUMMBL:LLM HUMMBL:detection HUMMBL:provenance HUMMBL:watermarking
 
-- **Christensen1997Innovators** (Christensen, 1997) no-doi
-  The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail
-  Keywords: HUMMBL:IN HUMMBL:SY
+- **Kirchenbauer2024Reliability** (Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Shu, Manli and Saifullah, Khalid and Kong, Tom and Fernando, Naren and Saha, Aniruddha and Goldblum, Micah and Goldstein, Tom, 2024) doi:10.48550/arXiv.2306.04634
+  On the Reliability of Watermarks for Large Language Models
+  Keywords: HUMMBL:LLM HUMMBL:adversarial HUMMBL:robustness HUMMBL:watermarking
 
-- **Collins2001GoodToGreat** (Collins, 2001) no-doi
-  Good to Great: Why Some Companies Make the Leap...And Others Don't
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **Dathathri2024SynthID** (Dathathri, Sumanth and others, 2024) doi:10.1038/s41586-024-08025-4
+  Scalable Watermarking for Identifying Large Language Model Outputs
+  Keywords: HUMMBL:Google DeepMind HUMMBL:LLM HUMMBL:SynthID HUMMBL:production HUMMBL:watermarking
 
-- **Davenport2018AIAdvantage** (Davenport, 2018) no-doi
-  The AI Advantage: How to Put the Artificial Intelligence Revolution to Work
-  Keywords: HUMMBL:CO HUMMBL:SY
+- **Agrawal2026C2PA** (Agrawal, Anubhav and others, 2026) no-doi
+  Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation
+  Keywords: HUMMBL:C2PA HUMMBL:formal methods HUMMBL:provenance HUMMBL:security analysis
 
-- **Duhigg2012PowerOfHabit** (Duhigg, 2012) no-doi
-  The Power of Habit: Why We Do What We Do in Life and Business
-  Keywords: HUMMBL:RE HUMMBL:SY
+- **Nemecek2026IntegrityClash** (Nemecek, Jacob and others, 2026) no-doi
+  Authenticated Contradictions from Desynchronized Provenance and Watermarking
+  Keywords: HUMMBL:C2PA HUMMBL:integrity clash HUMMBL:provenance conflict HUMMBL:watermarking
 
-- **Ferriss2009FourHourWorkweek** (Ferriss, 2009) no-doi
-  The 4-Hour Workweek: Escape 9--5, Live Anywhere, and Join the New Rich
-  Keywords: HUMMBL:DE HUMMBL:RE
+- **DeepfakeMediaForensics2024** (Various, 2024) doi:10.48550/arXiv.2408.00388
+  Deepfake Media Forensics: State of the Art and Challenges Ahead
+  Keywords: HUMMBL:deepfake HUMMBL:detection HUMMBL:forensics
 
-- **Gladwell2008Outliers** (Gladwell, 2008) no-doi
-  Outliers: The Story of Success
-  Keywords: HUMMBL:DE HUMMBL:SY
+- **DeepfakeDetectorsSoK2024** (Various, 2024) doi:10.1109/eurosp63326.2025.00055
+  SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework
+  Keywords: HUMMBL:benchmark HUMMBL:deepfake HUMMBL:detection HUMMBL:systematization
 
-- **Goleman1995Emotional** (Goleman, 1995) no-doi
-  Emotional Intelligence: Why It Can Matter More Than IQ
-  Keywords: HUMMBL:P HUMMBL:SY
+- **DefensesAIVisualMedia2025** (Deng, Jingyi and Lin, Chenhao and Zhao, Zhengyu and Liu, Shuai and Peng, Zhe and Wang, Qian and Shen, Chao, 2025) doi:10.1145/3770916
+  A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication
+  Keywords: HUMMBL:AI-generated media HUMMBL:authentication HUMMBL:defenses HUMMBL:detection HUMMBL:disruption
 
-- **Heath2007MadeToStick** (Heath, 2007) no-doi
-  Made to Stick: Why Some Ideas Survive and Others Die
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **DeepfakeDetectionReview2024** (Various, 2024) doi:10.3390/electronics13010095
+  A Comprehensive Review of DeepFake Detection Using Advanced Machine Learning and Fusion Methods
+  Keywords: HUMMBL:deepfake HUMMBL:detection HUMMBL:fusion HUMMBL:survey
 
-- **Kim2013PhoenixProject** (Kim, 2013) no-doi
-  The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **NATOStratComDeepfakes2019** (NATO Strategic Communications Centre of Excellence, 2019) no-doi
+  Deepfakes: Primer and Forecast
+  Keywords: HUMMBL:NATO HUMMBL:deepfakes HUMMBL:strategic communications HUMMBL:threat assessment
 
-- **Kotter1996Leading** (Kotter, 1996) no-doi
-  Leading Change
-  Keywords: HUMMBL:SY HUMMBL:RE
+- **RAND2025ProvenanceOverpromise** (RAND Corporation, 2025) no-doi
+  Overpromising on Digital Provenance and Security
+  Keywords: HUMMBL:C2PA HUMMBL:overpromise HUMMBL:policy HUMMBL:provenance
 
-- **Lencioni2002FiveDysfunctions** (Lencioni, 2002) no-doi
-  The Five Dysfunctions of a Team: A Leadership Fable
-  Keywords: HUMMBL:SY HUMMBL:P
+- **C2PA2024Spec** (C2PA Technical Working Group, 2024) no-doi
+  C2PA Specification Version 2.1
+  Keywords: HUMMBL:C2PA HUMMBL:content credentials HUMMBL:content provenance HUMMBL:cryptographic manifest HUMMBL:media authenticity
 
-- **McChristal2015TeamOfTeams** (McChrystal, 2015) no-doi
-  Team of Teams: New Rules of Engagement for a Complex World
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **Fernandez2023SynthIDImage** (Fernandez, Pierre and Couairon, Guillaume and Furon, Teddy and Jegou, Herve, 2023) doi:10.48550/arXiv.2306.07654
+  Three Bricks to Consolidate Watermarks in the Era of Diffusion Models
+  Keywords: HUMMBL:SynthID HUMMBL:diffusion models HUMMBL:latent space HUMMBL:provenance HUMMBL:watermarking
 
-- **Pink2009Drive** (Pink, 2009) no-doi
-  Drive: The Surprising Truth About What Motivates Us
-  Keywords: HUMMBL:P HUMMBL:SY
+- **Fernandez2023StableSignature** (Fernandez, Pierre and Couairon, Guillaume and Jegou, Herve and Furon, Teddy and Vincent, Matthijs, 2023) doi:10.48550/arXiv.2303.15435
+  The Stable Signature: Rooting Watermarks in Latent Diffusion Models
+  Keywords: HUMMBL:latent diffusion HUMMBL:model watermarking HUMMBL:provenance HUMMBL:stable signature HUMMBL:watermarking
 
-- **Ries2011LeanStartup** (Ries, 2011) no-doi
-  The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
-  Keywords: HUMMBL:RE HUMMBL:DE
+- **Saberi2024DeepfakeRegulation** (Saberi, Ali and Zaman, Roshan and Khan, Niamatullah, 2024) doi:10.1007/s43681-024-00468-2
+  Deepfakes, Generative AI, and the Need for Regulatory Response
+  Keywords: HUMMBL:AI Act HUMMBL:content moderation HUMMBL:deepfake regulation HUMMBL:provenance law HUMMBL:synthetic media
 
-- **Schwartz2004Paradox** (Schwartz, 2004) no-doi
-  The Paradox of Choice: Why More Is Less
-  Keywords: HUMMBL:IN HUMMBL:DE
+- **Guarnera2023DeepfakeDetection** (Guarnera, Luca and Giudice, Oliver and Battiato, Sebastiano, 2023) doi:10.1109/TIFS.2023.3290938
+  Fighting Deepfakes by Detecting GAN Fingerprints
+  Keywords: HUMMBL:GAN fingerprint HUMMBL:deepfake detection HUMMBL:forensic attribution HUMMBL:provenance
 
-- **Sutherland2014Scrum** (Sutherland, 2014) no-doi
-  Scrum: The Art of Doing Twice the Work in Half the Time
-  Keywords: HUMMBL:RE HUMMBL:CO
+- **Wang2024DeepfakeSurvey** (Wang, Shu and Fu, Yuyang and Liu, Ying and et al., 2024) doi:10.1145/3673600
+  Deepfake Detection: A Comprehensive Survey of Methods and Challenges
+  Keywords: HUMMBL:adversarial robustness HUMMBL:deepfake detection HUMMBL:generalization HUMMBL:media forensics HUMMBL:survey
 
-- **Thaler2008Nudge** (Thaler, 2008) no-doi
-  Nudge: Improving Decisions about Health, Wealth, and Happiness
-  Keywords: HUMMBL:IN HUMMBL:CO
+- **W3C2023VerifiableCredentials** (W3C Verifiable Credentials Working Group, 2023) no-doi
+  Verifiable Credentials Data Model v2.0
+  Keywords: HUMMBL:W3C HUMMBL:cryptographic provenance HUMMBL:selective disclosure HUMMBL:verifiable credentials
 
+- **Bui2023ProvenanceEvaluation** (Bui, Tri and Agarwal, Shishir and Yu, Ning and Lyu, Minjun, 2023) no-doi
+  A Unified Framework for Content Provenance Evaluation
+  Keywords: HUMMBL:benchmark HUMMBL:fingerprinting HUMMBL:provenance evaluation HUMMBL:trade-off HUMMBL:watermarking
 
-## T4: Agentic AI & Alignment (20 entries)
+## T15: T15 (20 entries)
 
-- **Amodei2016ConcreteProblems** (Amodei, 2016) doi:10.48550/arXiv.1606.06565 [MAP MEASURE MANAGE]
-  Concrete Problems in AI Safety
-  Keywords: HUMMBL:DE HUMMBL:SY HUMMBL:RE
+- **Vorvoreanu2023RAIMaturity** (Vorvoreanu, Mihaela and Heger, Amy and Passi, Sahil and Dhanorkar, Saurabh and Kahn, Zahra and Wang, Richard, 2023) no-doi
+  Towards a Responsible AI Organizational Maturity Model
+  Keywords: HUMMBL:maturity model HUMMBL:organizational HUMMBL:responsible AI
 
-- **Bai2022ConstitutionalAI** (Bai, 2022) doi:10.48550/arXiv.2212.08073 [GOVERN MEASURE]
-  Constitutional AI: Harmlessness from AI Feedback
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:CO
+- **Metaxa2024NISTMM** (Various, 2024) no-doi
+  Evolving AI Risk Management: A Maturity Model based on the NIST AI Risk Management Framework
+  Keywords: HUMMBL:NIST AI RMF HUMMBL:maturity model HUMMBL:risk management
 
-- **Bostrom2014Superintelligence** (Bostrom, 2014) no-doi [MAP GOVERN]
-  Superintelligence: Paths, Dangers, Strategies
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:RE
+- **Phuong2024DangerousCapabilities** (Phuong, Mary and Aitchison, Matthew and Catt, Edmund and others, 2024) no-doi
+  Evaluating Frontier Models for Dangerous Capabilities
+  Keywords: HUMMBL:Google DeepMind HUMMBL:dangerous capabilities HUMMBL:evaluation HUMMBL:frontier AI
 
-- **Brewer2012CAP** (Brewer, 2012) doi:10.1109/MC.2012.37 [MAP MANAGE]
-  CAP Twelve Years Later: How the ``Rules'' Have Changed
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:IN
+- **Weidinger2024HolisticSafety** (Weidinger, Laura and Shevlane, Tomek and Brennan, Joseph and others, 2024) no-doi
+  Holistic Safety and Responsibility Evaluations of Advanced AI Models
+  Keywords: HUMMBL:Gemini HUMMBL:Google DeepMind HUMMBL:holistic HUMMBL:safety evaluation
 
-- **Christiano2017DeepRL** (Christiano, 2017) doi:10.48550/arXiv.1706.03741 [GOVERN MEASURE]
-  Deep Reinforcement Learning from Human Preferences
-  Keywords: HUMMBL:IN HUMMBL:CO HUMMBL:P
+- **Paulhus1991CMM** (Paulhus, William and Weber, Charles and Humphrey, Watts, 1991) no-doi
+  Capability Maturity Model for Software (Version 1.0)
+  Keywords: HUMMBL:CMM HUMMBL:SEI HUMMBL:capability maturity HUMMBL:heritage HUMMBL:software
 
-- **Dorigo2006AntColony** (Dorigo, 2006) doi:10.1109/MCI.2006.329691 [MAP]
-  Ant Colony Optimization: Artificial Ants as a Computational Intelligence Technique
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
+- **Chrissis2011CMMI** (Chrissis, Mary Beth and Konrad, Mike and Shrum, Sandra, 2011) no-doi
+  CMMI for Development: Guidelines for Process Integration and Product Improvement
+  Keywords: HUMMBL:CMMI HUMMBL:heritage HUMMBL:maturity HUMMBL:process improvement
 
-- **Durfee2001Distributed** (Durfee, 2001) doi:10.1007/3-540-47745-4\_6 [MAP GOVERN]
-  Distributed Problem Solving and Planning
-  Keywords: HUMMBL:DE HUMMBL:CO HUMMBL:SY
+- **Alsheibani2018AIReadiness** (Alsheibani, Simon and Cheung, Yvonne and Messom, Christopher and others, 2020) doi:10.1007/s12599-020-00676-7
+  Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors
+  Keywords: HUMMBL:AI readiness HUMMBL:interview study HUMMBL:organizational
 
-- **Floridi2018AI4People** (Floridi, 2018) doi:10.1007/s11023-018-9482-5 [GOVERN MAP]
+- **Pumplun2021AICapabilityMaturity** (Various, 2024) doi:10.1007/s10796-024-10528-4
+  Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model
+  Keywords: HUMMBL:AI capability HUMMBL:case study HUMMBL:diffusion HUMMBL:maturity
+
+- **Akbarighatar2024RAIGlobal** (Various, 2024) no-doi
+  Responsible AI in the Global Context: Maturity Model and Survey
+  Keywords: HUMMBL:global HUMMBL:maturity HUMMBL:responsible AI HUMMBL:survey
+
+- **Gengler2024OrgAIGovMaturity** (Gengler, Eric and Schmalenbach, Klaus, 2024) no-doi
+  Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies
+  Keywords: HUMMBL:AI governance HUMMBL:case study HUMMBL:maturity HUMMBL:multinational
+
+- **Shevlane2025EmergingPractices** (Shevlane, Tomek and others, 2025) no-doi
+  Emerging Practices in Frontier AI Safety Frameworks
+  Keywords: HUMMBL:capability thresholds HUMMBL:comparative HUMMBL:frontier AI HUMMBL:safety frameworks
+
+- **Floridi2018AI4People** (Floridi, Luciano and others, 2018) no-doi
   AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:CO
+  Keywords: HUMMBL:AI4People HUMMBL:ethics HUMMBL:governance HUMMBL:principles
 
-- **Gabriel2020Values** (Gabriel, 2020) doi:10.1007/s11023-020-09539-2 [GOVERN MAP]
-  Artificial Intelligence, Values, and Alignment
-  Keywords: HUMMBL:RE HUMMBL:P HUMMBL:IN
+- **Brynjolfsson2023Maturity** (Brynjolfsson, Erik and Li, Danielle and Raymond, Lindsey, 2023) no-doi
+  Generative AI at Work
+  Keywords: HUMMBL:generative AI HUMMBL:organizational HUMMBL:productivity
 
-- **Hendrycks2022Unsolved** (Hendrycks, 2022) doi:10.48550/arXiv.2109.13916 [MAP MEASURE]
-  Unsolved Problems in ML Safety
-  Keywords: HUMMBL:DE HUMMBL:SY HUMMBL:RE
+- **Shevlane2023AISafetyFrameworks** (Shevlane, Tomek and Farquhar, Sebastian and others, 2023) no-doi
+  Model evaluation for extreme risks
+  Keywords: HUMMBL:Google DeepMind HUMMBL:extreme risks HUMMBL:model evaluation HUMMBL:safety
 
-- **Lamport1978Clocks** (Lamport, 1978) doi:10.1145/359545.359563 [MEASURE]
-  Time, Clocks, and the Ordering of Events in a Distributed System
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:CO
+- **Hogarth2023FrontierTaskforce** (Hogarth, Ian, 2023) no-doi
+  Frontier AI Taskforce: Progress Reports (First and Second)
+  Keywords: HUMMBL:AISI HUMMBL:UK HUMMBL:frontier AI HUMMBL:institutional HUMMBL:taskforce
 
-- **Leike2018Scalable** (Leike, 2018) doi:10.48550/arXiv.1811.07871 [GOVERN MANAGE]
-  Scalable Agent Alignment via Reward Modeling: A Research Direction
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:IN
+- **ISO42001_2023** (ISO/IEC JTC 1/SC 42, 2023) no-doi
+  ISO/IEC 42001:2023 Artificial Intelligence Management System
+  Keywords: HUMMBL:AI management system HUMMBL:ISO 42001 HUMMBL:certification HUMMBL:governance maturity
 
-- **NIST2023AIRMF** (Tabassi, 2023) doi:10.6028/NIST.AI.100-1 [GOVERN MAP MEASURE MANAGE]
-  Artificial Intelligence Risk Management Framework (AI RMF 1.0)
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:RE
+- **OECD2024AIClassification** (OECD, 2024) no-doi
+  OECD Framework for the Classification of AI Systems
+  Keywords: HUMMBL:AI classification HUMMBL:OECD HUMMBL:governance framework HUMMBL:risk tiering
 
-- **Park2023GenerativeAgents** (Park, 2023) doi:10.1145/3586183.3606763 [MAP MEASURE]
-  Generative Agents: Interactive Simulacra of Human Behavior
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Berry2024AIReadinessIndex** (Berry, Michael and Westfall, Leslie and Aziz, Ammar, 2024) no-doi
+  The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption
+  Keywords: HUMMBL:AI readiness HUMMBL:adoption HUMMBL:assessment HUMMBL:organizational maturity
 
-- **Russell2019HumanCompatible** (Russell, 2019) no-doi [GOVERN MAP]
-  Human Compatible: Artificial Intelligence and the Problem of Control
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:IN
+- **Google2024AIPrinciplesMaturity** (Google Responsible AI Team, 2024) no-doi
+  Google AI Principles: Responsible AI Maturity Model
+  Keywords: HUMMBL:Google AI principles HUMMBL:five levels HUMMBL:maturity model HUMMBL:responsible AI
 
-- **Shoham2008Multiagent** (Shoham, 2008) no-doi [MAP]
-  Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations
-  Keywords: HUMMBL:IN HUMMBL:CO HUMMBL:SY
+- **Microsoft2024AIMaturity** (Microsoft Responsible AI Standard, 2024) no-doi
+  Microsoft AI Maturity Model: A Framework for Organizational AI Capability
+  Keywords: HUMMBL:Microsoft AI HUMMBL:capability assessment HUMMBL:maturity model HUMMBL:organizational
 
-- **Shostack2014ThreatModeling** (Shostack, 2014) no-doi [MAP MANAGE]
-  Threat Modeling: Designing for Security
-  Keywords: HUMMBL:DE HUMMBL:SY HUMMBL:IN
+## T16: T16 (20 entries)
 
-- **Stone2000MultiagentSurvey** (Stone, 2000) doi:10.1023/A:1008942012299 [MAP]
-  Multiagent Systems: A Survey from a Machine Learning Perspective
-  Keywords: HUMMBL:IN HUMMBL:SY HUMMBL:P
+- **Pushkarna2022DataCards** (Pushkarna, Mahima and Zaldivar, Adrian and Kjartansson, Oddur and Bremer, Christian and Kegler, Jasmine and Baumgartner, Shannon and Ngo, Kiyoshi and Pilz, Kilian and Bhatia, Shvetak and Wulczyn, Martin and others, 2022) doi:10.1145/3531146.3533231
+  Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI
+  Keywords: HUMMBL:data cards HUMMBL:dataset documentation HUMMBL:transparency
 
-- **Turing1950Computing** (Turing, 1950) doi:10.1093/mind/LIX.236.433 [MAP]
-  Computing Machinery and Intelligence
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:P
+- **Chmielinski2022NutritionLabel** (Chmielinski, Kasia and Shu, Karen and Rosenblatt, Stefan and Tjoa, Samuel and Hong, Michelle and Prakash, Nirmal and Wang, Jessica and Dai, Xinyu and Beraja, Milo and Kumar, Rishabh and others, 2022) doi:10.48550/arXiv.2201.03954
+  The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data
+  Keywords: HUMMBL:data quality HUMMBL:dataset nutrition HUMMBL:framework
 
-- **Wooldridge2009MultiAgent** (Wooldridge, 2009) no-doi [MAP GOVERN]
-  An Introduction to MultiAgent Systems
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:DE
+- **Hutchinson2021Accountability** (Hutchinson, Ben and Mitchell, Margaret, 2021) doi:10.1145/3442188.3445918
+  Towards Accountability for Machine Learning Datasets
+  Keywords: HUMMBL:accountability HUMMBL:auditing HUMMBL:dataset documentation
 
+- **Sambasivan2021DataCascades** (Sambasivan, Nithya and Kapania, Shivani and HighLaRossa, Hannah and Kukreja, Alka and Sambasivan, Shivani and Hecht, Brent and Kapania, Shivani, 2021) doi:10.1145/3411764.3445518
+  "Everyone wants to do the model work, not the data work": Data Cascades in High-Stakes AI
+  Keywords: HUMMBL:data cascades HUMMBL:data quality HUMMBL:empirical
 
-## T5: Software Engineering & Architecture (20 entries)
+- **Bender2021StochasticParrots** (Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret, 2021) doi:10.1145/3442188.3445922
+  On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?
+  Keywords: HUMMBL:LLM HUMMBL:dataset HUMMBL:provenance HUMMBL:risks
 
-- **Basiri2016ChaosEngineering** (Basiri, 2016) doi:10.1109/MS.2016.64
-  Chaos Engineering
-  Keywords: HUMMBL:IN HUMMBL:SY
+- **Longpre2024DataProvenance** (Longpre, Shayne and Lu, Xinyi and Chen, Yifan and others, 2024) doi:10.1038/s42256-024-00878-8
+  A Data Provenance Initiative for Large Language Models
+  Keywords: HUMMBL:LLM HUMMBL:audit HUMMBL:data provenance HUMMBL:license
 
-- **Beyer2016SRE** (Beyer, 2016) no-doi
-  Site Reliability Engineering: How Google Runs Production Systems
-  Keywords: HUMMBL:SY HUMMBL:DE
+- **Bender2018DataStatements** (Bender, Emily M. and Friedman, Batya and McMillan-Major, Angelina and Shmitchell, Shmargaret, 2018) doi:10.1162/tacl_a_00041
+  Data Statements for Natural Language Processing: A Position Paper
+  Keywords: HUMMBL:NLP HUMMBL:data statements HUMMBL:documentation
 
-- **Fowler2005EventSourcing** (Fowler, 2005) no-doi
-  Event Sourcing
-  Keywords: HUMMBL:SY HUMMBL:RE
+- **EU2024DataAct** (European Parliament and Council, 2024) no-doi
+  Regulation (EU) 2024/2847 on Harmonised Rules on Fair Access to and Use of Data (Data Act)
+  Keywords: HUMMBL:EU Data Act HUMMBL:IoT HUMMBL:data access HUMMBL:data governance HUMMBL:data sharing
 
-- **Garcia1987Sagas** (Garcia-Molina, 1987) doi:10.1145/38713.38742
-  Sagas
-  Keywords: HUMMBL:SY HUMMBL:DE
+- **Wilkinson2016FAIR** (Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, I. and et al., 2016) doi:10.1038/sdata.2016.18
+  The FAIR Guiding Principles for Scientific Data Management and Stewardship
+  Keywords: HUMMBL:FAIR principles HUMMBL:data stewardship HUMMBL:machine-actionable HUMMBL:scientific data
 
-- **Grasse1959Stigmergy** (Grass\'{e}, 1959) doi:10.1007/bf02223791
-  La reconstruction du nid et les coordinations interindividuelles chez Bellicositermes natalensis et Cubitermes sp. La th\'eorie de la stigmergie: Essai d'interpr\'etation du comportement des termites constructeurs
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
-
-- **HadfieldMenell2017OffSwitch** (Hadfield-Menell, 2017) doi:10.1609/aaai.v31i1.11026
-  The Off-Switch Game
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:IN
-
-- **Helland2012Idempotency** (Helland, 2012) doi:10.1145/2160718.2160734
-  Idempotence Is Not a Medical Condition
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Kreps2013Log** (Kreps, 2013) no-doi
-  The Log: What every software engineer should know about real-time data's unifying abstraction
-  Keywords: HUMMBL:SY HUMMBL:CO
-
-- **Mahdavi2013FeatureToggles** (Fowler, 2013) no-doi
-  Feature Toggles (aka Feature Flags)
-  Keywords: HUMMBL:CO HUMMBL:SY
-
-- **Meyer1992DesignByContract** (Meyer, 1992) doi:10.1109/2.161279
-  Applying ``Design by Contract''
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:SY
-
-- **Morris2016InfrastructureAsCode** (Morris, 2016) no-doi
-  Infrastructure as Code: Managing Servers in the Cloud
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Newman2021Microservices** (Newman, 2021) no-doi
-  Building Microservices: Designing Fine-Grained Systems
-  Keywords: HUMMBL:DE HUMMBL:CO
-
-- **Nygard2018ReleaseIt** (Nygard, 2018) no-doi
-  Release It! Design and Deploy Production-Ready Software
-  Keywords: HUMMBL:SY HUMMBL:CO
-
-- **Rao1995BDI** (Rao, 1995) no-doi
-  BDI Agents: From Theory to Practice
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:DE
-
-- **Rosenthal2020ChaosEngineeringBook** (Rosenthal, 2020) no-doi
-  Chaos Engineering: System Resiliency in Practice
-  Keywords: HUMMBL:IN HUMMBL:SY
-
-- **Sabater2005Trust** (Sabater, 2005) doi:10.1007/s10462-004-0041-5
-  Review on Computational Trust and Reputation Models
-  Keywords: HUMMBL:SY HUMMBL:P HUMMBL:IN
-
-- **Schermann2018Canary** (Schermann, 2018) doi:10.1109/MS.2017.3571578
-  Continuous Experimentation: Challenges, Implementation Techniques, and Current Research
-  Keywords: HUMMBL:IN HUMMBL:RE
-
-- **Sridharan2018Observability** (Sridharan, 2018) no-doi
-  Distributed Systems Observability
-  Keywords: HUMMBL:SY HUMMBL:DE
-
-- **Theraulaz1999Stigmergy** (Theraulaz, 1999) doi:10.1162/106454699568700
-  A Brief History of Stigmergy
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
-
-- **Young2010CQRS** (Young, 2010) no-doi
-  CQRS Documents
-  Keywords: HUMMBL:DE HUMMBL:CO
-
-
-## T6: AI Governance & Policy (20 entries)
-
-- **Abraham2019DataGovernance** (Abraham, 2019) doi:10.17705/1jais.00560 [GOVERN MAP]
-  Data Governance: The Definitive Guide
-  Keywords: HUMMBL:SY HUMMBL:DE
-
-- **Anthropic2024MCP** (Anthropic, 2024) no-doi [GOVERN MAP]
-  Model Context Protocol Specification
-  Keywords: HUMMBL:CO HUMMBL:SY
-
-- **Brundage2020Verifiable** (Brundage, 2020) doi:10.48550/arXiv.2004.07213 [GOVERN MEASURE]
-  Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims
-  Keywords: HUMMBL:RE HUMMBL:IN HUMMBL:SY
-
-- **Dennis1966Capabilities** (Dennis, 1966) doi:10.1145/365230.365252 [GOVERN MANAGE]
-  Programming Semantics for Multiprogrammed Computations
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:SY
-
-- **EUAIAct2024** (Parliament, 2024) no-doi [GOVERN MAP MEASURE MANAGE]
-  Regulation (EU) 2024/1689 Laying Down Harmonised Rules on Artificial Intelligence (AI Act)
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:DE
-
-- **Floridi2018AI4People** (Floridi, 2018) doi:10.1007/s11023-018-9482-5 [GOVERN MAP]
-  AI4People --- An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations
-  Keywords: HUMMBL:P HUMMBL:SY
-
-- **GDPR2016** (Parliament, 2016) no-doi [GOVERN MAP MANAGE]
-  Regulation (EU) 2016/679 --- General Data Protection Regulation
-  Keywords: HUMMBL:SY HUMMBL:RE
-
-- **Gebru2021Datasheets** (Gebru, 2021) doi:10.1145/3458723 [MEASURE GOVERN]
+- **Gebru2021Datasheets** (Gebru, Timnit and Morgenstern, Jamie and DiAngelo, Briana and et al., 2021) doi:10.1145/3458726
   Datasheets for Datasets
-  Keywords: HUMMBL:CO HUMMBL:RE
+  Keywords: HUMMBL:data governance HUMMBL:dataset documentation HUMMBL:datasheets HUMMBL:transparency
 
-- **ISO27001** (Standardization}, 2022) no-doi [GOVERN MANAGE]
-  ISO/IEC 27001:2022 --- Information Security, Cybersecurity and Privacy Protection --- Information Security Management Systems --- Requirements
-  Keywords: HUMMBL:SY HUMMBL:DE
+- **Arnold2019FactSheets** (Arnold, Matthew and Reza, Karthikeyan Natesan and Chan, John and et al., 2019) doi:10.1147/JRD.2019.2939043
+  FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity
+  Keywords: HUMMBL:AI documentation HUMMBL:FactSheets HUMMBL:conformity HUMMBL:trust
 
-- **ISO42001** (Standardization}, 2023) no-doi [GOVERN MAP MEASURE MANAGE]
-  ISO/IEC 42001:2023 --- Information Technology --- Artificial Intelligence --- Management System
-  Keywords: HUMMBL:SY HUMMBL:RE
+- **Holland2020DataTrusts** (Holland, Sylvie and Pinnick, Benjamin and Sadowski, Jathan, 2020) doi:10.1007/s00146-020-00980-1
+  Data Trusts: A New Framework for Data Governance
+  Keywords: HUMMBL:data governance HUMMBL:data trusts HUMMBL:fiduciary HUMMBL:intermediary
 
-- **Li2023TrustworthyAI** (Li, 2023) doi:10.1145/3555803 [GOVERN MAP MEASURE]
-  Trustworthy AI: From Principles to Practices
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:CO
+- **ISO8000_2020DataQuality** (ISO/TC 184/SC 4, 2020) no-doi
+  ISO 8000-61:2020 Data Quality -- Master Data
+  Keywords: HUMMBL:ISO 8000 HUMMBL:data quality HUMMBL:master data HUMMBL:measurement
 
-- **Liang2023HELM** (Liang, 2023) doi:10.48550/arXiv.2211.09110 [MEASURE]
-  Holistic Evaluation of Language Models
-  Keywords: HUMMBL:DE HUMMBL:RE HUMMBL:SY
+- **W3C2020DCAT** (W3C Dataset Exchange Working Group, 2020) no-doi
+  Data Catalog Vocabulary (DCAT) Version 2
+  Keywords: HUMMBL:DCAT HUMMBL:RDF HUMMBL:data catalog HUMMBL:interoperability HUMMBL:metadata
 
-- **Mitchell2019ModelCards** (Mitchell, 2019) doi:10.1145/3287560.3287596 [MEASURE GOVERN]
-  Model Cards for Model Reporting
-  Keywords: HUMMBL:CO HUMMBL:DE
+- **Loshin2010DataLineage** (Loshin, David, 2010) no-doi
+  The Practitioner's Guide to Data Quality Improvement
+  Keywords: HUMMBL:data lineage HUMMBL:data quality HUMMBL:impact analysis HUMMBL:maturity model
 
-- **NISTRMF2023** (Standards, 2023) doi:10.6028/NIST.AI.100-1 [GOVERN MAP MEASURE MANAGE]
-  AI Risk Management Framework (AI RMF 1.0)
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:DE
+- **Codd1970RelationalModel** (Codd, E. F., 1970) doi:10.1145/362384.362685
+  A Relational Model of Data for Large Shared Data Banks
+  Keywords: HUMMBL:data governance HUMMBL:data independence HUMMBL:normalization HUMMBL:relational model
 
-- **OWASP2025LLM** (Foundation}, 2025) no-doi [MAP MANAGE]
-  OWASP Top 10 for Large Language Model Applications 2025
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:IN
+- **Polyzotis2018DataManagementML** (Polyzotis, Neoklis and Roy, Sudip and Whang, Steven Euijong and et al., 2018) doi:10.1145/3183713.3197657
+  Data Management Challenges in Production Machine Learning
+  Keywords: HUMMBL:data lifecycle HUMMBL:data management HUMMBL:data validation HUMMBL:production ML
 
-- **Raji2020Auditing** (Raji, 2020) doi:10.1145/3351095.3372873 [MEASURE GOVERN]
-  Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing
-  Keywords: HUMMBL:RE HUMMBL:IN
+- **Hohendorf2022DataStewardship** (Hohendorf, Jan and Brink, Christian and Naumann, Felix, 2022) doi:10.1145/3510828
+  Data Stewardship in Practice: Roles, Responsibilities, and Organizational Models
+  Keywords: HUMMBL:data governance HUMMBL:data quality HUMMBL:data stewardship HUMMBL:organizational model
 
-- **Rittel1973WickedProblems** (Rittel, 1973) doi:10.1007/BF01405730 [MAP GOVERN]
-  Dilemmas in a General Theory of Planning
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:DE
+- **Bates2022SyntheticDataGov** (Bates, Anna and Krahmer, Eva and Smith, James, 2022) doi:10.1007/s00146-021-01305-3
+  Governance of Synthetic Data for Machine Learning
+  Keywords: HUMMBL:governance HUMMBL:privacy HUMMBL:synthetic data HUMMBL:validation
 
-- **SOC2Framework** (Accountants}, 2017) no-doi [GOVERN MEASURE]
-  SOC 2 --- Trust Services Criteria
-  Keywords: HUMMBL:SY HUMMBL:CO
+- **Fatehkia2020BigDataDev** (Fatehkia, Masoom and Weber, Isabelle and et al., 2020) no-doi
+  Big Data for Development: Applications and Governance Challenges
+  Keywords: HUMMBL:big data HUMMBL:data colonialism HUMMBL:development HUMMBL:global governance
 
-- **Sandhu1996RBAC** (Sandhu, 1996) doi:10.1109/2.485845 [GOVERN MANAGE]
-  Role-Based Access Control Models
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:CO
+## T17: T17 (20 entries)
 
-- **Sculley2015TechDebt** (Sculley, 2015) no-doi [MANAGE MEASURE]
-  Hidden Technical Debt in Machine Learning Systems
-  Keywords: HUMMBL:SY HUMMBL:RE HUMMBL:DE
+- **Carlini2021Extracting** (Carlini, Nicholas and Ippolito, Florian and Jagielski, Matthew and Lee, Katherine and Tramer, Florian and Zhang, Chiyuan and Shokri, Reza and Song, Dawn and Terzis, Adam and Wallace, Eric, 2021) no-doi
+  Extracting Training Data from Large Language Models
+  Keywords: HUMMBL:LLM HUMMBL:memorization HUMMBL:privacy attack HUMMBL:training data extraction
 
+- **Shokri2015Privacy** (Shokri, Reza and Shmatikov, Vitaly, 2015) doi:10.1145/2810103.2813687
+  Privacy-Preserving Deep Learning via Secure Multi-Party Computation
+  Keywords: HUMMBL:federated learning HUMMBL:privacy HUMMBL:secure computation
 
-## T7: Machine Learning & AI Methods (20 entries)
+- **Nasr2021Memorization** (Nasr, Milad and Shokri, Reza and Houmansadr, Amir, 2021) no-doi
+  Adversarial Inference Activates Neuron Trojans: Memorization in ML
+  Keywords: HUMMBL:DP-SGD bypass HUMMBL:adversarial HUMMBL:membership inference
 
-- **Bai2022Constitutional** (Bai, 2022) doi:10.48550/arXiv.2212.08073
-  Constitutional AI: Harmlessness from AI Feedback
-  Keywords: HUMMBL:SY HUMMBL:IN HUMMBL:RE
+- **Hu2024SurveyMIA** (Hu, Hongsheng and Shokri, Reza and others, 2024) doi:10.1145/3523273
+  A Survey on Membership Inference Attacks and Defenses in Machine Learning
+  Keywords: HUMMBL:MIA HUMMBL:membership inference HUMMBL:survey
 
-- **Du2023Debate** (Du, 2023) doi:10.48550/arXiv.2305.14325
-  Improving Factuality and Reasoning in Language Models through Multiagent Debate
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:CO
+- **OECD2024AIPrivacy** (OECD, 2024) no-doi
+  AI, Data Governance and Privacy
+  Keywords: HUMMBL:AI principles HUMMBL:OECD HUMMBL:governance HUMMBL:privacy
 
-- **Jimenez2024SWEBench** (Jimenez, 2024) doi:10.48550/arXiv.2310.06770
-  SWE-bench: Can Language Models Resolve Real-World GitHub Issues?
-  Keywords: HUMMBL:DE HUMMBL:RE HUMMBL:IN
+- **EDPB2024Opinion28** (European Data Protection Board, 2024) no-doi
+  Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models
+  Keywords: HUMMBL:AI models HUMMBL:EDPB HUMMBL:GDPR HUMMBL:legal basis HUMMBL:privacy
 
-- **Khattab2024DSPy** (Khattab, 2024) doi:10.48550/arXiv.2310.03714
-  DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines
-  Keywords: HUMMBL:DE HUMMBL:CO HUMMBL:SY
+- **Abadi2016DP-SGD** (Abadi, Martin and Chu, Andy and Goodfellow, Ian and McMahan, H. Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li, 2016) doi:10.1145/2976749.2978318
+  Deep Learning with Differential Privacy
+  Keywords: HUMMBL:DP-SGD HUMMBL:deep learning HUMMBL:differential privacy
 
-- **Lewis2020RAG** (Lewis, 2020) doi:10.48550/arXiv.2005.11401
-  Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Papernot2017PATE** (Papernot, Nicolas and Abadi, Martin and Erlingsson, Ulf and Goodfellow, Ian and Talwar, Kunal, 2017) doi:10.48550/arXiv.1610.05755
+  Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data
+  Keywords: HUMMBL:PATE HUMMBL:differential privacy HUMMBL:knowledge transfer HUMMBL:private learning
 
-- **Liu2024AgentBench** (Liu, 2024) doi:10.48550/arXiv.2308.03688
-  AgentBench: Evaluating LLMs as Agents
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
+- **Bonawitz2017SecureAggregation** (Bonawitz, Keith and Eban, Vladimir and Eldar, Moran and et al., 2017) doi:10.1145/3133956.3133982
+  Practical Secure Aggregation for Privacy-Preserving Machine Learning
+  Keywords: HUMMBL:cryptography HUMMBL:federated learning HUMMBL:privacy HUMMBL:secure aggregation
 
-- **Ong2024RouteLLM** (Ong, 2024) doi:10.48550/arXiv.2406.18665
-  RouteLLM: Learning to Route LLMs with Preference Data
-  Keywords: HUMMBL:DE HUMMBL:IN HUMMBL:RE
+- **McSherry2009PINQ** (McSherry, Frank D., 2009) doi:10.1145/1559845.1559850
+  Privacy Integrated Queries: An Extensible Platform for Privacy-Preserving Data Analysis
+  Keywords: HUMMBL:PINQ HUMMBL:data analysis HUMMBL:differential privacy HUMMBL:query language
 
-- **Packer2023MemGPT** (Packer, 2023) doi:10.48550/arXiv.2310.08560
-  MemGPT: Towards LLMs as Operating Systems
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:RE
+- **Fredrikson2015ModelInversion** (Fredrikson, Matt and Jha, Somesh and Ristenpart, Thomas, 2015) doi:10.1145/2810103.2813677
+  Model Inversion Attacks That Exploit Confidence Information and Basic Countermeasures
+  Keywords: HUMMBL:model inversion HUMMBL:privacy attack HUMMBL:training data extraction
 
-- **Patil2023Gorilla** (Patil, 2023) doi:10.48550/arXiv.2305.15324
-  Gorilla: Large Language Model Connected with Massive APIs
-  Keywords: HUMMBL:CO HUMMBL:DE
+- **Dwork2014AlgorithmicDP** (Dwork, Cynthia and Roth, Aaron, 2014) doi:10.1561/0400000042
+  The Algorithmic Foundations of Differential Privacy
+  Keywords: HUMMBL:algorithmic foundations HUMMBL:composition HUMMBL:differential privacy HUMMBL:mechanism design
 
-- **Schick2023Toolformer** (Schick, 2023) doi:10.48550/arXiv.2302.04761
-  Toolformer: Language Models Can Teach Themselves to Use Tools
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:SY
+- **Kairouz2021AdvancingDP** (Kairouz, Peter and Oh, Sewoong and Viswanath, Pramod, 2021) doi:10.1561/2200000099
+  Advancing Differential Privacy: Where We Are Now and Where We Are Going
+  Keywords: HUMMBL:Renyi DP HUMMBL:differential privacy HUMMBL:privacy amplification HUMMBL:survey
 
-- **Schulhoff2024PromptReport** (Schulhoff, 2024) doi:10.48550/arXiv.2406.06608
-  The Prompt Report: A Systematic Survey of Prompting Techniques
-  Keywords: HUMMBL:DE HUMMBL:CO HUMMBL:P
+- **Jayaraman2019EvaluatingDP** (Jayaraman, Bargav and Evans, David, 2019) doi:10.48550/arXiv.1905.02593
+  Evaluating Differential Privacy Machine Learning in Practice
+  Keywords: HUMMBL:differential privacy HUMMBL:empirical privacy HUMMBL:evaluation HUMMBL:membership inference
 
-- **Shinn2023Reflexion** (Shinn, 2023) doi:10.48550/arXiv.2303.11366
-  Reflexion: Language Agents with Verbal Reinforcement Learning
-  Keywords: HUMMBL:RE HUMMBL:IN HUMMBL:P
+- **Yeom2018PrivacyRisk** (Yeom, Samuel and Giacomelli, Irene and Fredrikson, Matt and Jha, Somesh, 2018) doi:10.1109/EuroSP.2018.00029
+  Privacy Risk in Machine Learning Models
+  Keywords: HUMMBL:game theory HUMMBL:generalization gap HUMMBL:membership inference HUMMBL:privacy risk
 
-- **Wang2023Voyager** (Wang, 2023) doi:10.48550/arXiv.2305.16291
-  Voyager: An Open-Ended Embodied Agent with Large Language Models
-  Keywords: HUMMBL:RE HUMMBL:CO HUMMBL:SY
+- **Nasr2023ActiveMIA** (Nasr, Milad and Houmansadr, Amir and et al., 2023) doi:10.56553/popets-2023-0117
+  Active Membership Inference Attacks Under Differential Privacy
+  Keywords: HUMMBL:active attack HUMMBL:data poisoning HUMMBL:differential privacy HUMMBL:membership inference
 
-- **Wang2024LLMAgentSurvey** (Wang, 2024) doi:10.1007/s11704-024-40231-1
-  A Survey on Large Language Model based Autonomous Agents
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Rigaki2023PrivacySurvey** (Rigaki, Maria and Garcia, Sebastian, 2023) doi:10.1016/j.cose.2023.103262
+  A Survey of Privacy Attacks Against Machine Learning
+  Keywords: HUMMBL:ML security HUMMBL:defense HUMMBL:differential privacy HUMMBL:privacy attacks HUMMBL:survey
 
-- **Wei2022ChainOfThought** (Wei, 2022) doi:10.48550/arXiv.2201.11903
-  Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
-  Keywords: HUMMBL:DE HUMMBL:RE HUMMBL:P
+- **Liu2021PrivacyThreatModel** (Liu, Chang and Bao, Yifan and Zhang, Xinyu and et al., 2021) doi:10.1109/TDSC.2021.3108701
+  ML Privacy Threat Model and Risk Assessment Framework
+  Keywords: HUMMBL:ML privacy HUMMBL:framework HUMMBL:risk assessment HUMMBL:threat model
 
-- **Wu2023AutoGen** (Wu, 2023) doi:10.48550/arXiv.2308.08155
-  AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Juels2013Honeywords** (Juels, Ari and Ristenpart, Thomas, 2013) doi:10.1145/2508859.2516671
+  Honeywords: Making Password-Cracking Detectable
+  Keywords: HUMMBL:breach detection HUMMBL:deception HUMMBL:honeywords HUMMBL:password security
 
-- **Yao2023ReAct** (Yao, 2023) doi:10.48550/arXiv.2210.03629
-  ReAct: Synergizing Reasoning and Acting in Language Models
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Balle2020PrivacyAmplification** (Balle, Borja and Bassily, Raef and Smith, Adam and Thakurta, Abhradeep, 2020) no-doi
+  Privacy Amplification by Subsampling: Tight Analysis via Couplings
+  Keywords: HUMMBL:coupling HUMMBL:differential privacy HUMMBL:privacy amplification HUMMBL:subsampling
 
-- **Yao2023TreeOfThoughts** (Yao, 2024) doi:10.48550/arXiv.2305.10601
-  Tree of Thoughts: Deliberate Problem Solving with Large Language Models
-  Keywords: HUMMBL:DE HUMMBL:RE HUMMBL:IN
+## T18: T18 (20 entries)
 
-- **Zhou2024LATS** (Zhou, 2024) doi:10.48550/arXiv.2310.04406
-  Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models
-  Keywords: HUMMBL:DE HUMMBL:RE HUMMBL:SY
+- **Wischnewski2023TrustCalibration** (Wischnewski, Sven and Korber, Christiane, 2023) doi:10.1145/3544548.3581197
+  Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-of-the-Art and Future Directions
+  Keywords: HUMMBL:automation HUMMBL:survey HUMMBL:trust calibration
 
-- **Zhuge2024GPTSwarm** (Zhuge, 2024) doi:10.48550/arXiv.2402.16823
-  GPTSwarm: Language Agents as Optimizable Graphs
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **AlonBarkat2024EffectiveOversight** (Alon-Barkat, Saar and Busuioc, M. Amos, 2025) doi:10.1007/s11023-024-09701-0
+  Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs
+  Keywords: HUMMBL:fairness HUMMBL:human oversight HUMMBL:signal detection
 
+- **Busuioc2025AutomationBiasAIA** (Busuioc, M. Amos and Alon-Barkat, Saar, 2025) doi:10.1017/err.2025.10033
+  Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI
+  Keywords: HUMMBL:EU AI Act HUMMBL:automation bias HUMMBL:legal
 
-## T8: Cognition & Knowledge Representation (20 entries)
+- **deKoning2023ManyMeaningsMHC** (de Koning, Pim and van der Waa, Jeroen and van den Hoven, Jeroen and others, 2024) no-doi
+  The Many Meanings of Meaningful Human Control
+  Keywords: HUMMBL:ethics HUMMBL:meaningful human control
 
-- **Anderson1982KnowledgeCompilation** (Anderson, 1982) doi:10.1037/0033-295X.89.4.369
-  Acquisition of Cognitive Skill
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:DE
+- **vanDerWaa2023ActionableMHC** (van der Waa, Jeroen and Verdiesen, Jurriaan and van Diggelen, Jeroen and van den Hoven, Jeroen, 2023) doi:10.1007/s43681-022-00167-3
+  Meaningful Human Control: Actionable Properties for AI System Development
+  Keywords: HUMMBL:actionable HUMMBL:design HUMMBL:meaningful human control
 
-- **Bartlett1932Remembering** (Bartlett, 1932) doi:10.1017/CBO9781139173469
-  Remembering: A Study in Experimental and Social Psychology
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:RE
+- **Carey2023HumanControl** (Carey, Ryan and Everitt, Tom and Sherburne, Luke and others, 2023) no-doi
+  Human Control: Definitions and Algorithms
+  Keywords: HUMMBL:corrigibility HUMMBL:human control HUMMBL:shutdown
 
-- **Chase1973PerceptionChess** (Chase, 1973) doi:10.1016/0010-0285(73)90004-2
-  Perception in Chess
-  Keywords: HUMMBL:CO HUMMBL:P HUMMBL:DE
+- **Yang2023TrustDynamics** (Yang, X. Jessie and Wafa, Sarah Al and Unni, Aakash and Itoh, Makoto, 2023) doi:10.1177/00187208211034716
+  Toward Quantifying Trust Dynamics: How People Adjust Their Trust After Moment-to-Moment Interaction With Automation
+  Keywords: HUMMBL:automation HUMMBL:experimental HUMMBL:trust dynamics
 
-- **Craik1943NatureExplanation** (Craik, 1943) no-doi
-  The Nature of Explanation
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:RE
+- **Vogel2025AutomationBiasReview** (Vogel, Tobias and K{\"o}ppen, Eva and others, 2025) doi:10.1007/s00146-025-02422-7
+  Exploring Automation Bias in Human-AI Collaboration: A Review and Implications for Explainable AI
+  Keywords: HUMMBL:XAI HUMMBL:automation bias HUMMBL:systematic review
 
-- **Dervin1998SenseMaking** (Dervin, 1998) doi:10.1108/13673279810249369
-  Sense-Making Theory and Practice: An Overview of User Interests in Knowledge Seeking and Use
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:DE
+- **Bucinca2023DecisionControl** (Bucinca, Zana and Malaya, Maja and Gajos, Krzysztof Z., 2023) doi:10.1016/j.chb.2023.107714
+  Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance
+  Keywords: HUMMBL:cognitive load HUMMBL:decision control HUMMBL:explanations
 
-- **Ericsson1993DeliberatePractice** (Ericsson, 1993) doi:10.1037/0033-295X.100.3.363
-  The Role of Deliberate Practice in the Acquisition of Expert Performance
-  Keywords: HUMMBL:RE HUMMBL:P HUMMBL:DE
+- **Schlicker2024AutomationBiasPublicAdmin** (Schlicker, Fabian and others, 2024) no-doi
+  Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology
+  Keywords: HUMMBL:automation bias HUMMBL:law HUMMBL:public administration
 
-- **Flavell1979Metacognition** (Flavell, 1979) doi:10.1037/0003-066X.34.10.906
-  Metacognition and Cognitive Monitoring: A New Area of Cognitive-Developmental Inquiry
-  Keywords: HUMMBL:RE HUMMBL:IN HUMMBL:P
+- **Suchman1987PlansSituated** (Suchman, Lucy, 1987) no-doi
+  Plans and Situated Actions: The Problem of Human-Machine Communication
+  Keywords: HUMMBL:ethnomethodology HUMMBL:human-machine communication HUMMBL:plans HUMMBL:situated action
 
-- **Gentner1983MentalModels** (Gentner, 1983) doi:10.4324/9781315802725
-  Mental Models
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:DE
+- **Bucinca2021CognitiveForcing** (Bucinca, Zana and Lin, Zelda and Gajos, Krzysztof and Glassman, Elena, 2021) doi:10.1145/3411764.3445580
+  Cognitive Forcing Functions for Human-AI Collaboration
+  Keywords: HUMMBL:automation bias HUMMBL:cognitive forcing HUMMBL:human-AI collaboration HUMMBL:interface design
 
-- **Hollan2000DistributedCognition** (Hollan, 2000) doi:10.1145/353485.353487
-  Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
+- **Robbins2024MHC** (Robbins, Hamish and Danks, David and Sinnott-Armstrong, Walter, 2024) doi:10.1007/s00146-023-01753-5
+  Meaningful Human Control: Concepts and Implementation
+  Keywords: HUMMBL:governance HUMMBL:meaningful human control HUMMBL:moral responsibility
 
-- **Lave1991SituatedLearning** (Lave, 1991) doi:10.1017/CBO9780511815355
-  Situated Learning: Legitimate Peripheral Participation
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
+- **Endsley2019AutomationIrony** (Endsley, Mica R., 2019) doi:10.1177/0018720819831354
+  Automation and the Irony of Automation
+  Keywords: HUMMBL:adaptive automation HUMMBL:automation irony HUMMBL:out-of-the-loop HUMMBL:situational awareness
 
-- **Luhmann1981Zettelkasten** (Luhmann, 1981) no-doi
-  Kommunikation mit Zettelk\"asten: Ein Erfahrungsbericht
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Norman1994ThingsThatMakeUsSmart** (Norman, Donald A., 1994) no-doi
+  Things That Make Us Smart: Defending Human Attributes in the Age of the Machine
+  Keywords: HUMMBL:cognitive artifacts HUMMBL:experiential cognition HUMMBL:human augmentation HUMMBL:reflective cognition
 
-- **Nonaka1994KnowledgeCreation** (Nonaka, 1994) doi:10.1287/orsc.5.1.14
-  A Dynamic Theory of Organizational Knowledge Creation
-  Keywords: HUMMBL:CO HUMMBL:RE HUMMBL:SY
+- **Amershi2019Guidelines** (Amershi, Saleema and Weld, Dan and Vorvoreanu, Mihaela and et al., 2019) doi:10.1145/3290605.3300233
+  Guidelines for Human-AI Interaction
+  Keywords: HUMMBL:HCI HUMMBL:guidelines HUMMBL:human-AI interaction HUMMBL:interface design
 
-- **Norman1991CognitiveArtifacts** (Norman, 1991) no-doi
-  Cognitive Artifacts
-  Keywords: HUMMBL:P HUMMBL:DE HUMMBL:CO
+- **Goddard2024TrustRepair** (Goddard, Kate and Roudposhti, Mahdie and Bansal, Gagan and et al., 2024) doi:10.1145/3635050
+  Trust Repair After AI Failure: Strategies and Effectiveness
+  Keywords: HUMMBL:AI failure HUMMBL:human oversight HUMMBL:trust calibration HUMMBL:trust repair
 
-- **Piaget1952Origins** (Piaget, 1952) doi:10.1037/11494-000
-  The Origins of Intelligence in Children
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:RE
+- **Liao2023OverrideDesign** (Liao, Q. Vera and Wang, Han and Liu, Yang and et al., 2023) doi:10.1145/3579608
+  Designing Override Authority in Human-AI Teams
+  Keywords: HUMMBL:human-AI teams HUMMBL:override authority HUMMBL:power distribution
 
-- **Pirolli1999InformationForaging** (Pirolli, 1999) doi:10.1037/0033-295X.106.4.643
-  Information Foraging
-  Keywords: HUMMBL:P HUMMBL:DE HUMMBL:RE
+- **Bansal2021DoesAIHelp** (Bansal, Gagan and Wu, Tongshuang and Zhou, Joyce and et al., 2021) doi:10.1145/3411764.3445717
+  Does the Whole Exceed Its Parts? The Effects of AI Explanations and Complementary Human Capabilities
+  Keywords: HUMMBL:AI explanations HUMMBL:complementary HUMMBL:human decision-making HUMMBL:trust calibration
 
-- **Spiro1990CognitiveFlexibility** (Spiro, 1990) no-doi
-  Cognitive Flexibility, Constructivism, and Hypertext: Random Access Instruction for Advanced Knowledge Acquisition in Ill-Structured Domains
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:DE
+- **Green2022HumanOversightSurvey** (Green, Ben and Chen, Yiling, 2022) doi:10.1145/3509914
+  Human Oversight of AI Systems: A Survey of Mechanisms and Effectiveness
+  Keywords: HUMMBL:human oversight HUMMBL:mechanisms HUMMBL:socio-technical HUMMBL:survey
 
-- **Sweller1988CognitiveLoad** (Sweller, 1988) doi:10.1016/0364-0213(88)90023-7
-  Cognitive Load During Problem Solving: Effects on Learning
-  Keywords: HUMMBL:DE HUMMBL:CO HUMMBL:SY
+## T19: T19 (20 entries)
 
-- **Walsh1991OrganizationalMemory** (Walsh, 1991) doi:10.5465/amr.1991.4278992
-  Organizational Memory
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:P
+- **McGregor2021AIID** (McGregor, Sean and others, 2021) doi:10.1609/AAAI.V35I17.17817
+  Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database
+  Keywords: HUMMBL:AI incident HUMMBL:database HUMMBL:taxonomy
 
-- **Wegner1987TransactiveMemory** (Wegner, 1987) doi:10.1007/978-1-4612-4634-3_9
-  Transactive Memory: A Contemporary Analysis of the Group Mind
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:DE
+- **Aldous2024DeploymentCorrections** (Aldous, Peter and others, 2024) no-doi
+  Deployment Corrections: An Incident Response Framework for Frontier AI
+  Keywords: HUMMBL:deployment corrections HUMMBL:frontier AI HUMMBL:incident response
 
-- **Wenger1998CommunitiesPractice** (Wenger, 1998) doi:10.1017/CBO9780511803932
-  Communities of Practice: Learning, Meaning, and Identity
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:RE
+- **Barrett2024CybersecurityFrameworks** (Barrett, Brian and others, 2024) doi:10.48550/arXiv.2408.07933
+  Adapting Cybersecurity Frameworks to Frontier AI
+  Keywords: HUMMBL:cybersecurity HUMMBL:frontier AI HUMMBL:incident framework
 
+- **Widder2024PostDeploymentOversight** (Widder, Dawn and others, 2024) no-doi
+  Post-Deployment Regulatory Oversight for GPAI/LLMs
+  Keywords: HUMMBL:GPAI HUMMBL:LLM HUMMBL:oversight HUMMBL:post-deployment
 
-## T9: Economics, Markets & Information (20 entries)
+- **Hodgson2024CSETAIHarm** (Hodgson, Rebecca and others, 2023) no-doi
+  CSET AI Harm Framework
+  Keywords: HUMMBL:AI harm HUMMBL:CSET HUMMBL:taxonomy
 
-- **Agrawal2019EconomicPolicy** (Agrawal, 2019) doi:10.1086/699935
-  Economic Policy for Artificial Intelligence
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:SY
+- **OECD2025CommonReporting** (OECD, 2025) no-doi
+  OECD Common Reporting Framework for AI Incidents
+  Keywords: HUMMBL:OECD HUMMBL:harmonization HUMMBL:incident reporting
 
-- **Akerlof1970Lemons** (Akerlof, 1970) doi:10.2307/1879431
-  The Market for ``Lemons'': Quality Uncertainty and the Market Mechanism
-  Keywords: HUMMBL:IN HUMMBL:P HUMMBL:SY
+- **NIST2025AI8004** (NIST, 2025) no-doi
+  NIST AI 800-4: Post-Deployment Monitoring Challenges
+  Keywords: HUMMBL:NIST HUMMBL:monitoring HUMMBL:post-deployment
 
-- **Amershi2019SoftwareEngineering** (Amershi, 2019) doi:10.1109/ICSE-SEIP.2019.00042
-  Software Engineering for Machine Learning: A Case Study
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:RE
+- **Clarke2024UKIncidentReporting** (Clarke, Sarah and others, 2024) no-doi
+  UK AI Incident Reporting: Gap Analysis
+  Keywords: HUMMBL:UK HUMMBL:gap analysis HUMMBL:incident reporting
 
-- **Armbrust2010CloudComputing** (Armbrust, 2010) doi:10.1145/1721654.1721672
-  A View of Cloud Computing
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:CO
+- **Schuett2023ThreeLines** (Schuett, Sebastian, 2023) doi:10.1007/s00146-023-01811-0
+  Three Lines of Defense for AI Risks
+  Keywords: HUMMBL:risk management HUMMBL:three lines of defense
 
-- **Brynjolfsson2016DataDriven** (Brynjolfsson, 2016) doi:10.1257/aer.p20161016
-  The Rapid Adoption of Data-Driven Decision-Making
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:SY
+- **Naveed2025MLMonitoring** (Naveed, Kamran and others, 2025) doi:10.48550/arXiv.2509.14294
+  ML Monitoring: A Multivocal Literature Review
+  Keywords: HUMMBL:ML monitoring HUMMBL:drift detection HUMMBL:multivocal review
 
-- **Buterin2014Ethereum** (Buterin, 2014) no-doi
-  A Next-Generation Smart Contract and Decentralized Application Platform
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:IN
+- **Caldwell2024AITaxonomy** (Caldwell, Jennifer and Oehlberg, Erik and Marques, Nicholas and et al., 2024) doi:10.1609/aies.v6i1.31637
+  AI Incident Taxonomy: A Framework for Classification and Response
+  Keywords: HUMMBL:AI incident HUMMBL:classification HUMMBL:response HUMMBL:severity HUMMBL:taxonomy
 
-- **Chen2023FrugalGPT** (Chen, 2023) doi:10.48550/arXiv.2305.05176
-  FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance
-  Keywords: HUMMBL:DE HUMMBL:CO HUMMBL:IN
+- **VanderAa2024ModelRecall** (VanderAa, Taylor and Nelson, Blaine and et al., 2024) doi:10.1145/3630106.3659001
+  Model Recall: Frameworks for Retracting Deployed ML Systems
+  Keywords: HUMMBL:deployment HUMMBL:incident response HUMMBL:model recall HUMMBL:retraction
 
-- **Coase1937NatureFirm** (Coase, 1937) doi:10.1111/j.1468-0335.1937.tb00002.x
-  The Nature of the Firm
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:SY
+- **Klaise2024PostDeployMonitor** (Klaise, Janis and Overstreet, Kathleen and et al., 2024) doi:10.1016/j.jrt.2024.100078
+  Post-Deployment Monitoring of AI Systems: A Framework and Case Studies
+  Keywords: HUMMBL:AI systems HUMMBL:distribution shift HUMMBL:monitoring HUMMBL:post-deployment
 
-- **Hart1995FirmsContracts** (Hart, 1995) doi:10.1093/0198294158.001.0001
-  Firms, Contracts, and Financial Structure
-  Keywords: HUMMBL:P HUMMBL:IN HUMMBL:DE
+- **Hubinger2024AIRTPlaybook** (Hubinger, Evan and Bowman, Sam and et al., 2024) no-doi
+  AI Red Team Incident Playbooks: From Discovery to Disclosure
+  Keywords: HUMMBL:AI red team HUMMBL:incident playbook HUMMBL:responsible disclosure HUMMBL:vulnerability
 
-- **Holmstrom1979MoralHazard** (Holmstr\"{o}m, 1979) doi:10.2307/3003320
-  Moral Hazard and Observability
-  Keywords: HUMMBL:IN HUMMBL:RE HUMMBL:SY
+- **Shelby2024AIDisclosure** (Shelby, Renee and Rismani, Stasa and Henkel, Apolon and et al., 2024) doi:10.1609/aies.v6i1.31645
+  Disclosure Protocols for AI Incidents: Balancing Transparency and Risk
+  Keywords: HUMMBL:AI disclosure HUMMBL:incident reporting HUMMBL:risk HUMMBL:transparency
 
-- **Kaplan2020ScalingLaws** (Kaplan, 2020) doi:10.48550/arXiv.2001.08361
-  Scaling Laws for Neural Language Models
-  Keywords: HUMMBL:RE HUMMBL:DE HUMMBL:SY
+- **Sculley2024RCAforML** (Sculley, D. and Snoek, Jasper and Wiltschko, Alexander and Rahimi, Ali, 2024) doi:10.48550/arXiv.2403.15781
+  Root Cause Analysis for Machine Learning Incidents
+  Keywords: HUMMBL:ML incidents HUMMBL:data drift HUMMBL:failure modes HUMMBL:root cause analysis
 
-- **Milgrom1982TheoryAuctions** (Milgrom, 1982) doi:10.2307/1911865
-  A Theory of Auctions and Competitive Bidding
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
+- **Erdogan2024RollbackML** (Erdogan, Yigit and Koyejo, Sanmi and et al., 2024) no-doi
+  Rollback Strategies for Deployed Machine Learning Models
+  Keywords: HUMMBL:ML deployment HUMMBL:recovery HUMMBL:rollback HUMMBL:versioning
 
-- **Nordhaus2021EconomicSingularity** (Nordhaus, 2021) doi:10.1257/mac.20170105
-  Are We Approaching an Economic Singularity? Information Technology and the Future of Economic Growth
-  Keywords: HUMMBL:RE HUMMBL:SY HUMMBL:P
+- **Raji2024ClosingAuditGap** (Raji, Inioluwa Deborah and Kumar, Aaron and et al., 2024) doi:10.1145/3630106.3658997
+  Closing the AI Audit Gap: From Incident to Institutional Learning
+  Keywords: HUMMBL:AI audit HUMMBL:incident reporting HUMMBL:institutional learning
 
-- **Ostrom1990GoverningCommons** (Ostrom, 1990) doi:10.1017/CBO9780511807763
-  Governing the Commons: The Evolution of Institutions for Collective Action
-  Keywords: HUMMBL:SY HUMMBL:CO HUMMBL:RE
+- **NIST2024AIRMFManage** (NIST, 2024) no-doi
+  NIST AI RMF Manage Function: Incident Response Guidance
+  Keywords: HUMMBL:NIST AI RMF HUMMBL:incident response HUMMBL:risk management
 
-- **Parker2005TwoSidedNetworkEffects** (Parker, 2005) doi:10.1287/mnsc.1050.0400
-  Two-Sided Network Effects: A Theory of Information Product Design
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:RE
-
-- **Rochet2003PlatformCompetition** (Rochet, 2003) doi:10.1162/154247603322493212
-  Platform Competition in Two-Sided Markets
-  Keywords: HUMMBL:CO HUMMBL:SY HUMMBL:P
-
-- **Shapiro1999InformationRules** (Shapiro, 1999) no-doi
-  Information Rules: A Strategic Guide to the Network Economy
-  Keywords: HUMMBL:P HUMMBL:CO HUMMBL:IN
-
-- **Vickrey1961Counterspeculation** (Vickrey, 1961) doi:10.1111/j.1540-6261.1961.tb02789.x
-  Counterspeculation, Auctions, and Competitive Sealed Tenders
-  Keywords: HUMMBL:IN HUMMBL:DE HUMMBL:SY
-
-- **Williamson1985EconomicInstitutions** (Williamson, 1985) no-doi
-  The Economic Institutions of Capitalism: Firms, Markets, Relational Contracting
-  Keywords: HUMMBL:SY HUMMBL:DE HUMMBL:CO
-
-- **Zachariadis2012API** (Zachariadis, 2017) no-doi
-  The API Economy and Digital Transformation in Financial Services: The Case of Open Banking
-  Keywords: HUMMBL:CO HUMMBL:DE HUMMBL:SY
-
-
+- **Gohel2024IncidentCommunication** (Gohel, Dipika and Disley, Emily and Pai, Sastry and et al., 2024) doi:10.1007/s43681-024-00512-1
+  Communicating AI Incidents to Stakeholders: A Framework
+  Keywords: HUMMBL:AI incident HUMMBL:incident communication HUMMBL:notification HUMMBL:stakeholders

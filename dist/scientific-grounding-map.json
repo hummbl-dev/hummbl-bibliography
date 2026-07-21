@@ -68,8 +68,8 @@
     "metadata_debt": {
       "critical": 5,
       "high": 10,
-      "medium": 42,
-      "low": 65
+      "medium": 39,
+      "low": 64
     }
   },
   "sources": [
@@ -6056,8 +6056,8 @@
         "DE",
         "P"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1007/s12599-020-00676-7",
       "has_isbn": false,
       "isbn": null,
       "journal": "Business and Information Systems Engineering",
@@ -6068,14 +6068,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Berry2024AIReadinessIndex",
@@ -8081,8 +8075,8 @@
         "IN",
         "P"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1016/j.chb.2023.107714",
       "has_isbn": false,
       "isbn": null,
       "journal": null,
@@ -8093,14 +8087,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "low",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Busuioc2025AutomationBiasAIA",
@@ -11532,8 +11520,8 @@
         "CO",
         "SY"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.1201/9780849379635.fmatt",
       "has_isbn": false,
       "isbn": null,
       "journal": "LinkedIn Engineering Blog",
@@ -11544,14 +11532,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     },
     {
       "key": "Mahdavi2013FeatureToggles",
@@ -15142,8 +15124,8 @@
         "DE",
         "SY"
       ],
-      "has_doi": false,
-      "doi": null,
+      "has_doi": true,
+      "doi": "10.2139/ssrn.2975199",
       "has_isbn": false,
       "isbn": null,
       "journal": "Working Paper, Warwick Business School",
@@ -15155,14 +15137,8 @@
       ],
       "downstream_refs": [],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
-      "metadata_debt": [
-        {
-          "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
-        }
-      ]
+      "source_status": "ready",
+      "metadata_debt": []
     }
   ],
   "metadata_debt": [
@@ -15423,16 +15399,6 @@
       "evidence_tier": "emerging",
       "field": "doi",
       "priority": "high",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Alsheibani2018AIReadiness",
-      "title": "Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors",
-      "bibliography_tier": "T15",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
       "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
@@ -15698,16 +15664,6 @@
       ]
     },
     {
-      "key": "Kreps2013Log",
-      "title": "The Log: What every software engineer should know about real-time data's unifying abstraction",
-      "bibliography_tier": "T5",
-      "evidence_tier": "applied",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Liang2023HELM",
       "title": "Holistic Evaluation of Language Models",
       "bibliography_tier": "T6",
@@ -15884,16 +15840,6 @@
       "downstream_refs": []
     },
     {
-      "key": "Zachariadis2012API",
-      "title": "The {API} Economy and Digital Transformation in Financial Services: The Case of Open Banking",
-      "bibliography_tier": "T9",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
       "key": "Aldous2024DeploymentCorrections",
       "title": "Deployment Corrections: An Incident Response Framework for Frontier AI",
       "bibliography_tier": "T19",
@@ -15931,16 +15877,6 @@
       "field": "arxiv_id",
       "priority": "low",
       "reason": "arXiv identifier is inferable from current metadata but not exposed as a first-class field.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Bucinca2023DecisionControl",
-      "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
-      "bibliography_tier": "T18",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "low",
-      "reason": "Paper-like entry should carry a DOI when available.",
       "downstream_refs": []
     },
     {

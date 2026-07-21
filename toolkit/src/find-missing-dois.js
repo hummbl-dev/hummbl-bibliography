@@ -6,11 +6,46 @@ import chalk from 'chalk';
 import axios from 'axios';
 import { Cite } from '@citation-js/core';
 import '@citation-js/plugin-bibtex';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '../..');
+const cachePath = path.join(rootDir, '.cache', 'crossref_doi_cache.json');
+
+export function resolveBibDir(positionalArg) {
+  if (positionalArg) {
+    return path.resolve(positionalArg);
+  }
+  if (fs.existsSync(path.resolve('bibliography'))) {
+    return path.resolve('bibliography');
+  }
+  if (fs.existsSync(path.join(rootDir, 'bibliography'))) {
+    return path.join(rootDir, 'bibliography');
+  }
+  return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../bibliography');
+}
 
 const args = process.argv.slice(2);
 const positionalArgs = args.filter(arg => !arg.startsWith('--'));
-const bibDir = positionalArgs[0] || '../bibliography';
+const useCache = !args.includes('--no-cache');
+const bibDir = resolveBibDir(positionalArgs[0]);
+
+function loadCache() {
+  try {
+    if (useCache && fs.existsSync(cachePath)) {
+      return JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+    }
+  } catch {}
+  return {};
+}
+
+function saveCache(cache) {
+  try {
+    const dir = path.dirname(cachePath);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(cachePath, JSON.stringify(cache, null, 2), 'utf8');
+  } catch {}
+}
 
 const DOI_CANDIDATE_TYPES = new Set(['article-journal', 'paper-conference']);
 
@@ -38,9 +73,12 @@ export function extractPublicationYear(entry) {
       return String(direct);
     }
 
-    const fallback = dateNode?.dateParts?.[0]?.[0];
-    if (fallback !== undefined && fallback !== null) {
-      return String(fallback);
+    const rawString = dateNode?.raw || dateNode?.['date-time'] || dateNode?.literal;
+    if (rawString) {
+      const match = String(rawString).match(/\b(19|20)\d{2}\b/);
+      if (match) {
+        return match[0];
+      }
     }
   }
 
@@ -63,9 +101,15 @@ export class DOIFinder {
     this.missingDOIs = [];
     this.foundDOIs = [];
     this.rateLimitDelay = 1000; // ms between CrossRef requests; set to 0 in tests
+    this.cache = loadCache();
   }
 
   async searchCrossRef(title, author, year) {
+    const cacheKey = `${title}|${author}|${year}`;
+    if (this.cache[cacheKey] !== undefined) {
+      return this.cache[cacheKey];
+    }
+
     try {
       const query = `${title} ${author} ${year}`.replace(/[^\w\s]/g, ' ');
       const url = `https://api.crossref.org/works?query=${encodeURIComponent(query)}&rows=1`;
@@ -75,13 +119,14 @@ export class DOIFinder {
         timeout: 5000
       });
 
+      let result = null;
       if (response.data.message.items.length > 0) {
         const item = response.data.message.items[0];
         const score = item.score;
         
         // Only return if confidence is high enough
         if (score > 50) {
-          return {
+          result = {
             doi: item.DOI,
             score: score,
             title: item.title ? item.title[0] : '',
@@ -90,7 +135,9 @@ export class DOIFinder {
         }
       }
 
-      return null;
+      this.cache[cacheKey] = result;
+      saveCache(this.cache);
+      return result;
     } catch (err) {
       console.error(chalk.red(`    Error querying CrossRef: ${err.message}`));
       return null;
@@ -190,6 +237,36 @@ export class DOIFinder {
         console.log(chalk.white(`   Title: ${item.title}`));
         console.log('');
       });
+    }
+
+    try {
+      const reportsDir = path.resolve(__dirname, '../../reports');
+      if (!fs.existsSync(reportsDir)) {
+        fs.mkdirSync(reportsDir, { recursive: true });
+      }
+      const reportPath = path.join(reportsDir, 'doi_enrichment_report.json');
+      const jsonOutput = {
+        generatedAt: new Date().toISOString(),
+        totalChecked: total,
+        foundCount: this.foundDOIs.length,
+        missingCount: this.missingDOIs.length,
+        foundDois: this.foundDOIs.map((i) => ({
+          citekey: i.key,
+          file: i.file,
+          doi: i.doi,
+          confidence: i.confidence,
+          score: i.score,
+        })),
+        missingDois: this.missingDOIs.map((i) => ({
+          citekey: i.key,
+          file: i.file,
+          title: i.title,
+        })),
+      };
+      fs.writeFileSync(reportPath, JSON.stringify(jsonOutput, null, 2), 'utf8');
+      console.log(chalk.gray(`Report saved to ${reportPath}`));
+    } catch (err) {
+      console.warn(chalk.yellow(`Could not save DOI report: ${err.message}`));
     }
 
     console.log('');

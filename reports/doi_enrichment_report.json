@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-07-21T16:32:46.844Z",
+  "totalChecked": 41,
+  "foundCount": 8,
+  "missingCount": 33,
+  "foundDois": [
+    {
+      "citekey": "OpenAI2025o3SystemCard",
+      "file": "T13_reasoning.bib",
+      "doi": "10.1007/s00345-025-05832-w",
+      "confidence": "low",
+      "score": 55.653885
+    },
+    {
+      "citekey": "Alsheibani2018AIReadiness",
+      "file": "T15_maturity.bib",
+      "doi": "10.1007/s12599-020-00676-7",
+      "confidence": "medium",
+      "score": 60.586292
+    },
+    {
+      "citekey": "Floridi2018AI4People",
+      "file": "T15_maturity.bib",
+      "doi": "10.1007/s11023-018-9482-5",
+      "confidence": "medium",
+      "score": 69.57805
+    },
+    {
+      "citekey": "Balle2020PrivacyAmplification",
+      "file": "T17_privacy.bib",
+      "doi": "10.29012/jpc.726",
+      "confidence": "low",
+      "score": 50.684864
+    },
+    {
+      "citekey": "Bucinca2023DecisionControl",
+      "file": "T18_human_oversight.bib",
+      "doi": "10.1016/j.chb.2023.107714",
+      "confidence": "medium",
+      "score": 60.241882
+    },
+    {
+      "citekey": "Schlicker2024AutomationBiasPublicAdmin",
+      "file": "T18_human_oversight.bib",
+      "doi": "10.2139/ssrn.4736646",
+      "confidence": "low",
+      "score": 59.597977
+    },
+    {
+      "citekey": "Kreps2013Log",
+      "file": "T5_engineering.bib",
+      "doi": "10.1201/9780849379635.fmatt",
+      "confidence": "medium",
+      "score": 71.48102
+    },
+    {
+      "citekey": "Zachariadis2012API",
+      "file": "T9_economics.bib",
+      "doi": "10.2139/ssrn.2975199",
+      "confidence": "medium",
+      "score": 74.11252
+    }
+  ],
+  "missingDois": [
+    {
+      "citekey": "Guo2024Threats",
+      "file": "T11_security.bib",
+      "title": "Threats, Attacks, and Defenses in Machine Unlearning: A Survey"
+    },
+    {
+      "citekey": "Ohrimenko2016SecureEnclaves",
+      "file": "T11_security.bib",
+      "title": "Oblivious Multi-Party Machine Learning on Trusted Processors"
+    },
+    {
+      "citekey": "Wright1932Roles",
+      "file": "T12_complexity.bib",
+      "title": "The Roles of Mutation, Inbreeding, Crossbreeding, and Selection in Evolution"
+    },
+    {
+      "citekey": "OpenAI2024o1SystemCard",
+      "file": "T13_reasoning.bib",
+      "title": "OpenAI o1 System Card"
+    },
+    {
+      "citekey": "Anthropic2024Claude3",
+      "file": "T13_reasoning.bib",
+      "title": "The Claude 3 Model Family: Opus, Sonnet, Haiku"
+    },
+    {
+      "citekey": "Chen2024AlphaCode2",
+      "file": "T13_reasoning.bib",
+      "title": "AlphaCode 2 Technical Report"
+    },
+    {
+      "citekey": "Anthropic2025ClaudeModel",
+      "file": "T13_reasoning.bib",
+      "title": "Claude 3.5 Model Family: Sonnet and Haiku"
+    },
+    {
+      "citekey": "OpenAI2024o1Mini",
+      "file": "T13_reasoning.bib",
+      "title": "Learning to Reason with LLMs"
+    },
+    {
+      "citekey": "McGinn2024GrammarReality",
+      "file": "T13_reasoning.bib",
+      "title": "On the Relations Between Grammar and Reality: A Wittgensteinian Study"
+    },
+    {
+      "citekey": "Nemecek2026IntegrityClash",
+      "file": "T14_provenance.bib",
+      "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking"
+    },
+    {
+      "citekey": "Bui2023ProvenanceEvaluation",
+      "file": "T14_provenance.bib",
+      "title": "A Unified Framework for Content Provenance Evaluation"
+    },
+    {
+      "citekey": "Gengler2024OrgAIGovMaturity",
+      "file": "T15_maturity.bib",
+      "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies"
+    },
+    {
+      "citekey": "Berry2024AIReadinessIndex",
+      "file": "T15_maturity.bib",
+      "title": "The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption"
+    },
+    {
+      "citekey": "Fatehkia2020BigDataDev",
+      "file": "T16_data_governance.bib",
+      "title": "Big Data for Development: Applications and Governance Challenges"
+    },
+    {
+      "citekey": "Carlini2021Extracting",
+      "file": "T17_privacy.bib",
+      "title": "Extracting Training Data from Large Language Models"
+    },
+    {
+      "citekey": "Nasr2021Memorization",
+      "file": "T17_privacy.bib",
+      "title": "Adversarial Inference Activates Neuron Trojans: Memorization in ML"
+    },
+    {
+      "citekey": "deKoning2023ManyMeaningsMHC",
+      "file": "T18_human_oversight.bib",
+      "title": "The Many Meanings of Meaningful Human Control"
+    },
+    {
+      "citekey": "Carey2023HumanControl",
+      "file": "T18_human_oversight.bib",
+      "title": "Human Control: Definitions and Algorithms"
+    },
+    {
+      "citekey": "Aldous2024DeploymentCorrections",
+      "file": "T19_incident_response.bib",
+      "title": "Deployment Corrections: An Incident Response Framework for Frontier AI"
+    },
+    {
+      "citekey": "Widder2024PostDeploymentOversight",
+      "file": "T19_incident_response.bib",
+      "title": "Post-Deployment Regulatory Oversight for GPAI/LLMs"
+    },
+    {
+      "citekey": "Hubinger2024AIRTPlaybook",
+      "file": "T19_incident_response.bib",
+      "title": "AI Red Team Incident Playbooks: From Discovery to Disclosure"
+    },
+    {
+      "citekey": "Erdogan2024RollbackML",
+      "file": "T19_incident_response.bib",
+      "title": "Rollback Strategies for Deployed Machine Learning Models"
+    },
+    {
+      "citekey": "Malcolm1980WittgensteinGrammar",
+      "file": "T1_canonical.bib",
+      "title": "Wittgenstein: The Grammar of Reality"
+    },
+    {
+      "citekey": "Heidegger1954QuestionTechnology",
+      "file": "T1_canonical.bib",
+      "title": "The Question Concerning Technology"
+    },
+    {
+      "citekey": "Rao1995BDI",
+      "file": "T5_engineering.bib",
+      "title": "BDI Agents: From Theory to Practice"
+    },
+    {
+      "citekey": "Fowler2005EventSourcing",
+      "file": "T5_engineering.bib",
+      "title": "Event Sourcing"
+    },
+    {
+      "citekey": "Young2010CQRS",
+      "file": "T5_engineering.bib",
+      "title": "CQRS Documents"
+    },
+    {
+      "citekey": "Mahdavi2013FeatureToggles",
+      "file": "T5_engineering.bib",
+      "title": "Feature Toggles (aka Feature Flags)"
+    },
+    {
+      "citekey": "Simon1962Architecture",
+      "file": "T5_engineering.bib",
+      "title": "The Architecture of Complexity"
+    },
+    {
+      "citekey": "Sculley2015TechDebt",
+      "file": "T6_governance.bib",
+      "title": "Hidden Technical Debt in Machine Learning Systems"
+    },
+    {
+      "citekey": "Soares2015Corrigibility",
+      "file": "T7_emerging.bib",
+      "title": "Corrigibility"
+    },
+    {
+      "citekey": "Norman1991CognitiveArtifacts",
+      "file": "T8_cognition.bib",
+      "title": "Cognitive Artifacts"
+    },
+    {
+      "citekey": "Buterin2014Ethereum",
+      "file": "T9_economics.bib",
+      "title": "A Next-Generation Smart Contract and Decentralized Application Platform"
+    }
+  ]
+}
