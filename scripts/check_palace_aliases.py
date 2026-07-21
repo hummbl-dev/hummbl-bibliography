@@ -168,7 +168,7 @@ def main() -> int:
 
     try:
         entries = parse_entries(source)
-    except Exception as exc:
+    except (ValueError, AttributeError) as exc:
         sys.stderr.write(f"ERROR: Failed to parse {path}: {exc}\n")
         return 2
 

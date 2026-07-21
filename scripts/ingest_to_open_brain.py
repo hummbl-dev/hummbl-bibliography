@@ -33,6 +33,7 @@ Exit codes:
 import json
 import os
 import re
+import socket
 import subprocess
 import sys
 import urllib.error
@@ -226,7 +227,8 @@ def check_health(base_url, token):
     try:
         with urllib.request.urlopen(req, timeout=5) as resp:
             return resp.status == 200
-    except Exception:
+    except (urllib.error.URLError, socket.timeout, ValueError) as exc:
+        print(f"WARNING: Open Brain health check failed: {exc}", file=sys.stderr)
         return False
 
 
