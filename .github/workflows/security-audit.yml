@@ -17,6 +17,7 @@ permissions:
 jobs:
   security-audit:
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    timeout-minutes: 10
     
     # Ensure the job has the necessary permissions
     # - contents: read — required by actions/checkout

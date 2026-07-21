@@ -21,6 +21,7 @@ on:
 jobs:
   validate-models:
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
