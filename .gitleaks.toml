@@ -21,6 +21,15 @@ paths = [
   '''mappings/bki_evidence\.json''',
 ]
 
+# DOI enrichment report contains citation keys (not secrets) that trigger
+# generic-api-key detection due to entropy. These are academic citation
+# identifiers, not credentials.
+[[allowlists]]
+description = "DOI enrichment report citation keys (not secrets)"
+paths = [
+  '''reports/doi_enrichment_report\.json''',
+]
+
 # Generated dist output and harness entry files contain citation keys and
 # bibliography metadata that trigger generic-api-key detection due to entropy.
 # These are academic citation identifiers and bibliography data, not credentials.
