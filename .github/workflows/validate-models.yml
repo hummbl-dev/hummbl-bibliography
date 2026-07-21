@@ -21,6 +21,8 @@ on:
 jobs:
   validate-models:
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout code
