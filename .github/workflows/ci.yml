@@ -23,6 +23,7 @@ jobs:
   build-and-test:
     name: Lint / Test / Audit (Node ${{ matrix.node-version }})
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    timeout-minutes: 15
     strategy:
       matrix:
         node-version: [24]
@@ -83,6 +84,7 @@ jobs:
   codeql:
     name: CodeQL Static Analysis
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    timeout-minutes: 15
     permissions:
       security-events: write
     steps:
