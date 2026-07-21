@@ -16,51 +16,11 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CHECKER = join(__dirname, 'check-memory-palace-aliases.js');
 
-// ---------------------------------------------------------------------------
-// Inline the testable helpers (copy-paste the pure functions so we can test
-// without importing the script's main() side effects)
-// ---------------------------------------------------------------------------
-
-function extractStringValue(raw) {
-  const trimmed = raw.trim();
-  if (
-    (trimmed.startsWith("'") && trimmed.endsWith("'")) ||
-    (trimmed.startsWith('"') && trimmed.endsWith('"'))
-  ) {
-    return trimmed.slice(1, -1);
-  }
-  return null;
-}
-
-function extractAliasesFromInner(inner) {
-  const aliases = [];
-  const stringRe = /'([^']*)'|"([^"]*)"/g;
-  let m;
-  while ((m = stringRe.exec(inner)) !== null) {
-    aliases.push(m[1] !== undefined ? m[1] : m[2]);
-  }
-  return aliases;
-}
-
-function detectCollisions(entries) {
-  const map = new Map();
-  const collisions = [];
-  for (const entry of entries) {
-    const allNames = [
-      { field: 'canonical_name', value: entry.canonical_name },
-      ...entry.aliases.map(a => ({ field: 'alias', value: a })),
-    ];
-    for (const { field, value } of allNames) {
-      const key = value.toLowerCase();
-      if (map.has(key)) {
-        collisions.push({ key, first: map.get(key), second: { slug: entry.slug, field, value } });
-      } else {
-        map.set(key, { slug: entry.slug, field, value });
-      }
-    }
-  }
-  return collisions;
-}
+import {
+  extractStringValue,
+  extractAliasesFromInner,
+  detectCollisions,
+} from './check-memory-palace-aliases.js';
 
 // ---------------------------------------------------------------------------
 // extractStringValue
