@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-# Safety: run with --dry-run first to preview changes
+/**
+ * Safety: run with --dry-run first to preview changes
  * merge-enriched-dois.js — Automatically merge high-confidence DOIs into .bib files
  *
  * Usage: node merge-enriched-dois.js [doiReportJson] [bibDir] [--min-confidence medium] [--dry-run]
