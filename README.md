@@ -1,14 +1,14 @@
 # HUMMBL Bibliography
 
-![Total Entries](https://img.shields.io/badge/entries-353-blue)
-![DOI Coverage](https://img.shields.io/badge/DOIs-65%25-yellowgreen)
-![ISBN Coverage](https://img.shields.io/badge/ISBNs-24%25-yellow)
+![Total Entries](https://img.shields.io/badge/entries-460-blue)
+![DOI Coverage](https://img.shields.io/badge/DOIs-60%25-yellowgreen)
+![ISBN Coverage](https://img.shields.io/badge/ISBNs-28%25-yellow)
 ![Abstract Coverage](https://img.shields.io/badge/abstracts-100%25-brightgreen)
 ![Validation](https://github.com/hummbl-dev/hummbl-bibliography/workflows/validate/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hummbl-dev/hummbl-bibliography/main)](https://github.com/hummbl-dev/hummbl-bibliography/commits/main)
 
-A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 353 curated academic and practitioner works across 19 canonical BibTeX files, including the original 13 thematic tiers, mapped to 6 cognitive transformations.
+A production-ready bibliography management system for the **HUMMBL (Base120) cognitive framework**. This repository maintains 460 curated academic and practitioner works across 19 canonical BibTeX files, including the original 13 thematic tiers, mapped to 6 cognitive transformations.
 
 Learn more at [hummbl.io](https://hummbl.io).
 
@@ -45,7 +45,7 @@ This bibliography provides the theoretical foundation and empirical evidence for
 | **T12: Complexity** | Complex adaptive systems | Holland, Kauffman, networks, cybernetics |
 | **T13: Reasoning** | Advanced reasoning systems | o-series model cards, AlphaCode, Claude |
 
-All 321 validated entries have abstracts (150-300 words) and HUMMBL transformation tags.
+All 460 validated entries have abstracts (150-300 words) and HUMMBL transformation tags.
 
 ## 🚀 Quick Start
 
@@ -95,21 +95,21 @@ npm test
 
 ## 📊 Current Metrics
 
-Based on the validated corpus as of July 16, 2026:
+Based on the validated corpus as of July 21, 2026:
 
-- **Total Entries**: 321 unique works across 19 canonical BibTeX files
+- **Total Entries**: 460 unique works across 19 canonical BibTeX files
 - **Transformation Coverage** (tag count across all entries):
-  - SY (Synthesis): 132
-  - P (Perspective): 120
-  - CO (Composition): 119
-  - RE (Recursion): 117
-  - DE (Decomposition): 108
-  - IN (Inversion): 101
+  - DE (Decomposition): 264
+  - IN (Inversion): 235
+  - SY (Synthesis): 233
+  - CO (Composition): 185
+  - RE (Recursion): 183
+  - P (Perspective): 177
 - **Quality Metrics**:
   - 100% have abstracts (150-300 word scholarly annotations)
   - 100% have HUMMBL transformation mappings
-  - 57.6% have DOIs (185/321)
-  - 22.4% have ISBNs (72/321)
+  - 60.4% have DOIs (278/460)
+  - 28.0% have ISBNs (129/460)
   - 0 validation errors, 0 duplicates
 
 ## 🔄 HUMMBL Transformation Mapping
