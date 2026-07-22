@@ -302,6 +302,32 @@
       "file": "T10_collaboration.bib"
     },
     {
+      "id": "Reason1990HumanError",
+      "tier": "T10",
+      "title": "Human Error",
+      "authors": [
+        "reason, james"
+      ],
+      "year": "1990",
+      "doi": "10.1017/CBO9780511831193",
+      "url": "",
+      "tags": [],
+      "file": "T10_collaboration.bib"
+    },
+    {
+      "id": "Dekker2014FieldGuide",
+      "tier": "T10",
+      "title": "The Field Guide to Understanding 'Human Error'",
+      "authors": [
+        "dekker, sidney"
+      ],
+      "year": "2014",
+      "doi": "10.1201/9781315239675",
+      "url": "",
+      "tags": [],
+      "file": "T10_collaboration.bib"
+    },
+    {
       "id": "Goodfellow2015Adversarial",
       "tier": "T11",
       "title": "Explaining and Harnessing Adversarial Examples",
@@ -620,6 +646,47 @@
       "file": "T11_security.bib"
     },
     {
+      "id": "Perrow1984NormalAccidents",
+      "tier": "T11",
+      "title": "Normal Accidents: Living with High-Risk Technologies",
+      "authors": [
+        "perrow, charles"
+      ],
+      "year": "1984",
+      "doi": "10.1515/9781400828494",
+      "url": "",
+      "tags": [],
+      "file": "T11_security.bib"
+    },
+    {
+      "id": "Hollnagel2006Resilience",
+      "tier": "T11",
+      "title": "Resilience Engineering: Concepts and Precepts",
+      "authors": [
+        "hollnagel, erik",
+        "woods, david d.",
+        "leveson, nancy g."
+      ],
+      "year": "2006",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T11_security.bib"
+    },
+    {
+      "id": "Leveson2012STAMP",
+      "tier": "T11",
+      "title": "Engineering a Safer World: Systems Thinking Applied to Safety",
+      "authors": [
+        "leveson, nancy g."
+      ],
+      "year": "2012",
+      "doi": "10.7551/mitpress/8179.001.0001",
+      "url": "",
+      "tags": [],
+      "file": "T11_security.bib"
+    },
+    {
       "id": "Holland1995HiddenOrder",
       "tier": "T12",
       "title": "Hidden Order: How Adaptation Builds Complexity",
@@ -887,6 +954,142 @@
         "holling, c. s."
       ],
       "year": "2002",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Cabrera2025GrammarReality",
+      "tier": "T12",
+      "title": "The Grammar of Reality: The Organizing Principles of Structure and Emergence",
+      "authors": [
+        "cabrera, derek",
+        "cabrera, laura"
+      ],
+      "year": "2025",
+      "doi": "10.54120/001c.138685",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Rovelli2017RealityNotWhatItSeems",
+      "tier": "T12",
+      "title": "Reality Is Not What It Seems: The Journey to Quantum Gravity",
+      "authors": [
+        "rovelli, carlo"
+      ],
+      "year": "2017",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "GoguenBurstall1992Institutions",
+      "tier": "T12",
+      "title": "Institutions: Abstract Model Theory for Specification and Programming",
+      "authors": [
+        "goguen, j. a.",
+        "burstall, r. m."
+      ],
+      "year": "1992",
+      "doi": "10.1145/147508.147524",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "GoguenRosu2002InstitutionMorphisms",
+      "tier": "T12",
+      "title": "Institution Morphisms",
+      "authors": [
+        "goguen, j. a.",
+        "ro\\c{s}u, g."
+      ],
+      "year": "2002",
+      "doi": "10.1007/s001650200013",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Holland1998Emergence",
+      "tier": "T12",
+      "title": "Emergence: From Chaos to Order",
+      "authors": [
+        "holland, john h."
+      ],
+      "year": "1998",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Anderson1972MoreIsDifferent",
+      "tier": "T12",
+      "title": "More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science",
+      "authors": [
+        "anderson, philip w."
+      ],
+      "year": "1972",
+      "doi": "10.1126/science.177.4047.393",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Page2017Diversity",
+      "tier": "T12",
+      "title": "The Diversity Bonus: How Great Teams Pay Off in the Knowledge Economy",
+      "authors": [
+        "page, scott e."
+      ],
+      "year": "2017",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Mitchell2009Complexity",
+      "tier": "T12",
+      "title": "Complexity: A Guided Tour",
+      "authors": [
+        "mitchell, melanie"
+      ],
+      "year": "2009",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "BarYam1997Dynamics",
+      "tier": "T12",
+      "title": "Dynamics of Complex Systems",
+      "authors": [
+        "bar-yam, yaneer"
+      ],
+      "year": "1997",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T12_complexity.bib"
+    },
+    {
+      "id": "Ladyman2007EverythingMustGo",
+      "tier": "T12",
+      "title": "Every Thing Must Go: Metaphysics Naturalized",
+      "authors": [
+        "ladyman, james",
+        "ross, david",
+        "spurrett, david",
+        "collier, john"
+      ],
+      "year": "2007",
       "doi": "",
       "url": "",
       "tags": [],
@@ -1227,6 +1430,2006 @@
       "file": "T13_reasoning.bib"
     },
     {
+      "id": "McGinn2024GrammarReality",
+      "tier": "T13",
+      "title": "On the Relations Between Grammar and Reality: A {Wittgensteinian} Study",
+      "authors": [
+        "mcginn, marie"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://papiro.unizar.es/ojs/index.php/analisis/en/article/view/4189",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Peat2002RoleLanguage",
+      "tier": "T13",
+      "title": "The Role of Language in Science",
+      "authors": [
+        "peat, f. david"
+      ],
+      "year": "2002",
+      "doi": "",
+      "url": "https://www.fdavidpeat.com/bibliography/essays/lang.htm",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Priest2015LinguisticConstruction",
+      "tier": "T13",
+      "title": "The Linguistic Construction of Reality",
+      "authors": [
+        "priest, graham"
+      ],
+      "year": "2015",
+      "doi": "",
+      "url": "https://grahampriest.net/?ddownload=850",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Weaver1953EthicsRhetoric",
+      "tier": "T13",
+      "title": "The Ethics of Rhetoric",
+      "authors": [
+        "weaver, richard m."
+      ],
+      "year": "1953",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Abramson2009GrammarReality",
+      "tier": "T13",
+      "title": "The Grammar of Reality: Why the Deep Structure of Mathematics May Tell Us Something Profound About the Nature of Existence",
+      "authors": [
+        "abramson, john"
+      ],
+      "year": "2009",
+      "doi": "",
+      "url": "https://www.integralworld.net/abramson8.html",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Anonymous2026BecomingPossibility",
+      "tier": "T13",
+      "title": "The Becoming of Possibility: Book {II}. The Grammar of Reality",
+      "authors": [
+        "{the becoming of possibility}"
+      ],
+      "year": "2026",
+      "doi": "",
+      "url": "https://thebecomingofpossibility.blogspot.com/2026/06/ii-grammar-of-reality-1-why-grammar.html",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "FeitosaDOttaviano2001ConservativeTranslations",
+      "tier": "T13",
+      "title": "{Conservative Translations}",
+      "authors": [
+        "feitosa, h. a.",
+        "d'ottaviano, i. m. l."
+      ],
+      "year": "2001",
+      "doi": "10.1016/S0168-0072(00)00046-4",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "GreenKarvounarakisTannen2007ProvenanceSemirings",
+      "tier": "T13",
+      "title": "{Provenance Semirings}",
+      "authors": [
+        "green, t. j.",
+        "karvounarakis, g.",
+        "tannen, v."
+      ],
+      "year": "2007",
+      "doi": "10.1145/1265530.1265535",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Tversky1983Extensional",
+      "tier": "T13",
+      "title": "Extensional versus Intuitive Reasoning: The Conjunction Fallacy in Probability Judgment",
+      "authors": [
+        "tversky, amos",
+        "kahneman, daniel"
+      ],
+      "year": "1983",
+      "doi": "10.1037/0033-295X.90.4.293",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "JohnsonLaird1983MentalModels",
+      "tier": "T13",
+      "title": "Mental Models: Toward a Cognitive Science of Language, Inference, and Consciousness",
+      "authors": [
+        "johnson-laird, philip n."
+      ],
+      "year": "1983",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Oaksford2007BayesianRationality",
+      "tier": "T13",
+      "title": "Bayesian Rationality: The Probabilistic Approach to Human Reasoning",
+      "authors": [
+        "oaksford, mike",
+        "chater, nick"
+      ],
+      "year": "2007",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Gigerenzer2007GutFeelings",
+      "tier": "T13",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "authors": [
+        "gigerenzer, gerd"
+      ],
+      "year": "2007",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Thagard2000Coherence",
+      "tier": "T13",
+      "title": "Coherence in Thought and Action",
+      "authors": [
+        "thagard, paul"
+      ],
+      "year": "2000",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Holyoak1995MentalLeaps",
+      "tier": "T13",
+      "title": "Mental Leaps: Analogy in Creative Thought",
+      "authors": [
+        "holyoak, keith j.",
+        "thagard, paul"
+      ],
+      "year": "1995",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Sloman2005CausalModels",
+      "tier": "T13",
+      "title": "Causal Models: How People Think About the World and Its Alternatives",
+      "authors": [
+        "sloman, steven a."
+      ],
+      "year": "2005",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Tenenbaum2011GrowMind",
+      "tier": "T13",
+      "title": "How to Grow a Mind: Statistics, Structure, and Abstraction",
+      "authors": [
+        "tenenbaum, joshua b.",
+        "kemp, charles",
+        "griffiths, thomas l.",
+        "goodman, noah d."
+      ],
+      "year": "2011",
+      "doi": "10.1126/science.1197557",
+      "url": "",
+      "tags": [],
+      "file": "T13_reasoning.bib"
+    },
+    {
+      "id": "Chesney2019DeepFakes",
+      "tier": "T14",
+      "title": "Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security",
+      "authors": [
+        "chesney, robert",
+        "citron, danielle keats"
+      ],
+      "year": "2019",
+      "doi": "10.2139/ssrn.3213954",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3213954",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Kirchenbauer2023Watermark",
+      "tier": "T14",
+      "title": "A Watermark for Large Language Models",
+      "authors": [
+        "kirchenbauer, john",
+        "geiping, jonas",
+        "wen, yuxin",
+        "katz, jonathan",
+        "miers, ian",
+        "goldstein, tom"
+      ],
+      "year": "2023",
+      "doi": "10.48550/arXiv.2301.10226",
+      "url": "https://arxiv.org/abs/2301.10226",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Kirchenbauer2024Reliability",
+      "tier": "T14",
+      "title": "On the Reliability of Watermarks for Large Language Models",
+      "authors": [
+        "kirchenbauer, john",
+        "geiping, jonas",
+        "wen, yuxin",
+        "shu, manli",
+        "saifullah, khalid",
+        "kong, tom",
+        "fernando, naren",
+        "saha, aniruddha",
+        "goldblum, micah",
+        "goldstein, tom"
+      ],
+      "year": "2024",
+      "doi": "10.48550/arXiv.2306.04634",
+      "url": "https://arxiv.org/abs/2306.04634",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Dathathri2024SynthID",
+      "tier": "T14",
+      "title": "Scalable Watermarking for Identifying Large Language Model Outputs",
+      "authors": [
+        "dathathri, sumanth",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "10.1038/s41586-024-08025-4",
+      "url": "https://www.nature.com/articles/s41586-024-08025-4",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Agrawal2026C2PA",
+      "tier": "T14",
+      "title": "Verifying Provenance of Digital Media: Security Analysis of C2PA and its Implementation",
+      "authors": [
+        "agrawal, anubhav",
+        "others"
+      ],
+      "year": "2026",
+      "doi": "",
+      "url": "https://eprint.iacr.org/2026/804",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Nemecek2026IntegrityClash",
+      "tier": "T14",
+      "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+      "authors": [
+        "nemecek, jacob",
+        "others"
+      ],
+      "year": "2026",
+      "doi": "",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026W/APAI/papers/Nemecek_Authenticated_Contradictions_from_Desynchronized_Provenance_and_Watermarking_CVPRW_2026_paper.pdf",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "DeepfakeMediaForensics2024",
+      "tier": "T14",
+      "title": "Deepfake Media Forensics: State of the Art and Challenges Ahead",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "10.48550/arXiv.2408.00388",
+      "url": "https://arxiv.org/pdf/2408.00388",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "DeepfakeDetectorsSoK2024",
+      "tier": "T14",
+      "title": "SoK: Systematization and Benchmarking of Deepfake Detectors in a Unified Framework",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "10.1109/eurosp63326.2025.00055",
+      "url": "https://arxiv.org/html/2401.04364v4",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "DefensesAIVisualMedia2025",
+      "tier": "T14",
+      "title": "A Survey of Defenses against AI-generated Visual Media: Detection, Disruption, and Authentication",
+      "authors": [
+        "deng, jingyi",
+        "lin, chenhao",
+        "zhao, zhengyu",
+        "liu, shuai",
+        "peng, zhe",
+        "wang, qian",
+        "shen, chao"
+      ],
+      "year": "2025",
+      "doi": "10.1145/3770916",
+      "url": "https://arxiv.org/pdf/2407.10575v2",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "DeepfakeDetectionReview2024",
+      "tier": "T14",
+      "title": "A Comprehensive Review of DeepFake Detection Using Advanced Machine Learning and Fusion Methods",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "10.3390/electronics13010095",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "NATOStratComDeepfakes2019",
+      "tier": "T14",
+      "title": "Deepfakes: Primer and Forecast",
+      "authors": [
+        "{nato strategic communications centre of excellence}"
+      ],
+      "year": "2019",
+      "doi": "",
+      "url": "https://stratcomcoe.org/publications/deepfakes-primer-and-forecast/42/",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "RAND2025ProvenanceOverpromise",
+      "tier": "T14",
+      "title": "Overpromising on Digital Provenance and Security",
+      "authors": [
+        "{rand corporation}"
+      ],
+      "year": "2025",
+      "doi": "",
+      "url": "https://www.rand.org/pubs/commentary/2025/06/overpromising-on-digital-provenance-and-security.html",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "C2PA2024Spec",
+      "tier": "T14",
+      "title": "C2PA Specification Version 2.1",
+      "authors": [
+        "{c2pa technical working group}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://c2pa.org/specifications/",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Fernandez2023SynthIDImage",
+      "tier": "T14",
+      "title": "Three Bricks to Consolidate Watermarks in the Era of Diffusion Models",
+      "authors": [
+        "fernandez, pierre",
+        "couairon, guillaume",
+        "furon, teddy",
+        "jegou, herve"
+      ],
+      "year": "2023",
+      "doi": "10.48550/arXiv.2306.07654",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Fernandez2023StableSignature",
+      "tier": "T14",
+      "title": "The Stable Signature: Rooting Watermarks in Latent Diffusion Models",
+      "authors": [
+        "fernandez, pierre",
+        "couairon, guillaume",
+        "jegou, herve",
+        "furon, teddy",
+        "vincent, matthijs"
+      ],
+      "year": "2023",
+      "doi": "10.48550/arXiv.2303.15435",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Saberi2024DeepfakeRegulation",
+      "tier": "T14",
+      "title": "Deepfakes, Generative AI, and the Need for Regulatory Response",
+      "authors": [
+        "saberi, ali",
+        "zaman, roshan",
+        "khan, niamatullah"
+      ],
+      "year": "2024",
+      "doi": "10.1007/s43681-024-00468-2",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Guarnera2023DeepfakeDetection",
+      "tier": "T14",
+      "title": "Fighting Deepfakes by Detecting GAN Fingerprints",
+      "authors": [
+        "guarnera, luca",
+        "giudice, oliver",
+        "battiato, sebastiano"
+      ],
+      "year": "2023",
+      "doi": "10.1109/TIFS.2023.3290938",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Wang2024DeepfakeSurvey",
+      "tier": "T14",
+      "title": "Deepfake Detection: A Comprehensive Survey of Methods and Challenges",
+      "authors": [
+        "wang, shu",
+        "fu, yuyang",
+        "liu, ying",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1145/3673600",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "W3C2023VerifiableCredentials",
+      "tier": "T14",
+      "title": "Verifiable Credentials Data Model v2.0",
+      "authors": [
+        "{w3c verifiable credentials working group}"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Bui2023ProvenanceEvaluation",
+      "tier": "T14",
+      "title": "A Unified Framework for Content Provenance Evaluation",
+      "authors": [
+        "bui, tri",
+        "agarwal, shishir",
+        "yu, ning",
+        "lyu, minjun"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T14_provenance.bib"
+    },
+    {
+      "id": "Vorvoreanu2023RAIMaturity",
+      "tier": "T15",
+      "title": "Towards a Responsible AI Organizational Maturity Model",
+      "authors": [
+        "vorvoreanu, mihaela",
+        "heger, amy",
+        "passi, sahil",
+        "dhanorkar, saurabh",
+        "kahn, zahra",
+        "wang, richard"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://www.microsoft.com/en-us/research/publication/responsible-ai-maturity-model/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Metaxa2024NISTMM",
+      "tier": "T15",
+      "title": "Evolving AI Risk Management: A Maturity Model based on the NIST AI Risk Management Framework",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2401.15229",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Phuong2024DangerousCapabilities",
+      "tier": "T15",
+      "title": "Evaluating Frontier Models for Dangerous Capabilities",
+      "authors": [
+        "phuong, mary",
+        "aitchison, matthew",
+        "catt, edmund",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://deepmind.google/research/publications/78150/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Weidinger2024HolisticSafety",
+      "tier": "T15",
+      "title": "Holistic Safety and Responsibility Evaluations of Advanced AI Models",
+      "authors": [
+        "weidinger, laura",
+        "shevlane, tomek",
+        "brennan, joseph",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://deepmind.google/research/publications/78149/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Paulhus1991CMM",
+      "tier": "T15",
+      "title": "Capability Maturity Model for Software (Version 1.0)",
+      "authors": [
+        "paulhus, william",
+        "weber, charles",
+        "humphrey, watts"
+      ],
+      "year": "1991",
+      "doi": "",
+      "url": "https://www.sei.cmu.edu/history-of-innovation/transforming-software-quality-assessment/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Chrissis2011CMMI",
+      "tier": "T15",
+      "title": "CMMI for Development: Guidelines for Process Integration and Product Improvement",
+      "authors": [
+        "chrissis, mary beth",
+        "konrad, mike",
+        "shrum, sandra"
+      ],
+      "year": "2011",
+      "doi": "",
+      "url": "https://www.sei.cmu.edu/library/cmmi-a-short-history/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Alsheibani2018AIReadiness",
+      "tier": "T15",
+      "title": "Ready or Not, AI Comes---An Interview Study of Organizational AI Readiness Factors",
+      "authors": [
+        "alsheibani, simon",
+        "cheung, yvonne",
+        "messom, christopher",
+        "others"
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "https://link.springer.com/article/10.1007/s12599-020-00676-7",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Pumplun2021AICapabilityMaturity",
+      "tier": "T15",
+      "title": "Understanding Artificial Intelligence Diffusion through an AI Capability Maturity Model",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "10.1007/s10796-024-10528-4",
+      "url": "https://link.springer.com/article/10.1007/s10796-024-10528-4",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Akbarighatar2024RAIGlobal",
+      "tier": "T15",
+      "title": "Responsible AI in the Global Context: Maturity Model and Survey",
+      "authors": [
+        "{various}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2410.09985",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Gengler2024OrgAIGovMaturity",
+      "tier": "T15",
+      "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
+      "authors": [
+        "gengler, eric",
+        "schmalenbach, klaus"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://researchr.org/publication/GenglerS24",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Shevlane2025EmergingPractices",
+      "tier": "T15",
+      "title": "Emerging Practices in Frontier AI Safety Frameworks",
+      "authors": [
+        "shevlane, tomek",
+        "others"
+      ],
+      "year": "2025",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2503.04746",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Floridi2018AI4People",
+      "tier": "T15",
+      "title": "AI4People---An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
+      "authors": [
+        "floridi, luciano",
+        "others"
+      ],
+      "year": "2018",
+      "doi": "",
+      "url": "https://link.springer.com/article/10.1007/s11023-018-9482-5",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Brynjolfsson2023Maturity",
+      "tier": "T15",
+      "title": "Generative AI at Work",
+      "authors": [
+        "brynjolfsson, erik",
+        "li, danielle",
+        "raymond, lindsey"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://doi.org/10.3386/w31161",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Shevlane2023AISafetyFrameworks",
+      "tier": "T15",
+      "title": "Model evaluation for extreme risks",
+      "authors": [
+        "shevlane, tomek",
+        "farquhar, sebastian",
+        "others"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://deepmind.google/research/publications/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Hogarth2023FrontierTaskforce",
+      "tier": "T15",
+      "title": "Frontier AI Taskforce: Progress Reports (First and Second)",
+      "authors": [
+        "hogarth, ian"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://www.gov.uk/government/publications/frontier-ai-taskforce-second-progress-report",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "ISO42001_2023",
+      "tier": "T15",
+      "title": "ISO/IEC 42001:2023 Artificial Intelligence Management System",
+      "authors": [
+        "{iso/iec jtc 1/sc 42}"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://www.iso.org/standard/81230.html",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "OECD2024AIClassification",
+      "tier": "T15",
+      "title": "OECD Framework for the Classification of AI Systems",
+      "authors": [
+        "{oecd}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.oecd-ilibrary.org/docserver/aaa4b355-en",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Berry2024AIReadinessIndex",
+      "tier": "T15",
+      "title": "The AI Readiness Index: Measuring Organizational Preparedness for AI Adoption",
+      "authors": [
+        "berry, michael",
+        "westfall, leslie",
+        "aziz, ammar"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Google2024AIPrinciplesMaturity",
+      "tier": "T15",
+      "title": "Google AI Principles: Responsible AI Maturity Model",
+      "authors": [
+        "{google responsible ai team}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://ai.google/responsible/practices/",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Microsoft2024AIMaturity",
+      "tier": "T15",
+      "title": "Microsoft AI Maturity Model: A Framework for Organizational AI Capability",
+      "authors": [
+        "{microsoft responsible ai standard}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.microsoft.com/en-us/ai/responsible-ai",
+      "tags": [],
+      "file": "T15_maturity.bib"
+    },
+    {
+      "id": "Pushkarna2022DataCards",
+      "tier": "T16",
+      "title": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI",
+      "authors": [
+        "pushkarna, mahima",
+        "zaldivar, adrian",
+        "kjartansson, oddur",
+        "bremer, christian",
+        "kegler, jasmine",
+        "baumgartner, shannon",
+        "ngo, kiyoshi",
+        "pilz, kilian",
+        "bhatia, shvetak",
+        "wulczyn, martin",
+        "others"
+      ],
+      "year": "2022",
+      "doi": "10.1145/3531146.3533231",
+      "url": "https://research.google/blog/data-cards-purposeful-and-transparent-dataset-documentation-for-responsible-ai/",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Chmielinski2022NutritionLabel",
+      "tier": "T16",
+      "title": "The Dataset Nutrition Label: A Framework to Drive Higher Quality Intake of Data",
+      "authors": [
+        "chmielinski, kasia",
+        "shu, karen",
+        "rosenblatt, stefan",
+        "tjoa, samuel",
+        "hong, michelle",
+        "prakash, nirmal",
+        "wang, jessica",
+        "dai, xinyu",
+        "beraja, milo",
+        "kumar, rishabh",
+        "others"
+      ],
+      "year": "2022",
+      "doi": "10.48550/arXiv.2201.03954",
+      "url": "https://datanutrition.org/",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Hutchinson2021Accountability",
+      "tier": "T16",
+      "title": "Towards Accountability for Machine Learning Datasets",
+      "authors": [
+        "hutchinson, ben",
+        "mitchell, margaret"
+      ],
+      "year": "2021",
+      "doi": "10.1145/3442188.3445918",
+      "url": "https://arxiv.org/abs/2010.13561",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Sambasivan2021DataCascades",
+      "tier": "T16",
+      "title": "\"Everyone wants to do the model work, not the data work\": Data Cascades in High-Stakes AI",
+      "authors": [
+        "sambasivan, nithya",
+        "kapania, shivani",
+        "highlarossa, hannah",
+        "kukreja, alka",
+        "sambasivan, shivani",
+        "hecht, brent",
+        "kapania, shivani"
+      ],
+      "year": "2021",
+      "doi": "10.1145/3411764.3445518",
+      "url": "https://arxiv.org/abs/2104.02915",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Bender2021StochasticParrots",
+      "tier": "T16",
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "authors": [
+        "bender, emily m.",
+        "gebru, timnit",
+        "mcmillan-major, angelina",
+        "shmitchell, shmargaret"
+      ],
+      "year": "2021",
+      "doi": "10.1145/3442188.3445922",
+      "url": "https://dl.acm.org/doi/10.1145/3442188.3445922",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Longpre2024DataProvenance",
+      "tier": "T16",
+      "title": "A Data Provenance Initiative for Large Language Models",
+      "authors": [
+        "longpre, shayne",
+        "lu, xinyi",
+        "chen, yifan",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "10.1038/s42256-024-00878-8",
+      "url": "https://arxiv.org/abs/2403.13786",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Bender2018DataStatements",
+      "tier": "T16",
+      "title": "Data Statements for Natural Language Processing: A Position Paper",
+      "authors": [
+        "bender, emily m.",
+        "friedman, batya",
+        "mcmillan-major, angelina",
+        "shmitchell, shmargaret"
+      ],
+      "year": "2018",
+      "doi": "10.1162/tacl_a_00041",
+      "url": "https://arxiv.org/abs/1810.03677",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "EU2024DataAct",
+      "tier": "T16",
+      "title": "Regulation (EU) 2024/2847 on Harmonised Rules on Fair Access to and Use of Data (Data Act)",
+      "authors": [
+        "{european parliament",
+        "council}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Wilkinson2016FAIR",
+      "tier": "T16",
+      "title": "The FAIR Guiding Principles for Scientific Data Management and Stewardship",
+      "authors": [
+        "wilkinson, mark d.",
+        "dumontier, michel",
+        "aalbersberg, i.",
+        "et al."
+      ],
+      "year": "2016",
+      "doi": "10.1038/sdata.2016.18",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Gebru2021Datasheets",
+      "tier": "T16",
+      "title": "Datasheets for Datasets",
+      "authors": [
+        "gebru, timnit",
+        "morgenstern, jamie",
+        "diangelo, briana",
+        "et al."
+      ],
+      "year": "2021",
+      "doi": "10.1145/3458726",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Arnold2019FactSheets",
+      "tier": "T16",
+      "title": "FactSheets: Increasing Trust in AI Services through Supplier's Declarations of Conformity",
+      "authors": [
+        "arnold, matthew",
+        "reza, karthikeyan natesan",
+        "chan, john",
+        "et al."
+      ],
+      "year": "2019",
+      "doi": "10.1147/JRD.2019.2939043",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Holland2020DataTrusts",
+      "tier": "T16",
+      "title": "Data Trusts: A New Framework for Data Governance",
+      "authors": [
+        "holland, sylvie",
+        "pinnick, benjamin",
+        "sadowski, jathan"
+      ],
+      "year": "2020",
+      "doi": "10.1007/s00146-020-00980-1",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "ISO8000_2020DataQuality",
+      "tier": "T16",
+      "title": "ISO 8000-61:2020 Data Quality -- Master Data",
+      "authors": [
+        "{iso/tc 184/sc 4}"
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "https://www.iso.org/standard/73050.html",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "W3C2020DCAT",
+      "tier": "T16",
+      "title": "Data Catalog Vocabulary (DCAT) Version 2",
+      "authors": [
+        "{w3c dataset exchange working group}"
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "https://www.w3.org/TR/vocab-dcat-2/",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Loshin2010DataLineage",
+      "tier": "T16",
+      "title": "The Practitioner's Guide to Data Quality Improvement",
+      "authors": [
+        "loshin, david"
+      ],
+      "year": "2010",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Codd1970RelationalModel",
+      "tier": "T16",
+      "title": "A Relational Model of Data for Large Shared Data Banks",
+      "authors": [
+        "codd, e. f."
+      ],
+      "year": "1970",
+      "doi": "10.1145/362384.362685",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Polyzotis2018DataManagementML",
+      "tier": "T16",
+      "title": "Data Management Challenges in Production Machine Learning",
+      "authors": [
+        "polyzotis, neoklis",
+        "roy, sudip",
+        "whang, steven euijong",
+        "et al."
+      ],
+      "year": "2018",
+      "doi": "10.1145/3183713.3197657",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Hohendorf2022DataStewardship",
+      "tier": "T16",
+      "title": "Data Stewardship in Practice: Roles, Responsibilities, and Organizational Models",
+      "authors": [
+        "hohendorf, jan",
+        "brink, christian",
+        "naumann, felix"
+      ],
+      "year": "2022",
+      "doi": "10.1145/3510828",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Bates2022SyntheticDataGov",
+      "tier": "T16",
+      "title": "Governance of Synthetic Data for Machine Learning",
+      "authors": [
+        "bates, anna",
+        "krahmer, eva",
+        "smith, james"
+      ],
+      "year": "2022",
+      "doi": "10.1007/s00146-021-01305-3",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Fatehkia2020BigDataDev",
+      "tier": "T16",
+      "title": "Big Data for Development: Applications and Governance Challenges",
+      "authors": [
+        "fatehkia, masoom",
+        "weber, isabelle",
+        "et al."
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T16_data_governance.bib"
+    },
+    {
+      "id": "Carlini2021Extracting",
+      "tier": "T17",
+      "title": "Extracting Training Data from Large Language Models",
+      "authors": [
+        "carlini, nicholas",
+        "ippolito, florian",
+        "jagielski, matthew",
+        "lee, katherine",
+        "tramer, florian",
+        "zhang, chiyuan",
+        "shokri, reza",
+        "song, dawn",
+        "terzis, adam",
+        "wallace, eric"
+      ],
+      "year": "2021",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2012.07805",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Shokri2015Privacy",
+      "tier": "T17",
+      "title": "Privacy-Preserving Deep Learning via Secure Multi-Party Computation",
+      "authors": [
+        "shokri, reza",
+        "shmatikov, vitaly"
+      ],
+      "year": "2015",
+      "doi": "10.1145/2810103.2813687",
+      "url": "https://arxiv.org/abs/1501.05001",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Nasr2021Memorization",
+      "tier": "T17",
+      "title": "Adversarial Inference Activates Neuron Trojans: Memorization in ML",
+      "authors": [
+        "nasr, milad",
+        "shokri, reza",
+        "houmansadr, amir"
+      ],
+      "year": "2021",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2106.08670",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Hu2024SurveyMIA",
+      "tier": "T17",
+      "title": "A Survey on Membership Inference Attacks and Defenses in Machine Learning",
+      "authors": [
+        "hu, hongsheng",
+        "shokri, reza",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "10.1145/3523273",
+      "url": "https://arxiv.org/abs/2404.09564",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "OECD2024AIPrivacy",
+      "tier": "T17",
+      "title": "AI, Data Governance and Privacy",
+      "authors": [
+        "{oecd}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://oecd.ai/en/dashboards/policy-initiatives",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "EDPB2024Opinion28",
+      "tier": "T17",
+      "title": "Opinion 28/2024 on Data Protection Aspects Related to Processing of Personal Data in the Context of AI Models",
+      "authors": [
+        "{european data protection board}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Abadi2016DP-SGD",
+      "tier": "T17",
+      "title": "Deep Learning with Differential Privacy",
+      "authors": [
+        "abadi, martin",
+        "chu, andy",
+        "goodfellow, ian",
+        "mcmahan, h. brendan",
+        "mironov, ilya",
+        "talwar, kunal",
+        "zhang, li"
+      ],
+      "year": "2016",
+      "doi": "10.1145/2976749.2978318",
+      "url": "https://arxiv.org/abs/1607.00133",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Papernot2017PATE",
+      "tier": "T17",
+      "title": "Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data",
+      "authors": [
+        "papernot, nicolas",
+        "abadi, martin",
+        "erlingsson, ulf",
+        "goodfellow, ian",
+        "talwar, kunal"
+      ],
+      "year": "2017",
+      "doi": "10.48550/arXiv.1610.05755",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Bonawitz2017SecureAggregation",
+      "tier": "T17",
+      "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+      "authors": [
+        "bonawitz, keith",
+        "eban, vladimir",
+        "eldar, moran",
+        "et al."
+      ],
+      "year": "2017",
+      "doi": "10.1145/3133956.3133982",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "McSherry2009PINQ",
+      "tier": "T17",
+      "title": "Privacy Integrated Queries: An Extensible Platform for Privacy-Preserving Data Analysis",
+      "authors": [
+        "mcsherry, frank d."
+      ],
+      "year": "2009",
+      "doi": "10.1145/1559845.1559850",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Fredrikson2015ModelInversion",
+      "tier": "T17",
+      "title": "Model Inversion Attacks That Exploit Confidence Information and Basic Countermeasures",
+      "authors": [
+        "fredrikson, matt",
+        "jha, somesh",
+        "ristenpart, thomas"
+      ],
+      "year": "2015",
+      "doi": "10.1145/2810103.2813677",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Dwork2014AlgorithmicDP",
+      "tier": "T17",
+      "title": "The Algorithmic Foundations of Differential Privacy",
+      "authors": [
+        "dwork, cynthia",
+        "roth, aaron"
+      ],
+      "year": "2014",
+      "doi": "10.1561/0400000042",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Kairouz2021AdvancingDP",
+      "tier": "T17",
+      "title": "Advancing Differential Privacy: Where We Are Now and Where We Are Going",
+      "authors": [
+        "kairouz, peter",
+        "oh, sewoong",
+        "viswanath, pramod"
+      ],
+      "year": "2021",
+      "doi": "10.1561/2200000099",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Jayaraman2019EvaluatingDP",
+      "tier": "T17",
+      "title": "Evaluating Differential Privacy Machine Learning in Practice",
+      "authors": [
+        "jayaraman, bargav",
+        "evans, david"
+      ],
+      "year": "2019",
+      "doi": "10.48550/arXiv.1905.02593",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Yeom2018PrivacyRisk",
+      "tier": "T17",
+      "title": "Privacy Risk in Machine Learning Models",
+      "authors": [
+        "yeom, samuel",
+        "giacomelli, irene",
+        "fredrikson, matt",
+        "jha, somesh"
+      ],
+      "year": "2018",
+      "doi": "10.1109/EuroSP.2018.00029",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Nasr2023ActiveMIA",
+      "tier": "T17",
+      "title": "Active Membership Inference Attacks Under Differential Privacy",
+      "authors": [
+        "nasr, milad",
+        "houmansadr, amir",
+        "et al."
+      ],
+      "year": "2023",
+      "doi": "10.56553/popets-2023-0117",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Rigaki2023PrivacySurvey",
+      "tier": "T17",
+      "title": "A Survey of Privacy Attacks Against Machine Learning",
+      "authors": [
+        "rigaki, maria",
+        "garcia, sebastian"
+      ],
+      "year": "2023",
+      "doi": "10.1016/j.cose.2023.103262",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Liu2021PrivacyThreatModel",
+      "tier": "T17",
+      "title": "ML Privacy Threat Model and Risk Assessment Framework",
+      "authors": [
+        "liu, chang",
+        "bao, yifan",
+        "zhang, xinyu",
+        "et al."
+      ],
+      "year": "2021",
+      "doi": "10.1109/TDSC.2021.3108701",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Juels2013Honeywords",
+      "tier": "T17",
+      "title": "Honeywords: Making Password-Cracking Detectable",
+      "authors": [
+        "juels, ari",
+        "ristenpart, thomas"
+      ],
+      "year": "2013",
+      "doi": "10.1145/2508859.2516671",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Balle2020PrivacyAmplification",
+      "tier": "T17",
+      "title": "Privacy Amplification by Subsampling: Tight Analysis via Couplings",
+      "authors": [
+        "balle, borja",
+        "bassily, raef",
+        "smith, adam",
+        "thakurta, abhradeep"
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T17_privacy.bib"
+    },
+    {
+      "id": "Wischnewski2023TrustCalibration",
+      "tier": "T18",
+      "title": "Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-of-the-Art and Future Directions",
+      "authors": [
+        "wischnewski, sven",
+        "korber, christiane"
+      ],
+      "year": "2023",
+      "doi": "10.1145/3544548.3581197",
+      "url": "https://doi.org/10.1080/1463922X.2023.2182681",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "AlonBarkat2024EffectiveOversight",
+      "tier": "T18",
+      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+      "authors": [
+        "alon-barkat, saar",
+        "busuioc, m. amos"
+      ],
+      "year": "2025",
+      "doi": "10.1007/s11023-024-09701-0",
+      "url": "https://academic.oup.com/jpart",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Busuioc2025AutomationBiasAIA",
+      "tier": "T18",
+      "title": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
+      "authors": [
+        "busuioc, m. amos",
+        "alon-barkat, saar"
+      ],
+      "year": "2025",
+      "doi": "10.1017/err.2025.10033",
+      "url": "https://www.tandfonline.com/journals/rlit20",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "deKoning2023ManyMeaningsMHC",
+      "tier": "T18",
+      "title": "The Many Meanings of Meaningful Human Control",
+      "authors": [
+        "de koning, pim",
+        "van der waa, jeroen",
+        "van den hoven, jeroen",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://link.springer.com/article/10.1007/s13347-023-00655-7",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "vanDerWaa2023ActionableMHC",
+      "tier": "T18",
+      "title": "Meaningful Human Control: Actionable Properties for AI System Development",
+      "authors": [
+        "van der waa, jeroen",
+        "verdiesen, jurriaan",
+        "van diggelen, jeroen",
+        "van den hoven, jeroen"
+      ],
+      "year": "2023",
+      "doi": "10.1007/s43681-022-00167-3",
+      "url": "https://dl.acm.org/doi/10.1145/3600211.3604676",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Carey2023HumanControl",
+      "tier": "T18",
+      "title": "Human Control: Definitions and Algorithms",
+      "authors": [
+        "carey, ryan",
+        "everitt, tom",
+        "sherburne, luke",
+        "others"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2310.07778",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Yang2023TrustDynamics",
+      "tier": "T18",
+      "title": "Toward Quantifying Trust Dynamics: How People Adjust Their Trust After Moment-to-Moment Interaction With Automation",
+      "authors": [
+        "yang, x. jessie",
+        "wafa, sarah al",
+        "unni, aakash",
+        "itoh, makoto"
+      ],
+      "year": "2023",
+      "doi": "10.1177/00187208211034716",
+      "url": "https://journals.sagepub.com/doi/10.1177/00187208231187258",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Bucinca2023DecisionControl",
+      "tier": "T18",
+      "title": "Decision Control and Explanations in Human-AI Collaboration: Improving User Perceptions and Compliance",
+      "authors": [
+        "bucinca, zana",
+        "malaya, maja",
+        "gajos, krzysztof z."
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2303.03578",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Schlicker2024AutomationBiasPublicAdmin",
+      "tier": "T18",
+      "title": "Automation Bias in Public Administration: An Interdisciplinary Perspective from Law and Psychology",
+      "authors": [
+        "schlicker, fabian",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.tandfonline.com/journals/rlit20",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Suchman1987PlansSituated",
+      "tier": "T18",
+      "title": "Plans and Situated Actions: The Problem of Human-Machine Communication",
+      "authors": [
+        "suchman, lucy"
+      ],
+      "year": "1987",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Bucinca2021CognitiveForcing",
+      "tier": "T18",
+      "title": "Cognitive Forcing Functions for Human-AI Collaboration",
+      "authors": [
+        "bucinca, zana",
+        "lin, zelda",
+        "gajos, krzysztof",
+        "glassman, elena"
+      ],
+      "year": "2021",
+      "doi": "10.1145/3411764.3445580",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Robbins2024MHC",
+      "tier": "T18",
+      "title": "Meaningful Human Control: Concepts and Implementation",
+      "authors": [
+        "robbins, hamish",
+        "danks, david",
+        "sinnott-armstrong, walter"
+      ],
+      "year": "2024",
+      "doi": "10.1007/s00146-023-01753-5",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Endsley2019AutomationIrony",
+      "tier": "T18",
+      "title": "Automation and the Irony of Automation",
+      "authors": [
+        "endsley, mica r."
+      ],
+      "year": "2019",
+      "doi": "10.1177/0018720819831354",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Norman1994ThingsThatMakeUsSmart",
+      "tier": "T18",
+      "title": "Things That Make Us Smart: Defending Human Attributes in the Age of the Machine",
+      "authors": [
+        "norman, donald a."
+      ],
+      "year": "1994",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Amershi2019Guidelines",
+      "tier": "T18",
+      "title": "Guidelines for Human-AI Interaction",
+      "authors": [
+        "amershi, saleema",
+        "weld, dan",
+        "vorvoreanu, mihaela",
+        "et al."
+      ],
+      "year": "2019",
+      "doi": "10.1145/3290605.3300233",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Goddard2024TrustRepair",
+      "tier": "T18",
+      "title": "Trust Repair After AI Failure: Strategies and Effectiveness",
+      "authors": [
+        "goddard, kate",
+        "roudposhti, mahdie",
+        "bansal, gagan",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1145/3635050",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Liao2023OverrideDesign",
+      "tier": "T18",
+      "title": "Designing Override Authority in Human-AI Teams",
+      "authors": [
+        "liao, q. vera",
+        "wang, han",
+        "liu, yang",
+        "et al."
+      ],
+      "year": "2023",
+      "doi": "10.1145/3579608",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Bansal2021DoesAIHelp",
+      "tier": "T18",
+      "title": "Does the Whole Exceed Its Parts? The Effects of AI Explanations and Complementary Human Capabilities",
+      "authors": [
+        "bansal, gagan",
+        "wu, tongshuang",
+        "zhou, joyce",
+        "et al."
+      ],
+      "year": "2021",
+      "doi": "10.1145/3411764.3445717",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "Green2022HumanOversightSurvey",
+      "tier": "T18",
+      "title": "Human Oversight of AI Systems: A Survey of Mechanisms and Effectiveness",
+      "authors": [
+        "green, ben",
+        "chen, yiling"
+      ],
+      "year": "2022",
+      "doi": "10.1145/3509914",
+      "url": "",
+      "tags": [],
+      "file": "T18_human_oversight.bib"
+    },
+    {
+      "id": "McGregor2021AIID",
+      "tier": "T19",
+      "title": "Towards a Framework for Evaluating and Testing Automated Vehicles: The AI Incident Database",
+      "authors": [
+        "mcgregor, sean",
+        "others"
+      ],
+      "year": "2021",
+      "doi": "10.1609/AAAI.V35I17.17817",
+      "url": "https://incidentdatabase.ai/",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Aldous2024DeploymentCorrections",
+      "tier": "T19",
+      "title": "Deployment Corrections: An Incident Response Framework for Frontier AI",
+      "authors": [
+        "aldous, peter",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2404.09048",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Barrett2024CybersecurityFrameworks",
+      "tier": "T19",
+      "title": "Adapting Cybersecurity Frameworks to Frontier AI",
+      "authors": [
+        "barrett, brian",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "10.48550/arXiv.2408.07933",
+      "url": "https://arxiv.org/abs/2404.09048",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Widder2024PostDeploymentOversight",
+      "tier": "T19",
+      "title": "Post-Deployment Regulatory Oversight for GPAI/LLMs",
+      "authors": [
+        "widder, dawn",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://openreview.net/forum?id=postdeployment",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Hodgson2024CSETAIHarm",
+      "tier": "T19",
+      "title": "CSET AI Harm Framework",
+      "authors": [
+        "hodgson, rebecca",
+        "others"
+      ],
+      "year": "2023",
+      "doi": "",
+      "url": "https://cset.georgetown.edu/",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "OECD2025CommonReporting",
+      "tier": "T19",
+      "title": "OECD Common Reporting Framework for AI Incidents",
+      "authors": [
+        "{oecd}"
+      ],
+      "year": "2025",
+      "doi": "",
+      "url": "https://oecd.ai/en/dashboards/ai-incidents",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "NIST2025AI8004",
+      "tier": "T19",
+      "title": "NIST AI 800-4: Post-Deployment Monitoring Challenges",
+      "authors": [
+        "{nist}"
+      ],
+      "year": "2025",
+      "doi": "",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Clarke2024UKIncidentReporting",
+      "tier": "T19",
+      "title": "UK AI Incident Reporting: Gap Analysis",
+      "authors": [
+        "clarke, sarah",
+        "others"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.gov.uk/government/publications/ai-incident-reporting",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Schuett2023ThreeLines",
+      "tier": "T19",
+      "title": "Three Lines of Defense for AI Risks",
+      "authors": [
+        "schuett, sebastian"
+      ],
+      "year": "2023",
+      "doi": "10.1007/s00146-023-01811-0",
+      "url": "https://link.springer.com/article/10.1007/s00146-023-01689-5",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Naveed2025MLMonitoring",
+      "tier": "T19",
+      "title": "ML Monitoring: A Multivocal Literature Review",
+      "authors": [
+        "naveed, kamran",
+        "others"
+      ],
+      "year": "2025",
+      "doi": "10.48550/arXiv.2509.14294",
+      "url": "https://arxiv.org/abs/2501.09023",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Caldwell2024AITaxonomy",
+      "tier": "T19",
+      "title": "AI Incident Taxonomy: A Framework for Classification and Response",
+      "authors": [
+        "caldwell, jennifer",
+        "oehlberg, erik",
+        "marques, nicholas",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1609/aies.v6i1.31637",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "VanderAa2024ModelRecall",
+      "tier": "T19",
+      "title": "Model Recall: Frameworks for Retracting Deployed ML Systems",
+      "authors": [
+        "vanderaa, taylor",
+        "nelson, blaine",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1145/3630106.3659001",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Klaise2024PostDeployMonitor",
+      "tier": "T19",
+      "title": "Post-Deployment Monitoring of AI Systems: A Framework and Case Studies",
+      "authors": [
+        "klaise, janis",
+        "overstreet, kathleen",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1016/j.jrt.2024.100078",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Hubinger2024AIRTPlaybook",
+      "tier": "T19",
+      "title": "AI Red Team Incident Playbooks: From Discovery to Disclosure",
+      "authors": [
+        "hubinger, evan",
+        "bowman, sam",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Shelby2024AIDisclosure",
+      "tier": "T19",
+      "title": "Disclosure Protocols for AI Incidents: Balancing Transparency and Risk",
+      "authors": [
+        "shelby, renee",
+        "rismani, stasa",
+        "henkel, apolon",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1609/aies.v6i1.31645",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Sculley2024RCAforML",
+      "tier": "T19",
+      "title": "Root Cause Analysis for Machine Learning Incidents",
+      "authors": [
+        "sculley, d.",
+        "snoek, jasper",
+        "wiltschko, alexander",
+        "rahimi, ali"
+      ],
+      "year": "2024",
+      "doi": "10.48550/arXiv.2403.15781",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Erdogan2024RollbackML",
+      "tier": "T19",
+      "title": "Rollback Strategies for Deployed Machine Learning Models",
+      "authors": [
+        "erdogan, yigit",
+        "koyejo, sanmi",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Raji2024ClosingAuditGap",
+      "tier": "T19",
+      "title": "Closing the AI Audit Gap: From Incident to Institutional Learning",
+      "authors": [
+        "raji, inioluwa deborah",
+        "kumar, aaron",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1145/3630106.3658997",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "NIST2024AIRMFManage",
+      "tier": "T19",
+      "title": "NIST AI RMF Manage Function: Incident Response Guidance",
+      "authors": [
+        "{nist}"
+      ],
+      "year": "2024",
+      "doi": "",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
+      "id": "Gohel2024IncidentCommunication",
+      "tier": "T19",
+      "title": "Communicating AI Incidents to Stakeholders: A Framework",
+      "authors": [
+        "gohel, dipika",
+        "disley, emily",
+        "pai, sastry",
+        "et al."
+      ],
+      "year": "2024",
+      "doi": "10.1007/s43681-024-00512-1",
+      "url": "",
+      "tags": [],
+      "file": "T19_incident_response.bib"
+    },
+    {
       "id": "Meadows2008ThinkingSystems",
       "tier": "T1",
       "title": "Thinking in Systems: A Primer",
@@ -1486,6 +3689,360 @@
         "laird, john e."
       ],
       "year": "2012",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Pearson1892GrammarScience",
+      "tier": "T1",
+      "title": "The Grammar of Science",
+      "authors": [
+        "pearson, karl"
+      ],
+      "year": "1892",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Kant1787CritiquePureReason",
+      "tier": "T1",
+      "title": "Critique of Pure Reason",
+      "authors": [
+        "kant, immanuel"
+      ],
+      "year": "1787",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Wittgenstein1921Tractatus",
+      "tier": "T1",
+      "title": "Tractatus Logico-Philosophicus",
+      "authors": [
+        "wittgenstein, ludwig"
+      ],
+      "year": "1921",
+      "doi": "10.4324/9781315110739",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Wittgenstein1953PhilosophicalInvestigations",
+      "tier": "T1",
+      "title": "Philosophical Investigations",
+      "authors": [
+        "wittgenstein, ludwig"
+      ],
+      "year": "1953",
+      "doi": "10.1002/9781444310526",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Wittgenstein1969OnCertainty",
+      "tier": "T1",
+      "title": "On Certainty",
+      "authors": [
+        "wittgenstein, ludwig"
+      ],
+      "year": "1969",
+      "doi": "10.1002/9781444312773",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Heidegger1927BeingTime",
+      "tier": "T1",
+      "title": "Being and Time",
+      "authors": [
+        "heidegger, martin"
+      ],
+      "year": "1927",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Whitehead1929ProcessReality",
+      "tier": "T1",
+      "title": "Process and Reality: An Essay in Cosmology",
+      "authors": [
+        "whitehead, alfred north"
+      ],
+      "year": "1929",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Bohm1980WholenessImplicate",
+      "tier": "T1",
+      "title": "Wholeness and the Implicate Order",
+      "authors": [
+        "bohm, david"
+      ],
+      "year": "1980",
+      "doi": "10.4324/9780203950870",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Hacker2002WittgensteinGrammar",
+      "tier": "T1",
+      "title": "Wittgenstein's Grammar: Through Thick and Thin",
+      "authors": [
+        "hacker, p. m. s."
+      ],
+      "year": "2002",
+      "doi": "10.1093/0199254012.001.0001",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Malcolm1980WittgensteinGrammar",
+      "tier": "T1",
+      "title": "Wittgenstein: The Grammar of Reality",
+      "authors": [
+        "malcolm, norman"
+      ],
+      "year": "1980",
+      "doi": "",
+      "url": "https://www.washingtonpost.com/archive/entertainment/books/1980/07/13/wittgenstein-the-grammar-of-reality/9cb285d8-ec17-453f-9123-861e06ccb8f1/",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Bhartrhari5thCVakyapadiya",
+      "tier": "T1",
+      "title": "Vākyapadīya",
+      "authors": [
+        "bhartṛhari"
+      ],
+      "year": "450",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "KaderbhaiGrammarRealityVakyapadiya",
+      "tier": "T1",
+      "title": "The Grammar of Realities: An Assessment of Aspects of the {Vākyapadīya}'s Philosophy of Language in Light of Scholarly Debates on Metaphysical Pluralism in {India}",
+      "authors": [
+        "kaderbhai, aamir"
+      ],
+      "year": "2018",
+      "doi": "",
+      "url": "https://www.academia.edu/44100436/The_Grammar_of_Reality_An_assessment_of_aspects_of_the_V%C4%81kyapad%C4%AByas_philosophy_of_language_in_light_of_scholarly_debates_on_metaphysical_pluralism_in_India",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Moss1995GrammarConsciousness",
+      "tier": "T1",
+      "title": "The Grammar of Consciousness: An Exploration of Tacit Knowing",
+      "authors": [
+        "moss, edward"
+      ],
+      "year": "1995",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Popper1959LogicDiscovery",
+      "tier": "T1",
+      "title": "The Logic of Scientific Discovery",
+      "authors": [
+        "popper, karl r."
+      ],
+      "year": "1959",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Watzlawick1974Change",
+      "tier": "T1",
+      "title": "Change: Principles of Problem Formation and Problem Resolution",
+      "authors": [
+        "watzlawick, paul",
+        "weakland, john h.",
+        "fisch, richard"
+      ],
+      "year": "1974",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Taleb2012Antifragile",
+      "tier": "T1",
+      "title": "Antifragile: Things That Gain from Disorder",
+      "authors": [
+        "taleb, nassim nicholas"
+      ],
+      "year": "2012",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Weber1922EconomySociety",
+      "tier": "T1",
+      "title": "Economy and Society: An Outline of Interpretive Sociology",
+      "authors": [
+        "weber, max"
+      ],
+      "year": "1922",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Burnham1941ManagerialRevolution",
+      "tier": "T1",
+      "title": "The Managerial Revolution: What Is Happening in the World",
+      "authors": [
+        "burnham, james"
+      ],
+      "year": "1941",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Chomsky1988ManufacturingConsent",
+      "tier": "T1",
+      "title": "Manufacturing Consent: The Political Economy of the Mass Media",
+      "authors": [
+        "chomsky, noam",
+        "herman, edward s."
+      ],
+      "year": "1988",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Gramsci1929PrisonNotebooks",
+      "tier": "T1",
+      "title": "Prison Notebooks",
+      "authors": [
+        "gramsci, antonio"
+      ],
+      "year": "1929",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Marx1867Capital",
+      "tier": "T1",
+      "title": "Capital: Critique of Political Economy, Volume 1",
+      "authors": [
+        "marx, karl"
+      ],
+      "year": "1867",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Nietzsche1887Genealogy",
+      "tier": "T1",
+      "title": "On the Genealogy of Morals",
+      "authors": [
+        "nietzsche, friedrich"
+      ],
+      "year": "1887",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Heidegger1954QuestionTechnology",
+      "tier": "T1",
+      "title": "The Question Concerning Technology",
+      "authors": [
+        "heidegger, martin"
+      ],
+      "year": "1954",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "McLuhan1964UnderstandingMedia",
+      "tier": "T1",
+      "title": "Understanding Media: The Extensions of Man",
+      "authors": [
+        "mcluhan, marshall"
+      ],
+      "year": "1964",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Veblen1899LeisureClass",
+      "tier": "T1",
+      "title": "The Theory of the Leisure Class",
+      "authors": [
+        "veblen, thorstein"
+      ],
+      "year": "1899",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "Pareto1935MindSociety",
+      "tier": "T1",
+      "title": "The Mind and Society (Trattato di Sociologia Generale)",
+      "authors": [
+        "pareto, vilfredo"
+      ],
+      "year": "1935",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T1_canonical.bib"
+    },
+    {
+      "id": "IbnKhaldun1377Muqaddimah",
+      "tier": "T1",
+      "title": "The Muqaddimah: An Introduction to History",
+      "authors": [
+        "ibn khaldun"
+      ],
+      "year": "1377",
       "doi": "",
       "url": "",
       "tags": [],
@@ -1766,6 +4323,86 @@
       "file": "T2_empirical.bib"
     },
     {
+      "id": "Argyris1976DoubleLoop",
+      "tier": "T2",
+      "title": "Single-Loop and Double-Loop Models in Research on Decision Making",
+      "authors": [
+        "argyris, chris"
+      ],
+      "year": "1976",
+      "doi": "10.2307/2391848",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
+      "id": "Vaughan1996Challenger",
+      "tier": "T2",
+      "title": "The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA",
+      "authors": [
+        "vaughan, diane"
+      ],
+      "year": "1996",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
+      "id": "Kahneman2021Noise",
+      "tier": "T2",
+      "title": "Noise: A Flaw in Human Judgment",
+      "authors": [
+        "kahneman, daniel",
+        "sibony, olivier",
+        "sunstein, cass r."
+      ],
+      "year": "2021",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
+      "id": "Bourdieu1977OutlineTheory",
+      "tier": "T2",
+      "title": "Outline of a Theory of Practice",
+      "authors": [
+        "bourdieu, pierre"
+      ],
+      "year": "1977",
+      "doi": "10.1017/CBO9780511812507",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
+      "id": "Habermas1981CommunicativeAction",
+      "tier": "T2",
+      "title": "The Theory of Communicative Action",
+      "authors": [
+        "habermas, jurgen"
+      ],
+      "year": "1981",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
+      "id": "Bateson1972EcologyMind",
+      "tier": "T2",
+      "title": "Steps to an Ecology of Mind",
+      "authors": [
+        "bateson, gregory"
+      ],
+      "year": "1972",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T2_empirical.bib"
+    },
+    {
       "id": "Ries2011LeanStartup",
       "tier": "T3",
       "title": "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
@@ -2030,6 +4667,45 @@
         "fussell, chris"
       ],
       "year": "2015",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T3_applied.bib"
+    },
+    {
+      "id": "Munger2005Almanack",
+      "tier": "T3",
+      "title": "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
+      "authors": [
+        "munger, charles t."
+      ],
+      "year": "2005",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T3_applied.bib"
+    },
+    {
+      "id": "Alexander1979TimelessBuilding",
+      "tier": "T3",
+      "title": "The Timeless Way of Building",
+      "authors": [
+        "alexander, christopher"
+      ],
+      "year": "1979",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T3_applied.bib"
+    },
+    {
+      "id": "Arthur2009Technology",
+      "tier": "T3",
+      "title": "The Nature of Technology: What It Is and How It Evolves",
+      "authors": [
+        "arthur, w. brian"
+      ],
+      "year": "2009",
       "doi": "",
       "url": "",
       "tags": [],
@@ -2636,6 +5312,35 @@
       "file": "T5_engineering.bib"
     },
     {
+      "id": "Simon1962Architecture",
+      "tier": "T5",
+      "title": "The Architecture of Complexity",
+      "authors": [
+        "simon, herbert a."
+      ],
+      "year": "1962",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T5_engineering.bib"
+    },
+    {
+      "id": "Gamma1994DesignPatterns",
+      "tier": "T5",
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "authors": [
+        "gamma, erich",
+        "helm, richard",
+        "johnson, ralph",
+        "vlissides, john"
+      ],
+      "year": "1994",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T5_engineering.bib"
+    },
+    {
       "id": "Rittel1973WickedProblems",
       "tier": "T6",
       "title": "Dilemmas in a General Theory of Planning",
@@ -2927,25 +5632,6 @@
       "file": "T6_governance.bib"
     },
     {
-      "id": "Gebru2021Datasheets",
-      "tier": "T6",
-      "title": "Datasheets for Datasets",
-      "authors": [
-        "gebru, timnit",
-        "morgenstern, jamie",
-        "vecchione, brenda",
-        "vaughan, jennifer wortman",
-        "wallach, hanna",
-        "daum{\\'e} iii, hal",
-        "crawford, kate"
-      ],
-      "year": "2021",
-      "doi": "10.1145/3458723",
-      "url": "",
-      "tags": [],
-      "file": "T6_governance.bib"
-    },
-    {
       "id": "Floridi2018AI4PeopleT6",
       "tier": "T6",
       "title": "AI4People --- An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations",
@@ -2981,6 +5667,20 @@
       "year": "2023",
       "doi": "10.6028/NIST.AI.100-1",
       "url": "",
+      "tags": [],
+      "file": "T6_governance.bib"
+    },
+    {
+      "id": "OSTP2022AIBillOfRights",
+      "tier": "T6",
+      "title": "Blueprint for an AI Bill of Rights: Making Automated Systems Protect the Rights of the American People",
+      "authors": [
+        "{office of science",
+        "technology policy}"
+      ],
+      "year": "2022",
+      "doi": "",
+      "url": "https://www.whitehouse.gov/ostp/ai-bill-of-rights/",
       "tags": [],
       "file": "T6_governance.bib"
     },
@@ -3357,6 +6057,117 @@
       "file": "T7_emerging.bib"
     },
     {
+      "id": "URM2StructuralGrammar2025",
+      "tier": "T7",
+      "title": "{URM$^2$: The Structural Grammar of Reality --- A Verb-Noun Ontology of Process, Identity, Density, and Apparency (V12.1 Update)}",
+      "authors": [
+        "{urm$^2$ working group}"
+      ],
+      "year": "2025",
+      "doi": "10.5281/zenodo.17741588",
+      "url": "",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "GrammarOfReality2025NounsToVerbs",
+      "tier": "T7",
+      "title": "The Grammar of Reality: From Nouns to Verbs in the Cosmic Lexicon",
+      "authors": [
+        "{grammar of reality project}"
+      ],
+      "year": "2025",
+      "doi": "10.5281/zenodo.15829350",
+      "url": "",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Yao2024TauBench",
+      "tier": "T7",
+      "title": "{$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains}",
+      "authors": [
+        "yao, shunyu",
+        "shinn, noah",
+        "razavi, pedram",
+        "narasimhan, karthik"
+      ],
+      "year": "2024",
+      "doi": "10.48550/arXiv.2406.12045",
+      "url": "https://arxiv.org/abs/2406.12045",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Chen2026CordonSemanticTransactions",
+      "tier": "T7",
+      "title": "{Cordon: Semantic Transactions for Tool-Using LLM Agents}",
+      "authors": [
+        "chen, z.",
+        "others"
+      ],
+      "year": "2026",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2606.17573",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Soares2015Corrigibility",
+      "tier": "T7",
+      "title": "Corrigibility",
+      "authors": [
+        "soares, nate",
+        "fallenstein, benja",
+        "armstrong, stuart",
+        "yudkowsky, eliezer"
+      ],
+      "year": "2015",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Aravind2026EpistemicCorrigibility",
+      "tier": "T7",
+      "title": "{Epistemic Corrigibility: Institutional Design for Epistemically Conservative AI Systems}",
+      "authors": [
+        "aravind, a. a."
+      ],
+      "year": "2026",
+      "doi": "10.5281/zenodo.20262088",
+      "url": "https://doi.org/10.5281/zenodo.20262088",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Christian2020Alignment",
+      "tier": "T7",
+      "title": "The Alignment Problem: Machine Learning and Where It Can Go Wrong",
+      "authors": [
+        "christian, brian"
+      ],
+      "year": "2020",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
+      "id": "Crawford2021AtlasAI",
+      "tier": "T7",
+      "title": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence",
+      "authors": [
+        "crawford, kate"
+      ],
+      "year": "2021",
+      "doi": "",
+      "url": "",
+      "tags": [],
+      "file": "T7_emerging.bib"
+    },
+    {
       "id": "Craik1943NatureExplanation",
       "tier": "T8",
       "title": "The Nature of Explanation",
@@ -3596,6 +6407,19 @@
       ],
       "year": "1990",
       "doi": "10.4324/9780203052600-11",
+      "url": "",
+      "tags": [],
+      "file": "T8_cognition.bib"
+    },
+    {
+      "id": "Thalos2014GrammarOfExperience",
+      "tier": "T8",
+      "title": "The Grammar of Experience",
+      "authors": [
+        "thalos, mariam"
+      ],
+      "year": "2014",
+      "doi": "10.1017/s0031819114000023",
       "url": "",
       "tags": [],
       "file": "T8_cognition.bib"
@@ -3883,12 +6707,80 @@
       "url": "",
       "tags": [],
       "file": "T9_economics.bib"
+    },
+    {
+      "id": "Frenken2006Innovation",
+      "tier": "T9",
+      "title": "Technological Innovation and Complexity Theory",
+      "authors": [
+        "frenken, koen"
+      ],
+      "year": "2006",
+      "doi": "10.1080/10438590500141189",
+      "url": "",
+      "tags": [],
+      "file": "T9_economics.bib"
     }
   ],
   "edges": [
     {
+      "source": "Hollnagel2005JointCognitive",
+      "target": "Hollnagel2006Resilience",
+      "type": "shared-author"
+    },
+    {
+      "source": "Bansal2019MentalModels",
+      "target": "Bansal2021DoesAIHelp",
+      "type": "shared-author"
+    },
+    {
+      "source": "Endsley1995SituationAwareness",
+      "target": "Endsley2019AutomationIrony",
+      "type": "shared-author"
+    },
+    {
+      "source": "Dekker2014FieldGuide",
+      "target": "Dekker2011Drift",
+      "type": "shared-author"
+    },
+    {
+      "source": "Carlini2017Evaluating",
+      "target": "Carlini2021Extracting",
+      "type": "shared-author"
+    },
+    {
       "source": "Papernot2016Distillation",
       "target": "Papernot2018SoK",
+      "type": "shared-author"
+    },
+    {
+      "source": "Papernot2016Distillation",
+      "target": "Papernot2017PATE",
+      "type": "shared-author"
+    },
+    {
+      "source": "Papernot2018SoK",
+      "target": "Papernot2017PATE",
+      "type": "shared-author"
+    },
+    {
+      "source": "Shokri2017Membership",
+      "target": "Shokri2015Privacy",
+      "type": "shared-author"
+    },
+    {
+      "source": "Dwork2006DifferentialPrivacy",
+      "target": "Dwork2014AlgorithmicDP",
+      "type": "shared-author"
+    },
+    {
+      "source": "Holland1995HiddenOrder",
+      "target": "Holland1998Emergence",
+      "type": "shared-author"
+    },
+    {
+      "source": "GoguenBurstall1992Institutions",
+      "target": "GoguenRosu2002InstitutionMorphisms",
       "type": "shared-author"
     },
     {
@@ -3922,8 +6814,168 @@
       "type": "shared-author"
     },
     {
-      "source": "Simon1996Sciences",
-      "target": "Simon1955Behavioral",
+      "source": "Tversky1983Extensional",
+      "target": "Tversky1974Judgment",
+      "type": "shared-author"
+    },
+    {
+      "source": "Gigerenzer2007GutFeelings",
+      "target": "Gigerenzer1996Reasoning",
+      "type": "shared-author"
+    },
+    {
+      "source": "Kirchenbauer2023Watermark",
+      "target": "Kirchenbauer2024Reliability",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeMediaForensics2024",
+      "target": "DeepfakeDetectorsSoK2024",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeMediaForensics2024",
+      "target": "DeepfakeDetectionReview2024",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeMediaForensics2024",
+      "target": "Metaxa2024NISTMM",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeMediaForensics2024",
+      "target": "Pumplun2021AICapabilityMaturity",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeMediaForensics2024",
+      "target": "Akbarighatar2024RAIGlobal",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectorsSoK2024",
+      "target": "DeepfakeDetectionReview2024",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectorsSoK2024",
+      "target": "Metaxa2024NISTMM",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectorsSoK2024",
+      "target": "Pumplun2021AICapabilityMaturity",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectorsSoK2024",
+      "target": "Akbarighatar2024RAIGlobal",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectionReview2024",
+      "target": "Metaxa2024NISTMM",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectionReview2024",
+      "target": "Pumplun2021AICapabilityMaturity",
+      "type": "shared-author"
+    },
+    {
+      "source": "DeepfakeDetectionReview2024",
+      "target": "Akbarighatar2024RAIGlobal",
+      "type": "shared-author"
+    },
+    {
+      "source": "Metaxa2024NISTMM",
+      "target": "Pumplun2021AICapabilityMaturity",
+      "type": "shared-author"
+    },
+    {
+      "source": "Metaxa2024NISTMM",
+      "target": "Akbarighatar2024RAIGlobal",
+      "type": "shared-author"
+    },
+    {
+      "source": "Pumplun2021AICapabilityMaturity",
+      "target": "Akbarighatar2024RAIGlobal",
+      "type": "shared-author"
+    },
+    {
+      "source": "Fernandez2023SynthIDImage",
+      "target": "Fernandez2023StableSignature",
+      "type": "shared-author"
+    },
+    {
+      "source": "Shevlane2025EmergingPractices",
+      "target": "Shevlane2023AISafetyFrameworks",
+      "type": "shared-author"
+    },
+    {
+      "source": "Floridi2018AI4People",
+      "target": "Floridi2018AI4PeopleT6",
+      "type": "shared-author"
+    },
+    {
+      "source": "Brynjolfsson2023Maturity",
+      "target": "Brynjolfsson2016DataDriven",
+      "type": "shared-author"
+    },
+    {
+      "source": "OECD2024AIClassification",
+      "target": "OECD2024AIPrivacy",
+      "type": "shared-author"
+    },
+    {
+      "source": "OECD2024AIClassification",
+      "target": "OECD2025CommonReporting",
+      "type": "shared-author"
+    },
+    {
+      "source": "OECD2024AIPrivacy",
+      "target": "OECD2025CommonReporting",
+      "type": "shared-author"
+    },
+    {
+      "source": "Bender2021StochasticParrots",
+      "target": "Bender2018DataStatements",
+      "type": "shared-author"
+    },
+    {
+      "source": "EU2024DataAct",
+      "target": "EUAIAct2024",
+      "type": "shared-author"
+    },
+    {
+      "source": "EU2024DataAct",
+      "target": "GDPR2016",
+      "type": "shared-author"
+    },
+    {
+      "source": "EUAIAct2024",
+      "target": "GDPR2016",
+      "type": "shared-author"
+    },
+    {
+      "source": "Nasr2021Memorization",
+      "target": "Nasr2023ActiveMIA",
+      "type": "shared-author"
+    },
+    {
+      "source": "Bucinca2023DecisionControl",
+      "target": "Bucinca2021CognitiveForcing",
+      "type": "shared-author"
+    },
+    {
+      "source": "Norman1994ThingsThatMakeUsSmart",
+      "target": "Norman2013DesignEveryday",
+      "type": "shared-author"
+    },
+    {
+      "source": "Norman1994ThingsThatMakeUsSmart",
+      "target": "Norman1991CognitiveArtifacts",
       "type": "shared-author"
     },
     {
@@ -3932,8 +6984,73 @@
       "type": "shared-author"
     },
     {
+      "source": "Amershi2019Guidelines",
+      "target": "Amershi2019SoftwareEngineering",
+      "type": "shared-author"
+    },
+    {
+      "source": "NIST2025AI8004",
+      "target": "NIST2024AIRMFManage",
+      "type": "shared-author"
+    },
+    {
+      "source": "Raji2024ClosingAuditGap",
+      "target": "Raji2020Auditing",
+      "type": "shared-author"
+    },
+    {
+      "source": "Kahneman2011Thinking",
+      "target": "Kahneman2021Noise",
+      "type": "shared-author"
+    },
+    {
+      "source": "Simon1996Sciences",
+      "target": "Simon1955Behavioral",
+      "type": "shared-author"
+    },
+    {
+      "source": "Simon1996Sciences",
+      "target": "Simon1962Architecture",
+      "type": "shared-author"
+    },
+    {
+      "source": "Simon1955Behavioral",
+      "target": "Simon1962Architecture",
+      "type": "shared-author"
+    },
+    {
+      "source": "Taleb2007BlackSwan",
+      "target": "Taleb2012Antifragile",
+      "type": "shared-author"
+    },
+    {
+      "source": "Alexander1977Pattern",
+      "target": "Alexander1979TimelessBuilding",
+      "type": "shared-author"
+    },
+    {
       "source": "Gladwell2000TippingPoint",
       "target": "Gladwell2008Outliers",
+      "type": "shared-author"
+    },
+    {
+      "source": "Wittgenstein1921Tractatus",
+      "target": "Wittgenstein1953PhilosophicalInvestigations",
+      "type": "shared-author"
+    },
+    {
+      "source": "Wittgenstein1921Tractatus",
+      "target": "Wittgenstein1969OnCertainty",
+      "type": "shared-author"
+    },
+    {
+      "source": "Wittgenstein1953PhilosophicalInvestigations",
+      "target": "Wittgenstein1969OnCertainty",
+      "type": "shared-author"
+    },
+    {
+      "source": "Heidegger1927BeingTime",
+      "target": "Heidegger1954QuestionTechnology",
       "type": "shared-author"
     },
     {
@@ -3952,11 +7069,6 @@
       "type": "shared-author"
     },
     {
-      "source": "EUAIAct2024",
-      "target": "GDPR2016",
-      "type": "shared-author"
-    },
-    {
       "source": "ISO42001",
       "target": "ISO27001",
       "type": "shared-author"
@@ -3965,11 +7077,21 @@
       "source": "Yao2023ReAct",
       "target": "Yao2023TreeOfThoughts",
       "type": "shared-author"
+    },
+    {
+      "source": "Yao2023ReAct",
+      "target": "Yao2024TauBench",
+      "type": "shared-author"
+    },
+    {
+      "source": "Yao2023TreeOfThoughts",
+      "target": "Yao2024TauBench",
+      "type": "shared-author"
     }
   ],
   "meta": {
-    "generated": "2026-07-13T08:46:08.292Z",
-    "entryCount": 252,
-    "edgeCount": 16
+    "generated": "2026-07-21T16:21:12.057Z",
+    "entryCount": 450,
+    "edgeCount": 73
   }
 }

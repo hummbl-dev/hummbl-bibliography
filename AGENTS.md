@@ -34,7 +34,7 @@ npm run find-dois     # Find missing DOIs
 - Branch naming: `type/agent/short-desc`
 
 ## CI
-GitHub Actions workflows: `validate.yml`, `ci.yml`, `doi-enrichment.yml`, `security-audit.yml`, `stats-report.yml`, `validate-models.yml`, `acronym-lint.yml`. Validation runs on push to main/develop and on PRs (path-filtered). Stats report runs on a weekly schedule; DOI enrichment is manual-trigger only (`workflow_dispatch`).
+GitHub Actions workflows: `validate.yml`, `ci.yml`, `doi-enrichment.yml`, `security-audit.yml`, `stats-report.yml`, `validate-models.yml`. Validation runs on push to main/develop and on PRs (path-filtered). Stats report runs on a weekly schedule; DOI enrichment is manual-trigger only (`workflow_dispatch`).
 
 ## Git Security Posture
 

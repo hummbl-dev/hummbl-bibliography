@@ -23,6 +23,9 @@
     "grounding:build": "node src/build-scientific-grounding.js",
     "grounding:check": "node src/build-scientific-grounding.js --check",
     "generate-unified": "node src/generate-unified-bibliography.js",
+    "sync-llms": "npm run generate-llms",
+    "build:all": "node src/generate-unified-bibliography.js && node src/generate-llms-txt.js && node src/build-scientific-grounding.js",
+    "merge-dois": "node src/merge-enriched-dois.js && npm run build:all",
     "validate:bibliography-schema": "node src/validate-bibliography-schema-registry.js ../sources/bibliography/bibliography-schema-registry-v0.1.json",
     "validate:bibliography-schema:fixtures": "node src/validate-bibliography-schema-registry.js --self-test ../fixtures/bibliography-schema-registry-v0.1.fixtures.json",
     "test": "npm run validate && npm run validate:bibliography-schema && npm run validate:bibliography-schema:fixtures && npm run check-duplicates && npm run check-required-fields && npm run validate:memory-palace && npm run grounding:check && npm run test:unit",
@@ -71,7 +74,8 @@
   "lint-staged": {
     "../bibliography/*.bib": [
       "npm run validate:ci --",
-      "npm run check-dups"
+      "npm run check-dups",
+      "npm run generate-llms"
     ],
     "src/**/*.js": [
       "node --check"

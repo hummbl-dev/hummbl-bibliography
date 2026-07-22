@@ -4368,6 +4368,7 @@
         "P"
       ],
       "journal": "Business and Information Systems Engineering",
+      "doi": "10.1007/s12599-020-00676-7",
       "url": "https://link.springer.com/article/10.1007/s12599-020-00676-7"
     },
     {
@@ -5832,6 +5833,7 @@
         "P"
       ],
       "booktitle": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "doi": "10.1016/j.chb.2023.107714",
       "url": "https://arxiv.org/abs/2303.03578"
     },
     {
@@ -8436,6 +8438,7 @@
         "SY"
       ],
       "journal": "LinkedIn Engineering Blog",
+      "doi": "10.1201/9780849379635.fmatt",
       "url": "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
     },
     {
@@ -10896,7 +10899,8 @@
         "DE",
         "SY"
       ],
-      "journal": "Working Paper, Warwick Business School"
+      "journal": "Working Paper, Warwick Business School",
+      "doi": "10.2139/ssrn.2975199"
     }
   ]
 }

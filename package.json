@@ -16,6 +16,9 @@
     "grounding:build": "npm --prefix toolkit run grounding:build",
     "grounding:check": "npm --prefix toolkit run grounding:check",
     "generate-unified": "npm --prefix toolkit run generate-unified",
+    "generate-llms": "npm --prefix toolkit run generate-llms",
+    "build:all": "npm --prefix toolkit run build:all",
+    "merge-dois": "npm --prefix toolkit run merge-dois",
     "lint": "npm --prefix toolkit run lint --if-present"
   },
   "repository": {

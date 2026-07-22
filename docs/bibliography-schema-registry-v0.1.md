@@ -6,11 +6,11 @@ It is intentionally split from the Universal Source Registry.
 
 ## Files
 
-- Schema: [`schemas/bibliography-schema-registry-v0.1.schema.json`](</C:/Users/Owner/PROJECTS/hummbl-bibliography/schemas/bibliography-schema-registry-v0.1.schema.json:1>)
-- Registry data: [`sources/bibliography/bibliography-schema-registry-v0.1.json`](</C:/Users/Owner/PROJECTS/hummbl-bibliography/sources/bibliography/bibliography-schema-registry-v0.1.json:1>)
-- Fixtures: [`fixtures/bibliography-schema-registry-v0.1.fixtures.json`](</C:/Users/Owner/PROJECTS/hummbl-bibliography/fixtures/bibliography-schema-registry-v0.1.fixtures.json:1>)
-- Validator: [`toolkit/src/validate-bibliography-schema-registry.js`](</C:/Users/Owner/PROJECTS/hummbl-bibliography/toolkit/src/validate-bibliography-schema-registry.js:1>)
-- Human taxonomy source: [`docs/bibliography-taxonomy-open-world.md`](</C:/Users/Owner/PROJECTS/hummbl-bibliography/docs/bibliography-taxonomy-open-world.md:1>)
+- Schema: [`schemas/bibliography-schema-registry-v0.1.schema.json`](../schemas/bibliography-schema-registry-v0.1.schema.json)
+- Registry data: [`sources/bibliography/bibliography-schema-registry-v0.1.json`](../sources/bibliography/bibliography-schema-registry-v0.1.json)
+- Fixtures: [`fixtures/bibliography-schema-registry-v0.1.fixtures.json`](../fixtures/bibliography-schema-registry-v0.1.fixtures.json)
+- Validator: [`toolkit/src/validate-bibliography-schema-registry.js`](../toolkit/src/validate-bibliography-schema-registry.js)
+- Human taxonomy source: [`docs/bibliography-taxonomy-open-world.md`](bibliography-taxonomy-open-world.md)
 
 ## Contract
 

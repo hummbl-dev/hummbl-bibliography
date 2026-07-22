@@ -70,7 +70,10 @@ export function parseCli(rawArgs = []) {
     throw new Error(`Unknown option: ${unknown[0]}`);
   }
 
-  const bibDir = path.resolve(positional[0] || '../bibliography');
+  const defaultBibDir = fs.existsSync(path.resolve('bibliography'))
+    ? path.resolve('bibliography')
+    : path.resolve(__dirname, '../bibliography');
+  const bibDir = path.resolve(positional[0] || defaultBibDir);
   return { bibDir };
 }
 
