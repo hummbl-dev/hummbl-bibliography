@@ -1,15 +1,19 @@
 // research-updates.mjs — File grounding contract issues in hummbl-research
 // Run after bibliography harness completes
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import { log } from './lib.mjs';
 
 const RESEARCH_REPO = 'C:\\Users\\Owner\\PROJECTS\\hummbl-research';
 
 function fileIssue(title, body, labels) {
   try {
-    // Don't use labels that may not exist in the repo — file without labels
-    const cmd = `gh issue create --title "${title.replace(/"/g, '\\"')}" --body "${body.replace(/"/g, '\\"').replace(/\n/g, '\\n')}"`;
-    const out = execSync(cmd, { cwd: RESEARCH_REPO, encoding: 'utf8', timeout: 30000 });
+    // Use execFileSync with argument array to avoid shell injection via
+    // titles/bodies containing backticks, $(), quotes, or other metacharacters.
+    const args = ['issue', 'create', '--title', title, '--body', body];
+    if (labels) {
+      args.push('--label', labels);
+    }
+    const out = execFileSync('gh', args, { cwd: RESEARCH_REPO, encoding: 'utf8', timeout: 30000 });
     log(`  Issue filed: ${out.trim()}`);
     return out.trim();
   } catch (err) {

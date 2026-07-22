@@ -3,11 +3,16 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import { execSync, execFileSync } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const LOG_FILE = path.join(REPO, 'harness', 'overnight-log.md');
+
+// Maximum entries allowed in a single batch — prevents memory exhaustion
+// and keeps validation/commit cycles bounded. Batches exceeding this are
+// rejected before any file modification.
+const MAX_BATCH_SIZE = 100;
 
 export function log(msg) {
   const ts = new Date().toISOString();
@@ -261,7 +266,10 @@ export function generateStats() {
 export function gitCommit(msg) {
   try {
     execSync('git add bibliography/ dist/', { cwd: REPO, encoding: 'utf8', timeout: 10000 });
-    execSync(`git commit -m "${msg.replace(/"/g, '\\"').replace(/\n/g, ' ')}"`, { cwd: REPO, encoding: 'utf8', timeout: 15000 });
+    // Use execFileSync with argument array to avoid shell injection via
+    // commit messages containing backticks, $(), or other shell metacharacters.
+    const singleLineMsg = msg.replace(/\n/g, ' ');
+    execFileSync('git', ['commit', '-m', singleLineMsg], { cwd: REPO, encoding: 'utf8', timeout: 15000, stdio: ['pipe', 'pipe', 'pipe'] });
     log('  Committed');
     return true;
   } catch (err) {
@@ -308,6 +316,12 @@ export function gitPush() {
 export function processBatch(batch, options = {}) {
   const { dryRun = false } = options;
   log(`\n=== BATCH: ${batch.id} — ${batch.description} ===`);
+
+  // SIZE GUARD: reject batches that exceed the safety limit
+  if (batch.entries.length > MAX_BATCH_SIZE) {
+    log(`  REJECTED: batch ${batch.id} has ${batch.entries.length} entries (max ${MAX_BATCH_SIZE}). Split into smaller batches.`);
+    return { success: false, reason: 'oversize', conflicts: [] };
+  }
 
   // PRE-FLIGHT: check for duplicates before modifying any files
   log('  Pre-flight: checking for duplicates...');

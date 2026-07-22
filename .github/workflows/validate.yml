@@ -13,6 +13,7 @@ on:
 jobs:
   validate:
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
+    timeout-minutes: 10
     
     # Add permissions to allow writing comments on PRs
     permissions:

@@ -14,7 +14,7 @@ Options:
     --tier T7           Filter by tier (repeatable)
     --keyword HUMMBL:BKI  Filter by keyword (repeatable)
     --limit N           Limit to N entries
-    --url URL           Open Brain base URL (default: http://100.109.69.16:11435)
+    --url URL           Open Brain base URL (default: http://localhost:11435)
     --agent NAME        Ledger agent name (default: hummbl-bibliography)
     --verbose           Print each entry as it is processed
 
@@ -22,7 +22,7 @@ Environment:
     OPEN_BRAIN_TOKEN    Bearer token for Open Brain auth (required for --post;
                         read from env, never accepted as CLI arg to avoid
                         leaking in process list / shell history)
-    OPEN_BRAIN_RELAY_URL Override default Open Brain URL
+    OPEN_BRAIN_RELAY_URL Override default Open Brain URL (default: http://localhost:11435)
 
 Exit codes:
     0   Success
@@ -48,7 +48,7 @@ REPO_ROOT = Path(__file__).parent.parent
 BIBLIOGRAPHY_DIR = REPO_ROOT / "bibliography"
 QUERY_SCRIPT = REPO_ROOT / "toolkit" / "src" / "query.js"
 
-DEFAULT_OPEN_BRAIN_URL = "http://100.109.69.16:11435"
+DEFAULT_OPEN_BRAIN_URL = os.environ.get("OPEN_BRAIN_RELAY_URL", "http://localhost:11435")
 DEFAULT_AGENT = "hummbl-bibliography"
 
 LEDGER_ENTRY_TYPE = "discovery"
