@@ -15,12 +15,13 @@ Options:
     --keyword HUMMBL:BKI  Filter by keyword (repeatable)
     --limit N           Limit to N entries
     --url URL           Open Brain base URL (default: http://localhost:11435)
-    --token TOKEN       Auth token (default: $OPEN_BRAIN_TOKEN)
     --agent NAME        Ledger agent name (default: hummbl-bibliography)
     --verbose           Print each entry as it is processed
 
 Environment:
-    OPEN_BRAIN_TOKEN    Bearer token for Open Brain auth
+    OPEN_BRAIN_TOKEN    Bearer token for Open Brain auth (required for --post;
+                        read from env, never accepted as CLI arg to avoid
+                        leaking in process list / shell history)
     OPEN_BRAIN_RELAY_URL Override default Open Brain URL (default: http://localhost:11435)
 
 Exit codes:
@@ -84,8 +85,6 @@ def parse_args(argv):
             opts["limit"] = int(args[i + 1]); i += 1
         elif a == "--url":
             opts["url"] = args[i + 1]; i += 1
-        elif a == "--token":
-            opts["token"] = args[i + 1]; i += 1
         elif a == "--agent":
             opts["agent"] = args[i + 1]; i += 1
         elif a == "--verbose":
