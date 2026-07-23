@@ -29,10 +29,10 @@ jobs:
         node-version: [24]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -74,7 +74,7 @@ jobs:
 
       - name: Upload test artifacts (results, coverage)
         if: always()
-        uses: actions/upload-artifact@v4
+        actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: test-results-node${{ matrix.node-version }}
           path: |
@@ -89,15 +89,15 @@ jobs:
       security-events: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        github/codeql-action/init@3b0bd1d116c0bde30213346b22d4f634d96a2fb0 # v3
         with:
           languages: javascript
 
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+        github/codeql-action/autobuild@3b0bd1d116c0bde30213346b22d4f634d96a2fb0 # v3
 
       - name: Run CodeQL analysis
-        uses: github/codeql-action/analyze@v3
+        github/codeql-action/analyze@3b0bd1d116c0bde30213346b22d4f634d96a2fb0 # v3
