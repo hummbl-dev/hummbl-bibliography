@@ -33,6 +33,7 @@
     "type-check": "tsc --noEmit",
     "build": "tsc",
     "generate-docs": "node scripts/generate-docs.js",
+    "generate:llms": "node src/generate-llms-txt.js",
     "watch": "node src/watch.js ../bibliography",
     "citation-graph": "node src/citation-graph.js ../bibliography"
   },

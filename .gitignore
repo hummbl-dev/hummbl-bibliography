@@ -41,3 +41,5 @@ credentials.json
 # Python bytecode cache
 __pycache__/
 *.pyc
+llms.txt
+llms-full.txt
