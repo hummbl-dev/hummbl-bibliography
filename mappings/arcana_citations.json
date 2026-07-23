@@ -1,9 +1,9 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "generated": "2026-04-09",
+    "generated": "2026-07-23",
     "description": "Mapping of ARCANA agent lenses to HUMMBL bibliography entries. Each lens lists primary (most directly grounding) and secondary (adjacent/supporting) citations. Only keys that exist in the bibliography are listed.",
-    "coverage_note": "The bibliography is optimized for AI governance and engineering (T4, T5, T7, T11). ARCANA lenses requiring deep social theory (Weber, Foucault, Habermas, Bourdieu, Marx) are weakly supported and are primary candidates for T2 or future expansion entries.",
+    "coverage_note": "The bibliography is optimized for AI governance and engineering (T4, T5, T7, T11). ARCANA lenses requiring deep social theory (Weber, Foucault, Habermas, Bourdieu, Marx) are now grounded via Wave 4A expansion (15 entries added).",
     "query_usage": "node toolkit/src/query.js --keyword HUMMBL:BKI --format json"
   },
 
@@ -16,9 +16,9 @@
 
   "bateson": {
     "lens": "Ecologist of Mind — double bind, levels of learning, cybernetics",
-    "primary": ["Wiener1961Cybernetics", "Ashby1956Cybernetics"],
+    "primary": ["Bateson1972EcologyMind", "Wiener1961Cybernetics", "Ashby1956Cybernetics"],
     "secondary": ["Meadows2008ThinkingSystems", "Maturana1980Autopoiesis"],
-    "gaps": "No direct Bateson entry ('Steps to an Ecology of Mind'). Strong gap — add to T2 or T12."
+    "gaps": "Bateson's 'Steps to an Ecology of Mind' is now in bibliography (T2). Strong coverage."
   },
 
   "bki": {
@@ -37,23 +37,23 @@
 
   "bourdieu": {
     "lens": "Field Theorist — habitus, cultural capital, symbolic violence",
-    "primary": [],
+    "primary": ["Bourdieu1977OutlineTheory"],
     "secondary": ["Kuhn1996Structure", "Walsh1991OrganizationalMemory"],
-    "gaps": "CRITICAL GAP — no Bourdieu entries in bibliography. Add 'Outline of a Theory of Practice' (1977) and 'Distinction' (1984) to T2 or new T14."
+    "gaps": "Bourdieu's 'Outline of a Theory of Practice' (1977) now in bibliography (T2). Consider adding 'Distinction' (1984) for cultural capital analysis."
   },
 
   "burnham": {
     "lens": "Managerial Revolutionary — separation of ownership and control, technocracy",
-    "primary": [],
+    "primary": ["Burnham1941ManagerialRevolution"],
     "secondary": ["Simon1996Sciences"],
-    "gaps": "CRITICAL GAP — no Burnham entry ('The Managerial Revolution', 1941). Strong candidate for T1 expansion."
+    "gaps": "Burnham's 'The Managerial Revolution' (1941) now in bibliography (T1). Strong coverage."
   },
 
   "chomsky": {
     "lens": "Propaganda Analyst — manufacturing consent, political economy of media",
-    "primary": [],
+    "primary": ["Chomsky1988ManufacturingConsent"],
     "secondary": ["Zuboff2019SurveillanceCapitalism"],
-    "gaps": "No Chomsky entry. 'Manufacturing Consent' (1988) should be in T1 or T2."
+    "gaps": "Chomsky & Herman's 'Manufacturing Consent' (1988) now in bibliography (T1). Strong coverage."
   },
 
   "derrida": {
@@ -72,30 +72,30 @@
 
   "gramsci": {
     "lens": "Left Mirror — hegemony, organic intellectuals, war of position",
-    "primary": ["Kuhn1996Structure"],
-    "secondary": ["Floridi2018AI4People"],
-    "gaps": "No Gramsci entry. 'Selections from the Prison Notebooks' should be in T1 or T2."
+    "primary": ["Gramsci1929PrisonNotebooks"],
+    "secondary": ["Kuhn1996Structure", "Floridi2018AI4People"],
+    "gaps": "Gramsci's 'Prison Notebooks' now in bibliography (T1). Strong coverage."
   },
 
   "habermas": {
     "lens": "Communicative Rationalist — public sphere, discourse ethics, communicative action",
-    "primary": ["Floridi2018AI4People", "Brundage2020Verifiable"],
-    "secondary": ["NISTRMF2023", "EUAIAct2024"],
-    "gaps": "No direct Habermas entry. Floridi's AI4People framework is Habermasian in structure. Add 'The Theory of Communicative Action' to T2."
+    "primary": ["Habermas1981CommunicativeAction"],
+    "secondary": ["Floridi2018AI4People", "Brundage2020Verifiable", "NISTRMF2023", "EUAIAct2024"],
+    "gaps": "Habermas's 'Theory of Communicative Action' now in bibliography (T2). Floridi's AI4People framework is Habermasian in structure. Strong coverage."
   },
 
   "heidegger": {
     "lens": "Ontologist — Being-in-the-world, enframing, authenticity",
-    "primary": [],
+    "primary": ["Heidegger1954QuestionTechnology", "Heidegger1927BeingTime"],
     "secondary": ["Rittel1973WickedProblems"],
-    "gaps": "No Heidegger entry. 'The Question Concerning Technology' is highly relevant to AI governance framing."
+    "gaps": "Heidegger's 'The Question Concerning Technology' (1954) and 'Being and Time' (1927) now in bibliography (T1). Strong coverage for AI governance framing."
   },
 
   "ibn_khaldun": {
     "lens": "Civilizational Historian — asabiyyah, Khaldun Cycle, economic foundations of power",
-    "primary": [],
+    "primary": ["IbnKhaldun1377Muqaddimah"],
     "secondary": ["Taleb2007BlackSwan"],
-    "gaps": "No Ibn Khaldun entry ('Muqaddimah'). Unique non-Western voice — strong candidate for T1 expansion."
+    "gaps": "Ibn Khaldun's 'Muqaddimah' now in bibliography (T1). Unique non-Western voice — strong coverage."
   },
 
   "kissinger": {
@@ -121,16 +121,16 @@
 
   "marx": {
     "lens": "Historical Materialist — base/superstructure, alienation, class struggle",
-    "primary": [],
+    "primary": ["Marx1867Capital"],
     "secondary": ["Akerlof1970Lemons"],
-    "gaps": "No Marx entry. 'Capital Vol. 1' relevant for AI labor displacement framing."
+    "gaps": "Marx's 'Capital Vol. 1' now in bibliography (T1). Relevant for AI labor displacement framing."
   },
 
   "mcluhan": {
     "lens": "Medium Theorist — the medium is the message, hot/cool media, extensions of man",
-    "primary": [],
+    "primary": ["McLuhan1964UnderstandingMedia"],
     "secondary": ["Licklider1960ManComputer"],
-    "gaps": "No McLuhan entry. 'Understanding Media' (1964) essential for AI-as-medium analysis."
+    "gaps": "McLuhan's 'Understanding Media' now in bibliography (T1). Essential for AI-as-medium analysis."
   },
 
   "measurement": {
@@ -142,23 +142,23 @@
 
   "nietzsche": {
     "lens": "Genealogist — will to power, perspectivism, ressentiment, nihilism",
-    "primary": [],
+    "primary": ["Nietzsche1887Genealogy"],
     "secondary": ["Kuhn1996Structure"],
-    "gaps": "No Nietzsche entry. 'On the Genealogy of Morals' (1887) is the source text."
+    "gaps": "Nietzsche's 'On the Genealogy of Morals' now in bibliography (T1). Source text for IN inversion methodology."
   },
 
   "pareto": {
     "lens": "Elite Theorist — circulation of elites, Lions vs Foxes, 80/20",
-    "primary": [],
+    "primary": ["Pareto1935MindSociety"],
     "secondary": ["Taleb2007BlackSwan", "Akerlof1970Lemons"],
-    "gaps": "No Pareto entry. Add 'The Mind and Society' (1935) or cite via Burnham."
+    "gaps": "Pareto's 'The Mind and Society' now in bibliography (T1). Strong coverage."
   },
 
   "popper": {
     "lens": "Falsificationist — critical rationalism, falsification, open society",
-    "primary": ["Kuhn1996Structure"],
+    "primary": ["Popper1959LogicDiscovery"],
     "secondary": ["Pearl2009Causality", "Floridi2018AI4People"],
-    "gaps": "Kuhn is Popper's key interlocutor. No direct Popper entry — add 'The Logic of Scientific Discovery' to T1."
+    "gaps": "Popper's 'The Logic of Scientific Discovery' now in bibliography (T1). Foundational for IN falsification epistemology."
   },
 
   "schmitt": {
@@ -177,23 +177,23 @@
 
   "taleb": {
     "lens": "Uncertainty Theorist — antifragility, black swans, skin in the game, fat tails",
-    "primary": ["Taleb2007BlackSwan"],
+    "primary": ["Taleb2007BlackSwan", "Taleb2012Antifragile"],
     "secondary": ["Meadows2008ThinkingSystems", "Sculley2015TechDebt"],
-    "gaps": "'The Black Swan' is in T1. No 'Antifragile' (2012) entry — strong addition for T1 or T9."
+    "gaps": "'The Black Swan' and 'Antifragile' (2012) both in bibliography (T1). Strong coverage."
   },
 
   "veblen": {
     "lens": "Institutional Economist — conspicuous consumption, pecuniary emulation, engineers vs price system",
-    "primary": [],
+    "primary": ["Veblen1899LeisureClass"],
     "secondary": ["Akerlof1970Lemons", "VonNeumann1944GameTheory"],
-    "gaps": "No Veblen entry. 'The Theory of the Leisure Class' (1899) relevant for AI status signaling analysis."
+    "gaps": "Veblen's 'Theory of the Leisure Class' now in bibliography (T1). Relevant for AI status signaling analysis."
   },
 
   "weber": {
     "lens": "Sociologist of Rationalization — bureaucracy, iron cage, charismatic vs rational-legal authority",
-    "primary": [],
+    "primary": ["Weber1922EconomySociety"],
     "secondary": ["Simon1996Sciences", "Walsh1991OrganizationalMemory"],
-    "gaps": "CRITICAL GAP — no Weber entry. 'Economy and Society' or 'The Protestant Ethic' essential for governance rationalization analysis."
+    "gaps": "Weber's 'Economy and Society' now in bibliography (T1). Essential for governance rationalization analysis."
   },
 
   "yarvin": {

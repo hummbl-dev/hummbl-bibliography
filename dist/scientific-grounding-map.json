@@ -16,7 +16,7 @@
       {
         "path": "mappings/arcana_citations.json",
         "version": "0.1.0",
-        "generated": "2026-04-09"
+        "generated": "2026-07-23"
       }
     ]
   },
@@ -63,12 +63,12 @@
     },
     "downstream_ref_coverage": {
       "bki_evidence": 18,
-      "arcana_citations": 40
+      "arcana_citations": 57
     },
     "metadata_debt": {
-      "critical": 5,
+      "critical": 6,
       "high": 10,
-      "medium": 39,
+      "medium": 38,
       "low": 64
     }
   },
@@ -192,7 +192,15 @@
         "managerial revolution",
         "managerialism"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "burnham",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Managerial Revolutionary — separation of ownership and control, technocracy"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -222,7 +230,15 @@
         "media",
         "propaganda model"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "chomsky",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Propaganda Analyst — manufacturing consent, political economy of media"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -336,7 +352,15 @@
         "hegemony",
         "organic intellectual"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "gramsci",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Left Mirror — hegemony, organic intellectuals, war of position"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -402,7 +426,15 @@
         "ontology",
         "phenomenology"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "heidegger",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Ontologist — Being-in-the-world, enframing, authenticity"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -433,14 +465,22 @@
         "standing reserve",
         "technology"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "heidegger",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Ontologist — Being-in-the-world, enframing, authenticity"
+        }
+      ],
       "arxiv_id": null,
-      "source_status": "metadata_debt",
+      "source_status": "grounding_gap",
       "metadata_debt": [
         {
           "field": "doi",
-          "priority": "medium",
-          "reason": "Paper-like entry should carry a DOI when available."
+          "priority": "critical",
+          "reason": "Referenced in downstream grounding surfaces and missing DOI."
         }
       ]
     },
@@ -505,7 +545,15 @@
         "cyclical history",
         "social cohesion"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "ibn_khaldun",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Civilizational Historian — asabiyyah, Khaldun Cycle, economic foundations of power"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -636,8 +684,8 @@
         {
           "surface": "arcana_citations",
           "section": "gramsci",
-          "role": "primary",
-          "strength": "STRONG",
+          "role": "secondary",
+          "strength": "MODERATE",
           "note": "Left Mirror — hegemony, organic intellectuals, war of position"
         },
         {
@@ -646,13 +694,6 @@
           "role": "secondary",
           "strength": "MODERATE",
           "note": "Genealogist — will to power, perspectivism, ressentiment, nihilism"
-        },
-        {
-          "surface": "arcana_citations",
-          "section": "popper",
-          "role": "primary",
-          "strength": "STRONG",
-          "note": "Falsificationist — critical rationalism, falsification, open society"
         },
         {
           "surface": "arcana_citations",
@@ -799,7 +840,15 @@
         "exploitation",
         "surplus value"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "marx",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Historical Materialist — base/superstructure, alienation, class struggle"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -829,7 +878,15 @@
         "media",
         "medium is the message"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "mcluhan",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Medium Theorist — the medium is the message, hot/cool media, extensions of man"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1017,7 +1074,15 @@
         "morality",
         "power"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "nietzsche",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Genealogist — will to power, perspectivism, ressentiment, nihilism"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1075,7 +1140,15 @@
         "non-logical action",
         "residues"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "pareto",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Elite Theorist — circulation of elites, Lions vs Foxes, 80/20"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1178,7 +1251,15 @@
         "falsification",
         "philosophy of science"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "popper",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Falsificationist — critical rationalism, falsification, open society"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1402,7 +1483,15 @@
         "tail risk",
         "volatility"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "taleb",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Uncertainty Theorist — antifragility, black swans, skin in the game, fat tails"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1460,7 +1549,15 @@
         "leisure class",
         "status"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "veblen",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Institutional Economist — conspicuous consumption, pecuniary emulation, engineers vs price system"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -1557,7 +1654,15 @@
         "iron cage",
         "rationalization"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "weber",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Sociologist of Rationalization — bureaucracy, iron cage, charismatic vs rational-legal authority"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -6228,8 +6333,8 @@
         {
           "surface": "arcana_citations",
           "section": "habermas",
-          "role": "primary",
-          "strength": "STRONG",
+          "role": "secondary",
+          "strength": "MODERATE",
           "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
         },
         {
@@ -9239,7 +9344,15 @@
         "ecology of mind",
         "metalogues"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "bateson",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Ecologist of Mind — double bind, levels of learning, cybernetics"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -9270,7 +9383,15 @@
         "practice",
         "social reproduction"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "bourdieu",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Field Theorist — habitus, cultural capital, symbolic violence"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -9506,7 +9627,15 @@
         "lifeworld",
         "system"
       ],
-      "downstream_refs": [],
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "habermas",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
+        }
+      ],
       "arxiv_id": null,
       "source_status": "ready",
       "metadata_debt": []
@@ -12023,8 +12152,8 @@
         {
           "surface": "arcana_citations",
           "section": "habermas",
-          "role": "primary",
-          "strength": "STRONG",
+          "role": "secondary",
+          "strength": "MODERATE",
           "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
         },
         {
@@ -15246,8 +15375,8 @@
         {
           "surface": "arcana_citations",
           "section": "habermas",
-          "role": "primary",
-          "strength": "STRONG",
+          "role": "secondary",
+          "strength": "MODERATE",
           "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
         },
         {
@@ -15274,6 +15403,24 @@
           "role": "secondary",
           "strength": "MODERATE",
           "note": "Surveillance Capitalism Analyst — behavioral modification, prediction imperative, instrumentarian power"
+        }
+      ]
+    },
+    {
+      "key": "Heidegger1954QuestionTechnology",
+      "title": "The Question Concerning Technology",
+      "bibliography_tier": "T1",
+      "evidence_tier": "foundational",
+      "field": "doi",
+      "priority": "critical",
+      "reason": "Referenced in downstream grounding surfaces and missing DOI.",
+      "downstream_refs": [
+        {
+          "surface": "arcana_citations",
+          "section": "heidegger",
+          "role": "primary",
+          "strength": "STRONG",
+          "note": "Ontologist — Being-in-the-world, enframing, authenticity"
         }
       ]
     },
@@ -15464,8 +15611,8 @@
         {
           "surface": "arcana_citations",
           "section": "habermas",
-          "role": "primary",
-          "strength": "STRONG",
+          "role": "secondary",
+          "strength": "MODERATE",
           "note": "Communicative Rationalist — public sphere, discourse ethics, communicative action"
         },
         {
@@ -15589,16 +15736,6 @@
       "key": "Gengler2024OrgAIGovMaturity",
       "title": "Exploring Organizational AI Governance Maturity: A Case Study with Six Multinational Companies",
       "bibliography_tier": "T15",
-      "evidence_tier": "foundational",
-      "field": "doi",
-      "priority": "medium",
-      "reason": "Paper-like entry should carry a DOI when available.",
-      "downstream_refs": []
-    },
-    {
-      "key": "Heidegger1954QuestionTechnology",
-      "title": "The Question Concerning Technology",
-      "bibliography_tier": "T1",
       "evidence_tier": "foundational",
       "field": "doi",
       "priority": "medium",
