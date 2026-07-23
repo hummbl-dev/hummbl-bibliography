@@ -21,6 +21,9 @@ permissions:
 
 jobs:
   build-and-test:
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
     name: Lint / Test / Audit (Node ${{ matrix.node-version }})
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
     timeout-minutes: 15
@@ -82,6 +85,9 @@ jobs:
             toolkit/test-results
 
   codeql:
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
     name: CodeQL Static Analysis
     runs-on: [self-hosted, Linux, X64, wsl, bibliography]
     timeout-minutes: 15
