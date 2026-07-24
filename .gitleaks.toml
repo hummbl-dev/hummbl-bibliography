@@ -30,13 +30,21 @@ paths = [
   '''reports/doi_enrichment_report\.json''',
 ]
 
-# Generated dist output and harness entry files contain citation keys and
-# bibliography metadata that trigger generic-api-key detection due to entropy.
-# These are academic citation identifiers and bibliography data, not credentials.
+# Generated dist/ JSON files contain citation keys and bibliography metadata
+# that trigger generic-api-key detection due to entropy (264 false positives
+# reported in #109). These are academic citation identifiers, not credentials.
+# Resolves #109.
 [[allowlists]]
-description = "Generated dist and harness bibliography data (citation keys, not secrets)"
+description = "Generated dist/ JSON citation keys — false positives from generic-api-key (resolves #109)"
 paths = [
   '''dist/.*\.json''',
+]
+
+# Harness entry files contain citation keys and bibliography metadata that
+# trigger generic-api-key detection due to entropy. Not credentials.
+[[allowlists]]
+description = "Generated harness bibliography data (citation keys, not secrets)"
+paths = [
   '''harness/entries-wave.*\.mjs''',
 ]
 
