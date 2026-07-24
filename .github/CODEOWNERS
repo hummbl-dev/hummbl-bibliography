@@ -3,15 +3,16 @@
 # See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default owners for everything
-* @hummbl-dev
+* @hummbl-dev @reubenbowlby
 
 # Owners for sources (adjust paths if your code lives elsewhere)
-bibliography/ @hummbl-dev
-toolkit/ @hummbl-dev
-scripts/ @hummbl-dev
-docs/ @hummbl-dev
-.github/ @hummbl-dev
+bibliography/ @hummbl-dev @reubenbowlby
+toolkit/ @hummbl-dev @reubenbowlby
+scripts/ @hummbl-dev @reubenbowlby
+docs/ @hummbl-dev @reubenbowlby
+.github/ @hummbl-dev @reubenbowlby
 
 # Owners for security-sensitive files
-/package.json @hummbl-dev
-/package-lock.json @hummbl-dev
+/package.json @hummbl-dev @reubenbowlby
+/package-lock.json @hummbl-dev @reubenbowlby
+
